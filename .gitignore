@@ -6,6 +6,7 @@
 /site/.pnp.js
 pnpm-lock.yaml
 /site/.vscode
+.next
 
 # testing
 /site/coverage
