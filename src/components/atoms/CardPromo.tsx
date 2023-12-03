@@ -9,7 +9,6 @@ export default function CardPromo({
   logo,
   alt,
   url,
-  // code,
   description,
   reduction,
 }: Partner) {

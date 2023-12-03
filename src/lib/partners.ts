@@ -1,7 +1,6 @@
 import { Partner } from "@/src/types/models";
 
 export const Partners: Partner[] = [
-  // export const Partners: Partner = {
   {
     name: "MyEWheel",
     logo: "https://myewheel.com/image/catalog/logo.png",

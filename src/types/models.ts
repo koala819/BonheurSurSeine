@@ -3,7 +3,6 @@ export interface Partner {
   logo: string;
   alt: string;
   url: string;
-  //   code: string;
   description: string;
   reduction: string;
 }
