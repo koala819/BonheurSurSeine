@@ -2,10 +2,8 @@
 import { Controller, useForm } from "react-hook-form";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import toast from "react-hot-toast";
-
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { FormValues } from "@/src/types/models";
 
 export default function Page() {
   const [value, setValue] = useState("");
@@ -19,8 +17,8 @@ export default function Page() {
     return validateEmail(value) ? false : true;
   }, [value]);
 
-  const { control, handleSubmit } = useForm<FormValues>();
-  const handleSendMail = async (values: FormValues) => {
+  const { control, handleSubmit } = useForm<any>();
+  const handleSendMail = async (values: any) => {
     const data = {
       email: values.email,
       prenom: values.firstName,
