@@ -89,16 +89,16 @@ export function Footer() {
             ]}
           />
         </aside>
-        {/* <aside className='md:basis-1/4 flex justify-center'>
+        <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='entreprise'
             items={[
-              { text: "Equipe", link: "/equipe" },
-              { text: "références", link: "/references" },
-              { text: "Avis Clients", link: "/evaluations" },
+              { text: "Mentions légales", link: "/mentions" },
+              // { text: "références", link: "/references" },
+              // { text: "Avis Clients", link: "/evaluations" },
             ]}
           />
-        </aside> */}
+        </aside>
         <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='contact'

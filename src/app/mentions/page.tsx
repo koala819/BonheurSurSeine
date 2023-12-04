@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <section className='text-gray-700 dark:text-white '>
+    <section className='text-gray-900 dark:text-white'>
       <div className='container px-4 mb-20 mt-20 mx-auto '>
         <h1 className='text-blue-500 dark:text-cyan-500 text-2xl text-center mb-12 uppercase font-bold'>
           Mentions légales
@@ -37,7 +37,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
+        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-800 mt-8'>
           Hébergement
         </h1>
         <div className='flex flex-col space-y-4'>
@@ -46,7 +46,7 @@ export default function Page() {
           </p>
         </div>
 
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
+        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-800 mt-8'>
           Cookies
         </h1>
         <p className='text-justify mb-4'>
@@ -65,7 +65,7 @@ export default function Page() {
             Vous offrir une meilleure expérience utilisateur.
           </li>
         </ul>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
+        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-800 mt-8'>
           Liens Hypertextes
         </h1>
         <p className='text-justify mb-4'>
@@ -74,7 +74,7 @@ export default function Page() {
           tenue responsable du contenu de ces sites ni des pratiques de
           confidentialité qu&apos;ils adoptent.
         </p>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
+        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-800 mt-8'>
           Données Personnelles
         </h1>
         <p className='text-justify mb-4'>
@@ -90,7 +90,7 @@ export default function Page() {
           . Nous nous engageons à respecter votre confidentialité et à protéger
           vos données personnelles.
         </p>
-        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-400 mt-8'>
+        <h1 className='sm:text-3xl text-4xl font-medium title-font mb-4 text-gray-900 dark:text-slate-800 mt-8'>
           Propriété Intellectuelle
         </h1>
         <p className='text-justify mb-4'>
