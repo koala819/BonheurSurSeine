@@ -10,7 +10,9 @@ module.exports = {
     extend: {
       colors: {
         "bg-light": "#003366",
+        "nav-light": "#508cb1",
         "bg-dark": "#121212",
+        "nav-dark": "#2f6088",
         "text-link": "#fbbf24",
       },
     },
