@@ -1,14 +1,8 @@
 "use client";
 import { LuCopyleft } from "react-icons/lu";
-// import { FaLinkedin } from "react-icons/fa";
-// import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-// import { useTheme } from "next-themes";
-// import { Tooltip } from "@nextui-org/react";
 import logo from "@/public/BonheurSurSeine_logo.png";
-
-// import blackLogo from "@/public/black_DIX31.png";
 import whitelogo from "@/public/white_DIX31.png";
 import { DoubleColumn } from "@/src/components/molecules/DoubleColumns";
 import { FooterColumn } from "@/src/components/molecules/FooterColumn";
@@ -17,9 +11,6 @@ import { BsFacebook, BsYoutube } from "react-icons/bs";
 import { FiInstagram } from "react-icons/fi";
 
 export function Footer() {
-  // const { resolvedTheme } = useTheme();
-  // const dix31 = resolvedTheme === "dark" ? whitelogo : blackLogo;
-
   return (
     <footer className='bg-nav-light dark:bg-nav-dark text-white pt-8 w-full'>
       <nav className='space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12'>
@@ -92,11 +83,7 @@ export function Footer() {
         <aside className='md:basis-1/4 flex justify-center'>
           <FooterColumn
             title='entreprise'
-            items={[
-              { text: "Mentions légales", link: "/mentions" },
-              // { text: "références", link: "/references" },
-              // { text: "Avis Clients", link: "/evaluations" },
-            ]}
+            items={[{ text: "Mentions légales", link: "/mentions" }]}
           />
         </aside>
         <aside className='md:basis-1/4 flex justify-center'>
