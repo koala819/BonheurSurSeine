@@ -21,14 +21,14 @@ export function Top() {
 
   const menuItems = [
     { name: "Accueil", path: "/" },
-    { name: "Codes Promo", path: "#" },
+    { name: "Codes Promo", path: "/promo" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className='bg-bg-light dark:bg-bg-dark'
+      className='bg-nav-light dark:bg-nav-dark'
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -49,8 +49,8 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
-        <NavbarItem isActive={path.includes("#")}>
-          <Link href='#' className='text-white hover:text-text-link'>
+        <NavbarItem isActive={path.includes("/promo")}>
+          <Link href='/promo' className='text-white hover:text-text-link'>
             Codes Promo
           </Link>
         </NavbarItem>
