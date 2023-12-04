@@ -1,39 +1,33 @@
 "use client";
 import { Controller, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import toast from "react-hot-toast";
-import { useState } from "react";
+
+import Image from "next/image";
+import { useMemo, useState } from "react";
+import { FormValues } from "@/src/types/models";
 
 export default function Page() {
-  const [hideForm, setHideForm] = useState(false);
-  const schema = yup.object().shape({
-    email: yup
-      .string()
-      .required("L'e-mail est obligatoire")
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-        "L'e-mail n'est pas valide"
-      ),
+  const [value, setValue] = useState("");
 
-    first_name: yup.string().required("Veuillez saisir votre nom"),
-    msg: yup.string().required("Veuillez saisir votre message"),
-  });
+  const validateEmail = (value: string) =>
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const isInvalid = useMemo(() => {
+    if (value === "") return false;
 
-  async function handleSendMail(values: any) {
+    return validateEmail(value) ? false : true;
+  }, [value]);
+
+  const { control, handleSubmit } = useForm<FormValues>();
+  const handleSendMail = async (values: FormValues) => {
     const data = {
-      firstName: values.first_name,
       email: values.email,
+      prenom: values.firstName,
+      nom: values.lastName,
       message: values.msg,
+      societe: values.society,
+      telephone: values.tel,
     };
 
     const options = {
@@ -46,7 +40,7 @@ export default function Page() {
       .then((response: any) => {
         if (response.status === 200) {
           toast.success("Votre message a bien été envoyé");
-          setHideForm(true);
+          //   setHideForm(true);
         } else {
           toast.error("Une erreur s'est produite", response.statusText);
         }
@@ -54,140 +48,114 @@ export default function Page() {
       .catch((error: any) => {
         toast.error("Une erreur s'est produite", error);
       });
-  }
+  };
 
   return (
-    <section className='flex-grow text-gray-700 body-font relative'>
-      <div className='absolute inset-0 bg-gray-300 dark:bg-gray-800'>
-        <iframe
-          style={{
-            filter: "grayscale(1) contrast(1.2) opacity(0.4)",
-          }}
-          title='map'
-          src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54970.122924033974!2d1.489419400498161!3d43.60630826308362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1605604684663!5m2!1sfr!2sfr'
-          width='100%'
-          height='100%'
-        />
-      </div>
+    <div className='flex'>
+      <aside className='flex-1 flex justify-center'>
+        <section className='flex items-center justify-center'>
+          <Image
+            src={
+              "https://lh6.googleusercontent.com/fyOE0lyRIDWZPtXF_XOvP8t6DaPxx5kakkz7A3GIU5g0Ubyo-0p4z_pq73AouUGy-CrNy_Qpy9x32zIQbIBC5M2VElUMc34MPZlj_BbdbwkVZaJ6_io8OH-lACCSYc44=w1280"
+            }
+            alt='Stars'
+            width={500}
+            height={500}
+          />
+        </section>
+      </aside>
+      <aside className='flex-1 flex justify-center'>
+        <div className='flex items-center justify-center'>
+          <form onSubmit={handleSubmit(handleSendMail)} className='space-y-4'>
+            <div className='flex justify-between space-x-2'>
+              <Controller
+                name='lastName'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    type='text'
+                    color={undefined}
+                    variant='bordered'
+                    label='Nom'
+                    id='lastName'
+                    onChange={onChange}
+                    value={value}
+                    className='max-w-full'
+                  />
+                )}
+              />
 
-      <form
-        onSubmit={handleSubmit(handleSendMail)}
-        className='container px-5 py-24 mx-auto flex'
-      >
-        <div className='lg:w-1/3 md:w-1/2 bg-white dark:bg-gray-600 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10'>
-          <h2 className='text-gray-900 dark:text-gray-200 text-lg font-medium title-font text-center pb-2 mb-2'>
-            {!hideForm ? "Contactez moi" : "Merci"}
-          </h2>
-          {!hideForm && (
-            <div className='h-1 bg-gray-200 dark:bg-gray-400 rounded overflow-hidden'>
-              <div className='w-24 h-full bg-blue-500'></div>
+              <Controller
+                name='firstName'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    type='text'
+                    color={undefined}
+                    variant='bordered'
+                    label='Prénom'
+                    id='firstName'
+                    onChange={onChange}
+                    value={value}
+                    className='max-w-full'
+                  />
+                )}
+              />
             </div>
-          )}
-          <p
-            className={`${
-              !hideForm
-                ? "leading-relaxed mb-5 text-gray-600 dark:text-gray-200 mt-2"
-                : "text-center"
-            }`}
-          >
-            {!hideForm
-              ? "Transformez votre vision en réalité avec mon développement sur mesure."
-              : "Je vous répondrai d'ici 24h maximum."}
-          </p>
-          {!hideForm && (
-            <>
-              <div className='relative mb-4'>
-                <Controller
-                  name='first_name'
-                  control={control}
-                  render={({ field: { onChange, value } }) => (
-                    <Input
-                      type='text'
-                      color='primary'
-                      label='Nom'
-                      id='first_name'
-                      placeholder='Entrez votre nom'
-                      defaultValue='Xavier'
-                      onChange={onChange}
-                      value={value}
-                      className='max-w-[280px]'
-                    />
-                  )}
-                />
 
-                {errors.first_name && (
-                  <div className='text-red-500 font-mono text-xs'>
-                    {errors.first_name.message}
-                  </div>
+            <div className='w-full'>
+              <Controller
+                name='email'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    onChange={onChange}
+                    value={value}
+                    type='email'
+                    label='Email'
+                    variant='bordered'
+                    isInvalid={isInvalid}
+                    color={isInvalid ? "danger" : undefined}
+                    errorMessage={
+                      isInvalid && "Saisissez une adresse mail valide svp"
+                    }
+                    onValueChange={setValue}
+                  />
                 )}
-              </div>
+              />
+            </div>
 
-              <div className='relative mb-4'>
-                <Controller
-                  name='email'
-                  control={control}
-                  render={({ field: { onChange, value } }) => (
-                    <Input
-                      type='email'
-                      color='primary'
-                      label='Email'
-                      id='email'
-                      placeholder='Entrez votre email'
-                      defaultValue='contact@dix31.com'
-                      onChange={onChange}
-                      value={value}
-                      className='max-w-[280px]'
-                    />
-                  )}
+            <Controller
+              name='msg'
+              control={control}
+              defaultValue=''
+              render={({ field: { onChange, value } }) => (
+                <Textarea
+                  isRequired
+                  type='text'
+                  color={undefined}
+                  variant='bordered'
+                  value={value}
+                  onChange={onChange}
+                  label='Veuillez saisir votre message'
+                  autoFocus
+                  className='max-w-full'
                 />
+              )}
+            />
 
-                {errors.email && (
-                  <div className='text-red-500 font-mono text-xs'>
-                    {errors.email.message}
-                  </div>
-                )}
-              </div>
-
-              <div className='relative mb-4'>
-                <Controller
-                  name='msg'
-                  control={control}
-                  defaultValue=''
-                  render={({ field: { onChange, value } }) => (
-                    <Textarea
-                      type='text'
-                      color='primary'
-                      value={value}
-                      onChange={onChange}
-                      label='Veuillez saisir votre message'
-                      autoFocus
-                      className='max-w-xs'
-                    />
-                  )}
-                />
-
-                {errors.msg && (
-                  <div className='text-red-500 font-mono text-xs'>
-                    {errors.msg.message}
-                  </div>
-                )}
-              </div>
-
-              <div className='flex justify-center items-center'>
-                <Button color='primary' type='submit' variant='shadow'>
-                  Envoyer
-                </Button>
-              </div>
-
-              <p className='text-xs text-gray-500 dark:text-gray-300 mt-3'>
-                Mon engagement : vous apporter une réponse en moins de 24h.
-              </p>
-            </>
-          )}
+            <Button
+              type='submit'
+              className='black-button w-full text-center mt-16'
+            >
+              Envoyer
+            </Button>
+          </form>
         </div>
-      </form>
-
-      <div className='w-full h-96' />
-    </section>
+      </aside>
+    </div>
   );
 }
