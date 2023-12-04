@@ -21,6 +21,7 @@ export function Top() {
 
   const menuItems = [
     { name: "Accueil", path: "/" },
+    { name: "BonheurScore", path: "/BonheurScore" },
     { name: "Codes Promo", path: "/promo" },
     { name: "Contact", path: "/contact" },
   ];
@@ -49,6 +50,15 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex ' justify='center'>
+        <NavbarItem isActive={path.includes("/BonheurScore")}>
+          <Link
+            href='/BonheurScore'
+            className='text-white hover:text-text-link'
+          >
+            BonheurScore
+          </Link>
+        </NavbarItem>
+
         <NavbarItem isActive={path.includes("/promo")}>
           <Link href='/promo' className='text-white hover:text-text-link'>
             Codes Promo
