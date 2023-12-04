@@ -30,6 +30,23 @@ export function Top() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       className='bg-nav-light dark:bg-nav-dark'
+      classNames={{
+        item: [
+          "flex",
+          "relative",
+          "h-full",
+          "items-center",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-[#fbbf24]",
+          "dark:data-[active=true]:after:bg-orange-600",
+        ],
+      }}
     >
       <NavbarContent>
         <NavbarMenuToggle
