@@ -1,0 +1,60 @@
+{
+  "id": "promo",
+  "label": "Promo",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "name",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "website": {
+        "type": "Text",
+        "config": {
+          "label": "website",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      },
+      "code": {
+        "type": "Text",
+        "config": {
+          "label": "code",
+          "placeholder": ""
+        }
+      },
+      "montant": {
+        "type": "Text",
+        "config": {
+          "label": "montant",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

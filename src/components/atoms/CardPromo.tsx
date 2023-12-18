@@ -8,9 +8,10 @@ export default function CardPromo({
   name,
   logo,
   alt,
-  url,
+  website,
   description,
-  reduction,
+  code,
+  montant,
 }: Partner) {
   return (
     <section className='relative bg-gray-300 dark:bg-gray-800 shadow-md rounded-3xl p-2 mx-1 my-3'>
@@ -26,12 +27,17 @@ export default function CardPromo({
         </p>
 
         <Link
-          href={url}
+          href={website}
           target='_blank'
           className='flex items-center mb-1 mt-4 mr-4 group cursor-pointer text-gray-800 dark:text-gray-300'
         >
           <MdLoyalty className='h-32 w-32 text-bg-light dark:text-bg-dark mr-2' />
-          <p dangerouslySetInnerHTML={{ __html: reduction }} />
+          {/* <p dangerouslySetInnerHTML={{ __html: reduction }} /> */}
+          <p>
+            Et avec le code Promo
+            <span className='bold color-[#fbbf24]'>{code}</span> bénéficie
+            d&apos;une réduction {montant}.
+          </p>
         </Link>
       </div>
     </section>

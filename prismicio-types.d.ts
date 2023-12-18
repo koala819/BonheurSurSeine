@@ -146,34 +146,90 @@ export type AccueilDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = AccueilDocument;
+/**
+ * Content for Promo documents
+ */
+interface PromoDocumentData {
+  /**
+   * name field in *Promo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * logo field in *Promo*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * website field in *Promo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.website
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  website: prismic.KeyTextField;
+
+  /**
+   * description field in *Promo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * code field in *Promo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.code
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  code: prismic.KeyTextField;
+
+  /**
+   * montant field in *Promo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.montant
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  montant: prismic.KeyTextField;
+}
 
 /**
- * Default variation for Tmp Slice
+ * Promo document from Prismic
  *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TmpSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *Tmp*
- */
-type TmpSliceVariation = TmpSliceDefault;
-
-/**
- * Tmp Shared Slice
+ * - **API ID**: `promo`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
  *
- * - **API ID**: `tmp`
- * - **Description**: Tmp
- * - **Documentation**: https://prismic.io/docs/slice
+ * @typeParam Lang - Language API ID of the document.
  */
-export type TmpSlice = prismic.SharedSlice<"tmp", TmpSliceVariation>;
+export type PromoDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PromoDocumentData>, "promo", Lang>;
+
+export type AllDocumentTypes = AccueilDocument | PromoDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -188,10 +244,9 @@ declare module "@prismicio/client" {
       AccueilDocument,
       AccueilDocumentData,
       AccueilDocumentDataSlicesSlice,
+      PromoDocument,
+      PromoDocumentData,
       AllDocumentTypes,
-      TmpSlice,
-      TmpSliceVariation,
-      TmpSliceDefault,
     };
   }
 }

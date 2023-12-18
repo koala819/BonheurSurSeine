@@ -16,7 +16,8 @@ export interface Partner {
   name: string;
   logo: string;
   alt: string;
-  url: string;
+  website: string;
   description: string;
-  reduction: string;
+  code: string;
+  montant: string;
 }
