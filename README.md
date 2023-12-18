@@ -4,8 +4,6 @@
 </a>
 </p>
 
-
-
 <p align="center">
 <img src="https://img.shields.io/github/contributors/koala819/StarterPack" alt="GitHub contributors" />
 <img src="https://img.shields.io/github/discussions/koala819/StarterPack" alt="GitHub discussions" />
@@ -15,17 +13,17 @@
 
 ## 🔍 Table of Contents
 
-* [💻 Stack](#stack)
+- [💻 Stack](#stack)
 
-* [📝 Project Summary](#project-summary)
+- [📝 Project Summary](#project-summary)
 
-* [⚙️ Setting Up](#setting-up)
+- [⚙️ Setting Up](#setting-up)
 
-* [🚀 Run Locally](#run-locally)
+- [🚀 Run Locally](#run-locally)
 
-* [🙌 Contributors](#contributors)
+- [🙌 Contributors](#contributors)
 
-* [📄 License](#license)
+- [📄 License](#license)
 
 ## 💻 Stack
 
@@ -52,6 +50,7 @@
 ## ⚙️ Setting Up
 
 #### Your Environment Variable
+
 CLIENT_URL
 
     Set the URL of the client application (e.g., http://localhost:3000).
@@ -80,25 +79,36 @@ MAIL_USER
 
     Set the username or email address of the email account used to send emails.
 
-
 ## 🚀 Run Locally
+
 1.Clone the StarterPack repository:
+
 ```sh
 git clone https://github.com/koala819/StarterPack
 ```
+
 2.Install the dependencies with one of the package managers listed below:
+
 ```bash
 pnpm install
 bun install
 npm install
 yarn install
 ```
+
 3.Start the development mode:
+
 ```bash
 pnpm dev
 bun dev
 npm run dev
 yarn dev
+```
+
+4.Start slicemachine:
+
+```bash
+pnpm run slicemachine
 ```
 
 ## 🙌 Contributors
@@ -119,4 +129,3 @@ yarn dev
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the [**MIT License**](https://github.com/koala819/StarterPack/blob/master/LICENSE.md) file for details.
-

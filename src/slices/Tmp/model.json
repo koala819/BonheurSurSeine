@@ -1,0 +1,16 @@
+{
+  "id": "tmp",
+  "type": "SharedSlice",
+  "name": "Tmp",
+  "description": "Tmp",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

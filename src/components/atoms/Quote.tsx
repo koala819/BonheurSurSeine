@@ -1,12 +1,12 @@
-const Quote = () => {
+import { RichText } from "prismic-reactjs";
+import { KeyTextField } from "@prismicio/types";
+
+const Quote = ({ body, citation }: { body: any; citation: KeyTextField }) => {
   return (
     <div className='bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md text-center'>
-      <p className='text-lg'>
-        Enjoy, et n&apos;hésite pas à me dire ce que tu en penses...
-      </p>
-      <p className='text-lg'>Comme dit mon papa :</p>
+      <text className='text-lg'>{RichText.render(body)}</text>
       <blockquote className='italic text-gray-600 dark:text-gray-200 mt-4'>
-        &quot;Ce sont les bons clients qui font les bonnes maisons !&quot;
+        {citation}
       </blockquote>
     </div>
   );

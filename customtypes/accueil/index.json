@@ -1,0 +1,107 @@
+{
+  "id": "accueil",
+  "label": "Accueil",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "photo_front": {
+        "type": "Image",
+        "config": {
+          "label": "Photo_Front",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "photo_back": {
+        "type": "Image",
+        "config": {
+          "label": "Photo_Back",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titre": {
+        "type": "Text",
+        "config": {
+          "label": "Titre",
+          "placeholder": ""
+        }
+      },
+      "text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "body": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Body",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "citation": {
+        "type": "Text",
+        "config": {
+          "label": "citation",
+          "placeholder": ""
+        }
+      },
+      "fin": {
+        "type": "Text",
+        "config": {
+          "label": "Fin",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

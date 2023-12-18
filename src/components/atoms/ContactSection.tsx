@@ -1,10 +1,9 @@
-const ContactSection = () => {
+import { KeyTextField } from "@prismicio/types";
+
+const ContactSection = ({ text }: { text: KeyTextField }) => {
   return (
     <div className='p-6 text-center'>
-      <p className='text-lg font-semibold'>
-        Bon, maintenant tu veux choisir une roue ? Contactes moi via
-        l&apos;espace dédié
-      </p>
+      <p className='text-lg font-semibold'>{text}</p>
     </div>
   );
 };
