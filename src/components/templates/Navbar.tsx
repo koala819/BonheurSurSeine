@@ -49,10 +49,6 @@ export function Top() {
       }}
     >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className='sm:hidden'
-        />
         <NavbarBrand>
           <Link href='/' aria-current='page' color='foreground'>
             <Image
@@ -92,6 +88,10 @@ export function Top() {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className='sm:hidden'
+        />
       </NavbarContent>
       <NavbarMenu className='mt-8'>
         {menuItems.map((item, index) => (
