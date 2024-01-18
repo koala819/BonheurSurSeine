@@ -40,9 +40,9 @@ export default function CardPromo({
         />
       </div>
       <div className="mt-4 pl-2 mb-2">
-        <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2">
           {name}
-        </h1>
+        </h2>
         <p className="text-md text-gray-800 dark:text-gray-300">
           {description}
         </p>

@@ -7,6 +7,7 @@
 pnpm-lock.yaml
 /site/.vscode
 .next
+.env.local
 
 # testing
 /site/coverage
