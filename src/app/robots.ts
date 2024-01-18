@@ -8,6 +8,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/private/',
     },
     sitemap: `${process.env.CLIENT_URL}/sitemap.xml`,
-    // sitemap: 'https://acme.com/sitemap.xml',
   }
 }
