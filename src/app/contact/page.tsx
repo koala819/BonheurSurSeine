@@ -1,23 +1,27 @@
-"use client";
-import { Controller, useForm } from "react-hook-form";
-import { Button, Input, Textarea } from "@nextui-org/react";
-import toast from "react-hot-toast";
-import Image from "next/image";
-import { useMemo, useState } from "react";
+'use client'
+
+import { Button, Input, Textarea } from '@nextui-org/react'
+import { useMemo, useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+
+import Image from 'next/image'
+
+import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Page() {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('')
 
   const validateEmail = (value: string) =>
-    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
 
   const isInvalid = useMemo(() => {
-    if (value === "") return false;
+    if (value === '') return false
 
-    return validateEmail(value) ? false : true;
-  }, [value]);
+    return validateEmail(value) ? false : true
+  }, [value])
 
-  const { control, handleSubmit } = useForm<any>();
+  const { control, handleSubmit } = useForm<any>()
   const handleSendMail = async (values: any) => {
     const data = {
       email: values.email,
@@ -26,99 +30,100 @@ export default function Page() {
       message: values.msg,
       societe: values.society,
       telephone: values.tel,
-    };
+    }
 
     const options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-    };
+    }
 
     fetch(`${process.env.CLIENT_URL}/api/mail`, options)
       .then((response: any) => {
         if (response.status === 200) {
-          toast.success("Votre message a bien été envoyé");
+          toast.success('Votre message a bien été envoyé')
           //   setHideForm(true);
         } else {
-          toast.error("Une erreur s'est produite", response.statusText);
+          toast.error("Une erreur s'est produite", response.statusText)
         }
       })
       .catch((error: any) => {
-        toast.error("Une erreur s'est produite", error);
-      });
-  };
+        toast.error("Une erreur s'est produite", error)
+      })
+  }
 
   return (
-    <div className='flex'>
-      <aside className='flex-1 flex justify-center'>
-        <section className='flex items-center justify-center'>
+    <div className="lg:flex my-4 lg:my-8">
+      <aside className="lg:w-1/3 xl:flex-1 flex justify-center mb-4 lg:mb-0">
+        <picture className="flex items-center justify-center lg: px-4">
           <Image
-            src={
-              "https://lh6.googleusercontent.com/fyOE0lyRIDWZPtXF_XOvP8t6DaPxx5kakkz7A3GIU5g0Ubyo-0p4z_pq73AouUGy-CrNy_Qpy9x32zIQbIBC5M2VElUMc34MPZlj_BbdbwkVZaJ6_io8OH-lACCSYc44=w1280"
-            }
-            alt='Stars'
+            src={bonheurSurSeine}
+            alt="Raphael"
+            className="h-full w-full object-cover object-center rounded-2xl"
+            priority
             width={500}
             height={500}
+            placeholder="blur"
           />
-        </section>
+        </picture>
       </aside>
-      <aside className='flex-1 flex justify-center'>
-        <div className='flex items-center justify-center'>
-          <form onSubmit={handleSubmit(handleSendMail)} className='space-y-4'>
-            <div className='flex justify-between space-x-2'>
+      <aside className="xl:flex-1 flex justify-center">
+        <div className="flex items-center justify-center">
+          <form onSubmit={handleSubmit(handleSendMail)} className="space-y-4">
+            <div className="flex justify-between space-x-2">
               <Controller
-                name='lastName'
+                name="lastName"
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <Input
                     isRequired
-                    type='text'
+                    type="text"
                     color={undefined}
-                    variant='bordered'
-                    label='Nom'
-                    id='lastName'
+                    variant="bordered"
+                    label="Nom"
+                    id="lastName"
                     onChange={onChange}
                     value={value}
-                    className='max-w-full'
+                    className="max-w-full"
                   />
                 )}
               />
 
               <Controller
-                name='firstName'
+                name="firstName"
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <Input
                     isRequired
-                    type='text'
+                    type="text"
                     color={undefined}
-                    variant='bordered'
-                    label='Prénom'
-                    id='firstName'
+                    variant="bordered"
+                    label="Prénom"
+                    id="firstName"
                     onChange={onChange}
                     value={value}
-                    className='max-w-full'
+                    className="max-w-full"
                   />
                 )}
               />
             </div>
 
-            <div className='w-full'>
+            <div className="w-full">
               <Controller
-                name='email'
+                name="email"
                 control={control}
                 render={({ field: { onChange, value } }) => (
                   <Input
                     isRequired
                     onChange={onChange}
                     value={value}
-                    type='email'
-                    label='Email'
-                    variant='bordered'
+                    type="email"
+                    label="Email"
+                    variant="bordered"
                     isInvalid={isInvalid}
-                    color={isInvalid ? "danger" : undefined}
+                    color={isInvalid ? 'danger' : undefined}
                     errorMessage={
-                      isInvalid && "Saisissez une adresse mail valide svp"
+                      isInvalid && 'Saisissez une adresse mail valide svp'
                     }
                     onValueChange={setValue}
                   />
@@ -127,27 +132,27 @@ export default function Page() {
             </div>
 
             <Controller
-              name='msg'
+              name="msg"
               control={control}
-              defaultValue=''
+              defaultValue=""
               render={({ field: { onChange, value } }) => (
                 <Textarea
                   isRequired
-                  type='text'
+                  type="text"
                   color={undefined}
-                  variant='bordered'
+                  variant="bordered"
                   value={value}
                   onChange={onChange}
-                  label='Veuillez saisir votre message'
+                  label="Veuillez saisir votre message"
                   autoFocus
-                  className='max-w-full'
+                  className="max-w-full"
                 />
               )}
             />
 
             <Button
-              type='submit'
-              className='black-button w-full text-center mt-16'
+              type="submit"
+              className="black-button w-full text-center mt-16"
             >
               Envoyer
             </Button>
@@ -155,5 +160,5 @@ export default function Page() {
         </div>
       </aside>
     </div>
-  );
+  )
 }
