@@ -27,6 +27,14 @@
           "thumbnails": []
         }
       },
+      "logo_mode_sombre": {
+        "type": "Image",
+        "config": {
+          "label": "logo_mode_sombre",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "website": {
         "type": "Text",
         "config": {

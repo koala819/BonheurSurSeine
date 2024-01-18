@@ -12,14 +12,15 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "images.unsplash.com",
-      "lh6.googleusercontent.com",
-      "images.prismic.io",
+      'images.unsplash.com',
+      'lh6.googleusercontent.com',
+      'images.prismic.io',
+      'bonheursurseine.cdn.prismic.io',
     ],
   },
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   swcMinify: true,
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
