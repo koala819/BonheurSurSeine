@@ -5,6 +5,7 @@ import { Top as Navbar } from "@/src/components/templates/Navbar";
 import { Footer } from "@/src/components/templates/Footer";
 import { Providers } from "./providers";
 import GoogleAnalytics from "@/src/components/util/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
                   <div className='flex flex-col min-w-0 break-words w-full mb-6 bg-gray-200 dark:bg-slate-500 rounded-lg  border-0 '>
                     <GoogleAnalytics />
                     {children}
+                    <Analytics />
                   </div>
                 </div>
               </main>
