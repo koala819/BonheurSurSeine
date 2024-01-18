@@ -141,6 +141,82 @@ interface AccueilDocumentData {
 export type AccueilDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<AccueilDocumentData>, 'accueil', Lang>
 
+type ContactDocumentDataSlicesSlice = never
+
+/**
+ * Content for Contact documents
+ */
+interface ContactDocumentData {
+  /**
+   * Phrase field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.phrase
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  phrase: prismic.RichTextField
+
+  /**
+   * Slice Zone field in *Contact*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ContactDocumentDataSlicesSlice> /**
+   * Meta Description field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: contact.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField
+
+  /**
+   * Meta Image field in *Contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>
+
+  /**
+   * Meta Title field in *Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: contact.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+}
+
+/**
+ * Contact document from Prismic
+ *
+ * - **API ID**: `contact`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ContactDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ContactDocumentData>,
+    'contact',
+    Lang
+  >
+
 /**
  * Content for Promo documents
  */
@@ -246,7 +322,7 @@ interface PromoDocumentData {
 export type PromoDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PromoDocumentData>, 'promo', Lang>
 
-export type AllDocumentTypes = AccueilDocument | PromoDocument
+export type AllDocumentTypes = AccueilDocument | ContactDocument | PromoDocument
 
 declare module '@prismicio/client' {
   interface CreateClient {
@@ -261,6 +337,9 @@ declare module '@prismicio/client' {
       AccueilDocument,
       AccueilDocumentData,
       AccueilDocumentDataSlicesSlice,
+      ContactDocument,
+      ContactDocumentData,
+      ContactDocumentDataSlicesSlice,
       PromoDocument,
       PromoDocumentData,
       AllDocumentTypes,

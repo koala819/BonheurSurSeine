@@ -1,6 +1,7 @@
 'use client'
 
 import { Button, Input, Textarea } from '@nextui-org/react'
+import { RichText } from 'prismic-reactjs'
 import { useMemo, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
@@ -9,9 +10,8 @@ import Image from 'next/image'
 
 import bonheurSurSeine from '@/public/contact.jpg'
 
-export default function Contact() {
+export default function Contact({ text }: { text: any }) {
   const [value, setValue] = useState('')
-
   const validateEmail = (value: string) =>
     value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
 
@@ -70,6 +70,9 @@ export default function Contact() {
       <aside className="xl:flex-1 flex justify-center">
         <div className="flex items-center justify-center">
           <form onSubmit={handleSubmit(handleSendMail)} className="space-y-4">
+            <span className="text-xl text-black dark:text-gray-200">
+              {RichText.render(text)}
+            </span>
             <div className="flex justify-between space-x-2">
               <Controller
                 name="lastName"
