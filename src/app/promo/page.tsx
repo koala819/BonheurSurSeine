@@ -7,10 +7,13 @@ import { createClient } from '@/prismicio'
 export default async function Page() {
   const client = createClient()
   const promos = await client.getByType('promo').catch(() => notFound())
+  const sortedPromos = promos.results.sort(
+    (a, b) => a.data.rank! - b.data.rank!,
+  )
 
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 ">
-      {promos.results.map((promo: any, id: number) => (
+      {sortedPromos.map((promo: any, id: number) => (
         <div key={id} className="text-red-500">
           <CardPromo
             key={id}

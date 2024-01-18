@@ -146,6 +146,17 @@ export type AccueilDocument<Lang extends string = string> =
  */
 interface PromoDocumentData {
   /**
+   * rank field in *Promo*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: promo.rank
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  rank: prismic.NumberField
+
+  /**
    * name field in *Promo*
    *
    * - **Field Type**: Text
