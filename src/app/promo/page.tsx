@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: `${process.env.CLIENT_URL}/promo`,
   },
 }
+
 export default async function Page() {
   const client = createClient()
   const promos = await client.getByType('promo').catch(() => notFound())
