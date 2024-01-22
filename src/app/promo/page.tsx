@@ -27,9 +27,9 @@ export default async function Page() {
         Découvrez mes Partenaires et Profitez d&apos;Offres Exclusives sur les
         Gyroroues !
       </h1>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 ">
+      <div className="flex-col justify-center sm:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {sortedPromos.map((promo: any, id: number) => (
-          <div key={id} className="text-red-500">
+          <div key={id}>
             <CardPromo
               key={id}
               name={promo.data.name}

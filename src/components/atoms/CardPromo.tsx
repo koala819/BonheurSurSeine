@@ -25,14 +25,13 @@ export default function CardPromo({
     <section className="relative bg-gray-300 dark:bg-gray-800 shadow-md rounded-3xl p-2 mx-1 my-3">
       <div className="flex justify-center overflow-x-hidden rounded-2xl relative">
         <Image
-          className="h-20 object-center"
+          className="lg:h-20 object-center"
           alt={alt || 'logo de mon partenaire'}
           src={
             theme === 'dark' && logo_mode_sombre
               ? logo_mode_sombre || ''
               : logo || ''
           }
-          // src={logo || ''}
           priority
           width={500}
           height={200}
