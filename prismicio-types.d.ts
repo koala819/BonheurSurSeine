@@ -218,6 +218,184 @@ export type ContactDocument<Lang extends string = string> =
   >
 
 /**
+ * Content for Gyroroue documents
+ */
+interface GyroroueDocumentData {
+  /**
+   * Modèle field in *Gyroroue*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.modele
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  modele: prismic.KeyTextField
+
+  /**
+   * Photo field in *Gyroroue*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.photo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  photo: prismic.ImageField<never>
+
+  /**
+   * Constructeur field in *Gyroroue*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.constructeur
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  constructeur: prismic.SelectField<
+    'BEGODE' | 'EXTREME BULL' | 'INMOTION' | 'KINGSONG' | 'LEAPERKIM VETERAN'
+  >
+
+  /**
+   * Date field in *Gyroroue*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField
+
+  /**
+   * Points field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.points
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  points: prismic.NumberField
+
+  /**
+   * Equipement field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.equipement
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  equipement: prismic.NumberField
+
+  /**
+   * Praticité field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.praticite
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  praticite: prismic.NumberField
+
+  /**
+   * En ville field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.en_ville
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  en_ville: prismic.NumberField
+
+  /**
+   * Sur route field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.sur_route
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  sur_route: prismic.NumberField
+
+  /**
+   * Profil field in *Gyroroue*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.profil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  profil: prismic.SelectField<'Polyvalente' | 'Routière' | 'Urbaine'>
+
+  /**
+   * Suspension field in *Gyroroue*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: gyroroue.suspension
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  suspension: prismic.BooleanField
+
+  /**
+   * Note field in *Gyroroue*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.note
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  note: prismic.NumberField
+
+  /**
+   * Commentaire field in *Gyroroue*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.commentaire
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  commentaire: prismic.KeyTextField
+
+  /**
+   * Lien vidéo Youtube field in *Gyroroue*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.lien_video_youtube
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  lien_video_youtube: prismic.LinkField
+}
+
+/**
+ * Gyroroue document from Prismic
+ *
+ * - **API ID**: `gyroroue`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GyroroueDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<GyroroueDocumentData>,
+    'gyroroue',
+    Lang
+  >
+
+/**
  * Content for Promo documents
  */
 interface PromoDocumentData {
@@ -322,7 +500,11 @@ interface PromoDocumentData {
 export type PromoDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PromoDocumentData>, 'promo', Lang>
 
-export type AllDocumentTypes = AccueilDocument | ContactDocument | PromoDocument
+export type AllDocumentTypes =
+  | AccueilDocument
+  | ContactDocument
+  | GyroroueDocument
+  | PromoDocument
 
 declare module '@prismicio/client' {
   interface CreateClient {
@@ -340,6 +522,8 @@ declare module '@prismicio/client' {
       ContactDocument,
       ContactDocumentData,
       ContactDocumentDataSlicesSlice,
+      GyroroueDocument,
+      GyroroueDocumentData,
       PromoDocument,
       PromoDocumentData,
       AllDocumentTypes,

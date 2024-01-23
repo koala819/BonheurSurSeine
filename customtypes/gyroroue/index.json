@@ -1,0 +1,127 @@
+{
+  "id": "gyroroue",
+  "label": "Gyroroue",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "modele": {
+        "type": "Text",
+        "config": {
+          "label": "Modèle",
+          "placeholder": ""
+        }
+      },
+      "photo": {
+        "type": "Image",
+        "config": {
+          "label": "Photo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "constructeur": {
+        "type": "Select",
+        "config": {
+          "label": "Constructeur",
+          "placeholder": "",
+          "options": [
+            "BEGODE",
+            "EXTREME BULL",
+            "INMOTION",
+            "KINGSONG",
+            "LEAPERKIM VETERAN"
+          ]
+        }
+      },
+      "date": {
+        "type": "Date",
+        "config": {
+          "label": "Date",
+          "placeholder": ""
+        }
+      },
+      "points": {
+        "type": "Number",
+        "config": {
+          "label": "Points",
+          "placeholder": ""
+        }
+      },
+      "equipement": {
+        "type": "Number",
+        "config": {
+          "label": "Equipement",
+          "placeholder": ""
+        }
+      },
+      "praticite": {
+        "type": "Number",
+        "config": {
+          "label": "Praticité",
+          "placeholder": ""
+        }
+      },
+      "en_ville": {
+        "type": "Number",
+        "config": {
+          "label": "En ville",
+          "placeholder": ""
+        }
+      },
+      "sur_route": {
+        "type": "Number",
+        "config": {
+          "label": "Sur route",
+          "placeholder": ""
+        }
+      },
+      "profil": {
+        "type": "Select",
+        "config": {
+          "label": "Profil",
+          "placeholder": "",
+          "options": ["Polyvalente", "Routière", "Urbaine"]
+        }
+      },
+      "suspension": {
+        "type": "Boolean",
+        "config": {
+          "label": "Suspension",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "note": {
+        "type": "Number",
+        "config": {
+          "label": "Note",
+          "placeholder": ""
+        }
+      },
+      "commentaire": {
+        "type": "Text",
+        "config": {
+          "label": "Commentaire",
+          "placeholder": ""
+        }
+      },
+      "lien_video_youtube": {
+        "type": "Link",
+        "config": {
+          "label": "Lien vidéo Youtube",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}
