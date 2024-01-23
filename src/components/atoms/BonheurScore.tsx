@@ -49,6 +49,7 @@ export function BonheurScore({
           <CardBody>
             <picture className="w-full flex justify-center p-8">
               <Image
+                priority={true}
                 src={gyroroue.data.photo.url!}
                 alt={gyroroue.data.photo.alt ?? 'Gyroroue Image'}
                 width={gyroroue.data.photo.dimensions?.width}
