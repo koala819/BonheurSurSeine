@@ -31,7 +31,6 @@ export function BonheurScore({
     <div className="container mx-auto p-4">
       {gyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-4">
-          {console.log('lien_video_youtube', gyroroue.data.lien_video_youtube)}
           <CardHeader>
             <div className="flex justify-between items-center w-full">
               <text className="flex-col">
