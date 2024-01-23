@@ -1,6 +1,5 @@
 import {
   DateField,
-  EmptyLinkField,
   ImageField,
   KeyTextField,
   NumberField,
