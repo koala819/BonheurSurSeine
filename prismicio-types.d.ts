@@ -76,17 +76,6 @@ interface AccueilDocumentData {
   citation: prismic.KeyTextField
 
   /**
-   * Fin field in *Accueil*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: accueil.fin
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  fin: prismic.KeyTextField
-
-  /**
    * Slice Zone field in *Accueil*
    *
    * - **Field Type**: Slice Zone
@@ -95,7 +84,18 @@ interface AccueilDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<AccueilDocumentDataSlicesSlice> /**
+  slices: prismic.SliceZone<AccueilDocumentDataSlicesSlice>
+
+  /**
+   * Fin field in *Accueil*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accueil.fin
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  fin: prismic.RichTextField /**
    * Meta Description field in *Accueil*
    *
    * - **Field Type**: Text

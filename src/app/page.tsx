@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import ContactSection from '@/src/components/atoms/ContactSection'
+import FinishSection from '@/src/components/atoms/FinishSection'
 import Hero from '@/src/components/atoms/Hero'
 import Quote from '@/src/components/atoms/Quote'
 
@@ -28,7 +28,7 @@ export default async function Page() {
         titre={accueil.data.titre}
       />
       <Quote body={accueil.data.body} citation={accueil.data.citation} />
-      <ContactSection text={accueil.data.fin} />
+      <FinishSection text={accueil.data.fin} />
     </section>
   )
 }
