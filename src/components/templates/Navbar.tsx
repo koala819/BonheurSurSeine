@@ -12,12 +12,12 @@ import {
 import { useState } from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { ThemeSwitcher } from '@/src/components/util/ThemeSwitcher'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
-import Link from 'next/link'
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,7 +29,6 @@ export function Top() {
     { name: 'Codes Promo', path: '/promo' },
     { name: 'Contact', path: '/contact' },
   ]
-
 
   return (
     <Navbar
@@ -108,7 +107,7 @@ export function Top() {
               color={'foreground'}
               className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 "
               href={item.path}
-              size="lg"
+              // size="lg"
             >
               {item.name}
             </Link>

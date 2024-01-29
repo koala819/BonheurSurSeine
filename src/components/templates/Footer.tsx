@@ -1,5 +1,6 @@
 'use client'
 
+import { Tooltip } from '@nextui-org/react'
 import { BsFacebook, BsYoutube } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
 import { LuCopyleft } from 'react-icons/lu'
@@ -33,39 +34,48 @@ export function Footer() {
                 <Article
                   title="Bonheur Sur Seine"
                   classNameTitle="md:text-xl lg:text-3xl"
-                  // description='Activateur de compétences'
-                  // classNameDescription='md:text-xs lg:text-md xl:text-xl'
                   button={{ display: false }}
                 />
                 <picture className="flex space-x-4 items-center mt-2">
-                  <Link
-                    href="https://www.youtube.com/c/BonheursurSeine"
-                    target="_blank"
-                    className="text-gray-500 hover:text-red-500 flex items-center bg-white rounded-2xl p-2"
-                  >
-                    <BsYoutube size={32} />
-                  </Link>
+                  <Tooltip showArrow={true} color="danger" content="Youtube">
+                    <Link
+                      href="https://www.youtube.com/c/BonheursurSeine"
+                      target="_blank"
+                      className="text-red-600 hover:text-red-500 flex items-centerrounded-2xl p-2"
+                    >
+                      <BsYoutube size={38} />
+                    </Link>
+                  </Tooltip>
 
-                  <Link
-                    href="https://www.facebook.com/bonheursurseine/"
-                    target="_blank"
-                    className="text-gray-500 hover:text-blue-500 flex items-center justify-center bg-white rounded-2xl p-2 w-12 h-12"
+                  <Tooltip showArrow={true} color="primary" content="Facebook">
+                    <Link
+                      href="https://www.facebook.com/bonheursurseine/"
+                      target="_blank"
+                      className="text-blue-700 hover:text-blue-600 flex items-center justify-center rounded-2xl p-2"
+                    >
+                      <BsFacebook size={30} />
+                    </Link>
+                  </Tooltip>
+
+                  <Tooltip
+                    showArrow={true}
+                    color={'danger'}
+                    content="Instagram"
                   >
-                    <BsFacebook size={22} />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/bonheursurseine/"
-                    target="_blank"
-                    className="text-gray-500 hover:text-rose-500 flex items-center justify-center bg-white rounded-2xl p-2 w-12 h-12"
-                  >
-                    <FiInstagram size={28} />
-                  </Link>
+                    <Link
+                      href="https://www.instagram.com/bonheursurseine/"
+                      target="_blank"
+                      className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
+                    >
+                      <FiInstagram size={32} />
+                    </Link>
+                  </Tooltip>
                 </picture>
               </div>
             }
           />
         </aside>
-        <aside className="md:basis-1/4 flex justify-center">
+        {/* <aside className="md:basis-1/4 flex justify-center">
           <FooterColumn
             title="social"
             items={[
@@ -83,7 +93,7 @@ export function Footer() {
               },
             ]}
           />
-        </aside>
+        </aside> */}
         <aside className="md:basis-1/4 flex justify-center">
           <FooterColumn
             title="entreprise"
