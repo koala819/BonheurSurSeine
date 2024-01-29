@@ -28,20 +28,19 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${inter.className}`}>
         <Providers>
-          <div className="min-h-screen min-w-screen">
-            <div className=" flex flex-col h-screen">
-              <Navbar />
-              <main className="flex-1 bg-bg-light dark:bg-bg-dark text-white">
-                <div className="w-full lg:w-8/12 px-4 mx-auto mt-6">
-                  <div className="flex flex-col min-w-0 break-words w-full mb-6 bg-gray-200 dark:bg-slate-500 rounded-lg  border-0 ">
-                    <GoogleAnalytics />
-                    {children}
-                    <Analytics />
-                  </div>
+          <div className="min-h-screen min-w-screen flex flex-col">
+            <Navbar />
+
+            <main className="flex-1 bg-bg-light dark:bg-bg-dark text-white">
+              <div className="w-full px-4 mx-auto mt-6">
+                <div className="flex flex-col min-w-0 break-words w-full mb-6 bg-gray-200 dark:bg-slate-500 rounded-lg border-0 ">
+                  <GoogleAnalytics />
+                  {children}
+                  <Analytics />
                 </div>
-              </main>
-              <Footer />
-            </div>
+              </div>
+            </main>
+            <Footer />
           </div>
         </Providers>
       </body>

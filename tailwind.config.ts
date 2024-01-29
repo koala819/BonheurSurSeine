@@ -1,22 +1,26 @@
-const { nextui } = require("@nextui-org/react");
+import type { Config } from 'tailwindcss'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const { nextui } = require('@nextui-org/react')
+
+const config: Config = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    './src/**/*.{ts,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        "bg-light": "#003366",
-        "nav-light": "#508cb1",
-        "bg-dark": "#121212",
-        "nav-dark": "#2f6088",
-        "text-link": "#fbbf24",
+        'bg-light': '#003366',
+        'nav-light': '#508cb1',
+        'bg-dark': '#121212',
+        'nav-dark': '#0c2d47',
+        'text-link': '#fbbf24',
+        'text-light': '#1f2937',
+        'text-dark': '#e5e7eb',
       },
     },
   },
-  darkMode: "class",
+  darkMode: 'class',
   plugins: [nextui()],
-};
+}
+module.exports = config
