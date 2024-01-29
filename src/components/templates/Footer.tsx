@@ -3,7 +3,6 @@
 import { Tooltip } from '@nextui-org/react'
 import { BsFacebook, BsYoutube } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
-import { LuCopyleft } from 'react-icons/lu'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,9 +12,11 @@ import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
-import whitelogo from '@/public/white_DIX31.png'
+import dix31 from '@/public/white_DIX31.png'
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="bg-nav-light dark:bg-nav-dark pt-8 w-full">
       <nav className="space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12">
@@ -120,26 +121,38 @@ export function Footer() {
           />
         </aside>
       </nav>
-      <legend className="bg-[#47464D] flex justify-center">
-        <div className="py-4 flex flex-col md:flex-row space-y-2 md:space-y-0">
-          2023 Created by
-          <Link
-            href="https://www.dix31.com"
-            target="_blank"
-            className="mx-1 hover:underline"
-          >
-            {/* DIX31.com */}
-            <picture className="w-full flex justify-center md:justify-end text-white pr-1 mt-1">
-              <Image
-                src={whitelogo}
-                alt="Logo DIX31.com"
-                height={15}
-                className="text-white"
-              />
-            </picture>
-          </Link>
-          with Copyleft license
-          <LuCopyleft className="mr-1" />
+      <legend className="w-full px-4 mx-auto text-center bg-[#47464D] text-white">
+        <div className="py-4 flex flex-col md:flex-row space-y-8 md:space-y-0">
+          <aside className="flex w-full flex-col md:flex-row items-center text-sm tracking-widest space-y-4 md:space-y-0">
+            <text className="flex">
+              {currentYear} Created by
+              <Link
+                href="https://www.dix31.com"
+                target="_blank"
+                className="mx-1 hover:underline"
+              >
+                <picture className="flex justify-center md:justify-end text-white pr-1 mt-1">
+                  <Image
+                    src={dix31}
+                    alt="Logo DIX31.com"
+                    height={15}
+                    className="text-white"
+                  />
+                </picture>
+              </Link>
+            </text>
+          </aside>
+
+          {/* <aside className="flex w-full justify-center text-sm tracking-widest">
+            Design by
+            <Link
+              href="https://github.com/koala819/"
+              target="_blank"
+              className="ml-1 hover:underline"
+            >
+              Xavier
+            </Link>
+          </aside> */}
         </div>
       </legend>
     </footer>

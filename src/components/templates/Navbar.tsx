@@ -107,7 +107,6 @@ export function Top() {
               color={'foreground'}
               className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 "
               href={item.path}
-              // size="lg"
             >
               {item.name}
             </Link>
