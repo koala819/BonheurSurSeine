@@ -19,12 +19,8 @@ export default function Hero({
     <section className="mx-auto px-4 lg:px-8 mt-8">
       <div className="flex flex-wrap justify-between md:mb-16">
         <aside className="flex w-3/4 lg:w-1/3 items-center flex-col justify-center">
-          <h1 className="text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl whitespace-nowrap">
-            {titre}
-          </h1>
-          <span className="mt-4 mb-8 leading-relaxed text-gray-500 dark:text-gray-300 xl:text-lg">
-            {RichText.render(text)}
-          </span>
+          <h1>{titre}</h1>
+          <p>{RichText.render(text)}</p>
         </aside>
 
         <aside className="flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
