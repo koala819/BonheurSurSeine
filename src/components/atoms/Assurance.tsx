@@ -77,7 +77,7 @@ const Assurance = () => {
             propose des contrats d’assurance adaptés. Tu trouveras un{' '}
             <Link href="/promo" className="link-style">
               code Promo
-            </Link>
+            </Link>{' '}
             à utiliser chez Wizzas, un courtier en assurance spécialisé et
             partenaire de la chaine.
           </p>
