@@ -36,3 +36,7 @@ text {
 .brandGyroroue {
   @apply text-xl font-semibold text-brown-700;
 }
+
+.chevronAccordionItem {
+  @apply text-xl font-extrabold text-primary dark:text-white;
+}
