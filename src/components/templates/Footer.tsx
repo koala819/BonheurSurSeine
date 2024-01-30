@@ -18,7 +18,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-nav-light dark:bg-nav-dark pt-8 w-full">
+    <footer className="bg-nav-light dark:bg-nav-dark pt-8 w-full text-white">
       <nav className="space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12">
         <aside className="flex justify-center md:basis-1/2">
           <DoubleColumn
