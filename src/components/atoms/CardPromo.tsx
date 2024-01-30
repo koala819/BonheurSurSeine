@@ -33,6 +33,7 @@ export default function CardPromo({
                 : logo || ''
             }
             priority
+            objectFit="contain"
             layout="fill"
             className="object-content"
           />
@@ -52,7 +53,6 @@ export default function CardPromo({
           className="flex items-center mb-1 mt-4 mr-4 group cursor-pointer text-gray-800 dark:text-gray-300"
         >
           <MdLoyalty className="h-32 w-32 text-bg-light dark:text-bg-dark mr-2" />
-          {/* <p dangerouslySetInnerHTML={{ __html: reduction }} /> */}
           <p>
             Et avec le code Promo
             <span className="bold color-[#fbbf24]">{code}</span> bénéficie
