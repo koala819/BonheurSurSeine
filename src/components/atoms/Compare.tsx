@@ -52,18 +52,19 @@ const Compare = () => {
         <h4>➡️ Mes reviews et le BonheurScore</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            La notation{' '}
+            <span className="font-semibold">La notation</span>{' '}
             <Link
               href="/BonheurScore"
               className="underline hover:text-blue-500"
             >
               BonheurScore
             </Link>{' '}
-            permet de savoir en synthèse ce que j&apos;ai pensé de chaque roue
-            que j&apos;ai testée.
+            permet de savoir en synthèse{' '}
+            <span className="font-semibold">ce que j&apos;ai pensé</span> de
+            chaque roue que j&apos;ai testée.
           </li>
           <li>
-            Dans toutes{' '}
+            Dans <span className="font-semibold">toutes</span>{' '}
             <Link
               href="https://www.youtube.com/@BonheursurSeine"
               className="underline hover:text-blue-500"
@@ -71,8 +72,9 @@ const Compare = () => {
             >
               mes vidéos
             </Link>
-            , je donne librement mon avis et j&apos;identifie au mieux les
-            usages pour lesquels la roue excelle.
+            , je donne librement mon avis et j&apos;identifie au mieux{' '}
+            <span className="font-semibold">les usages</span> pour lesquels la
+            roue excelle.
           </li>
         </ul>
       </div>
@@ -119,8 +121,9 @@ const Compare = () => {
                 standardisé.
               </li>
               <li>
-                C&apos;est actuellement le meilleur outil pour faire des
-                comparaisons. ⇒{' '}
+                C&apos;est actuellement{' '}
+                <span className="font-semibold">le meilleur outil</span> pour
+                faire des comparaisons. ⇒{' '}
                 <Link
                   href="https://finder.eucfinder.com/fr"
                   className="underline hover:text-blue-500"
