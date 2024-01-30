@@ -18,18 +18,18 @@ export default function Hero({
   return (
     <section className="mx-auto px-4 lg:px-8 mt-8">
       <div className="flex flex-wrap justify-between md:mb-16">
-        <div className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
-          <h1 className="text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl">
+        <aside className="flex w-3/4 lg:w-1/3 items-center flex-col justify-center">
+          <h1 className="text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl whitespace-nowrap">
             {titre}
           </h1>
-          <div className="mt-4 mb-8 leading-relaxed text-gray-500 dark:text-gray-300 xl:text-lg">
+          <span className="mt-4 mb-8 leading-relaxed text-gray-500 dark:text-gray-300 xl:text-lg">
             {RichText.render(text)}
-          </div>
-        </div>
+          </span>
+        </aside>
 
-        <div className="flex w-full relative md:mb-16 lg:w-2/3">
+        <aside className="flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
           {/* Image de Derrière */}
-          <div className="absolute inset-0 m-4 overflow-hidden rounded-lg bg-gray-100 shadow-lg">
+          <div className="absolute inset-0 lg:m-4 overflow-hidden rounded-lg shadow-lg w-full h-full lg:min-w-full">
             <Image
               src={photo_back.url || ''}
               alt={photo_back.alt || ''}
@@ -39,17 +39,17 @@ export default function Hero({
           </div>
 
           {/* Image de Devant */}
-          <picture className="z-10 w-1/2">
+          <picture className="z-10 w-1/3 md:w-1/4 p-4 flex justify-center items-center">
             <Image
               src={photo_front.url || ''}
               alt={photo_front.alt || ''}
               className="object-cover object-center rounded-full"
               layout="responsive"
-              width={50}
-              height={50}
+              width={30}
+              height={30}
             />
           </picture>
-        </div>
+        </aside>
       </div>
     </section>
   )
