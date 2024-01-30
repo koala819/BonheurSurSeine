@@ -23,7 +23,7 @@ export default async function Page() {
 
   return (
     <section className="flex-col justify-center p-4 space-y-8">
-      <h1>
+      <h1 className="whitespace-break-spaces">
         Découvrez mes Partenaires et Profitez d&apos;Offres Exclusives sur les
         Gyroroues !
       </h1>
