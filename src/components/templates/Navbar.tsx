@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -12,7 +13,6 @@ import {
 import { useState } from 'react'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { ThemeSwitcher } from '@/src/components/util/ThemeSwitcher'
@@ -34,7 +34,6 @@ export function Top() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      maxWidth="full"
       className="pb-4 mx-auto -px-4 py-5 bg-nav-light dark:bg-nav-dark"
       isBordered={true}
       position="sticky"
@@ -107,13 +106,17 @@ export function Top() {
           className="sm:hidden"
         />
       </NavbarContent>
-      <NavbarMenu className="mt-8">
+      <NavbarMenu
+        className="mt-8"
+        style={{ maxHeight: '300px', overflowY: 'auto' }}
+      >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={'foreground'}
               className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 "
               href={item.path}
+              size="lg"
             >
               {item.name}
             </Link>
