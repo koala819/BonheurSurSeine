@@ -36,7 +36,7 @@ const Compare = () => {
           <li>
             Certains modèles changent légèrement avec le temps (esthétique ou
             technique) selon le lot de production (on appelle cela les
-            *batchs*).
+            <span className="italic ml-1">batchs</span>).
           </li>
         </ul>
       </div>
