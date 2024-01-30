@@ -19,7 +19,7 @@ export default function Hero({
     <section className="mx-auto px-4 lg:px-8 mt-8">
       <div className="flex flex-wrap justify-between md:mb-16">
         <div className="flex w-full flex-col justify-center lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
-          <h1 className="text-4xl font-bold text-black dark:text-white sm:text-5xl md:mb-8 md:text-6xl">
+          <h1 className="text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl">
             {titre}
           </h1>
           <div className="mt-4 mb-8 leading-relaxed text-gray-500 dark:text-gray-300 xl:text-lg">
