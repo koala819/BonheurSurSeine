@@ -8,10 +8,7 @@ const Needs = () => {
       <h2>Bien identifier ses besoins</h2>
       <p>
         Le choix est plus facile une fois{' '}
-        <span className="font-semibold">
-          ses besoins et ses usages correctement identifiés
-        </span>
-        .
+        <strong>ses besoins et ses usages correctement identifiés</strong>.
       </p>
       <p>Voici 7 questions essentielles à se poser : </p>
       <div className="flex flex-col gap-4">

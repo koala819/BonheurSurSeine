@@ -6,21 +6,17 @@ const Choice = () => {
         <aside className="md:w-1/2 space-y-4 ">
           <p>
             L&apos;important est d&apos;avoir une roue adaptée à son
-            utilisation.<span className="font-semibold"> Le piège</span>, ce
-            serait de{' '}
-            <span className="font-semibold">
-              ne regarder que les spécifications techniques
-            </span>{' '}
-            et de{' '}
-            <span className="font-semibold">
+            utilisation.<strong> Le piège</strong>, ce serait de{' '}
+            <strong>ne regarder que les spécifications techniques</strong> et de{' '}
+            <strong>
               n&apos;être attiré que par les nouvelles roues qui arrivent
-            </span>{' '}
+            </strong>{' '}
             sur le marché.
           </p>
           <p>
             Or, le choix se fait en fonction de ses goûts, de sa sensibilité, de
             sa situation, de son style de conduite et d&apos;autres{' '}
-            <span className="font-semibold">critères personnels.</span>
+            <strong>critères personnels.</strong>
           </p>
         </aside>
         <aside className="md:w-1/2 blueBlock">
