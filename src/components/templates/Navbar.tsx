@@ -121,7 +121,7 @@ export function Top() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={'foreground'}
-              className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-1/2 "
+              className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-2/3 "
               href={item.path}
               size="lg"
             >
