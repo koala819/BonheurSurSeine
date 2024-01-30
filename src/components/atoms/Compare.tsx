@@ -92,27 +92,35 @@ const Compare = () => {
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                La notation{' '}
+                Ce projet (auquel je participe avec{' '}
                 <Link
-                  href="/BonheurScore"
-                  className="underline hover:text-blue-500"
-                >
-                  BonheurScore
-                </Link>{' '}
-                permet de savoir en synthèse ce que j&apos;ai pensé de chaque
-                roue que j&apos;ai testée.
-              </li>
-              <li>
-                Dans toutes{' '}
-                <Link
-                  href="https://www.youtube.com/@BonheursurSeine"
+                  href="https://www.instagram.com/rafa.pgarcia"
                   className="underline hover:text-blue-500"
                   target="_blank"
                 >
-                  mes vidéos
+                  @rafa.pgarcia
+                </Link>{' '}
+                et{' '}
+                <Link
+                  href="https://www.instagram.com/fabien.wheel"
+                  className="underline hover:text-blue-500"
+                  target="_blank"
+                >
+                  @Fabien.Wheel
                 </Link>
-                , je donne librement mon avis et j&apos;identifie au mieux les
-                usages pour lesquels la roue excelle.
+                ) permet de consulter l&apos;ensemble des modèles dans un format
+                standardisé.
+              </li>
+              <li>
+                C&apos;est actuellement le meilleur outil pour faire des
+                comparaisons. ⇒{' '}
+                <Link
+                  href="https://finder.eucfinder.com/fr"
+                  className="underline hover:text-blue-500"
+                  target="_blank"
+                >
+                  Accès direct au comparateur
+                </Link>
               </li>
             </ul>
           </aside>
