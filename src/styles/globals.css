@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 h1 {
-  @apply whitespace-nowrap text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl;
+  @apply mb-4 whitespace-nowrap text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl;
 }
 
-p {
+p,
+text {
   @apply text-lg sm:text-xl md:text-2xl;
 }
