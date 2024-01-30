@@ -5,7 +5,7 @@ import Needs from '@/src/components/atoms/Needs'
 
 const ChooseWheel = () => {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 text-lg">
+    <div className="py-10 px-4 sm:px-6 lg:px-8 text-lg container mx-auto p-4">
       <Choice />
       <Brands />
       <Needs />

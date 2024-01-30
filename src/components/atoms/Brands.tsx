@@ -9,7 +9,7 @@ import gyroroues from '@/public/gyroroues.jpg'
 
 const Brands = () => {
   return (
-    <section className="my-8 space-y-4">
+    <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
       <h2>Le marché et les principales marques</h2>
       <span>3 catégories se distinguent :</span>
       <Accordion>

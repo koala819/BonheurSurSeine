@@ -4,7 +4,7 @@ import { Checkbox } from '@nextui-org/react'
 
 const Needs = () => {
   return (
-    <section className="my-8 space-y-4">
+    <section className="my-8 space-y-4 bg-white  dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
       <h2>Bien identifier ses besoins</h2>
       <p>
         Le choix est plus facile une fois{' '}

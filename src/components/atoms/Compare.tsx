@@ -5,7 +5,7 @@ import Eeucfinder from '@/public/Eeucfinder-dark.png'
 
 const Compare = () => {
   return (
-    <section className="my-8 space-y-4">
+    <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
       <h2>Comparer</h2>
       <div className="md:ml-6 blueBlock">
         <h3>📢 &quot;Choisir, c’est aussi renoncer…&quot;</h3>
