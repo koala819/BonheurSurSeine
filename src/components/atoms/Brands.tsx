@@ -1,0 +1,213 @@
+'use client'
+
+import { Accordion, AccordionItem } from '@nextui-org/react'
+
+import Image from 'next/image'
+import Link from 'next/link'
+
+import gyroroues from '@/public/gyroroues.jpg'
+
+const Brands = () => {
+  return (
+    <section className="my-8 space-y-4">
+      <h2 className="text-4xl font-semibold mb-4">
+        Le marché et les principales marques
+      </h2>
+      <span>3 catégories se distinguent :</span>
+      <Accordion>
+        <AccordionItem
+          key="1"
+          aria-label="Les citadines"
+          title={<span className="text-xl font-semibold">Les citadines</span>}
+        >
+          <ul className="list-disc pl-4 space-y-4">
+            <li>
+              Souvent proposées en entrée de gamme, elles sont absolument
+              parfaites pour découvrir le pouvoir de la roue électrique : la
+              liberté !
+            </li>
+            <li>
+              Compactes, ultra maniables et légères (max 20kg), elles offrent ce
+              que la roue a de meilleur. Les centres-villes et les pistes
+              cyclables sont leur terrain de jeux favori. Elles sont parfaites
+              pour rester discret, pour l’intermodalité, et faire des trajets de
+              quelques kilomètres.
+            </li>
+          </ul>
+        </AccordionItem>
+        <AccordionItem
+          key="2"
+          aria-label="Les polyvalentes"
+          title={
+            <span className="text-xl font-semibold">Les polyvalentes</span>
+          }
+        >
+          <ul className="list-disc pl-4 space-y-4">
+            <li>
+              Le cœur du marché : ni trop grosses (même si à présent le poids
+              dépasse les 30kg), ni trop petites, confortables, ergonomiques,
+              avec de bonnes autonomies, ces modèles présentent de nombreux
+              avantages. Les plus imposantes proposent même une suspension.
+            </li>
+            <li>
+              Avec ces roues, on peut aller au travail la semaine, et aller se
+              promener le week-end !
+            </li>
+          </ul>
+        </AccordionItem>
+        <AccordionItem
+          key="3"
+          aria-label="Les randonneuses"
+          title={
+            <span className="text-xl font-semibold">Les randonneuses</span>
+          }
+        >
+          <ul className="list-disc pl-4 space-y-4">
+            <li>
+              Ici, aucune limite de taille, ni de poids ! Ces modèles sont
+              plutôt dédiés à la pratique sportive : performance ou grande
+              randonnée. Ces roues affichent des spécifications techniques de
+              haute volée (voltage, autonomie, puissance, suspension, vitesses
+              max) que finalement peu de gens exploitent.
+            </li>
+            <li>
+              On est sur les poids lourds de la micromobilité (40kg est un
+              minimum). Avec seulement quelques modèles au début, l’offre s’est
+              depuis étoffée au fur et a mesure des améliorations techniques
+              (suspension, voltage).
+            </li>
+          </ul>
+        </AccordionItem>
+      </Accordion>
+      <div className="flex justify-center">
+        <Link href={gyroroues.src} passHref target="_blank">
+          <Image
+            src={gyroroues}
+            alt="5 gyroroues"
+            width={500}
+            height={500}
+            className="rounded-lg cursor-pointer"
+          />
+        </Link>
+      </div>
+      <p>
+        Le marché est actuellement dominé par quelques fabricants, tous basés en
+        Chine (près de Shenzen).
+      </p>
+      <p>
+        Aucun favoritisme de ma part, les marques sont citées par ordre
+        alphabétique.😉
+      </p>
+      <Accordion>
+        <AccordionItem
+          key="1"
+          aria-label="Begode (précédemment Gotway)"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Begode (précédemment Gotway)
+            </span>
+          }
+        >
+          <span>
+            Ce fabricant historique (présent depuis 2014) s’est imposé comme une
+            référence pour de nombreux passionnés, grâce à une très large gamme
+            de modèles axés sur la performance (allant des très petites aux très
+            grosses) et grâce à un renouvellement constant de sa gamme.
+          </span>
+        </AccordionItem>
+        <AccordionItem
+          key="2"
+          aria-label="Extreme Bull"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Extreme Bull
+            </span>
+          }
+        >
+          <span>
+            Marque apparue en 2021, elle partage son ADN et ses ateliers de
+            fabrication avec Begode pour continuer à repousser les limites.
+          </span>
+        </AccordionItem>
+        <AccordionItem
+          key="3"
+          aria-label="Inmotion"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Inmotion
+            </span>
+          }
+        >
+          <span>
+            Créé en 2012, ce fabricant propose une gamme lisible et diversifiée,
+            avec des modèles adaptés aussi bien aux débutants qu’aux experts.
+            Ses modèles associent performances, praticité, sécurité et design
+            soigné.
+          </span>
+        </AccordionItem>
+        <AccordionItem
+          key="4"
+          aria-label="Kingsong"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Kingsong
+            </span>
+          }
+        >
+          <span>
+            Présent sur le marché depuis 2014, cette marque est reconnue pour
+            ses modèles offrant un équilibre entre performance et sécurité. Elle
+            fut la première à proposer un modèle avec suspension.
+          </span>
+        </AccordionItem>
+        <AccordionItem
+          key="5"
+          aria-label="Leaperkim / Veteran"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Leaperkim / Veteran
+            </span>
+          }
+        >
+          <span>
+            Apparu en 2020, ce fabricant a rapidement gagné en popularité auprès
+            des connaisseurs grâce à ses roues robustes et puissantes, et une
+            belle qualité de fabrication.
+          </span>
+        </AccordionItem>
+        <AccordionItem
+          key="6"
+          aria-label="Ninebot by Segway"
+          title={
+            <span className="text-xl font-semibold text-brown-700">
+              Ninebot by Segway
+            </span>
+          }
+        >
+          <span>
+            Cette marque, connue pour ses trottinettes électriques, a fabriqué
+            quelques modèles populaires et au design soigné entre 2014 et 2018.
+            Elle s’est depuis retirée du marché.
+          </span>
+        </AccordionItem>
+      </Accordion>
+      <p>
+        Les autres marques sont moins connues et moins appréciées des
+        connaisseurs. Les caractéristiques de leurs modèles n&apos;offrent pas
+        les mêmes garanties (sécurité, performance) que celles qu&apos;on
+        retrouve chez les leaders du marché.
+      </p>
+      <div className="md:ml-6 mt-4 md:mt-0 bg-blue-100 dark:bg-cyan-800 p-4 rounded space-y-8">
+        <p className="font-semibold">
+          ⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;
+        </p>
+        <p>
+          D&apos;expérience, chaque modèle excelle pour un usage précis, avec
+          ses forces, ses qualités et ses faiblesses.
+        </p>
+      </div>
+    </section>
+  )
+}
+
+export default Brands
