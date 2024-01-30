@@ -22,21 +22,21 @@ export default function CardPromo({
   const { theme } = useTheme()
 
   return (
-    <section className="relative bg-gray-300 dark:bg-gray-800 shadow-md rounded-3xl p-2 mx-1 my-3">
-      <div className="flex justify-center overflow-x-hidden rounded-2xl relative">
-        <Image
-          className="lg:h-20 object-center"
-          alt={alt || 'logo de mon partenaire'}
-          src={
-            theme === 'dark' && logo_mode_sombre
-              ? logo_mode_sombre || ''
-              : logo || ''
-          }
-          priority
-          width={500}
-          height={200}
-          // placeholder="blur"
-        />
+    <section className="relative bg-gray-300 dark:bg-gray-900 shadow-md rounded-3xl p-2 mx-1 my-3">
+      <div className="flex justify-center h-[100px]">
+        <div className="relative overflow-hidden rounded-2xl shadow-lg h-full w-1/2 sm:w-full xl:w-1/2">
+          <Image
+            alt={alt || 'logo de mon partenaire'}
+            src={
+              theme === 'dark' && logo_mode_sombre
+                ? logo_mode_sombre || ''
+                : logo || ''
+            }
+            priority
+            layout="fill"
+            className="object-content"
+          />
+        </div>
       </div>
       <div className="mt-4 pl-2 mb-2">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2">

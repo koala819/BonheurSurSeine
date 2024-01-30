@@ -23,7 +23,7 @@ export default async function Page() {
 
   return (
     <section className="flex-col justify-center p-4 space-y-8">
-      <h1 className="text-xl md:text-3xl lg:text-4xl dark:text-white text-black font-semibold">
+      <h1>
         Découvrez mes Partenaires et Profitez d&apos;Offres Exclusives sur les
         Gyroroues !
       </h1>
