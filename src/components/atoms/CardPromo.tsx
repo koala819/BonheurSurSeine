@@ -55,8 +55,8 @@ export default function CardPromo({
           <MdLoyalty className="h-32 w-32 text-bg-light dark:text-bg-gray-300 mr-2" />
           <p>
             Et avec le code Promo
-            <span className="bold color-[#fbbf24]">{code}</span> bénéficie
-            d&apos;une réduction {montant}.
+            <span className="font-bold color-[#fbbf24] ml-1">{code}</span>{' '}
+            bénéficies d&apos;une réduction {montant}.
           </p>
         </Link>
       </div>
