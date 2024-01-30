@@ -115,7 +115,7 @@ export function Top() {
       </NavbarContent>
       <NavbarMenu
         className="mt-8"
-        style={{ maxHeight: '300px', overflowY: 'auto' }}
+        style={{ maxHeight: '350px', overflowY: 'auto' }}
       >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
