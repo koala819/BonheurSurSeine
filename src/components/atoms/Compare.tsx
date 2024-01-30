@@ -1,9 +1,16 @@
+'use client'
+
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Eeucfinder from '@/public/Eeucfinder-dark.png'
+import whitelogo from '@/public/Logo_Claro.svg'
+import blackLogo from '@/public/Logo_Oscuro.svg'
 
 const Compare = () => {
+  const { theme } = useTheme()
+  const logo = theme === 'dark' ? blackLogo : whitelogo
+
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
       <h2>Comparer</h2>
@@ -80,7 +87,7 @@ const Compare = () => {
               target="_blank"
             >
               <Image
-                src={Eeucfinder}
+                src={logo}
                 alt="Eeucfinder Logo"
                 width={100}
                 height={500}
