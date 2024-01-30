@@ -71,7 +71,7 @@ const CommonSense = () => {
             <li>
               Prend le temps de connaitre tes capacités, de{' '}
               <span className="font-semibold">connaitre ta roue</span>, et
-              <span className="font-semibold">respecte là</span>.
+              <span className="font-semibold ml-1">respecte là</span>.
             </li>
             <li>
               Je répète : connais bien les limites de ta roues et respecte les.
