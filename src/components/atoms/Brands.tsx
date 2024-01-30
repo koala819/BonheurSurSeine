@@ -17,6 +17,7 @@ const Brands = () => {
           key="1"
           aria-label="Les citadines"
           title={<span className="font-semibold">Les citadines</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -37,6 +38,7 @@ const Brands = () => {
           key="2"
           aria-label="Les polyvalentes"
           title={<span className="font-semibold">Les polyvalentes</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -55,6 +57,7 @@ const Brands = () => {
           key="3"
           aria-label="Les randonneuses"
           title={<span className="font-semibold">Les randonneuses</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -99,6 +102,7 @@ const Brands = () => {
           title={
             <span className="brandGyroroue">Begode (précédemment Gotway)</span>
           }
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Ce fabricant historique (présent depuis 2014) s’est imposé comme une
@@ -111,6 +115,7 @@ const Brands = () => {
           key="2"
           aria-label="Extreme Bull"
           title={<span className="brandGyroroue">Extreme Bull</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Marque apparue en 2021, elle partage son ADN et ses ateliers de
@@ -121,6 +126,7 @@ const Brands = () => {
           key="3"
           aria-label="Inmotion"
           title={<span className="brandGyroroue">Inmotion</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Créé en 2012, ce fabricant propose une gamme lisible et diversifiée,
@@ -133,6 +139,7 @@ const Brands = () => {
           key="4"
           aria-label="Kingsong"
           title={<span className="brandGyroroue">Kingsong</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Présent sur le marché depuis 2014, cette marque est reconnue pour
@@ -144,6 +151,7 @@ const Brands = () => {
           key="5"
           aria-label="Leaperkim / Veteran"
           title={<span className="brandGyroroue">Leaperkim / Veteran</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Apparu en 2020, ce fabricant a rapidement gagné en popularité auprès
@@ -155,6 +163,7 @@ const Brands = () => {
           key="6"
           aria-label="Ninebot by Segway"
           title={<span className="brandGyroroue">Ninebot by Segway</span>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <span>
             Cette marque, connue pour ses trottinettes électriques, a fabriqué

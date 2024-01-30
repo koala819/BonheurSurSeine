@@ -12,6 +12,7 @@ const Assurance = () => {
           key="1"
           aria-label="L'assurance"
           title={<h3>L&apos;assurance</h3>}
+          indicator={<span className="text-primary">&lt;</span>}
         >
           <div className="blueBlock mb-8">
             <h3>
