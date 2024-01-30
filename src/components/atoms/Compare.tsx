@@ -1,20 +1,21 @@
+import Image from 'next/image'
 import Link from 'next/link'
+
+import Eeucfinder from '@/public/Eeucfinder-dark.png'
 
 const Compare = () => {
   return (
     <section className="my-8 space-y-4">
-      <h2 className="text-4xl font-semibold mb-4">Comparer</h2>
-      <div className="md:ml-6 mt-4 md:mt-0 bg-blue-100 dark:bg-cyan-800 p-4 rounded space-y-8">
-        <p className="font-semibold">
-          📢 &quot;Choisir, c’est aussi renoncer…&quot;
-        </p>
+      <h2>Comparer</h2>
+      <div className="md:ml-6 blueBlock">
+        <h3>📢 &quot;Choisir, c’est aussi renoncer…&quot;</h3>
         <p>
           Pour faire un choix éclairé, il faut peser les avantages et les
           inconvénients, et tenir compte de ses contraintes.
         </p>
       </div>
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-4">➡️ Pas si simple</h2>
+      <div className="pt-8">
+        <h4>➡️ Pas si simple</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             Bien que petit, le marché propose énormément de modèles. Certaines
@@ -41,9 +42,7 @@ const Compare = () => {
       </div>
 
       <div className="pt-8">
-        <h2 className="text-xl font-semibold mb-4">
-          ➡️ Mes reviews et le BonheurScore
-        </h2>
+        <h4>➡️ Mes reviews et le BonheurScore</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             La notation{' '}
@@ -72,40 +71,52 @@ const Compare = () => {
       </div>
 
       <div className="pt-8">
-        <h2 className="text-xl font-semibold mb-4">➡️ EUC Finder</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            Ce projet (auquel je participe avec{' '}
+        <h4>➡️ EUC Finder</h4>
+        <div className="flex flex-col lg:flex-row">
+          <aside className="lg:w-1/5 flex items-center justify-center">
             <Link
-              href="https://www.instagram.com/rafa.pgarcia"
-              className="underline hover:text-blue-500"
+              href={'https://www.eucfinder.com/fr'}
+              passHref
               target="_blank"
             >
-              @rafa.pgarcia
-            </Link>{' '}
-            et{' '}
-            <Link
-              href="https://www.instagram.com/fabien.wheel"
-              className="underline hover:text-blue-500"
-              target="_blank"
-            >
-              @Fabien.Wheel
+              <Image
+                src={Eeucfinder}
+                alt="Eeucfinder Logo"
+                width={100}
+                height={500}
+                className="rounded-lg cursor-pointer"
+              />
             </Link>
-            ) permet de consulter l&apos;ensemble des modèles dans un format
-            standardisé.
-          </li>
-          <li>
-            C&apos;est actuellement le meilleur outil pour faire des
-            comparaisons. ⇒{' '}
-            <Link
-              href="https://finder.eucfinder.com/fr"
-              className="underline hover:text-blue-500"
-              target="_blank"
-            >
-              Accès direct au comparateur
-            </Link>
-          </li>
-        </ul>
+          </aside>
+
+          <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                La notation{' '}
+                <Link
+                  href="/BonheurScore"
+                  className="underline hover:text-blue-500"
+                >
+                  BonheurScore
+                </Link>{' '}
+                permet de savoir en synthèse ce que j&apos;ai pensé de chaque
+                roue que j&apos;ai testée.
+              </li>
+              <li>
+                Dans toutes{' '}
+                <Link
+                  href="https://www.youtube.com/@BonheursurSeine"
+                  className="underline hover:text-blue-500"
+                  target="_blank"
+                >
+                  mes vidéos
+                </Link>
+                , je donne librement mon avis et j&apos;identifie au mieux les
+                usages pour lesquels la roue excelle.
+              </li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </section>
   )

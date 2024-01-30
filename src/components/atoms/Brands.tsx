@@ -10,15 +10,13 @@ import gyroroues from '@/public/gyroroues.jpg'
 const Brands = () => {
   return (
     <section className="my-8 space-y-4">
-      <h2 className="text-4xl font-semibold mb-4">
-        Le marché et les principales marques
-      </h2>
+      <h2>Le marché et les principales marques</h2>
       <span>3 catégories se distinguent :</span>
       <Accordion>
         <AccordionItem
           key="1"
           aria-label="Les citadines"
-          title={<span className="text-xl font-semibold">Les citadines</span>}
+          title={<span className="font-semibold">Les citadines</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -38,9 +36,7 @@ const Brands = () => {
         <AccordionItem
           key="2"
           aria-label="Les polyvalentes"
-          title={
-            <span className="text-xl font-semibold">Les polyvalentes</span>
-          }
+          title={<span className="font-semibold">Les polyvalentes</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -58,9 +54,7 @@ const Brands = () => {
         <AccordionItem
           key="3"
           aria-label="Les randonneuses"
-          title={
-            <span className="text-xl font-semibold">Les randonneuses</span>
-          }
+          title={<span className="font-semibold">Les randonneuses</span>}
         >
           <ul className="list-disc pl-4 space-y-4">
             <li>
@@ -103,9 +97,7 @@ const Brands = () => {
           key="1"
           aria-label="Begode (précédemment Gotway)"
           title={
-            <span className="text-xl font-semibold text-brown-700">
-              Begode (précédemment Gotway)
-            </span>
+            <span className="brandGyroroue">Begode (précédemment Gotway)</span>
           }
         >
           <span>
@@ -118,11 +110,7 @@ const Brands = () => {
         <AccordionItem
           key="2"
           aria-label="Extreme Bull"
-          title={
-            <span className="text-xl font-semibold text-brown-700">
-              Extreme Bull
-            </span>
-          }
+          title={<span className="brandGyroroue">Extreme Bull</span>}
         >
           <span>
             Marque apparue en 2021, elle partage son ADN et ses ateliers de
@@ -132,11 +120,7 @@ const Brands = () => {
         <AccordionItem
           key="3"
           aria-label="Inmotion"
-          title={
-            <span className="text-xl font-semibold text-brown-700">
-              Inmotion
-            </span>
-          }
+          title={<span className="brandGyroroue">Inmotion</span>}
         >
           <span>
             Créé en 2012, ce fabricant propose une gamme lisible et diversifiée,
@@ -148,11 +132,7 @@ const Brands = () => {
         <AccordionItem
           key="4"
           aria-label="Kingsong"
-          title={
-            <span className="text-xl font-semibold text-brown-700">
-              Kingsong
-            </span>
-          }
+          title={<span className="brandGyroroue">Kingsong</span>}
         >
           <span>
             Présent sur le marché depuis 2014, cette marque est reconnue pour
@@ -163,11 +143,7 @@ const Brands = () => {
         <AccordionItem
           key="5"
           aria-label="Leaperkim / Veteran"
-          title={
-            <span className="text-xl font-semibold text-brown-700">
-              Leaperkim / Veteran
-            </span>
-          }
+          title={<span className="brandGyroroue">Leaperkim / Veteran</span>}
         >
           <span>
             Apparu en 2020, ce fabricant a rapidement gagné en popularité auprès
@@ -178,11 +154,7 @@ const Brands = () => {
         <AccordionItem
           key="6"
           aria-label="Ninebot by Segway"
-          title={
-            <span className="text-xl font-semibold text-brown-700">
-              Ninebot by Segway
-            </span>
-          }
+          title={<span className="brandGyroroue">Ninebot by Segway</span>}
         >
           <span>
             Cette marque, connue pour ses trottinettes électriques, a fabriqué
@@ -197,10 +169,8 @@ const Brands = () => {
         les mêmes garanties (sécurité, performance) que celles qu&apos;on
         retrouve chez les leaders du marché.
       </p>
-      <div className="md:ml-6 mt-4 md:mt-0 bg-blue-100 dark:bg-cyan-800 p-4 rounded space-y-8">
-        <p className="font-semibold">
-          ⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;
-        </p>
+      <div className="md:ml-6 blueBlock">
+        <h3>⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;</h3>
         <p>
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses.

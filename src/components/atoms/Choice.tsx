@@ -1,9 +1,9 @@
 const Choice = () => {
   return (
-    <section className="mb-8">
-      <h1 className="text-4xl font-semibold mb-4">Choisir sa roue</h1>
-      <div className="mb-8 flex flex-col-reverse md:flex-row items-center">
-        <aside className="md:w-1/2 text-center md:text-left space-y-4 ">
+    <section>
+      <h1>Choisir sa roue</h1>
+      <div className="mb-8 flex flex-col md:flex-row items-center">
+        <aside className="md:w-1/2 space-y-4 ">
           <p>
             L&apos;important est d&apos;avoir une roue adaptée à son
             utilisation.<span className="font-semibold"> Le piège</span>, ce
@@ -23,11 +23,11 @@ const Choice = () => {
             <span className="font-semibold">critères personnels.</span>
           </p>
         </aside>
-        <aside className="md:w-1/2 md:ml-6 mt-4 md:mt-0 bg-blue-100 dark:bg-cyan-800 p-4 rounded space-y-8">
-          <p className="font-semibold">
+        <aside className="md:w-1/2 blueBlock">
+          <h3>
             📢 &quot;La meilleure roue, c’est celle qu’on a sous les pieds
             !&quot;
-          </p>
+          </h3>
           <p>
             Pas besoin d’avoir la dernière roue du marché pour ressentir le
             bonheur de rouler.

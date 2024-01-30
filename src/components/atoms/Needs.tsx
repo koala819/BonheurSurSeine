@@ -5,9 +5,15 @@ import { Checkbox } from '@nextui-org/react'
 const Needs = () => {
   return (
     <section className="my-8 space-y-4">
-      <h2 className="text-4xl font-semibold mb-4">
-        Bien identifier ses besoins
-      </h2>
+      <h2>Bien identifier ses besoins</h2>
+      <p>
+        Le choix est plus facile une fois{' '}
+        <span className="font-semibold">
+          ses besoins et ses usages correctement identifiés
+        </span>
+        .
+      </p>
+      <p>Voici 7 questions essentielles à se poser : </p>
       <div className="flex flex-col gap-4">
         <Checkbox color="primary">
           Je recherche une roue pour : essayer/apprendre ? pratiquer

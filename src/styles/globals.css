@@ -6,7 +6,28 @@ h1 {
   @apply mb-4 whitespace-nowrap text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl;
 }
 
+h2 {
+  @apply mb-4 text-3xl font-semibold sm:text-4xl md:text-5xl;
+}
+
+h3 {
+  @apply mb-4 text-xl font-semibold sm:text-xl md:text-2xl;
+}
+
+h4 {
+  @apply mb-4 text-xl font-semibold;
+}
+
 p,
+span,
 text {
-  @apply text-lg sm:text-xl md:text-2xl;
+  @apply text-left text-sm md:text-base;
+}
+
+.blueBlock {
+  @apply mt-4 space-y-8 rounded bg-blue-100 p-4 dark:bg-cyan-800 md:ml-6 md:mt-0;
+}
+
+.brandGyroroue {
+  @apply text-xl font-semibold text-brown-700;
 }
