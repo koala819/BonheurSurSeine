@@ -19,7 +19,7 @@ const Brands = () => {
           title={<span className="font-semibold">Les citadines</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list-disc pl-4 space-y-4">
+          <ul className="list">
             <li>
               Souvent proposées en entrée de gamme, elles sont absolument
               parfaites pour découvrir le pouvoir de la roue électrique : la
@@ -40,7 +40,7 @@ const Brands = () => {
           title={<span className="font-semibold">Les polyvalentes</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list-disc pl-4 space-y-4">
+          <ul className="list">
             <li>
               Le cœur du marché : ni trop grosses (même si à présent le poids
               dépasse les 30kg), ni trop petites, confortables, ergonomiques,
@@ -59,7 +59,7 @@ const Brands = () => {
           title={<span className="font-semibold">Les randonneuses</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list-disc pl-4 space-y-4">
+          <ul className="list">
             <li>
               Ici, aucune limite de taille, ni de poids ! Ces modèles sont
               plutôt dédiés à la pratique sportive : performance ou grande

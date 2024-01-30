@@ -23,7 +23,7 @@ const Compare = () => {
       </div>
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list">
           <li>
             Bien que petit, le marché propose énormément de modèles. Certaines
             marques enchaînent les nouveautés et renouvellent constamment leur
@@ -50,7 +50,7 @@ const Compare = () => {
 
       <div className="pt-8">
         <h4>➡️ Mes reviews et le BonheurScore</h4>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list">
           <li>
             <span className="font-semibold">La notation</span>{' '}
             <Link

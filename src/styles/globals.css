@@ -25,6 +25,10 @@ text {
   @apply text-left text-sm md:text-base;
 }
 
+.list {
+  @apply list-inside list-disc space-y-4 pl-4;
+}
+
 .link-style {
   @apply underline hover:text-blue-700;
 }

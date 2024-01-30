@@ -37,13 +37,9 @@ const Assurance = () => {
           <h3>À retenir :</h3>
           <ul className="list-disc pl-4 space-y-4 mb-4">
             <li>
-              La roue est un{' '}
-              <span className="font-semibold">véhicule terrestre à moteur</span>{' '}
-              et, elle doit être assurée. Le type de contrat est au minimum en{' '}
-              <span className="font-semibold text-brown-500">
-                responsabilité civile
-              </span>
-              .
+              La roue est un <strong>véhicule terrestre à moteur</strong> et,
+              elle doit être assurée. Le type de contrat est au minimum en{' '}
+              <strong className="text-brown-500">responsabilité civile</strong>.
             </li>
             <li>La vignette (papillon vert) doit être affichée.</li>
             <li>

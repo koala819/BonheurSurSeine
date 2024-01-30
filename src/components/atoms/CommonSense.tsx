@@ -10,7 +10,7 @@ const CommonSense = () => {
           key="1"
           aria-label="Le bon sens"
           title={<h3>Le bon sens</h3>}
-          indicator={<span className="chevronAccordionItem">&lt;</span>}
+          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
         >
           <div className="blueBlock mb-8">
             <h3>
@@ -20,9 +20,8 @@ const CommonSense = () => {
           <h3>Prudence est mère de sûreté</h3>
           <ul className="list-disc pl-4 space-y-4 mb-4">
             <li>
-              Respecte le{' '}
-              <span className="font-semibold">code de la route</span>{' '}
-              (circulation, stationnement, équipement).
+              Respecte le <strong>code de la route</strong> (circulation,
+              stationnement, équipement).
             </li>
             <li>
               Respecte les autres usagers (piétons, cyclistes, etc.), et met toi
@@ -31,14 +30,13 @@ const CommonSense = () => {
             </li>
             <li>
               Anticipe les{' '}
-              <span className="font-semibold">
+              <strong>
                 trajectoires (les tiennes et celles des autres usagers)
-              </span>
+              </strong>
               .
             </li>
             <li>
-              Maitrise toujours ta{' '}
-              <span className="font-semibold">vitesse</span> ! (Ne roule jamais
+              Maitrise toujours ta <strong>vitesse</strong> ! (Ne roule jamais
               plus vite que ce que tu peux freiner).
             </li>
           </ul>
@@ -51,27 +49,24 @@ const CommonSense = () => {
           <h3>À retenir :</h3>
           <ul className="list-disc pl-4 space-y-4 mb-4">
             <li>
-              <span className="font-semibold">Protège toi !</span>
+              <strong>Protège toi !</strong>
             </li>
             <li>
-              Le port du <span className="font-semibold">casque</span> (sans
-              être obligatoire) est{' '}
-              <span className="font-semibold">vivement recommandé</span>. Porter
-              des gants ou des genouillères permet également de se protéger.
+              Le port du <strong>casque</strong> (sans être obligatoire) est{' '}
+              <strong>vivement recommandé</strong>. Porter des gants ou des
+              genouillères permet également de se protéger.
             </li>
             <li>
-              <span className="font-semibold">Sois visible</span> mais n’aveugle
-              pas les autres.
+              <strong>Sois visible</strong> mais n’aveugle pas les autres.
             </li>
             <li>
-              Utilise une <span className="font-semibold">sonnette</span> pour
-              signaler <span className="font-semibold">amicalement</span> ton
-              approche et tes dépassements.
+              Utilise une <strong>sonnette</strong> pour signaler{' '}
+              <strong>amicalement</strong> ton approche et tes dépassements.
             </li>
             <li>
               Prend le temps de connaitre tes capacités, de{' '}
-              <span className="font-semibold">connaitre ta roue</span>, et
-              <span className="font-semibold ml-1">respecte là</span>.
+              <strong>connaitre ta roue</strong>, et
+              <strong className="ml-1">respecte là</strong>.
             </li>
             <li>
               Je répète : connais bien les limites de ta roues et respecte les.
