@@ -280,15 +280,14 @@ export default function Contact({ text }: { text: any }) {
               key={index}
               className="flex flex-col items-center"
             >
-              <div className="">
-                <Image
-                  src={person.img}
-                  alt={person.name}
-                  width={192}
-                  height={192}
-                  className="rounded-full object-cover w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48"
-                />
-              </div>
+              <Image
+                src={person.img}
+                alt={person.name}
+                width={192}
+                height={192}
+                className="hover:opacity-100 opacity-55 rounded-full object-cover w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48"
+              />
+
               <div className="mt-2 text-center">{person.name}</div>
             </Link>
           ))}
