@@ -1,3 +1,4 @@
+import Associations from '@/src/components/atoms/Associations'
 import Assurance from '@/src/components/atoms/Assurance'
 import CommonSense from '@/src/components/atoms/CommonSense'
 import HighwayCode from '@/src/components/atoms/HighwayCode'
@@ -24,6 +25,13 @@ const Page = () => {
       <Assurance />
       <HighwayCode />
       <Maintenance />
+      <Associations />
+      <div className="blueBlock">
+        <h3>
+          ❤️ Et si tu croises un autre passionné,{' '}
+          <strong>n’oublie pas de le saluer !</strong>
+        </h3>
+      </div>
     </div>
   )
 }

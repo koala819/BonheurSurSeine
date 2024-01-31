@@ -34,3 +34,9 @@ export interface Partner {
   code: string
   montant: string
 }
+
+export interface UserProfile {
+  name: string
+  profileUrl: string
+  imageUrl: string
+}

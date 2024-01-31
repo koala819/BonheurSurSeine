@@ -16,6 +16,8 @@ const nextConfig = {
       'lh6.googleusercontent.com',
       'images.prismic.io',
       'bonheursurseine.cdn.prismic.io',
+      's2.wklcdn.com',
+      's0.wklcdn.com',
     ],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
