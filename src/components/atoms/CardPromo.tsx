@@ -1,6 +1,6 @@
 'use client'
 
-// import { Image } from '@nextui-org/react'
+import { useEffect, useState } from 'react'
 import { MdLoyalty } from 'react-icons/md'
 
 import { useTheme } from 'next-themes'
@@ -20,6 +20,14 @@ export default function CardPromo({
   montant,
 }: Partner) {
   const { theme } = useTheme()
+  const [imageSrc, setImageSrc] = useState(logo)
+  useEffect(() => {
+    if (theme === 'dark' && logo_mode_sombre) {
+      setImageSrc(logo_mode_sombre)
+    } else {
+      setImageSrc(logo)
+    }
+  }, [theme, logo_mode_sombre, logo])
 
   return (
     <section className="relative bg-gray-300 dark:bg-gray-900 shadow-md rounded-3xl p-2 mx-1 my-3">
@@ -27,11 +35,7 @@ export default function CardPromo({
         <div className="relative overflow-hidden rounded-2xl shadow-lg h-full w-1/2 sm:w-full xl:w-1/2">
           <Image
             alt={alt || 'logo de mon partenaire'}
-            src={
-              theme === 'dark' && logo_mode_sombre
-                ? logo_mode_sombre || ''
-                : logo || ''
-            }
+            src={imageSrc}
             priority
             objectFit="contain"
             layout="fill"
