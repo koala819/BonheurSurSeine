@@ -18,6 +18,7 @@ const nextConfig = {
       'bonheursurseine.cdn.prismic.io',
       's2.wklcdn.com',
       's0.wklcdn.com',
+      'avatars.githubusercontent.com',
     ],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],

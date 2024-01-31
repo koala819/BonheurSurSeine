@@ -61,12 +61,32 @@ export default function Contact({ text }: { text: any }) {
   }
 
   const people = [
-    { name: 'Matthieu', img: '/People.png' },
-    { name: 'Kevin', img: '/People.png' },
-    { name: 'Paul', img: '/People.png' },
-    { name: 'Fabien', img: '/People.png' },
-    { name: 'M. X', img: '/People.png' },
-    { name: 'Xavier', img: '/People.png' },
+    {
+      name: 'Matthieu',
+      img: '/Mathieu.jpg',
+      url: 'https://www.instagram.com/tastypassports/',
+    },
+    {
+      name: 'Kevin',
+      img: '/People.png',
+      url: 'https://www.instagram.com/kevinlamshoots/',
+    },
+    {
+      name: 'Paul',
+      img: 'https://s0.wklcdn.com/image_235/7067439/photo.jpg?1682195125259',
+      url: 'https://fr.wikiloc.com/wikiloc/user.do?id=7067439',
+    },
+    {
+      name: 'Fabien',
+      img: 'https://s2.wklcdn.com/image_177/5325392/photo.jpg?1595180668172',
+      url: 'https://linktr.ee/fabien.wheel',
+    },
+    { name: 'M. X', img: '/M.X.jpg' },
+    {
+      name: 'Xavier',
+      img: 'https://avatars.githubusercontent.com/u/70317658?v=4',
+      url: 'https://www.dix31.com/',
+    },
     { name: 'Andrey', img: '/People.png' },
     { name: 'Fred', img: '/People.png' },
     { name: '??', img: '/People.png' },
@@ -253,18 +273,24 @@ export default function Contact({ text }: { text: any }) {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
           {people.map((person, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48">
+            <Link
+              href={person.url || ' #'}
+              passHref
+              target="_blank"
+              key={index}
+              className="flex flex-col items-center"
+            >
+              <div className="">
                 <Image
                   src={person.img}
                   alt={person.name}
                   width={192}
                   height={192}
-                  className="rounded-full object-content"
+                  className="rounded-full object-cover w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48"
                 />
               </div>
               <div className="mt-2 text-center">{person.name}</div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
