@@ -100,7 +100,18 @@ export default function Contact({ text }: { text: any }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <ul className="list">
-              <li>J&apos;ai envie de dire merci</li>
+              <li>
+                J&apos;ai envie de dire merci (dis le aussi en commentaires
+                <Link
+                  href={'https://www.youtube.com/c/BonheursurSeine'}
+                  passHref
+                  target="_blank"
+                  className="link-style ml-1"
+                >
+                  des vidéos
+                </Link>
+                )
+              </li>
               <li>Je voudrais t&apos;écrire ou t&apos;envoyer un truc</li>
               <li>J&apos;ai un projet de partenariat à proposer</li>
               <li>Je souhaite t&apos;inviter à un événement</li>
