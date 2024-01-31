@@ -6,6 +6,11 @@ h1 {
   @apply mb-4 whitespace-nowrap text-4xl font-bold sm:text-5xl md:mb-8 md:text-6xl;
 }
 
+.rich-text p {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
 h2 {
   @apply mb-4 text-3xl font-semibold sm:text-4xl md:text-5xl;
 }
