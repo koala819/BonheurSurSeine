@@ -12,7 +12,8 @@ import Link from 'next/link'
 import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Contact({ text }: { text: any }) {
-  const [value, setValue] = useState('')
+  const [hideForm, setHideForm] = useState<boolean>(false)
+  const [value, setValue] = useState<string>('')
 
   const validateEmail = (value: string) =>
     value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
@@ -29,16 +30,12 @@ export default function Contact({ text }: { text: any }) {
     firstName: string
     lastName: string
     msg: string
-    tel: string
-    society: string
   }) {
     const data = {
       email: values.email,
       prenom: values.firstName,
       nom: values.lastName,
       message: values.msg,
-      societe: values.society,
-      telephone: values.tel,
     }
 
     const options = {
@@ -51,6 +48,7 @@ export default function Contact({ text }: { text: any }) {
       .then((response: any) => {
         if (response.status === 200) {
           toast.success('Votre message a bien été envoyé')
+          setHideForm(true)
         } else {
           toast.error("Une erreur s'est produite", response.statusText)
         }
@@ -96,8 +94,8 @@ export default function Contact({ text }: { text: any }) {
   ]
 
   return (
-    <section className="container my-20 mx-auto space-y-8">
-      <h1>Formulaire de contact</h1>
+    <section className="container my-8 mx-auto p-4 space-y-8">
+      <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
       <header className="container mx-auto p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -139,95 +137,102 @@ export default function Contact({ text }: { text: any }) {
         </aside>
         <aside className="w-full lg:w-1/2 flex justify-center">
           <div className="flex items-center justify-center w-full">
-            <form onSubmit={handleSubmit(handleSendMail)} className="space-y-4">
-              <div className="rich-text">{RichText.render(text)}</div>
-              <div className="flex justify-between space-x-2">
-                <Controller
-                  name="lastName"
-                  control={control}
-                  render={({ field: { onChange, value } }) => (
-                    <Input
-                      isRequired
-                      type="text"
-                      color={undefined}
-                      variant="bordered"
-                      label="Nom"
-                      id="lastName"
-                      onChange={onChange}
-                      value={value}
-                      className="max-w-full"
-                    />
-                  )}
-                />
-
-                <Controller
-                  name="firstName"
-                  control={control}
-                  render={({ field: { onChange, value } }) => (
-                    <Input
-                      isRequired
-                      type="text"
-                      color={undefined}
-                      variant="bordered"
-                      label="Prénom"
-                      id="firstName"
-                      onChange={onChange}
-                      value={value}
-                      className="max-w-full"
-                    />
-                  )}
-                />
-              </div>
-
-              <div className="w-full">
-                <Controller
-                  name="email"
-                  control={control}
-                  render={({ field: { onChange, value } }) => (
-                    <Input
-                      isRequired
-                      onChange={onChange}
-                      value={value}
-                      type="email"
-                      label="Email"
-                      variant="bordered"
-                      isInvalid={isInvalid}
-                      color={isInvalid ? 'danger' : undefined}
-                      errorMessage={
-                        isInvalid && 'Saisissez une adresse mail valide svp'
-                      }
-                      onValueChange={setValue}
-                    />
-                  )}
-                />
-              </div>
-
-              <Controller
-                name="msg"
-                control={control}
-                defaultValue=""
-                render={({ field: { onChange, value } }) => (
-                  <Textarea
-                    isRequired
-                    type="text"
-                    color={undefined}
-                    variant="bordered"
-                    value={value}
-                    onChange={onChange}
-                    label="Veuillez saisir votre message"
-                    autoFocus
-                    className="max-w-full"
-                  />
-                )}
-              />
-
-              <Button
-                type="submit"
-                className="black-button w-full text-center mt-16"
+            {!hideForm ? (
+              <form
+                onSubmit={handleSubmit(handleSendMail)}
+                className="space-y-4"
               >
-                Envoyer
-              </Button>
-            </form>
+                <div className="rich-text">{RichText.render(text)}</div>
+                <div className="flex justify-between space-x-2">
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        type="text"
+                        color={undefined}
+                        variant="bordered"
+                        label="Nom"
+                        id="lastName"
+                        onChange={onChange}
+                        value={value}
+                        className="max-w-full"
+                      />
+                    )}
+                  />
+
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        type="text"
+                        color={undefined}
+                        variant="bordered"
+                        label="Prénom"
+                        id="firstName"
+                        onChange={onChange}
+                        value={value}
+                        className="max-w-full"
+                      />
+                    )}
+                  />
+                </div>
+
+                <div className="w-full">
+                  <Controller
+                    name="email"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        onChange={onChange}
+                        value={value}
+                        type="email"
+                        label="Email"
+                        variant="bordered"
+                        isInvalid={isInvalid}
+                        color={isInvalid ? 'danger' : undefined}
+                        errorMessage={
+                          isInvalid && 'Saisissez une adresse mail valide svp'
+                        }
+                        onValueChange={setValue}
+                      />
+                    )}
+                  />
+                </div>
+
+                <Controller
+                  name="msg"
+                  control={control}
+                  defaultValue=""
+                  render={({ field: { onChange, value } }) => (
+                    <Textarea
+                      isRequired
+                      type="text"
+                      color={undefined}
+                      variant="bordered"
+                      value={value}
+                      onChange={onChange}
+                      label="Veuillez saisir votre message"
+                      autoFocus
+                      className="max-w-full"
+                    />
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  className="black-button w-full text-center mt-16"
+                >
+                  Envoyer
+                </Button>
+              </form>
+            ) : (
+              <p>Je vous répondrai d&apos;ici 24h maximum.</p>
+            )}
           </div>
         </aside>
       </section>

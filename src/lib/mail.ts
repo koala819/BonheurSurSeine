@@ -1,7 +1,8 @@
 export const mailContact = (
   firstName: string,
+  lastName: string,
   message: string,
-  email: string
+  email: string,
 ) => {
   return `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
   <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -186,7 +187,7 @@ export const mailContact = (
       <tr>
         <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="right">
             
-                <h1 style="margin: 0px; line-height: 140%; text-align: right; word-wrap: break-word; font-size: 22px; font-weight: 400;">${firstName}</h1>
+                <h1 style="margin: 0px; line-height: 140%; text-align: right; word-wrap: break-word; font-size: 22px; font-weight: 400;">${firstName} ${lastName}</h1>
             
         </td>
       </tr>
@@ -227,5 +228,5 @@ export const mailContact = (
     <!--[if IE]></div><![endif]-->
   </body>
   </html>  
-  `;
-};
+  `
+}
