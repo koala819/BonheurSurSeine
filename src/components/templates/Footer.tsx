@@ -12,6 +12,7 @@ import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
+import Tipeee from '@/public/Tipeee.svg'
 import dix31 from '@/public/white_DIX31.png'
 
 export function Footer() {
@@ -69,6 +70,21 @@ export function Footer() {
                       className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
                     >
                       <FiInstagram size={32} />
+                    </Link>
+                  </Tooltip>
+                  <Tooltip showArrow={true} color={'danger'} content="Tipee">
+                    <Link
+                      href="https://fr.tipeee.com/bonheur-sur-seine"
+                      target="_blank"
+                      className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
+                    >
+                      <Image
+                        alt="Tipee logo"
+                        src={Tipeee}
+                        width={32}
+                        height={32}
+                        className="opacity-80 hover:opacity-100"
+                      />
                     </Link>
                   </Tooltip>
                 </picture>
