@@ -1,8 +1,20 @@
+import type { Metadata } from 'next'
+
 import Associations from '@/src/components/atoms/Associations'
 import Assurance from '@/src/components/atoms/Assurance'
 import CommonSense from '@/src/components/atoms/CommonSense'
 import HighwayCode from '@/src/components/atoms/HighwayCode'
 import Maintenance from '@/src/components/atoms/Maintenance'
+
+export const metadata: Metadata = {
+  title:
+    'Pour bien démarrer avec votre roue électrique en France - Conseils et Sécurité',
+  description:
+    'Découvrez des conseils pour débuter avec la roue électrique en France : sécurité, assurance, entretien, et plus. Roulez en toute confiance.',
+  alternates: {
+    canonical: `${process.env.CLIENT_URL}/begin`,
+  },
+}
 
 const Page = () => {
   return (
