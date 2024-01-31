@@ -63,37 +63,43 @@ export function BonheurScore({
             <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
               <Tooltip content="Nombre de points">
                 <div className="flex flex-col items-center">
-                  <FaTrophy />
+                  <FaTrophy className="hidden sm:block" />
+                  <span className="sm:hidden font-black">Nombre de points</span>
                   <span>{gyroroue.data.points}</span>
                 </div>
               </Tooltip>
               <Tooltip content="Equipement">
                 <div className="flex flex-col items-center">
-                  <FaTools />
+                  <FaTools className="hidden sm:block" />
+                  <span className="sm:hidden font-black">Equipement</span>
                   <span>{gyroroue.data.equipement}</span>
                 </div>
               </Tooltip>
               <Tooltip content="Praticité">
                 <div className="flex flex-col items-center">
-                  <FaMagic />
+                  <FaMagic className="hidden sm:block" />
+                  <span className="sm:hidden font-black">Praticité</span>
                   <span>{gyroroue.data.praticite}</span>
                 </div>
               </Tooltip>
               <Tooltip content="En Ville">
                 <div className="flex flex-col items-center">
-                  <FaCity />
+                  <FaCity className="hidden sm:block" />
+                  <span className="sm:hidden font-black">En Ville</span>
                   <span>{gyroroue.data.en_ville}</span>
                 </div>
               </Tooltip>
               <Tooltip content="Sur Route">
                 <div className="flex flex-col items-center">
-                  <FaRoad />
+                  <FaRoad className="hidden sm:block" />
+                  <span className="sm:hidden font-black">Sur Route</span>
                   <span>{gyroroue.data.sur_route}</span>
                 </div>
               </Tooltip>
               <Tooltip content="Suspension">
                 <div className="flex flex-col items-center">
-                  <SiSpringCreators />
+                  <SiSpringCreators className="hidden sm:block" />
+                  <span className="sm:hidden font-black">Suspension</span>
                   <span
                     className={
                       gyroroue.data.suspension
@@ -110,7 +116,7 @@ export function BonheurScore({
           <CardFooter>
             <div className="flex-col items-center justify-center w-full space-y-8">
               <picture className="flex items-center justify-center w-full ">
-                <div className="relative rounded-full w-64 h-64">
+                <div className="relative rounded-full w-28 h-28 md:w-44 md:h-44">
                   <picture
                     className="absolute inset-0 rounded-full bg-transparent border-0"
                     style={{
@@ -119,11 +125,11 @@ export function BonheurScore({
                       backgroundSize: 'cover',
                     }}
                   />
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
-                    <p className="text-xl font-extrabold text-black dark:text-gray-200">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 w-full flex flex-col justify-center items-center">
+                    <p className="text-sm md:text-xl font-extrabold text-black dark:text-gray-200">
                       Note Globale
                     </p>
-                    <p className="text-3xl font-semibold text-red-500">
+                    <p className="text-3xl md:text-5xl font-semibold text-red-500">
                       {gyroroue.data.note}
                     </p>
                   </div>
@@ -132,11 +138,9 @@ export function BonheurScore({
               <Link
                 href={gyroroue.data.lien_video_youtube.url}
                 target={gyroroue.data.lien_video_youtube.target}
-                className="flex items-center justify-center w-full hover:underline"
+                className="link-style flex justify-center w-full"
               >
-                <span className="flex text-center">
-                  Retrouver l&apos;essai de cette roue sur ma chaîne Youtube
-                </span>
+                Retrouver l&apos;essai de cette roue sur ma chaîne Youtube
               </Link>
             </div>
           </CardFooter>
