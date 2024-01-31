@@ -20,7 +20,7 @@ h3 {
 }
 
 h4 {
-  @apply mb-4 text-xl font-semibold;
+  @apply mb-4 text-large font-semibold sm:text-large md:text-xl;
 }
 
 li,

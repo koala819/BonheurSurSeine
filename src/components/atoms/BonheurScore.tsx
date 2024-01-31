@@ -43,9 +43,10 @@ export function BonheurScore({
           <CardHeader>
             <div className="flex justify-between items-center w-full">
               <text className="flex-col">
-                <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                  {gyroroue.data.modele}
-                </h2>
+                <div className="flex items-center justify-center">
+                  <h3>{gyroroue.data.modele}</h3>
+                  <h4 className="ml-2">{gyroroue.data.constructeur}</h4>
+                </div>
                 <span className="text-gray-500 dark:text-gray-400 font-medium text-xs">
                   {moment(gyroroue.data.date).format('DD MMMM YYYY')}
                 </span>
