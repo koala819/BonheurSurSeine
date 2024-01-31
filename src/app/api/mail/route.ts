@@ -34,8 +34,8 @@ export async function POST(req: Request): Promise<Response> {
     })
 
     const mailOptions = {
-      from: `📧 ${body.email} m'a écrit`,
-      to: 'x.genolhac@gmail.com',
+      from: `${body.email}`,
+      to: 'bonheursurseine@gmail.com',
 
       subject: `📧 ${body.prenom} ${body.nom} m'a écrit`,
       text: `${body.message}.<br> Adresse mail ${body.email} pour répondre.`,
