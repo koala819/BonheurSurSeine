@@ -29,6 +29,15 @@ export function BonheurScore({
 
   return (
     <div className="container mx-auto p-4">
+      <div className="blueBlock mb-8">
+        <h3>
+          📢 Cette page nécessite beaucoup de travail pour être mise à jour
+        </h3>
+        <p>
+          Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
+          tester, je t&apos;invite à revenir bientôt.
+        </p>
+      </div>
       {gyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-4">
           <CardHeader>
