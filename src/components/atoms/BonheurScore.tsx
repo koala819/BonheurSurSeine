@@ -140,7 +140,9 @@ export function BonheurScore({
                 target={gyroroue.data.lien_video_youtube.target}
                 className="link-style flex justify-center w-full"
               >
-                Retrouver l&apos;essai de cette roue sur ma chaîne Youtube
+                <p className=" text-center">
+                  Retrouver l&apos;essai de cette roue sur ma chaîne Youtube
+                </p>
               </Link>
             </div>
           </CardFooter>
