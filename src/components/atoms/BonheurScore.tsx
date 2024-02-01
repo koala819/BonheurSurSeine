@@ -151,7 +151,7 @@ export function BonheurScore({
                 className="link-style flex justify-center w-full"
               >
                 <p className=" text-center">
-                  Retrouver l&apos;essai de cette roue sur ma chaîne Youtube
+                  Retrouve l&apos;essai de cette roue sur ma chaîne Youtube
                 </p>
               </Link>
             </div>
