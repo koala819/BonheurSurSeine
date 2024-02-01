@@ -20,7 +20,7 @@ export default async function Page() {
   const accueil = await client.getSingle('accueil').catch(() => notFound())
 
   return (
-    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white mb-8 space-y-8 ">
+    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white mb-8 space-y-8">
       <Hero
         photo_back={accueil.data.photo_back}
         photo_front={accueil.data.photo_front}
