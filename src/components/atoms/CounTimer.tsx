@@ -1,7 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import ReactPlayer from 'react-player'
+
+import Image from 'next/image'
+
+import BonheurSurSeine from '@/public/BonheurSurSeine_logo.png'
 
 interface TimeLeft {
   days: number
@@ -51,6 +54,13 @@ const CountTimer = () => {
   }
   return (
     <div className="flex flex-col items-center space-y-8">
+      <Image
+        src={BonheurSurSeine}
+        alt="Bonheur Sur Seine Logo"
+        width={150}
+        height={500}
+        className="rounded-lg cursor-pointer"
+      />
       <h1 className="text-4xl font-bold mb-4">Compte à Rebours</h1>
       <div className="text-2xl">
         {timeLeft.days ||
@@ -65,12 +75,12 @@ const CountTimer = () => {
           <div>Terminé!</div>
         )}
       </div>
-      <ReactPlayer
+      {/* <ReactPlayer
         controls={true}
         url={' https://youtu.be/Bwa8aESCdoY'}
         width="100%"
         height="100%"
-      />
+      /> */}
     </div>
   )
 }
