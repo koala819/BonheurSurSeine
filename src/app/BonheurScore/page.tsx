@@ -16,7 +16,15 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const client = createClient()
-  const gyroroues = await client.getByType('gyroroue').catch(() => notFound())
-
-  return <BonheurScore gyroroues={gyroroues.results} />
+  try {
+    const gyroroues = await client.getByType('gyroroue', {
+      orderings: {
+        field: 'my.gyroroue.date',
+        direction: 'desc',
+      },
+    })
+    return <BonheurScore gyroroues={gyroroues.results} />
+  } catch (error) {
+    notFound()
+  }
 }
