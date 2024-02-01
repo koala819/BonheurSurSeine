@@ -57,19 +57,23 @@ export function BonheurScore({
             </div>
           </CardHeader>
           <CardBody>
-            <picture className="w-full flex justify-center p-8">
-              <Image
-                priority={true}
-                src={gyroroue.data.photo.url!}
-                alt={gyroroue.data.photo.alt ?? 'Gyroroue Image'}
-                width={gyroroue.data.photo.dimensions?.width}
-                height={gyroroue.data.photo.dimensions?.height}
-                className="rounded-full w-48 h-48 object-cover"
-              />
-            </picture>
-            <p className="text-gray-600 dark:text-gray-200 text-sm md:text-base my-2 mb-8">
-              {gyroroue.data.commentaire}
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex justify-center p-8">
+                <Image
+                  priority={true}
+                  src={gyroroue.data.photo.url!}
+                  alt={gyroroue.data.photo.alt ?? 'Gyroroue Image'}
+                  width={gyroroue.data.photo.dimensions?.width}
+                  height={gyroroue.data.photo.dimensions?.height}
+                  className="rounded-full w-48 h-48 object-cover"
+                />
+              </div>
+              <div className="flex items-center">
+                <p className="text-gray-600 dark:text-gray-200 text-sm md:text-base my-2 mb-8">
+                  {gyroroue.data.commentaire}
+                </p>
+              </div>
+            </div>
             <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
               <Tooltip content="Nombre de points">
                 <div className="flex flex-col items-center">
