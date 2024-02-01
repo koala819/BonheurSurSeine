@@ -21,10 +21,10 @@ export function ThemeSwitcher() {
 
   return (
     <Button
-      // variant="outline"
+      variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="bg-nav-light dark:bg-nav-dark"
+      className="dark:bg-cyan-800 "
     >
       {mounted && (theme === 'light' ? <Sun /> : <Moon />)}
       <span className="sr-only">Toggle theme</span>
