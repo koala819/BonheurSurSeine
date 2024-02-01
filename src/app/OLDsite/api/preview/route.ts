@@ -1,10 +1,11 @@
-import { NextRequest } from "next/server";
-import { redirectToPreviewURL } from "@prismicio/next";
+import { NextRequest } from 'next/server'
 
-import { createClient } from "../../../prismicio";
+import { createClient } from '../../../../prismicio'
+
+import { redirectToPreviewURL } from '@prismicio/next'
 
 export async function GET(request: NextRequest) {
-  const client = createClient();
+  const client = createClient()
 
-  return await redirectToPreviewURL({ client, request });
+  return await redirectToPreviewURL({ client, request })
 }
