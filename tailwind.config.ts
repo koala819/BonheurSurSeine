@@ -6,6 +6,7 @@ const config = {
   content: [
     './components/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx,mdx}',
+    './src/app/**/*.{ts,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   prefix: '',
