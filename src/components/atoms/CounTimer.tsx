@@ -54,7 +54,7 @@ const CountTimer = () => {
     )
   }
   return (
-    <div className="flex flex-col items-center space-y-8">
+    <div className="flex flex-col items-center space-y-8 w-full md:w-2/3">
       <Image
         src={BonheurSurSeine}
         alt="Bonheur Sur Seine Logo"
@@ -76,12 +76,19 @@ const CountTimer = () => {
           <div>Terminé!</div>
         )}
       </div>
-      <ReactPlayer
-        controls={true}
-        url={'https://youtu.be/zh5neo3xsa0'}
-        width="100%"
-        height="100%"
-      />
+
+      <div
+        className="flex justify-center w-full"
+        style={{ position: 'relative', paddingTop: '56.25%' }}
+      >
+        <ReactPlayer
+          url="https://youtu.be/zh5neo3xsa0"
+          width="100%"
+          height="100%"
+          style={{ position: 'absolute', top: 0, left: 0 }}
+          controls
+        />
+      </div>
     </div>
   )
 }
