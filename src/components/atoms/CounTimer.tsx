@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import ReactPlayer from 'react-player'
 
 import Image from 'next/image'
 
@@ -75,6 +76,12 @@ const CountTimer = () => {
           <div>Terminé!</div>
         )}
       </div>
+      <ReactPlayer
+        controls={true}
+        url={'https://youtu.be/zh5neo3xsa0'}
+        width="100%"
+        height="100%"
+      />
     </div>
   )
 }
