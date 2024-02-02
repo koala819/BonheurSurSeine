@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import CountTimer from '../components/atoms/CounTimer'
+import CountTimer from '@/src/components/atoms/CounTimer'
 
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine – Spécialiste Gyroroue à Paris',

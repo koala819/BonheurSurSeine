@@ -75,12 +75,6 @@ const CountTimer = () => {
           <div>Terminé!</div>
         )}
       </div>
-      {/* <ReactPlayer
-        controls={true}
-        url={' https://youtu.be/Bwa8aESCdoY'}
-        width="100%"
-        height="100%"
-      /> */}
     </div>
   )
 }
