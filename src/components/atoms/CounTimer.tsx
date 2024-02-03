@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 import BonheurSurSeine from '@/public/BonheurSurSeine_logo.png'
 
@@ -15,44 +16,62 @@ interface TimeLeft {
 }
 
 const CountTimer = () => {
-  const calculateTimeLeft = (): TimeLeft => {
-    const endTime = +new Date('2024-02-04T20:00:00')
-    const now = +new Date()
-    const difference = endTime - now
-    let timeLeft: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 }
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+  const [hasMounted, setHasMounted] = useState(false)
+  const router = useRouter()
 
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!hasMounted) {
+      return
+    }
+
+    function calculateTimeLeft(): TimeLeft {
+      const endTime = +new Date('2024-02-04T20:00:00')
+      const now = +new Date()
+      const difference = endTime - now
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        }
+      }
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+    }
+
+    function timerUpdate() {
+      const newTimeLeft = calculateTimeLeft()
+      setTimeLeft(newTimeLeft)
+      if (
+        newTimeLeft.days === 0 &&
+        newTimeLeft.hours === 0 &&
+        newTimeLeft.minutes === 0 &&
+        newTimeLeft.seconds === 0
+      ) {
+        router.push('/accueil')
       }
     }
 
-    return timeLeft
+    timerUpdate()
+    const timerId = setInterval(timerUpdate, 1000)
+
+    return () => clearInterval(timerId)
+  }, [hasMounted, router])
+
+  if (!hasMounted) {
+    return null
   }
-  const [isMounted, setIsMounted] = useState<boolean>(false)
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft())
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft())
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  })
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  if (!isMounted) {
-    return (
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Chargement...</h1>
-      </div>
-    )
-  }
   return (
     <div className="flex flex-col items-center space-y-8 w-full md:w-2/3">
       <Image
@@ -64,19 +83,9 @@ const CountTimer = () => {
       />
       <h1 className="text-4xl font-bold mb-4">Compte à Rebours</h1>
       <div className="text-2xl">
-        {timeLeft.days ||
-        timeLeft.hours ||
-        timeLeft.minutes ||
-        timeLeft.seconds ? (
-          <div>
-            {timeLeft.days}j : {timeLeft.hours}h : {timeLeft.minutes}m :{' '}
-            {timeLeft.seconds}s
-          </div>
-        ) : (
-          <div>Terminé!</div>
-        )}
+        {timeLeft.days}j : {timeLeft.hours}h : {timeLeft.minutes}m :{' '}
+        {timeLeft.seconds}s
       </div>
-
       <div
         className="flex justify-center w-full"
         style={{ position: 'relative', paddingTop: '56.25%' }}
