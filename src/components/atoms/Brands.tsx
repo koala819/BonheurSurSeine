@@ -15,8 +15,8 @@ const Brands = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Les citadines"
-          title={<span>Les citadines</span>}
+          aria-label="Les urbaines"
+          title={<span>Les urbaines</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <ul className="list">
@@ -55,8 +55,8 @@ const Brands = () => {
         </AccordionItem>
         <AccordionItem
           key="3"
-          aria-label="Les randonneuses"
-          title={<span>Les randonneuses</span>}
+          aria-label="Les routières"
+          title={<span>Les routières</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <ul className="list">
