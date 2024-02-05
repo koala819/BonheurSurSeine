@@ -1,0 +1,47 @@
+{
+  "id": "amis_dans_contact",
+  "label": "Amis_dans_Contact",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "rank": {
+        "type": "Number",
+        "config": {
+          "label": "rank",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Nom",
+          "placeholder": ""
+        }
+      },
+      "img": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "url": {
+        "type": "Link",
+        "config": {
+          "label": "Réseau social",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,15 @@ export interface BonheurScoreProps {
   }
 }
 
+export interface ContactFriends {
+  data: {
+    rank: NumberField
+    name: KeyTextField
+    img: ImageField
+    url: any
+  }
+}
+
 export interface Partner {
   name: string
   logo: string

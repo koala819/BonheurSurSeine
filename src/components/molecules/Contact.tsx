@@ -9,9 +9,18 @@ import toast from 'react-hot-toast'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { ContactFriends } from '@/src/types/models'
+
+import undefindAvatar from '@/public/People.png'
 import bonheurSurSeine from '@/public/contact.jpg'
 
-export default function Contact({ text }: { text: any }) {
+export default function Contact({
+  text,
+  friends,
+}: {
+  text: any
+  friends: ContactFriends[]
+}) {
   const [hideForm, setHideForm] = useState<boolean>(false)
   const [value, setValue] = useState<string>('')
 
@@ -57,41 +66,6 @@ export default function Contact({ text }: { text: any }) {
         toast.error("Une erreur s'est produite", error)
       })
   }
-
-  const people = [
-    {
-      name: 'Matthieu',
-      img: '/Mathieu.jpg',
-      url: 'https://www.instagram.com/tastypassports/',
-    },
-    {
-      name: 'Kevin',
-      img: '/People.png',
-      url: 'https://www.instagram.com/kevinlamshoots/',
-    },
-    {
-      name: 'Paul',
-      img: 'https://s0.wklcdn.com/image_235/7067439/photo.jpg?1682195125259',
-      url: 'https://fr.wikiloc.com/wikiloc/user.do?id=7067439',
-    },
-    {
-      name: 'Fabien',
-      img: 'https://s2.wklcdn.com/image_177/5325392/photo.jpg?1595180668172',
-      url: 'https://linktr.ee/fabien.wheel',
-    },
-    { name: 'M. X', img: '/M.X.jpg' },
-    {
-      name: 'Xavier',
-      img: 'https://avatars.githubusercontent.com/u/70317658?v=4',
-      url: 'https://www.dix31.com/',
-    },
-    { name: 'Andrey', img: '/People.png' },
-    { name: 'Fred', img: '/People.png' },
-    { name: '??', img: '/People.png' },
-    { name: '??', img: '/People.png' },
-    { name: '??', img: '/People.png' },
-    { name: '??', img: '/People.png' },
-  ]
 
   return (
     <section className="container my-8 mx-auto p-4 space-y-8">
@@ -154,6 +128,7 @@ export default function Contact({ text }: { text: any }) {
                 className="space-y-4"
               >
                 <div className="rich-text">{RichText.render(text)}</div>
+
                 <div className="flex justify-between space-x-2">
                   <Controller
                     name="lastName"
@@ -288,23 +263,23 @@ export default function Contact({ text }: { text: any }) {
       </section>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-          {people.map((person, index) => (
+          {friends.map((friend, index) => (
             <Link
-              href={person.url || ' #'}
+              href={friend.data.url || ' #'}
               passHref
               target="_blank"
               key={index}
               className="flex flex-col items-center"
             >
               <Image
-                src={person.img}
-                alt={person.name}
+                src={friend.data.img.url || undefindAvatar}
+                alt={friend.data.img.alt || ''}
                 width={192}
                 height={192}
                 className="hover:opacity-100 opacity-55 rounded-full object-cover w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48"
               />
 
-              <div className="mt-2 text-center">{person.name}</div>
+              <div className="mt-2 text-center">{friend.data.name}</div>
             </Link>
           ))}
         </div>

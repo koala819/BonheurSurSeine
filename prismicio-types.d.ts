@@ -141,6 +141,71 @@ interface AccueilDocumentData {
 export type AccueilDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<AccueilDocumentData>, 'accueil', Lang>
 
+/**
+ * Content for Amis_dans_Contact documents
+ */
+interface AmisDansContactDocumentData {
+  /**
+   * rank field in *Amis_dans_Contact*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: amis_dans_contact.rank
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  rank: prismic.NumberField
+
+  /**
+   * Nom field in *Amis_dans_Contact*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: amis_dans_contact.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField
+
+  /**
+   * Image field in *Amis_dans_Contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: amis_dans_contact.img
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  img: prismic.ImageField<never>
+
+  /**
+   * Réseau social field in *Amis_dans_Contact*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: amis_dans_contact.url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField
+}
+
+/**
+ * Amis_dans_Contact document from Prismic
+ *
+ * - **API ID**: `amis_dans_contact`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AmisDansContactDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<AmisDansContactDocumentData>,
+    'amis_dans_contact',
+    Lang
+  >
+
 type ContactDocumentDataSlicesSlice = never
 
 /**
@@ -502,6 +567,7 @@ export type PromoDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AccueilDocument
+  | AmisDansContactDocument
   | ContactDocument
   | GyroroueDocument
   | PromoDocument
@@ -519,6 +585,8 @@ declare module '@prismicio/client' {
       AccueilDocument,
       AccueilDocumentData,
       AccueilDocumentDataSlicesSlice,
+      AmisDansContactDocument,
+      AmisDansContactDocumentData,
       ContactDocument,
       ContactDocumentData,
       ContactDocumentDataSlicesSlice,
