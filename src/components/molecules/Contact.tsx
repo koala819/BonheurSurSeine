@@ -265,7 +265,7 @@ export default function Contact({
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
           {friends.map((friend, index) => (
             <Link
-              href={friend.data.url || ' #'}
+              href={friend.data.url.url || ' #'}
               passHref
               target="_blank"
               key={index}
