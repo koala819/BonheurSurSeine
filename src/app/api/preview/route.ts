@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
 
-import { createClient } from '../../../../prismicio'
+import { createClient } from '../../../prismicio'
 
 import { redirectToPreviewURL } from '@prismicio/next'
 

@@ -24,7 +24,7 @@ export function Top() {
   const path = usePathname()
 
   const menuItems = [
-    { name: 'Accueil', path: '/accueil' },
+    { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
     { name: 'Codes Promo', path: '/promo' },
     { name: 'Choisir sa Roue', path: '/choix' },
@@ -58,7 +58,7 @@ export function Top() {
     >
       <NavbarContent>
         <NavbarBrand>
-          <Link href="/accueil" aria-current="page">
+          <Link href="/" aria-current="page">
             <Image
               src={logo}
               alt="Bonheur Sur Seine logo"
