@@ -162,6 +162,49 @@ export function BonheurScore({
           </CardFooter>
         </Card>
       ))}
+      <footer className="blueBlock mb-8">
+        <h3>
+          📢 &quot;Ces notes sont le fruit de ma vision, de mon usage et de ma
+          sensibilité. &quot;
+        </h3>
+        <p>
+          Maintenant, tu peux cliquer{' '}
+          <Link
+            href="https://forms.office.com/r/5k7QAax6Xu"
+            target="_blank"
+            className="link-style"
+          >
+            ICI
+          </Link>{' '}
+          pour donner ton avis, à toi !
+        </p>
+        <ul className="list mt-8">
+          <li>
+            Pour en savoir plus sur la notation, je t’invite à voir{' '}
+            <Link
+              href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
+              target="_blank"
+              className="link-style"
+            >
+              cette vidéo
+            </Link>
+            .
+          </li>
+          <li>
+            Mes notes ne représentent donc pas une vérité en soi : elles
+            illustrent du mieux possible mon avis personnel et mes ressentis.
+          </li>
+          <li>
+            Même la moins bien notée d&apos;entre elles m&apos;a, à chaque fois,
+            procuré le bonheur de rouler.
+          </li>
+        </ul>
+      </footer>
+      <p className="text-center">
+        Je remercie tous mes partenaires (ponctuel ou régulier, passé, présent
+        et futur) de m&apos;avoir donner la chance de tester ces merveilleuses
+        machines.
+      </p>
     </div>
   )
 }
