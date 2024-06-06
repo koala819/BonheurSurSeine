@@ -26,7 +26,6 @@ export function BonheurScore({
   gyroroues: BonheurScoreProps[]
 }) {
   moment.locale('fr')
-
   return (
     <div className="container mx-auto p-4">
       <div className="blueBlock mb-8">
@@ -150,8 +149,10 @@ export function BonheurScore({
                 </div>
               </picture>
               <Link
-                href={gyroroue.data.lien_video_youtube.url}
-                target={gyroroue.data.lien_video_youtube.target}
+                href={
+                  gyroroue.data.lien_video_youtube?.url || 'https://dix31.com'
+                }
+                target="_blank"
                 className="link-style flex justify-center w-full"
               >
                 <p className=" text-center">
