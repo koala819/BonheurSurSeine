@@ -28,7 +28,7 @@ export default async function Page() {
         text={accueil.data.text}
         titre={accueil.data.titre}
       />
-      <Quote body={accueil.data.body} citation={accueil.data.citation} />
+      <Quote />
       <FinishSection text={accueil.data.fin} />
     </section>
   )

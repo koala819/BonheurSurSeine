@@ -1,8 +1,9 @@
 'use client'
 
 import { Tooltip } from '@nextui-org/react'
-import { BsFacebook, BsYoutube } from 'react-icons/bs'
+import { BsYoutube } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
+import { IoLogoDiscord } from 'react-icons/io5'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,6 +13,7 @@ import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
+import Patreon from '@/public/Patreon.svg'
 import Tipeee from '@/public/Tipeee.svg'
 import dix31 from '@/public/white_DIX31.png'
 
@@ -27,7 +29,7 @@ export function Footer() {
             leftClassName="w-full"
             rightClassName="flex justify-center"
             left={
-              <picture className="w-full flex justify-center md:justify-end">
+              <picture className="w-full flex justify-center md:justify-end pr-4">
                 <Image src={logo} alt="Logo Bonheur Sur Seine" height={80} />
               </picture>
             }
@@ -35,10 +37,10 @@ export function Footer() {
               <div className="flex flex-col items-center md:items-start">
                 <Article
                   title="Bonheur Sur Seine"
-                  classNameTitle="md:text-xl lg:text-3xl"
+                  classNameTitle="md:text-xl lg:text-4xl"
                   button={{ display: false }}
                 />
-                <picture className="flex space-x-4 items-center mt-2">
+                <picture className="flex space-x-4 items-center justify-center mt-2 w-full">
                   <Tooltip showArrow={true} color="danger" content="Youtube">
                     <Link
                       href="https://www.youtube.com/c/BonheursurSeine"
@@ -49,13 +51,29 @@ export function Footer() {
                     </Link>
                   </Tooltip>
 
-                  <Tooltip showArrow={true} color="primary" content="Facebook">
+                  <Tooltip showArrow={true} color="default" content="Patreon">
                     <Link
-                      href="https://www.facebook.com/bonheursurseine/"
+                      href="https://www.patreon.com/c/BonheursurSeine"
+                      target="_blank"
+                      className="flex items-centerrounded-2xl p-2"
+                    >
+                      <Image
+                        alt="Patreon logo"
+                        src={Patreon}
+                        width={32}
+                        height={32}
+                        className="opacity-80 hover:opacity-100"
+                      />
+                    </Link>
+                  </Tooltip>
+
+                  <Tooltip showArrow={true} color="primary" content="Discord">
+                    <Link
+                      href="https://discord.com/invite/Jhgw7C96Jf"
                       target="_blank"
                       className="text-blue-700 hover:text-blue-600 flex items-center justify-center rounded-2xl p-2"
                     >
-                      <BsFacebook size={30} />
+                      <IoLogoDiscord size={30} />
                     </Link>
                   </Tooltip>
 
@@ -67,7 +85,7 @@ export function Footer() {
                     <Link
                       href="https://www.instagram.com/bonheursurseine/"
                       target="_blank"
-                      className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
+                      className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2"
                     >
                       <FiInstagram size={32} />
                     </Link>
@@ -92,54 +110,17 @@ export function Footer() {
             }
           />
         </aside>
-        {/* <aside className="md:basis-1/4 flex justify-center">
-          <FooterColumn
-            title="social"
-            items={[
-              {
-                text: 'Youtube',
-                link: 'https://www.youtube.com/c/BonheursurSeine',
-              },
-              {
-                text: 'Facebook',
-                link: 'https://www.facebook.com/bonheursurseine/',
-              },
-              {
-                text: 'Instagram',
-                link: 'https://www.instagram.com/bonheursurseine/',
-              },
-            ]}
-          />
-        </aside> */}
-        <aside className="md:basis-1/4 flex justify-center">
+
+        <aside className="flex justify-center md:justify-end  md:w-1/2">
           <FooterColumn
             title="entreprise"
             items={[{ text: 'Mentions légales', link: '/mentions' }]}
           />
         </aside>
-        <aside className="md:basis-1/4 flex justify-center">
-          <FooterColumn
-            title="contact"
-            items={[
-              {
-                text: 'Messenger',
-                link: 'https://www.facebook.com/bonheursurseine',
-              },
-              {
-                text: 'Instagram',
-                link: 'https://www.instagram.com/bonheursurseine/',
-              },
-              {
-                text: 'bonheursurseine@gmail.com',
-                link: 'mailto:bonheursurseine@gmail.com',
-              },
-            ]}
-          />
-        </aside>
       </nav>
       <legend className="w-full px-4 mx-auto text-center bg-[#47464D] text-white">
         <div className="py-4 flex flex-col md:flex-row space-y-8 md:space-y-0">
-          <aside className="flex w-full flex-col md:flex-row items-center text-sm tracking-widest space-y-4 md:space-y-0">
+          <aside className="flex w-full flex-col md:flex-row items-center text-xs tracking-widest space-y-4 md:space-y-0">
             <text className="flex">
               {currentYear} Created by
               <Link
@@ -158,17 +139,6 @@ export function Footer() {
               </Link>
             </text>
           </aside>
-
-          {/* <aside className="flex w-full justify-center text-sm tracking-widest">
-            Design by
-            <Link
-              href="https://github.com/koala819/"
-              target="_blank"
-              className="ml-1 hover:underline"
-            >
-              Xavier
-            </Link>
-          </aside> */}
         </div>
       </legend>
     </footer>
