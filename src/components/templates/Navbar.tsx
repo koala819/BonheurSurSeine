@@ -29,7 +29,7 @@ export function Top() {
     { name: 'Codes Promo', path: '/promo' },
     { name: 'Choisir sa Roue', path: '/choix' },
     { name: 'Pour bien Démarrer', path: '/begin' },
-    { name: 'Remerciement', path: '/contact' },
+    { name: 'Remerciements', path: '/contact' },
   ]
 
   return (
@@ -100,7 +100,7 @@ export function Top() {
 
         <NavbarItem isActive={path.includes('/contact')}>
           <Link href="/contact" className="text-white hover:text-text-link">
-            Contact
+            Remerciements
           </Link>
         </NavbarItem>
       </NavbarContent>
