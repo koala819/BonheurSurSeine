@@ -68,44 +68,38 @@ export default function Contact({
   }
 
   return (
-//    <section className="container my-8 mx-auto p-4 space-y-8">
-//      <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
-//      <header className="container mx-auto p-4">
-//        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-//          <div>
-//            <ul className="list">
-//              <li>
-//                J&apos;ai envie de dire merci (dis le aussi en commentaires
-//                <Link
-//                  href={'https://www.youtube.com/c/BonheursurSeine'}
-//                  passHref
-//                  target="_blank"
-//                  className="link-style ml-1"
-//                >
-//                  des vidéos
-//                </Link>
-//                )
-//              </li>
-//              <li>Je voudrais t&apos;écrire ou t&apos;envoyer un truc</li>
-//              <li>J&apos;ai un projet de partenariat à proposer</li>
-//              <li>Je souhaite t&apos;inviter à un événement</li>
-//              <li>
-//                Je voudrais ré-utiliser une partie de ton travail et/ou de ton
-//                image sur un site/blog/vidéo/etc.
-//              </li>
-//            </ul>
-//          </div>
-//          <div>
-//            <ul className="list">
-//              <li>Je voudrais faire une suggestion de sujet pour une vidéo</li>
-//              <li>J&apos;ai une question à poser</li>
-//              <li>J&apos;ai vu un bug, une erreur</li>
-//              <li>Je veux t&apos;insulter parce que tu fais de la merde</li>
-//              <li>Autre chose</li>
-//            </ul>
-//          </div>
-//        </div>
-//      </header>
+    <section className="container my-8 mx-auto p-4 space-y-8">
+{/*
+    <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
+      <header className="container mx-auto p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <ul className="list">
+              <li>J&apos;ai envie de dire merci (dis le aussi en commentaires
+                <Link
+                  href={'https://www.youtube.com/c/BonheursurSeine'}
+                  passHref
+                  target="_blank"
+                  className="link-style ml-1"
+                >  des vidéos </Link> ) </li>
+              <li>Je voudrais t&apos;écrire ou t&apos;envoyer un truc</li>
+              <li>J&apos;ai un projet de partenariat à proposer</li>
+              <li>Je souhaite t&apos;inviter à un événement</li>
+              <li>Je voudrais ré-utiliser une partie de ton travail et/ou de ton image sur un site/blog/vidéo/etc. </li>
+            </ul>
+          </div>
+          <div>
+            <ul className="list">
+              <li>Je voudrais faire une suggestion de sujet pour une vidéo</li>
+              <li>J&apos;ai une question à poser</li>
+              <li>J&apos;ai vu un bug, une erreur</li>
+              <li>Je veux t&apos;insulter parce que tu fais de la merde</li>
+              <li>Autre chose</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+*/}
       <section className="flex flex-col lg:flex-row my-4 lg:my-8">
         <aside className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0">
           <picture className="flex items-center justify-center px-4 w-full">
@@ -120,107 +114,109 @@ export default function Contact({
             />
           </picture>
         </aside>
-//        <aside className="w-full lg:w-1/2 flex justify-center">
-//          <div className="flex items-center justify-center w-full">
-//            {!hideForm ? (
-//              <form
-//                onSubmit={handleSubmit(handleSendMail)}
-//                className="space-y-4"
-//              >
-//                <div className="rich-text">{RichText.render(text)}</div>
-//
-//                <div className="flex justify-between space-x-2">
-//                  <Controller
-//                    name="lastName"
-//                    control={control}
-//                    render={({ field: { onChange, value } }) => (
-//                      <Input
-//                        isRequired
-//                        type="text"
-//                        color={undefined}
-//                        variant="bordered"
-//                        label="Nom"
-//                        id="lastName"
-//                        onChange={onChange}
-//                        value={value}
-//                        className="max-w-full"
-//                      />
-//                    )}
-//                  />
-//
-//                  <Controller
-//                    name="firstName"
-//                    control={control}
-//                    render={({ field: { onChange, value } }) => (
-//                      <Input
-//                        isRequired
-//                        type="text"
-//                        color={undefined}
-//                        variant="bordered"
-//                        label="Prénom"
-//                        id="firstName"
-//                        onChange={onChange}
-//                        value={value}
-//                        className="max-w-full"
-//                      />
-//                    )}
-//                  />
-//                </div>
-//
-//                <div className="w-full">
-//                  <Controller
-//                    name="email"
-//                    control={control}
-//                    render={({ field: { onChange, value } }) => (
-//                      <Input
-//                        isRequired
-//                        onChange={onChange}
-//                        value={value}
-//                        type="email"
-//                        label="Email"
-//                        variant="bordered"
-//                        isInvalid={isInvalid}
-//                        color={isInvalid ? 'danger' : undefined}
-//                        errorMessage={
-//                          isInvalid && 'Saisissez une adresse mail valide svp'
-//                        }
-//                        onValueChange={setValue}
-//                      />
-//                    )}
-//                  />
-//                </div>
-//
-//                <Controller
-//                  name="msg"
-//                  control={control}
-//                  defaultValue=""
-//                  render={({ field: { onChange, value } }) => (
-//                    <Textarea
-//                      isRequired
-//                      type="text"
-//                      color={undefined}
-//                      variant="bordered"
-//                      value={value}
-//                      onChange={onChange}
-//                      label="Veuillez saisir votre message"
-//                      autoFocus
-//                      className="max-w-full"
-//                    />
-//                  )}
-//                />
-//
-//                <Button
-//                  type="submit"
-//                  className="black-button w-full text-center mt-16"
-//                >
-//                  Envoyer
-//                </Button>
-//              </form>
-//            ) : (
-//              <p>Je vous répondrai d&apos;ici 24h maximum.</p>
-//            )}
-//          </div>
-//        </aside>
+{/*        
+        <aside className="w-full lg:w-1/2 flex justify-center">
+          <div className="flex items-center justify-center w-full">
+            {!hideForm ? (
+              <form
+                onSubmit={handleSubmit(handleSendMail)}
+                className="space-y-4"
+              >
+                <div className="rich-text">{RichText.render(text)}</div>
+
+                <div className="flex justify-between space-x-2">
+                  <Controller
+                    name="lastName"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        type="text"
+                        color={undefined}
+                        variant="bordered"
+                        label="Nom"
+                        id="lastName"
+                        onChange={onChange}
+                        value={value}
+                        className="max-w-full"
+                      />
+                    )}
+                  />
+
+                  <Controller
+                    name="firstName"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        type="text"
+                        color={undefined}
+                        variant="bordered"
+                        label="Prénom"
+                        id="firstName"
+                        onChange={onChange}
+                        value={value}
+                        className="max-w-full"
+                      />
+                    )}
+                  />
+                </div>
+
+                <div className="w-full">
+                  <Controller
+                    name="email"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <Input
+                        isRequired
+                        onChange={onChange}
+                        value={value}
+                        type="email"
+                        label="Email"
+                        variant="bordered"
+                        isInvalid={isInvalid}
+                        color={isInvalid ? 'danger' : undefined}
+                        errorMessage={
+                          isInvalid && 'Saisissez une adresse mail valide svp'
+                        }
+                        onValueChange={setValue}
+                      />
+                    )}
+                  />
+                </div>
+
+                <Controller
+                  name="msg"
+                  control={control}
+                  defaultValue=""
+                  render={({ field: { onChange, value } }) => (
+                    <Textarea
+                      isRequired
+                      type="text"
+                      color={undefined}
+                      variant="bordered"
+                      value={value}
+                      onChange={onChange}
+                      label="Veuillez saisir votre message"
+                      autoFocus
+                      className="max-w-full"
+                    />
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  className="black-button w-full text-center mt-16"
+                >
+                  Envoyer
+                </Button>
+              </form>
+            ) : (
+              <p>Je vous répondrai d&apos;ici 24h maximum.</p>
+            )}
+          </div>
+        </aside>
+*/}
       </section>
 
       
