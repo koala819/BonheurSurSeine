@@ -225,7 +225,7 @@ export default function Contact({
 
       
       <section className="space-y-8 my-8">
-        <h3>Remerciements / A Propos</h3>
+        <h3>Remerciements</h3>
         <p>
           Bonheur sur Seine, ce sont des vidéos
           <Link
@@ -238,7 +238,7 @@ export default function Contact({
           </Link>
           , mais c&apos;est aussi et surtout des rencontres,{' '}
           <i className="text-green-800 dark:text-green-700">
-            &quot; des gens qui m&apos;ont tendu la main, peut-être à un moment
+            &quot;des gens qui m&apos;ont tendu la main, peut-être à un moment
             où je ne pouvais pas, où j&apos;étais seul chez moi. Et c&apos;est
             assez curieux de se dire que les hasards, les rencontres, forgent
             une destinée... Parce que quand on a le goût de la chose, quand on a
