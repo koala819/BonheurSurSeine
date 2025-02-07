@@ -1,3 +1,5 @@
+import { IoLogoDiscord } from 'react-icons/io5'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,8 +9,10 @@ import Tipeee from '@/public/Tipeee.svg'
 const Quote = () => {
   return (
     <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md text-center">
-      Si tu veux soutenir mon travail, accéder à des contenus supplémentaires et
-      chatter en privé, tu peux me rejoindre sur :
+      <p>
+        Si tu veux soutenir mon travail, accéder à des contenus supplémentaires
+        et chatter en privé, tu peux me rejoindre sur :
+      </p>
       <div className="flex justify-center gap-4">
         <div>
           <Link
@@ -40,6 +44,16 @@ const Quote = () => {
             />
           </Link>
         </div>
+      </div>
+      <div className="flex items-center">
+        <p>Tu peux aussi rejoindre la communauté sur le serveur</p>
+        <Link
+          href="https://discord.com/invite/Jhgw7C96Jf"
+          target="_blank"
+          className="text-blue-700 hover:text-blue-600 flex items-center justify-center rounded-2xl p-2"
+        >
+          <IoLogoDiscord size={30} />
+        </Link>
       </div>
     </div>
   )
