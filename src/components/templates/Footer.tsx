@@ -3,7 +3,6 @@
 import { Tooltip } from '@nextui-org/react'
 import { BsYoutube } from 'react-icons/bs'
 import { FiInstagram } from 'react-icons/fi'
-import { IoLogoDiscord } from 'react-icons/io5'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,6 +12,7 @@ import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
+import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import Tipeee from '@/public/Tipeee.svg'
 import dix31 from '@/public/white_DIX31.png'
@@ -71,9 +71,15 @@ export function Footer() {
                     <Link
                       href="https://discord.com/invite/Jhgw7C96Jf"
                       target="_blank"
-                      className="text-blue-700 hover:text-blue-600 flex items-center justify-center rounded-2xl p-2"
+                      className="w-16 h-16 transition-transform transform hover:scale-110 flex items-center"
                     >
-                      <IoLogoDiscord size={30} />
+                      <Image
+                        alt="Discord logo"
+                        src={Discord}
+                        width={64}
+                        height={64}
+                        className="rounded-full opacity-80 hover:opacity-100"
+                      />
                     </Link>
                   </Tooltip>
 
