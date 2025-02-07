@@ -35,7 +35,7 @@ const Page = () => {
       </div>
       
       <p>
-        <div className="PinkBlock">
+        <div className="blueBlock">
         <p> <h3> Si tu veux te mettre à la roue électrique mais que tu as peur de te lancer, sache que je propose 
           des <strong>sessions de formation</strong> théorique et pratique pour t’accompagner et dédramatiser 😊.{' '} </h3></p>
         <p> <h3> En seulement 1 heure🕐, tu auras un autre regard sur l’objet 😎. {' '} </h3></p>
