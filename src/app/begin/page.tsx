@@ -36,6 +36,7 @@ const Page = () => {
 
       
       <p>
+        <div className="blueBlock">
         <h3>
         Si tu veux te mettre à la roue électrique mais que tu as peur de te
         lancer, je propose des <strong>sessions de formation</strong> théorique et pratique pour
@@ -48,6 +49,7 @@ const Page = () => {
           bonheursurseine@gmail.com
         </Link></strong>
           </h3>
+          </div>
       </p>
 
       <CommonSense />
