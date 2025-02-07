@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import Associations from '@/src/components/atoms/Associations'
 import Assurance from '@/src/components/atoms/Assurance'
@@ -32,6 +33,19 @@ const Page = () => {
           conditions pour pouvoir en profiter !&quot;
         </h3>
       </div>
+
+      <p>
+        Si tu veux te mettre à la roue électrique mais que tu as peur de te
+        lancer, je propose des sessions de formation théorique et pratique pour
+        t’accompagner et dédramatiser. En une heure, tu auras un autre regard
+        sur l’objet. Pour prendre rendez-vous:{' '}
+        <Link
+          href={'mailto:bonheursurseine@gmail.com'}
+          className="hover:underline"
+        >
+          bonheursurseine@gmail.com
+        </Link>
+      </p>
 
       <CommonSense />
       <Assurance />
