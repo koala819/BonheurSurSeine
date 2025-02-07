@@ -98,11 +98,11 @@ export function Top() {
           </Link>
         </NavbarItem>
 
-        {/* <NavbarItem isActive={path.includes('/contact')}>
+        <NavbarItem isActive={path.includes('/contact')}>
           <Link href="/contact" className="text-white hover:text-text-link">
             Contact
           </Link>
-        </NavbarItem> */}
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
