@@ -171,6 +171,21 @@ const Brands = () => {
             Elle s’est depuis retirée du marché.
           </span>
         </AccordionItem>
+        <AccordionItem
+          key="7"
+          aria-label="Nosfet"
+          title={<span className="brandGyroroue">Nosfet</span>}
+          indicator={<span className="chevronAccordionItem">&lt;</span>}
+        >
+          <span>
+            Récemment créée en 2024, Nosfet est la plus jeune et la plus petite
+            des marques de roues. Fondée par d&apos;anciens collaborateurs de
+            chez Kingsong, cette marque a l&apos;ambition de proposer des
+            modèles haut de gamme et innovants. Leurs 2 premiers modèles ont
+            déjà suscité l’intérêt et la curiosité de nombreux wheelers grâce à
+            leurs performances, leurs suspensions avancées et leur design.
+          </span>
+        </AccordionItem>
       </Accordion>
       <p>
         Les autres marques sont moins connues et moins appréciées des
