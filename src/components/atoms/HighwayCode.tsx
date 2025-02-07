@@ -73,7 +73,7 @@ const HighwayCode = () => {
                   Présence d&apos;une sonnette nécessaire, klaxon électrique non
                   valable.
                 </li>
-                <li>Feux de position non éblouissants requis.</li>
+                <li>Feux de position non éblouissants fixes requis.</li>
                 <li>Catadioptres de différentes couleurs obligatoires.</li>
                 <li>
                   Interdit de pousser ou tracter une charge ou un véhicule.
