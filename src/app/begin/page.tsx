@@ -38,19 +38,15 @@ const Page = () => {
       <p>
         <div className="blueBlock">
         <h3>
-        Si tu veux te mettre à la roue électrique mais que tu as peur de te lancer, sache que je propose des <strong>sessions de formation</strong> théorique et pratique pour
-        t’accompagner et dédramatiser 😊.{' '} </p>
-          <p>
-           En seulement 1 heure🕐, tu auras un autre regard sur l’objet.😎 
-          </p>
-          <p>
-        ➡️Pour <strong>prendre rendez-vous</strong> :{' '}</p>
+        <p> Si tu veux te mettre à la roue électrique mais que tu as peur de te lancer, sache que je propose 
+          des <strong>sessions de formation</strong> théorique et pratique pour t’accompagner et dédramatiser 😊.{' '} </p>
+        <p> En seulement 1 heure🕐, tu auras un autre regard sur l’objet 😎. {' '} </p>
+        <p> ➡️Pour <strong>prendre rendez-vous</strong> :{' '}</p>
         <Link href={'mailto:bonheursurseine@gmail.com'}
           className="hover:underline" >
-          bonheursurseine@gmail.com 
-        </Link>
-          </h3>
-          </div>
+          bonheursurseine@gmail.com  </Link>
+         </h3>
+         </div>
       </p>
 
       <CommonSense />
