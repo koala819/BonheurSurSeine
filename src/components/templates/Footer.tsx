@@ -57,13 +57,13 @@ export function Footer() {
                       target="_blank"
                       className="flex items-centerrounded-2xl p-2"
                     >
-                      <Image
-                        alt="Patreon logo"
-                        src={Patreon}
-                        width={32}
-                        height={32}
-                        className="opacity-80 hover:opacity-100"
-                      />
+                      <picture className="w-8 h-8">
+                        <Image
+                          alt="Patreon logo"
+                          src={Patreon}
+                          className="opacity-80 hover:opacity-100"
+                        />
+                      </picture>
                     </Link>
                   </Tooltip>
 
@@ -96,13 +96,13 @@ export function Footer() {
                       target="_blank"
                       className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
                     >
-                      <Image
-                        alt="Tipee logo"
-                        src={Tipeee}
-                        width={32}
-                        height={32}
-                        className="opacity-80 hover:opacity-100"
-                      />
+                      <picture className="w-8 h-8">
+                        <Image
+                          alt="Tipee logo"
+                          src={Tipeee}
+                          className="opacity-80 hover:opacity-100"
+                        />
+                      </picture>
                     </Link>
                   </Tooltip>
                 </picture>
