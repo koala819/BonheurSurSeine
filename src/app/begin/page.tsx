@@ -39,15 +39,15 @@ const Page = () => {
         <div className="blueBlock">
         <h3>
         Si tu veux te mettre à la roue électrique mais que tu as peur de te
-        lancer, je propose des <strong>sessions de formation</strong> théorique et pratique pour
-        t’accompagner et dédramatiser. En une heure, tu auras un autre regard
-        sur l’objet. <strong>Pour prendre rendez-vous:{' '}
+        lancer, sache que je propose des <strong>sessions de formation</strong> théorique et pratique pour
+        t’accompagner et dédramatiser 😊. En seulement 1 heure, tu auras un autre regard
+        sur l’objet. <strong>Pour prendre rendez-vous:</strong>{' '}
         <Link
           href={'mailto:bonheursurseine@gmail.com'}
           className="hover:underline"
         >
           bonheursurseine@gmail.com
-        </Link></strong>
+        </Link>
           </h3>
           </div>
       </p>
