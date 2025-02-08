@@ -166,7 +166,7 @@ const Associations = () => {
               >
                 Les Wheelers Sarthois
               </Link>{' '}
-              que je remercie)
+              que je remercie) :
             </p>
             <div className="flex flex-col lg:flex-row mt-8">
               <aside className="lg:w-1/2 flex items-center justify-center">
