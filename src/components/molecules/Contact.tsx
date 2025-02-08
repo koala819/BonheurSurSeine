@@ -12,7 +12,6 @@ export default function Contact({
   // text,
   friends,
 }: {
-  // text: any
   friends: ContactFriends[]
 }) {
   // const [hideForm, setHideForm] = useState<boolean>(false)
