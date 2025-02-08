@@ -6,9 +6,9 @@ import Contact from '@/src/components/molecules/Contact'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Contactez Bonheur Sur Seine – Expert Gyroroue à Paris',
+  title: 'Bonheur Sur Seine',
   description:
-    'Pour en savoir plus sur les gyroroues, contactez Bonheur Sur Seine à Paris pour plus d&apos;informations.',
+    'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, contactez Bonheur Sur Seine.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/contact`,
   },
