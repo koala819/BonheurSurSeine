@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const client = createClient()
-  const contact = await client.getSingle('contact').catch(() => notFound())
+  // const contact = await client.getSingle('contact').catch(() => notFound())
   const contactFriends = await client
     .getByType('amis_dans_contact')
     .catch(() => notFound())
@@ -24,5 +24,10 @@ export default async function Page() {
     (a, b) => a.data.rank! - b.data.rank!,
   )
 
-  return <Contact text={contact.data.phrase} friends={sortedFriends} />
+  return (
+    <Contact
+      // text={contact.data.phrase}
+      friends={sortedFriends}
+    />
+  )
 }

@@ -1,11 +1,5 @@
 'use client'
 
-import { Button, Input, Textarea } from '@nextui-org/react'
-import { RichText } from 'prismic-reactjs'
-import { useMemo, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,61 +9,61 @@ import undefindAvatar from '@/public/People.png'
 import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Contact({
-  text,
+  // text,
   friends,
 }: {
-  text: any
+  // text: any
   friends: ContactFriends[]
 }) {
-  const [hideForm, setHideForm] = useState<boolean>(false)
-  const [value, setValue] = useState<string>('')
+  // const [hideForm, setHideForm] = useState<boolean>(false)
+  // const [value, setValue] = useState<string>('')
 
-  const validateEmail = (value: string) =>
-    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
+  // const validateEmail = (value: string) =>
+  //   value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
 
-  const isInvalid = useMemo(() => {
-    if (value === '') return false
+  // const isInvalid = useMemo(() => {
+  //   if (value === '') return false
 
-    return validateEmail(value) ? false : true
-  }, [value])
+  //   return validateEmail(value) ? false : true
+  // }, [value])
 
-  const { control, handleSubmit } = useForm<any>()
-  async function handleSendMail(values: {
-    email: string
-    firstName: string
-    lastName: string
-    msg: string
-  }) {
-    const data = {
-      email: values.email,
-      prenom: values.firstName,
-      nom: values.lastName,
-      message: values.msg,
-    }
+  // const { control, handleSubmit } = useForm<any>()
+  // async function handleSendMail(values: {
+  //   email: string
+  //   firstName: string
+  //   lastName: string
+  //   msg: string
+  // }) {
+  //   const data = {
+  //     email: values.email,
+  //     prenom: values.firstName,
+  //     nom: values.lastName,
+  //     message: values.msg,
+  //   }
 
-    const options = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    }
+  //   const options = {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify(data),
+  //   }
 
-    fetch(`${process.env.CLIENT_URL}/api/mail`, options)
-      .then((response: any) => {
-        if (response.status === 200) {
-          toast.success('Votre message a bien été envoyé')
-          setHideForm(true)
-        } else {
-          toast.error("Une erreur s'est produite", response.statusText)
-        }
-      })
-      .catch((error: any) => {
-        toast.error("Une erreur s'est produite", error)
-      })
-  }
+  //   fetch(`${process.env.CLIENT_URL}/api/mail`, options)
+  //     .then((response: any) => {
+  //       if (response.status === 200) {
+  //         toast.success('Votre message a bien été envoyé')
+  //         setHideForm(true)
+  //       } else {
+  //         toast.error("Une erreur s'est produite", response.statusText)
+  //       }
+  //     })
+  //     .catch((error: any) => {
+  //       toast.error("Une erreur s'est produite", error)
+  //     })
+  // }
 
   return (
     <section className="container my-8 mx-auto p-4 space-y-8">
-{/*
+      {/*
     <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
       <header className="container mx-auto p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -114,7 +108,7 @@ export default function Contact({
             />
           </picture>
         </aside>
-{/*        
+        {/*
         <aside className="w-full lg:w-1/2 flex justify-center">
           <div className="flex items-center justify-center w-full">
             {!hideForm ? (
@@ -219,7 +213,6 @@ export default function Contact({
 */}
       </section>
 
-      
       <section className="space-y-8 my-8">
         <h3>Remerciements</h3>
         <p>
