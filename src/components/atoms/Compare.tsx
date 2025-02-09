@@ -99,7 +99,7 @@ const Compare = () => {
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                Ce projet (auquel je participe avec{' '}
+                Ce projet mené par{' '}
                 <Link
                   href="https://www.instagram.com/rafa.pgarcia"
                   className="underline hover:text-blue-500"
@@ -107,15 +107,15 @@ const Compare = () => {
                 >
                   @rafa.pgarcia
                 </Link>{' '}
-                et{' '}
+                (et auquel{' '}
                 <Link
                   href="https://www.instagram.com/fabien.wheel"
                   className="underline hover:text-blue-500"
                   target="_blank"
                 >
                   @Fabien.Wheel
-                </Link>
-                ) permet de consulter l&apos;ensemble des modèles dans un format
+                </Link>{' '}
+                et moi participons) permet de consulter l&apos;ensemble des modèles du marché dans un format
                 standardisé.
               </li>
               <li>

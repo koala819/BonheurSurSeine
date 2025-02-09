@@ -9,9 +9,9 @@ import Maintenance from '@/src/components/atoms/Maintenance'
 
 export const metadata: Metadata = {
   title:
-    'Pour bien démarrer avec votre roue électrique en France - Conseils et Sécurité',
+    'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
   description:
-    'Découvrez des conseils pour débuter avec la roue électrique en France : sécurité, assurance, entretien, et plus. Roulez en toute confiance.',
+    'Découvrez quelques conseils pour débuter avec la roue électrique en France : sécurité, assurance, entretien, et plus. Roulez en gyroroue en toute confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/begin`,
   },

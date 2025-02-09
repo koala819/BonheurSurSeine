@@ -46,6 +46,10 @@ text {
   @apply mt-4 space-y-8 rounded bg-pink-100 p-4 dark:bg-pink-800 md:ml-6 md:mt-0;
 }
 
+.yellowBlock {
+  @apply mt-4 space-y-8 rounded bg-yellow-200 p-4 dark:bg-yellow-800 md:ml-6 md:mt-0;
+}
+
 .brandGyroroue {
   @apply text-xl font-semibold text-brown-700;
 }

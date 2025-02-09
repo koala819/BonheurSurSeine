@@ -9,9 +9,9 @@ import Quote from '@/src/components/atoms/Quote'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Bonheur Sur Seine – Spécialiste Gyroroue à Paris',
+  title: 'Bonheur Sur Seine – Vidéaste et Spécialiste Gyroroue',
   description:
-    'Découvrez le monde des gyroroues avec Bonheur Sur Seine, votre expert à Paris. Tests, conseils, et les dernières nouveautés.',
+    'Découvrez le monde des gyroroues avec Bonheur Sur Seine, expert à Paris. Tests, conseils, et les dernières nouveautés.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },
