@@ -6,16 +6,15 @@ const Choice = () => {
         <aside className="md:w-1/2 space-y-4 ">
           <p>
             L&apos;important est d&apos;avoir une roue adaptée à son
-            utilisation.<strong> Le piège</strong>, ce serait de{' '}
-            <strong>ne regarder que les spécifications techniques</strong> et de{' '}
-            <strong>
-              n&apos;être attiré que par les nouvelles roues qui arrivent
-            </strong>{' '}
-            sur le marché.
+            utilisation. Le <strong>piège</strong>, ce ne serait que de{' '}
+            <strong>regarder que les spécifications techniques</strong> et de
+            n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
+            arrivent sur le marché.
           </p>
           <p>
-            Or, le choix se fait en fonction de ses goûts, de sa sensibilité, de
-            sa situation, de son style de conduite et d&apos;autres{' '}
+            Or, le choix se fait en fonction de ses goûts, de son{' '}
+            <strong>utilisation</strong>, de sa sensibilité, de sa situation, de
+            son style de conduite, et d&apos;autres{' '}
             <strong>critères personnels.</strong>
           </p>
         </aside>
@@ -25,14 +24,14 @@ const Choice = () => {
             !&quot;
           </h3>
           <p>
-            Pas besoin d’avoir la dernière roue du marché pour ressentir le
+            ⚠️ Pas besoin d’avoir la dernière roue du marché pour ressentir le
             bonheur de rouler.
           </p>
         </aside>
       </div>
       <p>
-        J&apos;invite chacun, quand il le peut, à tester les roues pour se faire
-        son propre avis.
+        ➡️ J&apos;invite chacun, quand il le peut, à tester les roues pour se
+        faire son propre avis.
       </p>
     </section>
   )

@@ -43,7 +43,7 @@ text {
 }
 
 .pinkBlock {
-  @apply mt-4 space-y-8 rounded bg-pink-100 p-4 dark:bg-pink-800 md:ml-6 md:mt-0;
+  @apply mt-4 space-y-8 rounded bg-pink-100 p-4 dark:bg-fuchsia-800 md:ml-6 md:mt-0;
 }
 
 .yellowBlock {
