@@ -34,8 +34,11 @@ const Compare = () => {
             différentes (valeurs, formats ou unités de mesure).
           </li>
           <li>
-            Les chiffres fabricants sont parfois trompeurs, et les autonomies
-            annoncées sont toujours surévaluées (il faut parfois diviser par 2).
+            Les chiffres fabricants sont parfois trompeurs, et{' '}
+            <strong color="brown-500">
+              les autonomies annoncées sont toujours surévaluées
+            </strong>{' '}
+            (il faut parfois diviser par 2).
             <i>Rappel</i> : l&apos;autonomie est tributaire de nombreux
             paramètres (poids du wheeler, vitesse, température, profil et nature
             du trajet…).
@@ -50,8 +53,7 @@ const Compare = () => {
 
       <div className="pt-8">
         <h4>
-          ➡️ Mes reviews et le{' '}
-          <span className="text-brown-500">BonheurScore</span>
+          ➡️ Mes reviews et le <span color="brown-500">BonheurScore</span>
         </h4>
         <ul className="list">
           <li>

@@ -52,7 +52,7 @@ const Brands = () => {
               praticité malgré leurs atouts
             </li>
             <li>
-              Leur taille leur permet de circuler en grande{' '}
+              Leur taille leur permet de circuler en{' '}
               <strong>agglomération</strong>, et un peu plus sereinement en
               ville sur la chaussée au côté des autres véhicules. Avec ces
               roues, on peut aller au travail la semaine, et aller aussi se
@@ -74,7 +74,7 @@ const Brands = () => {
               Ces roues affichent des{' '}
               <strong>spécifications techniques de haute volée</strong>{' '}
               (voltage, autonomie, puissance, suspension, vitesses max) que
-              finalement peu de gens exploitent totalement.
+              finalement peu de gens pourront exploiter totalement.
             </li>
             <li>
               On est sur les poids lourds de la micromobilité (40kg est un
@@ -96,7 +96,8 @@ const Brands = () => {
           />
         </Link>
       </div>
-      <p>
+      <p className="mb-8"> </p>
+      <p className="text-gray-500 dark:text-gray-300 mt-4">
         Le marché est actuellement dominé par quelques fabricants, tous basés en
         Chine (près de Shenzen).
       </p>

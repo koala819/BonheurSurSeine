@@ -40,13 +40,13 @@ const Page = () => {
               Si tu veux te mettre à la roue électrique mais que tu as peur de
               te lancer, sache que je propose des{' '}
               <strong>sessions de formation</strong> théorique et pratique pour
-              t&apos;accompagner et dédramatiser 😊.
+              t&apos;accompagner et dédramatiser. 😊
             </h3>
           </p>
           <p className="mb-0">
             <h3>
-              En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet
-              😎.
+              En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet.
+              😎
             </h3>
           </p>
 
