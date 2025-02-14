@@ -28,18 +28,18 @@ export function BonheurScore({
   moment.locale('fr')
   return (
     <div className="container mx-auto p-4">
-      <div className="blueBlock mb-4">
+      {/*      <div className="blueBlock mb-4">
         <h3>
           📢 Cette page nécessite beaucoup de travail pour être mise à jour
         </h3>
         Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
         tester, je t&apos;invite à revenir régulièrement.
       </div>
-
+*/}
       <footer className="blueBlock mb-8">
         <h3>
-          📢 &quot;Ces notes ne sont le fruit que de ma vision, de mon usage et
-          de ma sensibilité.&quot;
+          📢 &laquo;Ces notes ne sont le fruit que de ma vision, de mon usage et
+          de ma sensibilité.&raquo;
         </h3>
         <p>
           Tu peux également me dire ton avis à toi : clique{' '}
@@ -54,7 +54,7 @@ export function BonheurScore({
           <ul className="list mt-1">
             <li>
               Pour en savoir plus sur la <strong>notation</strong>, je
-              t&apos;invite à voir{' '}
+              t&apos;invite à voir cette{' '}
               <Link
                 href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
                 target="_blank"
@@ -64,15 +64,17 @@ export function BonheurScore({
               </Link>
               .
             </li>
-            <li>
+            <li className="list mt-1">
               Mes notes ne représentent pas une vérité en soi : elles illustrent
               juste du mieux possible mon avis personnel et mes ressentis.
             </li>
-            <li>
+            <li className="list mt-1">
               Même la roue la moins bien notée m&apos;a, à chaque fois, procuré
               le <strong>bonheur de rouler</strong>.
             </li>
           </ul>
+          Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
+          tester, je t&apos;invite à revenir régulièrement.
         </p>
       </footer>
       <p className="text-center">
@@ -82,7 +84,7 @@ export function BonheurScore({
           machines.
         </i>
       </p>
-      <p className="blueBlock mb-8"> </p>
+      <p className="mb-8"> </p>
 
       {gyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-4">
