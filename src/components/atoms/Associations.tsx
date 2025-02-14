@@ -53,7 +53,7 @@ const Associations = () => {
             <div className="blueBlock mb-8">
               <h3>
                 📢 En 2 mots : &quot;Voilà un site très complet et bourré
-                d’informations utiles&quot;
+                d&apos;informations utiles&quot;
               </h3>
             </div>
             <div className="flex flex-col lg:flex-row">
@@ -65,9 +65,9 @@ const Associations = () => {
                     Électrique
                   </strong>{' '}
                   a été créée par des passionnés afin de promouvoir et défendre
-                  l’utilisation des EDPM (roues, trottinettes, e-skate).
+                  l&apos;utilisation des EDPM (roues, trottinettes, e-skate).
                 </p>
-                <p>Leur site est remplie d’informations utiles.</p>
+                <p>Leur site est remplie d&apos;informations utiles.</p>
               </aside>
 
               <aside className="lg:w-1/4 flex items-center justify-center">
@@ -100,7 +100,7 @@ const Associations = () => {
                 </p>
                 <p>
                   Il existe 2 catégories utilisées par la communauté :
-                  “Monocycle de montagne” et “Segway”.
+                  <i>“Monocycle de montagne”</i> et <i>“Segway”</i>.
                 </p>
               </aside>
 
@@ -117,8 +117,7 @@ const Associations = () => {
               </aside>
             </div>
             <p>
-              Voici quelques contributeurs très actifs pour découvrir de
-              supers parcours :
+              Voici quelques contributeurs très actifs pour découvrir de supers parcours :
             </p>
             <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {userProfiles.map((user) => (
@@ -178,18 +177,14 @@ const Associations = () => {
               </aside>
 
               <aside className="lg:w-1/2 pt-8 lg:pt-0 lg:pl-8">
-                <p>Autant d’opportunité de : </p>
+                <p>Autant d&apos;opportunité de : </p>
                 <ul className="list my-8">
                   <li>Faire découvrir et promouvoir la roue électrique.</li>
-                  <li>Rencontrer d’autres passionnés.</li>
-                  <li>
-                    Partager des expériences autour de cette passion commune.
-                  </li>
-                  <li>
-                    Découvrir d’autres façons de faire de la roue (freestyle,
-                    randonneurs, racer, off road, acrobates, etc.).
-                  </li>
-                  <li>Participer à l’organiser d’événements.</li>
+                  <li>Rencontrer d&apos;autres passionnés.</li>
+                  <li>Partager des expériences autour de cette passion commune.</li>
+                  <li>Découvrir d&apos;autres façons de faire de la roue
+                      (freestyle, randonneurs, racer, off road, acrobates, etc.).</li>
+                  <li>Participer à l&apos;organiser d&apos;événements.</li>
                 </ul>
                 <ReactPlayer
                   controls={true}

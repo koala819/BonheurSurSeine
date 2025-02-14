@@ -38,8 +38,8 @@ const Assurance = () => {
 				</li>
             <li>La vignette (papillon vert) doit être affichée sur le véhicule (
 				<Link href="https://www.service-public.fr/particuliers/actualites/A17230"
-				target="_blank" className="link-style">à la différence des véhicules immatriculées</Link>
-				{' '}, voir les articles{' '} 
+				target="_blank" className="link-style"><i>à la différence des véhicules immatriculées</i></Link>
+				, articles{' '} 
 				<Link href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812169"
 				target="_blank" className="link-style">R211-21-1</Link>
 				{' '}et{' '}
