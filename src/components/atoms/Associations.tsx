@@ -117,7 +117,8 @@ const Associations = () => {
               </aside>
             </div>
             <p>
-              Voici quelques contributeurs très actifs pour découvrir de supers parcours :
+              Voici quelques contributeurs très actifs pour découvrir de supers
+              parcours :
             </p>
             <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {userProfiles.map((user) => (
@@ -150,8 +151,8 @@ const Associations = () => {
             <h2>Les associations</h2>
             <div className="blueBlock mb-8">
               <h3>
-                📢 En 2 mots : &quot;Le bonheur est réel seulement quand il est
-                partagé.&quot;
+                📢 &laquo;Le bonheur n&apo;est réel que quand il est
+                partagé.&raquo;
               </h3>
             </div>
             <p>
@@ -181,9 +182,13 @@ const Associations = () => {
                 <ul className="list my-8">
                   <li>Faire découvrir et promouvoir la roue électrique.</li>
                   <li>Rencontrer d&apos;autres passionnés.</li>
-                  <li>Partager des expériences autour de cette passion commune.</li>
-                  <li>Découvrir d&apos;autres façons de faire de la roue
-                      (freestyle, randonneurs, racer, off road, acrobates, etc.).</li>
+                  <li>
+                    Partager des expériences autour de cette passion commune.
+                  </li>
+                  <li>
+                    Découvrir d&apos;autres façons de faire de la roue
+                    (freestyle, randonneurs, racer, off road, acrobates, etc.).
+                  </li>
                   <li>Participer à l&apos;organiser d&apos;événements.</li>
                 </ul>
                 <ReactPlayer

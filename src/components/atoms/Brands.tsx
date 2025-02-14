@@ -110,9 +110,9 @@ const Brands = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Begode (précédemment Gotway)"
+          aria-label="Begode (auparavant Gotway)"
           title={
-            <span className="brandGyroroue">Begode (précédemment Gotway)</span>
+            <span className="brandGyroroue">Begode (auparavant Gotway)</span>
           }
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
@@ -203,14 +203,14 @@ const Brands = () => {
       </Accordion>
       <p>
         Certaines marques comme Solowheel, RockWheel ou IPS ont disparues. Il
-        existe également d&apos;autres mais celles-ci sont moins connues et/ou
-        moins appréciées des connaisseurs. Les caractéristiques de leurs modèles
-        n&apos;offrent pas les mêmes garanties (sécurité, performance) que
-        celles qu&apos;on retrouve chez les principaux leaders du marché.
+        existe également d&apos;autres marques mais celles-ci sont moins connues
+        et/ou moins appréciées des connaisseurs. Les caractéristiques de leurs
+        modèles n&apos;offrent pas les mêmes garanties (sécurité, performance)
+        que celles qu&apos;on retrouve chez les principaux leaders du marché.
       </p>
       <div className="md:ml-6 blueBlock">
-        <h3>⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;</h3>
-        <p>
+        <h3>⚠️ &laquo;La roue parfaite n&apos;existe pas.&raquo;</h3>
+        <p className="mb-2">
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses.
         </p>

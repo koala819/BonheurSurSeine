@@ -28,25 +28,28 @@ const Page = () => {
 
       <div className="blueBlock">
         <h3>
-          💙 &quot;Le Bonheur de rouler, c&apos;est se mettre dans les meilleurs
-          conditions pour pouvoir en profiter !&quot;
+          💙 &laquo;Le Bonheur de rouler, c&apos;est se mettre dans les
+          meilleures conditions pour pouvoir en profiter !&raquo;
         </h3>
       </div>
 
       <p>
         <div className="pinkBlock">
-          <h3>
-            <p>
+          <p>
+            <h3>
               Si tu veux te mettre à la roue électrique mais que tu as peur de
               te lancer, sache que je propose des{' '}
               <strong>sessions de formation</strong> théorique et pratique pour
               t&apos;accompagner et dédramatiser 😊.
-            </p>
-            <p className="mb-0">
+            </h3>
+          </p>
+          <p className="mb-0">
+            <h3>
               En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet
               😎.
-            </p>
-          </h3>
+            </h3>
+          </p>
+
           <p>
             <h3>
               ➡️Pour <strong>prendre rendez-vous</strong> :{' '}
@@ -66,7 +69,7 @@ const Page = () => {
       <HighwayCode />
       <Maintenance />
       <Associations />
-      <div className="blueBlock">
+      <div className="yellowBlock">
         <h3>
           ❤️ Et si tu croises un autre passionné,{' '}
           <strong>n’oublie pas de le saluer !</strong>

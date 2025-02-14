@@ -15,7 +15,7 @@ const Compare = () => {
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
       <h2>Comparer</h2>
       <div className="md:ml-6 blueBlock">
-        <h3>📢 &quot;Choisir, c’est aussi renoncer…&quot;</h3>
+        <h3>📢 &laquo;Choisir, c’est aussi renoncer…&raquo;</h3>
         <p>
           Pour faire un choix éclairé, il faut peser les avantages et les
           inconvénients, et tenir compte de ses contraintes.
@@ -25,9 +25,9 @@ const Compare = () => {
         <h4>➡️ Pas si simple</h4>
         <ul className="list">
           <li>
-            Bien que petit, le marché propose énormément de modèles. Certaines
-            marques enchaînent les nouveautés et renouvellent constamment leur
-            gamme.
+            Bien que très petit, le marché propose énormément de modèles.
+            Certaines marques enchaînent les nouveautés et renouvellent
+            constamment leur gamme.
           </li>
           <li>
             Les fabricants et les magasins affichent parfois des spécifications
@@ -36,41 +36,50 @@ const Compare = () => {
           <li>
             Les chiffres fabricants sont parfois trompeurs, et les autonomies
             annoncées sont toujours surévaluées (il faut parfois diviser par 2).
-            Rappel : l&apos;autonomie est tributaire de nombreux paramètres
-            (poids du wheeler, vitesse, température, profil et nature du
-            trajet…).
+            <i>Rappel</i> : l&apos;autonomie est tributaire de nombreux
+            paramètres (poids du wheeler, vitesse, température, profil et nature
+            du trajet…).
           </li>
           <li>
             Certains modèles changent légèrement avec le temps (esthétique ou
-            technique) selon le lot de production (on appelle cela les
+            technique) selon le lot de production (on appelle ça les
             <span className="italic ml-1">batchs</span>).
           </li>
         </ul>
       </div>
 
       <div className="pt-8">
-        <h4>➡️ Mes reviews et le BonheurScore</h4>
+        <h4>
+          ➡️ Mes reviews et le{' '}
+          <span className="text-brown-500">BonheurScore</span>
+        </h4>
         <ul className="list">
           <li>
-            <strong>La notation</strong>{' '}
-            <Link
-              href="/BonheurScore"
-              className="underline hover:text-blue-500"
-            >
-              BonheurScore
-            </Link>{' '}
+            La{' '}
+            <strong>
+              notation{' '}
+              <Link
+                href="/BonheurScore"
+                className="underline hover:text-blue-500"
+              >
+                BonheurScore
+              </Link>
+            </strong>{' '}
             permet de savoir en synthèse <strong>ce que j&apos;ai pensé</strong>{' '}
             de chaque roue que j&apos;ai testée.
           </li>
           <li>
-            Dans <strong>toutes</strong>{' '}
-            <Link
-              href="https://www.youtube.com/@BonheursurSeine"
-              className="underline hover:text-blue-500"
-              target="_blank"
-            >
-              mes vidéos
-            </Link>
+            Dans{' '}
+            <strong>
+              toutes{' '}
+              <Link
+                href="https://www.youtube.com/@BonheursurSeine"
+                className="underline hover:text-blue-500"
+                target="_blank"
+              >
+                mes vidéos
+              </Link>
+            </strong>
             , je donne librement mon avis et j&apos;identifie au mieux{' '}
             <strong>les usages</strong> pour lesquels la roue excelle.
           </li>
@@ -115,8 +124,8 @@ const Compare = () => {
                 >
                   @Fabien.Wheel
                 </Link>{' '}
-                et moi participons) permet de consulter l&apos;ensemble des modèles du marché dans un format
-                standardisé.
+                et moi participons) permet de consulter l&apos;ensemble des
+                modèles du marché dans un format standardisé.
               </li>
               <li>
                 C&apos;est actuellement <strong>le meilleur outil</strong> pour

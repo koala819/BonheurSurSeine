@@ -51,7 +51,7 @@ export function BonheurScore({
             ICI
           </Link>{' '}
           et remplis le formulaire ! 📒
-          <ul className="list mt-4">
+          <ul className="list mt-1">
             <li>
               Pour en savoir plus sur la <strong>notation</strong>, je
               t&apos;invite à voir{' '}
@@ -65,12 +65,12 @@ export function BonheurScore({
               .
             </li>
             <li>
-              Mes notes ne représentent donc pas une vérité en soi : elles
-              illustrent du mieux possible mon avis personnel et mes ressentis.
+              Mes notes ne représentent pas une vérité en soi : elles illustrent
+              juste du mieux possible mon avis personnel et mes ressentis.
             </li>
             <li>
-              Même la moins bien notée d&apos;entre elles m&apos;a, à chaque
-              fois, procuré le bonheur de rouler.
+              Même la roue la moins bien notée m&apos;a, à chaque fois, procuré
+              le <strong>bonheur de rouler</strong>.
             </li>
           </ul>
         </p>
@@ -82,7 +82,7 @@ export function BonheurScore({
           machines.
         </i>
       </p>
-      <p> </p>
+      <p className="blueBlock mb-8"> </p>
 
       {gyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-4">
