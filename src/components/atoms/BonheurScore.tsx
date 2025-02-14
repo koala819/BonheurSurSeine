@@ -42,7 +42,7 @@ export function BonheurScore({
           de ma sensibilité.&quot;
         </h3>
         <p>
-          Tu peux également me partager ton avis à toi. Cliques{' '}
+          Tu peux également me dire ton avis à toi : clique{' '}
           <Link
             href="https://forms.office.com/r/5k7QAax6Xu"
             target="_blank"
@@ -50,16 +50,17 @@ export function BonheurScore({
           >
             ICI
           </Link>{' '}
-          et remplis le formulaire ! 📄
+          et remplis le formulaire ! 📒
           <ul className="list mt-4">
             <li>
-              Pour en savoir plus sur la notation, je t&apos;invite à voir{' '}
+              Pour en savoir plus sur la <strong>notation</strong>, je
+              t&apos;invite à voir{' '}
               <Link
                 href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
                 target="_blank"
                 className="link-style"
               >
-                cette vidéo
+                <strong>vidéo</strong>
               </Link>
               .
             </li>
@@ -81,6 +82,7 @@ export function BonheurScore({
           machines.
         </i>
       </p>
+      <p> </p>
 
       {gyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-4">
