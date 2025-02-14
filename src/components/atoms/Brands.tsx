@@ -97,11 +97,11 @@ const Brands = () => {
         </Link>
       </div>
       <p className="mb-8"> </p>
-      <p className="text-gray-500 dark:text-gray-300 mt-4">
+      <p>
         Le marché est actuellement dominé par quelques fabricants, tous basés en
         Chine (près de Shenzen).
       </p>
-      <p>
+      <p className="text-gray-500 dark:text-gray-300 mt-2">
         <i>
           Aucun favoritisme de ma part, les marques sont citées par ordre
           alphabétique.
@@ -211,7 +211,7 @@ const Brands = () => {
       </p>
       <div className="md:ml-6 blueBlock">
         <h3>⚠️ &laquo;La roue parfaite n&apos;existe pas.&raquo;</h3>
-        <p className="mb-2">
+        <p className="mt-2">
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses.
         </p>

@@ -52,7 +52,7 @@ export function BonheurScore({
         et remplis le formulaire ! 📒
         <ul>
           <li>
-            Pour en savoir plus sur la <strong>notation</strong>, je
+            😉 Pour en savoir plus sur la <strong>notation</strong>, je
             t&apos;invite à voir cette{' '}
             <Link
               href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
@@ -72,8 +72,10 @@ export function BonheurScore({
             <strong>bonheur de rouler</strong>.
           </li>
         </ul>
-        Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
-        tester, je t&apos;invite à revenir régulièrement.
+        <p>
+          Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
+          tester, je t&apos;invite à revenir régulièrement.
+        </p>
       </footer>
       <p className="text-center">
         <i>
