@@ -101,7 +101,7 @@ const Brands = () => {
         Le marché est actuellement dominé par quelques fabricants, tous basés en
         Chine (près de Shenzen).
       </p>
-      <p className="text-gray-500 dark:text-gray-300 mt-2">
+      <p className="text-gray-500 dark:text-gray-300 mt-1">
         <i>
           Aucun favoritisme de ma part, les marques sont citées par ordre
           alphabétique.
@@ -210,8 +210,10 @@ const Brands = () => {
         que celles qu&apos;on retrouve chez les principaux leaders du marché.
       </p>
       <div className="md:ml-6 blueBlock">
-        <h3>⚠️ &laquo;La roue parfaite n&apos;existe pas.&raquo;</h3>
-        <p className="mt-2">
+        <h3 className="mb-1">
+          ⚠️ &laquo; La roue parfaite n&apos;existe pas. &raquo;
+        </h3>
+        <p className="mt-1">
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses.
         </p>

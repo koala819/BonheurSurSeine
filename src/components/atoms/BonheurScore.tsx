@@ -41,28 +41,30 @@ export function BonheurScore({
           📢 &laquo;Ces notes ne sont le fruit que de ma vision, de mon usage et
           de ma sensibilité.&raquo;
         </h3>
-        Tu veux également me partager ton avis ? Clique{' '}
-        <Link
-          href="https://forms.office.com/r/5k7QAax6Xu"
-          target="_blank"
-          className="link-style"
-        >
-          ICI
-        </Link>{' '}
-        et remplis le formulaire ! 📒
+        <p>
+          Tu veux également me partager ton avis ? Clique{' '}
+          <Link
+            href="https://forms.office.com/r/5k7QAax6Xu"
+            target="_blank"
+            className="link-style"
+          >
+            ICI
+          </Link>{' '}
+          et remplis le formulaire ! 📒
+        </p>
+        <p className="mb-0">
+          😉 Pour en savoir plus sur la <strong>notation</strong>, je
+          t&apos;invite à voir cette{' '}
+          <Link
+            href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
+            target="_blank"
+            className="link-style"
+          >
+            <strong>vidéo</strong>
+          </Link>
+          .
+        </p>
         <ul>
-          <li>
-            😉 Pour en savoir plus sur la <strong>notation</strong>, je
-            t&apos;invite à voir cette{' '}
-            <Link
-              href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
-              target="_blank"
-              className="link-style"
-            >
-              <strong>vidéo</strong>
-            </Link>
-            .
-          </li>
           <li className="list mt-1">
             Mes notes ne représentent pas une vérité en soi : elles illustrent
             juste du mieux possible mon avis personnel et mes ressentis.
@@ -72,7 +74,7 @@ export function BonheurScore({
             <strong>bonheur de rouler</strong>.
           </li>
         </ul>
-        <p>
+        <p className="mt-2">
           Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
           tester, je t&apos;invite à revenir régulièrement.
         </p>
