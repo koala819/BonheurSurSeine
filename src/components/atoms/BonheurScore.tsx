@@ -28,11 +28,11 @@ export function BonheurScore({
   moment.locale('fr')
   return (
     <div className="container mx-auto p-4">
-      <div className="blueBlock mb-8">
+      <div className="blueBlock mb-4">
         <h3>
           📢 Cette page nécessite beaucoup de travail pour être mise à jour
         </h3>
-        \n Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
+        Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
         tester, je t&apos;invite à revenir régulièrement.
       </div>
 
@@ -50,8 +50,8 @@ export function BonheurScore({
           >
             ICI
           </Link>{' '}
-          et remplis le formulaire ! 📄 \n
-          <ul className="list mt-8">
+          et remplis le formulaire ! 📄
+          <ul className="list mt-4">
             <li>
               Pour en savoir plus sur la notation, je t&apos;invite à voir{' '}
               <Link

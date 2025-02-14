@@ -69,7 +69,7 @@ const Brands = () => {
           <ul className="list">
             <li>
               Ici, <strong>aucune limite</strong> de taille, ni de poids ! La
-              praticité n&apos.est plus un argument car ces modèles sont plutôt
+              praticité n&apos;est plus un argument car ces modèles sont plutôt
               dédiés à la pratique sportive : performance ou grande randonnée.
               Ces roues affichent des{' '}
               <strong>spécifications techniques de haute volée</strong>{' '}
@@ -78,8 +78,8 @@ const Brands = () => {
             </li>
             <li>
               On est sur les poids lourds de la micromobilité (40kg est un
-              minimum). Avec seulement quelques modèles au début, l&apos.offre
-              s&apos.est depuis étoffée au fur et a mesure des améliorations
+              minimum). Avec seulement quelques modèles au début, l&apos;offre
+              s&apos;est depuis étoffée au fur et a mesure des améliorations
               techniques (suspension, voltage).
             </li>
           </ul>
@@ -103,8 +103,9 @@ const Brands = () => {
       <p>
         <i>
           Aucun favoritisme de ma part, les marques sont citées par ordre
-          alphabétique.😉
+          alphabétique.
         </i>
+        😉
       </p>
       <Accordion>
         <AccordionItem
@@ -201,11 +202,11 @@ const Brands = () => {
         </AccordionItem>
       </Accordion>
       <p>
-        D&apos;autres marques comme Solowheel, RockWheel ou IPS ont disparues.
-        Les autres sont moins connues et/ou moins appréciées des connaisseurs.
-        Les caractéristiques de leurs modèles n&apos;offrent pas les mêmes
-        garanties (sécurité, performance) que celles qu&apos;on retrouve chez
-        les leaders du marché.
+        Certaines marques comme Solowheel, RockWheel ou IPS ont disparues. Il
+        existe également d&apos;autres mais celles-ci sont moins connues et/ou
+        moins appréciées des connaisseurs. Les caractéristiques de leurs modèles
+        n&apos;offrent pas les mêmes garanties (sécurité, performance) que
+        celles qu&apos;on retrouve chez les principaux leaders du marché.
       </p>
       <div className="md:ml-6 blueBlock">
         <h3>⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;</h3>
