@@ -28,7 +28,7 @@ const Page = () => {
 
       <div className="blueBlock">
         <h3>
-          💙 &quot;Le Bonheur de rouler, c’est se mettre dans les meilleurs
+          💙 &quot;Le Bonheur de rouler, c&apos;est se mettre dans les meilleurs
           conditions pour pouvoir en profiter !&quot;
         </h3>
       </div>
@@ -42,8 +42,10 @@ const Page = () => {
               <strong>sessions de formation</strong> théorique et pratique pour
               t&apos;accompagner et dédramatiser 😊.
             </p>
-            En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet
-            😎.{' '}
+            <p className="mb-0">
+              En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet
+              😎.
+            </p>
           </h3>
           <p>
             <h3>
