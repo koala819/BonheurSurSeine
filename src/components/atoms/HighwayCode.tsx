@@ -17,7 +17,7 @@ const HighwayCode = () => {
           <p className="mb-8">
             Depuis le 23 octobre 2019, les roues électriques sont officiellement
             reconnues dans le Code de la Route (catégorie EDPM{' '}
-            <strong>Engins de Déplacement Personnel à Moteur</strong> :
+            <strong>Engins de Déplacement Personnel à Moteur</strong> :{' '}
             <Link
               href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
               target="_blank"
@@ -91,7 +91,7 @@ const HighwayCode = () => {
                 <li>
                   Interdiction de circuler sur les routes où la vitesse est
                   &gt;50km/h et hors agglomération, sauf sur pistes cyclables et
-                  voies vertes(
+                  voies vertes (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -140,7 +140,7 @@ const HighwayCode = () => {
               <h4>ÉQUIPEMENT</h4>
               <ul className="list">
                 <li>
-                  Vitesse maximale de 25 km/h par construction ou par bridage(
+                  Vitesse maximale de 25 km/h par construction ou par bridage (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039478722/"
                     target="_blank"
@@ -151,8 +151,7 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li>
-                  Présence d&apos;une sonnette obligatoire (klaxon électrique
-                  non valable,
+                  Présence d&apos;une sonnette obligatoire (klaxon électrique non valable,{' '}
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
                     target="_blank"

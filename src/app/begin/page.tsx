@@ -8,8 +8,7 @@ import HighwayCode from '@/src/components/atoms/HighwayCode'
 import Maintenance from '@/src/components/atoms/Maintenance'
 
 export const metadata: Metadata = {
-  title:
-    'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
+  title: 'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
   description:
     'Découvrez quelques conseils pour débuter avec la roue électrique en France : sécurité, assurance, entretien, et plus. Roulez en gyroroue en toute confiance.',
   alternates: {
@@ -24,7 +23,7 @@ const Page = () => {
       <p>
         Cette page regroupe <strong>quelques conseils</strong> et{' '}
         <strong>rappels essentiels</strong> mais non exhaustifs concernant
-        l’utilisation de la roue électrique <strong>en France.</strong>
+        l&apos;utilisation de la roue électrique <strong>en France.</strong>
       </p>
 
       <div className="blueBlock">
@@ -33,18 +32,30 @@ const Page = () => {
           conditions pour pouvoir en profiter !&quot;
         </h3>
       </div>
-      
+
       <p>
         <div className="pinkBlock">
-        <p> <h3> Si tu veux te mettre à la roue électrique mais que tu as peur de te lancer, sache que je propose 
-          des <strong>sessions de formation</strong> théorique et pratique pour t’accompagner et dédramatiser 😊.{' '} </h3></p>
-        <p> <h3> En seulement 1 heure🕐, tu auras un autre regard sur l’objet 😎. {' '} </h3></p>
-        <p> <h3>➡️Pour <strong>prendre rendez-vous</strong> :{' '}
-        <Link href={'mailto:bonheursurseine@gmail.com'}
-          className="hover:underline" >
-          bonheursurseine@gmail.com  </Link>
-         </h3></p>
-         </div>
+          <p>
+            <h3>
+              Si tu veux te mettre à la roue électrique mais que tu as peur de
+              te lancer, sache que je propose des{' '}
+              <strong>sessions de formation</strong> théorique et pratique pour
+              t&apos;accompagner et dédramatiser 😊. \N En seulement 1 heure🕐,
+              tu auras un autre regard sur l&apos;objet 😎.{' '}
+            </h3>
+          </p>
+          <p>
+            <h3>
+              ➡️Pour <strong>prendre rendez-vous</strong> :{' '}
+              <Link
+                href={'mailto:bonheursurseine@gmail.com'}
+                className="hover:underline"
+              >
+                bonheursurseine@gmail.com{' '}
+              </Link>
+            </h3>
+          </p>
+        </div>
       </p>
 
       <CommonSense />

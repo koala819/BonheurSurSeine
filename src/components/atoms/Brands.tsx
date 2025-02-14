@@ -5,7 +5,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import gyroroues from '@/public/gyroroues.jpg'
+import gyroroues from '@/public/gyroroues_bss202502.jpg'
 
 const Brands = () => {
   return (
@@ -15,63 +15,72 @@ const Brands = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Les urbaines"
-          title={<span>Les urbaines</span>}
+          aria-label="Urbaine"
+          title={<span>Urbaine</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <ul className="list">
             <li>
-              Souvent proposées en entrée de gamme, elles sont absolument
-              parfaites pour découvrir le pouvoir de la roue électrique : la
-              liberté !
+              De part leur petite taille, ces roues sont souvent proposées en
+              entrée de gamme. Mais elles sont absolument parfaites pour
+              découvrir le pouvoir de la roue électrique :{' '}
+              <strong>la liberté et la praticité</strong> !
             </li>
             <li>
-              Compactes, ultra maniables et légères (max 20kg), elles offrent ce
-              que la roue a de meilleur. Les centres-villes et les pistes
-              cyclables sont leur terrain de jeux favori. Elles sont parfaites
-              pour rester discret, pour l’intermodalité, et faire des trajets de
-              quelques kilomètres.
+              Compactes, faciles à transporter avec leur trolley, ultra
+              maniables et assez légères (max 25kg), elles offrent ce que la
+              roue a de meilleur. Les <strong>centres-villes</strong> et les{' '}
+              <strong>pistes cyclables</strong> sont leur terrain de jeux
+              favori. Elles sont parfaites pour rester <strong>discret</strong>{' '}
+              (sous un siège, dans un magasin), pour l&apos;intermodalité, et
+              faire des trajets de quelques kilomètres.
             </li>
           </ul>
         </AccordionItem>
         <AccordionItem
           key="2"
-          aria-label="Les polyvalentes"
-          title={<span>Les polyvalentes</span>}
+          aria-label="Hybride/polyvalente"
+          title={<span>Hybride/polyvalente</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <ul className="list">
             <li>
-              Le cœur du marché : ni trop grosses (même si à présent le poids
-              dépasse les 30kg), ni trop petites, confortables, ergonomiques,
-              avec de bonnes autonomies, ces modèles présentent de nombreux
-              avantages. Les plus imposantes proposent même une suspension.
+              Un peu plus grosses et généralement équipées d&apos;une
+              suspension, ces roues offrent plus <strong>de confort</strong> et
+              plus <strong>d&apos;autonomie</strong>. Cependant, avec un poids
+              dépassant parfois les 35kg, elles perdent en discrétion et en
+              praticité malgré leurs atouts
             </li>
             <li>
-              Avec ces roues, on peut aller au travail la semaine, et aller se
+              Leur taille leur permet de circuler en grande{' '}
+              <strong>agglomération</strong>, et un peu plus sereinement en
+              ville sur la chaussée au côté des autres véhicules. Avec ces
+              roues, on peut aller au travail la semaine, et aller aussi se
               promener le week-end !
             </li>
           </ul>
         </AccordionItem>
         <AccordionItem
           key="3"
-          aria-label="Les routières"
-          title={<span>Les routières</span>}
+          aria-label="Loisir"
+          title={<span>Loisir</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <ul className="list">
             <li>
-              Ici, aucune limite de taille, ni de poids ! Ces modèles sont
-              plutôt dédiés à la pratique sportive : performance ou grande
-              randonnée. Ces roues affichent des spécifications techniques de
-              haute volée (voltage, autonomie, puissance, suspension, vitesses
-              max) que finalement peu de gens exploitent.
+              Ici, <strong>aucune limite</strong> de taille, ni de poids ! La
+              praticité n&apos.est plus un argument car ces modèles sont plutôt
+              dédiés à la pratique sportive : performance ou grande randonnée.
+              Ces roues affichent des{' '}
+              <strong>spécifications techniques de haute volée</strong>{' '}
+              (voltage, autonomie, puissance, suspension, vitesses max) que
+              finalement peu de gens exploitent totalement.
             </li>
             <li>
               On est sur les poids lourds de la micromobilité (40kg est un
-              minimum). Avec seulement quelques modèles au début, l’offre s’est
-              depuis étoffée au fur et a mesure des améliorations techniques
-              (suspension, voltage).
+              minimum). Avec seulement quelques modèles au début, l&apos.offre
+              s&apos.est depuis étoffée au fur et a mesure des améliorations
+              techniques (suspension, voltage).
             </li>
           </ul>
         </AccordionItem>
@@ -92,8 +101,10 @@ const Brands = () => {
         Chine (près de Shenzen).
       </p>
       <p>
-        Aucun favoritisme de ma part, les marques sont citées par ordre
-        alphabétique.😉
+        <i>
+          Aucun favoritisme de ma part, les marques sont citées par ordre
+          alphabétique.😉
+        </i>
       </p>
       <Accordion>
         <AccordionItem
@@ -105,10 +116,11 @@ const Brands = () => {
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <span>
-            Ce fabricant historique (présent depuis 2014) s’est imposé comme une
-            référence pour de nombreux passionnés, grâce à une très large gamme
-            de modèles axés sur la performance (allant des très petites aux très
-            grosses) et grâce à un renouvellement constant de sa gamme.
+            Ce fabricant historique (présent depuis 2014) s&apos;est imposé
+            comme une référence pour de nombreux passionnés, grâce à une très
+            large gamme de modèles axés sur la performance (allant des très
+            petites aux très grosses) et grâce à un renouvellement constant de
+            sa gamme.
           </span>
         </AccordionItem>
         <AccordionItem
@@ -130,9 +142,9 @@ const Brands = () => {
         >
           <span>
             Créé en 2012, ce fabricant propose une gamme lisible et diversifiée,
-            avec des modèles adaptés aussi bien aux débutants qu’aux experts.
-            Ses modèles associent performances, praticité, sécurité et design
-            soigné.
+            avec des modèles adaptés aussi bien aux débutants qu&apos;aux
+            experts. Ses modèles associent performances, praticité, sécurité et
+            design soigné.
           </span>
         </AccordionItem>
         <AccordionItem
@@ -168,7 +180,7 @@ const Brands = () => {
           <span>
             Cette marque, connue pour ses trottinettes électriques, a fabriqué
             quelques modèles populaires et au design soigné entre 2014 et 2018.
-            Elle s’est depuis retirée du marché.
+            Elle s&apos;est depuis retirée du marché.
           </span>
         </AccordionItem>
         <AccordionItem
@@ -182,16 +194,18 @@ const Brands = () => {
             des marques de roues. Fondée par d&apos;anciens collaborateurs de
             chez Kingsong, cette marque a l&apos;ambition de proposer des
             modèles haut de gamme et innovants. Leurs 2 premiers modèles ont
-            déjà suscité l’intérêt et la curiosité de nombreux wheelers grâce à
-            leurs performances, leurs suspensions avancées et leur design.
+            déjà suscité l&apos;intérêt et la curiosité de nombreux wheelers
+            grâce à leurs performances, leurs suspensions avancées et leur
+            design.
           </span>
         </AccordionItem>
       </Accordion>
       <p>
-        Les autres marques sont moins connues et moins appréciées des
-        connaisseurs. Les caractéristiques de leurs modèles n&apos;offrent pas
-        les mêmes garanties (sécurité, performance) que celles qu&apos;on
-        retrouve chez les leaders du marché.
+        D&apos;autres marques comme Solowheel, RockWheel ou IPS ont disparues.
+        Les autres sont moins connues et/ou moins appréciées des connaisseurs.
+        Les caractéristiques de leurs modèles n&apos;offrent pas les mêmes
+        garanties (sécurité, performance) que celles qu&apos;on retrouve chez
+        les leaders du marché.
       </p>
       <div className="md:ml-6 blueBlock">
         <h3>⚠️ &quot;La roue parfaite n&apos;existe pas.&quot;</h3>
