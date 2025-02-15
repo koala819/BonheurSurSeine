@@ -28,7 +28,9 @@ export function BonheurScore({
   moment.locale('fr')
   return (
     <div className="container mx-auto p-4">
-      <h1>BonheurScore - tests et reviews</h1>
+      <h1 className="whitespace-break-spaces">
+        BonheurScore - tests et reviews
+      </h1>
       <footer className="blueBlock mb-2">
         <h3>
           📢 Ces notes ne sont le fruit que de ma vision, de mon usage et de ma
@@ -57,7 +59,7 @@ export function BonheurScore({
           </Link>
           .
         </p>
-        <ul>
+        <ul className="mt-0">
           <li className="list mt-1">
             Mes notes ne représentent pas une vérité en soi : elles illustrent
             juste du mieux possible mon avis personnel et mes ressentis.
