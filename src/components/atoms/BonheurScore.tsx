@@ -59,7 +59,7 @@ export function BonheurScore({
           </Link>
           .
         </p>
-        <ul className="list mt-0">
+        <ul className="mt-0">
           <li className="list mt-1">
             Mes notes ne représentent pas une vérité en soi : elles illustrent
             juste du mieux possible mon avis personnel et mes ressentis.
