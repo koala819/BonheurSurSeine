@@ -28,29 +28,22 @@ export function BonheurScore({
   moment.locale('fr')
   return (
     <div className="container mx-auto p-4">
-      {/*      <div className="blueBlock mb-4">
+      <h1>BonheurScore - tests et reviews</h1>
+      <footer className="blueBlock mb-2">
         <h3>
-          📢 Cette page nécessite beaucoup de travail pour être mise à jour
-        </h3>
-        Pour avoir un éventail complet de toutes les roues que j&apos;ai pu
-        tester, je t&apos;invite à revenir régulièrement.
-      </div>
-*/}
-      <footer className="blueBlock mb-8">
-        <h3>
-          📢 &laquo;Ces notes ne sont le fruit que de ma vision, de mon usage et
-          de ma sensibilité.&raquo;
+          📢 Ces notes ne sont le fruit que de ma vision, de mon usage et de ma
+          sensibilité.
         </h3>
         <p>
-          Tu veux également me partager ton avis ? Clique{' '}
+          Tu souhaites également me partager ton avis ?{' '}
           <Link
             href="https://forms.office.com/r/5k7QAax6Xu"
             target="_blank"
             className="link-style"
           >
-            ICI
+            Remplis ce formulaire
           </Link>{' '}
-          et remplis le formulaire ! 📒
+          ! 📒
         </p>
         <p className="mb-0">
           😉 Pour en savoir plus sur la <strong>notation</strong>, je
@@ -70,7 +63,7 @@ export function BonheurScore({
             juste du mieux possible mon avis personnel et mes ressentis.
           </li>
           <li className="list mt-1">
-            Même la roue la moins bien notée m&apos;a, à chaque fois, procuré le{' '}
+            Même la roue la moins bien notée m&apos;a procuré, à chaque fois, le{' '}
             <strong>bonheur de rouler</strong>.
           </li>
         </ul>
