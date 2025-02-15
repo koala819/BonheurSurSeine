@@ -15,8 +15,8 @@ const Compare = () => {
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
       <h2>Comparer</h2>
       <div className="md:ml-6 blueBlock">
-        <h3>📢 &laquo;Choisir, c’est aussi renoncer…&raquo;</h3>
-        <p>
+        <h3>📢 &laquo;&nbsp;Choisir, c’est aussi renoncer…&nbsp;&raquo;</h3>
+        <p className="mt-0">
           Pour faire un choix éclairé, il faut peser les avantages et les
           inconvénients, et tenir compte de ses contraintes.
         </p>
@@ -35,7 +35,7 @@ const Compare = () => {
           </li>
           <li>
             Les chiffres fabricants sont parfois trompeurs, et{' '}
-            <strong className="brown-500">
+            <strong className="text-brown-500">
               les autonomies annoncées sont toujours surévaluées
             </strong>{' '}
             (il faut parfois diviser par 2). <i>Rappel</i> : l&apos;autonomie
@@ -52,7 +52,10 @@ const Compare = () => {
 
       <div className="pt-8">
         <h4>
-          ➡️ Mes reviews et le <span className="brown-500">BonheurScore</span>
+          ➡️ Mes reviews et le{' '}
+          <span className="text-xl sm:text-xl md:text-2xl text-brown-500">
+            BonheurScore
+          </span>
         </h4>
         <ul className="list">
           <li>
