@@ -20,12 +20,12 @@ const Choice = () => {
         </aside>
         <aside className="md:w-1/2 blueBlock">
           <h3>
-            📢 &quot;La meilleure roue, c’est celle qu’on a sous les pieds
-            !&quot;
+            📢 &laquo;&nbsp;La meilleure roue, c&apos;est celle qu&apos;on a
+            sous les pieds !&nbsp;&raquo;
           </h3>
           <p>
-            ⚠️ Pas besoin d’avoir la dernière roue du marché pour ressentir le
-            bonheur de rouler.
+            ⚠️ Pas besoin d&apos;avoir la dernière roue du marché pour ressentir
+            le bonheur de rouler.
           </p>
         </aside>
       </div>

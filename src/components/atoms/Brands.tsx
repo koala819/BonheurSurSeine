@@ -210,10 +210,10 @@ const Brands = () => {
         que celles qu&apos;on retrouve chez les principaux leaders du marché.
       </p>
       <div className="md:ml-6 blueBlock">
-        <h3 className="mb-1">
+        <h3 className="mb-0">
           ⚠️ &laquo; La roue parfaite n&apos;existe pas. &raquo;
         </h3>
-        <p className="mt-1">
+        <p className="mt-0">
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses.
         </p>
