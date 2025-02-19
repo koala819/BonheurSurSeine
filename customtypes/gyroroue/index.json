@@ -33,11 +33,12 @@
           "label": "Constructeur",
           "placeholder": "",
           "options": [
-            "BEGODE",
-            "EXTREME BULL",
-            "INMOTION",
-            "KINGSONG",
-            "LEAPERKIM VETERAN"
+            "Begode",
+            "Extreme Bull",
+            "Inmotion",
+            "Kingsong",
+            "Leaperkim",
+            "Nosfet"
           ]
         }
       },
@@ -88,7 +89,7 @@
         "config": {
           "label": "Profil",
           "placeholder": "",
-          "options": ["Polyvalente", "Routière", "Urbaine"]
+          "options": ["Hybride", "Loisir", "Urbaine"]
         }
       },
       "suspension": {
@@ -111,7 +112,8 @@
         "type": "Text",
         "config": {
           "label": "Commentaire",
-          "placeholder": ""
+          "placeholder": "",
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "lien_video_youtube": {
