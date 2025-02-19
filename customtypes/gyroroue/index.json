@@ -109,7 +109,7 @@
         }
       },
       "commentaire": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
           "label": "Commentaire",
           "placeholder": "",
