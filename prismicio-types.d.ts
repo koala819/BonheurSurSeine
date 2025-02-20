@@ -309,15 +309,15 @@ interface DicoDocumentData {
   Lettre: prismic.KeyTextField
 
   /**
-   * definition field in *Dico*
+   * Definition field in *Dico*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: dico.definition
+   * - **API ID Path**: dico.Definition
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  definition: prismic.RichTextField
+  Definition: prismic.RichTextField
 }
 
 /**
@@ -474,13 +474,24 @@ interface GyroroueDocumentData {
   /**
    * Commentaire field in *Gyroroue*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: gyroroue.commentaire
    * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  commentaire: prismic.KeyTextField
+
+  /**
+   * Commentaire_new field in *Gyroroue*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.commentaire_new
+   * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  commentaire: prismic.RichTextField
+  commentaire_new: prismic.RichTextField
 
   /**
    * Lien vidéo Youtube field in *Gyroroue*
