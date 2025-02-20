@@ -29,7 +29,8 @@ const HighwayCode = () => {
           </p>
           <div className="blueBlock mb-8">
             <h3>
-              🚦 Quand on est sur la route, il ne faut jamais être trop pressé !
+              🚦 Quand on est sur la route, il ne faut jamais être trop
+              pressé&nbsp;!
             </h3>
           </div>
           <p className="mb-8">
@@ -151,7 +152,8 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li>
-                  Présence d&apos;une sonnette obligatoire (klaxon électrique non valable,{' '}
+                  Présence d&apos;une sonnette obligatoire (klaxon électrique
+                  non valable,{' '}
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
                     target="_blank"

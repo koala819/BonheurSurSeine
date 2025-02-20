@@ -52,8 +52,8 @@ const Associations = () => {
             <h2 className="capitalize">l&apos;anumme</h2>
             <div className="blueBlock mb-8">
               <h3>
-                📢 En 2 mots : &quot;Voilà un site très complet et bourré
-                d&apos;informations utiles&quot;
+                ℹ️ Voilà un site très complet et bourré d&apos;informations
+                utiles
               </h3>
             </div>
             <div className="flex flex-col lg:flex-row">
@@ -87,7 +87,9 @@ const Associations = () => {
           <section className="pt-8">
             <h2>Wikiloc</h2>
             <div className="blueBlock mb-8">
-              <h3>📢 En 2 mots : &quot;Allons rouler !&quot;</h3>
+              <h3>
+                📢 En 2 mots&nbsp;: &laquo;&nbsp;Allons rouler !&nbsp;&raquo;
+              </h3>
             </div>
             <div className="flex flex-col lg:flex-row mb-8">
               <aside className="lg:w-3/4 space-y-8">
@@ -95,8 +97,8 @@ const Associations = () => {
                   Ce site permet de <strong>partager des itinéraires</strong>,
                   de les enregistrer, de les documenter (textes, photos,
                   commentaires), et de télécharger les tracés GPS. Parfait pour
-                  aider les autres, et bénéficier de leurs expériences pour
-                  organiser ses propres sorties.
+                  aider les autres, et surtout bénéficier de leurs expériences
+                  afin d&apos;organiser ses propres sorties.
                 </p>
                 <p>
                   Il existe 2 catégories utilisées par la communauté :
@@ -151,8 +153,8 @@ const Associations = () => {
             <h2>Les associations</h2>
             <div className="blueBlock mb-8">
               <h3>
-                📢 &laquo;Le bonheur n&apo;est réel que quand il est
-                partagé.&raquo;
+                📢 &laquo;&nbsp;Le bonheur n&apos;est réel que quand il est
+                partagé.&nbsp;&raquo;
               </h3>
             </div>
             <p>

@@ -4,8 +4,9 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import whitelogo from '@/public/Logo_Claro.svg'
-import blackLogo from '@/public/Logo_Oscuro.svg'
+import whitelogo from '@/public/EUCFinder_Logo_Claro-ok.jpg'
+import blackLogo from '@/public/EUCFinder_Logo_Oscuro-ok.jpg'
+import EUCFinder from '@/public/EUCFinder_aperçu.png'
 
 const Compare = () => {
   const { theme } = useTheme()
@@ -15,11 +16,11 @@ const Compare = () => {
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
       <h2>Comparer</h2>
       <div className="md:ml-6 blueBlock">
-        <h3>📢 &laquo;&nbsp;Choisir, c’est aussi renoncer…&nbsp;&raquo;</h3>
-        <p className="mt-0">
-          Pour faire un choix éclairé, il faut peser les avantages et les
-          inconvénients, et tenir compte de ses contraintes.
-        </p>
+        <h3 className="mb-4">
+          📢 &laquo;&nbsp;Choisir, c’est aussi renoncer…&nbsp;&raquo;
+        </h3>
+        Pour faire un choix éclairé, il faut peser les avantages et les
+        inconvénients, et tenir compte de ses contraintes.
       </div>
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
@@ -53,7 +54,7 @@ const Compare = () => {
       <div className="pt-8">
         <h4>
           ➡️ Mes reviews et le{' '}
-          <span className="text-xl sm:text-xl md:text-2xl text-brown-500">
+          <span className="text-xl sm:text-xl md:text-xl text-fuchsia-700">
             BonheurScore
           </span>
         </h4>
@@ -61,31 +62,40 @@ const Compare = () => {
           <li>
             La{' '}
             <strong>
-              notation{' '}
-              <Link
-                href="/BonheurScore"
-                className="underline hover:text-blue-500"
-              >
-                BonheurScore
-              </Link>
+              <span className="text-fuchsia-700">
+                notation{' '}
+                <Link
+                  href="/BonheurScore"
+                  className="underline hover:text-blue-500"
+                >
+                  BonheurScore
+                </Link>
+              </span>
             </strong>{' '}
-            permet de savoir en synthèse <strong>ce que j&apos;ai pensé</strong>{' '}
-            de chaque roue que j&apos;ai testée.
+            permet de savoir en synthèse{' '}
+            <strong>
+              <span className="text-fuchsia-700">ce que j&apos;ai pensé</span>
+            </strong>{' '}
+            de chaque roue testée.
           </li>
           <li>
             Dans{' '}
             <strong>
-              toutes{' '}
-              <Link
-                href="https://www.youtube.com/@BonheursurSeine"
-                className="underline hover:text-blue-500"
-                target="_blank"
-              >
-                mes vidéos
-              </Link>
+              <span className="text-fuchsia-700">
+                <Link
+                  href="https://www.youtube.com/@BonheursurSeine"
+                  className="underline hover:text-blue-500"
+                  target="_blank"
+                >
+                  toutes mes vidéos
+                </Link>
+              </span>
             </strong>
-            , je donne librement mon avis et j&apos;identifie au mieux{' '}
-            <strong>les usages</strong> pour lesquels la roue excelle.
+            , je donne librement mon avis, et j&apos;identifie au mieux{' '}
+            <strong>
+              <span className="text-fuchsia-700">les usages</span>
+            </strong>{' '}
+            pour lesquels la roue excelle.
           </li>
         </ul>
       </div>
@@ -108,11 +118,10 @@ const Compare = () => {
               />
             </Link>
           </aside>
-
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                Ce projet mené par{' '}
+                Ce <strong>projet</strong> mené par{' '}
                 <Link
                   href="https://www.instagram.com/rafa.pgarcia"
                   className="underline hover:text-blue-500"
@@ -122,7 +131,7 @@ const Compare = () => {
                 </Link>{' '}
                 (et auquel{' '}
                 <Link
-                  href="https://www.instagram.com/fabien.wheel"
+                  href="https://linktr.ee/fabien.wheel"
                   className="underline hover:text-blue-500"
                   target="_blank"
                 >
@@ -144,6 +153,17 @@ const Compare = () => {
               </li>
             </ul>
           </aside>
+        </div>
+        <div className="flex justify-center mt-8">
+          <Link href={EUCFinder.src} passHref target="_blank">
+            <Image
+              src={EUCFinder}
+              alt="EUCFinder"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer"
+            />
+          </Link>
         </div>
       </div>
     </section>

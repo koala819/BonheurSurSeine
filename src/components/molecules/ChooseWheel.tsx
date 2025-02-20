@@ -1,7 +1,7 @@
-import Brands from '@/src/components/atoms/Brands'
-import Choice from '@/src/components/atoms/Choice'
-import Compare from '@/src/components/atoms/Compare'
-import Needs from '@/src/components/atoms/Needs'
+import Brands from '@/src/components/atoms/Choose_Brands'
+import Choice from '@/src/components/atoms/Choose_Choice'
+import Compare from '@/src/components/atoms/Choose_Compare'
+import Needs from '@/src/components/atoms/Choose_Needs'
 
 const ChooseWheel = () => {
   return (

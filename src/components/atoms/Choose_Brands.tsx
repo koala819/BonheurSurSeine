@@ -17,14 +17,14 @@ const Brands = () => {
           key="1"
           aria-label="Urbaine"
           title={<span>Urbaine</span>}
-          indicator={<span className="chevronAccordionItem">&lt;</span>}
+          indicator={<span className="chevronAccordionItem">&lt;{/*◀*/}</span>}
         >
           <ul className="list">
             <li>
               De part leur petite taille, ces roues sont souvent proposées en
               entrée de gamme. Mais elles sont absolument parfaites pour
-              découvrir le pouvoir de la roue électrique :{' '}
-              <strong>la liberté et la praticité</strong> !
+              découvrir le pouvoir de la roue électrique&nbsp;:{' '}
+              <strong>la liberté et la praticité</strong>&nbsp;!
             </li>
             <li>
               Compactes, faciles à transporter avec leur trolley, ultra
@@ -96,17 +96,16 @@ const Brands = () => {
           />
         </Link>
       </div>
-      <p className="mb-8"> </p>
-      <p>
+      <p className="mt-8 mb-0">
         Le marché est actuellement dominé par quelques fabricants, tous basés en
-        Chine (près de Shenzen).
-      </p>
-      <p className="text-gray-500 dark:text-gray-300 mt-1">
-        <i>
-          Aucun favoritisme de ma part, les marques sont citées par ordre
-          alphabétique.
-        </i>
-        😉
+        Chine (près de Shenzen). <br />
+        <span className="text-gray-500 dark:text-gray-300 mt-0">
+          <i>
+            Aucun favoritisme de ma part, les marques sont citées par ordre
+            alphabétique.
+          </i>
+          😉
+        </span>
       </p>
       <Accordion>
         <AccordionItem
@@ -117,13 +116,13 @@ const Brands = () => {
           }
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Ce fabricant historique (présent depuis 2014) s&apos;est imposé
             comme une référence pour de nombreux passionnés, grâce à une très
             large gamme de modèles axés sur la performance (allant des très
             petites aux très grosses) et grâce à un renouvellement constant de
             sa gamme.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="2"
@@ -131,10 +130,10 @@ const Brands = () => {
           title={<span className="brandGyroroue">Extreme Bull</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Marque apparue en 2021, elle partage son ADN et ses ateliers de
             fabrication avec Begode pour continuer à repousser les limites.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="3"
@@ -142,12 +141,12 @@ const Brands = () => {
           title={<span className="brandGyroroue">Inmotion</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Créé en 2012, ce fabricant propose une gamme lisible et diversifiée,
             avec des modèles adaptés aussi bien aux débutants qu&apos;aux
             experts. Ses modèles associent performances, praticité, sécurité et
             design soigné.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="4"
@@ -155,11 +154,11 @@ const Brands = () => {
           title={<span className="brandGyroroue">Kingsong</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Présent sur le marché depuis 2014, cette marque est reconnue pour
             ses modèles offrant un équilibre entre performance et sécurité. Elle
             fut la première à proposer un modèle avec suspension.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="5"
@@ -167,11 +166,11 @@ const Brands = () => {
           title={<span className="brandGyroroue">Leaperkim / Veteran</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Apparu en 2020, ce fabricant a rapidement gagné en popularité auprès
             des connaisseurs grâce à ses roues robustes et puissantes, et une
             belle qualité de fabrication.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="6"
@@ -179,11 +178,11 @@ const Brands = () => {
           title={<span className="brandGyroroue">Ninebot by Segway</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Cette marque, connue pour ses trottinettes électriques, a fabriqué
             quelques modèles populaires et au design soigné entre 2014 et 2018.
             Elle s&apos;est depuis retirée du marché.
-          </span>
+          </p>
         </AccordionItem>
         <AccordionItem
           key="7"
@@ -191,7 +190,7 @@ const Brands = () => {
           title={<span className="brandGyroroue">Nosfet</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <span>
+          <p>
             Récemment créée en 2024, Nosfet est la plus jeune et la plus petite
             des marques de roues. Fondée par d&apos;anciens collaborateurs de
             chez Kingsong, cette marque a l&apos;ambition de proposer des
@@ -199,7 +198,7 @@ const Brands = () => {
             déjà suscité l&apos;intérêt et la curiosité de nombreux wheelers
             grâce à leurs performances, leurs suspensions avancées et leur
             design.
-          </span>
+          </p>
         </AccordionItem>
       </Accordion>
       <p>
@@ -209,15 +208,16 @@ const Brands = () => {
         modèles n&apos;offrent pas les mêmes garanties (sécurité, performance)
         que celles qu&apos;on retrouve chez les principaux leaders du marché.
       </p>
-      <div className="md:ml-6 blueBlock">
-        <h3 className="mb-0">
+      <div className="blueBlock mb-0 mt-0">
+        <h3 className="mb-4">
           ⚠️ &laquo; La roue parfaite n&apos;existe pas. &raquo;
         </h3>
-        <p className="mt-0">
-          D&apos;expérience, chaque modèle excelle pour un usage précis, avec
-          ses forces, ses qualités et ses faiblesses.
-        </p>
+        D&apos;expérience, chaque modèle excelle pour un usage précis, avec ses
+        forces, ses qualités et ses faiblesses.
       </div>
+      <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+        article mis à jour en février 2025
+      </p>
     </section>
   )
 }
