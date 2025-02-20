@@ -187,7 +187,7 @@ interface AmisDansContactDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  url: prismic.LinkField
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 }
 
 /**
@@ -283,6 +283,56 @@ export type ContactDocument<Lang extends string = string> =
   >
 
 /**
+ * Content for Dico documents
+ */
+interface DicoDocumentData {
+  /**
+   * Mot field in *Dico*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dico.Mot
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  Mot: prismic.KeyTextField
+
+  /**
+   * Lettre field in *Dico*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dico.Lettre
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  Lettre: prismic.KeyTextField
+
+  /**
+   * definition field in *Dico*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dico.definition
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  definition: prismic.RichTextField
+}
+
+/**
+ * Dico document from Prismic
+ *
+ * - **API ID**: `dico`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type DicoDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<DicoDocumentData>, 'dico', Lang>
+
+/**
  * Content for Gyroroue documents
  */
 interface GyroroueDocumentData {
@@ -318,8 +368,19 @@ interface GyroroueDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   constructeur: prismic.SelectField<
-    'BEGODE' | 'EXTREME BULL' | 'INMOTION' | 'KINGSONG' | 'LEAPERKIM VETERAN'
+    'Begode' | 'Extreme Bull' | 'Inmotion' | 'Kingsong' | 'LeaperKim' | 'Nosfet'
   >
+
+  /**
+   * Profil field in *Gyroroue*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gyroroue.profil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  profil: prismic.SelectField<'Hybride' | 'Loisir' | 'Urbaine'>
 
   /**
    * Date field in *Gyroroue*
@@ -388,17 +449,6 @@ interface GyroroueDocumentData {
   sur_route: prismic.NumberField
 
   /**
-   * Profil field in *Gyroroue*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: gyroroue.profil
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  profil: prismic.SelectField<'Polyvalente' | 'Routière' | 'Urbaine'>
-
-  /**
    * Suspension field in *Gyroroue*
    *
    * - **Field Type**: Boolean
@@ -424,13 +474,13 @@ interface GyroroueDocumentData {
   /**
    * Commentaire field in *Gyroroue*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: gyroroue.commentaire
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  commentaire: prismic.KeyTextField
+  commentaire: prismic.RichTextField
 
   /**
    * Lien vidéo Youtube field in *Gyroroue*
@@ -441,7 +491,13 @@ interface GyroroueDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  lien_video_youtube: prismic.LinkField
+  lien_video_youtube: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >
 }
 
 /**
@@ -569,6 +625,7 @@ export type AllDocumentTypes =
   | AccueilDocument
   | AmisDansContactDocument
   | ContactDocument
+  | DicoDocument
   | GyroroueDocument
   | PromoDocument
 
@@ -578,6 +635,17 @@ declare module '@prismicio/client' {
       repositoryNameOrEndpoint: string,
       options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>
+  }
+
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>
   }
 
   namespace Content {
@@ -590,6 +658,8 @@ declare module '@prismicio/client' {
       ContactDocument,
       ContactDocumentData,
       ContactDocumentDataSlicesSlice,
+      DicoDocument,
+      DicoDocumentData,
       GyroroueDocument,
       GyroroueDocumentData,
       PromoDocument,
