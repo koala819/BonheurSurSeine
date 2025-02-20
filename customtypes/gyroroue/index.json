@@ -37,9 +37,17 @@
             "Extreme Bull",
             "Inmotion",
             "Kingsong",
-            "Leaperkim",
+            "LeaperKim",
             "Nosfet"
           ]
+        }
+      },
+      "profil": {
+        "type": "Select",
+        "config": {
+          "label": "Profil",
+          "placeholder": "",
+          "options": ["Hybride", "Loisir", "Urbaine"]
         }
       },
       "date": {
@@ -82,14 +90,6 @@
         "config": {
           "label": "Sur route",
           "placeholder": ""
-        }
-      },
-      "profil": {
-        "type": "Select",
-        "config": {
-          "label": "Profil",
-          "placeholder": "",
-          "options": ["Hybride", "Loisir", "Urbaine"]
         }
       },
       "suspension": {

@@ -49,3 +49,9 @@ export interface UserProfile {
   profileUrl: string
   imageUrl: string
 }
+
+export interface DicoProps {
+  mot: string
+  lettre: KeyTextField
+  definition: KeyTextField
+}
