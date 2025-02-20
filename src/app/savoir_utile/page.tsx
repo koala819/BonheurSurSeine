@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import Dico from '@/src/components/atoms/Practical_Dico'
+//import Dico from '@/src/components/atoms/Practical_Dico'
 import Video from '@/src/components/atoms/Practical_Video'
 
 export const metadata: Metadata = {
@@ -30,7 +30,6 @@ const Page = () => {
       </div>
 
       <Video />
-      <Dico />
 
       <div className="yellowBlock">
         <h3>
