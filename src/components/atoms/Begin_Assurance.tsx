@@ -101,8 +101,9 @@ const Assurance = () => {
           </ul>
           <div className="yellowBlock mb-8">
             <h3>
-              📢 &laquo;S&apos;assurer, ce n&apos;est pas une question de
-              sécurité, c&apos;est une question de responsabilité !&raquo;
+              📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
+              sécurité, c&apos;est une question de
+              responsabilité&nbsp;!&nbsp;&raquo;
             </h3>
           </div>
           <p>

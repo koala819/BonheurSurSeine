@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Associations from '@/src/components/atoms/Associations'
-import Assurance from '@/src/components/atoms/Assurance'
-import CommonSense from '@/src/components/atoms/CommonSense'
-import HighwayCode from '@/src/components/atoms/HighwayCode'
-import Maintenance from '@/src/components/atoms/Maintenance'
+import Associations from '@/src/components/atoms/Begin_Associations'
+import Assurance from '@/src/components/atoms/Begin_Assurance'
+import CommonSense from '@/src/components/atoms/Begin_CommonSense'
+import HighwayCode from '@/src/components/atoms/Begin_HighwayCode'
+import Maintenance from '@/src/components/atoms/Begin_Maintenance'
 
 export const metadata: Metadata = {
   title: 'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
@@ -33,36 +33,25 @@ const Page = () => {
         </h3>
       </div>
 
-      <p>
-        <div className="pinkBlock">
-          <p>
-            <h3>
-              Si tu veux te mettre à la roue électrique mais que tu as peur de
-              te lancer, sache que je propose des{' '}
-              <strong>sessions de formation</strong> théorique et pratique pour
-              t&apos;accompagner et dédramatiser. 😊
-            </h3>
-          </p>
-          <p className="mt-1">
-            <h3>
-              En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet.
-              😎
-            </h3>
-          </p>
-
-          <p>
-            <h3>
-              ➡️Pour <strong>prendre rendez-vous</strong> :{' '}
-              <Link
-                href={'mailto:bonheursurseine@gmail.com'}
-                className="hover:underline"
-              >
-                bonheursurseine@gmail.com{' '}
-              </Link>
-            </h3>
-          </p>
-        </div>
-      </p>
+      <div className="pinkBlock">
+        <h3>
+          Si tu veux te mettre à la roue électrique mais que tu as peur de te
+          lancer, sache que je propose des{' '}
+          <strong>sessions de formation</strong> théorique et pratique pour
+          t&apos;accompagner et dédramatiser. <br />
+          😊 En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet.
+          😎
+        </h3>
+        <h3>
+          ➡️Pour <strong>prendre rendez-vous</strong> :{' '}
+          <Link
+            href={'mailto:bonheursurseine@gmail.com'}
+            className="hover:underline"
+          >
+            bonheursurseine@gmail.com{' '}
+          </Link>
+        </h3>
+      </div>
 
       <CommonSense />
       <Assurance />
