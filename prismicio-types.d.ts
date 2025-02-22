@@ -311,13 +311,24 @@ interface DicoDocumentData {
   /**
    * Definition field in *Dico*
    *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: dico.definition
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  definition: prismic.KeyTextField
+
+  /**
+   * Definition_new field in *Dico*
+   *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: dico.Definition
+   * - **API ID Path**: dico.Definition_new
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  Definition: prismic.RichTextField
+  Definition_new: prismic.RichTextField
 }
 
 /**

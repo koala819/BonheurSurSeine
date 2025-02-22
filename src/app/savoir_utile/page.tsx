@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-//import Dico from '@/src/components/atoms/Practical_Dico'
+import Dico from '@/src/components/atoms/Practical_Dico'
 import Video from '@/src/components/atoms/Practical_Video'
 
 export const metadata: Metadata = {
@@ -21,20 +21,18 @@ const Page = () => {
         <strong>définitions utiles</strong> concernant la roue électrique et
         leur utilisation.
       </p>
-
       <div className="blueBlock">
         <h3>
           💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
           meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
         </h3>
-      </div>
-
+      </div>{' '}
       <Video />
-
+      <Dico />
       <div className="yellowBlock">
         <h3>
           ❤️ Et si tu croises un autre passionné,{' '}
-          <strong>n’oublie pas de le saluer !</strong>
+          <strong>n&apos;oublie pas de le saluer !</strong>
         </h3>
       </div>
     </div>
