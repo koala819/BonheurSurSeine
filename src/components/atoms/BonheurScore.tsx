@@ -8,6 +8,8 @@ import {
   Chip,
   Tooltip,
 } from '@nextui-org/react'
+import { PrismicRichText } from '@prismicio/react'
+import { useState } from 'react'
 import { FaCity, FaMagic, FaRoad, FaTools, FaTrophy } from 'react-icons/fa'
 import { SiSpringCreators } from 'react-icons/si'
 
@@ -26,6 +28,22 @@ export function BonheurScore({
   gyroroues: BonheurScoreProps[]
 }) {
   moment.locale('fr')
+  const [selectedBrand, setSelectedBrand] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
+
+  const uniqueBrands = Array.from(
+    new Set(gyroroues.map((g) => g.data.constructeur)),
+  )
+  const uniqueCategories = Array.from(
+    new Set(gyroroues.map((g) => g.data.profil)),
+  )
+
+  const filteredGyroroues = gyroroues.filter(
+    (g) =>
+      (selectedBrand ? g.data.constructeur === selectedBrand : true) &&
+      (selectedCategory ? g.data.profil === selectedCategory : true),
+  )
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="whitespace-break-spaces">
@@ -76,7 +94,52 @@ export function BonheurScore({
         </i>
       </p>
 
-      {gyroroues.map((gyroroue, index) => (
+      <div className="mb-4 flex justify-between items-center">
+        <div>
+          <label
+            htmlFor="brand-filter"
+            className="block text-xs font-medium text-gray-700"
+          >
+            Filtrer par marque :
+          </label>
+          <select
+            id="brand-filter"
+            className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm text-small"
+            value={selectedBrand}
+            onChange={(e) => setSelectedBrand(e.target.value)}
+          >
+            <option value="">Toutes les marques</option>
+            {uniqueBrands.map((brand) => (
+              <option key={brand ?? ''} value={brand ?? ''}>
+                {brand}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label
+            htmlFor="category-filter"
+            className="block text-xs font-medium text-gray-700 text-right "
+          >
+            Filtrer par catégorie :
+          </label>
+          <select
+            id="category-filter"
+            className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm text-right text-small"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            <option value="">Toutes les catégories</option>
+            {uniqueCategories.map((profil) => (
+              <option key={profil ?? ''} value={profil ?? ''}>
+                {profil}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {filteredGyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-3">
           {/*PREMIERE PARTIE : NOM, DATE ET CATEGORIE*/}
           <CardHeader className="gap-0">
@@ -129,7 +192,8 @@ export function BonheurScore({
               <div className="flex items-center sm:col-span-2">
                 {/*REVIEWS ET COMMENTAIRE SUR LA ROUE*/}
                 <span className="text-gray-600 dark:text-gray-200 text-sm md:text-base">
-                  {gyroroue.data.commentaire}
+                  {/*{gyroroue.data.commentaire}*/}
+                  <PrismicRichText field={gyroroue.data.commentaire_new} />
                 </span>
               </div>
             </div>
@@ -161,7 +225,7 @@ export function BonheurScore({
               </picture>
             </aside>
             {/*3 COLONNES AVEC TOUS POINTS-EQUIPPEMENT-PRATICITE-VILLE-ROUTE-SUSPENSION*/}
-            <aside className="w-1/2 lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 my-0 ">
+            <aside className="w-1/2 lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 my-0">
               {[
                 {
                   icon: FaTrophy,

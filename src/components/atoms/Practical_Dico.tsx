@@ -86,12 +86,12 @@ const Practical_Dico = () => {
         <AccordionItem
           key="1"
           aria-label="Le petit dico du bonheur"
-          title={<h3>Le petit dico du bonheur</h3>}
+          title={<h3>Le petit dico du Bonheur</h3>}
           indicator={<strong className="chevronAccordionItem">&lt;</strong>}
         >
           <p className="mb-6">
             Ce petit lexique propose des{' '}
-            <strong>explications simples et rapides</strong> de quelques termes
+            <strong>explications simples et concises</strong> de quelques termes
             fréquemment utilisés dans l&apos;univers de la roue électrique.
             <br />
             Il est classé par ordre alphabétique.
