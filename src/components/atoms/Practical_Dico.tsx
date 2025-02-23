@@ -1,15 +1,18 @@
 'use client'
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
+import { RichText } from 'prismic-reactjs'
 import { useEffect, useState } from 'react'
 
 import { createClient } from '@/prismicio'
+
+//import { KeyTextField } from '@prismicio/types'
 
 const Practical_Dico = () => {
   const [activeLetter, setActiveLetter] = useState('A')
   const [searchTerm, setSearchTerm] = useState('')
   const [glossary, setGlossary] = useState<
-    Record<string, { mot: string; definition: string }[]>
+    Record<string, { mot: string; definition: string; definition_new: any }[]>
   >({})
   const [isLoading, setIsLoading] = useState(true)
 
@@ -23,10 +26,9 @@ const Practical_Dico = () => {
       const dicoEntries = await client.getAllByType('dico')
 
       // Transformer les données en un objet structuré par lettre
-      //const structuredGlossary = {}
       const structuredGlossary: Record<
         string,
-        { mot: string; definition: string }[]
+        { mot: string; definition: string; definition_new: any }[]
       > = {}
       dicoEntries.forEach((entry) => {
         const letter = entry.data.Lettre?.toUpperCase() || 'A'
@@ -36,6 +38,7 @@ const Practical_Dico = () => {
         structuredGlossary[letter].push({
           mot: entry.data.Mot ?? '',
           definition: entry.data.definition ?? '',
+          definition_new: entry.data.Definition_new ?? [],
         })
       })
 
@@ -61,7 +64,9 @@ const Practical_Dico = () => {
   // Filtrage des mots par recherche
   const filteredWords = allWords
     .filter(
-      (entry): entry is { mot: string; definition: string } =>
+      (
+        entry,
+      ): entry is { mot: string; definition: string; definition_new: any } =>
         typeof entry === 'object' &&
         entry !== null &&
         'mot' in entry &&
@@ -154,8 +159,13 @@ const Practical_Dico = () => {
                         <td className="py-2 px-4 border-b dark:bg-gray-600 dark:text-gray-100">
                           <strong>{entry.mot}</strong>
                         </td>
-                        <td className="py-2 px-4 border-b text-sm dark:bg-gray-600 dark:text-gray-100">
-                          <span>{entry.definition}.</span>
+                        <td className="py-2 px-4 border-b text-xs sm:text-sm md:text-base dark:bg-gray-600 dark:text-gray-100">
+                          {/* <span>{entry.definition}.</span> */}
+                          {entry.definition_new ? (
+                            <RichText render={entry.definition_new} />
+                          ) : (
+                            <span>Pas de définition.</span>
+                          )}
                         </td>
                       </tr>
                     ))
