@@ -3,6 +3,7 @@ import {
   ImageField,
   KeyTextField,
   NumberField,
+  RichTextField,
 } from '@prismicio/client'
 
 export interface BonheurScoreProps {
@@ -21,6 +22,7 @@ export interface BonheurScoreProps {
     profil: string | null
     sur_route: NumberField
     suspension: boolean
+    commentaire_new: RichTextField
   }
 }
 
@@ -54,4 +56,5 @@ export interface DicoProps {
   mot: string
   lettre: KeyTextField
   definition: KeyTextField
+  definition_new: RichTextField
 }

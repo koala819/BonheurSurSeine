@@ -127,10 +127,8 @@ export function BonheurScore({
                 </p>
               </div>
               <div className="flex items-center sm:col-span-2">
-                <span
-                  className="text-gray-600 dark:text-gray-200 text-sm md:text-base" /* my-0 sm:col-span-2 */
-                >
-                  {/*REVIEWS ET COMMENTAIRE SUR LA ROUE*/}
+                {/*REVIEWS ET COMMENTAIRE SUR LA ROUE*/}
+                <span className="text-gray-600 dark:text-gray-200 text-sm md:text-base">
                   {gyroroue.data.commentaire}
                 </span>
               </div>
