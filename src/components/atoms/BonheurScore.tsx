@@ -44,11 +44,13 @@ export function BonheurScore({
       (selectedCategory ? g.data.profil === selectedCategory : true),
   )
 
+  /*PAGE BONHEURSCORE*/
   return (
     <div className="container mx-auto p-4">
       <h1 className="whitespace-break-spaces">
         BonheurScore - tests et reviews
       </h1>
+      {/*CAPSULES D'INTRODUCTION*/}
       <footer className="blueBlock mb-2">
         <h3 className="mb-4">
           📢 Ces notes ne sont le fruit que de ma vision, de mon usage et de ma
@@ -94,6 +96,7 @@ export function BonheurScore({
         </i>
       </p>
 
+      {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
       <div className="mb-4 flex justify-between items-center">
         <div>
           <label
@@ -109,9 +112,9 @@ export function BonheurScore({
             onChange={(e) => setSelectedBrand(e.target.value)}
           >
             <option value="">Toutes les marques</option>
-            {uniqueBrands.map((brand) => (
-              <option key={brand ?? ''} value={brand ?? ''}>
-                {brand}
+            {uniqueBrands.map((constructeur) => (
+              <option key={constructeur ?? ''} value={constructeur ?? ''}>
+                {constructeur}
               </option>
             ))}
           </select>
@@ -119,7 +122,7 @@ export function BonheurScore({
         <div>
           <label
             htmlFor="category-filter"
-            className="block text-xs font-medium text-gray-700 text-right "
+            className="block text-xs font-medium text-gray-700 text-right"
           >
             Filtrer par catégorie :
           </label>
@@ -139,6 +142,7 @@ export function BonheurScore({
         </div>
       </div>
 
+      {/*AFFICHAGE DES ROUES*/}
       {filteredGyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-3">
           {/*PREMIERE PARTIE : NOM, DATE ET CATEGORIE*/}
