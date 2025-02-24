@@ -28,27 +28,38 @@ export function BonheurScore({
   gyroroues: BonheurScoreProps[]
 }) {
   moment.locale('fr')
+
+  /*PREPARATION DES LISTES DES 2 FILTRES = valeurs uniques et triées*/
   const [selectedBrand, setSelectedBrand] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('')
+  const categoryOrder = ['Urbaine', 'Hybride', 'Loisir']
 
   const uniqueBrands = Array.from(
-    new Set(gyroroues.map((g) => g.data.constructeur)),
+    new Set(gyroroues.map((g) => g.data.constructeur).sort()),
   )
   const uniqueCategories = Array.from(
-    new Set(gyroroues.map((g) => g.data.profil)),
+    new Set(
+      gyroroues
+        .map((g) => g.data.profil)
+        .filter((p): p is string => p !== null)
+        .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)),
+    ),
   )
 
+  /*DEFINITION DU FILTRE*/
   const filteredGyroroues = gyroroues.filter(
     (g) =>
       (selectedBrand ? g.data.constructeur === selectedBrand : true) &&
       (selectedCategory ? g.data.profil === selectedCategory : true),
   )
 
+  /*PAGE BONHEURSCORE*/
   return (
     <div className="container mx-auto p-4">
       <h1 className="whitespace-break-spaces">
         BonheurScore - tests et reviews
       </h1>
+      {/*CAPSULES D'INTRODUCTION*/}
       <footer className="blueBlock mb-2">
         <h3 className="mb-4">
           📢 Ces notes ne sont le fruit que de ma vision, de mon usage et de ma
@@ -94,6 +105,7 @@ export function BonheurScore({
         </i>
       </p>
 
+      {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
       <div className="mb-4 flex justify-between items-center">
         <div>
           <label
@@ -104,14 +116,14 @@ export function BonheurScore({
           </label>
           <select
             id="brand-filter"
-            className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm text-small"
+            className="mt-1 p-1.5 border border-gray-300 rounded-md shadow-sm text-small"
             value={selectedBrand}
             onChange={(e) => setSelectedBrand(e.target.value)}
           >
             <option value="">Toutes les marques</option>
-            {uniqueBrands.map((brand) => (
-              <option key={brand ?? ''} value={brand ?? ''}>
-                {brand}
+            {uniqueBrands.map((constructeur) => (
+              <option key={constructeur ?? ''} value={constructeur ?? ''}>
+                {constructeur}
               </option>
             ))}
           </select>
@@ -119,13 +131,13 @@ export function BonheurScore({
         <div>
           <label
             htmlFor="category-filter"
-            className="block text-xs font-medium text-gray-700 text-right "
+            className="block text-xs font-medium text-gray-700 text-right"
           >
             Filtrer par catégorie :
           </label>
           <select
             id="category-filter"
-            className="mt-1 p-2 border border-gray-300 rounded-md shadow-sm text-right text-small"
+            className="mt-1 p-1.5 border border-gray-300 rounded-md shadow-sm text-right text-small"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
@@ -139,6 +151,7 @@ export function BonheurScore({
         </div>
       </div>
 
+      {/*AFFICHAGE DES ROUES*/}
       {filteredGyroroues.map((gyroroue, index) => (
         <Card key={index} shadow="md" radius="lg" className="mb-3">
           {/*PREMIERE PARTIE : NOM, DATE ET CATEGORIE*/}
@@ -199,7 +212,7 @@ export function BonheurScore({
             </div>
           </CardBody>
           {/*TROISIEME PARTIE : NOTE ET POINTS*/}
-          <CardFooter className="flex flex-col md:flex-col lg:flex-row gap-0 ml-2 mr-2 items-center">
+          <CardFooter className="flex flex-col md:flex-col lg:flex-row gap-0 ml-1 mr-1 items-center">
             {/*COLONNE AVEC LA NOTE GLOBALE*/}
             <aside className="w-full lg:w-1/3 flex items-center justify-center mt-0 mb-1">
               <picture className="flex items-center justify-center w-full mt-0 mb-0">
@@ -229,7 +242,7 @@ export function BonheurScore({
               {[
                 {
                   icon: FaTrophy,
-                  label: 'Nbre de points',
+                  label: 'Total Points',
                   value: gyroroue.data.points,
                 },
                 {
