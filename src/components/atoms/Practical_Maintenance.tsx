@@ -9,13 +9,13 @@ const Maintenance = () => {
         <AccordionItem
           key="1"
           aria-label="L'entretien'"
-          title={<h3>L&apos;entretien</h3>}
+          title={<h3>🛠 L&apos;entretien</h3>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <div className="blueBlock mb-8">
             <h3>
-              🛠 Conserve ton véhicule en bon état ! C’est ta sécurité qui en
-              dépend…
+              🛠 Conserve ton véhicule en bon état ! C&apos;est ta sécurité qui
+              en dépend…
             </h3>
           </div>
           <p className="mb-8">
@@ -46,7 +46,7 @@ const Maintenance = () => {
             </li>
             <li>
               Vérifie attentivement la coque : identifie tout risque
-              d’infiltration ou toute trace d’humidité.
+              d&apos;infiltration ou toute trace d&apos;humidité.
             </li>
             <li>
               Vérifie régulièrement la <strong>pression du pneu</strong>.
@@ -55,12 +55,13 @@ const Maintenance = () => {
               <strong>Prends soin de la batterie</strong> :
               <ul className="list pl-8 mt-1">
                 <li>
-                  Évite de l’exposer à des températures extrêmes (froid ou
+                  Évite de l&apos;exposer à des températures extrêmes (froid ou
                   chaud).
                 </li>
                 <li>
                   Ne laisse jamais la batterie se décharger complètement
-                  (stocker entre 20%-80% en cas d’immobilisation prolongée).
+                  (stocker entre 20%-80% en cas d&apos;immobilisation
+                  prolongée).
                 </li>
                 <li>
                   Ne recharge pas immédiatement à chaud, et ne laisse pas la
@@ -72,10 +73,11 @@ const Maintenance = () => {
 
           <div className="blueBlock">
             <h3>
-              📢 L’eau s’infiltre facilement partout. L’électronique et les
-              batteries n’aiment pas ça. Les conséquences peuvent être 
+              📢 L&apos;eau s&apos;infiltre facilement partout.
+              L&apos;électronique et les batteries n&apos;aiment pas ça. Les
+              conséquences peuvent être{' '}
               <strong>immédiates ou à plus long terme</strong> (rouille,
-              surchauffe, court-circuit et risque d’incendie).
+              surchauffe, court-circuit et risque d&apos;incendie).
             </h3>
           </div>
         </AccordionItem>

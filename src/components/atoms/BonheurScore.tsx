@@ -175,7 +175,7 @@ export function BonheurScore({
           </CardHeader>
           {/*SECONDE PARTIE : IMAGE ET COMMENTAIRE*/}
           <CardBody className="gap-0">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-0 mb-0 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-0 mb-0 items-center">
               <div className="flex flex-col items-center sm:col-span-1">
                 {/*IMAGE DE LA ROUE*/}
                 <Image
@@ -204,7 +204,7 @@ export function BonheurScore({
               </div>
               <div className="flex items-center sm:col-span-2">
                 {/*REVIEWS ET COMMENTAIRE SUR LA ROUE*/}
-                <span className="text-gray-600 dark:text-gray-200 text-sm md:text-base">
+                <span className="text-gray-600 dark:text-gray-200 text-sm sm:text-base md:text-base">
                   {/*{gyroroue.data.commentaire}*/}
                   <PrismicRichText field={gyroroue.data.commentaire_new} />
                 </span>
@@ -229,9 +229,9 @@ export function BonheurScore({
                     <p className="text-xs lg:text-xl font-extrabold text-black dark:text-gray-200">
                       Note Globale
                     </p>
-                    <p className="text-3xl lg:text-4xl font-semibold text-red-600">
+                    <p className="text-2xl lg:text-3xl font-semibold text-red-600">
                       {/*NOTE GLOBALE SUR 10*/}
-                      {gyroroue.data.note}
+                      {gyroroue.data.note}/10
                     </p>
                   </div>
                 </div>
@@ -290,82 +290,6 @@ export function BonheurScore({
                 </Tooltip>
               ))}
             </aside>
-            {/*
-            <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
-              <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
-                <Tooltip content="Nombre de points">
-                  <div className="flex flex-col items-center">
-                    <FaTrophy className="hidden sm:block" />
-                    <span className="sm:hidden font-black">
-                      Nombre de points
-                    </span>
-                    <span className="mb-4">
-
-                      {gyroroue.data.points}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip content="Equipement">
-                  <div className="flex flex-col items-center">
-                    <FaTools className="hidden sm:block" />
-                    <span className="sm:hidden font-black">Equipement</span>
-                    <span>
-
-                      {gyroroue.data.equipement}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip content="Praticité">
-                  <div className="flex flex-col items-center">
-                    <FaMagic className="hidden sm:block" />
-                    <span className="sm:hidden font-black">Praticité</span>
-                    <span>
-
-                      {gyroroue.data.praticite}
-                    </span>
-                  </div>
-                </Tooltip>
-              </section>
-              <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
-                <Tooltip content="En Ville">
-                  <div className="flex flex-col items-center">
-                    <FaCity className="hidden sm:block" />
-                    <span className="sm:hidden font-black">En Ville</span>
-                    <span>
-
-                      {gyroroue.data.en_ville}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip content="Sur Route">
-                  <div className="flex flex-col items-center">
-                    <FaRoad className="hidden sm:block" />
-                    <span className="sm:hidden font-black">Sur Route</span>
-                    <span>
-
-                      {gyroroue.data.sur_route}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip content="Suspension">
-                  <div className="flex flex-col items-center">
-                    <SiSpringCreators className="hidden sm:block" />
-                    <span className="sm:hidden font-black">Suspension</span>
-                    <span
-                      className={
-                        gyroroue.data.suspension
-                          ? 'text-green-700'
-                          : 'text-gray-500'
-                      }
-                    >
-
-                      {gyroroue.data.suspension ? 'Oui' : 'Non'}
-                    </span>
-                  </div>
-                </Tooltip>
-              </section>
-            </aside>
-            {/*</div>*/}
           </CardFooter>
         </Card>
       ))}

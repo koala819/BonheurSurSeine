@@ -5,7 +5,7 @@ import Associations from '@/src/components/atoms/Begin_Associations'
 import Assurance from '@/src/components/atoms/Begin_Assurance'
 import CommonSense from '@/src/components/atoms/Begin_CommonSense'
 import HighwayCode from '@/src/components/atoms/Begin_HighwayCode'
-import Maintenance from '@/src/components/atoms/Begin_Maintenance'
+import Premier_deballage from '@/src/components/atoms/Begin_Premier_deballage'
 
 export const metadata: Metadata = {
   title: 'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
@@ -38,30 +38,30 @@ const Page = () => {
           Si tu veux te mettre à la roue électrique mais que tu as peur de te
           lancer, sache que je propose des{' '}
           <strong>sessions de formation</strong> théorique et pratique pour
-          t&apos;accompagner et dédramatiser. <br />
-          😊 En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet.
-          😎
+          t&apos;accompagner et dédramatiser. 😊
+          <br />
+          En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet. 😎
         </h3>
         <h3>
-          ➡️Pour <strong>prendre rendez-vous</strong> :{' '}
+          ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}
           <Link
             href={'mailto:bonheursurseine@gmail.com'}
-            className="hover:underline"
+            className="underline text-rose-800 dark:text-black"
           >
             bonheursurseine@gmail.com{' '}
           </Link>
         </h3>
       </div>
 
+      <Premier_deballage />
       <CommonSense />
       <Assurance />
       <HighwayCode />
-      <Maintenance />
       <Associations />
       <div className="yellowBlock">
         <h3>
           ❤️ Et si tu croises un autre passionné,{' '}
-          <strong>n’oublie pas de le saluer !</strong>
+          <strong>n&apos;oublie pas de le saluer&nbsp;!</strong>
         </h3>
       </div>
     </div>

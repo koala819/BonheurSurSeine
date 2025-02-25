@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 
 import Dico from '@/src/components/atoms/Practical_Dico'
-import Video from '@/src/components/atoms/Practical_Video'
+import Info from '@/src/components/atoms/Practical_Info_officiel'
+import Maintenance from '@/src/components/atoms/Practical_Maintenance'
+import Vrac from '@/src/components/atoms/Practical_Vrac'
 
 export const metadata: Metadata = {
   title: 'Pour en savoir plus sur la roue électrique - Infos pratiques',
@@ -18,8 +20,8 @@ const Page = () => {
       <h1>Savoir utile</h1>
       <p>
         Cette page regroupe quelques <strong>informations pratiques</strong> et{' '}
-        <strong>définitions utiles</strong> concernant la roue électrique et
-        leur utilisation.
+        <strong>bien utiles</strong> concernant la roue électrique et leur
+        utilisation.
       </p>
       <div className="blueBlock">
         <h3>
@@ -27,8 +29,10 @@ const Page = () => {
           meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
         </h3>
       </div>{' '}
-      <Video />
+      <Maintenance />
       <Dico />
+      <Info />
+      <Vrac />
       <div className="yellowBlock">
         <h3>
           ❤️ Et si tu croises un autre passionné,{' '}

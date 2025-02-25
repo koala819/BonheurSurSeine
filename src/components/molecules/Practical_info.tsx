@@ -1,5 +1,5 @@
 //import Dico from '@/src/components/atoms/Practical_Dico'
-import Video from '@/src/components/atoms/Practical_Video'
+import Video from '@/src/components/atoms/Practical_Info_officiel'
 
 const Practical_info = () => {
   return (
