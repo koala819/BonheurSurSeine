@@ -25,8 +25,8 @@ const Page = () => {
       </p>
       <div className="blueBlock">
         <h3>
-          💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
-          meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
+          🎓 Qui a dit &laquo;&nbsp;un wheeler averti en vaut
+          deux&nbsp;&raquo;&nbsp;?
         </h3>
       </div>{' '}
       <Maintenance />
@@ -35,8 +35,9 @@ const Page = () => {
       <Vrac />
       <div className="yellowBlock">
         <h3>
-          ❤️ Et si tu croises un autre passionné,{' '}
-          <strong>n&apos;oublie pas de le saluer !</strong>
+          ❤️ Enjoy, et n&apos;hésite pas à me dire ce que tu en penses... <br />
+          Comme dit mon papa&nbsp;: &laquo;&nbsp;Ce sont les bons clients qui
+          font les bonnes maisons&nbsp;!&nbsp;&raquo;
         </h3>
       </div>
     </div>

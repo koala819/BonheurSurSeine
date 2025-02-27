@@ -34,15 +34,15 @@ const Page = () => {
       </div>
 
       <div className="pinkBlock">
-        <h3>
+        <h4>
           Si tu veux te mettre à la roue électrique mais que tu as peur de te
           lancer, sache que je propose des{' '}
           <strong>sessions de formation</strong> théorique et pratique pour
           t&apos;accompagner et dédramatiser. 😊
           <br />
           En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet. 😎
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}
           <Link
             href={'mailto:bonheursurseine@gmail.com'}
@@ -50,7 +50,7 @@ const Page = () => {
           >
             bonheursurseine@gmail.com{' '}
           </Link>
-        </h3>
+        </h4>
       </div>
 
       <Premier_deballage />
@@ -60,7 +60,7 @@ const Page = () => {
       <Associations />
       <div className="yellowBlock">
         <h3>
-          ❤️ Et si tu croises un autre passionné,{' '}
+          🥰 Et si tu croises un autre passionné,{' '}
           <strong>n&apos;oublie pas de le saluer&nbsp;!</strong>
         </h3>
       </div>

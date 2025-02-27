@@ -9,16 +9,17 @@ const CommonSense = () => {
         <AccordionItem
           key="1"
           aria-label="Le bon sens"
-          title={<h3>Le bon sens</h3>}
+          title={<h3>😊 Le bon sens</h3>}
           indicator={<strong className="chevronAccordionItem">&lt;</strong>}
         >
           <div className="blueBlock mb-8">
-            <h3>
-              🔥 Les protections n’évitent pas le danger, la vigilance, oui !
-            </h3>
+            <h4>
+              🔥 Les protections n&apos;évitent pas le danger, la vigilance,
+              oui&nbsp;!
+            </h4>
           </div>
           <h3>Prudence est mère de sûreté</h3>
-          <ul className="list-disc pl-4 space-y-4 mb-4">
+          <ul className="list-disc pl-4 space-y-2 mb-4">
             <li>
               Respecte le <strong>code de la route</strong> (circulation,
               stationnement, équipement).
@@ -41,13 +42,13 @@ const CommonSense = () => {
             </li>
           </ul>
           <div className="blueBlock mb-8">
-            <h3>
+            <h4>
               📢 Anticipe les situations à risque et fait preuve de prudence en
               toutes circonstances.
-            </h3>
+            </h4>
           </div>
           <h3>À retenir :</h3>
-          <ul className="list-disc pl-4 space-y-4 mb-4">
+          <ul className="list-disc pl-4 space-y-2 mb-4">
             <li>
               <strong>Protège toi !</strong>
             </li>
@@ -69,15 +70,18 @@ const CommonSense = () => {
               <strong className="ml-1">respecte là</strong>.
             </li>
             <li>
-              Je répète : connais bien les limites de ta roues et respecte les.
+              Je répète : connais bien les limites de ta roue et respecte les.
             </li>
           </ul>
           <div className="blueBlock">
-            <h3>
+            <h4>
               💟 Et n’oublie pas : bon comportement = bonne image = bonne route
               !
-            </h3>
+            </h4>
           </div>
+          <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+            article mis à jour en juin 2024
+          </p>
         </AccordionItem>
       </Accordion>
     </section>

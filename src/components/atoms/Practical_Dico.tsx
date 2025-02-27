@@ -97,10 +97,10 @@ const Practical_Dico = () => {
             Il est classé par ordre alphabétique.
           </p>
           <div className="blueBlock mb-8">
-            <h3>
+            <h4>
               📖 Pour décrypter le langage des wheelers&nbsp;: 1 mot juste vaut
               1&nbsp;000 explications&nbsp;!
-            </h3>
+            </h4>
           </div>
 
           {/* Champ de recherche */}

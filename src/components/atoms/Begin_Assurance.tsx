@@ -11,12 +11,12 @@ const Assurance = () => {
         <AccordionItem
           key="1"
           aria-label="L'assurance"
-          title={<h3>L&apos;assurance</h3>}
+          title={<h3>🛡️ L&apos;assurance</h3>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
           <div className="blueBlock mb-8">
             <h3>
-              🛡️ L&apos;assurance est{' '}
+              ☑️ L&apos;assurance est{' '}
               <span className="text-xl sm:text-xl md:text-2xl underline text-brown-500">
                 obligatoire
               </span>{' '}
@@ -36,10 +36,10 @@ const Assurance = () => {
             </span>
           </div>
           <h3>À retenir :</h3>
-          <ul className="list-disc pl-4 space-y-4 mb-4">
+          <ul className="list-disc pl-4 space-y-2 mb-4">
             <li>
-              La roue est un <strong>véhicule terrestre à moteur</strong> et,
-              elle doit être assurée. Le type de contrat est au minimum en{' '}
+              La roue est un <strong>véhicule terrestre à moteur</strong> qui
+              doit être assurée. Le type de contrat est au minimum en{' '}
               <strong className="text-brown-500">responsabilité civile</strong>.
             </li>
             <li>
@@ -100,11 +100,11 @@ const Assurance = () => {
             </li>
           </ul>
           <div className="yellowBlock mb-8">
-            <h3>
+            <h4>
               📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
               sécurité, c&apos;est une question de
               responsabilité&nbsp;!&nbsp;&raquo;
-            </h3>
+            </h4>
           </div>
           <p>
             Assurer un EDPM coûte 5-10€/mois. La quasi totalité des assureurs

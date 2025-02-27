@@ -24,7 +24,7 @@ const Compare = () => {
       </div>
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
-        <ul className="list">
+        <ul className="list-disc pl-12 space-y-2">
           <li>
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques enchaînent les nouveautés et renouvellent
@@ -58,7 +58,7 @@ const Compare = () => {
             BonheurScore
           </span>
         </h4>
-        <ul className="list">
+        <ul className="list-disc pl-12 space-y-2">
           <li>
             La{' '}
             <strong>
@@ -119,7 +119,7 @@ const Compare = () => {
             </Link>
           </aside>
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc pl-12 space-y-2">
               <li>
                 Ce <strong>projet</strong> mené par{' '}
                 <Link

@@ -29,6 +29,7 @@ export function Top() {
     { name: 'Codes Promo', path: '/promo' },
     { name: 'Choisir sa Roue', path: '/choix' },
     { name: 'Bien Démarrer', path: '/begin' },
+    { name: 'Savoir Utile', path: '/savoir_utile' },
     { name: 'Remerciements', path: '/contact' },
   ]
 
@@ -62,7 +63,7 @@ export function Top() {
             <Image
               src={logo}
               alt="Bonheur Sur Seine logo"
-              className="object-fill"
+              className="max-w-[50px] object-fill"
               width={50}
               height={30}
             />
@@ -70,7 +71,7 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex " justify="center">
+      <NavbarContent className="hidden md:flex " justify="center">
         <NavbarItem isActive={path.includes('/BonheurScore')}>
           <Link
             href="/BonheurScore"
@@ -98,6 +99,15 @@ export function Top() {
           </Link>
         </NavbarItem>
 
+        <NavbarItem isActive={path.includes('/savoir_utile')}>
+          <Link
+            href="/savoir_utile"
+            className="text-white hover:text-text-link"
+          >
+            Savoir Utile
+          </Link>
+        </NavbarItem>
+
         <NavbarItem isActive={path.includes('/contact')}>
           <Link href="/contact" className="text-white hover:text-text-link">
             Remerciements
@@ -110,12 +120,12 @@ export function Top() {
         </NavbarItem>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
+          className="md:hidden"
         />
       </NavbarContent>
       <NavbarMenu
         className="mt-8"
-        style={{ maxHeight: '350px', overflowY: 'auto' }}
+        style={{ maxHeight: '370px', overflowY: 'auto' }}
       >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>

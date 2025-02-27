@@ -14,24 +14,27 @@ const Practical_Vrac = () => {
           title={<h3>😉 Savoir en vrac</h3>}
           indicator={<strong className="chevronAccordionItem">&lt;</strong>}
         >
+          <h3 className="text-center">🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧</h3>
+          Reviens prochainement pour en savoir plus...
+          <br />
+          <br />
           <h4>➡️ Pourcentage batterie et tension</h4>
           <h4>➡️ Naviguer dans les menus Leaperkim </h4>
           <h4>➡️ Changer un pneu</h4>
-          <h4>➡️ Vidéo officiel SAV de Kingsong</h4>
-          <h4>➡️ Nosfet</h4>{' '}
+          <h4>➡️ Vidéos officielles SAV</h4>
+          <h4>➡️ Liens</h4>{' '}
           <ul className="list">
-            <li>https://www.nosfet.com</li>
             <li>
               <Link
-                href="https://www.nosfet.com"
+                href="https://www.bonheursurseine.com"
                 target="_blank"
                 className="link-style"
               >
-                https://www.nosfet.com
+                lien{' '}
               </Link>
             </li>
-            <li>https://www.facebook.com/nosfet.tech</li>
-            <li>https://www.youtube.com/@nosfet_tech/videos</li>
+            <li></li>
+            <li></li>
           </ul>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">

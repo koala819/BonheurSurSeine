@@ -11,15 +11,15 @@ const Brands = () => {
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
       <h2>Le marché et les principales marques</h2>
-      <span>3 catégories se distinguent :</span>
+      <span className="mt-0 mb-0">3 catégories se distinguent :</span>
       <Accordion>
         <AccordionItem
           key="1"
           aria-label="Urbaine"
-          title={<span>Urbaine</span>}
-          indicator={<span className="chevronAccordionItem">&lt;{/*◀*/}</span>}
+          title={<span className="profilGyroroue">Urbaine</span>}
+          indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list">
+          <ul className="list-disc pl-4 space-y-1 mb-0">
             <li>
               De part leur petite taille, ces roues sont souvent proposées en
               entrée de gamme. Mais elles sont absolument parfaites pour
@@ -40,10 +40,10 @@ const Brands = () => {
         <AccordionItem
           key="2"
           aria-label="Hybride/polyvalente"
-          title={<span>Hybride/polyvalente</span>}
+          title={<span className="profilGyroroue">Hybride/polyvalente</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list">
+          <ul className="list-disc pl-4 space-y-1 mb-0">
             <li>
               Un peu plus grosses et généralement équipées d&apos;une
               suspension, ces roues offrent plus <strong>de confort</strong> et
@@ -63,10 +63,10 @@ const Brands = () => {
         <AccordionItem
           key="3"
           aria-label="Loisir"
-          title={<span>Loisir</span>}
+          title={<span className="profilGyroroue">Loisir</span>}
           indicator={<span className="chevronAccordionItem">&lt;</span>}
         >
-          <ul className="list">
+          <ul className="list-disc pl-4 space-y-1 mb-0">
             <li>
               Ici, <strong>aucune limite</strong> de taille, ni de poids ! La
               praticité n&apos;est plus un argument car ces modèles sont plutôt
@@ -203,10 +203,11 @@ const Brands = () => {
       </Accordion>
       <p>
         Certaines marques comme Solowheel, RockWheel ou IPS ont disparues. Il
-        existe également d&apos;autres marques mais celles-ci sont moins connues
-        et/ou moins appréciées des connaisseurs. Les caractéristiques de leurs
-        modèles n&apos;offrent pas les mêmes garanties (sécurité, performance)
-        que celles qu&apos;on retrouve chez les principaux leaders du marché.
+        existe également d&apos;autres marques, mais celles-ci sont moins
+        connues ou moins appréciées des connaisseurs. Les caractéristiques de
+        leurs modèles n&apos;offrent pas les mêmes garanties (sécurité,
+        performance) que celles qu&apos;on retrouve chez les principaux leaders
+        du marché.
       </p>
       <div className="blueBlock mb-0 mt-0">
         <h3 className="mb-4">
