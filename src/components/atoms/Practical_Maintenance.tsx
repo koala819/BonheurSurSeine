@@ -10,7 +10,7 @@ const Maintenance = () => {
           key="1"
           aria-label="L'entretien'"
           title={<h3>🛠 L&apos;entretien</h3>}
-          indicator={<span className="chevronAccordionItem">&lt;</span>}
+          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <div className="blueBlock mb-4">
             <h4>

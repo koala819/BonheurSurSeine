@@ -10,7 +10,7 @@ const CommonSense = () => {
           key="1"
           aria-label="Le bon sens"
           title={<h3>😊 Le bon sens</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <div className="blueBlock mb-8">
             <h4>

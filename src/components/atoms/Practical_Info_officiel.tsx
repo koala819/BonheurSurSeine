@@ -12,11 +12,11 @@ const Practical_Info_officiel = () => {
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
           title={<h3>🆕 Suivre les news officiels constructeurs</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           Tu veux être sur d&apos;avoir les dernières informations
           officielles&nbsp;?
-          <h4 className="mt-4 mb-0">🔶 Begode et Extreme Bull</h4>
+          <h4 className="mt-4 mb-0">💠 Begode et Extreme Bull</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
               <Link
@@ -46,7 +46,7 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
           </ul>
-          <h4 className="mt-4 mb-0">🔶 Inmotion</h4>
+          <h4 className="mt-4 mb-0">💠 Inmotion</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
               <Link
@@ -76,7 +76,7 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
           </ul>
-          <h4 className="mt-4 mb-0">🔶 Kingsong</h4>
+          <h4 className="mt-4 mb-0">💠 Kingsong</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
               <Link
@@ -114,7 +114,7 @@ const Practical_Info_officiel = () => {
               </Link>{' '}
             </li>
           </ul>
-          <h4 className="mt-4 mb-0">🔶 Leaperkim</h4>
+          <h4 className="mt-4 mb-0">💠 Leaperkim</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
               <Link
@@ -135,7 +135,7 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
           </ul>
-          <h4 className="mt-4 mb-0">🔶 Nosfet</h4>
+          <h4 className="mt-4 mb-0">💠 Nosfet</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
               <Link

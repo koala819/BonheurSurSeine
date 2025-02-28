@@ -12,7 +12,7 @@ const Practical_Vrac = () => {
           key="1"
           aria-label="Savoir en vrac"
           title={<h3>😉 Savoir en vrac</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <h3 className="text-center">🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧</h3>
           Reviens prochainement pour en savoir plus...
@@ -26,11 +26,11 @@ const Practical_Vrac = () => {
           <ul className="list">
             <li>
               <Link
-                href="https://www.bonheursurseine.com"
+                href="https://fr.tipeee.com/bonheur-sur-seine"
                 target="_blank"
                 className="link-style"
               >
-                lien{' '}
+                Ne clique pas ici{' '}
               </Link>
             </li>
             <li></li>

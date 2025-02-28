@@ -63,7 +63,15 @@ text {
 }
 
 .chevronAccordionItem {
-  @apply text-xl font-extrabold text-primary dark:text-white;
+  @apply text-4xl font-extrabold text-black dark:text-white;
+}
+
+.chevronAccordionItemsmall1 {
+  @apply text-xl font-extrabold text-brown-700 dark:text-white;
+}
+
+.chevronAccordionItemsmall2 {
+  @apply text-xl font-extrabold text-sky-900 dark:text-white;
 }
 
 @layer base {

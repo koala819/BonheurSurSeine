@@ -12,7 +12,9 @@ const Begin_premier_deballage = () => {
           key="1"
           aria-label="Premier déballage"
           title={<h3>📦 Premier déballage</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
+          //indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          //</Accordion>indicator={<strong className="chevronAccordionItem">◀</strong>}
         >
           <div className="blueBlock mb-8">
             <h4>

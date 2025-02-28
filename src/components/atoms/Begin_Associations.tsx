@@ -46,7 +46,7 @@ const Associations = () => {
           key="1"
           aria-label="Les groupes & associations"
           title={<h3>🌍 Les groupes & associations</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <section>
             <h2>L&apos;ANUMME</h2>

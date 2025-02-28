@@ -21,7 +21,7 @@ const Choice = () => {
         <aside className="md:w-1/2 blueBlock">
           <h3 className="mb-4">
             📢 &laquo;&nbsp;La meilleure roue, c&apos;est celle qu&apos;on a
-            sous les pieds !&nbsp;&raquo;
+            sous les pieds&nbsp;!&nbsp;&raquo;
           </h3>
           {'  '}
           😉 Pas besoin d&apos;avoir la dernière roue pour ressentir le{' '}

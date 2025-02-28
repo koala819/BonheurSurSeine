@@ -12,7 +12,7 @@ const HighwayCode = () => {
           key="1"
           aria-label="Le code de la route"
           title={<h3>🚦 Le code de la route</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-8">
             Depuis le 23 octobre 2019, les roues électriques sont officiellement

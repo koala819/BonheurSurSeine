@@ -36,8 +36,9 @@ const Page = () => {
       <div className="yellowBlock">
         <h3>
           ❤️ Enjoy, et n&apos;hésite pas à me dire ce que tu en penses... <br />
-          Comme dit mon papa&nbsp;: &laquo;&nbsp;Ce sont les bons clients qui
-          font les bonnes maisons&nbsp;!&nbsp;&raquo;
+          Comme dit mon papa&nbsp;: &laquo;&nbsp;
+          <i>Ce sont les bons clients qui font les bonnes maisons</i>
+          &nbsp;!&nbsp;&raquo;
         </h3>
       </div>
     </div>
