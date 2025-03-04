@@ -5,7 +5,14 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Logo_BG from '@/public/Logo_Begode.jpg'
+import Logo_EB from '@/public/Logo_ExtremeBull.jpg'
+import Logo_IM from '@/public/Logo_Inmotion.jpg'
+import Logo_KS from '@/public/Logo_Kingsong.jpg'
+import Logo_LK from '@/public/Logo_Leaperkim.jpg'
+import Logo_NB from '@/public/Logo_Ninebot.png'
 import gyroroues from '@/public/gyroroues_bss202502.jpg'
+import Logo_NF from '@/public/logo_Nosfet.png'
 
 const Brands = () => {
   return (
@@ -138,13 +145,26 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Ce fabricant historique (présent depuis 2014) s&apos;est imposé
-                comme une référence pour de nombreux passionnés, grâce à une
-                très large gamme de modèles axés sur la performance (allant des
-                très petites aux très grosses) et un renouvellement constant de
-                sa gamme.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_BG}
+                    alt="Logo_Begode"
+                    width={707}
+                    height={217}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Ce fabricant historique (présent depuis 2014) s&apos;est
+                    imposé comme une référence pour de nombreux passionnés,
+                    grâce à une très large gamme de modèles axés sur la
+                    performance (allant des très petites aux très grosses) et un
+                    renouvellement constant de sa gamme.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="2"
@@ -154,10 +174,24 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Marque apparue en 2021, elle partage son ADN et ses ateliers de
-                fabrication avec Begode pour continuer à repousser les limites.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_EB}
+                    alt="Logo_ExtremeBull"
+                    width={709}
+                    height={248}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Apparue en 2021, cette marque partage ses ateliers de
+                    fabrication et toute son ADN avec Begode pour continuer à
+                    repousser les limites.
+                  </p>{' '}
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="3"
@@ -167,12 +201,26 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Créé en 2012, ce fabricant propose une gamme lisible et
-                diversifiée, avec des modèles adaptés aussi bien aux débutants
-                qu&apos;aux experts. Ses modèles associent performances,
-                praticité, sécurité et design soigné.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_IM}
+                    alt="Logo_Inmotion"
+                    width={1768}
+                    height={606}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Créé en 2012, ce fabricant propose une gamme lisible et
+                    diversifiée, avec des modèles adaptés aussi bien aux
+                    débutants qu&apos;aux experts. Ses modèles associent
+                    généralement performances, praticité, sécurité et design
+                    soigné.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="4"
@@ -182,12 +230,25 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Présent sur le marché depuis 2014, cette marque est reconnue
-                pour ses modèles offrant un équilibre entre performance et
-                sécurité. Elle fut la première à proposer un modèle avec
-                suspension.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_KS}
+                    alt="Logo_Kingsong"
+                    width={1879}
+                    height={757}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Présente sur le marché depuis 2014, cette marque est
+                    reconnue pour ses modèles offrant un équilibre entre
+                    performance et sécurité. Elle fut la première à proposer un
+                    modèle avec suspension.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="5"
@@ -197,11 +258,24 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Apparu en 2020, ce fabricant a rapidement gagné en popularité
-                auprès des connaisseurs grâce à ses roues robustes et
-                puissantes, et une belle qualité de fabrication.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_LK}
+                    alt="Logo_Leaperkim"
+                    width={960}
+                    height={346}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Apparu en 2020, ce fabricant a rapidement gagné en
+                    popularité auprès des connaisseurs grâce à ses roues
+                    robustes et puissantes, et une belle qualité de fabrication.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="6"
@@ -211,34 +285,60 @@ const Brands = () => {
                 <span className="chevronAccordionItemsmall2">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Cette marque, connue pour ses trottinettes électriques, a
-                fabriqué quelques modèles populaires et au design soigné entre
-                2014 et 2018. Elle s&apos;est depuis retirée du marché, mais ses
-                modèles ont durablement influencé le marché par leur qualité,
-                leur design et leur fiabilité.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_NB}
+                    alt="Logo_Ninebot"
+                    width={900}
+                    height={434}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Connue pour ses trottinettes électriques, cette marque a
+                    aussi fabriqué quelques modèles populaires entre 2014 et
+                    2018. Elle s&apos;est depuis retirée du marché, mais ses
+                    modèles ont durablement influencé le marché par leur
+                    qualité, leur design et leur fiabilité.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
             <AccordionItem
               key="7"
               aria-label="Nosfet"
               title={<span className="brandGyroroue">Nosfet</span>}
               indicator={
-                <span className="chevronAccordionItemsmall2">&lsaquo;</span>
+                <span className="chevronAccordionItemsmall2 ">&lsaquo;</span>
               }
             >
-              <p className="ml-4">
-                Récemment créée en 2024, Nosfet est la plus jeune et la plus
-                petite des marques de roues. Fondée par d&apos;anciens
-                collaborateurs de chez Kingsong, cette marque a l&apos;ambition
-                de proposer des modèles haut de gamme et innovants. Leurs 2
-                premiers modèles ont déjà suscité l&apos;intérêt et la curiosité
-                de nombreux wheelers grâce à leurs performances, leurs
-                suspensions avancées et leur design.
-              </p>
+              <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <aside className="mb-2 flex-shrink-0">
+                  <Image
+                    src={Logo_NF}
+                    alt="logo_Nosfet"
+                    width={734}
+                    height={369}
+                    className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
+                  />
+                </aside>
+                <aside className="">
+                  <p className="text-xs sm:text-sm md:text-base">
+                    Créée en 2024, elle est la plus jeune et la plus petite des
+                    marques de roues. Fondée par d&apos;anciens collaborateurs
+                    Kingsong, cette marque a l&apos;ambition de proposer des
+                    modèles innovants. Leurs 2 premiers modèles ont suscité
+                    l&apos;intérêt et la curiosité de nombreux wheelers grâce à
+                    leurs performances, leurs suspensions avancées et leur
+                    design.
+                  </p>
+                </aside>
+              </div>
             </AccordionItem>
           </Accordion>
-          <p>
+          <p className="mt-4">
             Certaines marques comme Solowheel, RockWheel ou IPS ont disparues.
             Il existe également d&apos;autres marques, mais celles-ci sont moins
             connues ou moins appréciées des connaisseurs. Les caractéristiques

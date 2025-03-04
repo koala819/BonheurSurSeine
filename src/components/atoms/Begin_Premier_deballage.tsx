@@ -29,7 +29,7 @@ const Begin_premier_deballage = () => {
           </h4>
           <ul className="compactlist mt-0 mb-6 leading-tight">
             <li>
-              Généralement, le plus simple est de brancher le chargeur et de la
+              Généralement, le plus simple est de brancher le chargeur et de le
               connecter à la roue.
             </li>
             <li>
@@ -39,7 +39,7 @@ const Begin_premier_deballage = () => {
                 target="_blank"
                 className="link-style"
               >
-                parfaitement décrite dans cette vidéos
+                parfaitement décrite dans cette vidéo
               </Link>
               .
             </li>

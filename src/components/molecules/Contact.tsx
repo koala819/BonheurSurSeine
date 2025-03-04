@@ -229,7 +229,7 @@ export default function Contact({
             YouTube
           </Link>
           , mais c&apos;est aussi et surtout des rencontres,{' '}
-          <i className="text-green-800 dark:text-green-700">
+          <i className="text-emerald-800 dark:text-emerald-600">
             &laquo;&nbsp;des gens qui m&apos;ont tendu la main, peut-être à un
             moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et
             c&apos;est assez curieux de se dire que les hasards, les rencontres,
@@ -248,6 +248,7 @@ export default function Contact({
             mécanique, mais demain qui sait, peut-être simplement à me mettre au
             service de la communauté, à faire le don, le don de soi…&raquo;
           </i>{' '}
+          <br />
           (©️Edouard Baer, &quot;Astérix & Obélix : Mission Cléopâtre&quot;
           2002)
         </p>

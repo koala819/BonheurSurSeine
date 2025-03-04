@@ -29,7 +29,7 @@ export default function Page() {
         la mobilité !!
       </p>
       <p>
-        <strong>URL :</strong> www.bonheur-sur-seine.com
+        <strong>URL :</strong> www.bonheursurseine.com
       </p>
       <p>
         <strong>Localisation :</strong> 75000 Paris - France
