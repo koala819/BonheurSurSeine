@@ -6,7 +6,7 @@ const Choice = () => {
         <aside className="md:w-1/2 space-y-4 mr-4">
           <p>
             L&apos;important est d&apos;avoir une roue adaptée à son
-            utilisation. <br /> Le <strong>piège</strong>, ce ne serait que de{' '}
+            utilisation. <br /> Le <strong>piège</strong> serait de ne{' '}
             <strong>regarder que les spécifications techniques</strong> et de
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
