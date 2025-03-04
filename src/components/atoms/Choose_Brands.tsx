@@ -11,8 +11,8 @@ import Logo_IM from '@/public/Logo_Inmotion.jpg'
 import Logo_KS from '@/public/Logo_Kingsong.jpg'
 import Logo_LK from '@/public/Logo_Leaperkim.jpg'
 import Logo_NB from '@/public/Logo_Ninebot.png'
+import Logo_NF from '@/public/Logo_Nosfet.png'
 import gyroroues from '@/public/gyroroues_bss202502.jpg'
-import Logo_NF from '@/public/logo_Nosfet.png'
 
 const Brands = () => {
   return (
