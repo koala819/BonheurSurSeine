@@ -1,5 +1,7 @@
 'use client'
 
+import { Bolt } from 'lucide-react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -62,7 +64,9 @@ export default function Contact({
   // }
 
   return (
-    <section className="container my-8 mx-auto p-4 space-y-8">
+    //<section className="container my-8 mx-auto p-4 space-y-8">
+
+    <section className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
       {/*
     <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
       <header className="container mx-auto p-4">
@@ -100,7 +104,7 @@ export default function Contact({
             <Image
               src={bonheurSurSeine}
               alt="Raphael"
-              className="h-full w-full object-cover object-center rounded-2xl"
+              className="h-80% w-80% object-cover object-center rounded-2xl"
               priority
               width={500}
               height={500}
@@ -213,10 +217,10 @@ export default function Contact({
 */}
       </section>
 
-      <section className="space-y-8 my-8">
-        <h3>Remerciements</h3>
-        <p>
-          Bonheur sur Seine, ce sont des vidéos
+      <section className="space-y-2 my-4">
+        <h2>Remerciements</h2>
+        <p className="text-sm">
+          <b>Bonheur sur Seine</b>, ce sont des vidéos
           <Link
             href={'https://www.youtube.com/c/BonheursurSeine'}
             passHref
@@ -227,22 +231,23 @@ export default function Contact({
           </Link>
           , mais c&apos;est aussi et surtout des rencontres,{' '}
           <i className="text-green-800 dark:text-green-700">
-            &quot;des gens qui m&apos;ont tendu la main, peut-être à un moment
-            où je ne pouvais pas, où j&apos;étais seul chez moi. Et c&apos;est
-            assez curieux de se dire que les hasards, les rencontres, forgent
-            une destinée... Parce que quand on a le goût de la chose, quand on a
-            le goût de la chose bien faite, le beau geste, parfois on ne trouve
-            pas l&apos;interlocuteur en face je dirais, le miroir qui vous aide
-            à avancer. Alors ça n&apos;est pas mon cas, comme je disais là,
-            puisque moi au contraire, j&apos;ai pu : et je dis merci à la vie,
-            je lui dis merci, je chante la vie, je danse la vie… je ne suis
-            qu&apos;amour ! Et finalement, quand beaucoup de gens
-            aujourd&apos;hui me disent « Mais comment fais-tu pour avoir cette
-            humanité ? », et bien je leur réponds très simplement, je leur dis
-            que c&apos;est ce goût de l&apos;amour, ce goût donc qui m&apos;a
-            poussé aujourd&apos;hui à entreprendre une construction mécanique,
-            mais demain qui sait ? Peut-être simplement à me mettre au service
-            de la communauté, à faire le don, le don de soi…&quot;
+            &laquo;&nbsp;des gens qui m&apos;ont tendu la main, peut-être à un
+            moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et
+            c&apos;est assez curieux de se dire que les hasards, les rencontres,
+            forgent une destinée... <br /> Parce que quand on a le goût de la
+            chose, quand on a le goût de la chose bien faite, le beau geste,
+            parfois on ne trouve pas l&apos;interlocuteur en face je dirais, le
+            miroir qui vous aide à avancer. Alors ça n&apos;est pas mon cas,
+            comme je disais là, puisque moi au contraire, j&apos;ai pu : et je
+            dis merci à la vie, je lui dis merci, je chante la vie, je danse la
+            vie… je ne suis qu&apos;amour ! <br />
+            Et finalement, quand beaucoup de gens aujourd&apos;hui me
+            disent&nbsp;: «&nbsp;Mais comment fais-tu pour avoir cette
+            humanité&nbsp;?&nbsp;», et bien je leur réponds très simplement, je
+            leur dis que c&apos;est ce goût de l&apos;amour, ce goût donc qui
+            m&apos;a poussé aujourd&apos;hui à entreprendre une construction
+            mécanique, mais demain qui sait, peut-être simplement à me mettre au
+            service de la communauté, à faire le don, le don de soi…&raquo;
           </i>{' '}
           (©️Edouard Baer, &quot;Astérix & Obélix : Mission Cléopâtre&quot;
           2002)
@@ -252,8 +257,8 @@ export default function Contact({
           <strong>MERCI LES COPAINS !!!</strong>
         </p>
       </section>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+      <div className="container mx-auto px-2">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
           {friends.map((friend, index) => (
             <Link
               href={friend.data.url.url || ' #'}
@@ -267,10 +272,10 @@ export default function Contact({
                 alt={friend.data.img.alt || ''}
                 width={192}
                 height={192}
-                className="hover:opacity-100 opacity-55 rounded-full object-cover w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48"
+                className="hover:opacity-100 opacity-55 rounded-full object-cover w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32"
               />
 
-              <div className="mt-2 text-center">{friend.data.name}</div>
+              <div className="mt-0 text-center">{friend.data.name}</div>
             </Link>
           ))}
         </div>

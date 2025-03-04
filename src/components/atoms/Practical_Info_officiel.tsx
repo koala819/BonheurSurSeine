@@ -86,7 +86,7 @@ const Practical_Info_officiel = () => {
               >
                 https://kingsong.com
               </Link>{' '}
-              et{' '}
+              et sa filiale{' '}
               <Link
                 href="https://kingsongeurope.com"
                 target="_blank"

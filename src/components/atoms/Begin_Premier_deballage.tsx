@@ -51,13 +51,15 @@ const Begin_premier_deballage = () => {
 
           <div className="blueBlock mb-8">
             <h4>
-              🔒 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
+              🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?
             </h4>
-            Lors de leur mise en carton en usine, les roues sont verrouillées
+            🔒 Lors de leur mise en carton en usine, les roues sont verrouillées
             dans ce mode afin d&apos;éviter que celles-ci ne s&apos;allument pas
             de manière inopinée durant leur transport, ce qui pourrait causer de
             sérieux dégats.
+            <br />
+            Le mode transport est réversible.
           </div>
           <h4 className="mt-4 mb-1">Remarques : </h4>
           <ul className="compactlist">
@@ -70,8 +72,6 @@ const Begin_premier_deballage = () => {
               Vérifie que le carton comprend la notice, le chargeur et son cable
               électrique.
             </li>
-            <li>...</li>
-            <li>Le mode transport est réversible.</li>
             <li>Vérifie le pneu et gonfle-le suffisament.</li>
             <li>Vérifie la suspension.</li>
           </ul>

@@ -6,9 +6,9 @@ import CardPromo from '@/src/components/atoms/CardPromo'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Mes Partenaires et Promos Exclusives – Bonheur Sur Seine"',
+  title: 'Mes Partenaires et Code Promos Exclusifs',
   description:
-    'Profitez des offres exclusives chez nos partenaires avec Bonheur Sur Seine. Codes promo et réductions spéciales sur les gyroroues.',
+    'Profitez de codes promo exclusifs chez les partenaires de Bonheur Sur Seine (accessoires et roues électriques).',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/promo`,
   },
@@ -22,11 +22,14 @@ export default async function Page() {
   )
 
   return (
-    <section className="flex-col justify-center p-4 space-y-8">
+    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <h1 className="whitespace-break-spaces">
         Découvre mes Partenaires et Profite d&apos;Offres Exclusives !
       </h1>
-      <div className="flex-col justify-center sm:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div
+        className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
+        /*"flex-col justify-center sm:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"*/
+      >
         {sortedPromos.map((promo: any, id: number) => (
           <div key={id}>
             <CardPromo

@@ -15,13 +15,13 @@ const Practical_Vrac = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <h3 className="text-center">🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧</h3>
-          Reviens prochainement pour en savoir plus...
+          Reviens prochainement pour en savoir plus sur...
           <br />
           <br />
           <h4>➡️ Pourcentage batterie et tension</h4>
           <h4>➡️ Naviguer dans les menus Leaperkim </h4>
           <h4>➡️ Changer un pneu</h4>
-          <h4>➡️ Vidéos officielles SAV</h4>
+          <h4>➡️ Vidéos SAV</h4>
           <h4>➡️ Liens</h4>{' '}
           <ul className="list">
             <li>
@@ -33,8 +33,8 @@ const Practical_Vrac = () => {
                 Ne clique pas ici{' '}
               </Link>
             </li>
-            <li></li>
-            <li></li>
+
+            <li>...</li>
           </ul>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">

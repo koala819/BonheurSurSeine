@@ -185,7 +185,7 @@ const Practical_Dico = () => {
           </div>
           {/* notes de fin et crédits */}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
-            article mis à jour en février 2025, <br />
+            article mis à jour en mars 2025, <br />
             avec l&apos;aimable participation des membres du Discord&nbsp;:
             Fabien.wheel, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
             FabWheel, MaxCzl, N1c0, et Nelson.
