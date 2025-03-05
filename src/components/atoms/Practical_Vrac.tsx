@@ -14,15 +14,37 @@ const Practical_Vrac = () => {
           title={<h3>😉 Savoir en vrac</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <h3 className="text-center">🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧</h3>
+          <h4>➡️ Mode d&apos;emploi IQlight V2</h4>
+          <p>
+            Voici la version française (<i>traduite par mes soins</i>) du mode
+            d&apos;emploi des{' '}
+            <Link
+              href="https://rudy-tech.pl/en/15-iqlight"
+              target="_blank"
+              className="link-style"
+            >
+              magnifiques IQlight V2
+            </Link>{' '}
+            de Rudy Tech.
+            <br />
+            Le PDF est disponible{' '}
+            <Link
+              href="/Rudy Tech - guide utilisation IQlight V2 - FR v20250306.pdf"
+              target="_blank"
+              className="link-style"
+            >
+              ❇️&nbsp;<b>ICI</b>&nbsp;❇️
+            </Link>
+            .
+          </p>
+          <h3 className="text-center mt-20 mb-0">
+            🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧
+          </h3>
           Reviens prochainement pour en savoir plus sur...
-          <br />
-          <br />
-          <h4>➡️ Pourcentage batterie et tension</h4>
-          <h4>➡️ Naviguer dans les menus Leaperkim </h4>
-          <h4>➡️ Changer un pneu</h4>
-          <h4>➡️ Vidéos SAV</h4>
-          <h4>➡️ Liens</h4>{' '}
+          <h5>🔜 Les pourcentages batterie</h5>
+          <h5>🔜 La naviguation dans les menus Leaperkim </h5>
+          <h5>🔜 Des vidéos SAV/changement de pneus</h5>
+          <h5>🔜 D&apos;autres liens&nbsp;:</h5>{' '}
           <ul className="list">
             <li>
               <Link
