@@ -17,7 +17,7 @@ const Begin_premier_deballage = () => {
           //</Accordion>indicator={<strong className="chevronAccordionItem">◀</strong>}
         >
           <div className="blueBlock mb-8">
-            <h4>
+            <h4 className="mb-1">
               🎁 Lorsque que tu ouvres le carton, il est normal que la roue ne
               s&apos;équilibre pas lorsque tu l&apos;allumes. <br />
               La roue est en <strong>mode transport</strong>.
@@ -55,8 +55,8 @@ const Begin_premier_deballage = () => {
               quoi&nbsp;?
             </h4>
             🔒 Lors de leur mise en carton en usine, les roues sont verrouillées
-            dans ce mode afin d&apos;éviter que celles-ci ne s&apos;allument pas
-            de manière inopinée durant leur transport, ce qui pourrait causer de
+            dans ce mode afin d&apos;éviter qu&apos;elles ne s&apos;allument de
+            manière inopinée durant le transport, ce qui pourrait causer de
             sérieux dégats.
             <br />
             Le mode transport est réversible.

@@ -121,7 +121,7 @@ const Associations = () => {
               Voici quelques contributeurs très actifs pour découvrir de supers
               parcours :
             </p>
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <div className="pt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {userProfiles.map((user) => (
                 <Link
                   href={user.profileUrl}
@@ -131,15 +131,15 @@ const Associations = () => {
                 >
                   <div className="flex flex-col w-full">
                     <h4 className="text-center mt-2">{user.name}</h4>
-                    <div className=" flex justify-center w-full py-4">
+                    <div className=" flex justify-center w-full py-2">
                       <Image
                         src={
                           user.imageUrl || '/public/BonheurSurSeine_logo.png'
                         }
                         alt={user.name}
-                        className="w-32 h-32 object-cover rounded-full"
-                        width={500}
-                        height={500}
+                        className="w-28 h-28 object-cover rounded-full"
+                        width={400}
+                        height={400}
                       />
                     </div>
                   </div>

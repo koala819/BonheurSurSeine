@@ -59,7 +59,7 @@ text {
 }
 
 .profilGyroroue {
-  @apply text-large font-semibold text-brown-700 dark:text-brown-200;
+  @apply text-xl font-semibold text-brown-700 dark:text-brown-200;
 }
 
 .brandGyroroue {

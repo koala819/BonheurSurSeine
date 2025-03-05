@@ -37,10 +37,10 @@ const Page = () => {
         <h4>
           Si tu veux te mettre à la roue électrique mais que tu as peur de te
           lancer, sache que je propose des{' '}
-          <strong>sessions de formation</strong> théorique et pratique pour
-          t&apos;accompagner et dédramatiser. 😊
+          <strong>sessions de formation</strong> théorique <u>et</u> pratique
+          pour t&apos;accompagner et dédramatiser. 😊
           <br />
-          En seulement 1 heure🕐, tu auras un autre regard sur l&apos;objet. 😎
+          En seulement 1h🕐, tu auras un autre regard sur l&apos;objet. 😎
         </h4>
         <h4>
           ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}

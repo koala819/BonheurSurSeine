@@ -27,15 +27,18 @@ const Compare = () => {
         <ul className="list-disc pl-12 space-y-2">
           <li>
             Bien que très petit, le marché propose énormément de modèles.
-            Certaines marques enchaînent les nouveautés et renouvellent
-            constamment leur gamme.
+            Certaines marques{' '}
+            <strong className="text-brown-500">
+              enchaînent les &quot;nouveautés&quot;
+            </strong>{' '}
+            et renouvellent constamment leur gamme.
           </li>
           <li>
             Les fabricants et les magasins affichent parfois des spécifications
             différentes (valeurs, formats ou unités de mesure).
           </li>
           <li>
-            Les chiffres fabricants sont parfois trompeurs, et{' '}
+            Les chiffres sont parfois trompeurs, et{' '}
             <strong className="text-brown-500">
               les autonomies annoncées sont toujours surévaluées
             </strong>{' '}
