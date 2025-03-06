@@ -170,7 +170,7 @@ const Brands = () => {
                   </aside>
                   <aside className="">
                     <p className="text-xs sm:text-sm md:text-base">
-                      Ce fabricant historique (présent depuis 2014) s&apos;est
+                      Ce fabricant historique (existe depuis 2014) s&apos;est
                       imposé comme une référence pour de nombreux passionnés,
                       grâce à une très large gamme de modèles axés sur la
                       performance (allant des très petites aux très grosses) et

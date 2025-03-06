@@ -92,7 +92,7 @@ export function BonheurScore({
               <span className="text-fuchsia-700">
                 <strong>ce que j&apos;ai pensé</strong>
               </span>{' '}
-              : mon avis personnel et mes ressentis.
+              (mon avis personnel et mes ressentis).
             </li>
             <li className="list-disc">
               Dans toutes mes vidéos, je donne{' '}
@@ -136,8 +136,8 @@ export function BonheurScore({
         <p className="text-center text-gray-600 dark:text-gray-300 ml-2 mr-2">
           <i>
             Je remercie tous mes tipeurs et partenaires (ponctuel, régulier,
-            passé, présent et futur) de me donner la chance de tester ces
-            merveilleuses machines.
+            passé, présent et futur) de me permettre de pouvoir faire tous ces
+            tests.
             <br />(
             <Link
               href="https://fr.tipeee.com/bonheur-sur-seine"
