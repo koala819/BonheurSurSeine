@@ -86,8 +86,8 @@ const Practical_Dico = () => {
         <AccordionItem
           key="1"
           aria-label="Le petit dico du bonheur"
-          title={<h3>Le petit dico du Bonheur</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          title={<h3>📖 Le petit dico du Bonheur</h3>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-6">
             Ce petit lexique propose des{' '}
@@ -97,10 +97,10 @@ const Practical_Dico = () => {
             Il est classé par ordre alphabétique.
           </p>
           <div className="blueBlock mb-8">
-            <h3>
+            <h4>
               📖 Pour décrypter le langage des wheelers&nbsp;: 1 mot juste vaut
               1&nbsp;000 explications&nbsp;!
-            </h3>
+            </h4>
           </div>
 
           {/* Champ de recherche */}
@@ -185,7 +185,7 @@ const Practical_Dico = () => {
           </div>
           {/* notes de fin et crédits */}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
-            article mis à jour en février 2025, <br />
+            article mis à jour en mars 2025, <br />
             avec l&apos;aimable participation des membres du Discord&nbsp;:
             Fabien.wheel, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
             FabWheel, MaxCzl, N1c0, et Nelson.

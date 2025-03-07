@@ -24,18 +24,21 @@ const Compare = () => {
       </div>
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
-        <ul className="list">
+        <ul className="list-disc pl-12 space-y-2">
           <li>
             Bien que très petit, le marché propose énormément de modèles.
-            Certaines marques enchaînent les nouveautés et renouvellent
-            constamment leur gamme.
+            Certaines marques{' '}
+            <strong className="text-brown-500">
+              enchaînent les &quot;nouveautés&quot;
+            </strong>{' '}
+            et renouvellent constamment leur gamme.
           </li>
           <li>
             Les fabricants et les magasins affichent parfois des spécifications
             différentes (valeurs, formats ou unités de mesure).
           </li>
           <li>
-            Les chiffres fabricants sont parfois trompeurs, et{' '}
+            Les chiffres sont parfois trompeurs, et{' '}
             <strong className="text-brown-500">
               les autonomies annoncées sont toujours surévaluées
             </strong>{' '}
@@ -58,7 +61,7 @@ const Compare = () => {
             BonheurScore
           </span>
         </h4>
-        <ul className="list">
+        <ul className="list-disc pl-12 space-y-2">
           <li>
             La{' '}
             <strong>
@@ -119,7 +122,7 @@ const Compare = () => {
             </Link>
           </aside>
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc pl-12 space-y-2">
               <li>
                 Ce <strong>projet</strong> mené par{' '}
                 <Link

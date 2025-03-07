@@ -9,27 +9,27 @@ const Maintenance = () => {
         <AccordionItem
           key="1"
           aria-label="L'entretien'"
-          title={<h3>L&apos;entretien</h3>}
-          indicator={<span className="chevronAccordionItem">&lt;</span>}
+          title={<h3>🛠 L&apos;entretien</h3>}
+          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
-          <div className="blueBlock mb-8">
-            <h3>
-              🛠 Conserve ton véhicule en bon état ! C’est ta sécurité qui en
-              dépend…
-            </h3>
+          <div className="blueBlock mb-4">
+            <h4>
+              🔎 Conserve ton véhicule en bon état&nbsp;! C&apos;est ta sécurité
+              qui en dépend…
+            </h4>
           </div>
-          <p className="mb-8">
+          <p className="mb-4">
             Comme tout véhicule, les roues électriques ont besoin d&apos;un
             <strong> entretien régulier</strong> pour garantir leur durabilité
             et leur bon fonctionnement.
           </p>
-          <p className="mb-8">
+          <p className="mb-4">
             <strong>Rappel :</strong> pour être utilisée sur voie publique, la
             roue doit être <span className="underline">bridée à 25km/h</span>{' '}
             par construction.
           </p>
 
-          <h4>À retenir :</h4>
+          <h4 className="mb-4">À retenir :</h4>
           <ul className="list mb-8">
             <li>
               Il est important de <strong>vérifier</strong> son engin avant
@@ -46,21 +46,22 @@ const Maintenance = () => {
             </li>
             <li>
               Vérifie attentivement la coque : identifie tout risque
-              d’infiltration ou toute trace d’humidité.
+              d&apos;infiltration ou toute trace d&apos;humidité.
             </li>
             <li>
               Vérifie régulièrement la <strong>pression du pneu</strong>.
             </li>
             <li>
               <strong>Prends soin de la batterie</strong> :
-              <ul className="list pl-8 mt-1">
+              <ul className="compactlist pl-8 mt-1">
                 <li>
-                  Évite de l’exposer à des températures extrêmes (froid ou
+                  Évite de l&apos;exposer à des températures extrêmes (froid ou
                   chaud).
                 </li>
                 <li>
                   Ne laisse jamais la batterie se décharger complètement
-                  (stocker entre 20%-80% en cas d’immobilisation prolongée).
+                  (stocker entre 20%-80% en cas d&apos;immobilisation
+                  prolongée).
                 </li>
                 <li>
                   Ne recharge pas immédiatement à chaud, et ne laisse pas la
@@ -71,13 +72,19 @@ const Maintenance = () => {
           </ul>
 
           <div className="blueBlock">
-            <h3>
-              📢 L’eau s’infiltre facilement partout. L’électronique et les
-              batteries n’aiment pas ça. Les conséquences peuvent être 
-              <strong>immédiates ou à plus long terme</strong> (rouille,
-              surchauffe, court-circuit et risque d’incendie).
-            </h3>
+            <h4>
+              💦 L&apos;eau s&apos;infiltre facilement partout.
+              <br />
+            </h4>
+            ⚠️ L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
+            <br />
+            Les conséquences peuvent être{' '}
+            <strong>immédiates ou à plus long terme</strong> (rouille,
+            surchauffe, court-circuit et risque d&apos;incendie).
           </div>
+          <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+            article mis à jour en mars 2024
+          </p>
         </AccordionItem>
       </Accordion>
     </section>

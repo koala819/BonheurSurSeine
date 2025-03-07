@@ -1,8 +1,8 @@
 'use client'
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
-import ReactPlayer from 'react-player'
 
+//import ReactPlayer from 'react-player'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -45,19 +45,18 @@ const Associations = () => {
         <AccordionItem
           key="1"
           aria-label="Les groupes & associations"
-          title={<h3>Les groupes & associations</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          title={<h3>🌍 Les groupes & associations</h3>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <section>
-            <h2 className="capitalize">l&apos;anumme</h2>
+            <h2>L&apos;ANUMME</h2>
             <div className="blueBlock mb-8">
-              <h3>
-                ℹ️ Voilà un site très complet et bourré d&apos;informations
-                utiles
-              </h3>
+              <h4>
+                ℹ️ Leur site est très complet et bourré d&apos;informations
+              </h4>
             </div>
             <div className="flex flex-col lg:flex-row">
-              <aside className="lg:w-3/4 space-y-8">
+              <aside className="lg:w-7/12 space-y-8">
                 <p>
                   L&apos;
                   <strong>
@@ -66,11 +65,12 @@ const Associations = () => {
                   </strong>{' '}
                   a été créée par des passionnés afin de promouvoir et défendre
                   l&apos;utilisation des EDPM (roues, trottinettes, e-skate).
+                  <br /> <br />
+                  Leur site est remplie d&apos;informations utiles.
                 </p>
-                <p>Leur site est remplie d&apos;informations utiles.</p>
               </aside>
 
-              <aside className="lg:w-1/4 flex items-center justify-center">
+              <aside className="lg:w-5/12 flex items-center justify-center">
                 <Link href={'https://www.anumme.fr/'} passHref target="_blank">
                   <Image
                     src={Anumme}
@@ -87,26 +87,25 @@ const Associations = () => {
           <section className="pt-8">
             <h2>Wikiloc</h2>
             <div className="blueBlock mb-8">
-              <h3>
+              <h4>
                 📢 En 2 mots&nbsp;: &laquo;&nbsp;Allons rouler !&nbsp;&raquo;
-              </h3>
+              </h4>
             </div>
             <div className="flex flex-col lg:flex-row mb-8">
-              <aside className="lg:w-3/4 space-y-8">
+              <aside className="lg:w-7/12 space-y-8 mb-1">
                 <p>
                   Ce site permet de <strong>partager des itinéraires</strong>,
                   de les enregistrer, de les documenter (textes, photos,
                   commentaires), et de télécharger les tracés GPS. Parfait pour
                   aider les autres, et surtout bénéficier de leurs expériences
                   afin d&apos;organiser ses propres sorties.
-                </p>
-                <p>
+                  <br />
                   Il existe 2 catégories utilisées par la communauté :
                   <i>“Monocycle de montagne”</i> et <i>“Segway”</i>.
                 </p>
               </aside>
 
-              <aside className="lg:w-1/4 flex items-center justify-center">
+              <aside className="lg:w-5/12 flex items-center justify-center">
                 <Link href={'https://fr.wikiloc.com/'} passHref target="_blank">
                   <Image
                     src={Wikiloc}
@@ -118,11 +117,11 @@ const Associations = () => {
                 </Link>
               </aside>
             </div>
-            <p>
+            <p className="mb-0">
               Voici quelques contributeurs très actifs pour découvrir de supers
               parcours :
             </p>
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="pt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {userProfiles.map((user) => (
                 <Link
                   href={user.profileUrl}
@@ -132,15 +131,15 @@ const Associations = () => {
                 >
                   <div className="flex flex-col w-full">
                     <h4 className="text-center mt-2">{user.name}</h4>
-                    <div className=" flex justify-center w-full py-4">
+                    <div className=" flex justify-center w-full py-2">
                       <Image
                         src={
                           user.imageUrl || '/public/BonheurSurSeine_logo.png'
                         }
                         alt={user.name}
-                        className="w-32 h-32 object-cover rounded-full"
-                        width={500}
-                        height={500}
+                        className="w-28 h-28 object-cover rounded-full"
+                        width={400}
+                        height={400}
                       />
                     </div>
                   </div>
@@ -152,10 +151,10 @@ const Associations = () => {
           <section className="pt-8">
             <h2>Les associations</h2>
             <div className="blueBlock mb-8">
-              <h3>
-                📢 &laquo;&nbsp;Le bonheur n&apos;est réel que quand il est
-                partagé.&nbsp;&raquo;
-              </h3>
+              <h4>
+                📢 &laquo;&nbsp;Le bonheur n&apos;est réel que lorsqu&apos;il
+                est partagé.&nbsp;&raquo;
+              </h4>
             </div>
             <p>
               On trouve des associations un peu partout. Tu en trouveras plein
@@ -180,8 +179,8 @@ const Associations = () => {
               </aside>
 
               <aside className="lg:w-1/2 pt-8 lg:pt-0 lg:pl-8">
-                <p>Autant d&apos;opportunité de : </p>
-                <ul className="list my-8">
+                <p>Autant d&apos;opportunités de : </p>
+                <ul className="compactlist mt-1 mb-4">
                   <li>Faire découvrir et promouvoir la roue électrique.</li>
                   <li>Rencontrer d&apos;autres passionnés.</li>
                   <li>
@@ -191,17 +190,22 @@ const Associations = () => {
                     Découvrir d&apos;autres façons de faire de la roue
                     (freestyle, randonneurs, racer, off road, acrobates, etc.).
                   </li>
-                  <li>Participer à l&apos;organiser d&apos;événements.</li>
+                  <li>Participer à l&apos;organisation d&apos;événements.</li>
                 </ul>
-                <ReactPlayer
-                  controls={true}
-                  url={'https://www.youtube.com/watch?v=iQzrhgo2XiM'}
-                  width="100%"
-                  height="40%"
-                />
+                <div className="relative w-full pb-[56.25%]">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/iQzrhgo2XiM?si=k2ZEL-ZZFjGE6YJq"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </div>
               </aside>
             </div>
           </section>
+          <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+            article mis à jour en juin 2024
+          </p>
         </AccordionItem>
       </Accordion>
     </section>

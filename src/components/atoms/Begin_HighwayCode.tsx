@@ -11,8 +11,8 @@ const HighwayCode = () => {
         <AccordionItem
           key="1"
           aria-label="Le code de la route"
-          title={<h3>Le code de la route</h3>}
-          indicator={<strong className="chevronAccordionItem">&lt;</strong>}
+          title={<h3>🚦 Le code de la route</h3>}
+          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-8">
             Depuis le 23 octobre 2019, les roues électriques sont officiellement
@@ -28,10 +28,10 @@ const HighwayCode = () => {
             ).
           </p>
           <div className="blueBlock mb-8">
-            <h3>
-              🚦 Quand on est sur la route, il ne faut jamais être trop
+            <h4>
+              ❤️‍🩹 Quand on est sur la route, il ne faut jamais être trop
               pressé&nbsp;!
-            </h3>
+            </h4>
           </div>
           <p className="mb-8">
             Par conséquent, toutes les règles du Code de la Route
@@ -247,7 +247,7 @@ const HighwayCode = () => {
             !
           </p>
           <div className="yellowBlock mb-8">
-            <h3>
+            <h4>
               📢 Consulte régulièrement{' '}
               <Link
                 href="https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements/reglementation-des-edpm"
@@ -257,7 +257,7 @@ const HighwayCode = () => {
                 le site officiel
               </Link>{' '}
               de la Sécurité Routière.
-            </h3>
+            </h4>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en janvier 2025
