@@ -29,7 +29,7 @@ const Practical_Vrac = () => {
             <br />
             Le PDF est disponible{' '}
             <Link
-              href="/Rudy Tech - guide utilisation IQlight V2 - FR v20250306.pdf"
+              href="/Rudy Tech - mode d'emploi IQlight V2 - FR v20250307.pdf"
               target="_blank"
               className="link-style"
             >
