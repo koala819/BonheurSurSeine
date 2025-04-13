@@ -70,7 +70,7 @@ export function BonheurScore({
           </h3>
           <p>
             Pour en savoir plus sur la{' '}
-            <span className="text-fuchsia-700">
+            <span className="text-fuchsia-700 dark:text-fuchsia-400">
               <strong>notation</strong>
             </span>
             , je t&apos;invite à voir{' '}
@@ -79,7 +79,7 @@ export function BonheurScore({
               target="_blank"
               className="link-style"
             >
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <strong>cette vidéo</strong>
               </span>
             </Link>
@@ -89,18 +89,18 @@ export function BonheurScore({
             <li className="list-disc">
               Mes notes ne sont pas une vérité en soi : elles illustrent juste
               du mieux possible{' '}
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <strong>ce que j&apos;ai pensé</strong>
               </span>{' '}
               (mon avis personnel et mes ressentis).
             </li>
             <li className="list-disc">
               Dans toutes mes vidéos, je donne{' '}
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <strong>librement mon avis</strong>
               </span>
               , et j&apos;identifie au mieux les{' '}
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <strong>usages</strong>
               </span>{' '}
               pour lesquels la roue excelle.
@@ -108,7 +108,7 @@ export function BonheurScore({
             <li className="list-disc">
               Même la roue la moins bien notée m&apos;a procuré, à chaque fois,
               le{' '}
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <strong>bonheur de rouler</strong>
               </span>
               .
@@ -154,7 +154,7 @@ export function BonheurScore({
           <div>
             <label
               htmlFor="brand-filter"
-              className="block text-xs font-medium text-gray-700"
+              className="block text-xs font-medium text-gray-700 dark:text-gray-400"
             >
               Filtrer par marque :
             </label>
@@ -175,7 +175,7 @@ export function BonheurScore({
           <div>
             <label
               htmlFor="category-filter"
-              className="block text-xs font-medium text-gray-700 text-right"
+              className="block text-xs font-medium text-gray-700 text-right dark:text-gray-400"
             >
               Filtrer par catégorie :
             </label>
