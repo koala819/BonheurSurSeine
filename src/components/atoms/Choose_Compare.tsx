@@ -57,7 +57,7 @@ const Compare = () => {
       <div className="pt-8">
         <h4>
           ➡️ Mes reviews et le{' '}
-          <span className="text-xl sm:text-xl md:text-xl text-fuchsia-700">
+          <span className="text-xl sm:text-xl md:text-xl text-fuchsia-700 dark:text-fuchsia-400">
             BonheurScore
           </span>
         </h4>
@@ -65,7 +65,7 @@ const Compare = () => {
           <li>
             La{' '}
             <strong>
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 notation{' '}
                 <Link
                   href="/BonheurScore"
@@ -77,14 +77,16 @@ const Compare = () => {
             </strong>{' '}
             permet de savoir en synthèse{' '}
             <strong>
-              <span className="text-fuchsia-700">ce que j&apos;ai pensé</span>
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
+                ce que j&apos;ai pensé
+              </span>
             </strong>{' '}
             de chaque roue testée.
           </li>
           <li>
             Dans{' '}
             <strong>
-              <span className="text-fuchsia-700">
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
                 <Link
                   href="https://www.youtube.com/@BonheursurSeine"
                   className="underline hover:text-blue-500"
@@ -96,7 +98,9 @@ const Compare = () => {
             </strong>
             , je donne librement mon avis, et j&apos;identifie au mieux{' '}
             <strong>
-              <span className="text-fuchsia-700">les usages</span>
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
+                les usages
+              </span>
             </strong>{' '}
             pour lesquels la roue excelle.
           </li>

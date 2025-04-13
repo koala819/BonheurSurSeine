@@ -379,7 +379,13 @@ interface GyroroueDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   constructeur: prismic.SelectField<
-    'Begode' | 'Extreme Bull' | 'Inmotion' | 'Kingsong' | 'LeaperKim' | 'Nosfet'
+    | 'Begode'
+    | 'Extreme Bull'
+    | 'Inmotion'
+    | 'Kingsong'
+    | 'LeaperKim'
+    | 'Nosfet'
+    | 'Ninebot'
   >
 
   /**
@@ -391,7 +397,7 @@ interface GyroroueDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  profil: prismic.SelectField<'Hybride' | 'Loisir' | 'Urbaine'>
+  profil: prismic.SelectField<'Agglomération' | 'Loisir' | 'Centre-Ville'>
 
   /**
    * Date field in *Gyroroue*
