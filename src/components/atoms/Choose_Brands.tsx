@@ -32,8 +32,8 @@ const Brands = () => {
             <Accordion>
               <AccordionItem
                 key="1"
-                aria-label="Urbaine"
-                title={<span className="profilGyroroue">Urbaine</span>}
+                aria-label="Centre-Ville"
+                title={<span className="profilGyroroue">Centre-Ville</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall1 mr-1">
                     &lsaquo;
@@ -61,10 +61,8 @@ const Brands = () => {
               </AccordionItem>
               <AccordionItem
                 key="2"
-                aria-label="Hybride/polyvalente"
-                title={
-                  <span className="profilGyroroue">Hybride/polyvalente</span>
-                }
+                aria-label="Agglomération"
+                title={<span className="profilGyroroue">Agglomération</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall1 mr-1">
                     &lsaquo;

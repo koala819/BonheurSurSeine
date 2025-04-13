@@ -38,7 +38,8 @@
             "Inmotion",
             "Kingsong",
             "LeaperKim",
-            "Nosfet"
+            "Nosfet",
+            "Ninebot"
           ]
         }
       },
@@ -47,7 +48,7 @@
         "config": {
           "label": "Profil",
           "placeholder": "",
-          "options": ["Hybride", "Loisir", "Urbaine"]
+          "options": ["Agglomération", "Loisir", "Centre-Ville"]
         }
       },
       "date": {
