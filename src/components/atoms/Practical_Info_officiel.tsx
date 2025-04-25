@@ -2,7 +2,10 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import Image from 'next/image'
 import Link from 'next/link'
+
+import Image_news from '@/public/Image_news.png'
 
 const Practical_Info_officiel = () => {
   return (
@@ -16,12 +19,28 @@ const Practical_Info_officiel = () => {
           }
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          On y pense peu, mais les constructeurs communiquent beaucoup&nbsp;! 😉
-          <br /> Selon les marques, on a un peu de tout : annonces des nouveaux
-          modèles, spécifications techniques, vidéos de démontage et de
-          changement de pneus, navigation dans les menus, etc. <br />
-          Alors, si tu veux être sur d&apos;avoir les dernières informations
-          officielles&nbsp;:
+          <div className="mb-8 flex flex-col md:flex-row items-center">
+            <aside className="md:w-3/5 space-y-4 mr-4">
+              On y pense peu, mais les constructeurs communiquent
+              beaucoup&nbsp;! 😉
+              <br /> <br /> Selon les marques, on a un peu de tout : annonces
+              des nouveaux modèles, spécifications techniques, vidéos de
+              démontage et de changement de pneus, navigation dans les menus,
+              etc. <br />
+              <br />
+              Alors, si tu veux être sur d&apos;avoir les dernières informations
+              officielles&nbsp;:
+            </aside>
+            <aside className="md:w-2/5 text-right text-xs">
+              <Image
+                src={Image_news}
+                alt="Image_news"
+                width={300}
+                height={195}
+                className="rounded-lg cursor-pointer"
+              />
+            </aside>
+          </div>
           <h4 className="mt-4 mb-0">💠 Begode et Extreme Bull</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
