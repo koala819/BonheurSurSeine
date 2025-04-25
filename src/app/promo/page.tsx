@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import CardPromo from '@/src/components/atoms/CardPromo'
+import CardPromo from '@/src/components/atoms/CodePromo'
 
 import { createClient } from '@/prismicio'
 

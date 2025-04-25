@@ -43,7 +43,15 @@ const Assurance = () => {
               <strong className="text-brown-500">responsabilité civile</strong>.
             </li>
             <li>
-              La vignette (papillon vert) doit être affichée sur le véhicule (
+              La vignette (papillon vert){' '}
+              <Link
+                href="https://www.service-public.fr/particuliers/vosdroits/F1362"
+                target="_blank"
+                className="link-style"
+              >
+                doit être affichée
+              </Link>{' '}
+              sur le véhicule (
               <Link
                 href="https://www.service-public.fr/particuliers/actualites/A17230"
                 target="_blank"
@@ -99,7 +107,7 @@ const Assurance = () => {
               d&apos;un autre usager.
             </li>
           </ul>
-          <div className="yellowBlock mb-8">
+          <div className="yellowBlock mb-6">
             <h4>
               📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
               sécurité, c&apos;est une question de
@@ -107,8 +115,24 @@ const Assurance = () => {
             </h4>
           </div>
           <p>
-            Assurer un EDPM coûte 5-10€/mois. La quasi totalité des assureurs
-            propose des contrats d&apos;assurance adaptés. Tu trouveras un{' '}
+            🚨 Comment réagir en accident ? Même sans gravité, un accident
+            génère toujours du stress : remplissez systématiquement un constat
+            amiable (l&apos;idéal est d&apos;en avoir 1 prérempli avec ses
+            informations d&apos;assurance).
+            <br />
+            Pour en savoir plus, consultez{' '}
+            <Link
+              href="https://www.anumme.fr/2020/02/29/edpm-nvei-que-faire-en-cas-daccident-guide-du-constat-amiable/"
+              target="_blank"
+              className="link-style"
+            >
+              cet article très complet rédigé par l&apos;ANUMME
+            </Link>
+            &nbsp;!
+          </p>
+          <p className="mt-3">
+            💰 Le budget ? Assurer un EDPM coûte 5-10€/mois. La quasi totalité
+            des assureurs propose des contrats adaptés. Tu trouveras un{' '}
             <Link href="/promo" className="link-style">
               code Promo
             </Link>{' '}
@@ -116,7 +140,7 @@ const Assurance = () => {
             partenaire de la chaine.
           </p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en janvier 2025
+            article mis à jour en avril 2025
           </p>
         </AccordionItem>
       </Accordion>

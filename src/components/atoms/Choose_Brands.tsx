@@ -25,8 +25,11 @@ const Brands = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <span className="mt-0 mb-0">
-            Sur la base de mes tests, il est possible de distinguer 3 grandes
-            catégories sur le marché&nbsp;:
+            Sur la base de mes tests, il est possible de distinguer{' '}
+            <strong>
+              <span className="text-brown-700">3 grandes catégories</span>
+            </strong>{' '}
+            sur le marché&nbsp;:
           </span>
           <p className="ml-5">
             <Accordion>

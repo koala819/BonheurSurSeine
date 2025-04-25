@@ -66,7 +66,7 @@ const Associations = () => {
                   a été créée par des passionnés afin de promouvoir et défendre
                   l&apos;utilisation des EDPM (roues, trottinettes, e-skate).
                   <br /> <br />
-                  Leur site est remplie d&apos;informations utiles.
+                  Leur site est rempli d&apos;informations utiles.
                 </p>
               </aside>
 
@@ -118,8 +118,8 @@ const Associations = () => {
               </aside>
             </div>
             <p className="mb-0">
-              Voici quelques contributeurs très actifs pour découvrir de supers
-              parcours :
+              Voici quelques contributeurs très actifs pour{' '}
+              <strong>découvrir de supers parcours</strong>&nbsp;:
             </p>
             <div className="pt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {userProfiles.map((user) => (

@@ -11,14 +11,21 @@ const Practical_Info_officiel = () => {
         <AccordionItem
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
-          title={<h3>🆕 Suivre les news officiels constructeurs</h3>}
+          title={
+            <h3>🆕 Infos et chaine Youtube officielles des constructeurs</h3>
+          }
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          Tu veux être sur d&apos;avoir les dernières informations
-          officielles&nbsp;?
+          On y pense peu, mais les constructeurs communiquent beaucoup&nbsp;! 😉
+          <br /> Selon les marques, on a un peu de tout : annonces des nouveaux
+          modèles, spécifications techniques, vidéos de démontage et de
+          changement de pneus, navigation dans les menus, etc. <br />
+          Alors, si tu veux être sur d&apos;avoir les dernières informations
+          officielles&nbsp;:
           <h4 className="mt-4 mb-0">💠 Begode et Extreme Bull</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
+              Site ={' '}
               <Link
                 href="http://www.begode.com"
                 target="_blank"
@@ -28,27 +35,28 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
             <li>
+              Facebook ={' '}
               <Link
                 href="https://www.facebook.com/Begode.Levi"
                 target="_blank"
                 className="link-style"
               >
-                https://www.facebook.com/Begode.Levi
-              </Link>
-            </li>
-            <li>
+                Begode.Levi
+              </Link>{' '}
+              et{' '}
               <Link
                 href="https://www.facebook.com/ExtremeBull.Levi"
                 target="_blank"
                 className="link-style"
               >
-                https://www.facebook.com/ExtremeBull.Levi
+                ExtremeBull.Levi
               </Link>
             </li>
           </ul>
           <h4 className="mt-4 mb-0">💠 Inmotion</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
+              Site ={' '}
               <Link
                 href="https://www.inmotionworld.com"
                 target="_blank"
@@ -58,27 +66,30 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
             <li>
+              Youtube ={' '}
               <Link
                 href="https://www.youtube.com/@INMOTIONSCV"
                 target="_blank"
                 className="link-style"
               >
-                https://www.youtube.com/@INMOTIONSCV
+                @InmotionSCV
               </Link>
             </li>
             <li>
+              Facebook ={' '}
               <Link
                 href="https://www.facebook.com/InmotionWorld"
                 target="_blank"
                 className="link-style"
               >
-                https://www.facebook.com/InmotionWorld
+                InmotionWorld
               </Link>
             </li>
           </ul>
           <h4 className="mt-4 mb-0">💠 Kingsong</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
+              Site ={' '}
               <Link
                 href="https://kingsong.com"
                 target="_blank"
@@ -96,27 +107,46 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
             <li>
+              Youtube ={' '}
               <Link
                 href="https://www.youtube.com/@KingsongIntellCoLtd"
                 target="_blank"
                 className="link-style"
               >
-                https://www.youtube.com/@KingsongIntellCoLtd
+                @KingsongIntellCoLtd
+              </Link>{' '}
+              et sa filiale{' '}
+              <Link
+                href="https://www.youtube.com/@KingSongEurope"
+                target="_blank"
+                className="link-style"
+              >
+                @KingsongEurope
               </Link>
             </li>
             <li>
+              Facebook ={' '}
               <Link
                 href="https://www.facebook.com/kingsong.international"
                 target="_blank"
                 className="link-style"
               >
-                https://www.facebook.com/kingsong.international
+                Kingsong.International
               </Link>{' '}
+              et sa filiale{' '}
+              <Link
+                href="https://www.facebook.com/kingsongeurope"
+                target="_blank"
+                className="link-style"
+              >
+                KingsongEurope
+              </Link>
             </li>
           </ul>
           <h4 className="mt-4 mb-0">💠 Leaperkim</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
+              Site ={' '}
               <Link
                 href="https://www.leaperkim.com"
                 target="_blank"
@@ -126,18 +156,20 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
             <li>
+              Youtube ={' '}
               <Link
                 href="https://youtube.com/@veteranlinnea9952"
                 target="_blank"
                 className="link-style"
               >
-                https://youtube.com/@veteranlinnea9952
+                @veteranlinnea9952
               </Link>
             </li>
           </ul>
           <h4 className="mt-4 mb-0">💠 Nosfet</h4>
           <ul className="compactlist mt-0 mb-0 leading-tight">
             <li>
+              Site ={' '}
               <Link
                 href="https://www.nosfet.com"
                 target="_blank"
@@ -147,27 +179,29 @@ const Practical_Info_officiel = () => {
               </Link>
             </li>
             <li>
+              Youtube ={' '}
               <Link
                 href="https://www.youtube.com/@nosfet_tech"
                 target="_blank"
                 className="link-style"
               >
-                https://www.youtube.com/@nosfet_tech
+                @Nosfet_tech
               </Link>
             </li>
             <li>
+              Facebook ={' '}
               <Link
                 href="https://www.facebook.com/nosfet.tech"
                 target="_blank"
                 className="link-style"
               >
-                https://www.facebook.com/nosfet.tech
+                Nosfet.tech
               </Link>
             </li>
           </ul>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en mars 2025
+            article mis à jour en avril 2025
           </p>
         </AccordionItem>
       </Accordion>

@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 // import CountTimer from '../components/atoms/CounTimer'
-import FinishSection from '@/src/components/atoms/FinishSection'
-import Hero from '@/src/components/atoms/Hero'
-import Quote from '@/src/components/atoms/Quote'
+import FinishSection from '@/src/components/atoms/Accueil_FinishSection'
+import Hero from '@/src/components/atoms/Accueil_Hero'
+import Quote from '@/src/components/atoms/Accueil_Quote'
 
 import { createClient } from '@/prismicio'
 

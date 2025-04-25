@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import Battery from '@/src/components/atoms/Practical_Battery'
 import Dico from '@/src/components/atoms/Practical_Dico'
 import Info from '@/src/components/atoms/Practical_Info_officiel'
 import Maintenance from '@/src/components/atoms/Practical_Maintenance'
@@ -30,6 +31,7 @@ const Page = () => {
         </h3>
       </div>{' '}
       <Maintenance />
+      <Battery />
       <Dico />
       <Info />
       <Vrac />

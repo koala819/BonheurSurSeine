@@ -41,23 +41,17 @@ const Practical_Vrac = () => {
             🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧
           </h3>
           Reviens prochainement pour en savoir plus sur...
-          <h5>🔜 Les pourcentages batterie</h5>
-          <h5>🔜 La naviguation dans les menus Leaperkim </h5>
-          <h5>🔜 Des vidéos SAV/changement de pneus</h5>
-          <h5>🔜 D&apos;autres liens&nbsp;:</h5>{' '}
-          <ul className="list">
-            <li>
-              <Link
-                href="https://fr.tipeee.com/bonheur-sur-seine"
-                target="_blank"
-                className="link-style"
-              >
-                Ne clique pas ici{' '}
-              </Link>
-            </li>
-
-            <li>...</li>
-          </ul>
+          <h5>🔜 Les moteurs</h5>
+          <h5>
+            🔜 Pleins d&apos;autres sujet&nbsp;:{' '}
+            <Link
+              href="https://fr.tipeee.com/bonheur-sur-seine"
+              target="_blank"
+              className="link-style"
+            >
+              Ne clique pas ici
+            </Link>
+          </h5>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en janvier 2025
