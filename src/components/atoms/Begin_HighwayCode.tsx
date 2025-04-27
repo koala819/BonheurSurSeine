@@ -55,8 +55,8 @@ const HighwayCode = () => {
               <h4>CIRCULATION</h4>
               <ul className="list">
                 <li>
-                  Obligation d’emprunter les pistes cyclables si elles existent
-                  (
+                  Obligation d&apos;emprunter les pistes cyclables si elles
+                  existent (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -200,8 +200,8 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li>
-                  Catadioptres de couleurs nécessaires : rouge, orange et blanc
-                  (
+                  Catadioptres nécessaires : blanc à l&pos;avant, rouge à
+                  l&apos;arrière, orange sur les côtés (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266173/"
                     target="_blank"

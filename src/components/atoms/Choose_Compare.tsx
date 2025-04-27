@@ -173,6 +173,9 @@ const Compare = () => {
           </Link>
         </div>
       </div>
+      <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+        article mis à jour en février 2025
+      </p>
     </section>
   )
 }

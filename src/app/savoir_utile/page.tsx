@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import Battery from '@/src/components/atoms/Practical_Battery'
 import Dico from '@/src/components/atoms/Practical_Dico'
 import Info from '@/src/components/atoms/Practical_Info_officiel'
 import Maintenance from '@/src/components/atoms/Practical_Maintenance'
@@ -20,8 +21,8 @@ const Page = () => {
       <h1>Savoir utile</h1>
       <p>
         Cette page regroupe quelques <strong>informations pratiques</strong> et{' '}
-        <strong>bien utiles</strong> concernant la roue électrique et leur
-        utilisation.
+        utiles concernant la roue électrique et{' '}
+        <strong> son utilisation</strong>.
       </p>
       <div className="blueBlock">
         <h3>
@@ -30,6 +31,7 @@ const Page = () => {
         </h3>
       </div>{' '}
       <Maintenance />
+      <Battery />
       <Dico />
       <Info />
       <Vrac />

@@ -25,8 +25,11 @@ const Brands = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <span className="mt-0 mb-0">
-            Sur la base de mes tests, il est possible de distinguer 3 grandes
-            catégories sur le marché&nbsp;:
+            Sur la base de mes tests, il est possible de distinguer{' '}
+            <strong>
+              <span className="text-brown-700">3 grandes catégories</span>
+            </strong>{' '}
+            sur le marché&nbsp;:
           </span>
           <p className="ml-5">
             <Accordion>
@@ -43,8 +46,12 @@ const Brands = () => {
                 <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
                   <li>
                     De part leur petite taille, ces roues sont souvent proposées
-                    en entrée de gamme. Mais elles sont absolument parfaites
-                    pour découvrir le pouvoir de la roue électrique&nbsp;:{' '}
+                    en entrée de gamme. Mais{' '}
+                    <strong>
+                      ce sont elles les vraies reines de la micro-mobilité
+                    </strong>
+                    . Car elles sont absolument parfaites pour découvrir le
+                    pouvoir de la roue électrique&nbsp;:{' '}
                     <strong>la liberté et la praticité</strong>&nbsp;!
                   </li>
                   <li>
@@ -76,7 +83,7 @@ const Brands = () => {
                     <strong>de confort</strong> et plus{' '}
                     <strong>d&apos;autonomie</strong>. Cependant, avec un poids
                     dépassant parfois les 35kg, elles perdent en discrétion et
-                    en praticité malgré leurs atouts
+                    en praticité malgré tous leurs atouts.
                   </li>
                   <li>
                     Leur taille leur permet de circuler en{' '}
@@ -100,7 +107,7 @@ const Brands = () => {
                 <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
                   <li>
                     Ici, <strong>aucune limite</strong> de taille, ni de poids !
-                    La praticité n&apos;est plus un argument car ces modèles
+                    La praticité n&apos;est plus un argument, car ces modèles
                     sont plutôt dédiés à la pratique sportive : performance ou
                     grande randonnée. Ces roues affichent des{' '}
                     <strong>spécifications techniques de haute volée</strong>{' '}
@@ -108,10 +115,10 @@ const Brands = () => {
                     que finalement peu de gens pourront exploiter totalement.
                   </li>
                   <li>
-                    On est sur les poids lourds de la micromobilité (40kg est un
-                    minimum). Avec seulement quelques modèles au début,
-                    l&apos;offre s&apos;est depuis étoffée au fur et a mesure
-                    des améliorations techniques (suspension, voltage).
+                    On est sur les <strong>poids lourds</strong> de la
+                    micromobilité (40kg est un minimum). Avec seulement quelques
+                    modèles au début, l&apos;offre s&apos;est étoffée au fur et
+                    a mesure des améliorations techniques (suspension, voltage).
                   </li>
                 </ul>
               </AccordionItem>
