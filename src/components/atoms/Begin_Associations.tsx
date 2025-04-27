@@ -44,8 +44,8 @@ const Associations = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Les groupes & associations"
-          title={<h3>🌍 Les groupes & associations</h3>}
+          aria-label="Groupes & associations"
+          title={<h3>🌍 Groupes & associations</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <section>
@@ -95,10 +95,10 @@ const Associations = () => {
               <aside className="lg:w-7/12 space-y-8 mb-1">
                 <p>
                   Ce site permet de <strong>partager des itinéraires</strong>,
-                  de les enregistrer, de les documenter (textes, photos,
+                  de les enregistrer et les documenter (textes, photos,
                   commentaires), et de télécharger les tracés GPS. Parfait pour
-                  aider les autres, et surtout bénéficier de leurs expériences
-                  afin d&apos;organiser ses propres sorties.
+                  aider les autres, et bénéficier de leurs expériences afin
+                  d&apos;organiser ses propres sorties.
                   <br />
                   Il existe 2 catégories utilisées par la communauté :
                   <i>“Monocycle de montagne”</i> et <i>“Segway”</i>.
@@ -181,7 +181,7 @@ const Associations = () => {
               <aside className="lg:w-1/2 pt-8 lg:pt-0 lg:pl-8">
                 <p>Autant d&apos;opportunités de : </p>
                 <ul className="compactlist mt-1 mb-4">
-                  <li>Faire découvrir et promouvoir la roue électrique.</li>
+                  <li>Faire découvrir la roue électrique.</li>
                   <li>Rencontrer d&apos;autres passionnés.</li>
                   <li>
                     Partager des expériences autour de cette passion commune.

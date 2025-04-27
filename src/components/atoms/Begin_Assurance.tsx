@@ -115,10 +115,10 @@ const Assurance = () => {
             </h4>
           </div>
           <p>
-            🚨 Comment réagir en accident ? Même sans gravité, un accident
-            génère toujours du stress : remplissez systématiquement un constat
-            amiable (l&apos;idéal est d&apos;en avoir 1 prérempli avec ses
-            informations d&apos;assurance).
+            🚨 Comment réagir en cas d&apos;accident&apos;? Même sans gravité,
+            un accident génère toujours du stress : remplissez systématiquement
+            un constat amiable (l&apos;idéal est d&apos;en avoir 1 prérempli
+            avec ses informations d&apos;assurance).
             <br />
             Pour en savoir plus, consultez{' '}
             <Link

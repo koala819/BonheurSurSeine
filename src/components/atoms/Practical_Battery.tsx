@@ -20,14 +20,14 @@ const Practical_Battery = () => {
         >
           <p className="mb-2">
             Pour rouler en sécurité et arriver à destination, il est{' '}
-            <strong>essentiel d&apos;avoir suffisament d&apos;énergie</strong>{' '}
+            <strong>essentiel d&apos;avoir suffisamment d&apos;énergie</strong>{' '}
             dans la batterie.
             <br />
             Si le moteur demande plus d&apos;énergie que ne peut en fournir la
             batterie, la roue sera sans énergie et s&apos;arrêtera de
             fonctionner&nbsp;! <br /> Il est donc <strong>vitale</strong> de
             veiller à ce que <strong>la batterie</strong>,{' '}
-            <strong>à tout moment</strong>, ait suffisament d&apos;énergie{' '}
+            <strong>à tout moment</strong>, ait suffisamment d&apos;énergie{' '}
             <strong>pour répondre à la demande du moteur</strong>.
           </p>
           <div className="pinkBlock mb-4">
@@ -44,7 +44,7 @@ const Practical_Battery = () => {
               🪫 0% correspond à la tension minimum. <br />
               🤔 Entre les 2&nbsp;? <br />
               C&apos;est selon les choix du fabricant qui décide de la manière
-              dont le % évolue, ainsi que des tensions maximum et minimun (pour
+              dont le % évolue, ainsi que des tensions maximum et minimum (pour
               avoir une <strong>marge de sécurité</strong> et ne pas abimer les
               cellules de la batteries). <br />
               <br />

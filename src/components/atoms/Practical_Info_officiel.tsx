@@ -15,7 +15,7 @@ const Practical_Info_officiel = () => {
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
           title={
-            <h3>🆕 Infos et chaine Youtube officielles des constructeurs</h3>
+            <h3>🆕 Infos et chaine YouTube officiels des constructeurs</h3>
           }
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >

@@ -21,8 +21,8 @@ const Page = () => {
       <h1>Savoir utile</h1>
       <p>
         Cette page regroupe quelques <strong>informations pratiques</strong> et{' '}
-        <strong>bien utiles</strong> concernant la roue électrique et leur
-        utilisation.
+        utiles concernant la roue électrique et{' '}
+        <strong> son utilisation</strong>.
       </p>
       <div className="blueBlock">
         <h3>
