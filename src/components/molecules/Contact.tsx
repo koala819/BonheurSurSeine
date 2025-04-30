@@ -97,20 +97,35 @@ export default function Contact({
         </div>
       </header>
 */}
+
       <section className="flex flex-col lg:flex-row my-4 lg:my-8">
         <aside className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0">
-          <picture className="flex items-center justify-center px-4 w-full">
+          <picture className="flex flex-col items-center px-4 w-full">
             <Image
               src={bonheurSurSeine}
               alt="Raphael"
-              className="h-80% w-80% object-cover object-center rounded-2xl"
+              className="h-80% w-80% object-cover object-center rounded-2xl mb-0"
               priority
               width={500}
               height={500}
               placeholder="blur"
             />
+            <p className="mt-0 mb-0 ">
+              ▶️&nbsp;
+              <i>
+                <Link
+                  href="https://fr.tipeee.com/bonheur-sur-seine"
+                  target="_blank"
+                  className="link-style"
+                >
+                  Ne clique pas ici
+                </Link>
+              </i>
+              &nbsp;◀️
+            </p>
           </picture>
         </aside>
+
         {/*
         <aside className="w-full lg:w-1/2 flex justify-center">
           <div className="flex items-center justify-center w-full">
