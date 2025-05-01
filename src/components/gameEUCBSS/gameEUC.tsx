@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
-import ImageGameOver from '@/public/game/gameover.png'
+import ImageGameOver from '@/public/game/GameOver.png'
 
 export default function RexEUC() {
   const router = useRouter()
