@@ -124,3 +124,104 @@ text {
     --ring: 224.3 76.3% 48%;
   }
 }
+
+/*AJOUT GAME */
+@keyframes cactusMove {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.animate-cactus {
+  animation: cactusMove 2.5s linear forwards;
+  position: absolute;
+}
+
+@keyframes dinoRun {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -144px 0;
+  } /* adapte selon ton sprite */
+}
+.animate-dino {
+  animation: dinoRun 0.5s steps(3) infinite;
+  background-size: 300% 100%; /* 3 frames horizontales */
+}
+@keyframes BONUSmove {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes BONUSfloatY {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(+2px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bonus {
+  position: absolute;
+  animation:
+    BONUSmove 5s linear forwards,
+    BONUSfloatY 2s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+@keyframes scrollGround {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -100px; /* ajustable selon la taille du sprite */
+  }
+}
+.ground-animate {
+  animation: scrollGround 2s linear infinite;
+}
+.collected {
+  pointer-events: none;
+  opacity: 0.02;
+}
+
+@keyframes collected-animation {
+  0% {
+    transform: scale(1) rotateY(0deg); /* Taille normale et aucune rotation */
+    opacity: 1;
+  }
+  40% {
+    transform: scale(0.8) rotateY(120deg); /* Légère rotation et agrandissement */
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.2) rotateY(240deg); /* Rotation maximale et agrandissement maximum */
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotateY(360deg); /* Retour à l'état initial */
+    opacity: 1;
+  }
+}
+
+.collected-animation {
+  animation: collected-animation 0.8s ease-in-out;
+}
