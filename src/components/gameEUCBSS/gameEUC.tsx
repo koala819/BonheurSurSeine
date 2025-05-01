@@ -29,10 +29,10 @@ export default function RexEUC() {
   const [showBonus, setShowBonus] = useState(true)
 
   const getCactusSpeed = () => {
-    if (score > 300) return 2.3
-    if (score > 200) return 2.5
-    if (score > 100) return 2.8
-    return 3 // durée en secondes
+    if (score > 300) return 4.3
+    if (score > 200) return 4.5
+    if (score > 100) return 4.8
+    return 5 // durée en secondes
   }
 
   const jumpSound = useRef<HTMLAudioElement>(null)
