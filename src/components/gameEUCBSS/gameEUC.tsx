@@ -24,13 +24,23 @@ export default function RexEUC() {
   const [lives, setLives] = useState(1) // Nombre de vies restantes
   const [bonusCount, setBonusCount] = useState(0) // Compteur de bonus collectés
   const cactusRefs = useRef<{ [key: number]: HTMLDivElement | null }>({}) // Références aux cactus à l'écran
-  const [bonusTop, setBonusTop] = useState(56 + Math.random() * 5) // Position verticale du bonus (aléatoire)
+  const recentlyHitCactus = useRef<Set<number>>(new Set())
+  const [bonusTop, setBonusTop] = useState(56) // Position verticale du bonus (pas d aléatoire)
   const [showLifeGain, setShowLifeGain] = useState(false) // Affiche le "+1 ❤️"
+  const [showLifePerte, setShowLifePerte] = useState(false) // Affiche le "-1 💀"
   const [showBonus, setShowBonus] = useState(true) // Faut-il afficher le bonus ?
   const getCactusSpeed = () => {
-    if (score > 300) return 4.3
-    if (score > 200) return 4.5
+    if (score > 240) return 4.45
+    if (score > 220) return 4.5
+    if (score > 200) return 4.55
+    if (score > 180) return 4.6
+    if (score > 160) return 4.65
+    if (score > 140) return 4.7
+    if (score > 120) return 4.75
     if (score > 100) return 4.8
+    if (score > 80) return 4.85
+    if (score > 60) return 4.9
+    if (score > 40) return 4.95
     return 5 // durée en secondes
   }
 
@@ -39,6 +49,7 @@ export default function RexEUC() {
   const bonusSound = useRef<HTMLAudioElement>(null)
   const enterSound = useRef<HTMLAudioElement>(null)
   const lifeSound = useRef<HTMLAudioElement>(null)
+  const collisionSound = useRef<HTMLAudioElement>(null)
 
   //-------------------------------------------------------------------//
   // SON DE DEMARRAGE LORS DU CHARGEMENT DE LA PAGE
@@ -47,12 +58,12 @@ export default function RexEUC() {
   }, [])
 
   //-------------------------------------------------------------------//
-  // Fonction du Saut
+  // Gestion du Saut
   const handleJump = () => {
     if (!isJumping) {
       jumpSound.current?.play()
       setIsJumping(true)
-      setTimeout(() => setIsJumping(false), 500)
+      setTimeout(() => setIsJumping(false), 450) // il dure 450ms
     }
   }
   // Gestion Barre espace
@@ -98,7 +109,7 @@ export default function RexEUC() {
     const spawnLoop = () => {
       if (isCancelled) return
       addCactus()
-      const nextDelay = 1000 + Math.random() * 2000
+      const nextDelay = 900 + Math.random() * 2000
       setTimeout(spawnLoop, nextDelay)
     }
     spawnLoop()
@@ -106,16 +117,7 @@ export default function RexEUC() {
       isCancelled = true
     }
   }, [isStarted, isGameOver])
-  //Mouvement des cactus
-  useEffect(() => {
-    if (isStarted && !isGameOver) {
-      const interval = setInterval(() => {
-        setBonusTop(44 + Math.random() * 20)
-        setShowBonus(true)
-      }, 8000) // revient toutes les 8s (ou ce que tu veux)
-      return () => clearInterval(interval)
-    }
-  }, [isStarted, isGameOver])
+
   //Mouvement des cactus
   useEffect(() => {
     if (!isStarted || isGameOver) return
@@ -138,8 +140,9 @@ export default function RexEUC() {
   useEffect(() => {
     if (isStarted && !isGameOver) {
       const interval = setInterval(() => {
-        setBonusTop(44 + Math.random() * 2)
-      }, 8000) // Repositionne toutes les 8s
+        setBonusTop(54 + Math.random() * 2)
+        setShowBonus(true)
+      }, 6000) // revient toutes les 8s (ou ce que tu veux)
       return () => clearInterval(interval)
     }
   }, [isStarted, isGameOver])
@@ -168,17 +171,26 @@ export default function RexEUC() {
       if (dino && cactusList.length > 0) {
         const dinoRect = dino.getBoundingClientRect()
         cactusList.forEach((cactus) => {
+          if (recentlyHitCactus.current.has(cactus.id)) return
           const cactusEl = cactusRefs.current[cactus.id] as HTMLElement
           if (!cactusEl) return
           const cactusRect = cactusEl.getBoundingClientRect()
           const overlap = !(
-            dinoRect.right < cactusRect.left ||
-            dinoRect.left > cactusRect.right ||
-            dinoRect.bottom < cactusRect.top ||
+            dinoRect.right - 5 < cactusRect.left ||
+            dinoRect.left + 8 > cactusRect.right ||
+            dinoRect.bottom < cactusRect.top + 8 ||
             dinoRect.top > cactusRect.bottom
           )
+
           // Perte vie, sinon GameOver
           if (overlap) {
+            collisionSound.current?.play()
+            setShowLifePerte(true)
+            setTimeout(() => setShowLifePerte(false), 1500)
+            recentlyHitCactus.current.add(cactus.id)
+            setTimeout(() => {
+              recentlyHitCactus.current.delete(cactus.id)
+            }, 1500)
             if (lives > 1) {
               setLives((l) => l - 1)
             } else {
@@ -214,7 +226,7 @@ export default function RexEUC() {
               setLives((l) => l + 1)
               lifeSound.current?.play()
               setShowLifeGain(true)
-              setTimeout(() => setShowLifeGain(false), 1000)
+              setTimeout(() => setShowLifeGain(false), 1500)
               return 0
             }
             return newCount
@@ -224,7 +236,7 @@ export default function RexEUC() {
           void bonus.offsetWidth // force le reflow
           setTimeout(() => {
             bonus.classList.remove('collected')
-          }, 1550) // évite les collisions multiples pendant 1.55s
+          }, 1500) // évite les collisions multiples pendant 1.5s
         }
       }
     }, 50)
@@ -304,6 +316,11 @@ export default function RexEUC() {
           +1 ❤️
         </div>
       )}
+      {showLifePerte && (
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 text-black text-xl font-bold animate-ping">
+          -1 💀
+        </div>
+      )}
 
       {/* AFFICHAGE LIGNE DU HAUT : SCORE ET VIE */}
       <div className="absolute top-1 left-2 text-sm font-bold text-black">
@@ -319,7 +336,7 @@ export default function RexEUC() {
       {/* LE WHEELER / DINO */}
       <div
         ref={dinoRef}
-        className={`absolute left-10 w-12 h-12 bg-no-repeat bg-contain transition-all duration-15 ${isJumping ? 'top-44' : 'top-56'} ${isStarted && !isGameOver ? 'animate-dino' : ''}`}
+        className={`absolute left-10 w-12 h-12 bg-no-repeat bg-contain transition-all duration-500 ${isJumping ? 'top-44' : 'top-56'} ${isStarted && !isGameOver ? 'animate-dino' : ''}`}
         style={{ backgroundImage: 'url("/game/wheelerBsS-sprite.png")' }}
       />
 
@@ -330,7 +347,7 @@ export default function RexEUC() {
           ref={(el: HTMLDivElement | null) => {
             cactusRefs.current[cactus.id] = el
           }}
-          className="absolute bottom-4 w-16 h-16 bg-no-repeat bg-contain animate-cactus"
+          className="absolute bottom-4 w-16 h-16 bg-no-repeat bg-contain"
           style={{
             backgroundImage: 'url("/game/voiture.png")',
             animation: `cactusMove ${getCactusSpeed()}s linear forwards`,
@@ -372,6 +389,7 @@ export default function RexEUC() {
       <audio ref={lifeSound} src="/game/sound_bonus.wav" />
       <audio ref={bonusSound} src="/game/sound_youpi.wav" />
       <audio ref={enterSound} src="/game/sound_enter.wav" />
+      <audio ref={collisionSound} src="/game/sound_collision.wav" />
     </div>
   )
 }

@@ -160,11 +160,11 @@ text {
     transform: translateX(100vw);
   }
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-300px);
   }
 }
 .animate-cactus {
-  animation: cactusMove 2.5s linear forwards;
+  animation: cactusMove linear forwards;
   position: absolute;
 }
 
@@ -174,7 +174,7 @@ text {
     left: 100%;
   }
   100% {
-    left: -50px;
+    left: -100px;
   }
 }
 @keyframes BONUSfloatY {
@@ -197,7 +197,7 @@ text {
 .animate-bonus {
   position: absolute;
   animation:
-    BONUSmove 8s linear forwards,
+    BONUSmove 6s linear forwards,
     BONUSfloatY 4.5s ease-in-out infinite;
   animation-delay: 0.1s;
 }
@@ -228,5 +228,5 @@ text {
   }
 }
 .collected-animation {
-  animation: collected-animation 0.8s ease-in-out;
+  animation: collected-animation 2s ease-in-out;
 }

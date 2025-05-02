@@ -6,10 +6,9 @@ import RexEUC from '@/src/components/gameEUCBSS/gameEUC'
 
 export default function GamePage() {
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
-      <div className="h-screen bg-gray-700 rounded-lg">
+    <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="h-screen bg-gray-700 rounded-lg p-6">
         <div className="text-white text-center mt-4">
-          <br />
           <h4>😁Bonheur sur Seine versus Wild😁</h4>
         </div>
         <p className="text-yellow-400 text-xs text-center mb-4">
@@ -18,7 +17,7 @@ export default function GamePage() {
           🎁<i>Tu as trouvé le petit contenu bonus de mon site&nbsp;!</i> 🎁
         </p>
         <RexEUC />
-        <p className="mt-8 text-white text-center mb-8">
+        <p className="mt-4 text-white text-center mb-4">
           ▶️&nbsp;
           <i>
             <Link
@@ -31,16 +30,28 @@ export default function GamePage() {
           </i>
           &nbsp;◀️
         </p>
-        <div className="blueBlock text-small mt-4 italic">
-          🔸 « L&apos;abus de ce jeu n&apos;est pas dangereux pour la santé, à
-          consommer sans modération ». <br />
-          🔸 « La roue électrique comporte des risques : pertes d&apos;argent,
-          dépendance, addiction, conflits familiaux… Retrouvez tous mes conseils
-          sur bonheursurseine.com ». <br />
-          🔸 « Pour se protéger et protéger les autres, appliquons les gestes
-          barrières : casque, gants, et vitesse maitrisée ».
+        <div className="blueBlock ml-8 mr-8 text-small mt-2">
+          🔸 «&nbsp;
+          <i>
+            L&apos;abus de ce jeu n&apos;est pas dangereux pour la santé, à
+            consommer sans modération
+          </i>
+          &nbsp;». 😁 <br />
+          🔸 «&nbsp;
+          <i>
+            La roue électrique comporte des risques&nbsp;: pertes d&apos;argent,
+            addiction, conflits familiaux… Retrouvez tous mes conseils sur
+            bonheursurseine.com
+          </i>
+          &nbsp;». 😁 <br />
+          🔸 «&nbsp;
+          <i>
+            Pour se protéger et protéger les autres, appliquons les gestes
+            barrières&nbsp;: prudence, casque, gants, et vitesse maitrisée
+          </i>
+          &nbsp;». 😁
         </div>
       </div>
-    </section>
+    </div>
   )
 }
