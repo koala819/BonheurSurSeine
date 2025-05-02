@@ -31,7 +31,7 @@ export default function GamePage() {
           </i>
           &nbsp;◀️
         </p>
-        <div className="blueBlock mt-4 italic">
+        <div className="blueBlock text-small mt-4 italic">
           🔸 « L&apos;abus de ce jeu n&apos;est pas dangereux pour la santé, à
           consommer sans modération ». <br />
           🔸 « La roue électrique comporte des risques : pertes d&apos;argent,

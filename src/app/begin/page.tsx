@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Associations from '@/src/components/atoms/Begin_Associations'
-import Assurance from '@/src/components/atoms/Begin_Assurance'
-import CommonSense from '@/src/components/atoms/Begin_CommonSense'
-import HighwayCode from '@/src/components/atoms/Begin_HighwayCode'
-import Premier_deballage from '@/src/components/atoms/Begin_Premier_deballage'
+import Premier_deballage from '@/src/components/atoms/Begin_1Premier_deballage'
+import CommonSense from '@/src/components/atoms/Begin_2Bonsens'
+import Assurance from '@/src/components/atoms/Begin_3Assurance'
+import HighwayCode from '@/src/components/atoms/Begin_4HighwayCode'
+import Associations from '@/src/components/atoms/Begin_5Associations'
 
 export const metadata: Metadata = {
   title: 'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',

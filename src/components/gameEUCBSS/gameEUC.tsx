@@ -230,11 +230,38 @@ export default function RexEUC() {
     return () => clearInterval(interval)
   }, [isStarted, isGameOver, lives, score, cactusList])
 
+  //MISE EN PLACE DES ELEMENTS
   return (
     <div
       className="relative w-full max-w-md h-80 bg-white border shadow overflow-hidden mx-auto"
       style={{
         backgroundImage: 'url("/game/background-day.png")',
+      }}
+      onClick={() => {
+        if (isGameOver) {
+          setIsGameOver(false)
+          setIsStarted(true)
+          setScore(0)
+          setLives(1)
+          setBonusCount(0)
+        } else if (!isStarted) {
+          setIsStarted(true)
+        } else {
+          handleJump()
+        }
+      }}
+      onTouchStart={() => {
+        if (isGameOver) {
+          setIsGameOver(false)
+          setIsStarted(true)
+          setScore(0)
+          setLives(1)
+          setBonusCount(0)
+        } else if (!isStarted) {
+          setIsStarted(true)
+        } else {
+          handleJump()
+        }
       }}
     >
       {!isStarted && !isGameOver && (
