@@ -214,19 +214,17 @@ text {
     transform: scale(1) rotateY(0deg); /* Taille normale et aucune rotation */
     opacity: 1;
   }
-  40% {
-    transform: scale(0.8) rotateY(120deg); /* Légère rotation et agrandissement */
+  30% {
+    transform: scale(2) rotateY(360deg); /* Légère rotation et agrandissement */
     opacity: 0.9;
   }
-  60% {
-    transform: scale(1.2) rotateY(240deg); /* Rotation maximale et agrandissement maximum */
-    opacity: 0.8;
-  }
   100% {
-    transform: scale(1) rotateY(360deg); /* Retour à l'état initial */
-    opacity: 1;
+    transform: scale(1) rotateY(1080deg); /* Retour à l'état initial */
+    opacity: 0.7;
   }
 }
 .collected-animation {
+  left: 14%;
+  top: 60px; /* Ajuste cette valeur pour définir la position verticale */
   animation: collected-animation 2s ease-in-out;
 }

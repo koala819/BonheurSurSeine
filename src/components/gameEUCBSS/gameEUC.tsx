@@ -63,7 +63,7 @@ export default function RexEUC() {
     if (!isJumping) {
       jumpSound.current?.play()
       setIsJumping(true)
-      setTimeout(() => setIsJumping(false), 450) // il dure 450ms
+      setTimeout(() => setIsJumping(false), 400) // il dure 400ms
     }
   }
   // Gestion Barre espace
@@ -102,14 +102,14 @@ export default function RexEUC() {
       })
     }, 10000)
   }
-  // Boucle de génération de cactus : tous les 1sec à 3sec
+  // Boucle de génération de cactus : tous les 0.9sec à 3sec
   useEffect(() => {
     if (!isStarted || isGameOver) return
     let isCancelled = false
     const spawnLoop = () => {
       if (isCancelled) return
       addCactus()
-      const nextDelay = 900 + Math.random() * 2000
+      const nextDelay = 900 + Math.random() * 1500
       setTimeout(spawnLoop, nextDelay)
     }
     spawnLoop()
@@ -176,9 +176,9 @@ export default function RexEUC() {
           if (!cactusEl) return
           const cactusRect = cactusEl.getBoundingClientRect()
           const overlap = !(
-            dinoRect.right - 5 < cactusRect.left ||
-            dinoRect.left + 8 > cactusRect.right ||
-            dinoRect.bottom < cactusRect.top + 8 ||
+            dinoRect.right - 5 < cactusRect.left + 5 ||
+            dinoRect.left + 8 > cactusRect.right - 5 ||
+            dinoRect.bottom < cactusRect.top + 5 ||
             dinoRect.top > cactusRect.bottom
           )
 
@@ -186,7 +186,7 @@ export default function RexEUC() {
           if (overlap) {
             collisionSound.current?.play()
             setShowLifePerte(true)
-            setTimeout(() => setShowLifePerte(false), 1500)
+            setTimeout(() => setShowLifePerte(false), 1000) //meme durée que l'animation ping
             recentlyHitCactus.current.add(cactus.id)
             setTimeout(() => {
               recentlyHitCactus.current.delete(cactus.id)
@@ -218,7 +218,13 @@ export default function RexEUC() {
         )
         // Collecte du BONUS = +4bonus et 1 vie
         if (overlap && !bonus.classList.contains('collected')) {
-          bonus.classList.add('collected') // évite de déclencher plusieurs fois
+          // Empêche nouvelle collision
+          bonus.classList.add('collected')
+          // Déclenche l'animation de collecte
+          bonus.classList.add('collected-animation')
+          void bonus.offsetWidth // force le reflow
+
+          // Joue le son et traite le gain
           bonusSound.current?.play()
           setBonusCount((b) => {
             const newCount = b + 1
@@ -226,17 +232,16 @@ export default function RexEUC() {
               setLives((l) => l + 1)
               lifeSound.current?.play()
               setShowLifeGain(true)
-              setTimeout(() => setShowLifeGain(false), 1500)
+              setTimeout(() => setShowLifeGain(false), 1000) //meme durée sur animation-ping
               return 0
             }
             return newCount
           })
-          // Reset animation + re-apparition du bonus
-          bonus.classList.remove('collected-animation')
-          void bonus.offsetWidth // force le reflow
+          // Nettoyage après l'animation
           setTimeout(() => {
+            bonus.classList.remove('collected-animation')
             bonus.classList.remove('collected')
-          }, 1500) // évite les collisions multiples pendant 1.5s
+          }, 2500) // doit correspondre à la durée de l'animation CSS
         }
       }
     }, 50)
@@ -336,7 +341,7 @@ export default function RexEUC() {
       {/* LE WHEELER / DINO */}
       <div
         ref={dinoRef}
-        className={`absolute left-10 w-12 h-12 bg-no-repeat bg-contain transition-all duration-500 ${isJumping ? 'top-44' : 'top-56'} ${isStarted && !isGameOver ? 'animate-dino' : ''}`}
+        className={`absolute left-10 w-12 h-12 bg-no-repeat bg-contain transition-all duration-400 ${isJumping ? 'top-44' : 'top-56'} ${isStarted && !isGameOver ? 'animate-dino' : ''}`}
         style={{ backgroundImage: 'url("/game/wheelerBsS-sprite.png")' }}
       />
 

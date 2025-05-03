@@ -31,25 +31,25 @@ export default function GamePage() {
           &nbsp;◀️
         </p>
         <div className="blueBlock ml-8 mr-8 text-small mt-2">
-          🔸 «&nbsp;
+          😁 «&nbsp;
           <i>
             L&apos;abus de ce jeu n&apos;est pas dangereux pour la santé, à
             consommer sans modération
           </i>
-          &nbsp;». 😁 <br />
-          🔸 «&nbsp;
+          &nbsp;». <br />
+          😁 «&nbsp;
           <i>
             La roue électrique comporte des risques&nbsp;: pertes d&apos;argent,
             addiction, conflits familiaux… Retrouvez tous mes conseils sur
-            bonheursurseine.com
+            www.bonheursurseine.com
           </i>
-          &nbsp;». 😁 <br />
-          🔸 «&nbsp;
+          &nbsp;». <br />
+          😁 «&nbsp;
           <i>
             Pour se protéger et protéger les autres, appliquons les gestes
             barrières&nbsp;: prudence, casque, gants, et vitesse maitrisée
           </i>
-          &nbsp;». 😁
+          &nbsp;».
         </div>
       </div>
     </div>
