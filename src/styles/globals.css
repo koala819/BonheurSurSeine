@@ -240,6 +240,3 @@ text {
   top: 60px; /* Ajuste cette valeur pour définir la position verticale */
   animation: collected-animation 2s ease-in-out;
 }
-.block {
-  background-color: red;
-}
