@@ -29,19 +29,27 @@ export default function RexEUC() {
   const [showLifeGain, setShowLifeGain] = useState(false) // Affiche le "+1 ❤️"
   const [showLifePerte, setShowLifePerte] = useState(false) // Affiche le "-1 💀"
   const [showBonus, setShowBonus] = useState(true) // Faut-il afficher le bonus ?
+  const jumpAllowed = useRef(true) // Pour éviter les sauts multiples.
+
   const getCactusSpeed = () => {
-    if (score > 240) return 4.45
-    if (score > 220) return 4.5
-    if (score > 200) return 4.55
-    if (score > 180) return 4.6
-    if (score > 160) return 4.65
-    if (score > 140) return 4.7
-    if (score > 120) return 4.75
-    if (score > 100) return 4.8
-    if (score > 80) return 4.85
-    if (score > 60) return 4.9
-    if (score > 40) return 4.95
-    return 5 // durée en secondes
+    if (score > 500) return 4.45
+    if (score > 450) return 4.5
+    if (score > 400) return 4.55
+    if (score > 350) return 4.6
+    if (score > 300) return 4.65
+    if (score > 280) return 4.7
+    if (score > 260) return 4.75
+    if (score > 240) return 4.8
+    if (score > 220) return 4.85
+    if (score > 200) return 4.9
+    if (score > 180) return 4.95
+    if (score > 160) return 5.0
+    if (score > 140) return 5.05
+    if (score > 120) return 5.1
+    if (score > 100) return 5.15
+    if (score > 80) return 5.2
+    if (score > 60) return 5.25
+    return 5.3 // durée en secondes
   }
 
   const jumpSound = useRef<HTMLAudioElement>(null)
@@ -58,12 +66,22 @@ export default function RexEUC() {
   }, [])
 
   //-------------------------------------------------------------------//
-  // Gestion du Saut
+  // Gestion du Saut avec blocage anti-maintien de la barre espace
+  const jumpCooldown = useRef(false)
+
   const handleJump = () => {
-    if (!isJumping) {
+    if (!isJumping && !jumpCooldown.current) {
       jumpSound.current?.play()
       setIsJumping(true)
-      setTimeout(() => setIsJumping(false), 400) // il dure 400ms
+      jumpCooldown.current = true
+      // Animation de saut : 400ms
+      setTimeout(() => {
+        setIsJumping(false)
+      }, 380)
+      // Cooldown d'entrée : 200ms
+      setTimeout(() => {
+        jumpCooldown.current = false
+      }, 200)
     }
   }
   // Gestion Barre espace
@@ -71,22 +89,35 @@ export default function RexEUC() {
     const startHandler = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
         e.preventDefault()
+
         if (isGameOver) {
           setIsGameOver(false)
           setIsStarted(true)
           setScore(0)
           setLives(1)
           setBonusCount(0)
+          jumpAllowed.current = false
         } else if (!isStarted) {
           setIsStarted(true)
-        } else {
+          jumpAllowed.current = false
+        } else if (!isJumping && jumpAllowed.current) {
           handleJump()
+          jumpAllowed.current = false // bloque tant que touche pas relâchée
         }
       }
     }
+    const keyUpHandler = (e: KeyboardEvent) => {
+      if (e.code === 'Space') {
+        jumpAllowed.current = true
+      }
+    }
     window.addEventListener('keydown', startHandler)
-    return () => window.removeEventListener('keydown', startHandler)
-  }, [isStarted, isGameOver])
+    window.addEventListener('keyup', keyUpHandler)
+    return () => {
+      window.removeEventListener('keydown', startHandler)
+      window.removeEventListener('keyup', keyUpHandler)
+    }
+  }, [isStarted, isGameOver, isJumping])
 
   //-------------------------------------------------------------------//
   // Création des castus = chaque cactus a un id unique
@@ -94,7 +125,7 @@ export default function RexEUC() {
     cactusIdRef.current += 1
     const id = cactusIdRef.current
     setCactusList((prev) => [...prev, { id, left: 100 }])
-    // Supprime le cactus après 9 secondes
+    // Supprime le cactus après 10 secondes
     setTimeout(() => {
       setCactusList((prev) => {
         delete cactusRefs.current[id] // 🔧 important pour éviter les collisions fantômes
@@ -176,17 +207,17 @@ export default function RexEUC() {
           if (!cactusEl) return
           const cactusRect = cactusEl.getBoundingClientRect()
           const overlap = !(
-            dinoRect.right - 5 < cactusRect.left + 5 ||
-            dinoRect.left + 8 > cactusRect.right - 5 ||
-            dinoRect.bottom < cactusRect.top + 5 ||
-            dinoRect.top > cactusRect.bottom
+            dinoRect.right - 10 < cactusRect.left + 10 ||
+            dinoRect.left + 10 > cactusRect.right - 10 ||
+            dinoRect.bottom - 5 < cactusRect.top + 10 ||
+            dinoRect.top + 10 > cactusRect.bottom - 5
           )
 
           // Perte vie, sinon GameOver
           if (overlap) {
             collisionSound.current?.play()
             setShowLifePerte(true)
-            setTimeout(() => setShowLifePerte(false), 1000) //meme durée que l'animation ping
+            setTimeout(() => setShowLifePerte(false), 5000) //meme durée que l'animation ping
             recentlyHitCactus.current.add(cactus.id)
             setTimeout(() => {
               recentlyHitCactus.current.delete(cactus.id)
@@ -232,7 +263,7 @@ export default function RexEUC() {
               setLives((l) => l + 1)
               lifeSound.current?.play()
               setShowLifeGain(true)
-              setTimeout(() => setShowLifeGain(false), 1000) //meme durée sur animation-ping
+              setTimeout(() => setShowLifeGain(false), 5000) //meme durée sur animation-ping
               return 0
             }
             return newCount
@@ -257,7 +288,7 @@ export default function RexEUC() {
       style={{
         backgroundImage: 'url("/game/background-day.png")',
       }}
-      onClick={() => {
+      /*onClick={() => {
         if (isGameOver) {
           setIsGameOver(false)
           setIsStarted(true)
@@ -282,13 +313,25 @@ export default function RexEUC() {
         } else {
           handleJump()
         }
-      }}
+      }}*/
     >
       {!isStarted && !isGameOver && (
         <div className="absolute inset-0 flex items-center justify-center text-gray-700 text-xl z-10 bg-white/80">
-          <button className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-yellow-600">
-            Appuie sur Espace pour démarrer
+          <button
+            onClick={() => {
+              setIsGameOver(false)
+              setIsStarted(true)
+              setScore(0)
+              setLives(1)
+              setBonusCount(0)
+            }}
+            className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-yellow-600"
+          >
+            Démarrer
           </button>
+          <p className="absolute bottom-1 items-center text-xs font-bold text-black">
+            Appuie sur Espace pour sauter
+          </p>
         </div>
       )}
       {isGameOver && (
@@ -317,12 +360,12 @@ export default function RexEUC() {
         </div>
       )}
       {showLifeGain && (
-        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 text-red-600 text-xl font-bold animate-ping">
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 text-red-600 text-xl font-bold animate-pingVIEMORT">
           +1 ❤️
         </div>
       )}
       {showLifePerte && (
-        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 text-black text-xl font-bold animate-ping">
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 text-black text-xl font-bold animate-pingVIEMORT">
           -1 💀
         </div>
       )}

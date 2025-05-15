@@ -58,7 +58,7 @@ const CommonSense = () => {
               genouillères permet également de se protéger.
             </li>
             <li>
-              <strong>Sois visible</strong> mais n’aveugle pas les autres.
+              <strong>Sois visible</strong> mais n&apos;aveugle pas les autres.
             </li>
             <li>
               Utilise une <strong>sonnette</strong> pour signaler{' '}
@@ -75,9 +75,11 @@ const CommonSense = () => {
           </ul>
           <div className="blueBlock">
             <h4>
-              💟 Et n’oublie pas : bon comportement = bonne image = bonne route
-              !
+              💟 Et n’oublie pas : bon comportement = bonne image = bonne
+              route&nbsp;!
             </h4>
+            On se rend compte que quelque chose est précieux au moment où on le
+            perd.
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en juin 2024

@@ -127,6 +127,18 @@ text {
 /*---------------------------------------*/
 /*           AJOUT GAME                  */
 /*---------------------------------------*/
+/*Animation +1VIE -1MORT*/
+@keyframes pingVIEMORT {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-pingVIEMORT {
+  animation: pingVIEMORT 5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 /*Animation SOL*/
 @keyframes scrollGround {
   0% {
@@ -227,4 +239,7 @@ text {
   left: 14%;
   top: 60px; /* Ajuste cette valeur pour définir la position verticale */
   animation: collected-animation 2s ease-in-out;
+}
+.block {
+  background-color: red;
 }
