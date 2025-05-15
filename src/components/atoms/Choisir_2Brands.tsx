@@ -20,110 +20,10 @@ const Brands = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Le marché et les principales marques"
-          title={<h2>Le marché et les principales marques</h2>}
+          aria-label="Les principales marques"
+          title={<h2>Les principales marques</h2>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <span className="mt-0 mb-0">
-            Sur la base de mes tests, il est possible de distinguer{' '}
-            <strong>
-              <span className="text-brown-700">3 grandes catégories</span>
-            </strong>{' '}
-            sur le marché&nbsp;:
-          </span>
-          <p className="ml-5">
-            <Accordion>
-              <AccordionItem
-                key="1"
-                aria-label="Centre-Ville"
-                title={<span className="profilGyroroue">Centre-Ville</span>}
-                indicator={
-                  <span className="chevronAccordionItemsmall1 mr-1">
-                    &lsaquo;
-                  </span>
-                }
-              >
-                <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-                  <li>
-                    De part leur petite taille, ces roues sont souvent proposées
-                    en entrée de gamme. Mais{' '}
-                    <strong>
-                      ce sont elles les vraies reines de la micro-mobilité
-                    </strong>
-                    . Car elles sont absolument parfaites pour découvrir le
-                    pouvoir de la roue électrique&nbsp;:{' '}
-                    <strong>la liberté et la praticité</strong>&nbsp;!
-                  </li>
-                  <li>
-                    Compactes, faciles à transporter avec leur trolley, ultra
-                    maniables et assez légères (max 25kg), elles offrent ce que
-                    la roue a de meilleur. Les <strong>centres-villes</strong>{' '}
-                    et les <strong>pistes cyclables</strong> sont leur terrain
-                    de jeux favori. Elles sont parfaites pour rester{' '}
-                    <strong>discret</strong> (sous un siège, dans un magasin),
-                    pour l&apos;intermodalité, et faire des trajets de quelques
-                    kilomètres.
-                  </li>
-                </ul>
-              </AccordionItem>
-              <AccordionItem
-                key="2"
-                aria-label="Agglomération"
-                title={<span className="profilGyroroue">Agglomération</span>}
-                indicator={
-                  <span className="chevronAccordionItemsmall1 mr-1">
-                    &lsaquo;
-                  </span>
-                }
-              >
-                <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-                  <li>
-                    Un peu plus grosses et généralement équipées d&apos;une
-                    suspension, ces roues offrent plus{' '}
-                    <strong>de confort</strong> et plus{' '}
-                    <strong>d&apos;autonomie</strong>. Cependant, avec un poids
-                    dépassant parfois les 35kg, elles perdent en discrétion et
-                    en praticité malgré tous leurs atouts.
-                  </li>
-                  <li>
-                    Leur taille leur permet de circuler en{' '}
-                    <strong>agglomération</strong>, et un peu plus sereinement
-                    en ville sur la chaussée au côté des autres véhicules. Avec
-                    ces roues, on peut aller au travail la semaine, et aller
-                    aussi se promener le week-end !
-                  </li>
-                </ul>
-              </AccordionItem>
-              <AccordionItem
-                key="3"
-                aria-label="Loisir"
-                title={<span className="profilGyroroue">Loisir</span>}
-                indicator={
-                  <span className="chevronAccordionItemsmall1 mr-1">
-                    &lsaquo;
-                  </span>
-                }
-              >
-                <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-                  <li>
-                    Ici, <strong>aucune limite</strong> de taille, ni de poids !
-                    La praticité n&apos;est plus un argument, car ces modèles
-                    sont plutôt dédiés à la pratique sportive : performance ou
-                    grande randonnée. Ces roues affichent des{' '}
-                    <strong>spécifications techniques de haute volée</strong>{' '}
-                    (voltage, autonomie, puissance, suspension, vitesses max)
-                    que finalement peu de gens pourront exploiter totalement.
-                  </li>
-                  <li>
-                    On est sur les <strong>poids lourds</strong> de la
-                    micromobilité (40kg est un minimum). Avec seulement quelques
-                    modèles au début, l&apos;offre s&apos;est étoffée au fur et
-                    a mesure des améliorations techniques (suspension, voltage).
-                  </li>
-                </ul>
-              </AccordionItem>
-            </Accordion>
-          </p>
           <div className="flex justify-center">
             <Link href={gyroroues.src} passHref target="_blank">
               <Image
@@ -146,7 +46,7 @@ const Brands = () => {
               😉
             </span>
           </p>
-          <p className="ml-5">
+          <p className="ml-10">
             <Accordion isCompact>
               <AccordionItem
                 key="1"

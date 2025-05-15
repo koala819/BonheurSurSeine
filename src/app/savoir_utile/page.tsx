@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
-import Battery from '@/src/components/atoms/Practical_Battery'
-import Dico from '@/src/components/atoms/Practical_Dico'
-import Info from '@/src/components/atoms/Practical_Info_officiel'
-import Maintenance from '@/src/components/atoms/Practical_Maintenance'
-import Vrac from '@/src/components/atoms/Practical_Vrac'
+import Maintenance from '@/src/components/atoms/SavoirUtile_1Entretien'
+import Battery from '@/src/components/atoms/SavoirUtile_2Batterie'
+import Dico from '@/src/components/atoms/SavoirUtile_3Dico'
+import Info from '@/src/components/atoms/SavoirUtile_4Infos'
+import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
 export const metadata: Metadata = {
   title: 'Pour en savoir plus sur la roue électrique - Infos pratiques',

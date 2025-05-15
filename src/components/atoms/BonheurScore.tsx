@@ -131,13 +131,14 @@ export function BonheurScore({
           <p className="mb-0">
             🆙 Et pour avoir un éventail complet des roues que je teste, je
             t&apos;invite à revenir régulièrement.
+            {/*<Link href="/game">régulièrement.</Link>*/}
           </p>
         </footer>
         <p className="text-center text-gray-600 dark:text-gray-300 ml-2 mr-2">
           <i>
-            Je remercie tous mes tipeurs et partenaires (ponctuel, régulier,
-            passé, présent et futur) de me permettre de pouvoir faire tous ces
-            tests.
+            Je remercie tous mes contributeurs et partenaires (ponctuel ou
+            régulier, passé, présent et futur) de m&apos;avoir donné la chance
+            de pouvoir faire tous ces tests.
             <br />(
             <Link
               href="https://fr.tipeee.com/bonheur-sur-seine"

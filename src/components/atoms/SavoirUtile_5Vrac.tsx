@@ -43,7 +43,7 @@ const Practical_Vrac = () => {
           Reviens prochainement pour en savoir plus sur...
           <h5>🔜 Les moteurs</h5>
           <h5>
-            🔜 Pleins d&apos;autres sujet&nbsp;:{' '}
+            🔜 Pleins d&apos;autres sujets&nbsp;:{' '}
             <Link
               href="https://fr.tipeee.com/bonheur-sur-seine"
               target="_blank"

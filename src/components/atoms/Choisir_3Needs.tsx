@@ -49,7 +49,7 @@ const Needs = () => {
         </Checkbox>
         <Checkbox color="success">
           Je recherche en priorité&nbsp;: le confort&nbsp;? les
-          équipements&nbsp;? la performance&nbsp;?
+          équipements&nbsp;? la performance&nbsp;? la praticité&nbsp;?
         </Checkbox>
         <Checkbox color="success">
           Je recherche une roue avant tout munie d’une suspension&nbsp;?
@@ -67,6 +67,14 @@ const Needs = () => {
           plus&nbsp;?
         </Checkbox>
       </div>
+      <div className="blueBlock mb-4 mt-4">
+        <h3 className="mb-4">
+          🔎 Cela va de soit, mais non, on ne peut pas tout avoir !
+        </h3>
+        Si l&apos;on souhaite conserver un objet compact/léger, il faudra
+        forcément accepter de faire des concessions : batteries, suspension,
+        puissance, équipements, matériaux…
+      </div>{' '}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
         <br />
         article mis à jour en février 2025
