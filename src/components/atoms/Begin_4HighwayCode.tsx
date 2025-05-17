@@ -110,6 +110,14 @@ const HighwayCode = () => {
                     className="link-style"
                   >
                     R412-6-1
+                  </Link>{' '}
+                  et{' '}
+                  <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019277064/"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    R412-6-2
                   </Link>
                   ).
                 </li>
