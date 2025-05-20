@@ -12,6 +12,7 @@ import logo_app_eucworld from '@/public/logo_app_eucworld.webp'
 import logo_app_inmotion from '@/public/logo_app_inmotion.webp'
 import logo_app_kingsong from '@/public/logo_app_kingsong.webp'
 import logo_app_leaperkim from '@/public/logo_app_leaperkim.webp'
+import logo_app_nosfet from '@/public/logo_app_nosfet.png'
 import logo_app_wheelLog from '@/public/logo_app_wheelLog.webp'
 
 const Begin_premier_deballage = () => {
@@ -224,6 +225,37 @@ const Begin_premier_deballage = () => {
                   <td className="px-4 py-2 border border-gray-300 dark:border-gray-700">
                     <a
                       href="https://play.google.com/store/apps/details?id=com.laoniao.leaperkim"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-green-500 underline gap-2"
+                    >
+                      <FaAndroid /> Android
+                    </a>
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-100 dark:bg-gray-900">
+                  <td className="px-4 py-2 flex items-center gap-2 border border-gray-300 dark:border-gray-700">
+                    <Image
+                      src={logo_app_nosfet}
+                      alt="logo_app_nosfet"
+                      width={32}
+                      height={32}
+                      className="rounded-lg"
+                    />
+                    <strong>Nosfet</strong>
+                  </td>
+                  <td className="px-4 py-2 border border-gray-300 dark:border-gray-700">
+                    <a
+                      rel="noopener noreferrer"
+                      className="flex items-center  gap-2"
+                    >
+                      <FaApple /> indisponible
+                    </a>
+                  </td>
+                  <td className="px-4 py-2 border border-gray-300 dark:border-gray-700">
+                    <a
+                      href="https://www.nosfet.com/support"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 underline gap-2"
