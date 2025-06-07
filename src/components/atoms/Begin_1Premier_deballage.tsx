@@ -50,17 +50,28 @@ const Begin_premier_deballage = () => {
           </h4>
           <ul className="compactlist mt-0 mb-6 leading-tight">
             <li>
-              Généralement, le plus simple est de brancher le chargeur et de le
-              connecter à la roue.
+              Généralement, <strong>le plus simple</strong> est de brancher le
+              chargeur et de le connecter à la roue.
             </li>
             <li>
-              Chez Begode, la manipulation est{' '}
+              Chez Begode, la manipulation est parfaitement décrite{' '}
               <Link
                 href="https://www.youtube.com/watch?v=8HJws4b_Dtw"
                 target="_blank"
                 className="link-style"
               >
-                parfaitement décrite dans cette vidéo
+                dans cette vidéo
+              </Link>{' '}
+              des WheelersPro.
+            </li>
+            <li>
+              Chez LeaperKim, la manipulation est visible{' '}
+              <Link
+                href="https://youtu.be/K2Y33w_8SsE"
+                target="_blank"
+                className="link-style"
+              >
+                dans cette vidéo
               </Link>
               .
             </li>

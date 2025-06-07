@@ -77,8 +77,11 @@ const Practical_Dico = () => {
     )
 
   // Sélection des mots à afficher
-  const wordsToDisplay =
+  const wordsToDisplay = (
     searchTerm === '' ? glossary[activeLetter] || [] : filteredWords
+  )
+    .slice() // on copie pour ne pas modifier l'original.
+    .sort((a, b) => a.mot.localeCompare(b.mot)) // on trie par ordre alphabétique.
 
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
