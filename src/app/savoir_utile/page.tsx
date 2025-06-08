@@ -31,10 +31,10 @@ const Page = () => {
         </h3>
       </div>{' '}
       <Maintenance />
-      <Battery />
       <Dico />
-      <Info />
+      <Battery />
       <Vrac />
+      <Info />
       <div className="yellowBlock">
         <h3>
           ❤️ Enjoy, et n&apos;hésite pas à me dire ce que tu en penses... <br />

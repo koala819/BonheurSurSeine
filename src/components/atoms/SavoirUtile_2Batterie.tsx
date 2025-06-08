@@ -40,27 +40,29 @@ const Practical_Battery = () => {
           <h4 className="mt-6">➡️ En quelques mots&nbsp;:</h4>
           <div className="mb-8 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-4">
-              🔋 100% correspond à la tension maximale. <br />
-              🪫 0% correspond à la tension minimum. <br />
-              🤔 Entre les 2&nbsp;? <br />
-              C&apos;est selon les choix du fabricant qui décide de la manière
-              dont le % évolue, ainsi que des tensions maximum et minimum (pour
-              avoir une <strong>marge de sécurité</strong> et ne pas abimer les
-              cellules de la batteries). <br />
-              <br />
-              La diminution peut prendre une forme&nbsp;:
-              <br />
-              <span className="  mt-0 mb-0">
-                &bull; Linéaire (le % diminue de manière régulière, en même
-                temps que la tension).
+              <p>
+                🔋 100% correspond à la tension maximale. <br />
+                🪫 0% correspond à la tension minimum. <br />
+                🤔 Entre les 2&nbsp;? <br />
+                C&apos;est selon les choix du fabricant qui décide de la manière
+                dont le % évolue, ainsi que des tensions maximum et minimum
+                (pour avoir une <strong>marge de sécurité</strong> et ne pas
+                abimer les cellules de la batteries). <br />
                 <br />
-                &bull; Convexe (le % diminue doucement au début, puis rapidement
-                sur la fin de batterie).
+                La diminution peut prendre une forme&nbsp;:
                 <br />
-                &bull; Concave (le % diminue rapidement au début, puis doucement
-                sur la fin de batterie).
-              </span>
-              <br />
+                <span className="  mt-0 mb-0">
+                  &bull; Linéaire (le % diminue de manière régulière, en même
+                  temps que la tension).
+                  <br />
+                  &bull; Convexe (le % diminue doucement au début, puis
+                  rapidement sur la fin de batterie).
+                  <br />
+                  &bull; Concave (le % diminue rapidement au début, puis
+                  doucement sur la fin de batterie).
+                </span>
+                <br />
+              </p>
             </aside>
             <aside className="md:w-2/5 text-center text-xs">
               <Link href={Graphique_diminution.src} passHref target="_blank">
