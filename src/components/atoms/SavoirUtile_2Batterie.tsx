@@ -33,8 +33,7 @@ const Practical_Battery = () => {
           <div className="pinkBlock mb-4">
             <h3>
               ⚠️ On ne sollicite pas sa roue de la même manière (accélération,
-              vitesse) à 100% de batterie, qu&apos;à 50%, ou qu&apos;à 20% de
-              batterie...
+              vitesse) à 100%, 50%, ou 20% de batterie...
             </h3>
           </div>
           <h4 className="mt-6">➡️ En quelques mots&nbsp;:</h4>
