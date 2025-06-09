@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Mentions Légales de Bonheur Sur Seine - Transparence et Confiance',
   description:
-    "Découvrez les mentions légales de Bonheur Sur Seine : informations sur l'entreprise, politique de confidentialité, et gestion des cookies. Engagés pour votre sécurité.",
+    "Découvrez les mentions légales de BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies. Engagés pour votre sécurité.",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/mentions`,
   },
@@ -17,26 +17,20 @@ export default function Page() {
       <h3>Identification et publication</h3>
       <p>
         <strong>Nom du site web :</strong> Bonheur Sur Seine
-      </p>
-      <p>
+        <br />
         <strong>Numéro de Siret :</strong> 80294141900011
-      </p>
-      <p>
+        <br />
         <strong>Directeur de la publication :</strong> Raphaël L.
-      </p>
-      <p>
+        <br />
         <strong>Activité :</strong> Se déplacer en roue change la perception de
         la mobilité !!
-      </p>
-      <p>
+        <br />
         <strong>URL :</strong> www.bonheursurseine.com
-      </p>
-      <p>
+        <br />
         <strong>Localisation :</strong> 75000 Paris - France
       </p>
 
       <h3>Hébergement</h3>
-
       <p>
         Ce site a été réalisé par{' '}
         <Link
@@ -59,9 +53,8 @@ export default function Page() {
         </Link>
         , immatriculée à TOULOUSE sous le numéro RCS 852 548 379 et dont le
         siège social est situé à Toulouse (CP 31300).
-      </p>
-      <p>
-        <strong>Nom :</strong> Vercel
+        <br />
+        <strong>Site hébergé </strong>sur https://vercel.com
       </p>
 
       <h3>Conditions d&apos;utilisation</h3>
@@ -80,8 +73,7 @@ export default function Page() {
       <p>
         Ce document peut être mis à jour à tout moment, et il est de votre
         responsabilité de le vérifier fréquemment pour être à jour.
-      </p>
-      <p>
+        <br />
         Les informations fournies par ce site web (ci-après dénommées,
         <i>Bonheur sur Seine</i>) et nos réseaux sociaux, tels que{' '}
         <Link
@@ -102,12 +94,13 @@ export default function Page() {
         <i>Bonheur sur Seine</i> s&apos;efforce de fournir sur le site des
         informations aussi précises que possible. Toutefois, il ne pourra être
         tenue responsable des omissions, des inexactitudes et des carences dans
-        la mise à jour, qu’elles soient de son fait ou du fait des tiers
+        la mise à jour, qu&apos;elles soient de son fait ou du fait des tiers
         partenaires qui lui fournissent ces informations.
-      </p>
-      <p>
-        Toutes les informations indiquées sur le site sont données à titre
-        indicatif, et sont susceptibles d’évoluer.
+        <br />
+        <b>
+          Toutes les informations indiquées sur le site sont données à titre
+          indicatif , et sont susceptibles d&apos;évoluer.
+        </b>
       </p>
       <p>
         L&apos;éditeur est propriétaire des droits de propriété intellectuelle
@@ -116,7 +109,9 @@ export default function Page() {
         publiées restent la propriété de leurs ayant droit respectifs.
       </p>
       <ul className="list">
-        <li>Usage des roues électriques</li>
+        <li>
+          <b>Usage des roues électriques</b>
+        </li>
         <p>
           <i>Bonheur sur Seine</i> ne saurait être tenu responsable des
           accidents ou problèmes occasionnés par la conduite d’un véhicule
@@ -136,7 +131,9 @@ export default function Page() {
           envisagé les conséquences possibles en termes de non respect des
           réglementations ou en termes de garantie commerciale.
         </p>
-        <li>Propriété Intellectuelle</li>
+        <li>
+          <b>Propriété Intellectuelle</b>
+        </li>
         <p>
           Tous les éléments de ce site sont protégés par des{' '}
           <Link
@@ -188,7 +185,9 @@ export default function Page() {
           conformément aux dispositions des articles L.335-2 et suivants du Code
           de Propriété Intellectuelle.
         </p>
-        <li>Activités interdites</li>
+        <li>
+          <b>Activités interdites</b>
+        </li>
         <p>
           Vous ne pouvez pas accéder au contenu du site <i>Bonheur sur Seine</i>{' '}
           ni l&apos;utiliser à d&apos;autres fins que celles pour lesquelles
@@ -197,24 +196,30 @@ export default function Page() {
           d&apos;activités commerciales, à l&apos;exception de celles que nous
           soutenons ou approuvons explicitement.
         </p>
-        <li>Gestion du site</li>
-        <p>Nous nous réservons le droit, mais non l&apos;obligation, de :</p>
-        <ul className="list-decimal ml-12 space-y-4">
-          <li>
-            Surveiller le site <i>Bonheur sur Seine</i> pour repérer tout cas de
-            violation des présentes conditions d&apos;utilisation.
-          </li>
-          <li>
-            Prendre les mesures juridiques qui s&apos;imposent à l&apos;encontre
-            de toute personne qui, à notre seule discrétion, enfreint la loi ou
-            les présentes conditions d’utilisation.
-          </li>
-          <li>
-            Gérer le site <i>Bonheur sur Seine</i> de manière à protéger nos
-            droits et nos biens et à faciliter le bon fonctionnement du site.
-          </li>
-        </ul>
-        <li>Liens Hypertextes</li>
+        <li>
+          <b>Gestion du site</b>
+        </li>
+        <p>
+          Nous nous réservons le droit, mais non l&apos;obligation, de :
+          <ul className="list-decimal ml-12 space-y-0">
+            <li>
+              Surveiller le site <i>Bonheur sur Seine</i> pour repérer tout cas
+              de violation des présentes conditions d&apos;utilisation.
+            </li>
+            <li>
+              Prendre les mesures juridiques qui s&apos;imposent à
+              l&apos;encontre de toute personne qui, à notre seule discrétion,
+              enfreint la loi ou les présentes conditions d&apos;utilisation.
+            </li>
+            <li>
+              Gérer le site <i>Bonheur sur Seine</i> de manière à protéger nos
+              droits et nos biens et à faciliter le bon fonctionnement du site.
+            </li>
+          </ul>
+        </p>
+        <li>
+          <b>Liens Hypertextes</b>
+        </li>
         <p>
           Ce site web peut comporter des hyperliens vers d&apos;autres sites
           internet. Il est important de noter que notre entreprise ne peut être
@@ -228,17 +233,16 @@ export default function Page() {
         Les données personnelles collectées sur ce site sont strictement
         réservées à l&apos;usage interne de notre entreprise. En aucun cas,
         elles ne seront vendues, échangées ou louées à des tiers.
-      </p>
-      <p>
+        <br />
         Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous
         avez le droit d&apos;accéder à vos données, de les rectifier et de les
-        supprimer. Pour exercer ce droit, veuillez
+        supprimer. <br />
+        Pour exercer ce droit, veuillez
         <Link href={'/contact'} className="link-style ml-1">
           nous contacter
         </Link>
         .
-      </p>
-      <p>
+        <br />
         Nous nous engageons à respecter votre confidentialité et à protéger vos
         données personnelles.
       </p>
@@ -249,16 +253,17 @@ export default function Page() {
         par un serveur web du site internet visité. Les cookies sont stockés sur
         le PC de l&apos;internaute. Les cookies permettent durant une durée de
         vie qui varie de reconnaître la machine qui se connecte.
-      </p>
-      <p>
+        <br />
         Nous utilisons trois sortes de cookies : les cookies Fonctionnels,
         Statistiques, et Publicitaires.
+        <br />
+        Sur ce site web, les cookies sont utilisés pour :
+        <br />
+        <ul className="compactlist">
+          <li>Réaliser des statistiques de visites avec Google Analytics.</li>
+          <li>Vous offrir une meilleure expérience utilisateur.</li>
+        </ul>
       </p>
-      <p>Sur ce site web, les cookies sont utilisés pour :</p>
-      <ul className="list">
-        <li>Réaliser des statistiques de visites avec Google Analytics.</li>
-        <li>Vous offrir une meilleure expérience utilisateur.</li>
-      </ul>
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
         Mentions légales créées le <strong>30/01/2024</strong>
       </p>

@@ -7,9 +7,10 @@ import Info from '@/src/components/atoms/SavoirUtile_4Infos'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
 export const metadata: Metadata = {
-  title: 'Pour en savoir plus sur la roue électrique - Infos pratiques',
+  title:
+    'Bonheur Sur Seine – Savoir Utile : Pour des infos pratiques et en savoir plus sur la roue électrique',
   description:
-    'Découvrez quelques trucs et astuce pour mieux comprendre la roue électrique. Roulez en toute confiance.',
+    'Apprenez en plus (entretien, fabricants, etc) et découvrez trucs et astuce pour mieux comprendre la roue électrique. Roulez en toute confiance !',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/practical`,
   },

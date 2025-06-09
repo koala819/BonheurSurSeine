@@ -93,11 +93,9 @@ const Practical_Dico = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-6">
-            Ce petit lexique propose des{' '}
+            Ce lexique propose des{' '}
             <strong>explications simples et concises</strong> de quelques termes
             fréquemment utilisés dans l&apos;univers de la roue électrique.
-            <br />
-            Il est classé par ordre alphabétique.
           </p>
           <div className="blueBlock mb-8">
             <h4>
