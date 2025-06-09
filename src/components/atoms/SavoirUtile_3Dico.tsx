@@ -15,6 +15,7 @@ const Practical_Dico = () => {
     Record<string, { mot: string; definition: string; definition_new: any }[]>
   >({})
   const [isLoading, setIsLoading] = useState(true)
+  const [totalWords, setTotalWords] = useState(0)
 
   // Alphabet pour la navigation
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
@@ -24,7 +25,6 @@ const Practical_Dico = () => {
       setIsLoading(true)
       const client = createClient()
       const dicoEntries = await client.getAllByType('dico')
-
       // Transformer les données en un objet structuré par lettre
       const structuredGlossary: Record<
         string,
@@ -41,7 +41,7 @@ const Practical_Dico = () => {
           definition_new: entry.data.Definition_new ?? [],
         })
       })
-
+      setTotalWords(dicoEntries.length)
       setGlossary(structuredGlossary)
       setIsLoading(false)
     }
@@ -84,9 +84,6 @@ const Practical_Dico = () => {
       const search = searchTerm.toLowerCase()
       return mot.includes(search) || definitionText.includes(search)
     })
-  //.filter((entry) =>
-  //  entry.mot.toLowerCase().includes(searchTerm.toLowerCase()),
-  //)
 
   // Sélection des mots à afficher
   const wordsToDisplay = (
@@ -178,7 +175,7 @@ const Practical_Dico = () => {
 
           {/* Barre de navigation alphabétique */}
           <div className="p-4">
-            <div className="flex flex-wrap justify-center gap-1 my-2 text-sm">
+            <div className="flex flex-wrap justify-center gap-1 my-2 text-sm mt-0 mb-0">
               {alphabet.map((letter) => (
                 <button
                   key={letter}
@@ -196,6 +193,9 @@ const Practical_Dico = () => {
                 </button>
               ))}
             </div>
+            <p className="text-center text-sm text-gray-500 dark:text-gray-300 mt-0">
+              {totalWords} mots dans le lexique
+            </p>
           </div>
 
           {/* Tableau des mots et définitions */}
@@ -248,7 +248,7 @@ const Practical_Dico = () => {
           </div>
           {/* notes de fin et crédits */}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
-            article mis à jour en mars 2025, <br />
+            article mis à jour en juin 2025, <br />
             avec l&apos;aimable participation des membres du Discord&nbsp;:
             Fabien.wheel, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
             FabWheel, MaxCzl, N1c0, et Nelson.
