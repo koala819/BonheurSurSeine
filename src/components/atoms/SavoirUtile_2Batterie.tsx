@@ -5,8 +5,8 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Graphique_diminution from '@/public/BSS-Batterie_et_diminution_v20250419.png'
-import Tableaux_tensions from '@/public/BSS-Batterie_et_tension_v20250419.png'
+import Graphique_diminution from '@/public/techniques/BSS-Batterie_et_diminution_v20250419.png'
+import Tableaux_tensions from '@/public/techniques/BSS-Batterie_et_tension_v20250419.png'
 
 const Practical_Battery = () => {
   return (

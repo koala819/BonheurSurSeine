@@ -5,14 +5,14 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Logo_BG from '@/public/Logo_Begode.jpg'
-import Logo_EB from '@/public/Logo_ExtremeBull.jpg'
-import Logo_IM from '@/public/Logo_Inmotion.jpg'
-import Logo_KS from '@/public/Logo_Kingsong.jpg'
-import Logo_LK from '@/public/Logo_Leaperkim.jpg'
-import Logo_NB from '@/public/Logo_Ninebot.png'
-import Logo_NF from '@/public/Logo_Nosfet.png'
 import gyroroues from '@/public/gyroroues_bss202502.jpg'
+import Logo_BG from '@/public/marques/Logo_Begode.jpg'
+import Logo_EB from '@/public/marques/Logo_ExtremeBull.jpg'
+import Logo_IM from '@/public/marques/Logo_Inmotion.jpg'
+import Logo_KS from '@/public/marques/Logo_Kingsong.jpg'
+import Logo_LK from '@/public/marques/Logo_Leaperkim.jpg'
+import Logo_NB from '@/public/marques/Logo_Ninebot.png'
+import Logo_NF from '@/public/marques/Logo_Nosfet.png'
 
 const Brands = () => {
   return (

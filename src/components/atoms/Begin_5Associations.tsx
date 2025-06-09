@@ -8,8 +8,8 @@ import Link from 'next/link'
 
 import { UserProfile } from '@/src/types/models'
 
-import Anumme from '@/public/Anumme.png'
-import Wikiloc from '@/public/wikiloc_logo.svg'
+import Anumme from '@/public/marques/Anumme.png'
+import Wikiloc from '@/public/marques/wikiloc_logo.svg'
 
 const Associations = () => {
   const userProfiles: UserProfile[] = [
