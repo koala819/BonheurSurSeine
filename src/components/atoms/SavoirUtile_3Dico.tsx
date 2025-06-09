@@ -61,7 +61,7 @@ const Practical_Dico = () => {
     setSearchTerm(event.target.value)
   }
 
-  // Filtrage des mots par recherche
+  // Filtrage des mots par recherche (dans mot et définition_new)
   const filteredWords = allWords
     .filter(
       (
@@ -72,9 +72,21 @@ const Practical_Dico = () => {
         'mot' in entry &&
         typeof entry.mot === 'string',
     )
-    .filter((entry) =>
-      entry.mot.toLowerCase().includes(searchTerm.toLowerCase()),
-    )
+    .filter((entry) => {
+      const mot = entry.mot.toLowerCase()
+      const definitionText = Array.isArray(entry.definition_new)
+        ? entry.definition_new
+            .map((block) =>
+              typeof block.text === 'string' ? block.text.toLowerCase() : '',
+            )
+            .join(' ')
+        : ''
+      const search = searchTerm.toLowerCase()
+      return mot.includes(search) || definitionText.includes(search)
+    })
+  //.filter((entry) =>
+  //  entry.mot.toLowerCase().includes(searchTerm.toLowerCase()),
+  //)
 
   // Sélection des mots à afficher
   const wordsToDisplay = (
@@ -83,6 +95,55 @@ const Practical_Dico = () => {
     .slice() // on copie pour ne pas modifier l'original.
     .sort((a, b) => a.mot.localeCompare(b.mot)) // on trie par ordre alphabétique.
 
+  // Mise en JAUNE des mots affichés lors d'une recherche
+  // highlightText pour le champs MOT
+  const highlightText = (text: string, term: string) => {
+    if (!term) return text
+    const parts = text.split(new RegExp(`(${term})`, 'gi'))
+    return parts.map((part, i) =>
+      part.toLowerCase() === term.toLowerCase() ? (
+        <mark key={i} className="bg-yellow-200 text-black">
+          {part}
+        </mark>
+      ) : (
+        part
+      ),
+    )
+  }
+  // highlightRichText pour le champs DEFINITION_NEW
+  const highlightRichText = (richText: any[], term: string) => {
+    if (!term) return <RichText render={richText} />
+    return (
+      <>
+        {richText.map((block: any, i: number) => {
+          if (
+            block.type === 'paragraph' ||
+            block.type === 'heading1' ||
+            block.type.startsWith('heading')
+          ) {
+            const parts = block.text.split(new RegExp(`(${term})`, 'gi'))
+            return (
+              <p key={i} className="mb-2">
+                {parts.map((part: string, j: number) =>
+                  part.toLowerCase() === term.toLowerCase() ? (
+                    <mark key={j} className="bg-yellow-200 text-black">
+                      {part}
+                    </mark>
+                  ) : (
+                    part
+                  ),
+                )}
+              </p>
+            )
+          } else {
+            return null
+          }
+        })}
+      </>
+    )
+  }
+
+  //CODE DE LA PAGE
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
       <Accordion>
@@ -110,8 +171,8 @@ const Practical_Dico = () => {
               type="text"
               value={searchTerm}
               onChange={handleSearchChange}
-              placeholder="Rechercher un mot..."
-              className="p-2 border border-gray-300 bg-neutral-200 dark:bg-neutral-600"
+              placeholder="Rechercher un mot ou une définition..."
+              className="w-full max-w-xs p-2 border border-gray-300 bg-neutral-200 dark:bg-neutral-600"
             />
           </div>
 
@@ -158,12 +219,13 @@ const Practical_Dico = () => {
                     wordsToDisplay.map((entry, index) => (
                       <tr key={index}>
                         <td className="py-2 px-4 border-b dark:bg-gray-600 dark:text-gray-100">
-                          <strong>{entry.mot}</strong>
+                          <strong>
+                            {highlightText(entry.mot, searchTerm)}
+                          </strong>
                         </td>
                         <td className="py-2 px-4 border-b text-xs sm:text-sm md:text-base dark:bg-gray-600 dark:text-gray-100">
-                          {/* <span>{entry.definition}.</span> */}
                           {entry.definition_new ? (
-                            <RichText render={entry.definition_new} />
+                            highlightRichText(entry.definition_new, searchTerm)
                           ) : (
                             <span>Pas de définition.</span>
                           )}
