@@ -19,16 +19,15 @@ const Practical_Battery = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-2">
-            Pour rouler en sécurité et arriver à destination, il est{' '}
-            <strong>essentiel d&apos;avoir suffisamment d&apos;énergie</strong>{' '}
-            dans la batterie.
-            <br />
             Si le moteur demande plus d&apos;énergie que ne peut en fournir la
             batterie, la roue sera sans énergie et s&apos;arrêtera de
-            fonctionner&nbsp;! <br /> Il est donc <strong>vitale</strong> de
-            veiller à ce que <strong>la batterie</strong>,{' '}
-            <strong>à tout moment</strong>, ait suffisamment d&apos;énergie{' '}
-            <strong>pour répondre à la demande du moteur</strong>.
+            fonctionner&nbsp;! <br /> Il est donc <strong>vitale</strong>, pour
+            rouler en sécurité,{' '}
+            <strong>
+              de veiller à ce que la batterie ait, à tout moment, suffisamment
+              d&apos;énergie
+            </strong>{' '}
+            pour répondre à la demande du moteur.
           </p>
           <div className="pinkBlock mb-4">
             <h3>
@@ -46,7 +45,7 @@ const Practical_Battery = () => {
                 C&apos;est selon les choix du fabricant qui décide de la manière
                 dont le % évolue, ainsi que des tensions maximum et minimum
                 (pour avoir une <strong>marge de sécurité</strong> et ne pas
-                abimer les cellules de la batteries). <br />
+                abimer les cellules de la batterie). <br />
                 <br />
                 La diminution peut prendre une forme&nbsp;:
                 <br />
@@ -83,19 +82,19 @@ const Practical_Battery = () => {
             🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
             151.2v…) et une tension min de fonctionnement. <br />
             🔸 Le BMS (Battery Management System) mesure en temps réel la
-            tension qui diminuera au fur et à mesure de l&apos;utilisation.
+            tension qui diminue au fur et à mesure de l&apos;utilisation.
             <br />
             🔸 C&apos;est un calcul qui convertit cette tension instantanée en
             un pourcentage approximatif (de 100% à 0%). <br />
           </div>
           <h4 className="mt-6">➡️ Tension minimale</h4>
           <p>
-            Beaucoup de wheelers préfèrent donc{' '}
+            Beaucoup de wheelers préfèrent{' '}
             <strong>surveiller directement la tension</strong> de la batterie
-            pour connaitre son état, et{' '}
+            pour connaitre son état et{' '}
             <strong>décider dans quelle mesure solliciter la roue</strong>.{' '}
             <br />
-            Voici quelques chiffres utiles :
+            Voici quelques valeurs utiles :
           </p>
           <div className="mt-2 flex justify-center">
             <Link href={Tableaux_tensions.src} passHref target="_blank">
@@ -108,6 +107,12 @@ const Practical_Battery = () => {
               />
             </Link>
           </div>
+          <p className="text-gray-800 dark:text-gray-300 mt-2 text-s">
+            Attention, il s&apos;agit de données théoriques soumises à
+            l&apos;algorithme des fabricants et aux type de cellules qui peuvent
+            faire varier ces données.
+          </p>
+
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en avril 2025
           </p>
