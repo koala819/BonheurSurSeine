@@ -6,7 +6,7 @@ import Contact from '@/src/components/molecules/Contact'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Bonheur Sur Seine',
+  title: 'Bonheur Sur Seine – Vidéaste et Spécialiste Gyroroue',
   description:
     'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, contactez Bonheur Sur Seine.',
   alternates: {

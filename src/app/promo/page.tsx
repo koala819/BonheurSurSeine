@@ -6,7 +6,8 @@ import CardPromo from '@/src/components/atoms/CodePromo'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Mes Partenaires et Code Promos Exclusifs',
+  title:
+    'Bonheur Sur Seine – Codes Promo : Offres Partenaires et Réductions Exclusives',
   description:
     'Profitez de codes promo exclusifs chez les partenaires de Bonheur Sur Seine (accessoires et roues électriques).',
   alternates: {

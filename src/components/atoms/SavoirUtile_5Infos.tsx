@@ -27,9 +27,6 @@ const Practical_Info_officiel = () => {
               des nouveaux modèles, spécifications techniques, vidéos de
               démontage et de changement de pneus, navigation dans les menus,
               etc. <br />
-              <br />
-              Alors, si tu veux être sur d&apos;avoir les dernières informations
-              officielles&nbsp;:
             </aside>
             <aside className="md:w-2/5 text-right text-xs">
               <Image

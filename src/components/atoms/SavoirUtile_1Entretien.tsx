@@ -2,6 +2,10 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import Image from 'next/image'
+
+import Tableaux_tensions from '@/public/techniques/risques-batteries-lithium (by cnpp).png'
+
 const Maintenance = () => {
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
@@ -68,6 +72,15 @@ const Maintenance = () => {
                   charge sans surveillance.
                 </li>
               </ul>
+              <div className="mt-2 flex justify-center">
+                <Image
+                  src={Tableaux_tensions}
+                  alt="Principaux risques des batteries"
+                  width={768}
+                  height={432}
+                  className="rounded-lg cursor-pointer"
+                />
+              </div>
             </li>
           </ul>
 
@@ -82,8 +95,9 @@ const Maintenance = () => {
             <strong>immédiates ou à plus long terme</strong> (rouille,
             surchauffe, court-circuit et risque d&apos;incendie).
           </div>
+
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en mars 2024
+            article mis à jour en mars 2025
           </p>
         </AccordionItem>
       </Accordion>

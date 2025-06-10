@@ -6,14 +6,14 @@ import { FaAndroid, FaApple } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import logo_app_begode from '@/public/logo_app_begode.webp'
-import logo_app_darknessbot from '@/public/logo_app_darknessbot.webp'
-import logo_app_eucworld from '@/public/logo_app_eucworld.webp'
-import logo_app_inmotion from '@/public/logo_app_inmotion.webp'
-import logo_app_kingsong from '@/public/logo_app_kingsong.webp'
-import logo_app_leaperkim from '@/public/logo_app_leaperkim.webp'
-import logo_app_nosfet from '@/public/logo_app_nosfet.png'
-import logo_app_wheelLog from '@/public/logo_app_wheelLog.webp'
+import logo_app_begode from '@/public/marques/logo_app_begode.webp'
+import logo_app_darknessbot from '@/public/marques/logo_app_darknessbot.webp'
+import logo_app_eucworld from '@/public/marques/logo_app_eucworld.webp'
+import logo_app_inmotion from '@/public/marques/logo_app_inmotion.webp'
+import logo_app_kingsong from '@/public/marques/logo_app_kingsong.webp'
+import logo_app_leaperkim from '@/public/marques/logo_app_leaperkim.webp'
+import logo_app_nosfet from '@/public/marques/logo_app_nosfet.png'
+import logo_app_wheelLog from '@/public/marques/logo_app_wheelLog.webp'
 
 const Begin_premier_deballage = () => {
   return (

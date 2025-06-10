@@ -8,9 +8,10 @@ import HighwayCode from '@/src/components/atoms/Begin_4HighwayCode'
 import Associations from '@/src/components/atoms/Begin_5Associations'
 
 export const metadata: Metadata = {
-  title: 'Pour bien démarrer avec la roue électrique - Conseils et Sécurité',
+  title:
+    'Bonheur Sur Seine - Bien démarrer en roue électrique : Conseils et Sécurité',
   description:
-    'Découvrez quelques conseils pour débuter avec la roue électrique en France : sécurité, assurance, entretien, et plus. Roulez en gyroroue en toute confiance.',
+    'Conseils pour débuter la roue électrique : sécurité, assurance, code de la route, et plus encore. Roulez en gyroroue en France en toute confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/begin`,
   },
