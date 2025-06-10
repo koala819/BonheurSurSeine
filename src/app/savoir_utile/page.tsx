@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 import Maintenance from '@/src/components/atoms/SavoirUtile_1Entretien'
-import Battery from '@/src/components/atoms/SavoirUtile_2Batterie'
-import Dico from '@/src/components/atoms/SavoirUtile_3Dico'
-import Info from '@/src/components/atoms/SavoirUtile_4Infos'
-import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
+import Dico from '@/src/components/atoms/SavoirUtile_2Dico'
+import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
+import Vrac from '@/src/components/atoms/SavoirUtile_4Vrac'
+import Info from '@/src/components/atoms/SavoirUtile_5Infos'
 
 export const metadata: Metadata = {
   title:
@@ -39,7 +39,9 @@ const Page = () => {
       <div className="yellowBlock">
         <h3>
           ❤️ Enjoy, et n&apos;hésite pas à me dire ce que tu en penses... <br />
-          Comme dit mon papa&nbsp;: &laquo;&nbsp;
+          Cela m&apos;encourage énormément&nbsp;!
+          <br />
+          Et comme dit mon papa&nbsp;: &laquo;&nbsp;
           <i>Ce sont les bons clients qui font les bonnes maisons</i>
           &nbsp;!&nbsp;&raquo;
         </h3>

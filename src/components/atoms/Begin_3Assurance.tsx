@@ -2,7 +2,10 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import Image from 'next/image'
 import Link from 'next/link'
+
+import Image_news from '@/public/Image_assurance.jpg'
 
 const Assurance = () => {
   return (
@@ -14,34 +17,49 @@ const Assurance = () => {
           title={<h3>🛡️ L&apos;assurance</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
-          <div className="blueBlock mb-8">
-            <h3>
-              ☑️ L&apos;assurance est{' '}
-              <span className="text-xl sm:text-xl md:text-2xl underline text-brown-500">
-                obligatoire
-              </span>{' '}
-              ! (
-              <Link
-                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
-                target="_blank"
-                className="link-style"
-              >
-                L324-1
-              </Link>
-              )
-            </h3>
-            <span>
-              Si quelqu&apos;un te dit autre chose, soit il ment, soit il est
-              incompétent.
-            </span>
+          <div className="mb-8 flex flex-col md:flex-row items-center">
+            <aside className="md:w-3/5 space-y-4 mr-4">
+              <div className="blueBlock mb-0">
+                <h3>
+                  ☑️ L&apos;assurance est{' '}
+                  <span className="text-xl sm:text-xl md:text-2xl underline text-brown-500">
+                    obligatoire
+                  </span>{' '}
+                  ! (
+                  <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    L324-1
+                  </Link>
+                  )
+                </h3>
+                <span>
+                  Si quelqu&apos;un te dit autre chose, soit il ment, soit il
+                  est incompétent.
+                </span>
+              </div>
+            </aside>
+            <aside className="md:w-2/5 text-right text-xs">
+              <Image
+                src={Image_news}
+                alt="Image_news"
+                width={300}
+                height={195}
+                className="rounded-lg cursor-pointer"
+              />
+            </aside>
           </div>
+
           <h3>À retenir :</h3>
-          <ul className="list-disc pl-4 space-y-2 mb-4">
+          <ul className="list-disc pl-6 space-y-2 mb-4">
             <li>
               La roue est un <strong>véhicule terrestre à moteur</strong> qui
               doit être assurée. Le type de contrat est au minimum en{' '}
               <strong className="text-brown-500">responsabilité civile</strong>.
             </li>
+
             <li>
               La vignette (papillon vert){' '}
               <Link
@@ -87,10 +105,23 @@ const Assurance = () => {
               ).
             </li>
             <li>
-              Attention, les contrats d&apos;assurance habitation ne couvrent
-              généralement pas les EDPM, catégorie à laquelle appartiennent les
-              roues. Il faut un contrat d&apos;assurance dédié (comme pour une
-              moto ou une voiture).
+              <i>Attention</i>, les contrats d&apos;assurance habitation ne
+              couvrent généralement pas les EDPM, catégorie à laquelle
+              appartiennent les roues. Il faut un{' '}
+              <strong className="text-brown-500">
+                contrat d&apos;assurance dédié
+              </strong>{' '}
+              (comme pour une moto ou une voiture).
+            </li>
+            <li>
+              Chaque roue doit être assurée individuellement.{' '}
+              <strong>
+                Le contrat est lié au véhicule, pas à la personne &nbsp;:
+                2&nbsp;véhicules = 2&nbsp;contrats
+              </strong>
+              . Les packs ou formules multi-roue sont rares, et il n&apos;existe
+              pas d&apos;assurance &laquo;&nbsp;par personne&nbsp;&raquo; qui
+              couvre automatiquement toutes les roues que vous utilisez.
             </li>
             <li>
               En l&apos;absence d&apos;assurance, tu risques une amende
@@ -115,10 +146,10 @@ const Assurance = () => {
             </h4>
           </div>
           <p>
-            🚨 Comment réagir en cas d&apos;accident&nbsp;? Même sans gravité,
-            un accident génère toujours du stress : remplissez systématiquement
-            un constat amiable (l&apos;idéal est d&apos;en avoir 1 prérempli
-            avec ses informations d&apos;assurance).
+            🚨 <b>Comment réagir en cas d&apos;accident&nbsp;?</b> Même sans
+            gravité, un accident génère toujours du stress : remplissez
+            systématiquement un constat amiable (l&apos;idéal est d&apos;en
+            avoir 1 prérempli avec ses informations d&apos;assurance).
             <br />
             Pour en savoir plus, consultez cet{' '}
             <Link
@@ -131,8 +162,8 @@ const Assurance = () => {
             &nbsp;!
           </p>
           <p className="mt-3">
-            💰 Le budget ? Assurer un EDPM coûte 5-10€/mois. La quasi totalité
-            des assureurs propose des contrats adaptés. Tu trouveras un{' '}
+            💰 <b>Le budget ?</b> Assurer un EDPM coûte 5-10€/mois. La quasi
+            totalité des assureurs propose des contrats adaptés. Tu trouveras un{' '}
             <Link href="/promo" className="link-style">
               code Promo
             </Link>{' '}
