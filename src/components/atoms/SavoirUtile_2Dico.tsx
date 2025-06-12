@@ -4,7 +4,11 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import { RichText } from 'prismic-reactjs'
 import { useEffect, useState } from 'react'
 
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { createClient } from '@/prismicio'
+import Image_dico from '@/public/Image_dico (light).jpg'
 
 //import { KeyTextField } from '@prismicio/types'
 
@@ -146,20 +150,34 @@ const Practical_Dico = () => {
       <Accordion>
         <AccordionItem
           key="1"
-          aria-label="Le petit dico du bonheur"
-          title={<h3>📖 Le petit dico du Bonheur</h3>}
+          aria-label="Le p'tit Dico du bonheur"
+          title={<h3>📖 Le p&apos;tit Dico du Bonheur</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <p className="mb-6">
-            Ce lexique propose des{' '}
-            <strong>explications simples et concises</strong> de quelques termes
-            fréquemment utilisés dans l&apos;univers de la roue électrique.
-          </p>
-          <div className="blueBlock mb-8">
-            <h4>
-              📖 Pour décrypter le langage des wheelers&nbsp;: 1 mot juste vaut
-              1&nbsp;000 explications&nbsp;!
-            </h4>
+          <div className="mb-4 flex flex-col md:flex-row items-center">
+            <aside className="md:w-3/5 space-y-4 mr-4">
+              <p className="mb-4">
+                Ce lexique propose des{' '}
+                <strong>explications simples et concises</strong> de quelques
+                termes fréquemment utilisés dans l&apos;univers de la roue
+                électrique.
+              </p>
+              <div className="blueBlock mb-1">
+                <h4>
+                  📖 Pour décrypter le langage des wheelers&nbsp;: 1&nbsp;mot
+                  juste vaut 1&nbsp;000 explications&nbsp;!
+                </h4>
+              </div>
+            </aside>
+            <aside className="md:w-2/5 text-center text-xs mt-1 mb-1">
+              <Image
+                src={Image_dico}
+                alt="Image_dico"
+                width={400}
+                height={195}
+                className="rounded-lg cursor-pointer"
+              />
+            </aside>
           </div>
 
           {/* Champ de recherche */}
@@ -247,11 +265,19 @@ const Practical_Dico = () => {
             )}
           </div>
           {/* notes de fin et crédits */}
+
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
             article mis à jour en juin 2025, <br />
-            avec l&apos;aimable participation des membres du Discord&nbsp;:
-            Fabien.wheel, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
-            FabWheel, MaxCzl, N1c0, et Nelson.
+            avec{' '}
+            <Link
+              href="https://discord.com/invite/Jhgw7C96Jf"
+              target="_blank"
+              className="w-12 h-12 md:w-16 md:h-16 hover:text-blue-600"
+            >
+              l&apos;aimable participation des membres du Discord&nbsp;
+            </Link>
+            : Fabien.wheel, N1c0, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
+            FabWheel, MaxCzl et Nelson.
           </p>
         </AccordionItem>
       </Accordion>
