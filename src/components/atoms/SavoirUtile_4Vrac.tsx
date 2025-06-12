@@ -2,7 +2,10 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import Image from 'next/image'
 import Link from 'next/link'
+
+import Image_carto from '@/public/Image_cartographie(light).jpg'
 
 const Practical_Vrac = () => {
   return (
@@ -15,9 +18,111 @@ const Practical_Vrac = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           {/*--------------------------------------------------------*/}
-          {/*                       1er BLOC                         */}
+          {/*                        BLOC 1                          */}
           {/*--------------------------------------------------------*/}
-          <h4>➡️ Mode d&apos;emploi IQlight V2</h4>
+          <h4 className="mt-0">
+            ➡️ Sites/Applis pour la navigation et les tracés GPX
+          </h4>
+          <div className="mb-8 flex flex-col md:flex-row items-center">
+            <aside className="md:w-3/5 space-y-4 mr-4">
+              Tout le monde connait{' '}
+              <Link
+                href="https://maps.google.com/"
+                target="_blank"
+                className="link-style"
+              >
+                GoogleMap
+              </Link>
+              &nbsp;! <br />
+              Mais il existe d&apos;autres sites spécialisés&nbsp;: <br />(
+              <span className="text-gray-500 dark:text-gray-300 mt-0">
+                <i>citées par ordre alphabétique</i>
+              </span>
+              😉)
+              <section className="flex flex-col md:flex-row justify-between mb-8">
+                <div className="mb-4 md:mb-0 md:mr-4">
+                  <strong>Cartographie</strong>
+                  <ul className="compactlist">
+                    <li>
+                      <Link
+                        href="https://gmap2xxx.sdesimeur.com/"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Gmap2xxx
+                      </Link>{' '}
+                      (pour avoir des fichiers GPX)
+                    </li>
+                    <li>
+                      <Link
+                        href="https://www.opencyclemap.org/"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Open Cycle Map
+                      </Link>{' '}
+                    </li>
+                    <li>
+                      <Link
+                        href="https://www.af3v.org/"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Voies vertes de l&apos;AF3V
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mb-4 md:mb-0 md:mr-4">
+                  <strong>Navigation</strong>
+                  <ul className="compactlist">
+                    <li>
+                      <Link
+                        href="https://geovelo.app/fr/"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Géovélo
+                      </Link>{' '}
+                    </li>
+
+                    <li>
+                      <Link
+                        href="https://www.komoot.com/fr-fr"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Komoot
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://fr.wikiloc.com/"
+                        target="_blank"
+                        className="link-style"
+                      >
+                        Wikiloc
+                      </Link>{' '}
+                      (dont je parle dans <i>&ldquo;Bien Démarrer&rdquo;</i>)
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </aside>
+            <aside className="md:w-2/5 text-right text-xs">
+              <Image
+                src={Image_carto}
+                alt="Image_carto"
+                width={400}
+                height={195}
+                className="rounded-lg cursor-pointer"
+              />
+            </aside>
+          </div>
+          {/*--------------------------------------------------------*/}
+          {/*                       BLOC 2                           */}
+          {/*--------------------------------------------------------*/}
+          <h4 className="mt-20">➡️ Mode d&apos;emploi IQlight V2</h4>
           <p>
             La version française (<i>traduite par mes soins</i>) du mode
             d&apos;emploi des magnifiques{' '}
@@ -49,110 +154,25 @@ const Practical_Vrac = () => {
             .
           </p>
           {/*--------------------------------------------------------*/}
-          {/*                       2ème BLOC                        */}
+          {/*                        BLOC 3                          */}
           {/*--------------------------------------------------------*/}
-          <h4 className="mt-10">
-            ➡️ Sites/Applis pour la navigation et les tracés GPX
-          </h4>
-          Tout le monde connait{' '}
-          <Link
-            href="https://maps.google.com/"
-            target="_blank"
-            className="link-style"
-          >
-            GoogleMap
-          </Link>
-          &nbsp;! Mais il existe d&apos;autres sites spécialisés&nbsp;: <br />(
-          <span className="text-gray-500 dark:text-gray-300 mt-0">
-            <i>citées par ordre alphabétique</i>
-          </span>
-          😉)
-          <section className="flex flex-col md:flex-row justify-between mb-8">
-            <div className="mb-4 md:mb-0 md:mr-4">
-              <strong>Cartographie</strong>
-              <ul className="compactlist">
-                <li>
-                  <Link
-                    href="https://gmap2xxx.sdesimeur.com/"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Gmap2xxx
-                  </Link>{' '}
-                  (pour manipuler les fichiers GPX)
-                </li>
-                <li>
-                  <Link
-                    href="https://www.opencyclemap.org/"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Open Cycle Map
-                  </Link>{' '}
-                </li>
-                <li>
-                  <Link
-                    href="https://www.af3v.org/"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Voies vertes de l&apos;AF3V
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="mb-4 md:mb-0 md:mr-4">
-              <strong>Navigation</strong>
-              <ul className="compactlist">
-                <li>
-                  <Link
-                    href="https://geovelo.app/fr/"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Géovélo
-                  </Link>{' '}
-                </li>
-
-                <li>
-                  <Link
-                    href="https://www.komoot.com/fr-fr"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Komoot
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://fr.wikiloc.com/"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    Wikiloc
-                  </Link>{' '}
-                  (dont je parle dans <i>&ldquo;Bien Démarrer&rdquo;</i>)
-                </li>
-              </ul>
-            </div>
-          </section>
-          {/*--------------------------------------------------------*/}
-          {/*                       3ème BLOC                        */}
-          {/*--------------------------------------------------------*/}
-          <h3 className="text-center mt-20 mb-0">
+          <h3 className="text-center mt-28 mb-0">
             🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧
           </h3>
           Reviens prochainement pour en savoir plus sur...
           <h5>🔜 Les moteurs</h5>
+          <h5>🔜 Les suspensions</h5>
           <h5>
             🔜 Pleins d&apos;autres sujets&nbsp;:{' '}
-            <Link
-              href="https://fr.tipeee.com/bonheur-sur-seine"
-              target="_blank"
-              className="link-style"
-            >
-              Ne clique pas ici
-            </Link>
+            <i>
+              <Link
+                href="https://fr.tipeee.com/bonheur-sur-seine"
+                target="_blank"
+                className="link-style"
+              >
+                Ne clique pas ici
+              </Link>
+            </i>
           </h5>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">

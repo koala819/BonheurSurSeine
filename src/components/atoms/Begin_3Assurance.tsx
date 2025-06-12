@@ -5,7 +5,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_news from '@/public/Image_assurance.jpg'
+import Image_assurance from '@/public/Image_assurance.jpg'
 
 const Assurance = () => {
   return (
@@ -24,8 +24,8 @@ const Assurance = () => {
                   ☑️ L&apos;assurance est{' '}
                   <span className="text-xl sm:text-xl md:text-2xl underline text-brown-500">
                     obligatoire
-                  </span>{' '}
-                  ! (
+                  </span>
+                  &nbsp;! (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
                     target="_blank"
@@ -41,11 +41,11 @@ const Assurance = () => {
                 </span>
               </div>
             </aside>
-            <aside className="md:w-2/5 text-right text-xs">
+            <aside className="md:w-2/5 text-center text-xs mt-1 mb-1">
               <Image
-                src={Image_news}
-                alt="Image_news"
-                width={300}
+                src={Image_assurance}
+                alt="Image_assurance"
+                width={320}
                 height={195}
                 className="rounded-lg cursor-pointer"
               />
