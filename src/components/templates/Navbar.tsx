@@ -72,47 +72,110 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex " justify="center">
-        <NavbarItem isActive={path.includes('/BonheurScore')}>
-          <Link
-            href="/BonheurScore"
-            className="text-white hover:text-text-link"
-          >
-            BonheurScore
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/BonheurScore')}>
+            <Link
+              href="/BonheurScore"
+              className="text-white hover:text-text-link"
+            >
+              BonheurScore
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸Les roues</li>
+              <li>🔸Mes tests</li>
+              <li>🔸Mes vidéos</li>
+            </ul>
+          </div>
+        </div>
 
-        <NavbarItem isActive={path.includes('/promo')}>
-          <Link href="/promo" className="text-white hover:text-text-link">
-            Codes Promo
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/promo')}>
+            <Link href="/promo" className="text-white hover:text-text-link">
+              Codes Promo
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸Mes Partenaires</li>
+              <li>🔸Offres Exclusives</li>
+            </ul>
+          </div>
+        </div>
 
-        <NavbarItem isActive={path.includes('/choix')}>
-          <Link href="/choix" className="text-white hover:text-text-link">
-            Choisir sa Roue
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/choix')}>
+            <Link href="/choix" className="text-white hover:text-text-link">
+              Choisir sa Roue
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸Le marché</li>
+              <li>🔸Les marques</li>
+              <li>🔸Ses besoins</li>
+              <li>🔸Comparer</li>
+            </ul>
+          </div>
+        </div>
 
-        <NavbarItem isActive={path.includes('/begin')}>
-          <Link href="/begin" className="text-white hover:text-text-link">
-            Bien Démarrer
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/begin')}>
+            <Link href="/begin" className="text-white hover:text-text-link">
+              Bien Démarrer
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸Le bon sens</li>
+              <li>🔸L&apos;assurance</li>
+              <li>🔸Le code de la route</li>
+              <li>🔸Groupe & associations</li>
+            </ul>
+          </div>
+        </div>
 
-        <NavbarItem isActive={path.includes('/savoir_utile')}>
-          <Link
-            href="/savoir_utile"
-            className="text-white hover:text-text-link"
-          >
-            Savoir Utile
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/savoir_utile')}>
+            <Link
+              href="/savoir_utile"
+              className="text-white hover:text-text-link"
+            >
+              Savoir Utile
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸L&apos;entretien</li>
+              <li>🔸Le p&apos;tit Dico du Bonheur</li>
+              <li>🔸Trouver son chemin</li>
+              <li>🔸Batterie et autonomie</li>
+              <li>🔸Savoir en vrac</li>
+              <li>🔸Infos officiels constructeurs</li>
+            </ul>
+          </div>
+        </div>
 
-        <NavbarItem isActive={path.includes('/contact')}>
-          <Link href="/contact" className="text-white hover:text-text-link">
-            Remerciements
-          </Link>
-        </NavbarItem>
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/contact')}>
+            <Link href="/contact" className="text-white hover:text-text-link">
+              Remerciements
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>🔸Dire Merci !</li>
+              <li>🔸Soutenir mon travail</li>
+            </ul>
+          </div>
+        </div>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
