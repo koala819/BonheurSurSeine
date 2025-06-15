@@ -58,6 +58,10 @@ text {
   @apply mt-4 space-y-8 rounded bg-yellow-200 p-4 dark:bg-yellow-800 md:ml-2 md:mr-2 md:mt-0;
 }
 
+.greenBlock {
+  @apply mt-4 space-y-8 rounded bg-emerald-100 p-4 dark:bg-emerald-800 md:ml-2 md:mr-2 md:mt-0;
+}
+
 .profilGyroroue {
   @apply text-xl font-semibold text-brown-700 dark:text-brown-200;
 }

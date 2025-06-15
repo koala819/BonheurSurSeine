@@ -15,49 +15,66 @@ const Practical_Battery = () => {
         <AccordionItem
           key="1"
           aria-label="Pourcentage batterie"
-          title={<h3> ⚡ Le pourcentage batterie</h3>}
+          title={<h3> ⚡ Batterie et autonomie</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-2">
-            Si le moteur demande plus d&apos;énergie que ne peut en fournir la
-            batterie, la roue sera sans énergie et s&apos;arrêtera de
-            fonctionner&nbsp;! <br /> Il est donc <strong>vitale</strong>, pour
-            rouler en sécurité,{' '}
+            Le pourcentage batterrie est utile, rapide à lire, simple à
+            comprendre, mais…{' '}
+          </p>
+          <div className="pinkBlock mb-4">
+            <h3>
+              ⚠️ On ne sollicite <u>pas</u> (accélération, vitesse, etc.) sa
+              roue de la même manière à 100%, 50%, ou 20% de batterie…
+            </h3>
+          </div>
+
+          <p className="mb-2">
+            Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
             <strong>
               de veiller à ce que la batterie ait, à tout moment, suffisamment
               d&apos;énergie
             </strong>{' '}
             pour répondre à la demande du moteur.
+            <br />
+            Si le moteur demande plus d&apos;énergie que ne peut en fournir la
+            batterie, la roue sera sans énergie et… ce sera la chute&nbsp;!
           </p>
-          <div className="pinkBlock mb-4">
-            <h3>
-              ⚠️ On ne sollicite pas sa roue de la même manière (accélération,
-              vitesse) à 100%, 50%, ou 20% de batterie...
-            </h3>
+
+          <div className="blueBlock mb-4">
+            <h4 className="mb-0 mt-0">
+              L&apos;autonomie n&apos;est pas une donnée absolue. <br />
+            </h4>
+            Elle est fonction de nombreux paramètres&nbsp;:{' '}
+            <i>
+              poids du wheeler, accélération et vitesse, vent et température
+              ambiante, profil et nature du trajet…
+            </i>
           </div>
+
           <h4 className="mt-6">➡️ En quelques mots&nbsp;:</h4>
           <div className="mb-8 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-4">
               <p>
-                🔋 100% correspond à la tension maximale. <br />
-                🪫 0% correspond à la tension minimum. <br />
-                🤔 Entre les 2&nbsp;? <br />
-                C&apos;est selon les choix du fabricant qui décide de la manière
-                dont le % évolue, ainsi que des tensions maximum et minimum
-                (pour avoir une <strong>marge de sécurité</strong> et ne pas
-                abimer les cellules de la batterie). <br />
+                🔋&nbsp;100%&nbsp;: la tension maximale. <br />
+                🪫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;: la tension minimum.{' '}
                 <br />
-                La diminution peut prendre une forme&nbsp;:
+                🤔 Entre les 2&nbsp;? Le fabricant décide de la manière dont le
+                % évolue, ainsi que des tensions max/min (pour avoir une{' '}
+                <strong>marge de sécurité</strong> et ne pas abimer les cellules
+                de la batterie). <br />
+                <br />
+                La diminution du % peut prendre une forme&nbsp;:
                 <br />
                 <span className="  mt-0 mb-0">
-                  &bull; Linéaire (le % diminue de manière régulière, en même
+                  &bull; Linéaire (il diminue de manière régulière, en même
                   temps que la tension).
                   <br />
-                  &bull; Convexe (le % diminue doucement au début, puis
-                  rapidement sur la fin de batterie).
+                  &bull; Convexe (il diminue doucement au début, puis rapidement
+                  sur la fin de batterie).
                   <br />
-                  &bull; Concave (le % diminue rapidement au début, puis
-                  doucement sur la fin de batterie).
+                  &bull; Concave (il diminue rapidement au début, puis doucement
+                  sur la fin de batterie).
                 </span>
                 <br />
               </p>
@@ -89,12 +106,20 @@ const Practical_Battery = () => {
           </div>
           <h4 className="mt-6">➡️ Tension minimale</h4>
           <p>
-            Beaucoup de wheelers préfèrent{' '}
-            <strong>surveiller directement la tension</strong> de la batterie
-            pour connaitre son état et{' '}
-            <strong>décider dans quelle mesure solliciter la roue</strong>.{' '}
+            Certains préfèrent{' '}
+            <strong>surveiller directement la tension</strong> pour connaitre
+            l&apos;état de la batterie.
             <br />
-            Voici quelques valeurs utiles :
+            Il faut alors garder en tête que{' '}
+            <strong>la tension ne diminue pas de manière linéaire</strong> avec
+            le kilométrage parcouru&nbsp;! <br />
+            Voici quelques valeurs utiles pour décider dans quelle mesure
+            solliciter la roue&nbsp;:
+          </p>
+          <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">
+            Attention, il s&apos;agit de données théoriques soumises à
+            l&apos;algorithme des fabricants et aux modèles des cellules qui
+            feront varier ces données.
           </p>
           <div className="mt-2 flex justify-center">
             <Link href={Tableaux_tensions.src} passHref target="_blank">
@@ -107,11 +132,6 @@ const Practical_Battery = () => {
               />
             </Link>
           </div>
-          <p className="text-gray-800 dark:text-gray-300 mt-2 text-s">
-            Attention, il s&apos;agit de données théoriques soumises à
-            l&apos;algorithme des fabricants et aux type de cellules qui peuvent
-            faire varier ces données.
-          </p>
 
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en avril 2025

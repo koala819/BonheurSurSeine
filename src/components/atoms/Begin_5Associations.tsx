@@ -6,39 +6,10 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { UserProfile } from '@/src/types/models'
-
+import Discord from '@/public/Discord.png'
 import Anumme from '@/public/marques/Anumme.png'
-import Wikiloc from '@/public/marques/wikiloc_logo.svg'
 
 const Associations = () => {
-  const userProfiles: UserProfile[] = [
-    {
-      name: 'Fabien',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=5325392',
-      imageUrl:
-        'https://s2.wklcdn.com/image_177/5325392/photo.jpg?1595180668172',
-    },
-    {
-      name: 'Olig',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=2126120',
-      imageUrl:
-        'https://s2.wklcdn.com/image_70/2126120/photo.jpg?1605908986646',
-    },
-    {
-      name: 'Tonton Polo',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=7067439',
-      imageUrl:
-        'https://s0.wklcdn.com/image_235/7067439/photo.jpg?1682195125259',
-    },
-    {
-      name: 'Marko',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=3131352',
-      imageUrl:
-        'https://s0.wklcdn.com/image_104/3131352/photo.jpg?1529266630389',
-    },
-  ]
-
   return (
     <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
       <Accordion>
@@ -85,80 +56,52 @@ const Associations = () => {
           </section>
 
           <section className="pt-8">
-            <h2>Wikiloc</h2>
-            <div className="blueBlock mb-8">
-              <h4>
-                📢 En 2 mots&nbsp;: &laquo;&nbsp;Allons rouler !&nbsp;&raquo;
-              </h4>
-            </div>
-            <div className="flex flex-col lg:flex-row mb-8">
-              <aside className="lg:w-7/12 space-y-8 mb-1">
-                <p>
-                  Ce site permet de <strong>partager des itinéraires</strong>,
-                  de les enregistrer et les documenter (textes, photos,
-                  commentaires), et de télécharger les tracés GPS. Parfait pour
-                  aider les autres, et bénéficier de leurs expériences afin
-                  d&apos;organiser ses propres sorties.
-                  <br />
-                  Il existe 2 catégories utilisées par la communauté :
-                  <i>“Monocycle de montagne”</i> et <i>“Segway”</i>.
-                </p>
-              </aside>
-
-              <aside className="lg:w-5/12 flex items-center justify-center">
-                <Link href={'https://fr.wikiloc.com/'} passHref target="_blank">
-                  <Image
-                    src={Wikiloc}
-                    alt="Wikiloc Logo"
-                    width={300}
-                    height={500}
-                    className="rounded-lg cursor-pointer"
-                  />
-                </Link>
-              </aside>
-            </div>
-            <p className="mb-0">
-              Voici quelques contributeurs très actifs pour{' '}
-              <strong>découvrir de supers parcours</strong>&nbsp;:
-            </p>
-            <div className="pt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-              {userProfiles.map((user) => (
-                <Link
-                  href={user.profileUrl}
-                  target="_blank"
-                  key={user.name}
-                  className=" hover:bg-gray-300 hover:dark:bg-gray-600 rounded-xl p-8"
-                >
-                  <div className="flex flex-col w-full">
-                    <h4 className="text-center mt-2">{user.name}</h4>
-                    <div className=" flex justify-center w-full py-2">
-                      <Image
-                        src={
-                          user.imageUrl || '/public/BonheurSurSeine_logo.png'
-                        }
-                        alt={user.name}
-                        className="w-28 h-28 object-cover rounded-full"
-                        width={400}
-                        height={400}
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="pt-8">
             <h2>Les associations</h2>
-            <div className="blueBlock mb-8">
+            <div className="blueBlock mb-4">
               <h4>
                 📢 &laquo;&nbsp;Le bonheur n&apos;est réel que lorsqu&apos;il
                 est partagé.&nbsp;&raquo;
               </h4>
             </div>
-            <p>
-              On trouve des associations un peu partout. Tu en trouveras plein
-              sur cette carte (magnifique travail réalisé par{' '}
+            <div className="flex flex-col sm:flex-row mb-0">
+              <aside className="sm:w-8/12 flex items-center justify-center">
+                <p>
+                  N&apos;hésite pas à{' '}
+                  <Link
+                    href="https://discord.com/invite/Jhgw7C96Jf"
+                    target="_blank"
+                    className="w-12 h-12 md:w-16 md:h-16
+                text-blue-800 hover:text-yellow-500
+                dark:text-blue-400
+                dark:hover:text-yellow-500"
+                  >
+                    <b>rejoindre le Discord</b>
+                  </Link>{' '}
+                  pour rentrer en contact avec des wheelers de ta région&nbsp;:
+                  il a été <strong>créé pour ça&nbsp;!</strong>
+                </p>
+              </aside>
+
+              <aside className="sm:w-4/12 flex items-center justify-center">
+                <Link
+                  href={'https://discord.com/invite/Jhgw7C96Jf'}
+                  target="_blank"
+                  className="transition-transform transform hover:scale-125 flex items-center"
+                >
+                  <Image
+                    src={Discord}
+                    alt="Discord Logo"
+                    width={120}
+                    height={120}
+                    className="rounded-lg cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-115"
+                  />
+                </Link>
+              </aside>
+            </div>
+
+            <p className="mt-0">
+              On trouve des groupes et des associations un peu partout. Tu en
+              trouveras plein sur cette carte (magnifique travail réalisé par{' '}
               <Link
                 //href={'https://leswheelerssarthois.fr/'}
                 href={'https://leswheelerssarthois.asptt.com/'}
@@ -171,7 +114,7 @@ const Associations = () => {
               que je remercie) :
             </p>
             <div className="flex flex-col lg:flex-row mt-8">
-              <aside className="lg:w-1/2 flex items-center justify-center">
+              <aside className="lg:w-7/12 flex items-center justify-center">
                 <iframe
                   src="https://www.google.com/maps/d/embed?mid=1Y9MEriN0xb-_4wEnTdJdRho7BXps4cy1&ehbc=2E312F"
                   width="640"
@@ -179,19 +122,24 @@ const Associations = () => {
                 ></iframe>
               </aside>
 
-              <aside className="lg:w-1/2 pt-8 lg:pt-0 lg:pl-8">
+              <aside className="lg:w-5/12 pt-8 lg:pt-0 lg:pl-8">
                 <p>Autant d&apos;opportunités de : </p>
                 <ul className="compactlist mt-1 mb-4">
-                  <li>Faire découvrir la roue électrique.</li>
-                  <li>Rencontrer d&apos;autres passionnés.</li>
                   <li>
-                    Partager des expériences autour de cette passion commune.
+                    <b>Rencontrer</b> d&apos;autres passionnés.
                   </li>
                   <li>
-                    Découvrir d&apos;autres façons de faire de la roue
+                    <b>Partager</b> des expériences autour de cette passion
+                    commune.
+                  </li>
+                  <li>
+                    <b>Découvrir</b> d&apos;autres façons de faire de la roue
                     (freestyle, randonneurs, racer, off road, acrobates, etc.).
                   </li>
-                  <li>Participer à l&apos;organisation d&apos;événements.</li>
+                  <li>
+                    <b>Participer</b> à l&apos;organisation d&apos;événements.
+                  </li>
+                  <li>Faire connaitre la roue électrique.</li>
                 </ul>
                 <div className="relative w-full pb-[56.25%]">
                   <iframe

@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 
 import Maintenance from '@/src/components/atoms/SavoirUtile_1Entretien'
 import Dico from '@/src/components/atoms/SavoirUtile_2Dico'
-import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
-import Vrac from '@/src/components/atoms/SavoirUtile_4Vrac'
-import Info from '@/src/components/atoms/SavoirUtile_5Infos'
+import Navi from '@/src/components/atoms/SavoirUtile_3Navi'
+import Battery from '@/src/components/atoms/SavoirUtile_4Batterie'
+import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
+import Info from '@/src/components/atoms/SavoirUtile_6Infos'
 
 export const metadata: Metadata = {
   title:
@@ -33,6 +34,7 @@ const Page = () => {
       </div>{' '}
       <Maintenance />
       <Dico />
+      <Navi />
       <Battery />
       <Vrac />
       <Info />

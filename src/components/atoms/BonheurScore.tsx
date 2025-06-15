@@ -130,26 +130,33 @@ export function BonheurScore({
 
           <p className="mb-0">
             🆙 Et pour avoir un éventail complet des roues que je teste, je
-            t&apos;invite à revenir régulièrement.
+            t&apos;invite à <b>revenir régulièrement</b>.
             {/*<Link href="/game">régulièrement.</Link>*/}
           </p>
         </footer>
-        <p className="text-center text-gray-600 dark:text-gray-300 ml-2 mr-2">
-          <i>
-            Je remercie tous mes contributeurs et partenaires (ponctuel ou
-            régulier, passé, présent et futur) de m&apos;avoir donné la chance
-            de pouvoir faire tous ces tests.
-            <br />(
+
+        {/*------------------REMERCIEMENTS-------------------*/}
+        <div className="rounded leading-relaxed p-1 bg-stone-300 dark:bg-zinc-700 ml-2 mr-2 md:ml-20 md:mr-20 lg:ml-36 lg:mr-36">
+          <p className="text-justify italic text-gray-900 dark:text-gray-300">
+            <span className="block w-fit mx-auto text-center">
+              Je remercie chaleureusement tous mes contributeurs et partenaires
+              (ponctuel ou régulier, passé, présent et futur) de m&apos;avoir
+              donné la chance de réaliser tous ces tests.
+            </span>
+          </p>
+          <p className="italic text-center text-gray-900 dark:text-gray-300">
+            (
             <Link
               href="https://fr.tipeee.com/bonheur-sur-seine"
               target="_blank"
-              className="link-style"
+              className="underline"
             >
               Ne clique pas ici
             </Link>
             )
-          </i>
-        </p>
+          </p>
+        </div>
+
         {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
         <div className="mb-2 flex justify-between items-center">
           <div>

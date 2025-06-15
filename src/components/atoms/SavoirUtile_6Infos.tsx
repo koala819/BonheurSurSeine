@@ -19,16 +19,18 @@ const Practical_Info_officiel = () => {
           }
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <div className="mb-8 flex flex-col md:flex-row items-center">
-            <aside className="md:w-3/5 space-y-4 mr-4">
-              On y pense peu, mais les constructeurs communiquent
-              beaucoup&nbsp;! 😉
-              <br /> <br /> Selon les marques, on a un peu de tout : annonces
-              des nouveaux modèles, spécifications techniques, vidéos de
-              démontage et de changement de pneus, navigation dans les menus,
-              etc. <br />
+          <div className="mb-8 flex flex-col sm:flex-row items-center">
+            <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
+              <p>
+                On y pense peu, mais les constructeurs communiquent
+                beaucoup&nbsp;! 😉
+                <br /> <br /> Selon les marques, on a un peu de tout : annonces
+                des nouveaux modèles, spécifications techniques, vidéos de
+                démontage et de changement de pneus, navigation dans les menus,
+                etc.
+              </p>
             </aside>
-            <aside className="md:w-2/5 text-right text-xs">
+            <aside className="sm:w-1/3 md:w-2/5 text-right text-xs">
               <Image
                 src={Image_news}
                 alt="Image_news"
