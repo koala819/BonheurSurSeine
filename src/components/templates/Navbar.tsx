@@ -157,7 +157,7 @@ export function Top() {
               <li>🔸Trouver son chemin</li>
               <li>🔸Batterie et autonomie</li>
               <li>🔸Savoir en vrac</li>
-              <li>🔸Infos officiels constructeurs</li>
+              <li>🔸Infos officiels</li>
             </ul>
           </div>
         </div>
