@@ -150,7 +150,7 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸L&apos;entretien</li>
               <li>🔸Le p&apos;tit Dico du Bonheur</li>
