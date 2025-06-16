@@ -9,8 +9,8 @@ const Quote = () => {
   return (
     <div className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
       <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
-        Pour soutenir mon travail, accéder à des contenus supplémentaires
-        et chatter en privé, rejoins-moi sur
+        Pour soutenir mon travail, accéder à des contenus supplémentaires et
+        chatter en privé, rejoins-moi sur
       </p>
 
       <div className="flex flex-row justify-center items-center gap-4 mt-4">

@@ -144,18 +144,54 @@ const Practical_Dico = () => {
     )
   }
 
+  //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
+  const [openKeys, setOpenKeys] = useState<string[]>([])
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash === 'dico') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('dico')
+      }
+    } // Appel initial
+
+    handleHashChange() // Écoute les changements de hash (clics internes)
+    window.addEventListener('hashchange', handleHashChange)
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
+  //CODE POUR SCROLL VERS L'ANCRAGE DEPUIS LA NAVBARBAR
+  useEffect(() => {
+    if (scrollTarget) {
+      const el = document.getElementById(scrollTarget)
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }, 300)
+      }
+    }
+  }, [scrollTarget])
+
   //CODE DE LA PAGE
   return (
-    <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
-      <Accordion>
+    <section
+      id="dico"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+    >
+      <Accordion
+        selectedKeys={openKeys}
+        onSelectionChange={(keys) => setOpenKeys(Array.from(keys) as string[])}
+      >
         <AccordionItem
           key="1"
           aria-label="Le p'tit Dico du bonheur"
           title={<h3>📖 Le p&apos;tit Dico du Bonheur</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <div className="mb-4 flex flex-col md:flex-row items-center">
-            <aside className="md:w-3/5 space-y-4 mr-4">
+          <div className="mb-4 flex flex-col sm:flex-row items-center">
+            <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
               <p className="mb-4">
                 Ce lexique propose des{' '}
                 <strong>explications simples et concises</strong> de quelques
@@ -163,13 +199,13 @@ const Practical_Dico = () => {
                 électrique.
               </p>
               <div className="blueBlock mb-1">
-                <h4>
+                <b>
                   📖 Pour décrypter le langage des wheelers&nbsp;: 1&nbsp;mot
                   juste vaut 1&nbsp;000 explications&nbsp;!
-                </h4>
+                </b>
               </div>
             </aside>
-            <aside className="md:w-2/5 text-center text-xs mt-1 mb-1">
+            <aside className="sm:w-1/3 md:w-2/5 text-center text-xs mt-1 mb-1">
               <Image
                 src={Image_dico}
                 alt="Image_dico"

@@ -1,6 +1,7 @@
 'use client'
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
+import { useEffect, useState } from 'react'
 import { FaAndroid, FaApple } from 'react-icons/fa'
 
 import Image from 'next/image'
@@ -16,16 +17,50 @@ import logo_app_nosfet from '@/public/marques/logo_app_nosfet.png'
 import logo_app_wheelLog from '@/public/marques/logo_app_wheelLog.webp'
 
 const Begin_premier_deballage = () => {
+  //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
+  const [openKeys, setOpenKeys] = useState<string[]>([])
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash === 'deballage') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('deballage')
+      }
+    } // Appel initial
+
+    handleHashChange() // Écoute les changements de hash (clics internes)
+    window.addEventListener('hashchange', handleHashChange)
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
+  //CODE POUR SCROLL VERS L'ANCRAGE DEPUIS LA NAVBARBAR
+  useEffect(() => {
+    if (scrollTarget) {
+      const el = document.getElementById(scrollTarget)
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }, 300)
+      }
+    }
+  }, [scrollTarget])
+
   return (
-    <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
-      <Accordion>
+    <section
+      id="deballage"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+    >
+      <Accordion
+        selectedKeys={openKeys}
+        onSelectionChange={(keys) => setOpenKeys(Array.from(keys) as string[])}
+      >
         <AccordionItem
           key="1"
           aria-label="Premier déballage"
           title={<h3>📦 Premier déballage</h3>}
-          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
-          //indicator={<strong className="chevronAccordionItem">&lt;</strong>}
-          //</Accordion>indicator={<strong className="chevronAccordionItem">◀</strong>}
+          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-4">
             Lorsque que tu ouvres le carton, il est normal que la roue ne

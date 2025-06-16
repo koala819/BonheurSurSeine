@@ -6,7 +6,10 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
+import Discord from '@/public/Discord.png'
+import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
+import Tipeee from '@/public/Tipeee.svg'
 import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Contact({
@@ -98,8 +101,9 @@ export default function Contact({
       </header>
 */}
 
-      <section className="flex flex-col lg:flex-row my-4 lg:my-8">
-        <aside className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0">
+      <section className="flex flex-col lg:flex-row my-2 lg:my-6">
+        <aside className="w-full flex justify-center mb-0 lg:mb-0">
+          {/*lg:w-1/2 */}
           <picture className="flex flex-col items-center px-4 w-full">
             <Image
               src={bonheurSurSeine}
@@ -231,9 +235,58 @@ export default function Contact({
 */}
       </section>
 
+      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
+          Pour soutenir mon travail, accéder à des contenus supplémentaires et
+          chatter en privé, rejoins-moi sur
+        </p>
+
+        <div className="flex flex-row justify-center items-center gap-4 mt-0">
+          <Link
+            href="https://fr.tipeee.com/bonheur-sur-seine"
+            target="_blank"
+            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 transition-transform transform hover:scale-110"
+          >
+            <Image
+              alt="Tipee logo"
+              src={Tipeee}
+              width={40}
+              height={40}
+              className="opacity-80 hover:opacity-100"
+            />
+          </Link>
+          <Link
+            href="https://www.patreon.com/c/BonheursurSeine"
+            target="_blank"
+            className="flex p-2 transition-transform transform hover:scale-110"
+          >
+            <Image
+              alt="Patreon logo"
+              src={Patreon}
+              width={40}
+              height={40}
+              className="opacity-80 hover:opacity-100"
+            />
+          </Link>
+          <Link
+            href="https://discord.com/invite/Jhgw7C96Jf"
+            target="_blank"
+            className="flex p-2 transition-transform transform hover:scale-110"
+          >
+            <Image
+              alt="Discord logo"
+              src={Discord}
+              width={64}
+              height={64}
+              className="opacity-80 hover:opacity-100"
+            />
+          </Link>
+        </div>
+      </div>
+
       <section className="space-y-2 my-4">
         <h2>Remerciements</h2>
-        <p className="text-sm">
+        <p className="text-sm text-justify">
           <b>Bonheur sur Seine</b>, ce sont des vidéos
           <Link
             href={'https://www.youtube.com/c/BonheursurSeine'}
@@ -244,17 +297,17 @@ export default function Contact({
             YouTube
           </Link>
           , mais c&apos;est aussi et surtout des rencontres,{' '}
-          <i className="text-emerald-800 dark:text-emerald-600">
+          <i className="text-emerald-800 dark:text-emerald-500">
             &laquo;&nbsp;des gens qui m&apos;ont tendu la main, peut-être à un
             moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et
             c&apos;est assez curieux de se dire que les hasards, les rencontres,
-            forgent une destinée... <br /> Parce que quand on a le goût de la
+            forgent une destinée… <br /> Parce que quand on a le goût de la
             chose, quand on a le goût de la chose bien faite, le beau geste,
             parfois on ne trouve pas l&apos;interlocuteur en face je dirais, le
             miroir qui vous aide à avancer. Alors ça n&apos;est pas mon cas,
-            comme je disais là, puisque moi au contraire, j&apos;ai pu : et je
-            dis merci à la vie, je lui dis merci, je chante la vie, je danse la
-            vie… je ne suis qu&apos;amour ! <br />
+            comme je disais là, puisque moi au contraire, j&apos;ai pu&nbsp;: et
+            je dis merci à la vie, je lui dis merci, je chante la vie, je danse
+            la vie… je ne suis qu&apos;amour&nbsp;! <br />
             Et finalement, quand beaucoup de gens aujourd&apos;hui me
             disent&nbsp;: «&nbsp;Mais comment fais-tu pour avoir cette
             humanité&nbsp;?&nbsp;», et bien je leur réponds très simplement, je

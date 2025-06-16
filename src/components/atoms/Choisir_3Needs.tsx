@@ -4,7 +4,10 @@ import { Checkbox } from '@nextui-org/react'
 
 const Needs = () => {
   return (
-    <section className="my-8 space-y-2 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6">
+    <section
+      id="besoins"
+      className="scroll-mt-24 my-8 space-y-2 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6"
+    >
       <h2>Bien identifier ses besoins</h2>
       <div className="blueBlock mb-8 mt-0">
         <h3 className="mb-4">
@@ -67,7 +70,7 @@ const Needs = () => {
           plus&nbsp;?
         </Checkbox>
       </div>
-      <div className="blueBlock mb-4 mt-4">
+      <div className="greenBlock mb-4 mt-4">
         <h3 className="mb-4">
           🔎 Cela va de soit, mais non, on ne peut pas tout avoir !
         </h3>
