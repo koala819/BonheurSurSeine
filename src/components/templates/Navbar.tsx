@@ -82,7 +82,7 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Les roues</li>
               <li>🔸Mes tests</li>
@@ -98,7 +98,7 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Mes Partenaires</li>
               <li>🔸Offres Exclusives</li>
@@ -113,12 +113,40 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-48 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li>🔸Le marché</li>
-              <li>🔸Les marques</li>
-              <li>🔸Ses besoins</li>
-              <li>🔸Comparer</li>
+              <li>
+                <Link
+                  href="/choix#marche"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Le marché
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/choix#marques"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Les marques
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/choix#besoins"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Ses besoins
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/choix#comparer"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Comparer
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -130,12 +158,48 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li>🔸Le bon sens</li>
-              <li>🔸L&apos;assurance</li>
-              <li>🔸Le code de la route</li>
-              <li>🔸Groupe & associations</li>
+              <li>
+                <Link
+                  href="/begin#deballage"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Premier déballage
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/begin#bonsens"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Le bon sens
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/begin#assurance"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Assurance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/begin#code"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Code de la route
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/begin#asso"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Groupes & associations
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -150,14 +214,56 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li>🔸L&apos;entretien</li>
-              <li>🔸Le p&apos;tit Dico du Bonheur</li>
-              <li>🔸Trouver son chemin</li>
-              <li>🔸Batterie et autonomie</li>
-              <li>🔸Savoir en vrac</li>
-              <li>🔸Infos officiels</li>
+              <li>
+                <Link
+                  href="/savoir_utile#entretien"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸L&apos;entretien
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/savoir_utile#dico"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Le p&apos;tit Dico du Bonheur
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/savoir_utile#navi"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Trouver son chemin
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/savoir_utile#batterie"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Batterie et autonomie
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/savoir_utile#vrac"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Savoir en vrac
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/savoir_utile#infos"
+                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Infos constructeurs
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -169,7 +275,7 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full mt-2 hidden w-56 rounded-lg bg-white dark:text-white dark:bg-gray-800 shadow-lg group-hover:block z-50">
+          <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Dire Merci !</li>
               <li>🔸Soutenir mon travail</li>

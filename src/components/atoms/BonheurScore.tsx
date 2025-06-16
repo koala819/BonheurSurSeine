@@ -140,8 +140,9 @@ export function BonheurScore({
           <p className="text-justify italic text-gray-900 dark:text-gray-300">
             <span className="block w-fit mx-auto text-center">
               Je remercie chaleureusement tous mes contributeurs et partenaires
-              (ponctuel ou régulier, passé, présent et futur) de m&apos;avoir
-              donné la chance de réaliser tous ces tests.
+              (ponctuels ou réguliers, passés, présents ou futurs). Grâce à leur
+              soutien, j&apos;ai la chance de vivre cette belle aventure et de
+              réaliser tous ces tests avec enthousiasme et passion.
             </span>
           </p>
           <p className="italic text-center text-gray-900 dark:text-gray-300">

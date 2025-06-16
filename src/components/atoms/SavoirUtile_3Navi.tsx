@@ -1,6 +1,7 @@
 'use client'
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
+import { useEffect, useState } from 'react'
 import { FaAndroid, FaApple } from 'react-icons/fa'
 
 import Image from 'next/image'
@@ -39,9 +40,45 @@ const Practical_Vrac = () => {
     },
   ]
 
+  //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
+  const [openKeys, setOpenKeys] = useState<string[]>([])
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '')
+      if (hash === 'dico') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('dico')
+      }
+    } // Appel initial
+
+    handleHashChange() // Écoute les changements de hash (clics internes)
+    window.addEventListener('hashchange', handleHashChange)
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [])
+  //CODE POUR SCROLL VERS L'ANCRAGE DEPUIS LA NAVBARBAR
+  useEffect(() => {
+    if (scrollTarget) {
+      const el = document.getElementById(scrollTarget)
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }, 300)
+      }
+    }
+  }, [scrollTarget])
+
   return (
-    <section className="my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6">
-      <Accordion>
+    <section
+      id="dico"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+    >
+      <Accordion
+        selectedKeys={openKeys}
+        onSelectionChange={(keys) => setOpenKeys(Array.from(keys) as string[])}
+      >
         <AccordionItem
           key="1"
           aria-label="Trouver son chemin : applis & cartes"

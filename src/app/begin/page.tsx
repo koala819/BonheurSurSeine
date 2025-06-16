@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Premier_deballage from '@/src/components/atoms/Begin_1Premier_deballage'
-import CommonSense from '@/src/components/atoms/Begin_2Bonsens'
-import Assurance from '@/src/components/atoms/Begin_3Assurance'
-import HighwayCode from '@/src/components/atoms/Begin_4HighwayCode'
-import Associations from '@/src/components/atoms/Begin_5Associations'
+import Premier_deballage from '@/src/components/atoms/Démarrer_1Premier_deballage'
+import CommonSense from '@/src/components/atoms/Démarrer_2Bonsens'
+import Assurance from '@/src/components/atoms/Démarrer_3Assurance'
+import HighwayCode from '@/src/components/atoms/Démarrer_4HighwayCode'
+import Associations from '@/src/components/atoms/Démarrer_5Associations'
 
 export const metadata: Metadata = {
   title:

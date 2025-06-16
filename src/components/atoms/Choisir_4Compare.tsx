@@ -13,11 +13,15 @@ const Compare = () => {
   const logo = theme === 'dark' ? blackLogo : whitelogo
 
   return (
-    <section className="my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6">
+    <section
+      id="comparer"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700  shadow-md rounded-lg p-6 mb-6"
+    >
       <h2>Comparer</h2>
+
       <div className="md:ml-6 blueBlock">
         <h3 className="mb-4">
-          📢 &laquo;&nbsp;Choisir, c’est aussi renoncer…&nbsp;&raquo;
+          📢 &laquo;&nbsp;Choisir, c&apos;est aussi renoncer…&nbsp;&raquo;
         </h3>
         Pour faire un choix éclairé, il faut peser les avantages et les
         inconvénients, et tenir compte de ses contraintes.
