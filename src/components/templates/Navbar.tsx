@@ -219,7 +219,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#entretien"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸L&apos;entretien
                 </Link>
@@ -227,7 +227,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#dico"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le p&apos;tit Dico du Bonheur
                 </Link>
@@ -235,7 +235,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#navi"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Trouver son chemin
                 </Link>
@@ -243,7 +243,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#batterie"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Batterie et autonomie
                 </Link>
@@ -251,7 +251,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#vrac"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Savoir en vrac
                 </Link>
@@ -259,7 +259,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#infos"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Infos constructeurs
                 </Link>
