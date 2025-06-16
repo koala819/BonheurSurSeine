@@ -83,10 +83,10 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="text-s italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
-              <li>🔸Les roues</li>
-              <li>🔸Mes tests</li>
-              <li>🔸Mes vidéos</li>
+            <ul className="text-s italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li className="text-sm">🔸Les roues</li>
+              <li className="text-sm">🔸Mes tests</li>
+              <li className="text-sm">🔸Mes vidéos</li>
             </ul>
           </div>
         </div>
@@ -99,9 +99,9 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
-              <li>🔸Mes Partenaires</li>
-              <li>🔸Offres Exclusives</li>
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li className="text-sm">🔸Mes Partenaires</li>
+              <li className="text-sm">🔸Offres Exclusives</li>
             </ul>
           </div>
         </div>
@@ -114,11 +114,11 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/choix#marche"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le marché
                 </Link>
@@ -126,7 +126,7 @@ export function Top() {
               <li>
                 <Link
                   href="/choix#marques"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Les marques
                 </Link>
@@ -134,7 +134,7 @@ export function Top() {
               <li>
                 <Link
                   href="/choix#besoins"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Ses besoins
                 </Link>
@@ -142,7 +142,7 @@ export function Top() {
               <li>
                 <Link
                   href="/choix#comparer"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Comparer
                 </Link>
@@ -159,11 +159,11 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-md text-gray-800 dark:text-gray-100">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/begin#deballage"
-                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Premier déballage
                 </Link>
@@ -171,7 +171,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#bonsens"
-                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le bon sens
                 </Link>
@@ -179,7 +179,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#assurance"
-                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Assurance
                 </Link>
@@ -187,7 +187,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#code"
-                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Code de la route
                 </Link>
@@ -195,7 +195,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#asso"
-                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Groupes & associations
                 </Link>
@@ -276,9 +276,9 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
-              <li>🔸Dire Merci !</li>
-              <li>🔸Soutenir mon travail</li>
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li className="text-sm">🔸Dire Merci !</li>
+              <li className="text-sm">🔸Soutenir mon travail</li>
             </ul>
           </div>
         </div>
