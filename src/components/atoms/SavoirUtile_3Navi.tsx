@@ -46,9 +46,9 @@ const Practical_Vrac = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '')
-      if (hash === 'dico') {
+      if (hash === 'navi') {
         setOpenKeys(['1']) // Ouvre l'accordéon
-        setScrollTarget('dico')
+        setScrollTarget('navi')
       }
     } // Appel initial
 
@@ -72,7 +72,7 @@ const Practical_Vrac = () => {
 
   return (
     <section
-      id="dico"
+      id="navi"
       className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
     >
       <Accordion
