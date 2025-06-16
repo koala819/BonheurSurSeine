@@ -159,11 +159,11 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
+            <ul className="italic flex flex-col p-2 text-md text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/begin#deballage"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Premier déballage
                 </Link>
@@ -171,7 +171,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#bonsens"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le bon sens
                 </Link>
@@ -179,7 +179,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#assurance"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Assurance
                 </Link>
@@ -187,7 +187,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#code"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Code de la route
                 </Link>
@@ -195,7 +195,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#asso"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-md hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Groupes & associations
                 </Link>
@@ -215,11 +215,11 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-xs text-gray-800 dark:text-gray-100">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/savoir_utile#entretien"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸L&apos;entretien
                 </Link>
@@ -227,7 +227,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#dico"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le p&apos;tit Dico du Bonheur
                 </Link>
@@ -235,7 +235,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#navi"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Trouver son chemin
                 </Link>
@@ -243,7 +243,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#batterie"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Batterie et autonomie
                 </Link>
@@ -251,7 +251,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#vrac"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Savoir en vrac
                 </Link>
@@ -259,7 +259,7 @@ export function Top() {
               <li>
                 <Link
                   href="/savoir_utile#infos"
-                  className="text-inherit text-xs hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Infos constructeurs
                 </Link>
