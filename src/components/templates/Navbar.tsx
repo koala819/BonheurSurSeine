@@ -83,7 +83,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Les roues</li>
               <li>🔸Mes tests</li>
               <li>🔸Mes vidéos</li>
@@ -99,7 +99,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Mes Partenaires</li>
               <li>🔸Offres Exclusives</li>
             </ul>
@@ -114,7 +114,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/choix#marche"
@@ -159,7 +159,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/begin#deballage"
@@ -179,7 +179,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#assurance"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-md text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Assurance
                 </Link>
@@ -195,7 +195,7 @@ export function Top() {
               <li>
                 <Link
                   href="/begin#asso"
-                  className="text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                  className="text-md text-inherit hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Groupes & associations
                 </Link>
@@ -215,7 +215,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/savoir_utile#entretien"
@@ -276,7 +276,7 @@ export function Top() {
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+            <ul className="text-md italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>🔸Dire Merci !</li>
               <li>🔸Soutenir mon travail</li>
             </ul>
