@@ -68,7 +68,7 @@ const HighwayCode = () => {
             ).
           </p>
 
-          <div className="mb-4 flex flex-col md:flex-row items-center">
+          <div className="mb-2 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-4">
               <div className="blueBlock mb-1">
                 <h4>
@@ -108,7 +108,7 @@ const HighwayCode = () => {
             Il y a <strong>quelques spécificités à connaitre.</strong>
           </p>
           <section className="flex flex-col md:flex-row justify-between mb-8">
-            <div className="mb-4 md:mb-0 md:mr-4">
+            <div className="mb-4 md:mb-0 md:mr-4 md:w-1/2">
               <h4>CIRCULATION</h4>
               <ul className="list">
                 <li>
@@ -202,7 +202,7 @@ const HighwayCode = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="md:w-1/2">
               <h4>ÉQUIPEMENT</h4>
               <ul className="list">
                 <li>

@@ -67,7 +67,7 @@ const Begin_premier_deballage = () => {
             s&apos;équilibre pas lorsque tu l&apos;allumes. <br />
             La roue est en <strong>mode transport</strong>.
           </p>
-          <div className="blueBlock mb-8">
+          <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-1">
               🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?
@@ -79,11 +79,11 @@ const Begin_premier_deballage = () => {
             <br />
             Le mode transport est réversible.
           </div>
-          <h4 className="mt-4 mb-1">
-            ➡️ Pour sortir la roue du mode transport, les étapes varient en
-            fonction du fabricant&nbsp;:
+          <h4 className="mt-2 mb-2">
+            &nbsp;&nbsp;➡️ Pour sortir la roue du mode transport, les étapes
+            varient en fonction du fabricant&nbsp;:
           </h4>
-          <ul className="compactlist mt-0 mb-6 leading-tight">
+          <ul className="compactlist mt-0 mb-8 leading-tight">
             <li>
               Généralement, <strong>le plus simple</strong> est de brancher le
               chargeur et de le connecter à la roue.
@@ -116,8 +116,8 @@ const Begin_premier_deballage = () => {
             </li>
           </ul>
           <div className="blueBlock mb-8">
-            <h4 className="mt-0 mb-0">🎁 À la réception du carton :</h4>
             <ul className="compactlist">
+              <h4 className="mt-0 mb-1 -ml-4">🎁 À la réception du carton :</h4>
               <li>
                 Vérifie l&apos;aspect général du carton (refuse la livraison si
                 le carton est endommagé ou des traces
@@ -127,7 +127,7 @@ const Begin_premier_deballage = () => {
                 Vérifie que le carton comprend la notice, le chargeur et son
                 câble électrique.
               </li>
-              <li>Vérifie le pneu et gonfle le suffisamment.</li>
+              <li>Vérifie le pneu et gonfle-le suffisamment.</li>
               <li>Vérifie la suspension.</li>
             </ul>
           </div>
