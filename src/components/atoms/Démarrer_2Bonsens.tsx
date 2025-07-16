@@ -80,7 +80,10 @@ const CommonSense = () => {
           </ul>
           <div className="blueBlock mb-8">
             <h4>
-              📢 Anticipe les situations à risque et fait preuve de prudence en
+              ☠️ L&apos;excès de confiance est l&apos;ennemi n°1 du wheeler.
+            </h4>
+            <h4>
+              📢 Anticipe les situations à risque, et fait preuve de prudence en
               toutes circonstances.
             </h4>
           </div>

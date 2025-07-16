@@ -66,8 +66,7 @@ const Maintenance = () => {
           </p>
           <p className="mb-4">
             <strong>Rappel :</strong> pour être utilisée sur voie publique, la
-            roue doit être <span className="underline">bridée à 25km/h</span>{' '}
-            par construction.
+            roue doit être <span className="underline">bridée à 25km/h</span>.
           </p>
 
           <h4 className="mb-4">À retenir :</h4>

@@ -74,7 +74,7 @@ export default function Page() {
         Ce document peut être mis à jour à tout moment, et il est de votre
         responsabilité de le vérifier fréquemment pour être à jour.
         <br />
-        Les informations fournies par ce site web (ci-après dénommées,
+        Les informations fournies par ce site web (ci-après dénommées{' '}
         <i>Bonheur sur Seine</i>) et nos réseaux sociaux, tels que{' '}
         <Link
           href={'https://www.instagram.com/bonheursurseine/'}
@@ -237,8 +237,11 @@ export default function Page() {
         Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous
         avez le droit d&apos;accéder à vos données, de les rectifier et de les
         supprimer. <br />
-        Pour exercer ce droit, veuillez
-        <Link href={'/contact'} className="link-style ml-1">
+        Pour exercer ce droit, veuillez{' '}
+        <Link
+          href={'mailto:bonheursurseine@gmail.com'}
+          className="link-style ml-1"
+        >
           nous contacter
         </Link>
         .
