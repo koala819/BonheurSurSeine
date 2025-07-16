@@ -9,8 +9,9 @@ import Link from 'next/link'
 
 import { UserProfile } from '@/src/types/models'
 
+import Wikiloc from '/public/marques/wikiloc_logo.svg'
+
 import Image_carto from '@/public/Image_cartographie(light).jpg'
-import Wikiloc from '@/public/marques/wikiloc_logo.svg'
 
 const Practical_Vrac = () => {
   const userProfiles: UserProfile[] = [
@@ -19,24 +20,29 @@ const Practical_Vrac = () => {
       profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=5325392',
       imageUrl:
         'https://s2.wklcdn.com/image_177/5325392/photo.jpg?1595180668172',
+      /*imageUrl:
+        'https://www.bonheursurseine.com/public/wiki-user/Fabienwheel.webp',*/
     },
     {
       name: 'Olig',
       profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=2126120',
       imageUrl:
         'https://s2.wklcdn.com/image_70/2126120/photo.jpg?1605908986646',
+      /*imageUrl: '/public/wiki-user/OliG.webp',*/
     },
     {
       name: 'Tonton Polo',
       profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=7067439',
       imageUrl:
         'https://s0.wklcdn.com/image_235/7067439/photo.jpg?1682195125259',
+      /*imageUrl: '/public/wiki-user/TontonPolo.webp',*/
     },
     {
       name: 'Marko',
       profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=3131352',
       imageUrl:
         'https://s0.wklcdn.com/image_104/3131352/photo.jpg?1529266630389',
+      /*imageUrl: '/public/wiki-user/Marko.webp',*/
     },
   ]
 
