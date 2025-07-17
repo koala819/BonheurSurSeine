@@ -142,11 +142,11 @@ export type AccueilDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<AccueilDocumentData>, 'accueil', Lang>
 
 /**
- * Content for Amis_dans_Contact documents
+ * Content for Amis_remerciement documents
  */
 interface AmisDansContactDocumentData {
   /**
-   * rank field in *Amis_dans_Contact*
+   * rank field in *Amis_remerciement*
    *
    * - **Field Type**: Number
    * - **Placeholder**: *None*
@@ -157,7 +157,7 @@ interface AmisDansContactDocumentData {
   rank: prismic.NumberField
 
   /**
-   * Nom field in *Amis_dans_Contact*
+   * Nom field in *Amis_remerciement*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -168,7 +168,7 @@ interface AmisDansContactDocumentData {
   name: prismic.KeyTextField
 
   /**
-   * Image field in *Amis_dans_Contact*
+   * Image field in *Amis_remerciement*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -179,7 +179,7 @@ interface AmisDansContactDocumentData {
   img: prismic.ImageField<never>
 
   /**
-   * Réseau social field in *Amis_dans_Contact*
+   * Réseau social field in *Amis_remerciement*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -191,7 +191,7 @@ interface AmisDansContactDocumentData {
 }
 
 /**
- * Amis_dans_Contact document from Prismic
+ * Amis_remerciement document from Prismic
  *
  * - **API ID**: `amis_dans_contact`
  * - **Repeatable**: `true`
@@ -649,6 +649,77 @@ interface PromoDocumentData {
 export type PromoDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PromoDocumentData>, 'promo', Lang>
 
+/**
+ * Content for Wikiloc_profil documents
+ */
+interface WikilocContributeurDocumentData {
+  /**
+   * rank field in *Wikiloc_profil*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wikiloc_contributeur.rank
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  rank: prismic.NumberField
+
+  /**
+   * Nom field in *Wikiloc_profil*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wikiloc_contributeur.nom
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nom: prismic.KeyTextField
+
+  /**
+   * profileUrl field in *Wikiloc_profil*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wikiloc_contributeur.profileurl
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profileurl: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >
+
+  /**
+   * image field in *Wikiloc_profil*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: wikiloc_contributeur.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+}
+
+/**
+ * Wikiloc_profil document from Prismic
+ *
+ * - **API ID**: `wikiloc_contributeur`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type WikilocContributeurDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<WikilocContributeurDocumentData>,
+    'wikiloc_contributeur',
+    Lang
+  >
+
 export type AllDocumentTypes =
   | AccueilDocument
   | AmisDansContactDocument
@@ -656,6 +727,7 @@ export type AllDocumentTypes =
   | DicoDocument
   | GyroroueDocument
   | PromoDocument
+  | WikilocContributeurDocument
 
 declare module '@prismicio/client' {
   interface CreateClient {
@@ -692,6 +764,8 @@ declare module '@prismicio/client' {
       GyroroueDocumentData,
       PromoDocument,
       PromoDocumentData,
+      WikilocContributeurDocument,
+      WikilocContributeurDocumentData,
       AllDocumentTypes,
     }
   }

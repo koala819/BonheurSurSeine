@@ -7,44 +7,36 @@ import { FaAndroid, FaApple } from 'react-icons/fa'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { UserProfile } from '@/src/types/models'
+import { WikilocProfil } from '@/src/types/models'
 
 import Wikiloc from '/public/marques/wikiloc_logo.svg'
 
+import { createClient } from '@/prismicio'
 import Image_carto from '@/public/Image_cartographie(light).jpg'
 
+/*import { ImageField, KeyTextField, NumberField } from '@prismicio/client'*/
+
 const Practical_Vrac = () => {
-  const userProfiles: UserProfile[] = [
-    {
-      name: 'Fabien Wheel',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=5325392',
-      imageUrl:
-        'https://s2.wklcdn.com/image_177/5325392/photo.jpg?1595180668172',
-      /*imageUrl:
-        'https://www.bonheursurseine.com/public/wiki-user/Fabienwheel.webp',*/
-    },
-    {
-      name: 'Olig',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=2126120',
-      imageUrl:
-        'https://s2.wklcdn.com/image_70/2126120/photo.jpg?1605908986646',
-      /*imageUrl: '/public/wiki-user/OliG.webp',*/
-    },
-    {
-      name: 'Tonton Polo',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=7067439',
-      imageUrl:
-        'https://s0.wklcdn.com/image_235/7067439/photo.jpg?1682195125259',
-      /*imageUrl: '/public/wiki-user/TontonPolo.webp',*/
-    },
-    {
-      name: 'Marko',
-      profileUrl: 'https://fr.wikiloc.com/wikiloc/user.do?id=3131352',
-      imageUrl:
-        'https://s0.wklcdn.com/image_104/3131352/photo.jpg?1529266630389',
-      /*imageUrl: '/public/wiki-user/Marko.webp',*/
-    },
-  ]
+  const [userProfiles, setUserProfiles] = useState<WikilocProfil[]>([])
+  useEffect(() => {
+    const fetchWikilocProfils = async () => {
+      const client = createClient()
+      const response = await client.getAllByType('wikiloc_contributeur')
+
+      const formatted: WikilocProfil[] = response
+        .map((doc) => ({
+          rank: doc.data.rank,
+          nom: doc.data.nom,
+          profileUrl: doc.data.profileurl,
+          image: doc.data.image,
+        }))
+        .sort((a, b) => (a.rank ?? 0) - (b.rank ?? 0)) // Tri par ordre croissant
+
+      setUserProfiles(formatted)
+    }
+
+    fetchWikilocProfils()
+  }, [])
 
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>([])
@@ -102,7 +94,7 @@ const Practical_Vrac = () => {
                   &emsp;&emsp;&laquo;&nbsp;Allons rouler&nbsp;!&nbsp;&raquo;
                 </h4>
               </div>
-              <p className="mb-0">
+              <p className="mb-0 ml-3">
                 Tout le monde connait{' '}
                 <Link
                   href="https://maps.google.com/"
@@ -111,10 +103,9 @@ const Practical_Vrac = () => {
                 >
                   GoogleMap
                 </Link>
-                &nbsp;!
-              </p>
-              <p className="mt-0 mb-0">
-                Mais il existe aussi des sites spécialisés très pratiques.
+                &nbsp;! Mais ce n&apos;est pas le plus adapté&nbsp;!
+                <br />
+                Il existe d&apos;autres sites spécialisés très pratiques.
               </p>
             </aside>
             <aside className="sm:w-1/2 md:w-2/5 text-right text-xs mt-1 mb-0">
@@ -132,7 +123,7 @@ const Practical_Vrac = () => {
           {/*                        BLOC 2                          */}
           {/*--------------------------------------------------------*/}
           <section className="pt-3">
-            <p className="text-gray-500 dark:text-gray-300 mt-0 text-right">
+            <p className="text-gray-500 dark:text-gray-300 mt-0 text-right text-small">
               <i>Citées par ordre alphabétique</i>
               😉
             </p>
@@ -245,7 +236,6 @@ const Practical_Vrac = () => {
                       target="_blank"
                       className="link-style inline-flex items-center gap-x-1"
                     >
-                      <FaApple />
                       <FaAndroid />
                     </Link>
                     ) proposent aussi la navigation GPS.
@@ -257,7 +247,7 @@ const Practical_Vrac = () => {
           {/*--------------------------------------------------------*/}
           {/*                        BLOC 3                          */}
           {/*--------------------------------------------------------*/}
-          <section className="pt-8">
+          <section className="pt-4">
             <div className="flex flex-col sm:flex-row mb-4">
               <aside className="sm:w-1/3 lg:w-1/3 flex items-center justify-center">
                 <Link href={'https://fr.wikiloc.com/'} passHref target="_blank">
@@ -276,49 +266,79 @@ const Practical_Vrac = () => {
                   wheelers. <br />2 catégories sont utilisées&nbsp;:{' '}
                   <i>&laquo;&nbsp;Monocycle de montagne&nbsp;&raquo;</i> et{' '}
                   <i>&laquo;&nbsp;Segway&nbsp;&raquo;</i>.
-                </p>{' '}
-                <p>
+                </p>
+                <p className="mb-0">
+                  Voici quelques contributeurs très actifs pour{' '}
+                  <strong>découvrir de supers parcours</strong>&nbsp;:
+                </p>
+              </aside>
+            </div>
+            {/*--------------------------------------------------------*/}
+            <div className="pt-1 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-2">
+              {userProfiles.map((user) => (
+                <Link
+                  href={user.profileUrl?.url || '#'}
+                  target="_blank"
+                  key={user.nom}
+                  className="hover:bg-gray-300 hover:dark:bg-gray-600 rounded-xl p-2"
+                >
+                  <div className="flex flex-col w-full">
+                    <h4 className="text-center mt-1 mb-0">{user.nom}</h4>
+                    <div className="flex justify-center w-full py-1">
+                      <Image
+                        src={user.image?.url || '/BonheurSurSeine_logo.png'}
+                        alt="{user.nom}"
+                        className="w-28 h-28 object-cover rounded-full"
+                        width={250}
+                        height={250}
+                      />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+          {/*--------------------------------------------------------*/}
+          {/*                        BLOC 4                          */}
+          {/*--------------------------------------------------------*/}
+          <section className="mt-4 pt-1">
+            <div className="flex flex-col sm:flex-row mb-0">
+              <aside className="sm:w-1/2 md:w-2/5 lg:w-2/5 flex text-justify">
+                <p className="text-justify">
                   La plateforme permet de{' '}
                   <strong>
                     découvrir, télécharger, suivre, et enregistrer des
                     itinéraires,
                   </strong>{' '}
                   puis de les documenter (textes, photos, commentaires) et à son
-                  tour de les partager&nbsp;: parfait pour aider les autres ou
-                  bénéficier de leurs expériences, et ainsi organiser ses
-                  propres sorties.
+                  tour de les partager&nbsp;! <br />
+                  Parfait pour aider les autres ou bénéficier de leurs
+                  expériences, et ainsi organiser ses propres sorties&nbsp;!
+                  <br />
+                  <br />
+                  <strong>A toi de jouer&nbsp;!</strong>
                 </p>
               </aside>
-            </div>
-            {/*--------------------------------------------------------*/}
-            <p className="mb-0">
-              Voici quelques contributeurs très actifs pour{' '}
-              <strong>découvrir de supers parcours</strong>&nbsp;:
-            </p>
-            <div className="pt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-              {userProfiles.map((user) => (
-                <Link
-                  href={user.profileUrl}
-                  target="_blank"
-                  key={user.name}
-                  className=" hover:bg-gray-300 hover:dark:bg-gray-600 rounded-xl p-2"
-                >
-                  <div className="flex flex-col w-full">
-                    <h4 className="text-center mt-2">{user.name}</h4>
-                    <div className=" flex justify-center w-full py-2">
-                      <Image
-                        src={
-                          user.imageUrl || '/public/BonheurSurSeine_logo.png'
-                        }
-                        alt={user.name}
-                        className="w-28 h-28 object-cover rounded-full"
-                        width={400}
-                        height={400}
-                      />
-                    </div>
-                  </div>
-                </Link>
-              ))}
+              <aside className="sm:w-1/2 md:w-3/5 lg:w-3/5 flex flex-col space-y-0 place-items-center">
+                <div className="w-full max-w-[90%] aspect-video">
+                  <iframe
+                    className="w-full h-full rounded-xl shadow"
+                    /*width="560"
+                    height="315"*/
+                    src="https://www.youtube.com/embed/dB7rl8ruHjs?si=K0JHPG-XTTJoTU1e"
+                    title="Apprendre à tracer un parcours de randonnée (méthode
+                  simple)"
+                    /*frameborder="0"*/
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    /*referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen*/
+                  ></iframe>
+                </div>
+                <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
+                  Video : Apprendre à tracer un parcours de randonnée (méthode
+                  simple)
+                </p>
+              </aside>
             </div>
           </section>
           {/*--------------------------------------------------------*/}

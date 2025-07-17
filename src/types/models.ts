@@ -46,15 +46,24 @@ export interface Partner {
   montant: string
 }
 
+/*
 export interface UserProfile {
   name: string
   profileUrl: string
   imageUrl: string
 }
+*/
 
 export interface DicoProps {
   mot: string
   lettre: KeyTextField
   definition: KeyTextField
   definition_new: RichTextField
+}
+
+export interface WikilocProfil {
+  rank: NumberField
+  nom: KeyTextField
+  profileUrl: any
+  image: ImageField
 }
