@@ -9,10 +9,9 @@ import Quote from '@/src/components/atoms/Accueil_Quote'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title:
-    'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroue sur BonheurSurSeine.com',
+  title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroue',
   description:
-    'Découvrez le monde de le roue électrique avec Bonheur Sur Seine, expert à Paris : tests, conseils, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés...',
+    'Découvrez le monde de la roue électrique avec Bonheur Sur Seine, expert à Paris : tests, conseils, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés...',
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },
@@ -29,6 +28,20 @@ export default async function Page() {
         text={accueil.data.text}
         titre={accueil.data.titre}
       />
+      <div className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <p className="text-center text-emerald-600 dark:text-emerald-400 md:text-lg lg:text-xl font-medium leading-relaxed">
+          Ce site est entièrement gratuit.
+        </p>
+        <p className="text-justify">
+          Il ne contient <strong>aucune publicité</strong> et ne collecte{' '}
+          <strong>aucune donnée personnelle</strong> afin de garantir une
+          navigation fluide et sans distractions. Son contenu, rédigé
+          manuellement au fil des années, a été conçu avec soin. Il
+          s&apos;adresse à un large public, et est pensé{' '}
+          <strong>d&apos;intérêt général</strong>, pour partager mon travail au
+          plus grand nombre de manière <strong>simple et lisible</strong>.
+        </p>
+      </div>
       <Quote />
       <FinishSection text={accueil.data.fin} />
     </section>

@@ -182,7 +182,7 @@ const Associations = () => {
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/iQzrhgo2XiM?si=k2ZEL-ZZFjGE6YJq"
-                    title="YouTube video player"
+                    title="La communauté de la roue"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>

@@ -1,7 +1,7 @@
 {
-  "id": "amis_dans_contact",
-  "label": "Amis_remerciement",
   "format": "custom",
+  "id": "wikiloc_contributeur",
+  "label": "Wikiloc_profil",
   "repeatable": true,
   "status": true,
   "json": {
@@ -19,27 +19,27 @@
           "placeholder": ""
         }
       },
-      "name": {
+      "nom": {
         "type": "Text",
         "config": {
           "label": "Nom",
           "placeholder": ""
         }
       },
-      "img": {
-        "type": "Image",
-        "config": {
-          "label": "Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "url": {
+      "profileurl": {
         "type": "Link",
         "config": {
-          "label": "Réseau social",
+          "label": "profileUrl",
           "placeholder": "",
           "select": null
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {},
+          "thumbnails": []
         }
       }
     }
