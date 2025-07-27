@@ -51,6 +51,10 @@ export default function GamePage() {
           </i>
           &nbsp;».
         </div>
+        <div className="redBlock ml-8 mr-8 text-small mt-2">
+          Tu penses être parmi les 5 premiers à découvrir cette page&nbsp;?
+          Contacte-moi à jeuxbss@gmail.com.
+        </div>
       </div>
     </div>
   )

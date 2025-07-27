@@ -192,7 +192,7 @@ const Practical_Dico = () => {
         >
           <div className="mb-4 flex flex-col sm:flex-row items-center">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
-              <p className="mb-4">
+              <p className="mb-4 text-justify">
                 Ce lexique propose des{' '}
                 <strong>explications simples et concises</strong> de quelques
                 termes fréquemment utilisés dans l&apos;univers de la roue
@@ -277,7 +277,7 @@ const Practical_Dico = () => {
                             {highlightText(entry.mot, searchTerm)}
                           </strong>
                         </td>
-                        <td className="py-2 px-4 border-b text-xs sm:text-sm md:text-base dark:bg-gray-600 dark:text-gray-100">
+                        <td className="py-2 px-4 border-b text-justify text-xs sm:text-sm md:text-base dark:bg-gray-600 dark:text-gray-100">
                           {entry.definition_new ? (
                             highlightRichText(entry.definition_new, searchTerm)
                           ) : (

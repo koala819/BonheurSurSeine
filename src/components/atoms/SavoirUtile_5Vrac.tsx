@@ -56,7 +56,7 @@ const Practical_Vrac = () => {
           {/*                       BLOC 2                           */}
           {/*--------------------------------------------------------*/}
           <h4 className="mt-0">➡️ Mode d&apos;emploi IQlight V2</h4>
-          <p>
+          <p className="text-justify">
             La version française (<i>traduite par mes soins</i>) du mode
             d&apos;emploi des magnifiques{' '}
             <Link
@@ -72,7 +72,7 @@ const Practical_Vrac = () => {
               target="_blank"
               className="link-style"
             >
-              cette vidéo 📹
+              cette vidéo&nbsp;📹
             </Link>
             ).
             <br />

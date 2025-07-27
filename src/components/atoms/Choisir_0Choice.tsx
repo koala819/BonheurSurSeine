@@ -4,14 +4,14 @@ const Choice = () => {
       <h1>Choisir sa roue</h1>
       <div className="mb-8 flex flex-col md:flex-row items-center">
         <aside className="md:w-1/2 space-y-4 mr-4">
-          <p>
+          <p className="text-justify">
             L&apos;important est d&apos;avoir une roue adaptée à son
             utilisation. <br /> Le <strong>piège</strong> serait de ne{' '}
             <strong>regarder que les spécifications techniques</strong> et de
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
           </p>
-          <p>
+          <p className="text-justify">
             Le choix se fait en fonction de ses goûts, de son{' '}
             <strong>utilisation</strong>, de sa sensibilité, de sa situation, de
             son style de conduite, et d&apos;autres{' '}

@@ -59,51 +59,52 @@ const Maintenance = () => {
               qui en dépend…
             </h4>
           </div>
-          <p className="mb-4">
-            Comme tout véhicule, les roues électriques ont besoin d&apos;un
+          <p className="mb-4 text-justify">
+            <strong>Comme tout autre véhicule</strong>, les roues électriques
+            ont besoin d&apos;un
             <strong> entretien régulier</strong> pour garantir leur durabilité
             et leur bon fonctionnement.
           </p>
-          <p className="mb-4">
+          <p className="mb-4 text-justify">
             <strong>Rappel :</strong> pour être utilisée sur voie publique, la
             roue doit être <span className="underline">bridée à 25km/h</span>.
           </p>
 
           <h4 className="mb-4">À retenir :</h4>
           <ul className="list mb-8">
-            <li>
+            <li className="text-justify">
               Il est important de <strong>vérifier</strong> son engin avant
               chaque trajet.
             </li>
-            <li>
+            <li className="text-justify">
               Révise le <strong>régulièrement</strong>. Sois attentif à tout
               bruit suspect.
             </li>
-            <li>
+            <li className="text-justify">
               <strong>Chaque élément est essentiel</strong> : usure du pneu,
               pédales, éclairages, électronique, état et charge de la batterie,
               poussières, visseries...
             </li>
-            <li>
+            <li className="text-justify">
               Vérifie attentivement la coque : identifie tout risque
               d&apos;infiltration ou toute trace d&apos;humidité.
             </li>
-            <li>
+            <li className="text-justify">
               Vérifie régulièrement la <strong>pression du pneu</strong>.
             </li>
             <li>
               <strong>Prends soin de la batterie</strong> :
               <ul className="compactlist pl-8 mt-1">
-                <li>
+                <li className="text-justify">
                   Évite de l&apos;exposer à des températures extrêmes (froid ou
                   chaud).
                 </li>
-                <li>
+                <li className="text-justify">
                   Ne laisse jamais la batterie se décharger complètement
                   (stocker entre 20%-80% en cas d&apos;immobilisation
                   prolongée).
                 </li>
-                <li>
+                <li className="text-justify">
                   Ne recharge pas immédiatement à chaud, et ne laisse pas la
                   charge sans surveillance.
                 </li>
@@ -120,7 +121,7 @@ const Maintenance = () => {
             </li>
           </ul>
 
-          <div className="blueBlock">
+          <div className="blueBlock text-justify">
             <h4>
               💦 L&apos;eau s&apos;infiltre facilement partout.
               <br />

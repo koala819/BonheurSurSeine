@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales de Bonheur Sur Seine - Transparence et Confiance',
+  title: 'Mentions Légales Bonheur Sur Seine - Transparence et Confiance',
   description:
-    "Découvrez les mentions légales de BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies. Engagés pour votre sécurité.",
+    "BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies.",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/mentions`,
   },

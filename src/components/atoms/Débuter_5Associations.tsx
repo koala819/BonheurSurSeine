@@ -65,7 +65,7 @@ const Associations = () => {
             </div>
             <div className="flex flex-col lg:flex-row">
               <aside className="lg:w-7/12 space-y-8">
-                <p>
+                <p className="text-justify">
                   L&apos;
                   <strong>
                     Association Nationale des Utilisateurs de Micro-Mobilité
@@ -102,7 +102,7 @@ const Associations = () => {
             </div>
             <div className="flex flex-col sm:flex-row mb-0">
               <aside className="sm:w-8/12 flex items-center justify-center">
-                <p>
+                <p className="text-justify">
                   N&apos;hésite pas à{' '}
                   <Link
                     href="https://discord.com/invite/Jhgw7C96Jf"
@@ -136,7 +136,7 @@ const Associations = () => {
               </aside>
             </div>
 
-            <p className="mt-0">
+            <p className="mt-0 text-justify">
               On trouve des groupes et des associations un peu partout. Tu en
               trouveras plein sur cette carte (magnifique travail réalisé par{' '}
               <Link

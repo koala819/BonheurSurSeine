@@ -43,7 +43,7 @@ const Needs = () => {
       <div className="flex flex-col gap-4 ml-4">
         <Checkbox color="success">
           Je recherche une roue pour&nbsp;: essayer/apprendre&nbsp;? pratiquer
-          régulièrement&nbsp;?
+          régulièrement&nbsp;? un usage quotidien&nbsp;?
         </Checkbox>
         <Checkbox color="success">
           Je recherche une roue pour : compléter/remplacer les transports en
@@ -55,15 +55,15 @@ const Needs = () => {
           équipements&nbsp;? la performance&nbsp;? la praticité&nbsp;?
         </Checkbox>
         <Checkbox color="success">
-          Je recherche une roue avant tout munie d’une suspension&nbsp;?
+          Je recherche une roue avant tout munie d&apos;une suspension&nbsp;?
         </Checkbox>
         <Checkbox color="success">
-          Je recherche une roue&nbsp;: simple à entretenir&nbsp;? ou suis-je
-          prêt à bricoler&nbsp;?
+          Je recherche une roue&nbsp;: simple à entretenir&nbsp;? ou bien
+          suis-je prêt à bricoler&nbsp;?
         </Checkbox>
         <Checkbox color="success">
           Vais-je devoir souvent porter ma roue&nbsp;? combien suis-je capable
-          de soulever&nbsp;: 20kg&nbsp;? 30kg&nbsp;?
+          de soulever&nbsp;: 20kg&nbsp;? 25kg&nbsp;? 30kg&nbsp;?
         </Checkbox>
         <Checkbox color="success">
           Quel est mon budget&nbsp;: &lt;1500€&nbsp;? &lt;2500€&nbsp;? ou

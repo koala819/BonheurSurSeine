@@ -63,8 +63,9 @@ const CommonSense = () => {
             </li>
             <li>
               Respecte les autres usagers (piétons, cyclistes, etc.), et met toi
-              à leur place : pense à ce qu’ils peuvent ressentir en te voyant
-              arriver.
+              à leur place :{' '}
+              <strong>pense à ce qu&apos;ils peuvent ressentir</strong> en te
+              voyant arriver.
             </li>
             <li>
               Anticipe les{' '}
@@ -90,7 +91,7 @@ const CommonSense = () => {
           <h3>À retenir :</h3>
           <ul className="list-disc pl-4 space-y-2 mb-4">
             <li>
-              <strong>Protège toi !</strong>
+              <strong>Protège toi&nbsp;!</strong>
             </li>
             <li>
               Le port du <strong>casque</strong> (sans être obligatoire) est{' '}
@@ -106,8 +107,8 @@ const CommonSense = () => {
             </li>
             <li>
               Prend le temps de connaitre tes capacités, de{' '}
-              <strong>connaitre ta roue</strong>, et
-              <strong className="ml-1">respecte là</strong>.
+              <strong>connaitre ta roue</strong>, et{' '}
+              <strong>respecte la</strong>.
             </li>
             <li>
               Je répète : connais bien les limites de ta roue et respecte les.
@@ -115,7 +116,7 @@ const CommonSense = () => {
           </ul>
           <div className="blueBlock">
             <h4>
-              💟 Et n’oublie pas : bon comportement = bonne image = bonne
+              💟 Et n&apos;oublie pas : bon comportement = bonne image = bonne
               route&nbsp;!
             </h4>
             On se rend compte que quelque chose est précieux au moment où on le
