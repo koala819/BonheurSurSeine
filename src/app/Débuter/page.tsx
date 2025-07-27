@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Premier_deballage from '@/src/components/atoms/Démarrer_1Premier_deballage'
-import CommonSense from '@/src/components/atoms/Démarrer_2Bonsens'
-import Assurance from '@/src/components/atoms/Démarrer_3Assurance'
-import HighwayCode from '@/src/components/atoms/Démarrer_4HighwayCode'
-import Associations from '@/src/components/atoms/Démarrer_5Associations'
+import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballage'
+import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
+import Assurance from '@/src/components/atoms/Débuter_3Assurance'
+import HighwayCode from '@/src/components/atoms/Débuter_4HighwayCode'
+import Associations from '@/src/components/atoms/Débuter_5Associations'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine - Bien démarrer en roue électrique : Conseils et Sécurité',
+    'Bonheur Sur Seine - Conseils pour bien démarrer en monoroue, gyrorue, roue électrique',
   description:
-    'Conseils pour débuter la roue électrique : sécurité, assurance, code de la route, et plus encore. Roulez en gyroroue en France en toute confiance.',
+    'Apprendre la roue électrique : conseils, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/begin`,
   },

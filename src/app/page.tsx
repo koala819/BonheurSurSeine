@@ -11,7 +11,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroue',
   description:
-    'Découvrez le monde de la roue électrique avec Bonheur Sur Seine, expert à Paris : tests, conseils, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés...',
+    'Le monde des gyroroues, monoroues et roues électriques avec BonheurSurSeine, expert à Paris : infos, tests, reviews, conseils, guides, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour apprendre...',
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },

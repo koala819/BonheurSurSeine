@@ -131,7 +131,7 @@ export function BonheurScore({
           <p className="mb-0">
             🆙 Et pour avoir un éventail complet des roues que je teste, je
             t&apos;invite à <b>revenir régulièrement</b>.
-            {/*<Link href="/game">régulièrement.</Link>*/}
+            {/*t&apos;invite à <Link href="/eucgame"><b>régulièrement</b>.</Link>*/}
           </p>
         </footer>
 

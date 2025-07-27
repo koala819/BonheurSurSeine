@@ -4,9 +4,9 @@ import ChooseWheel from '@/src/components/molecules/ChooseWheel'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine - Choisir sa roue électrique : Explications, Comparaisons et Conseils',
+    'Bonheur Sur Seine - Comment choisir sa gyroroue ? Comparaisons et Conseils',
   description:
-    'Découvrez le meilleur guide pour choisir votre gyroroue. Conseils, comparaisons de marques, et astuces pour trouver la roue électrique idéale.',
+    'Guide pour choisir sa gyroroue : conseils, comparaisons, et astuces pour acheter la roue électrique idéale.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/choix`,
   },
