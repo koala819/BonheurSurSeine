@@ -26,11 +26,11 @@ export function Top() {
   const menuItems = [
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
-    { name: 'Codes Promo', path: '/promo' },
-    { name: 'Choisir sa Roue', path: '/choix' },
-    { name: 'Bien Démarrer', path: '/begin' },
-    { name: 'Savoir Utile', path: '/savoir_utile' },
-    { name: 'Remerciements', path: '/contact' },
+    { name: 'Codes Promo', path: '/CodePromo' },
+    { name: 'Choisir sa Roue', path: '/Choisir' },
+    { name: 'Bien Démarrer', path: '/Debuter' },
+    { name: 'Savoir Utile', path: '/SavoirUtile' },
+    { name: 'Remerciements', path: '/Merci' },
   ]
 
   return (
@@ -92,8 +92,8 @@ export function Top() {
         </div>
 
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/promo')}>
-            <Link href="/promo" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/CodePromo')}>
+            <Link href="/CodePromo" className="text-white hover:text-text-link">
               Codes Promo
             </Link>
           </NavbarItem>
@@ -107,8 +107,8 @@ export function Top() {
         </div>
 
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/choix')}>
-            <Link href="/choix" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/Choisir')}>
+            <Link href="/Choisir" className="text-white hover:text-text-link">
               Choisir sa Roue
             </Link>
           </NavbarItem>
@@ -117,7 +117,7 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/choix#marche"
+                  href="/Choisir#marche"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le marché
@@ -125,7 +125,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/choix#marques"
+                  href="/Choisir#marques"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Les marques
@@ -133,7 +133,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/choix#besoins"
+                  href="/Choisir#besoins"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Ses besoins
@@ -141,7 +141,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/choix#comparer"
+                  href="/Choisir#comparer"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Comparer
@@ -152,8 +152,8 @@ export function Top() {
         </div>
 
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/begin')}>
-            <Link href="/begin" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/Debuter')}>
+            <Link href="/Debuter" className="text-white hover:text-text-link">
               Bien Démarrer
             </Link>
           </NavbarItem>
@@ -162,7 +162,7 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/begin#deballage"
+                  href="/Debuter#deballage"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Premier déballage
@@ -170,7 +170,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/begin#bonsens"
+                  href="/Debuter#bonsens"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le bon sens
@@ -178,7 +178,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/begin#assurance"
+                  href="/Debuter#assurance"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Assurance
@@ -186,7 +186,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/begin#code"
+                  href="/Debuter#code"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Code de la route
@@ -194,7 +194,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/begin#asso"
+                  href="/Debuter#asso"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Groupes & associations
@@ -205,9 +205,9 @@ export function Top() {
         </div>
 
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/savoir_utile')}>
+          <NavbarItem isActive={path.includes('/SavoirUtile')}>
             <Link
-              href="/savoir_utile"
+              href="/SavoirUtile"
               className="text-white hover:text-text-link"
             >
               Savoir Utile
@@ -218,7 +218,7 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/savoir_utile#entretien"
+                  href="/SavoirUtile#entretien"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸L&apos;entretien
@@ -226,7 +226,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/savoir_utile#dico"
+                  href="/SavoirUtile#dico"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Le p&apos;tit Dico du Bonheur
@@ -234,7 +234,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/savoir_utile#navi"
+                  href="/SavoirUtile#navi"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Trouver son chemin
@@ -242,7 +242,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/savoir_utile#batterie"
+                  href="/SavoirUtile#batterie"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Batterie et autonomie
@@ -250,7 +250,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/savoir_utile#vrac"
+                  href="/SavoirUtile#vrac"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Savoir en vrac
@@ -258,7 +258,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/savoir_utile#infos"
+                  href="/SavoirUtile#infos"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
                   🔸Infos constructeurs
@@ -269,8 +269,8 @@ export function Top() {
         </div>
 
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/contact')}>
-            <Link href="/contact" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/Merci')}>
+            <Link href="/Merci" className="text-white hover:text-text-link">
               Remerciements
             </Link>
           </NavbarItem>

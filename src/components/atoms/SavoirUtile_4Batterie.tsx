@@ -66,7 +66,7 @@ const Practical_Battery = () => {
             </h3>
           </div>
 
-          <p className="mb-2">
+          <p className="mb-2 text-justify">
             Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
             <strong>
               de veiller à ce que la batterie ait, à tout moment, suffisamment
@@ -89,10 +89,10 @@ const Practical_Battery = () => {
             </i>
           </div>
 
-          <h4 className="mt-6">➡️ En quelques mots&nbsp;:</h4>
-          <div className="mb-8 flex flex-col md:flex-row items-center">
+          <div className="mb-8 flex flex-col md:flex-row">
             <aside className="md:w-3/5 space-y-4 mr-4">
-              <p>
+              <h4 className="mt-1">➡️ En quelques mots&nbsp;:</h4>
+              <p className="text-justify">
                 🔋&nbsp;100%&nbsp;: la tension maximale. <br />
                 🪫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;: la tension minimum.{' '}
                 <br />
@@ -142,7 +142,7 @@ const Practical_Battery = () => {
             un pourcentage approximatif (de 100% à 0%). <br />
           </div>
           <h4 className="mt-6">➡️ Tension minimale</h4>
-          <p>
+          <p className="text-justify">
             Certains préfèrent{' '}
             <strong>surveiller directement la tension</strong> pour connaitre
             l&apos;état de la batterie.
@@ -154,7 +154,7 @@ const Practical_Battery = () => {
             solliciter la roue&nbsp;:
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">
-            Attention, il s&apos;agit de données théoriques soumises à
+            Attention, il s&apos;agit de <u>données théoriques</u> soumises à
             l&apos;algorithme des fabricants et aux modèles des cellules qui
             feront varier ces données.
           </p>

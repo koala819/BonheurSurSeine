@@ -21,7 +21,7 @@ const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <h1>Pour bien démarrer</h1>
-      <p>
+      <p className="text-justify">
         Cette page regroupe <strong>quelques conseils</strong> et{' '}
         <strong>rappels essentiels</strong> mais non exhaustifs concernant
         l&apos;utilisation de la roue électrique <strong>en France.</strong>
@@ -35,7 +35,7 @@ const Page = () => {
       </div>
 
       <div className="pinkBlock">
-        <h4>
+        <h4 className="text-justify">
           Si tu veux te mettre à la roue électrique mais que tu as peur de te
           lancer, sache que je propose des{' '}
           <strong>sessions de formation</strong> théorique <u>et</u> pratique

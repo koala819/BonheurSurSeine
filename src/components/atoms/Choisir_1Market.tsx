@@ -26,7 +26,7 @@ const Market = () => {
           }
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-            <li>
+            <li className="text-justify">
               De part leur petite taille, ces roues sont souvent proposées en
               entrée de gamme. Mais ce sont elles{' '}
               <strong className="text-brown-700">
@@ -39,7 +39,7 @@ const Market = () => {
               </strong>
               &nbsp;!
             </li>
-            <li>
+            <li className="text-justify">
               Compactes, faciles à transporter avec leur trolley, ultra
               maniables et assez légères (max 25kg), elles offrent ce que la
               roue a de meilleur. Les{' '}
@@ -61,7 +61,7 @@ const Market = () => {
           }
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-            <li>
+            <li className="text-justify">
               Un peu plus grosses et généralement équipées d&apos;une
               suspension, ces roues offrent{' '}
               <strong className="text-brown-700">plus de confort</strong> et{' '}
@@ -69,7 +69,7 @@ const Market = () => {
               Cependant, avec un poids dépassant parfois les 35kg, elles perdent
               en discrétion et en praticité malgré tous leurs atouts.
             </li>
-            <li>
+            <li className="text-justify">
               Leur taille leur permet de circuler{' '}
               <strong className="text-brown-700">en agglomération</strong>, et
               un peu plus sereinement en ville sur la chaussée au côté des
@@ -87,7 +87,7 @@ const Market = () => {
           }
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
-            <li>
+            <li className="text-justify">
               Ici, <strong className="text-brown-700">aucune limite</strong> de
               taille, ni de poids ! La praticité n&apos;est plus un argument,
               car ces modèles sont plutôt dédiés à la pratique sportive :
@@ -98,7 +98,7 @@ const Market = () => {
               (voltage, autonomie, puissance, suspension, vitesses max) que
               finalement peu de gens pourront exploiter totalement.
             </li>
-            <li>
+            <li className="text-justify">
               On est sur les{' '}
               <strong className="text-brown-700">poids lourds</strong> de la
               micromobilité (40kg est un minimum). Avec seulement quelques

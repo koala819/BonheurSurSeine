@@ -58,7 +58,7 @@ const Practical_Info_officiel = () => {
         >
           <div className="mb-8 flex flex-col sm:flex-row items-center">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
-              <p>
+              <p className="text-justify">
                 On y pense peu, mais les constructeurs communiquent
                 beaucoup&nbsp;! 😉
                 <br /> <br /> Selon les marques, on a un peu de tout : annonces

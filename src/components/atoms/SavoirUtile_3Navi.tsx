@@ -101,7 +101,7 @@ const Practical_Vrac = () => {
                   target="_blank"
                   className="link-style"
                 >
-                  GoogleMap
+                  Google&nbsp;Map
                 </Link>
                 &nbsp;! Mais ce n&apos;est pas le plus adapté&nbsp;!
                 <br />
@@ -211,7 +211,7 @@ const Practical_Vrac = () => {
                       Wikiloc
                     </Link>
                   </li>
-                  <li>
+                  <li className="text-justify">
                     Certaines applications dédiées à la roue (Darknessboot{' '}
                     <Link
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
@@ -261,9 +261,9 @@ const Practical_Vrac = () => {
                 </Link>
               </aside>
               <aside className="sm:w-2/3 lg:w-2/3 space-y-3 mb-1 ml-2">
-                <p>
+                <p className="text-justify">
                   <b>Wikiloc</b> est particulièrement apprécié par certains
-                  wheelers. <br />2 catégories sont utilisées&nbsp;:{' '}
+                  wheelers. Deux catégories sont utilisées&nbsp;:{' '}
                   <i>&laquo;&nbsp;Monocycle de montagne&nbsp;&raquo;</i> et{' '}
                   <i>&laquo;&nbsp;Segway&nbsp;&raquo;</i>.
                 </p>

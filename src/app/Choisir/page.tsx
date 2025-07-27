@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import ChooseWheel from '@/src/components/molecules/ChooseWheel'
+import ChooseWheel from '@/src/components/molecules/Choisir'
 
 export const metadata: Metadata = {
   title:

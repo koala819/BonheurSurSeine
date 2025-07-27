@@ -62,12 +62,12 @@ const Begin_premier_deballage = () => {
           title={<h3>📦 Premier déballage</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
-          <p className="mb-4">
+          <p className="mb-4 text-justify">
             Lorsque que tu ouvres le carton, il est normal que la roue ne
             s&apos;équilibre pas lorsque tu l&apos;allumes. <br />
             La roue est en <strong>mode transport</strong>.
           </p>
-          <div className="blueBlock mb-2">
+          <div className="blueBlock mb-2 text-justify">
             <h4 className="mt-0 mb-1">
               🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?
@@ -84,11 +84,11 @@ const Begin_premier_deballage = () => {
             varient en fonction du fabricant&nbsp;:
           </h4>
           <ul className="compactlist mt-0 mb-8 leading-tight">
-            <li>
+            <li className="text-justify">
               Généralement, <strong>le plus simple</strong> est de brancher le
               chargeur et de le connecter à la roue.
             </li>
-            <li>
+            <li className="text-justify">
               Chez Begode, la manipulation est parfaitement décrite{' '}
               <Link
                 href="https://www.youtube.com/watch?v=8HJws4b_Dtw"
@@ -99,7 +99,7 @@ const Begin_premier_deballage = () => {
               </Link>{' '}
               des WheelersPro.
             </li>
-            <li>
+            <li className="text-justify">
               Chez LeaperKim, la manipulation est visible{' '}
               <Link
                 href="https://youtu.be/K2Y33w_8SsE"
@@ -110,7 +110,7 @@ const Begin_premier_deballage = () => {
               </Link>
               .
             </li>
-            <li>
+            <li className="text-justify">
               Chez Inmotion, Kingsong ou Leaperkim&nbsp;: l&apos;application
               mobile permet de désactiver/activer le mode transport.
             </li>
@@ -118,27 +118,29 @@ const Begin_premier_deballage = () => {
           <div className="blueBlock mb-8">
             <ul className="compactlist">
               <h4 className="mt-0 mb-1 -ml-4">🎁 À la réception du carton :</h4>
-              <li>
+              <li className="text-justify">
                 Vérifie l&apos;aspect général du carton (refuse la livraison si
                 le carton est endommagé ou des traces
                 d&apos;eau/d&apos;humidité).
               </li>
-              <li>
+              <li className="text-justify">
                 Vérifie que le carton comprend la notice, le chargeur et son
                 câble électrique.
               </li>
-              <li>Vérifie le pneu et gonfle-le suffisamment.</li>
-              <li>Vérifie la suspension.</li>
+              <li className="text-justify">
+                Vérifie le pneu et gonfle-le suffisamment.
+              </li>
+              <li className="text-justify">Vérifie la suspension.</li>
             </ul>
           </div>
           <h4 className="mt-4 mb-1">➡️ Les applications mobiles&nbsp;:</h4>
-          <p>
+          <p className="text-justify">
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.
             <br />
             Voici la liste des principales applications&nbsp;:
           </p>
-          <p className="text-gray-500 dark:text-gray-300 mt-0 text-right">
+          <p className="text-gray-500 dark:text-gray-300 mt-0 text-right text-sm">
             <i>
               Aucun favoritisme de ma part, les marques sont citées par ordre
               alphabétique.

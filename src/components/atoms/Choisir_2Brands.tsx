@@ -75,7 +75,7 @@ const Brands = () => {
           <p className="mt-8 mb-2">
             Le marché est actuellement dominé par quelques fabricants, tous
             basés en Chine (près de Shenzen). <br />
-            <span className="text-gray-500 dark:text-gray-300 mt-0">
+            <span className="text-gray-500 dark:text-gray-300 mt-0 text-right text-small">
               <i>
                 Aucun favoritisme de ma part, les marques sont citées par ordre
                 alphabétique.
@@ -110,8 +110,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Ce fabricant historique (existe depuis 2014) s&apos;est
                       imposé comme une référence pour de nombreux passionnés,
                       grâce à une très large gamme de modèles axés sur la
@@ -141,8 +141,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Apparue en 2021, cette marque partage ses ateliers de
                       fabrication et toute son ADN avec Begode pour continuer à
                       repousser les limites.
@@ -170,8 +170,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Créé en 2012, ce fabricant propose une gamme lisible et
                       diversifiée, avec des modèles adaptés aussi bien aux
                       débutants qu&apos;aux experts. Ses modèles associent
@@ -201,8 +201,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Présente sur le marché depuis 2014, cette marque est
                       reconnue pour ses modèles offrant un équilibre entre
                       performance et sécurité. Elle fut la première à proposer
@@ -231,8 +231,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Apparu en 2020, ce fabricant a rapidement gagné en
                       popularité auprès des connaisseurs avec sa gamme Veteran
                       et ses roues robustes, solides et puissantes, offrant
@@ -261,8 +261,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Connue pour ses trottinettes électriques, cette marque a
                       aussi fabriqué quelques modèles populaires entre 2014 et
                       2018. Elle s&apos;est depuis retirée du marché, mais ses
@@ -292,8 +292,8 @@ const Brands = () => {
                       className="rounded-lg cursor-pointer w-auto min-w-[50px] max-w-[20vw]"
                     />
                   </aside>
-                  <aside className="">
-                    <p className="text-xs sm:text-sm md:text-base">
+                  <aside className="ml-3">
+                    <p className="text-xs sm:text-sm md:text-base text-justify">
                       Créée en 2024 par d&apos;anciens collaborateurs Kingsong,
                       cette marque a l&apos;ambition de proposer des modèles
                       innovants. Leurs 2 premiers modèles ont suscité intérêt et
@@ -304,7 +304,7 @@ const Brands = () => {
               </AccordionItem>
             </Accordion>
           </p>
-          <p className="mt-4">
+          <p className="mt-4 text-justify">
             Il existe également d&apos;autres marques&nbsp;: certaines comme
             Solowheel, RockWheel ou IPS ont disparu, et les autres sont moins
             connues/appréciées des connaisseurs. Les caractéristiques de leurs

@@ -107,7 +107,7 @@ const CommonSense = () => {
             </li>
             <li>
               Prend le temps de connaitre tes capacités, de{' '}
-              <strong>connaitre ta roue</strong>, et
+              <strong>connaitre ta roue</strong>, et{' '}
               <strong>respecte la</strong>.
             </li>
             <li>

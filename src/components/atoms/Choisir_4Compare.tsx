@@ -29,7 +29,7 @@ const Compare = () => {
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
         <ul className="list-disc pl-12 space-y-2">
-          <li>
+          <li className="text-justify">
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques{' '}
             <strong className="text-brown-500">
@@ -37,11 +37,11 @@ const Compare = () => {
             </strong>{' '}
             et renouvellent constamment leur gamme.
           </li>
-          <li>
+          <li className="text-justify">
             Les fabricants et les magasins affichent parfois des spécifications
             différentes (valeurs, formats ou unités de mesure).
           </li>
-          <li>
+          <li className="text-justify">
             Les chiffres sont parfois trompeurs, et{' '}
             <strong className="text-brown-500">
               les autonomies annoncées sont toujours surévaluées
@@ -50,7 +50,7 @@ const Compare = () => {
             est tributaire de nombreux paramètres (poids du wheeler, vitesse,
             température, profil et nature du trajet…).
           </li>
-          <li>
+          <li className="text-justify">
             Certains modèles changent légèrement avec le temps (esthétique ou
             technique) selon le lot de production (on appelle ça les
             <span className="italic ml-1">batchs</span>).
@@ -66,7 +66,7 @@ const Compare = () => {
           </span>
         </h4>
         <ul className="list-disc pl-12 space-y-2">
-          <li>
+          <li className="text-justify">
             La{' '}
             <strong>
               <span className="text-fuchsia-700 dark:text-fuchsia-400">
@@ -87,7 +87,7 @@ const Compare = () => {
             </strong>{' '}
             de chaque roue testée.
           </li>
-          <li>
+          <li className="text-justify">
             Dans{' '}
             <strong>
               <span className="text-fuchsia-700 dark:text-fuchsia-400">
@@ -131,7 +131,7 @@ const Compare = () => {
           </aside>
           <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
             <ul className="list-disc pl-12 space-y-2">
-              <li>
+              <li className="text-justify">
                 Ce <strong>projet</strong> mené par{' '}
                 <Link
                   href="https://www.instagram.com/rafa.pgarcia"
@@ -151,7 +151,7 @@ const Compare = () => {
                 et moi participons) permet de consulter l&apos;ensemble des
                 modèles du marché dans un format standardisé.
               </li>
-              <li>
+              <li className="text-justify">
                 C&apos;est actuellement <strong>le meilleur outil</strong> pour
                 faire des comparaisons. ⇒{' '}
                 <Link
@@ -166,7 +166,7 @@ const Compare = () => {
           </aside>
         </div>
         <div className="flex justify-center mt-8">
-          <Link href={EUCFinder.src} passHref target="_blank">
+          <Link href="https://www.eucfinder.com/fr" passHref target="_blank">
             <Image
               src={EUCFinder}
               alt="EUCFinder"

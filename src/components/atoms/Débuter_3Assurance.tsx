@@ -91,13 +91,13 @@ const Assurance = () => {
 
           <h3>À retenir :</h3>
           <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>
-              La roue est un <strong>véhicule terrestre à moteur</strong> qui
+            <li className="text-justify">
+              <strong>La roue est un véhicule</strong> terrestre à moteur qui
               doit être assurée. Le type de contrat est au minimum en{' '}
               <strong className="text-brown-500">responsabilité civile</strong>.
             </li>
 
-            <li>
+            <li className="text-justify">
               La vignette (papillon vert){' '}
               <Link
                 href="https://www.service-public.fr/particuliers/vosdroits/F1362"
@@ -130,8 +130,8 @@ const Assurance = () => {
               >
                 R211-21-5
               </Link>
-              ), en plus d’avoir sur soi l&apos;attestation d&apos;assurance
-              (carte verte -{' '}
+              ), en plus d&apos;avoir sur soi l&apos;attestation
+              d&apos;assurance (i.e. la carte verte,{' '}
               <Link
                 href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048547657"
                 target="_blank"
@@ -141,7 +141,7 @@ const Assurance = () => {
               </Link>
               ).
             </li>
-            <li>
+            <li className="text-justify">
               <i>Attention</i>, les contrats d&apos;assurance habitation ne
               couvrent généralement pas les EDPM, catégorie à laquelle
               appartiennent les roues. Il faut un{' '}
@@ -150,7 +150,7 @@ const Assurance = () => {
               </strong>{' '}
               (comme pour une moto ou une voiture).
             </li>
-            <li>
+            <li className="text-justify">
               Chaque roue doit être assurée individuellement.{' '}
               <strong>
                 Le contrat est lié au véhicule, pas à la personne &nbsp;:
@@ -160,7 +160,7 @@ const Assurance = () => {
               pas d&apos;assurance &laquo;&nbsp;par personne&nbsp;&raquo; qui
               couvre automatiquement toutes les roues que vous utilisez.
             </li>
-            <li>
+            <li className="text-justify">
               En l&apos;absence d&apos;assurance, tu risques une amende
               (jusqu&apos;à 3750€ -{' '}
               <Link
@@ -182,7 +182,7 @@ const Assurance = () => {
               responsabilité&nbsp;!&nbsp;&raquo;
             </h4>
           </div>
-          <p>
+          <p className="text-justify">
             🚨 <b>Comment réagir en cas d&apos;accident&nbsp;?</b> Même sans
             gravité, un accident génère toujours du stress : remplissez
             systématiquement un constat amiable (l&apos;idéal est d&apos;en
@@ -198,7 +198,7 @@ const Assurance = () => {
             </Link>
             &nbsp;!
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-justify">
             💰 <b>Le budget ?</b> Assurer un EDPM coûte 5-10€/mois. La quasi
             totalité des assureurs propose des contrats adaptés. Tu trouveras un{' '}
             <Link href="/promo" className="link-style">

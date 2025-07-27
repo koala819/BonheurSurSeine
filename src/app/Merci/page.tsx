@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import Contact from '@/src/components/molecules/Contact'
+import Contact from '@/src/components/molecules/Merci'
 
 import { createClient } from '@/prismicio'
 
