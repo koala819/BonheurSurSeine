@@ -84,7 +84,6 @@ export function Top() {
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="text-s italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li className="text-sm">🔸Les roues</li>
               <li className="text-sm">🔸Mes tests</li>
               <li className="text-sm">🔸Mes vidéos</li>
             </ul>

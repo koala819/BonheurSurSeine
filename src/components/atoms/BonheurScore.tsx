@@ -59,7 +59,7 @@ export function BonheurScore({
     <>
       <div className="py-1 px-4 sm:px-6 lg:px-8 space-y-1">
         <h1 className="whitespace-break-spaces mb-6 mt-9">
-          BonheurScore - tests et reviews
+          BonheurScore - Tests et Reviews
         </h1>
 
         {/*CAPSULES D'INTRODUCTION*/}
