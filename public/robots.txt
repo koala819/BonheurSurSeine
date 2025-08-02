@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.bonheursurseine.com
+
+# Sitemaps
+Sitemap: https://www.bonheursurseine.com/sitemap.xml
