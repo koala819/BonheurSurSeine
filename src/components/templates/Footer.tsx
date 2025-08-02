@@ -40,6 +40,10 @@ export function Footer() {
                   classNameTitle="md:text-xl lg:text-4xl"
                   button={{ display: false }}
                 />
+                <span className="text-xs text-cyan-50 dark:text-sky-50">
+                  {/*<span className="text-xs text-cyan-600 dark:text-sky-950">*/}
+                  Vidéaste et Spécialiste gyroroue
+                </span>
                 <picture className="flex space-x-4 items-center justify-center mt-2 w-full">
                   <Tooltip showArrow={true} color="danger" content="Youtube">
                     <Link
