@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     'Bonheur Sur Seine – Codes Promo : Offres Partenaires et Réductions Exclusives',
   description:
-    "Guide d'achat et codes promo exclusifs chez les partenaires de Bonheur Sur Seine (accessoires monoroues, gyrorues, roues électriques).",
+    "Guide d'achat et promotions exclusives chez les partenaires de Bonheur Sur Seine (accessoires monoroues, gyroroues, roues électriques).",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/promo`,
   },

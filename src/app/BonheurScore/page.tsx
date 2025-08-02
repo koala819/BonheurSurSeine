@@ -9,9 +9,9 @@ import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine - Mobilité urbaine : Tests et Reviews des monoroues, gyrorues, roues électriques',
+    'Bonheur Sur Seine - Mobilité urbaine : Tests et Reviews des gyroroues, monoroues, roues électriques',
   description:
-    'Evaluations détaillées avec le BonheurScore : avis, notes, photos et vidéos YouTube pour vous aider à choisir.',
+    'Evaluations détaillées avec le BonheurScore : avis, notes, comparaisons, photos et vidéos YouTube pour faire son choix.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/BonheurScore`,
   },

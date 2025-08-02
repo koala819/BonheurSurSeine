@@ -9,9 +9,9 @@ import Quote from '@/src/components/atoms/Accueil_Quote'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroue',
+  title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroues',
   description:
-    'Le monde des gyroroues, monoroues et roues électriques avec BonheurSurSeine, expert à Paris : infos, tests, reviews, conseils, guides, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour apprendre...',
+    "Qu'est-ce qu'une gyroroue et comment ça fonctionne ? Le monde des monoroues et roues électriques avec BonheurSurSeine, expert à Paris : tests, essais et reviews, conseils, infos, guide d'achat, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour apprendre...",
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },

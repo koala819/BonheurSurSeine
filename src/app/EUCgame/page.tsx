@@ -3,7 +3,13 @@ import Link from 'next/link'
 import RexEUC from '@/src/components/gameEUCBSS/gameEUC'
 
 // Ajuste le chemin si nécessaire
-
+export const metadata = {
+  title: 'Bonheur sur Seine - Jeu caché',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 export default function GamePage() {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
