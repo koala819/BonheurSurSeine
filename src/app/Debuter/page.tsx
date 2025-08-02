@@ -9,9 +9,9 @@ import Associations from '@/src/components/atoms/Débuter_5Associations'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine - Conseils pour bien démarrer en monoroue, gyrorue, roue électrique',
+    'Bonheur Sur Seine - Conseils pour bien démarrer en gyroroue, monoroue, roue électrique',
   description:
-    'Apprendre la roue électrique : conseils, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
+    'Apprendre la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/begin`,
   },

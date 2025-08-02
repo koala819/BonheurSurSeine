@@ -8,7 +8,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine – Vidéaste et Spécialiste Gyroroue',
   description:
-    'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, contactez Bonheur Sur Seine.',
+    'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, soutenez Bonheur Sur Seine.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/contact`,
   },

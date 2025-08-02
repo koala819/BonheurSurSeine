@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     'Bonheur Sur Seine - Comment choisir sa gyroroue ? Comparaisons et Conseils',
   description:
-    'Guide pour choisir sa gyroroue : conseils, comparaisons, et astuces pour acheter la roue électrique idéale.',
+    'Quelles sont les meilleures roues ? Marques, guide, conseils, comparatifs pour acheter la roue électrique idéale.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/choix`,
   },
