@@ -114,7 +114,7 @@ const Practical_Vrac = () => {
                 alt="Image_carto"
                 width={400}
                 height={195}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer shadow-md transition-shadow"
               />
             </aside>
           </div>
@@ -127,11 +127,16 @@ const Practical_Vrac = () => {
               <i>Citées par ordre alphabétique</i>
               😉
             </p>
-            <div className="flex flex-col sm:flex-row mb-0 mt-2">
-              <aside className="sm:w-1/2 mb-0 mt-0">
-                <h4 className="mb-0 mt-0 text-center">Site de cartographie</h4>
-                <ul className="compactlist">
-                  <li>
+
+            {/* Section avec 2 capsules de même hauteur */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              {/* Capsule CIRCULATION */}
+              <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+                <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
+                  🗺️ Site de cartographie
+                </h4>
+                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://www.cyclosm.org/"
                       target="_blank"
@@ -140,7 +145,7 @@ const Practical_Vrac = () => {
                       CyclOSM
                     </Link>{' '}
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://fr.eurovelo.com/#routes-and-countries"
                       target="_blank"
@@ -149,7 +154,7 @@ const Practical_Vrac = () => {
                       Eurovelo
                     </Link>
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://gmap2xxx.sdesimeur.com/"
                       target="_blank"
@@ -159,7 +164,7 @@ const Practical_Vrac = () => {
                     </Link>{' '}
                     (pour avoir des fichiers GPX)
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://www.opencyclemap.org/"
                       target="_blank"
@@ -168,7 +173,7 @@ const Practical_Vrac = () => {
                       OpenCycle Map
                     </Link>{' '}
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://www.af3v.org/les-voies-vertes/carte-du-schema-national-des-veloroutes-et-voies-vertes/"
                       target="_blank"
@@ -179,12 +184,14 @@ const Practical_Vrac = () => {
                     (cartographiées par l&apos;AF3V)
                   </li>
                 </ul>
-              </aside>
-              {/*--------------------------------------------------------*/}
-              <aside className="sm:w-1/2 mb-0 mt-0">
-                <h4 className="mb-0 mt-0 text-center">Applis de navigation</h4>
-                <ul className="mt-0 compactlist">
-                  <li>
+              </div>
+              {/* Capsule ÉQUIPEMENTS */}
+              <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+                <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
+                  📲 Applis de navigation
+                </h4>
+                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://geovelo.app/fr/"
                       target="_blank"
@@ -193,7 +200,7 @@ const Practical_Vrac = () => {
                       Géovélo
                     </Link>{' '}
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://www.komoot.com/fr-fr/devices"
                       target="_blank"
@@ -202,7 +209,7 @@ const Practical_Vrac = () => {
                       Komoot
                     </Link>
                   </li>
-                  <li>
+                  <li className="text-justify text-sm">
                     <Link
                       href="https://fr.wikiloc.com/outdoor-navigation-app?ref=home"
                       target="_blank"
@@ -211,7 +218,7 @@ const Practical_Vrac = () => {
                       Wikiloc
                     </Link>
                   </li>
-                  <li className="text-justify">
+                  <li className="text-justify text-sm">
                     Certaines applications dédiées à la roue (Darknessboot{' '}
                     <Link
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
@@ -241,7 +248,7 @@ const Practical_Vrac = () => {
                     ) proposent aussi la navigation GPS.
                   </li>
                 </ul>
-              </aside>
+              </div>
             </div>
           </section>
           {/*--------------------------------------------------------*/}

@@ -124,7 +124,7 @@ export function Footer() {
         <aside className="flex justify-center md:justify-end  md:w-1/2">
           <FooterColumn
             title=" "
-            items={[{ text: 'Mentions légales', link: '/mentions' }]}
+            items={[{ text: 'Mentions légales', link: '/Mentions' }]}
           />
         </aside>
       </nav>

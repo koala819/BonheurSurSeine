@@ -26,6 +26,7 @@ const Compare = () => {
         Pour faire un choix éclairé, il faut peser les avantages et les
         inconvénients, et tenir compte de ses contraintes.
       </div>
+      {/*---------------------CONSTATS--------------------------- */}
       <div className="pt-8">
         <h4>➡️ Pas si simple</h4>
         <ul className="list-disc pl-12 space-y-2">
@@ -57,7 +58,7 @@ const Compare = () => {
           </li>
         </ul>
       </div>
-
+      {/*---------------------REVIEWS--------------------------- */}
       <div className="pt-8">
         <h4>
           ➡️ Mes reviews et le{' '}
@@ -110,27 +111,24 @@ const Compare = () => {
           </li>
         </ul>
       </div>
-
+      {/*---------------------EUC FINDER--------------------------- */}
       <div className="pt-8">
         <h4>➡️ EUC Finder</h4>
-        <div className="flex flex-col lg:flex-row">
-          <aside className="lg:w-1/5 flex items-center justify-center">
-            <Link
-              href={'https://www.eucfinder.com/fr'}
-              passHref
-              target="_blank"
-            >
+        <div className="flex flex-col md:flex-row gap-6 mt-4 mb-4">
+          <aside className="md:w-1/5 flex items-center justify-center">
+            <Link href="https://www.eucfinder.com/fr" passHref target="_blank">
               <Image
                 src={logo}
-                alt="Eeucfinder Logo"
+                alt="EUC Finder Logo"
                 width={100}
-                height={500}
+                height={100}
                 className="rounded-lg cursor-pointer"
               />
             </Link>
           </aside>
-          <aside className="lg:w-4/5 pt-8 lg:pt-0 lg:pl-8">
-            <ul className="list-disc pl-12 space-y-2">
+
+          <aside className="md:w-4/5">
+            <ul className="list-disc pl-6 space-y-2 text-justify">
               <li className="text-justify">
                 Ce <strong>projet</strong> mené par{' '}
                 <Link
@@ -153,7 +151,7 @@ const Compare = () => {
               </li>
               <li className="text-justify">
                 C&apos;est actuellement <strong>le meilleur outil</strong> pour
-                faire des comparaisons. ⇒{' '}
+                faire des comparaisons. 👉&nbsp;
                 <Link
                   href="https://finder.eucfinder.com/fr"
                   className="underline hover:text-blue-500"
@@ -165,11 +163,11 @@ const Compare = () => {
             </ul>
           </aside>
         </div>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-4">
           <Link href="https://www.eucfinder.com/fr" passHref target="_blank">
             <Image
               src={EUCFinder}
-              alt="EUCFinder"
+              alt="EUCFinder Screenshot"
               width={500}
               height={500}
               className="rounded-lg cursor-pointer"

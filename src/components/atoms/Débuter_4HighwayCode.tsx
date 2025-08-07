@@ -55,7 +55,7 @@ const HighwayCode = () => {
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-4 text-justify">
-            Depuis le 23 octobre 2019, les roues électriques sont officiellement
+            Depuis le 23 octobre 2019, les gyroroues sont officiellement
             reconnues dans le Code de la Route (catégorie EDPM{' '}
             <strong>Engins de Déplacement Personnel à Moteur</strong>&nbsp;:{' '}
             <Link
@@ -78,9 +78,9 @@ const HighwayCode = () => {
               </div>
               <p className="mb-1 text-justify mr-3">
                 Par conséquent,{' '}
-                <b>toutes les règles du Code de la Route s&apos;appliquent</b>{' '}
-                (alcoolémie, circulation, signalisation, etc.). Pour circuler{' '}
-                <strong>sur voies publiques</strong>, pas besoin de plaques
+                <b>TOUTES les règles du Code de la Route s&apos;appliquent</b>{' '}
+                (alcoolémie, circulation, signalisation, etc.). Et pour circuler{' '}
+                <strong>sur voies publiques</strong>, nul besoin de plaques
                 d&apos;immatriculation (
                 <Link
                   href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039275482"
@@ -99,7 +99,7 @@ const HighwayCode = () => {
                 alt="Image_HighwayCode"
                 width={400}
                 height={195}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer shadow-md transition-shadow"
               />
             </aside>
           </div>
@@ -107,11 +107,16 @@ const HighwayCode = () => {
           <p className="mb-4">
             Il y a <strong>quelques spécificités à connaitre.</strong>
           </p>
-          <section className="flex flex-col md:flex-row justify-between mb-8">
-            <div className="mb-4 md:mb-0 md:mr-4 md:w-1/2">
-              <h4>CIRCULATION</h4>
-              <ul className="list">
-                <li className="text-justify">
+          {/*-------------------------------------------*/}
+          {/* Section avec 2 capsules de même hauteur */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            {/* Capsule CIRCULATION */}
+            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+              <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
+                🚴‍♂️ CIRCULATION
+              </h4>
+              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+                <li className="text-justify text-sm">
                   Obligation d&apos;emprunter les pistes cyclables si elles
                   existent (
                   <Link
@@ -123,7 +128,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Utilisation possible du panneau M12 en cédant le passage aux
                   piétons et aux autres usagers (
                   <Link
@@ -135,8 +140,8 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
-                  Interdiction de circuler sur les trottoirs sauf dérogation (
+                <li className="text-justify text-sm">
+                  Interdiction de circuler sur les trottoirs (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -146,10 +151,10 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Interdiction de circuler sur les routes où la vitesse est
-                  &gt;50km/h, et routes hors agglomération, sauf sur pistes
-                  cyclables et voies vertes (
+                  &gt;50km/h et sur les routes hors agglomération, sauf sur
+                  pistes cyclables et voies vertes (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -159,7 +164,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Interdiction de tenir un téléphone en main (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422/"
@@ -178,7 +183,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Interdiction de porter des écouteurs ou des oreillettes (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422"
@@ -189,7 +194,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Âge minimum de 14 ans (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035778"
@@ -202,10 +207,13 @@ const HighwayCode = () => {
                 </li>
               </ul>
             </div>
-            <div className="md:w-1/2">
-              <h4>ÉQUIPEMENT</h4>
-              <ul className="list">
-                <li className="text-justify">
+            {/* Capsule ÉQUIPEMENTS */}
+            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+              <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
+                🛠️ ÉQUIPEMENT
+              </h4>
+              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+                <li className="text-justify text-sm">
                   Vitesse maximale de 25 km/h par construction ou par bridage (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039478722/"
@@ -216,9 +224,8 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
-                  Présence d&apos;une sonnette obligatoire (klaxon électrique
-                  non valable,{' '}
+                <li className="text-justify text-sm">
+                  Sonnette obligatoire (klaxon électrique non valable,{' '}
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
                     target="_blank"
@@ -228,7 +235,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Feux de position non éblouissants et fixes&nbsp;: blanc à
                   l&apos;avant, rouge à l&apos;arrière (
                   <Link
@@ -264,7 +271,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Catadioptres nécessaires&nbsp;: blanc à l&apos;avant, rouge à
                   l&apos;arrière, orange sur les côtés (
                   <Link
@@ -292,7 +299,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify">
+                <li className="text-justify text-sm">
                   Interdiction de pousser ou tracter une charge ou un véhicule (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039276191"
@@ -305,7 +312,8 @@ const HighwayCode = () => {
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
+          {/*-------------------------------------------*/}
           <p className="mb-8 text-justify">
             Ces dispositions peuvent paraitre contraignantes, mais elles sont{' '}
             <b>

@@ -56,25 +56,24 @@ const Assurance = () => {
         >
           <div className="mb-8 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-4">
-              <div className="blueBlock mb-0">
+              <div className="pinkBlock mb-0">
                 <h3>
-                  ☑️ L&apos;assurance est{' '}
-                  <span className="text-xl sm:text-xl md:text-2xl underline text-brown-500">
-                    obligatoire
+                  ✅ L&apos;assurance est{' '}
+                  <span className="text-xl sm:text-xl md:text-2xl underline text-rose-600 dark:text-black font-semibold">
+                    obligatoire&nbsp;!
                   </span>
-                  &nbsp;! (
+                </h3>
+                <span>
+                  Si quelqu&apos;un te dit autre chose, soit il ment, soit il
+                  est incompétent (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
                     target="_blank"
                     className="link-style"
                   >
                     L324-1
-                  </Link>
-                  )
-                </h3>
-                <span>
-                  Si quelqu&apos;un te dit autre chose, soit il ment, soit il
-                  est incompétent.
+                  </Link>{' '}
+                  du Code de la route).
                 </span>
               </div>
             </aside>
@@ -84,7 +83,7 @@ const Assurance = () => {
                 alt="Image_assurance"
                 width={320}
                 height={195}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer shadow-md transition-shadow"
               />
             </aside>
           </div>
@@ -92,9 +91,15 @@ const Assurance = () => {
           <h3>À retenir :</h3>
           <ul className="list-disc pl-6 space-y-2 mb-4">
             <li className="text-justify">
-              <strong>La roue est un véhicule</strong> terrestre à moteur qui
-              doit être assurée. Le type de contrat est au minimum en{' '}
-              <strong className="text-brown-500">responsabilité civile</strong>.
+              <strong className="text-rose-600 dark:text-rose-500">
+                La roue est un véhicule
+              </strong>{' '}
+              terrestre à moteur qui doit être assurée. Le type de contrat est
+              au minimum en{' '}
+              <strong className="text-rose-600 dark:text-rose-500">
+                responsabilité civile
+              </strong>
+              .
             </li>
 
             <li className="text-justify">
@@ -145,15 +150,18 @@ const Assurance = () => {
               <i>Attention</i>, les contrats d&apos;assurance habitation ne
               couvrent généralement pas les EDPM, catégorie à laquelle
               appartiennent les roues. Il faut un{' '}
-              <strong className="text-brown-500">
+              <strong className="text-rose-600 dark:text-rose-500">
                 contrat d&apos;assurance dédié
               </strong>{' '}
               (comme pour une moto ou une voiture).
             </li>
             <li className="text-justify">
               Chaque roue doit être assurée individuellement.{' '}
-              <strong>
-                Le contrat est lié au véhicule, pas à la personne &nbsp;:
+              <strong className="text-rose-600 dark:text-rose-500">
+                Le contrat est lié au véhicule
+              </strong>
+              , pas à la personne&nbsp;:{' '}
+              <strong className="text-rose-600 dark:text-rose-500">
                 2&nbsp;véhicules = 2&nbsp;contrats
               </strong>
               . Les packs ou formules multi-roue sont rares, et il n&apos;existe
@@ -175,38 +183,58 @@ const Assurance = () => {
               d&apos;un autre usager.
             </li>
           </ul>
-          <div className="yellowBlock mb-6">
+          <div className="yellowBlock mb-4">
             <h4>
               📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
               sécurité, c&apos;est une question de
               responsabilité&nbsp;!&nbsp;&raquo;
             </h4>
           </div>
-          <p className="text-justify">
-            🚨 <b>Comment réagir en cas d&apos;accident&nbsp;?</b> Même sans
-            gravité, un accident génère toujours du stress : remplissez
-            systématiquement un constat amiable (l&apos;idéal est d&apos;en
-            avoir 1 prérempli avec ses informations d&apos;assurance).
-            <br />
-            Pour en savoir plus, consultez cet{' '}
-            <Link
-              href="https://www.anumme.fr/2020/02/29/edpm-nvei-que-faire-en-cas-daccident-guide-du-constat-amiable/"
-              target="_blank"
-              className="link-style"
-            >
-              article très complet rédigé par l&apos;ANUMME
-            </Link>
-            &nbsp;!
-          </p>
-          <p className="mt-3 text-justify">
-            💰 <b>Le budget ?</b> Assurer un EDPM coûte 5-10€/mois. La quasi
-            totalité des assureurs propose des contrats adaptés. Tu trouveras un{' '}
-            <Link href="/promo" className="link-style">
-              code Promo
-            </Link>{' '}
-            à utiliser chez Wizzas, un courtier en assurance spécialisé et
-            partenaire de la chaine.
-          </p>
+
+          <div className="grid gap-4 md:grid-cols-2 mt-4">
+            {/* Bloc 1 - Accident */}
+            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-semibold mb-2">
+                🚨 Que faire en cas d&apos;accident&nbsp;?
+              </h3>
+              <p className="text-justify text-sm">
+                Un accident génère toujours du stress. Même sans gravité,
+                remplis systématiquement un constat amiable (l&apos;idéal est
+                d&apos;en avoir 1 prérempli avec ses informations
+                d&apos;assurance).
+                <br />
+                Pour savoir comment réagir, consulte cet{' '}
+                <Link
+                  href="https://www.anumme.fr/2020/02/29/edpm-nvei-que-faire-en-cas-daccident-guide-du-constat-amiable/"
+                  target="_blank"
+                  className="link-style text-sm font-semibold"
+                >
+                  article très complet rédigé par l&apos;ANUMME
+                </Link>
+                &nbsp;!
+              </p>
+            </div>
+
+            {/* Bloc 2 - Assurance */}
+            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-semibold mb-2">
+                💰 Le budget assurance
+              </h3>
+              <p className="text-justify text-sm">
+                Assurer un EDPM{' '}
+                <span className="text-sm font-semibold">coûte 5-10€/mois</span>.
+                La plupart des assureurs proposent des contrats adaptés.
+                <br />
+                Tu trouveras un{' '}
+                <Link href="/CodePromo" className="link-style">
+                  code Promo
+                </Link>{' '}
+                à utiliser chez Wizzas, un courtier en assurance spécialisé et
+                partenaire de la chaîne.
+              </p>
+            </div>
+          </div>
+
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en avril 2025
           </p>

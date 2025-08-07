@@ -3,6 +3,10 @@
 import { Accordion, AccordionItem } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 
+import Image from 'next/image'
+
+import Image_bon_sens from '@/public/Image_bon-sens_nuage-de-mots.png'
+
 const CommonSense = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>([])
@@ -49,17 +53,57 @@ const CommonSense = () => {
           title={<h3>😊 Le bon sens</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
-          <div className="blueBlock mb-8">
-            <h4>
-              🔥 Les protections n&apos;évitent pas le danger, la vigilance,
-              oui&nbsp;!
-            </h4>
+          <div className="mb-3 grid grid-cols-1 md:grid-cols-5 gap-1 items-stretch">
+            {/* Bloc texte sur 3 colonnes */}
+            <aside className="md:col-span-3">
+              <div className="yellowBlockbonsens my-0 grid grid-cols-1 gap-1 mb-0 h-full">
+                {[
+                  {
+                    icon: '☠️',
+                    text: "L'excès de confiance est l'ennemi n°1 du wheeler",
+                  },
+                  {
+                    icon: '⚠️',
+                    text: 'Anticipe les situations à risque',
+                  },
+                  {
+                    icon: '📢',
+                    text: 'Fais preuve de prudence en toutes circonstances',
+                  },
+                  {
+                    icon: '🧠',
+                    text: 'Pense aux autres usagers',
+                  },
+                ].map(({ icon, text }, i) => (
+                  <div
+                    key={i}
+                    className="bg-yellow-50 dark:bg-yellow-900 rounded-xl px-2 py-1 shadow text-left"
+                  >
+                    <h4 className="text-lg font-semibold mb-0 mt-0">
+                      {icon} {text}
+                    </h4>
+                  </div>
+                ))}
+              </div>
+            </aside>
+            {/* Image sur 2 colonnes */}
+            <aside className="md:col-span-2 h-full flex justify-center md:justify-end bg-zinc-100 dark:bg-zinc-900 rounded-lg">
+              <Image
+                src={Image_bon_sens}
+                alt="Bon sens en gyroroue"
+                width={900}
+                height={550}
+                className="max-w-full h-full object-contain rounded-lg cursor-pointer shadow-md transition-shadow"
+              />
+            </aside>
           </div>
-          <h3>Prudence est mère de sûreté</h3>
-          <ul className="list-disc pl-4 space-y-2 mb-4">
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
+          <h3 className="mt-1">Prudence est mère de sûreté</h3>
+          <ul className="list-disc pl-6 space-y-1 mb-6">
             <li>
               Respecte le <strong>code de la route</strong> (circulation,
-              stationnement, équipement).
+              stationnement, signalisation).
             </li>
             <li>
               Respecte les autres usagers (piétons, cyclistes, etc.), et met toi
@@ -79,17 +123,18 @@ const CommonSense = () => {
               plus vite que ce que tu peux freiner).
             </li>
           </ul>
-          <div className="yellowBlock mb-8">
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
+          <div className="blueBlock mb-6">
             <h4>
-              ☠️ L&apos;excès de confiance est l&apos;ennemi n°1 du wheeler.
-            </h4>
-            <h4>
-              📢 Anticipe les situations à risque, et fait preuve de prudence en
-              toutes circonstances.
+              🔥 Les protections n&apos;évitent pas le danger, la vigilance,
+              oui&nbsp;!
             </h4>
           </div>
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
           <h3>À retenir :</h3>
-          <ul className="list-disc pl-4 space-y-2 mb-4">
+          <ul className="list-disc pl-6 space-y-1 mb-4">
             <li>
               <strong>Protège toi&nbsp;!</strong>
             </li>
@@ -114,6 +159,8 @@ const CommonSense = () => {
               Je répète : connais bien les limites de ta roue et respecte les.
             </li>
           </ul>
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
           <div className="blueBlock">
             <h4>
               💟 Et n&apos;oublie pas : bon comportement = bonne image = bonne

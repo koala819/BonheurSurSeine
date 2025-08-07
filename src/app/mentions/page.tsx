@@ -6,28 +6,31 @@ export const metadata: Metadata = {
   description:
     "BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies.",
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/mentions`,
+    canonical: `${process.env.CLIENT_URL}/Mentions`,
   },
 }
 export default function Page() {
   return (
-    <section className="container px-4 my-20 mx-auto space-y-8">
+    <section className="container px-4 my-20 mx-auto space-y-4 text-justify">
       <h1>Mentions légales</h1>
 
       <h3>Identification et publication</h3>
       <p>
         <strong>Nom du site web :</strong> Bonheur Sur Seine
         <br />
-        <strong>Numéro de Siret :</strong> 80294141900011
+        <strong>URL :</strong> www.bonheursurseine.com
         <br />
         <strong>Directeur de la publication :</strong> Raphaël L.
+        <br />
+        <strong>Numéro de Siret :</strong> 80294141900011
         <br />
         <strong>Activité :</strong> Se déplacer en roue change la perception de
         la mobilité !!
         <br />
-        <strong>URL :</strong> www.bonheursurseine.com
-        <br />
         <strong>Localisation :</strong> 75000 Paris - France
+        <br />
+        <strong>Contributions :</strong> Site développé avec l&apos;aide de deux
+        personnes bénévoles.
       </p>
 
       <h3>Hébergement</h3>
@@ -41,8 +44,8 @@ export default function Page() {
         >
           DIX31
         </Link>{' '}
-        spécialiste en Création de sites web. La gestion de l&apos;hébergement
-        est effectuée par l’entreprise{' '}
+        spécialiste en création de sites web. La gestion de l&apos;hébergement
+        est effectuée par l&apos;entreprise{' '}
         <Link
           href={'https://www.dix31.com/'}
           passHref
@@ -54,7 +57,11 @@ export default function Page() {
         , immatriculée à TOULOUSE sous le numéro RCS 852 548 379 et dont le
         siège social est situé à Toulouse (CP 31300).
         <br />
-        <strong>Site hébergé </strong>sur https://vercel.com
+        <strong>Hébergeur :</strong> Vercel Inc.
+        <br />
+        <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, USA
+        <br />
+        <strong>Site web :</strong> https://vercel.com
       </p>
 
       <h3>Conditions d&apos;utilisation</h3>
@@ -75,7 +82,7 @@ export default function Page() {
         responsabilité de le vérifier fréquemment pour être à jour.
         <br />
         Les informations fournies par ce site web (ci-après dénommées{' '}
-        <i>Bonheur sur Seine</i>) et nos réseaux sociaux, tels que{' '}
+        <i>Bonheur sur Seine</i>) et nos réseaux sociaux (tels que{' '}
         <Link
           href={'https://www.instagram.com/bonheursurseine/'}
           passHref
@@ -83,8 +90,8 @@ export default function Page() {
           className="link-style"
         >
           Instagram
-        </Link>{' '}
-        ne sont pas destinés à être distribués ou utilisés par une personne ou
+        </Link>
+        ) ne sont pas destinés à être distribués ou utilisés par une personne ou
         une entité dans un pays où une telle distribution ou utilisation serait
         contraire à la loi ou à la réglementation ou qui nous soumettrait à une
         obligation d&apos;enregistrement dans ce pays.
@@ -99,13 +106,13 @@ export default function Page() {
         <br />
         <b>
           Toutes les informations indiquées sur le site sont données à titre
-          indicatif , et sont susceptibles d&apos;évoluer.
+          indicatif, et sont susceptibles d&apos;évoluer.
         </b>
       </p>
       <p>
         L&apos;éditeur est propriétaire des droits de propriété intellectuelle
-        ou détient les droits d’usage sur tous les éléments accessibles sur le
-        site, notamment les textes, graphismes, logo. Les photos qui sont
+        ou détient les droits d&apos;usage sur tous les éléments accessibles sur
+        le site, notamment les textes, graphismes, logo. Les photos qui sont
         publiées restent la propriété de leurs ayant droit respectifs.
       </p>
       <ul className="list">
@@ -113,27 +120,54 @@ export default function Page() {
           <b>Usage des roues électriques</b>
         </li>
         <p>
-          <i>Bonheur sur Seine</i> ne saurait être tenu responsable des
-          accidents ou problèmes occasionnés par la conduite d’un véhicule
-          électrique tels que ceux évoqués sur le site ou dans les vidéos
-          publiées sur{' '}
-          <Link
-            href={'https://www.youtube.com/c/BonheursurSeine'}
-            passHref
-            target="_blank"
-            className="link-style"
-          >
-            la chaine YouTube
-          </Link>
-          . Il est rappelé à l’utilisateur qu&apos;il est tenu de respecter les
-          lois en vigueur dans son pays, et que la modification d&apos;un engin
-          de transport doit se faire en connaissance de cause, après avoir
+          <b>
+            <i>Bonheur sur Seine</i> ne saurait être tenu responsable des
+            accidents ou problèmes occasionnés par la conduite d&apos;un
+            véhicule électrique tels que ceux évoqués sur le site ou dans les
+            vidéos publiées sur{' '}
+            <Link
+              href={'https://www.youtube.com/c/BonheursurSeine'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              la chaine YouTube
+            </Link>
+            .
+          </b>
+          <br />
+          Il est rappelé à l&apos;utilisateur qu&apos;il est tenu de respecter
+          les lois en vigueur dans son pays, et que la modification d&apos;un
+          engin de transport doit se faire en connaissance de cause, après avoir
           envisagé les conséquences possibles en termes de non respect des
           réglementations ou en termes de garantie commerciale.
         </p>
         <li>
           <b>Propriété Intellectuelle</b>
         </li>
+        <p>
+          <b>
+            Toute reproduction, représentation, modification, publication,
+            adaptation de tout ou partie des éléments du site, quel que soit le
+            moyen ou le procédé utilisé, est interdite, sauf autorisation écrite
+            préalable de l&apos;éditeur.
+          </b>{' '}
+          Toute reproduction, représentation du site en partie ou en totalité,
+          exploitation non autorisée du site ou de l&apos;un quelconque des
+          éléments qu&apos;il contient sera considérée comme constitutive
+          d&apos;une contrefaçon et poursuivie conformément aux dispositions des
+          articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+        </p>
+        <p>
+          Tous les éléments graphiques, la structure et, plus généralement, le
+          contenu du site sont protégés par le droit d&apos;auteur, le droit des
+          marques et le droit des dessins et modèles.
+        </p>
+        <p>
+          Toute personne qui recueille ou télécharge du contenu ou des
+          informations diffusées sur le site ne dispose sur ceux-ci que
+          d&apos;un droit d&apos;usage privé, personnel et non transmissible.
+        </p>
         <p>
           Tous les éléments de ce site sont protégés par des{' '}
           <Link
@@ -163,27 +197,6 @@ export default function Page() {
           doit se conformer aux exigences de ces licences, et toute
           reproduction, distribution ou modification doit être effectuée en
           accord avec les conditions spécifiées dans ces licences.
-        </p>
-        <p>
-          Tous les éléments graphiques, la structure et, plus généralement, le
-          contenu du site sont protégés par le droit d&apos;auteur, le droit des
-          marques et le droit des dessins et modèles.
-        </p>
-        <p>
-          Toute personne qui recueille ou télécharge du contenu ou des
-          informations diffusées sur le site ne dispose sur ceux-ci que
-          d&apos;un droit d&apos;usage privé, personnel et non transmissible.
-        </p>
-        <p>
-          Toute reproduction, représentation, modification, publication,
-          adaptation de tout ou partie des éléments du site, quel que soit le
-          moyen ou le procédé utilisé, est interdite, sauf autorisation écrite
-          préalable de l&apos;éditeur. Toute reproduction, représentation du
-          site en partie ou en totalité, exploitation non autorisée du site ou
-          de l&apos;un quelconque des éléments qu&apos;il contient sera
-          considérée comme constitutive d&apos;une contrefaçon et poursuivie
-          conformément aux dispositions des articles L.335-2 et suivants du Code
-          de Propriété Intellectuelle.
         </p>
         <li>
           <b>Activités interdites</b>
@@ -230,14 +243,11 @@ export default function Page() {
 
       <h3>Données Personnelles</h3>
       <p>
-        Les données personnelles collectées sur ce site sont strictement
-        réservées à l&apos;usage interne de notre entreprise. En aucun cas,
-        elles ne seront vendues, échangées ou louées à des tiers.
+        Aucune donnée personnelle n&apos;est collectée à votre insu.
         <br />
-        Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous
-        avez le droit d&apos;accéder à vos données, de les rectifier et de les
-        supprimer. <br />
-        Pour exercer ce droit, veuillez{' '}
+        Conformément au RGPD et à la loi Informatique et Libertés du 6 janvier
+        1978, vous pouvez demander l&apos;accès, la rectification ou la
+        suppression de vos données. Pour exercer ce droit, veuillez
         <Link
           href={'mailto:bonheursurseine@gmail.com'}
           className="link-style ml-1"

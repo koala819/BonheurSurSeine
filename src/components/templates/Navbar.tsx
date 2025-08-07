@@ -161,6 +161,14 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
+                  href="/Debuter#apprendre"
+                  className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  🔸Apprendre
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/Debuter#deballage"
                   className="text-inherit text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >

@@ -123,7 +123,7 @@ const Practical_Battery = () => {
                   alt="Graphique_diminution"
                   width={632}
                   height={472}
-                  className="rounded-lg cursor-pointer"
+                  className="rounded-lg cursor-pointer shadow-md transition-shadow"
                 />
               </Link>
               Le graphique ci-dessus illustre ce phénomène
@@ -165,7 +165,7 @@ const Practical_Battery = () => {
                 alt="Tableaux des tensions"
                 width={768}
                 height={432}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer shadow-md transition-shadow"
               />
             </Link>
           </div>
