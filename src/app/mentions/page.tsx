@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies.",
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/Mentions`,
+    canonical: `${process.env.CLIENT_URL}/mentions`,
   },
 }
 export default function Page() {
