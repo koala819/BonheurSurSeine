@@ -62,104 +62,167 @@ export function BonheurScore({
           BonheurScore - Tests et Reviews
         </h1>
 
-        {/*CAPSULES D'INTRODUCTION*/}
-        <footer className="blueBlocknoteBSS space-y-0 p-2">
-          <h3 className="mb-3">
-            📢 Ces notes ne sont le fruit que de ma vision, de mon usage et de
-            ma sensibilité.
-          </h3>
-          <p>
-            Pour en savoir plus sur la{' '}
-            <span className="text-fuchsia-700 dark:text-fuchsia-400">
-              <strong>notation</strong>
-            </span>
-            , je t&apos;invite à voir{' '}
-            <Link
-              href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
-              target="_blank"
-              className="link-style"
-            >
-              <span className="text-fuchsia-700 dark:text-fuchsia-400">
-                <strong>cette vidéo</strong>
-              </span>
+        <div className="grid md:grid-cols-3 gap-4">
+          {/* Bloc 1 */}
+          <div className="bg-blue-50 dark:bg-cyan-800  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-fuchsia-400 mb-2">
+              🔍 Tu hésites entre plusieurs modèles&nbsp;?
+            </h2>
+            <p className="text-justify text-sm">
+              Le{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                BonheurScore
+              </strong>{' '}
+              t&apos;aide à découvrir en un clin d&apos;œil ce que j&apos;ai
+              pensé des{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                meilleures gyroroues
+              </strong>{' '}
+              du marché&nbsp;: note globale, usages, forces, faiblesses
+              (équipements, praticité, confort...)
+              <br /> Sans oublier les{' '}
+              <Link
+                href="https://www.youtube.com/c/BonheursurSeine"
+                target="_blank"
+                className="link-style font-bold text-fuchsia-700 dark:text-fuchsia-400"
+              >
+                vidéos YouTube dédiées&nbsp;!
+              </Link>
+              🎥
+            </p>
+          </div>
+
+          {/* Bloc 2 */}
+          <div className="bg-blue-50 dark:bg-cyan-800  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-fuchsia-400 mb-2">
+              💬 Ton avis compte !
+            </h2>
+            <p className="text-sm text-justify">
+              Tu souhaites me partager ton ressenti&nbsp;? <br />
+              Utilise ce formulaire&nbsp;:
+            </p>
+            <Link href="https://forms.office.com/r/5k7QAax6Xu" target="_blank">
+              <button className="mt-4 px-4 py-2 bg-fuchsia-700 hover:bg-fuchsia-800 text-white text-sm rounded-lg">
+                ✍️ Donne ton avis
+              </button>
             </Link>
-            .😉
-          </p>
-          <ul className="ml-8">
-            <li className="list-disc">
-              Mes notes ne sont pas une vérité en soi : elles illustrent juste
-              du mieux possible{' '}
-              <span className="text-fuchsia-700 dark:text-fuchsia-400">
-                <strong>ce que j&apos;ai pensé</strong>
-              </span>{' '}
-              (mon avis personnel et mes ressentis).
-            </li>
-            <li className="list-disc">
-              Dans toutes mes vidéos, je donne{' '}
-              <span className="text-fuchsia-700 dark:text-fuchsia-400">
-                <strong>librement mon avis</strong>
-              </span>
-              , et j&apos;identifie au mieux les{' '}
-              <span className="text-fuchsia-700 dark:text-fuchsia-400">
-                <strong>usages</strong>
-              </span>{' '}
-              pour lesquels la roue excelle.
-            </li>
-            <li className="list-disc">
-              Même la roue la moins bien notée m&apos;a procuré, à chaque fois,
-              le{' '}
-              <span className="text-fuchsia-700 dark:text-fuchsia-400">
-                <strong>bonheur de rouler</strong>
-              </span>
+          </div>
+
+          {/* Bloc 3 */}
+          <div className="bg-blue-50 dark:bg-cyan-800  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-fuchsia-400 mb-2">
+              📅 Derniers ajouts
+            </h2>
+            <ul className="list-disc ml-4 text-sm">
+              <li className="text-sm">Extreme Bull Rocket &ndash; mai 2025</li>
+              <li className="text-sm">Nosfet Aero &ndash; mai 2025</li>
+              <li className="text-sm">Inmotion V9 &ndash; avril 2025</li>
+            </ul>
+            <p className="mt-1 text-sm text-justify">
+              🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
+              toutes les gyroroues que je teste, je t&apos;invite à{' '}
+              <strong className=" text-fuchsia-700 dark:text-fuchsia-400">
+                revenir régulièrement
+              </strong>
               .
-            </li>
-          </ul>
-
-          <p className="">
-            <br />
-            Tu souhaites également me partager ton avis&nbsp;?{' '}
-            <Link
-              href="https://forms.office.com/r/5k7QAax6Xu"
-              target="_blank"
-              className="link-style"
-            >
-              Remplis ce formulaire
-            </Link>{' '}
-            &nbsp;!&nbsp;📒
-          </p>
-
-          <p className="mb-0">
-            🆙 Et pour avoir un éventail complet des roues que je teste, je
-            t&apos;invite à <b>revenir régulièrement</b>.
-            {/*t&apos;invite à <Link href="/eucgame"><b>régulièrement</b>.</Link>*/}
-          </p>
-        </footer>
-
-        {/*------------------REMERCIEMENTS-------------------*/}
-        <div className="rounded leading-relaxed p-1 bg-stone-300 dark:bg-zinc-700 ml-2 mr-2 md:ml-20 md:mr-20 lg:ml-36 lg:mr-36">
-          <p className="text-justify italic text-gray-900 dark:text-gray-300">
-            <span className="block w-fit mx-auto text-center">
-              Je remercie chaleureusement tous mes contributeurs et partenaires
-              (ponctuels ou réguliers, passés, présents ou futurs). Grâce à leur
-              soutien, j&apos;ai la chance de vivre cette belle aventure et de
-              réaliser tous ces tests avec enthousiasme et passion.
-            </span>
-          </p>
-          <p className="italic text-center text-gray-900 dark:text-gray-300">
-            (
-            <Link
-              href="https://fr.tipeee.com/bonheur-sur-seine"
-              target="_blank"
-              className="underline"
-            >
-              Ne clique pas ici
-            </Link>
-            )
-          </p>
+              {/*t&apos;invite à <Link href="/eucgame"><strong className=" text-fuchsia-700 dark:text-fuchsia-400">régulièrement</strong>.</Link>*/}
+            </p>
+          </div>
         </div>
 
+        {/*----------------------------------------------*/}
+        {/*---------CAPSULES D'INTRODUCTION--------------*/}
+        <section className="px-0 md:px-7 lg:px-14">
+          <div className="mt-3 bg-blue-50 dark:bg-cyan-800 px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow ">
+            <h2 className="text-lg font-semibold mb-2">
+              📢 À propos du BonheurScore
+            </h2>
+            <p className="text-justify text-base mb-2">
+              Ces notes reflètent uniquement{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                ma vision
+              </strong>
+              ,{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                mon usage
+              </strong>{' '}
+              et{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                ma sensibilité
+              </strong>
+              . Je réalise mes tests terrain avec rigueur, centré sur
+              l&apos;expérience utilisateur en mobilité urbaine.
+            </p>
+            <ul className="ml-8">
+              <li className="list-disc text-justify">
+                Mes notes ne sont pas une vérité en soi : elles illustrent du
+                mieux possible{' '}
+                <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                  mon avis et mes ressentis
+                </strong>
+                .
+              </li>
+              <li className="list-disc text-justify">
+                Dans toutes mes vidéos, je donne{' '}
+                <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                  librement mon avis
+                </strong>
+                , et j&apos;identifie au mieux les usages pour lesquels la roue
+                excelle.
+              </li>
+              <li className="list-disc text-justify">
+                Chaque roue, même la moins bien notée, m&apos;a offert de vraies
+                sensations de liberté.
+              </li>
+            </ul>
+            <p className="mt-2 text-justify">
+              L&apos;objectif de mes tests est de{' '}
+              <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                t&apos;aider à trouver la roue qui te conviendra le mieux
+              </strong>
+              , selon tes envies et de ton usage.
+              <br />
+              Et pour en savoir plus sur la{' '}
+              <span className="text-fuchsia-700 dark:text-fuchsia-400">
+                <strong>notation</strong>
+              </span>
+              , tu peux consulter :{' '}
+              <Link
+                href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
+                target="_blank"
+                className="link-style text-fuchsia-700 dark:text-fuchsia-400"
+              >
+                <strong>cette vidéo</strong> 🎥
+              </Link>
+            </p>
+          </div>
+          {/*------------------REMERCIEMENTS-------------------*/}
+          <div className="mt-2 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <p className="text-center italic text-gray-900 dark:text-gray-300">
+              <span className="w-fit mx-auto text-center text-sm">
+                Je remercie chaleureusement tous mes contributeurs et
+                partenaires (ponctuels ou réguliers, passés, présents ou
+                futurs). Grâce à leur soutien, j&apos;ai la chance de vivre
+                cette belle aventure et de réaliser tous ces tests avec
+                enthousiasme et passion.
+                <br />
+              </span>
+              (
+              <a
+                href="https://fr.tipeee.com/bonheur-sur-seine"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline italic text-center text-gray-900 dark:text-gray-300 text-sm"
+              >
+                Ne clique pas ici
+              </a>
+              )
+            </p>
+          </div>
+        </section>
+        {/*----------------------------------------------*/}
         {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
-        <div className="mb-2 flex justify-between items-center">
+        <div className="mt-4 flex justify-between items-center">
           <div>
             <label
               htmlFor="brand-filter"
@@ -205,7 +268,7 @@ export function BonheurScore({
         </div>
       </div>
       {/*SECONDE PARTIE AVEC LES NOTATIONS*/}
-      <div className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
+      <div className="py-1 px-4 sm:px-6 lg:px-8 space-y-2">
         {/*AFFICHAGE DES ROUES*/}
         {filteredGyroroues.map((gyroroue, index) => (
           <Card key={index} shadow="md" radius="lg" className="mb-3">
@@ -259,7 +322,7 @@ export function BonheurScore({
                 </div>
                 <div className="flex items-center sm:col-span-2">
                   {/*REVIEWS ET COMMENTAIRE SUR LA ROUE*/}
-                  <span className="text-gray-600 dark:text-gray-200 text-sm sm:text-base md:text-base">
+                  <span className="text-gray-600 dark:text-gray-100 text-xs sm:text-sm md:text-sm text-justify">
                     {/*{gyroroue.data.commentaire}*/}
                     <PrismicRichText field={gyroroue.data.commentaire_new} />
                   </span>
@@ -281,10 +344,10 @@ export function BonheurScore({
                       }}
                     />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 flex flex-col justify-center items-center w-full">
-                      <p className="text-xs lg:text-xl font-extrabold text-black dark:text-gray-200">
+                      <p className="text-xs lg:text-xl font-extrabold text-black dark:text-gray-100">
                         Note Globale
                       </p>
-                      <p className="text-2xl lg:text-3xl font-semibold text-red-600">
+                      <p className="text-2xl lg:text-3xl font-semibold text-red-600 dark:text-red-400">
                         {/*NOTE GLOBALE SUR 10*/}
                         {gyroroue.data.note}/10
                       </p>
@@ -293,7 +356,7 @@ export function BonheurScore({
                 </picture>
               </aside>
               {/*3 COLONNES AVEC TOUS POINTS-EQUIPPEMENT-PRATICITE-VILLE-ROUTE-SUSPENSION*/}
-              <aside className="w-2/3 lg:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 my-0">
+              <aside className="w-2/3 lg:w-2/3 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 my-0">
                 {[
                   {
                     icon: FaTrophy,
@@ -337,7 +400,7 @@ export function BonheurScore({
                           item.label === 'Suspension' &&
                           !gyroroue.data.suspension
                             ? 'text-gray-500'
-                            : 'text-green-700'
+                            : 'text-green-700 dark:text-green-400'
                         }
                       >
                         {item.value}

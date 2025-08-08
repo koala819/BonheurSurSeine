@@ -57,8 +57,10 @@ const Associations = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <section>
-            <h2>L&apos;ANUMME</h2>
-            <div className="blueBlock mb-8">
+            <h3>
+              L&apos;<span className="small-caps">ANUMME</span>
+            </h3>
+            <div className="blueBlock mb-2">
               <h4>
                 ℹ️ Leur site est très complet et bourré d&apos;informations
               </h4>
@@ -92,9 +94,9 @@ const Associations = () => {
             </div>
           </section>
 
-          <section className="pt-8">
-            <h2>Les associations</h2>
-            <div className="blueBlock mb-4">
+          <section className="mt-6">
+            <h3>Les associations</h3>
+            <div className="blueBlock mb-2">
               <h4>
                 📢 &laquo;&nbsp;Le bonheur n&apos;est réel que lorsqu&apos;il
                 est partagé.&nbsp;&raquo;
@@ -115,7 +117,10 @@ const Associations = () => {
                     <b>rejoindre le Discord</b>
                   </Link>{' '}
                   pour rentrer en contact avec des wheelers de ta région&nbsp;:
-                  il a été <strong>créé pour ça&nbsp;!</strong>
+                  il a été{' '}
+                  <strong className="text-blue-800 dark:text-blue-400">
+                    créé pour ça&nbsp;!
+                  </strong>
                 </p>
               </aside>
 
@@ -150,12 +155,13 @@ const Associations = () => {
               </Link>{' '}
               que je remercie) :
             </p>
-            <div className="flex flex-col lg:flex-row mt-8">
-              <aside className="lg:w-7/12 flex items-center justify-center">
+            <div className="flex flex-col lg:flex-row mt-2 mb-2">
+              <aside className="lg:w-7/12 flex items-center justify-center ">
                 <iframe
                   src="https://www.google.com/maps/d/embed?mid=1Y9MEriN0xb-_4wEnTdJdRho7BXps4cy1&ehbc=2E312F"
                   width="640"
                   height="480"
+                  className="rounded-md"
                 ></iframe>
               </aside>
 
@@ -163,29 +169,43 @@ const Associations = () => {
                 <p>Autant d&apos;opportunités de : </p>
                 <ul className="compactlist mt-1 mb-4">
                   <li>
-                    <b>Rencontrer</b> d&apos;autres passionnés.
+                    <strong className="text-blue-800 dark:text-blue-400">
+                      Rencontrer
+                    </strong>{' '}
+                    d&apos;autres passionnés.
                   </li>
                   <li>
-                    <b>Partager</b> des expériences autour de cette passion
-                    commune.
+                    <strong className="text-blue-800 dark:text-blue-400">
+                      Partager
+                    </strong>{' '}
+                    des expériences autour de cette passion commune.
                   </li>
                   <li>
-                    <b>Découvrir</b> d&apos;autres façons de faire de la roue
-                    (freestyle, randonneurs, racer, off road, acrobates, etc.).
+                    <strong className="text-blue-800 dark:text-blue-400">
+                      Découvrir
+                    </strong>{' '}
+                    d&apos;autres façons de faire de la roue (freestyle,
+                    randonneurs, racer, off road, acrobates, etc.).
                   </li>
                   <li>
-                    <b>Participer</b> à l&apos;organisation d&apos;événements.
+                    <strong className="text-blue-800 dark:text-blue-400">
+                      Participer
+                    </strong>{' '}
+                    à l&apos;organisation d&apos;événements.
                   </li>
                   <li>Faire connaitre la roue électrique.</li>
                 </ul>
                 <div className="relative w-full pb-[56.25%]">
                   <iframe
-                    className="absolute top-0 left-0 w-full h-full"
+                    className="absolute top-0 left-0 w-full h-full rounded-xl"
                     src="https://www.youtube.com/embed/iQzrhgo2XiM?si=k2ZEL-ZZFjGE6YJq"
                     title="La communauté de la roue"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>
+                <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
+                  Vidéo : La communauté de la roue
+                </p>
               </aside>
             </div>
           </section>

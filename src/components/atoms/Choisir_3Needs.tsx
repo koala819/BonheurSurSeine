@@ -32,7 +32,7 @@ const Needs = () => {
         .
       </p>
       <p>
-        Voici{' '}
+        Voici les critères pour bien choisir sa gyroroue et{' '}
         <span className="text-emerald-600">
           <strong>
             <u>7 questions</u>

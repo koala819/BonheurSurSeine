@@ -60,10 +60,10 @@ const Practical_Battery = () => {
             comprendre, mais…{' '}
           </p>
           <div className="pinkBlock mb-4">
-            <h3>
-              ⚠️ On ne sollicite <u>pas</u> (accélération, vitesse, etc.) sa
-              roue de la même manière à 100%, 50%, ou 20% de batterie…
-            </h3>
+            <h4 className="mb-0 mt-0">
+              ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
+              etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
+            </h4>
           </div>
 
           <p className="mb-2 text-justify">
@@ -89,10 +89,10 @@ const Practical_Battery = () => {
             </i>
           </div>
 
-          <div className="mb-8 flex flex-col md:flex-row">
-            <aside className="md:w-3/5 space-y-4 mr-4">
+          <div className="mb-4 flex flex-col md:flex-row gap-4">
+            <aside className="md:w-3/5">
               <h4 className="mt-1">➡️ En quelques mots&nbsp;:</h4>
-              <p className="text-justify">
+              <p className="text-justify ml-2">
                 🔋&nbsp;100%&nbsp;: la tension maximale. <br />
                 🪫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;: la tension minimum.{' '}
                 <br />
@@ -100,30 +100,34 @@ const Practical_Battery = () => {
                 % évolue, ainsi que des tensions max/min (pour avoir une{' '}
                 <strong>marge de sécurité</strong> et ne pas abimer les cellules
                 de la batterie). <br />
-                <br />
                 La diminution du % peut prendre une forme&nbsp;:
                 <br />
-                <span className="  mt-0 mb-0">
-                  &bull; Linéaire (il diminue de manière régulière, en même
-                  temps que la tension).
+                <span className="mt-0 mb-0">
+                  &bull; Linéaire (diminution régulière, en même temps que la
+                  tension).
                   <br />
-                  &bull; Convexe (il diminue doucement au début, puis rapidement
-                  sur la fin de batterie).
+                  &bull; Convexe (diminution lente au début, puis rapide sur la
+                  fin de batterie).
                   <br />
-                  &bull; Concave (il diminue rapidement au début, puis doucement
-                  sur la fin de batterie).
+                  &bull; Concave (diminution rapide au début, puis lente sur la
+                  fin de batterie).
                 </span>
                 <br />
               </p>
+              <p className="text-justify mt-2 ml-2">
+                Il faut aussi garder à l&apos;esprit que{' '}
+                <strong>la tension ne diminue pas de manière linéaire</strong>{' '}
+                avec le kilométrage parcouru&nbsp;!{' '}
+              </p>
             </aside>
-            <aside className="md:w-2/5 text-center text-xs">
+            <aside className="md:w-2/5 text-center text-xs mb-0">
               <Link href={Graphique_diminution.src} passHref target="_blank">
                 <Image
                   src={Graphique_diminution}
                   alt="Graphique_diminution"
                   width={632}
                   height={472}
-                  className="rounded-lg cursor-pointer"
+                  className="rounded-lg cursor-pointer shadow-md transition-shadow"
                 />
               </Link>
               Le graphique ci-dessus illustre ce phénomène
@@ -131,6 +135,7 @@ const Practical_Battery = () => {
               <i> (volontairement exagéré)</i>.
             </aside>
           </div>
+
           <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
             🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
@@ -147,15 +152,12 @@ const Practical_Battery = () => {
             <strong>surveiller directement la tension</strong> pour connaitre
             l&apos;état de la batterie.
             <br />
-            Il faut alors garder en tête que{' '}
-            <strong>la tension ne diminue pas de manière linéaire</strong> avec
-            le kilométrage parcouru&nbsp;! <br />
             Voici quelques valeurs utiles pour décider dans quelle mesure
             solliciter la roue&nbsp;:
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">
             Attention, il s&apos;agit de <u>données théoriques</u> soumises à
-            l&apos;algorithme des fabricants et aux modèles des cellules qui
+            l&apos;algorithme du fabricant et aux modèles des cellules qui
             feront varier ces données.
           </p>
           <div className="mt-2 flex justify-center">
@@ -165,7 +167,7 @@ const Practical_Battery = () => {
                 alt="Tableaux des tensions"
                 width={768}
                 height={432}
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer shadow-md transition-shadow"
               />
             </Link>
           </div>

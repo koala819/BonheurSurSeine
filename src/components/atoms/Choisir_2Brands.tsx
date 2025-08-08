@@ -77,7 +77,7 @@ const Brands = () => {
             basés en Chine (près de Shenzen). <br />
             <span className="text-gray-500 dark:text-gray-300 mt-0 text-right text-small">
               <i>
-                Aucun favoritisme de ma part, les marques sont citées par ordre
+                Aucun favoritisme, les marques sont citées par ordre
                 alphabétique.
               </i>
               😉

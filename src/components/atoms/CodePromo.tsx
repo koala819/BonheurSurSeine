@@ -30,7 +30,7 @@ export default function CardPromo({
   }, [theme, logo_mode_sombre, logo])
 
   return (
-    <section className="relative bg-stone-200 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-3">
+    <section className="relative h-full bg-stone-200 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-3">
       <div className="flex justify-center h-[100px] mb-0">
         <div className="relative overflow-hidden rounded-2xl shadow-slate-500 bg-white dark:bg-sky-950 dark:shadow-slate-700 shadow-md h-full w-1/2 sm:w-3/4 xl:w-3/4">
           <Link href={website} target="_blank" className="">
@@ -59,8 +59,8 @@ export default function CardPromo({
           {description}
         </p>
       </div>
-      <div className="flex flex-wrap md:flex-nowrap space-y-0 items-center">
-        <aside className="w-2/12 space-y-0 flex justify-center">
+      <div className="flex flex-wrap md:flex-nowrap space-y-0">
+        <aside className="w-2/12 space-y-0 flex justify-center items-center">
           <Link
             href={website}
             target="_blank"

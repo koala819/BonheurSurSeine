@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+/*import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'*/
 import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballage'
 import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
 import Assurance from '@/src/components/atoms/Débuter_3Assurance'
@@ -20,40 +21,48 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
-      <h1>Pour bien démarrer</h1>
-      <p className="text-justify">
-        Cette page regroupe <strong>quelques conseils</strong> et{' '}
-        <strong>rappels essentiels</strong> mais non exhaustifs concernant
-        l&apos;utilisation de la roue électrique <strong>en France.</strong>
-      </p>
-
-      <div className="blueBlock">
-        <h3>
-          💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
-          meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
-        </h3>
-      </div>
-
-      <div className="pinkBlock">
-        <h4 className="text-justify">
-          Si tu veux te mettre à la roue électrique mais que tu as peur de te
-          lancer, sache que je propose des{' '}
-          <strong>sessions de formation</strong> théorique <u>et</u> pratique
-          pour t&apos;accompagner et dédramatiser. 😊
+      <h1>Bien démarrer</h1>
+      <div className="space-y-2">
+        <p className="text-justify">
+          Tu viens d&apos;acheter une gyroroue ou tu envisages de te
+          lancer&nbsp;? Cette page t&apos;est dédiée. Elle regroupe les{' '}
+          <strong>bases indispensables</strong> et{' '}
+          <strong>rappels essentiels</strong> pour bien débuter en roue
+          électrique <strong>en France</strong>.
           <br />
-          En seulement 1h🕐, tu auras un autre regard sur l&apos;objet. 😎
-        </h4>
-        <h4>
-          ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}
-          <Link
-            href={'mailto:bonheursurseine@gmail.com'}
-            className="underline text-rose-800 dark:text-black"
-          >
-            bonheursurseine@gmail.com{' '}
-          </Link>
-        </h4>
-      </div>
+          Objectif&nbsp;: t&apos;accompagner dans ton aventure, et t&apos;offrir{' '}
+          <strong>tout ce qu&apos;il faut savoir</strong> pour apprendre la
+          gyroroue et commencer sereinement.
+        </p>
 
+        <div className="blueBlock">
+          <h4 className="mb-0">
+            💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
+            meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
+          </h4>
+        </div>
+
+        <div className="pinkBlock">
+          <h4 className="text-justify space-y-0">
+            Si tu veux apprendre la roue électrique mais que tu as peur de te
+            lancer, sache que je propose des{' '}
+            <strong>sessions de formation</strong> théorique <u>et</u> pratique
+            pour t&apos;accompagner et dédramatiser. 😊
+            <br />
+            En seulement 1h🕐, tu auras un autre regard sur l&apos;objet. 😎
+          </h4>
+          <h4>
+            ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}
+            <Link
+              href={'mailto:bonheursurseine@gmail.com'}
+              className="underline text-rose-800 dark:text-black"
+            >
+              bonheursurseine@gmail.com{' '}
+            </Link>
+          </h4>
+        </div>
+      </div>
+      {/*<Apprendre />*/}
       <Premier_deballage />
       <CommonSense />
       <Assurance />
