@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'
+/*import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'*/
 import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballage'
 import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
 import Assurance from '@/src/components/atoms/Débuter_3Assurance'
@@ -62,7 +62,7 @@ const Page = () => {
           </h4>
         </div>
       </div>
-      <Apprendre />
+      {/*<Apprendre />*/}
       <Premier_deballage />
       <CommonSense />
       <Assurance />
