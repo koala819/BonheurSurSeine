@@ -67,11 +67,11 @@ const Begin_premier_deballage = () => {
             <h4 className="mb-2">🎁 À la réception du carton :</h4>
             {[
               {
-                title: "Vérifie l'aspect général du carton",
+                title: "Vérifie l'aspect général",
                 text: "Refuse la livraison si le carton est endommagé ou présente des traces d'eau/d'humidité.",
               },
               {
-                title: 'Contrôle le contenu du carton',
+                title: 'Contrôle le contenu',
                 text: 'Notice, chargeur et câble doivent être présents.',
               },
               {

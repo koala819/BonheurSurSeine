@@ -57,9 +57,9 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             {/*              INTRO + VIDEO                 */}
             {/*--------------------------------------------*/}
-            <div className="flex flex-col sm:flex-row mt-0 mb-8">
-              <aside className="sm:w-full md:w-full lg:w-2/5 flex text-justify">
-                <span className="text-justify">
+            <div className="flex flex-col sm:flex-row mt-0 mb-4 gap-4">
+              <aside className="sm:w-3/5 md:w-1/2 lg:w-2/5 flex text-justify">
+                <span className="text-justify sm:text-sm md:text-sm lg:text-base">
                   <h4 className="text-left mb-1">
                     🤷 Comment apprendre la gyroroue&nbsp;?
                   </h4>
@@ -95,18 +95,15 @@ const Associations = () => {
                   ville, à la campagne ou en randonnée.
                 </span>
               </aside>
-              <aside className="sm:w-full md:w-full lg:w-3/5 flex flex-col space-y-0 place-items-center mt-2 justify-center">
-                <div className="w-full max-w-[90%] aspect-video">
+              <aside className="sm:w-2/5 md:w-1/2 lg:w-3/5 flex flex-col space-y-0 place-items-center mt-2 justify-center">
+                <div className="w-full aspect-video">
                   <iframe
                     className="w-full h-full rounded-xl shadow-md"
-                    /*width="560"
-                    height="315"*/
+                    width="560"
+                    height="315"
                     src="https://www.youtube.com/embed/VPXLMrs_Ne4"
                     title="Apprendre la gyroroue (méthode simple)"
-                    /*frameborder="0"*/
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    /*referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen*/
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
@@ -117,76 +114,77 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             {/*              BLOC CONSEIL                  */}
             {/*--------------------------------------------*/}
-            <div className="blueBlock my-4">
-              <h4 className="mt-0 mb-4 text-xl font-bold">
-                💡 7 conseils à retenir :
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-0">
-                {[
-                  {
-                    title: 'Équipe-toi bien',
-                    icon: '🧤',
-                    text: "Vêtements confortables, casque, et surtout gants et bonnes chaussures. Protège tes chevilles (les chutes sont rarissimes lors de l'apprentissage).",
-                  },
-                  {
-                    title: 'Protège ta roue',
-                    icon: '🛡️',
-                    text: 'Utilise de la mousse ou du papier bulle : elle va tomber, autant éviter les rayures.',
-                  },
-                  {
-                    title: 'Trouve un bon spot',
-                    icon: '📍',
-                    text: "Un endroit plat, large, sans obstacle ni passage : parking vide ou cour tranquille sont idéals pour commencer. L'espace aide à progresser sereinement.",
-                  },
-                  {
-                    title: 'Reste souple',
-                    icon: '🧘',
-                    text: 'Plie les genoux, et surtout relâche les épaules : ce sont elles qui gèrent ton équilibre.',
-                  },
-                  {
-                    title: 'Respire et reste cool',
-                    icon: '😌',
-                    text: "Pas de stress. Respire, souris. Faire des erreurs et faire tomber la roue, c'est normal au début.",
-                  },
-                  {
-                    title: 'Entraîne-toi !',
-                    icon: '🏋️',
-                    text: "Avancer et tourner, c'est un début. Mais pour vraiment maîtriser ta roue, il faut aussi savoir freiner, éviter, et rester stable en toutes conditions.",
-                  },
-                ].map(({ title, icon, text }, i) => (
-                  <div
-                    key={i}
-                    className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify"
-                  >
-                    <h5 className="text-lg font-semibold mb-1">
-                      {icon} {title}
-                    </h5>
-                    <p className="text-sm text-gray-800 dark:text-gray-200">
-                      {text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify mt-0">
-                <h5 className="text-lg font-semibold mb-1">
-                  🎥 Les &laquo;&nbsp;Tutos de la semaine&nbsp;&raquo;
-                </h5>
-                <p className="text-sm text-gray-800 dark:text-gray-200">
-                  Ces courtes{' '}
-                  <a
-                    href="https://youtube.com/playlist?list=PL9xPR9BbyK1dFDQkX_fLsLUwB8OEXw6SE&si=lt4Mjl6Dq-q9sqEk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                  >
-                    vidéos d&apos;Hirsute (Damien Gaumet)
-                  </a>{' '}
-                  sont idéales pour progresser (qu&apos;on soit débutant ou
-                  confirmé).
-                </p>
+            <div className="my-4">
+              <div className="blueBlock my-0">
+                <h4 className="mt-0 mb-0 text-xl font-bold">
+                  💡 7 conseils à retenir :
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-0 mt-0">
+                  {[
+                    {
+                      title: 'Équipe-toi bien',
+                      icon: '🧤',
+                      text: "Vêtements confortables, casque, et surtout gants et bonnes chaussures. Protège tes chevilles (les chutes sont rarissimes lors de l'apprentissage).",
+                    },
+                    {
+                      title: 'Protège ta roue',
+                      icon: '🛡️',
+                      text: 'Utilise de la mousse ou du papier bulle : elle va tomber, autant éviter les rayures.',
+                    },
+                    {
+                      title: 'Trouve un bon spot',
+                      icon: '📍',
+                      text: "Un endroit plat, large, sans obstacle ni passage : parking vide ou cour tranquille sont idéals pour commencer. L'espace aide à progresser sereinement.",
+                    },
+                    {
+                      title: 'Reste souple',
+                      icon: '🧘',
+                      text: 'Plie les genoux, et surtout relâche les épaules : ce sont elles qui gèrent ton équilibre.',
+                    },
+                    {
+                      title: 'Respire et reste cool',
+                      icon: '😌',
+                      text: "Pas de stress. Respire, souris. Faire des erreurs et faire tomber la roue, c'est normal au début.",
+                    },
+                    {
+                      title: 'Entraîne-toi !',
+                      icon: '🏋️',
+                      text: "Avancer et tourner, c'est un début. Mais pour vraiment maîtriser ta roue, il faut aussi savoir freiner, éviter, et rester stable en toutes conditions.",
+                    },
+                  ].map(({ title, icon, text }, i) => (
+                    <div
+                      key={i}
+                      className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify mt-0 mb-0"
+                    >
+                      <h5 className="text-lg font-semibold mb-0 mt-0">
+                        {icon} {title}
+                      </h5>
+                      <p className="text-sm text-gray-800 dark:text-gray-200">
+                        {text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify mb-0 mt-0">
+                  <h5 className="text-lg font-semibold mb-0 mt-0">
+                    🎥 Les &laquo;&nbsp;Tutos de la semaine&nbsp;&raquo;
+                  </h5>
+                  <p className="text-sm text-gray-800 dark:text-gray-200">
+                    Ces courtes{' '}
+                    <a
+                      href="https://youtube.com/playlist?list=PL9xPR9BbyK1dFDQkX_fLsLUwB8OEXw6SE&si=lt4Mjl6Dq-q9sqEk"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      vidéos d&apos;Hirsute (Damien Gaumet)
+                    </a>{' '}
+                    sont idéales pour progresser (qu&apos;on soit débutant ou
+                    confirmé).
+                  </p>
+                </div>
               </div>
             </div>
-
             {/*--------------------------------------------*/}
             {/*              BLOC PIEGES                   */}
             {/*--------------------------------------------*/}
@@ -211,7 +209,7 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             {/*              BLOC NOSTALGIE                */}
             {/*--------------------------------------------*/}
-            <div className="flex flex-col sm:flex-row mt-0 mb-8">
+            <div className="flex flex-col sm:flex-row mt-0 mb-4">
               <aside className="sm:w-full md:w-full lg:w-2/5 flex text-justify place-items-center">
                 <span className="ml-4 text-center">
                   <h4 className="text-center mb-1">

@@ -36,7 +36,7 @@ const Page = () => {
         </p>
 
         <div className="blueBlock">
-          <h4>
+          <h4 className="mb-0">
             💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
             meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
           </h4>
@@ -44,7 +44,7 @@ const Page = () => {
 
         <div className="pinkBlock">
           <h4 className="text-justify space-y-0">
-            Si tu veux te mettre à la roue électrique mais que tu as peur de te
+            Si tu veux apprendre la roue électrique mais que tu as peur de te
             lancer, sache que je propose des{' '}
             <strong>sessions de formation</strong> théorique <u>et</u> pratique
             pour t&apos;accompagner et dédramatiser. 😊

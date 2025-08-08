@@ -156,11 +156,12 @@ const Associations = () => {
               que je remercie) :
             </p>
             <div className="flex flex-col lg:flex-row mt-2 mb-2">
-              <aside className="lg:w-7/12 flex items-center justify-center">
+              <aside className="lg:w-7/12 flex items-center justify-center ">
                 <iframe
                   src="https://www.google.com/maps/d/embed?mid=1Y9MEriN0xb-_4wEnTdJdRho7BXps4cy1&ehbc=2E312F"
                   width="640"
                   height="480"
+                  className="rounded-md"
                 ></iframe>
               </aside>
 

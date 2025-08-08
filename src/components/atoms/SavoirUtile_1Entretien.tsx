@@ -54,16 +54,21 @@ const Maintenance = () => {
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-1 text-justify">
-            <strong>Comme tout véhicule</strong>, les roues électriques ont
-            besoin d&apos;un
-            <strong> entretien régulier</strong> pour garantir leur durabilité
-            et leur bon fonctionnement.
+            <strong className="text-amber-900 dark:text-brown-200">
+              Comme tout véhicule
+            </strong>
+            , les roues électriques ont besoin d&apos;un
+            <strong className="text-amber-900 dark:text-brown-200">
+              {' '}
+              entretien régulier
+            </strong>{' '}
+            pour garantir leur durabilité et leur bon fonctionnement.
           </p>
           <p className="mt-1 mb-4 text-justify">
-            <strong>Rappel :</strong> pour être utilisée sur voie publique, la
-            roue doit être <span className="underline">bridée à 25km/h</span>.
+            Rappel&nbsp;: pour être utilisée sur voie publique, la roue doit
+            être <span className="underline">bridée à 25km/h</span>.
           </p>
-          <div className="blueBlock mb-1">
+          <div className="brownBlockentretien mb-1">
             <b>
               🔎 Conserve ton véhicule en bon état&nbsp;! C&apos;est ta sécurité
               qui en dépend…
@@ -73,15 +78,27 @@ const Maintenance = () => {
           <h4 className="mt-4 mb-2">À retenir&nbsp;:</h4>
           <ul className="compactlist mb-6">
             <li className="text-justify">
-              Il est important de <strong>vérifier</strong> son engin avant
-              chaque trajet.
+              Il est important de{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                vérifier
+              </strong>{' '}
+              son engin avant chaque trajet.
             </li>
             <li className="text-justify">
-              Révise le <strong>régulièrement</strong>. Sois attentif à tout
-              bruit suspect.
+              Révise le{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                régulièrement
+              </strong>
+              . Sois attentif à tout bruit suspect.
             </li>
             <li className="text-justify">
-              <strong>Chaque élément</strong> est <strong>essentiel</strong>
+              <strong className="text-amber-900 dark:text-brown-200">
+                Chaque élément
+              </strong>{' '}
+              est{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                essentiel
+              </strong>
               &nbsp;: usure du pneu, pédales, éclairages, électronique, état et
               charge de la batterie, poussières, visseries...
             </li>
@@ -90,7 +107,11 @@ const Maintenance = () => {
               d&apos;infiltration ou toute trace d&apos;humidité.
             </li>
             <li className="text-justify">
-              Vérifie régulièrement la <strong>pression du pneu</strong>.
+              Vérifie régulièrement la{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                pression du pneu
+              </strong>
+              .
             </li>
           </ul>
           {/*------------------------------------*/}
@@ -102,11 +123,11 @@ const Maintenance = () => {
             </li>
             <li className="text-justify">
               Ne laisse jamais la batterie se décharger complètement (stocker
-              entre 20%-80% en cas d&apos;immobilisation prolongée).
+              entre 30%-70% en cas d&apos;immobilisation prolongée).
             </li>
             <li className="text-justify">
-              Ne recharge pas immédiatement à chaud, et ne laisse pas la charge
-              sans surveillance.
+              Évite de recharge immédiatement à chaud, et ne laisse pas la
+              charge sans surveillance.
             </li>
           </ul>
           <div className="mt-2 mb-6 flex justify-center">
@@ -119,7 +140,7 @@ const Maintenance = () => {
             />
           </div>
           {/*------------------------------------*/}
-          <div className="mt-4 blueBlock text-justify">
+          <div className="mt-4 brownBlockentretien text-justify">
             <b className="text-lg">
               💦 L&apos;eau s&apos;infiltre facilement partout.
               <br />
