@@ -110,7 +110,7 @@ const Associations = () => {
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
-                  Vidéo : Apprendre la gyroroue (méthode simple)
+                  Vidéo Apprendre la Gyroroue (méthode simple)
                 </p>
               </aside>
             </div>
@@ -213,7 +213,7 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             <div className="flex flex-col sm:flex-row mt-0 mb-8">
               <aside className="sm:w-full md:w-full lg:w-2/5 flex text-justify place-items-center">
-                <span className="text-center">
+                <span className="ml-4 text-center">
                   <h4 className="text-center mb-1">
                     Toujours pas convaincu&nbsp;?
                     <br />
@@ -236,18 +236,16 @@ const Associations = () => {
                 </span>
               </aside>
               <aside className="sm:w-full md:w-full lg:w-3/5 flex flex-col space-y-0 place-items-center mt-2 justify-center">
-                <div className="w-full max-w-[80%] aspect-video">
+                <div className="w-full max-w-[70%] aspect-video">
                   <iframe
                     className="w-full h-full rounded-xl shadow-md"
-                    width="336"
-                    height="189"
                     src="https://www.youtube.com/embed/VPXLMrs_Ne4"
                     title="Nostalgie - Apprendre la gyroroue"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center text-gray-600 dark:text-gray-400">
-                  <i>Vidéo : On est tous passé par là (nostalgie</i>🥲<i>)</i>
+                  <i>On est tous passé par là (nostalgie</i>🥲<i>)</i>
                 </p>
               </aside>
             </div>

@@ -183,7 +183,8 @@ const Assurance = () => {
               d&apos;un autre usager.
             </li>
           </ul>
-          <div className="yellowBlock mb-4">
+          {/*-----------------------------------------------------------*/}
+          <div className="pinkBlock mb-4">
             <h4>
               📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
               sécurité, c&apos;est une question de
@@ -200,8 +201,7 @@ const Assurance = () => {
               <p className="text-justify text-sm">
                 Un accident génère toujours du stress. Même sans gravité,
                 remplis systématiquement un constat amiable (l&apos;idéal est
-                d&apos;en avoir 1 prérempli avec ses informations
-                d&apos;assurance).
+                d&apos;en avoir un prérempli avec ses informations).
                 <br />
                 Pour savoir comment réagir, consulte cet{' '}
                 <Link
@@ -222,8 +222,10 @@ const Assurance = () => {
               </h3>
               <p className="text-justify text-sm">
                 Assurer un EDPM{' '}
-                <span className="text-sm font-semibold">coûte 5-10€/mois</span>.
-                La plupart des assureurs proposent des contrats adaptés.
+                <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
+                  coûte 5-10€/mois
+                </span>
+                . La plupart des assureurs proposent des contrats adaptés.
                 <br />
                 Tu trouveras un{' '}
                 <Link href="/CodePromo" className="link-style">

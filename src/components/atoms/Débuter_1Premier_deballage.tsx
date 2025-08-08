@@ -71,8 +71,8 @@ const Begin_premier_deballage = () => {
                 text: "Refuse la livraison si le carton est endommagé ou présente des traces d'eau/d'humidité.",
               },
               {
-                title: 'Vérifie le contenu du carton',
-                text: 'Il doit contenir la notice, le chargeur et son câble électrique.',
+                title: 'Contrôle le contenu du carton',
+                text: 'Notice, chargeur et câble doivent être présents.',
               },
               {
                 title: 'Vérifie le pneu',
@@ -80,7 +80,11 @@ const Begin_premier_deballage = () => {
               },
               {
                 title: 'Ajuste la suspension',
-                text: 'Prend le temps de comprendre les réglages. Vérifie son fonctionnement et les pièces mobiles.',
+                text: 'Prend le temps de comprendre les réglages, et assure-toi que les pièces mobiles fonctionnent correctement.',
+              },
+              {
+                title: 'Fais quelques photos',
+                text: "Utile pour conserver le numéro de série (nécessaire pour l'assurance), en cas de vol et… frimer auprès des copains. 😁",
               },
             ].map(({ title, text }, i) => (
               <div key={i} className="mb-2 relative">
@@ -101,7 +105,7 @@ const Begin_premier_deballage = () => {
             Lorsque que tu ouvres le carton, il est normal que la roue ne
             s&apos;équilibre pas lorsque tu l&apos;allumes.
           </p>
-          <div className="greenBlock mb-2 text-justify">
+          <div className="blueBlock mb-2 text-justify">
             <h4 className="mt-0 mb-1">
               🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?

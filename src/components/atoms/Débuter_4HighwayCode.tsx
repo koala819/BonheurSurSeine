@@ -70,7 +70,7 @@ const HighwayCode = () => {
 
           <div className="mb-2 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-1">
-              <div className="blueBlock mb-1">
+              <div className="slateBlockcoderoute mb-1 mr-1">
                 <h4>
                   ❤️‍🩹 Quand on est sur la route, il ne faut jamais être trop
                   pressé&nbsp;!
@@ -111,14 +111,13 @@ const HighwayCode = () => {
           {/* Section avec 2 capsules de même hauteur */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             {/* Capsule CIRCULATION */}
-            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+            <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
               <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                 🚴‍♂️ CIRCULATION
               </h4>
               <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-justify text-sm">
-                  Obligation d&apos;emprunter les pistes cyclables si elles
-                  existent (
+                  Interdiction de circuler sur les trottoirs (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -129,19 +128,8 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-justify text-sm">
-                  Utilisation possible du panneau M12 en cédant le passage aux
-                  piétons et aux autres usagers (
-                  <Link
-                    href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038120387"
-                    target="_blank"
-                    className="link-style"
-                  >
-                    article 2-1 màj le 15/03/2024
-                  </Link>
-                  ).
-                </li>
-                <li className="text-justify text-sm">
-                  Interdiction de circuler sur les trottoirs (
+                  Obligation d&apos;emprunter les pistes cyclables si elles
+                  existent (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -195,6 +183,18 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-justify text-sm">
+                  Utilisation possible du panneau M12 en cédant le passage aux
+                  piétons et aux autres usagers (
+                  <Link
+                    href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038120387"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    article 2-1 màj le 15/03/2024
+                  </Link>
+                  ).
+                </li>
+                <li className="text-justify text-sm">
                   Âge minimum de 14 ans (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035778"
@@ -208,7 +208,7 @@ const HighwayCode = () => {
               </ul>
             </div>
             {/* Capsule ÉQUIPEMENTS */}
-            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
+            <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
               <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
                 🛠️ ÉQUIPEMENT
               </h4>

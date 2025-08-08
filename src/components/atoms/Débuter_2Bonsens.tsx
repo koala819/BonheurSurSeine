@@ -56,7 +56,7 @@ const CommonSense = () => {
           <div className="mb-3 grid grid-cols-1 md:grid-cols-5 gap-1 items-stretch">
             {/* Bloc texte sur 3 colonnes */}
             <aside className="md:col-span-3">
-              <div className="yellowBlockbonsens my-0 grid grid-cols-1 gap-1 mb-0 h-full">
+              <div className="TealBlockbonsens my-0 grid grid-cols-1 gap-1 mb-0 h-full">
                 {[
                   {
                     icon: '☠️',
@@ -77,7 +77,7 @@ const CommonSense = () => {
                 ].map(({ icon, text }, i) => (
                   <div
                     key={i}
-                    className="bg-yellow-50 dark:bg-yellow-900 rounded-xl px-2 py-1 shadow text-left"
+                    className="bg-teal-50 dark:bg-teal-900 rounded-xl px-2 py-1 shadow text-left"
                   >
                     <h4 className="text-lg font-semibold mb-0 mt-0">
                       {icon} {text}
@@ -87,7 +87,7 @@ const CommonSense = () => {
               </div>
             </aside>
             {/* Image sur 2 colonnes */}
-            <aside className="md:col-span-2 h-full flex justify-center md:justify-end bg-zinc-100 dark:bg-zinc-900 rounded-lg">
+            <aside className="md:col-span-2 h-full flex justify-center md:justify-end bg-teal-50 dark:bg-teal-900 rounded-lg">
               <Image
                 src={Image_bon_sens}
                 alt="Bon sens en gyroroue"
@@ -101,31 +101,43 @@ const CommonSense = () => {
           {/*-----------------------------------------*/}
           <h3 className="mt-1">Prudence est mère de sûreté</h3>
           <ul className="list-disc pl-6 space-y-1 mb-6">
-            <li>
-              Respecte le <strong>code de la route</strong> (circulation,
-              stationnement, signalisation).
+            <li className="text-justify">
+              Respecte le{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                code de la route
+              </strong>{' '}
+              (circulation, stationnement, signalisation).
             </li>
-            <li>
+            <li className="text-justify">
               Respecte les autres usagers (piétons, cyclistes, etc.), et met toi
               à leur place :{' '}
-              <strong>pense à ce qu&apos;ils peuvent ressentir</strong> en te
-              voyant arriver.
+              <strong className="text-teal-800 dark:text-teal-200">
+                pense à ce qu&apos;ils peuvent ressentir
+              </strong>{' '}
+              en te voyant arriver.
             </li>
-            <li>
+            <li className="text-justify">
               Anticipe les{' '}
-              <strong>
-                trajectoires (les tiennes et celles des autres usagers)
+              <strong className="text-teal-800 dark:text-teal-200">
+                trajectoires
+              </strong>{' '}
+              (les tiennes et celles des autres usagers) et garde des{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                distances de sécurité
               </strong>
               .
             </li>
-            <li>
-              Maitrise toujours ta <strong>vitesse</strong> ! (Ne roule jamais
-              plus vite que ce que tu peux freiner).
+            <li className="text-justify">
+              Maitrise toujours ta{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                vitesse
+              </strong>{' '}
+              ! (Ne roule jamais plus vite que ce que tu peux freiner).
             </li>
           </ul>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <div className="blueBlock mb-6">
+          <div className="TealBlockbonsens mb-6">
             <h4>
               🔥 Les protections n&apos;évitent pas le danger, la vigilance,
               oui&nbsp;!
@@ -135,33 +147,62 @@ const CommonSense = () => {
           {/*-----------------------------------------*/}
           <h3>À retenir :</h3>
           <ul className="list-disc pl-6 space-y-1 mb-4">
-            <li>
-              <strong>Protège toi&nbsp;!</strong>
+            <li className="text-justify">
+              <strong className="text-teal-800 dark:text-teal-200">
+                Protège toi&nbsp;!
+              </strong>
             </li>
-            <li>
-              Le port du <strong>casque</strong> (sans être obligatoire) est{' '}
-              <strong>vivement recommandé</strong>. Porter des gants ou des
-              genouillères permet également de se protéger.
+            <li className="text-justify">
+              Le port du{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                casque
+              </strong>{' '}
+              (jet ou intégral) est{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                vivement recommandé
+              </strong>
+              (sans être obligatoire). Porter des{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                gants
+              </strong>{' '}
+              ou des genouillères permet également de se protéger.
             </li>
-            <li>
-              <strong>Sois visible</strong> mais n&apos;aveugle pas les autres.
+            <li className="text-justify">
+              Sois{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                visible
+              </strong>{' '}
+              mais n&apos;aveugle pas les autres.
             </li>
-            <li>
-              Utilise une <strong>sonnette</strong> pour signaler{' '}
-              <strong>amicalement</strong> ton approche et tes dépassements.
+            <li className="text-justify">
+              Utilise une{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                sonnette
+              </strong>{' '}
+              pour signaler{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                amicalement
+              </strong>{' '}
+              ton approche et tes dépassements.
             </li>
-            <li>
+            <li className="text-justify">
               Prend le temps de connaitre tes capacités, de{' '}
-              <strong>connaitre ta roue</strong>, et{' '}
-              <strong>respecte la</strong>.
+              <strong className="text-teal-800 dark:text-teal-200">
+                connaitre ta roue
+              </strong>
+              , et{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                respecte la
+              </strong>
+              .
             </li>
-            <li>
+            <li className="text-justify">
               Je répète : connais bien les limites de ta roue et respecte les.
             </li>
           </ul>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <div className="blueBlock">
+          <div className="TealBlockbonsens">
             <h4>
               💟 Et n&apos;oublie pas : bon comportement = bonne image = bonne
               route&nbsp;!

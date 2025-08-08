@@ -60,10 +60,10 @@ const Practical_Battery = () => {
             comprendre, mais…{' '}
           </p>
           <div className="pinkBlock mb-4">
-            <h3>
-              ⚠️ On ne sollicite <u>pas</u> (accélération, vitesse, etc.) sa
-              roue de la même manière à 100%, 50%, ou 20% de batterie…
-            </h3>
+            <h4 className="mb-0 mt-0">
+              ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
+              etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
+            </h4>
           </div>
 
           <p className="mb-2 text-justify">
