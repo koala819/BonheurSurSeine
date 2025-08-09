@@ -30,7 +30,8 @@ export default function CardPromo({
   }, [theme, logo_mode_sombre, logo])
 
   return (
-    <section className="relative h-full bg-stone-200 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-3">
+    <section className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col">
+      {/* PARTIE IMAGE */}
       <div className="flex justify-center h-[100px] mb-0">
         <div className="relative overflow-hidden rounded-2xl shadow-slate-500 bg-white dark:bg-sky-950 dark:shadow-slate-700 shadow-md h-full w-1/2 sm:w-3/4 xl:w-3/4">
           <Link href={website} target="_blank" className="">
@@ -45,8 +46,9 @@ export default function CardPromo({
           </Link>
         </div>
       </div>
-      <div className="mt-4 pl-2 mb-2">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-2">
+      {/* PARTIE DESCRIPTION */}
+      <div className="mt-0 pl-2 mb-1">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-0">
           <Link
             href={website}
             target="_blank"
@@ -59,8 +61,9 @@ export default function CardPromo({
           {description}
         </p>
       </div>
-      <div className="flex flex-wrap md:flex-nowrap space-y-0">
-        <aside className="w-2/12 space-y-0 flex justify-center items-center">
+      {/* PARTIE REDUCTION */}
+      <div className="flex flex-wrap md:flex-nowrap space-y-0 mt-auto items-center">
+        <aside className="w-2/12 flex justify-center items-center">
           <Link
             href={website}
             target="_blank"
@@ -69,9 +72,9 @@ export default function CardPromo({
             <MdLoyalty className="h-10 w-10 text-bg-light dark:text-white dark:text-bg-gray-300 mr-0" />
           </Link>
         </aside>
-        <aside className="w-10/12 space-y-0">
+        <aside className="w-10/12">
           Code&nbsp;:
-          <span className="font-bold color-[#fbbf24] ml-1">{code}</span>
+          <span className="font-bold text-yellow-600 ml-1">{code}</span>
           <br />
           Réduction&nbsp;: {montant}
         </aside>

@@ -9,7 +9,7 @@ import Info from '@/src/components/atoms/SavoirUtile_6Infos'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine – Savoir Utile : Infos Pratiques sur les gyroroues, monoroues, roues électriques',
+    'Bonheur Sur Seine – Savoir Utile : Fonctionnement et Infos Pratiques sur les gyroroues, monoroues, roues électriques',
   description:
     'Fabricants, entretien, batteries, conseils, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
   alternates: {

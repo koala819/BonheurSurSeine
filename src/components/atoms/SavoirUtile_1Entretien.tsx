@@ -126,7 +126,7 @@ const Maintenance = () => {
               entre 30%-70% en cas d&apos;immobilisation prolongée).
             </li>
             <li className="text-justify">
-              Évite de recharge immédiatement à chaud, et ne laisse pas la
+              Évite de recharger immédiatement à chaud, et ne laisse pas la
               charge sans surveillance.
             </li>
           </ul>
