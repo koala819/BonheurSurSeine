@@ -28,13 +28,20 @@ export default async function Page() {
         Profite d&apos;Offres Exclusives&nbsp;!
       </h1>
       <p className="text-justify">
-        Retrouve ici tous les <b>codes promo exclusifs</b> négociés avec les
-        partenaires de la chaîne Bonheur sur Seine.
+        Retrouve ici tous les{' '}
+        <strong className="dark:text-brown-300">codes promo exclusifs</strong>{' '}
+        négociés avec les partenaires de la chaîne Bonheur sur Seine.
         <br />
         Parfait pour acheter une gyroroue, s&apos;équiper en accessoires de
-        mobilité électrique ou <b>profiter de réductions</b> dans des boutiques
-        spécialisées -{' '}
-        <strong>tout en soutenant directement la chaîne&nbsp;!</strong> 😁
+        mobilité électrique ou{' '}
+        <strong className="dark:text-brown-300">
+          profiter de réductions
+        </strong>{' '}
+        dans des boutiques spécialisées -{' '}
+        <strong className="dark:text-brown-300">
+          tout en soutenant directement la chaîne&nbsp;!
+        </strong>{' '}
+        😁
       </p>
       <div
         className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"

@@ -10,6 +10,9 @@ const Choice = () => {
             <strong>regarder que les spécifications techniques</strong> et de
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
+            <br /> Or d&apos;anciens modèles, sortis il y a déjà plusieurs
+            années, constituent encore aujourd&apos;hui des choix tout à fait
+            pertinents.
           </p>
           <p className="text-justify">
             Le choix se fait en fonction de ses goûts, de son{' '}
@@ -27,12 +30,12 @@ const Choice = () => {
           😉 Pas besoin d&apos;avoir la dernière roue pour ressentir le{' '}
           <strong>bonheur de rouler</strong>. <br />
           {'  '}⚠️ L&apos;important est d&apos;avoir une{' '}
-          <strong>roue adaptée</strong> à son usage.
+          <strong>roue adaptée à son usage</strong>.
         </aside>
       </div>
       <p>
         ➡️ J&apos;invite chacun, quand il le peut,{' '}
-        <strong className="text-blue-800 dark:text-blue-200">
+        <strong className="text-blue-800 dark:text-blue-300">
           à tester les roues pour se faire son propre avis
         </strong>
         .

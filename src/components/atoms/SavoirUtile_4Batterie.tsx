@@ -56,7 +56,7 @@ const Practical_Battery = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <p className="mb-2">
-            Le pourcentage batterrie est utile, rapide à lire, simple à
+            Le pourcentage batterie est utile, rapide à lire, simple à
             comprendre, mais…{' '}
           </p>
           <div className="pinkBlock mb-4">
