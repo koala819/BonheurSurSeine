@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, soutenez Bonheur Sur Seine.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/contact`,
+    canonical: `${process.env.CLIENT_URL}/Merci`,
   },
 }
 

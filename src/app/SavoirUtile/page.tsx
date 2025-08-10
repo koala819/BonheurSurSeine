@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Fabricants, entretien, batteries, conseils, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/practical`,
+    canonical: `${process.env.CLIENT_URL}/SavoirUtile`,
   },
 }
 
