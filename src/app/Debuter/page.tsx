@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Apprendre la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/begin`,
+    canonical: `${process.env.CLIENT_URL}/Debuter`,
   },
 }
 

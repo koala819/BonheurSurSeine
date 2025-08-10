@@ -82,10 +82,10 @@ const Practical_Battery = () => {
             <h4 className="mb-0 mt-0">
               L&apos;autonomie n&apos;est pas une donnée absolue. <br />
             </h4>
-            Elle est fonction de nombreux paramètres&nbsp;:{' '}
+            Elle dépend de nombreux paramètres&nbsp;:{' '}
             <i>
-              poids du wheeler, accélération et vitesse, vent et température
-              ambiante, profil et nature du trajet…
+              poids du wheeler, accélérations, vitesse, pression et type de
+              pneu, vent, température ambiante, profil et nature du trajet…
             </i>
           </div>
 

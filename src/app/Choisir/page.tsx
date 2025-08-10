@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Quelles sont les meilleures roues ? Marques, guide, conseils, comparatifs pour acheter la roue électrique idéale.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/choix`,
+    canonical: `${process.env.CLIENT_URL}/Choisir`,
   },
 }
 
