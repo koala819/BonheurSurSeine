@@ -48,8 +48,9 @@ const Compare = () => {
               les autonomies annoncées sont toujours surévaluées
             </strong>{' '}
             (il faut parfois diviser par 2). <i>Rappel</i> : l&apos;autonomie
-            est tributaire de nombreux paramètres (poids du wheeler, vitesse,
-            température, profil et nature du trajet…).
+            est fonction de nombreux paramètres (poids du wheeler,
+            accélérations, vitesse, pression et type de pneu, vent, température
+            ambiante, profil et nature du trajet…).
           </li>
           <li className="text-justify">
             Certains modèles changent légèrement avec le temps (esthétique ou

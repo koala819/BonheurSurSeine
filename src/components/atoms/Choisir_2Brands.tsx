@@ -306,7 +306,7 @@ const Brands = () => {
           </p>
           <p className="mt-4 text-justify">
             Il existe également d&apos;autres marques&nbsp;: certaines comme
-            Solowheel, RockWheel ou IPS ont disparu, et les autres sont moins
+            RockWheel, Solowheel ou IPS ont disparu, et les autres sont moins
             connues/appréciées des connaisseurs. Les caractéristiques de leurs
             modèles n&apos;offrent pas les mêmes garanties (sécurité,
             performance) que ceux des modèles des principaux leaders du marché.
