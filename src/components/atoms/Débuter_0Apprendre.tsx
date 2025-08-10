@@ -57,45 +57,66 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             {/*              INTRO + VIDEO                 */}
             {/*--------------------------------------------*/}
+            <div className="mt-0 mb-2">
+              <h4 className="text-left mt-0 mb-1">
+                🚀 Pourquoi apprendre la gyroroue&nbsp;?
+              </h4>
+              <p className="text-justify mt-0 mb-1">
+                La roue électrique est le meilleur moyen de transport
+                personnel&nbsp;:{' '}
+                <strong className="text-blue-800 dark:text-blue-200">
+                  compacte, fun
+                </strong>{' '}
+                et électrique, il n&apos;existe pas plus{' '}
+                <strong className="text-blue-800 dark:text-blue-200">
+                  pratique, efficace et polyvalent
+                </strong>
+                . Elle permet de se déplacer librement et facilement en ville, à
+                la campagne ou en randonnée. <br />
+                Son fonctionnement est unique&nbsp;: dépourvue de guidon et de
+                freins mécaniques, la gyroroue{' '}
+                <strong className="text-blue-800 dark:text-blue-200">
+                  se pilote uniquement grâce au corps
+                </strong>
+                , par transfert de poids et anticipation. Ce mode de conduite
+                intuitif procure des{' '}
+                <strong className="text-blue-800 dark:text-blue-200">
+                  sensations de glisse incomparables
+                </strong>
+                , alliant équilibre et liberté, proche du ski ou du snowboard…
+                mais sur la terre ferme.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row mt-0 mb-4 gap-4">
-              <aside className="sm:w-3/5 md:w-1/2 lg:w-2/5 flex text-justify">
-                <span className="text-justify sm:text-sm md:text-sm lg:text-base">
+              <aside className="sm:w-3/5 md:w-1/2 lg:w-1/2 flex text-justify place-items-center">
+                <span className="text-justify text-base">
                   <h4 className="text-left mb-1">
                     🤷 Comment apprendre la gyroroue&nbsp;?
                   </h4>
-                  Tu veux apprendre la gyroroue mais tu ne sais pas par où
-                  commencer&nbsp;?{' '}
-                  <strong className="text-blue-800 dark:text-blue-200">
-                    Cette vidéo est faite pour toi
-                  </strong>
-                  &nbsp;: elle facilitera ton apprentissage. <br />
-                  Tu vas pouvoir{' '}
-                  <strong className="text-blue-800 dark:text-blue-200">
-                    découvrir
-                  </strong>{' '}
-                  la roue électrique,{' '}
-                  <strong className="text-blue-800 dark:text-blue-200">
-                    progresser
-                  </strong>{' '}
-                  rapidement, et{' '}
-                  <strong className="text-blue-800 dark:text-blue-200">
-                    éviter les pièges courants
-                  </strong>
-                  .<br />
-                  <br />
-                  <h4 className="text-left mb-1">
-                    🚀 Pourquoi apprendre la gyroroue&nbsp;?{' '}
-                  </h4>
-                  La roue électrique est le meilleur moyen de transport
-                  personnel&nbsp;: compact, fun et électrique,{' '}
-                  <strong className="text-blue-800 dark:text-blue-200">
-                    il n&apos;existe pas plus pratique
-                  </strong>
-                  . <br /> Elle permet de se déplacer librement et facilement en
-                  ville, à la campagne ou en randonnée.
+                  <p className="text-justify mt-0 mb-1">
+                    Tu veux apprendre la gyroroue mais tu ne sais pas par où
+                    commencer&nbsp;?{' '}
+                    <strong className="text-blue-800 dark:text-blue-200">
+                      Cette vidéo est faite pour toi{' '}
+                    </strong>
+                    et facilitera ton apprentissage. <br />
+                    Tu vas pouvoir{' '}
+                    <strong className="text-blue-800 dark:text-blue-200">
+                      découvrir
+                    </strong>{' '}
+                    la roue électrique,{' '}
+                    <strong className="text-blue-800 dark:text-blue-200">
+                      progresser
+                    </strong>{' '}
+                    rapidement, et{' '}
+                    <strong className="text-blue-800 dark:text-blue-200">
+                      éviter les pièges courants
+                    </strong>
+                    .
+                  </p>
                 </span>
               </aside>
-              <aside className="sm:w-2/5 md:w-1/2 lg:w-3/5 flex flex-col space-y-0 place-items-center mt-2 justify-center">
+              <aside className="sm:w-2/5 md:w-1/2 lg:w-1/2 flex flex-col space-y-0 place-items-center mt-2 justify-center">
                 <div className="w-full aspect-video">
                   <iframe
                     className="w-full h-full rounded-xl shadow-md"
@@ -107,7 +128,7 @@ const Associations = () => {
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
-                  Vidéo Apprendre la Gyroroue (méthode simple)
+                  Apprendre la Gyroroue (méthode simple)
                 </p>
               </aside>
             </div>
@@ -115,11 +136,12 @@ const Associations = () => {
             {/*              BLOC CONSEIL                  */}
             {/*--------------------------------------------*/}
             <div className="my-4">
-              <div className="blueBlock my-0">
+              <div className="blueBlock my-0 p-4">
                 <h4 className="mt-0 mb-0 text-xl font-bold">
                   💡 7 conseils à retenir :
                 </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-0 mt-0">
+                <div className="mt-0 mb-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
+                  {/* -- 6 cartes conseils (map) -- */}
                   {[
                     {
                       title: 'Équipe-toi bien',
@@ -154,41 +176,41 @@ const Associations = () => {
                   ].map(({ title, icon, text }, i) => (
                     <div
                       key={i}
-                      className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify mt-0 mb-0"
+                      className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify h-full flex flex-col"
                     >
-                      <h5 className="text-lg font-semibold mb-0 mt-0">
+                      <h5 className="text-lg font-semibold mb-2">
                         {icon} {title}
                       </h5>
-                      <p className="text-sm text-gray-800 dark:text-gray-200">
+                      <p className="text-sm text-gray-800 dark:text-gray-200 flex-1">
                         {text}
                       </p>
                     </div>
                   ))}
-                </div>
-                <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify mb-0 mt-0">
-                  <h5 className="text-lg font-semibold mb-0 mt-0">
-                    🎥 Les &laquo;&nbsp;Tutos de la semaine&nbsp;&raquo;
-                  </h5>
-                  <p className="text-sm text-gray-800 dark:text-gray-200">
-                    Ces courtes{' '}
-                    <a
-                      href="https://youtube.com/playlist?list=PL9xPR9BbyK1dFDQkX_fLsLUwB8OEXw6SE&si=lt4Mjl6Dq-q9sqEk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
-                    >
-                      vidéos d&apos;Hirsute (Damien Gaumet)
-                    </a>{' '}
-                    sont idéales pour progresser (qu&apos;on soit débutant ou
-                    confirmé).
-                  </p>
+                  {/* -- Tuto : placé DANS la même grid et qui occupe toute la largeur -- */}
+                  <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify col-span-1 sm:col-span-2 lg:col-span-3 h-full flex flex-col">
+                    <h5 className="text-lg font-semibold mb-2">
+                      🎥 Les « Tutos de la semaine »
+                    </h5>
+                    <p className="text-sm text-gray-800 dark:text-gray-200 flex-1">
+                      Ces courtes{' '}
+                      <a
+                        href="https://youtube.com/playlist?list=PL9xPR9BbyK1dFDQkX_fLsLUwB8OEXw6SE&si=lt4Mjl6Dq-q9sqEk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        vidéos d&apos;Hirsute (Damien Gaumet)
+                      </a>{' '}
+                      sont idéales pour progresser (qu&apos;on soit débutant ou
+                      confirmé).
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             {/*--------------------------------------------*/}
             {/*              BLOC PIEGES                   */}
             {/*--------------------------------------------*/}
-
             <div className="yellowBlock mb-4">
               <h4>😱 5 pièges à éviter&nbsp;:</h4>
               🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
