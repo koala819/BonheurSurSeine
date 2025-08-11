@@ -342,8 +342,7 @@ const Practical_Vrac = () => {
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
-                  Video : Apprendre à tracer un parcours de randonnée (méthode
-                  simple)
+                  Apprendre à tracer un parcours de randonnée (méthode simple)
                 </p>
               </aside>
             </div>
