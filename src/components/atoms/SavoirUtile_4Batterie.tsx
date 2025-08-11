@@ -55,17 +55,18 @@ const Practical_Battery = () => {
           title={<h3> ⚡ Batterie et autonomie</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
+          {/*---------------------------------------*/}
+          {/*---------------------------------------*/}
           <p className="mb-2">
             Le pourcentage batterie est utile, rapide à lire, simple à
             comprendre, mais…{' '}
           </p>
-          <div className="pinkBlock mb-4">
+          <div className="pinkBlock mb-2">
             <h4 className="mb-0 mt-0">
               ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
               etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
             </h4>
           </div>
-
           <p className="mb-2 text-justify">
             Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
             <strong>
@@ -75,9 +76,8 @@ const Practical_Battery = () => {
             pour répondre à la demande du moteur.
             <br />
             Si le moteur demande plus d&apos;énergie que ne peut en fournir la
-            batterie, la roue sera sans énergie et… ce sera la chute&nbsp;!
+            batterie, la roue sera sans énergie&nbsp;et… ce sera la chute&nbsp;!
           </p>
-
           <div className="blueBlock mb-4">
             <h4 className="mb-0 mt-0">
               L&apos;autonomie n&apos;est pas une donnée absolue. <br />
@@ -88,10 +88,11 @@ const Practical_Battery = () => {
               pneu, vent, température ambiante, profil et nature du trajet…
             </i>
           </div>
-
-          <div className="mb-4 flex flex-col md:flex-row gap-4">
+          {/*---------------------------------------*/}
+          {/*---------------------------------------*/}
+          <h4 className="mt-4 mb-2">➡️ En quelques mots&nbsp;:</h4>
+          <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
             <aside className="md:w-3/5">
-              <h4 className="mt-1">➡️ En quelques mots&nbsp;:</h4>
               <p className="text-justify ml-2">
                 🔋&nbsp;100%&nbsp;: la tension maximale. <br />
                 🪫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;: la tension minimum.{' '}
@@ -103,21 +104,21 @@ const Practical_Battery = () => {
                 La diminution du % peut prendre une forme&nbsp;:
                 <br />
                 <span className="mt-0 mb-0">
-                  &bull; Linéaire (diminution régulière, en même temps que la
-                  tension).
+                  &emsp;&bull;&ensp;Linéaire (diminution régulière, en même
+                  temps que la tension).
                   <br />
-                  &bull; Convexe (diminution lente au début, puis rapide sur la
-                  fin de batterie).
+                  &emsp;&bull;&ensp;Convexe (diminution lente au début, puis
+                  rapide en fin de batterie).
                   <br />
-                  &bull; Concave (diminution rapide au début, puis lente sur la
-                  fin de batterie).
+                  &emsp;&bull;&ensp;Concave (diminution rapide au début, puis
+                  lente en fin de batterie).
                 </span>
                 <br />
               </p>
               <p className="text-justify mt-2 ml-2">
                 Il faut aussi garder à l&apos;esprit que{' '}
                 <strong>la tension ne diminue pas de manière linéaire</strong>{' '}
-                avec le kilométrage parcouru&nbsp;!{' '}
+                avec le kilométrage parcouru&nbsp;!
               </p>
             </aside>
             <aside className="md:w-2/5 text-center text-xs mb-0">
@@ -127,7 +128,7 @@ const Practical_Battery = () => {
                   alt="Graphique_diminution"
                   width={632}
                   height={472}
-                  className="rounded-lg cursor-pointer shadow-md transition-shadow"
+                  className="rounded-lg cursor-pointer shadow-md transition-shadow mb-1"
                 />
               </Link>
               Le graphique ci-dessus illustre ce phénomène
@@ -135,7 +136,7 @@ const Practical_Battery = () => {
               <i> (volontairement exagéré)</i>.
             </aside>
           </div>
-
+          {/*---------------------------------------*/}
           <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
             🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
@@ -146,7 +147,9 @@ const Practical_Battery = () => {
             🔸 C&apos;est un calcul qui convertit cette tension instantanée en
             un pourcentage approximatif (de 100% à 0%). <br />
           </div>
-          <h4 className="mt-6">➡️ Tension minimale</h4>
+          {/*---------------------------------------*/}
+          {/*---------------------------------------*/}
+          <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
           <p className="text-justify">
             Certains préfèrent{' '}
             <strong>surveiller directement la tension</strong> pour connaitre
@@ -171,7 +174,6 @@ const Practical_Battery = () => {
               />
             </Link>
           </div>
-
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en avril 2025
           </p>

@@ -21,19 +21,25 @@ const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <h1>Savoir utile</h1>
-      <p>
-        Ce guide complet sur la gyroroue contient des{' '}
-        <strong>infos pratiques</strong> et des conseils{' '}
-        <strong>pour bien utiliser ta roue</strong>&nbsp;: fonctionnement,
-        entretien, autonomie, batterie, sécurité, applications pratiques et
-        confort de conduite...
-      </p>
-      <div className="blueBlock">
-        <h3>
-          🎓 Qui a dit &laquo;&nbsp;un wheeler averti en vaut
-          deux&nbsp;&raquo;&nbsp;?
-        </h3>
-      </div>{' '}
+      <div className="space-y-1">
+        <div className="mt-0 mb-0 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
+          <aside className="md:w-1/2 space-y-1">
+            <p className="text-justify mt-0 mb-0">
+              Ce guide complet sur la gyroroue contient des{' '}
+              <strong>infos pratiques</strong> et des conseils{' '}
+              <strong>pour bien utiliser ta roue</strong>&nbsp;: fonctionnement,
+              entretien, autonomie, batterie, sécurité, applications pratiques
+              et confort de conduite...
+            </p>
+          </aside>
+          <aside className="md:w-1/2 blueBlock mt-0 mb-0">
+            <h4 className="mt-0 mb-0">
+              🎓 Qui a dit &laquo;&nbsp;un wheeler averti en vaut
+              deux&nbsp;&raquo;&nbsp;?
+            </h4>
+          </aside>
+        </div>
+      </div>
       <Maintenance />
       <Dico />
       <Navi />
