@@ -45,7 +45,7 @@ const Page = () => {
         </div>
 
         <div className="pinkBlock_Formation font-medium">
-          <h4 className="text-justify mt-0 mb-3 text-lg">
+          <h4 className="text-justify mt-0 mb-3 text-base md:text-lg">
             Si tu veux apprendre la roue électrique mais que tu as peur de te
             lancer, sache que je propose des{' '}
             <strong>sessions de formation</strong> théorique <u>et</u> pratique
@@ -55,12 +55,12 @@ const Page = () => {
             l&apos;objet.&nbsp;😎
           </h4>
           <h4 className="mt-0 mb-0">
-            ➡️ Pour <strong>prendre rendez-vous</strong> :{' '}
+            ➡️ Pour <strong>prendre rendez-vous</strong>&nbsp;:{' '}
             <Link
               href={'mailto:bonheursurseine@gmail.com'}
               className="underline text-rose-800 dark:text-black"
             >
-              bonheursurseine@gmail.com{' '}
+              bonheursurseine@gmail.com
             </Link>
           </h4>
         </div>
