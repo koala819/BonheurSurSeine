@@ -21,8 +21,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-nav-light dark:bg-nav-dark pt-8 w-full text-white">
-      <nav className="space-y-8 md:space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mb-12">
+    <footer className="bg-nav-light dark:bg-nav-dark pt-2 w-full text-white">
+      <nav className="space-y-0 md:flex md:flex-row lg:px-0 xl:px-4 mt-2 mb-2">
         <aside className="flex justify-center md:basis-1/2">
           <DoubleColumn
             sectionClassName="md:flex w-full"
@@ -44,7 +44,7 @@ export function Footer() {
                   {/*<span className="text-xs text-cyan-600 dark:text-sky-950">*/}
                   Vidéaste et Spécialiste gyroroue
                 </span>
-                <picture className="flex space-x-4 items-center justify-center mt-2 w-full">
+                <picture className="flex space-x-4 items-center justify-center mt-0 w-full">
                   <Tooltip showArrow={true} color="danger" content="Youtube">
                     <Link
                       href="https://www.youtube.com/c/BonheursurSeine"
@@ -121,17 +121,13 @@ export function Footer() {
           />
         </aside>
 
-        <aside className="flex justify-center md:justify-end  md:w-1/2">
-          <FooterColumn
-            title=" "
-            items={[{ text: 'Mentions légales', link: '/mentions' }]}
-          />
-        </aside>
-      </nav>
-      <legend className="w-full px-4 mx-auto text-center bg-[#47464D] text-white">
-        <div className="py-4 flex flex-col md:flex-row space-y-8 md:space-y-0">
-          <aside className="flex w-full flex-col md:flex-row items-center text-xs tracking-widest space-y-4 md:space-y-0">
-            <text className="flex">
+        <aside className="flex justify-center items-center md:w-1/2">
+          <div className="">
+            <FooterColumn
+              title=" "
+              items={[{ text: 'Mentions légales', link: '/mentions' }]}
+            />
+            <p className="py-1 flex flex-col md:flex-row space-y-8 md:space-y-0">
               {currentYear} Created by
               <Link
                 href="https://www.dix31.com"
@@ -147,10 +143,10 @@ export function Footer() {
                   />
                 </picture>
               </Link>
-            </text>
-          </aside>
-        </div>
-      </legend>
+            </p>
+          </div>
+        </aside>
+      </nav>
     </footer>
   )
 }
