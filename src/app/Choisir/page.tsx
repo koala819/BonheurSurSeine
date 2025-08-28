@@ -4,9 +4,9 @@ import ChooseWheel from '@/src/components/molecules/Choisir'
 
 export const metadata: Metadata = {
   title:
-    'Bonheur Sur Seine - Comment choisir sa gyroroue ? Comparaisons et Conseils',
+    'Comment choisir sa gyroroue ? Guide, comparaisons et conseils pour bien acheter une gyroroue',
   description:
-    'Quelles sont les meilleures roues ? Marques, guide, conseils, comparatifs pour acheter la roue électrique idéale.',
+    'Quelles sont les meilleures modèles ? Marques, guide, conseils, comparatifs pour acheter la roue électrique idéale.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/Choisir`,
   },

@@ -31,7 +31,7 @@ export default function RexEUC() {
   const [showBonus, setShowBonus] = useState(true) // Faut-il afficher le bonus ?
   const jumpAllowed = useRef(true) // Pour éviter les sauts multiples.
 
-  const getCactusSpeed = () => {
+  /*const getCactusSpeed = () => {
     if (score > 500) return 4.45
     if (score > 450) return 4.5
     if (score > 400) return 4.55
@@ -47,10 +47,9 @@ export default function RexEUC() {
     if (score > 140) return 5.05
     if (score > 120) return 5.1
     if (score > 100) return 5.15
-    if (score > 80) return 5.2
-    if (score > 60) return 5.25
-    return 5.3 // durée en secondes
-  }
+    return 5.2
+  }*/
+  const getCactusSpeed = () => Math.max(3, 5.2 - score * 0.002) // 5.2 = durée en secondes
 
   const jumpSound = useRef<HTMLAudioElement>(null)
   const gameOverSound = useRef<HTMLAudioElement>(null)
@@ -351,7 +350,7 @@ export default function RexEUC() {
               Jouer
             </button>
             <button
-              onClick={() => router.push('/contact')}
+              onClick={() => router.push('/Merci')}
               className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-yellow-600"
             >
               Quitter
