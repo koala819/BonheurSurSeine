@@ -5,9 +5,7 @@
   "scripts": {
     "clean": "rm -rf node_modules pnpm-lock.json .next",
     "dev": "next dev",
-    "prebuild": "rm -f public/sitemap*.xml",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
