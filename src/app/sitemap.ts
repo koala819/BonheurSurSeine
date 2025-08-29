@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${process.env.CLIENT_URL}/Savoir_Utile`,
+      url: `${process.env.CLIENT_URL}/SavoirUtile`,
       lastModified: new Date(),
       priority: 0.9,
     },
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${process.env.CLIENT_URL}/mention`,
+      url: `${process.env.CLIENT_URL}/mentions`,
       lastModified: new Date(),
       priority: 0.5,
     },
