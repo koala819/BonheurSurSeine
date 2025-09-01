@@ -35,7 +35,7 @@ export default async function Page() {
         <p className="text-justify">
           Il ne contient <strong>aucune publicité</strong> et ne collecte{' '}
           <strong>aucune donnée personnelle</strong> afin de garantir une
-          navigation fluide et sans distractions. Son contenu, rédigé
+          navigation fluide et sans distraction. Son contenu, rédigé
           manuellement au fil des années, a été conçu avec soin. Il
           s&apos;adresse à un large public, et est pensé{' '}
           <strong>d&apos;intérêt général</strong>, pour partager mon travail au

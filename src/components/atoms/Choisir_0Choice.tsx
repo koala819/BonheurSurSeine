@@ -5,8 +5,11 @@ const Choice = () => {
       <div className="mb-8 flex flex-col md:flex-row items-center">
         <aside className="md:w-1/2 space-y-4 mr-4">
           <p className="text-justify">
-            L&apos;important est d&apos;avoir une roue adaptée à son
-            utilisation. <br /> Le <strong>piège</strong> serait de ne{' '}
+            <strong className="text-blue-800 dark:text-blue-300">
+              L&apos;important est d&apos;avoir une roue adaptée à son
+              utilisation
+            </strong>
+            . <br /> Le <strong>piège</strong> serait de ne{' '}
             <strong>regarder que les spécifications techniques</strong> et de
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
@@ -30,13 +33,16 @@ const Choice = () => {
           😉 Pas besoin d&apos;avoir la dernière roue pour ressentir le{' '}
           <strong>bonheur de rouler</strong>. <br />
           {'  '}⚠️ L&apos;important est d&apos;avoir une{' '}
-          <strong>roue adaptée à son usage</strong>.
+          <strong className="text-blue-800 dark:text-blue-300">
+            roue adaptée à son usage
+          </strong>
+          .
         </aside>
       </div>
       <p>
-        ➡️ J&apos;invite chacun, quand il le peut,{' '}
+        ➡️ J&apos;invite chacun, quand il le peut, à{' '}
         <strong className="text-blue-800 dark:text-blue-300">
-          à tester les roues pour se faire son propre avis
+          tester les roues pour se faire son propre avis
         </strong>
         .
       </p>

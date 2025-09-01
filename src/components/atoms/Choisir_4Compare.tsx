@@ -27,9 +27,9 @@ const Compare = () => {
         inconvénients, et tenir compte de ses contraintes.
       </div>
       {/*---------------------CONSTATS--------------------------- */}
-      <div className="pt-8">
+      <div className="pt-4">
         <h4>➡️ Pas si simple</h4>
-        <ul className="list-disc pl-12 space-y-2">
+        <ul className="list-disc pl-12 space-y-1">
           <li className="text-justify">
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques{' '}
@@ -45,9 +45,9 @@ const Compare = () => {
           <li className="text-justify">
             Les chiffres sont parfois trompeurs, et{' '}
             <strong className="text-brown-500">
-              les autonomies annoncées sont toujours surévaluées
+              les autonomies annoncées sont souvent surévaluées
             </strong>{' '}
-            (il faut parfois diviser par 2). <i>Rappel</i> : l&apos;autonomie
+            (il faut parfois diviser par 2). <i>Important</i> : l&apos;autonomie
             est fonction de nombreux paramètres (poids du wheeler,
             accélérations, vitesse, pression et type de pneu, vent, température
             ambiante, profil et nature du trajet…).
@@ -60,14 +60,14 @@ const Compare = () => {
         </ul>
       </div>
       {/*---------------------REVIEWS--------------------------- */}
-      <div className="pt-8">
+      <div className="pt-4">
         <h4>
           ➡️ Mes reviews et le{' '}
           <span className="text-xl sm:text-xl md:text-xl text-fuchsia-700 dark:text-fuchsia-400">
             BonheurScore
           </span>
         </h4>
-        <ul className="list-disc pl-12 space-y-2">
+        <ul className="list-disc pl-12 space-y-1">
           <li className="text-justify">
             La{' '}
             <strong>
@@ -113,7 +113,7 @@ const Compare = () => {
         </ul>
       </div>
       {/*---------------------EUC FINDER--------------------------- */}
-      <div className="pt-8">
+      <div className="pt-4">
         <h4>➡️ EUC Finder</h4>
         <div className="flex flex-col md:flex-row gap-6 mt-4 mb-4">
           <aside className="md:w-1/5 flex items-center justify-center">
