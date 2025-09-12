@@ -31,16 +31,16 @@ const Needs = () => {
       <div className="mb-0 grid grid-cols-1 sm:grid-cols-5 gap-2 items-center">
         {/* Bloc texte sur 4 des 5 colonnes */}
         <aside className="sm:col-span-3 space-y-0">
-          <div className="greenBlockChoisir mb-0 mt-0 text-justify">
-            <h3 className="mb-0 mt-0 text-left">
-              🔎 Cela va de soi, mais on ne peut pas tout avoir&nbsp;!
+          <div className="greenBlockChoisir mb-0 mt-0">
+            <h3 className="mt-0 mb-0">
+              ⚠️ &laquo;&nbsp;La roue parfaite n&apos;existe
+              pas&nbsp;!&nbsp;&raquo;
             </h3>
-            <p className="text-justify mb-0 mt-0">
-              Si l&apos;on souhaite conserver un{' '}
-              <strong>objet compact et léger</strong>, il faudra forcément
-              accepter de faire des concessions&nbsp;: batteries, suspension,
-              puissance, équipements, matériaux…&nbsp;!
-            </p>
+            Un modèle pourra, dans une situation donnée, être idéal pour une
+            personne, mais inadapté pour une autre.
+            <br />
+            C&apos;est comme pour le vélo, tout le monde n&apos;a pas besoin
+            d&apos;un VTT ou d&apos;un vélo de course&nbsp;! 😉
           </div>
         </aside>
         {/* Image sur 1 colonnes */}
@@ -75,6 +75,7 @@ const Needs = () => {
           faut aussi, bien évidemment, tenir compte de son budget (
           <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
         </p>
+
         <p className="text-justify">
           Voici les{' '}
           <strong className="text-emerald-600"> principaux critères</strong> à
@@ -157,12 +158,17 @@ const Needs = () => {
           </Checkbox>
         </div>
       </div>
+      {/*------------------------------------*/}
       <div className="greenBlockChoisir mb-0 mt-0">
-        <h3 className="mt-0 mb-0">
-          ⚠️ &laquo;&nbsp;La roue parfaite n&apos;existe pas&nbsp;!&nbsp;&raquo;
+        <h3 className="mb-0 mt-0 text-left">
+          🔎 Cela va de soi, mais on ne peut pas tout avoir&nbsp;!
         </h3>
-        Un modèle pourra, dans une situation donnée, être idéal pour une
-        personne, mais inadapté pour une autre.
+        <p className="mb-0 mt-0">
+          Si l&apos;on souhaite conserver un{' '}
+          <strong>objet compact et léger</strong>, il faudra forcément accepter
+          de faire des concessions&nbsp;: batterie, suspension, puissance,
+          équipements, matériaux…
+        </p>
       </div>
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
         <br />

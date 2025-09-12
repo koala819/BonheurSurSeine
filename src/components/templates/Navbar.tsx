@@ -26,11 +26,12 @@ export function Top() {
   const menuItems = [
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
-    { name: 'Codes Promo', path: '/CodePromo' },
-    { name: 'Choisir sa Roue', path: '/Choisir' },
-    { name: 'Bien Démarrer', path: '/Debuter' },
-    { name: 'Savoir Utile', path: '/SavoirUtile' },
-    { name: 'Remerciements', path: '/Merci' },
+    { name: 'Codes Promo', path: '/codepromo' },
+    { name: 'Choisir', path: '/choisir-gyroroue' },
+    { name: 'Apprendre', path: '/apprendre-gyroroue' },
+    { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
+    { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
+    { name: 'Remerciements', path: '/merci' },
   ]
 
   return (
@@ -72,6 +73,7 @@ export function Top() {
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex " justify="center">
+        {/*--------------------------------------------*/}
         <div className="relative group">
           <NavbarItem isActive={path.includes('/BonheurScore')}>
             <Link
@@ -90,9 +92,10 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/CodePromo')}>
-            <Link href="/CodePromo" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/codepromo')}>
+            <Link href="/codepromo" className="text-white hover:text-text-link">
               Codes Promo
             </Link>
           </NavbarItem>
@@ -105,10 +108,47 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Choisir')}>
-            <Link href="/Choisir" className="text-white hover:text-text-link">
-              Choisir sa Roue
+          <NavbarItem isActive={path.includes('/apprendre-gyroroue')}>
+            <Link
+              href="/apprendre-gyroroue"
+              className="text-white hover:text-text-link"
+            >
+              Apprendre
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
+            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+              <li>
+                <Link
+                  href="/apprendre-gyroroue#cestquoi"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸C&apos;est quoi une gyroroue
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/apprendre-gyroroue#apprendre"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Apprendre
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/*--------------------------------------------*/}
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/choisir-gyroroue')}>
+            <Link
+              href="/choisir-gyroroue"
+              className="text-white hover:text-text-link"
+            >
+              Choisir
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
@@ -116,7 +156,7 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/Choisir#marche"
+                  href="/choisir-gyroroue#marche"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le marché
@@ -124,7 +164,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#marques"
+                  href="/choisir-gyroroue#marques"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Les marques
@@ -132,7 +172,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#besoins"
+                  href="/choisir-gyroroue#besoins"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Ses besoins
@@ -140,7 +180,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#comparer"
+                  href="/choisir-gyroroue#comparer"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Comparer
@@ -150,26 +190,22 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Debuter')}>
-            <Link href="/Debuter" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/debuter-gyroroue')}>
+            <Link
+              href="/debuter-gyroroue"
+              className="text-white hover:text-text-link"
+            >
               Bien Démarrer
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              {/*<li>
-                <Link
-                  href="/Debuter#apprendre"
-                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                >
-                  🔸Apprendre
-                </Link>
-              </li>*/}
               <li>
                 <Link
-                  href="/Debuter#deballage"
+                  href="/debuter-gyroroue#deballage"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Premier déballage
@@ -177,7 +213,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#bonsens"
+                  href="/debuter-gyroroue#bonsens"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le bon sens
@@ -185,7 +221,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#assurance"
+                  href="/debuter-gyroroue#assurance"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Assurance
@@ -193,7 +229,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#code"
+                  href="/debuter-gyroroue#code"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Code de la route
@@ -201,7 +237,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#asso"
+                  href="/debuter-gyroroue#asso"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Groupes & associations
@@ -211,10 +247,11 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/SavoirUtile')}>
+          <NavbarItem isActive={path.includes('/guide-utile-gyroroue')}>
             <Link
-              href="/SavoirUtile"
+              href="/guide-utile-gyroroue"
               className="text-white hover:text-text-link"
             >
               Savoir Utile
@@ -225,7 +262,7 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/SavoirUtile#entretien"
+                  href="/guide-utile-gyroroue#entretien"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸L&apos;entretien
@@ -233,7 +270,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#dico"
+                  href="/guide-utile-gyroroue#dico"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le p&apos;tit Dico du Bonheur
@@ -241,7 +278,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#navi"
+                  href="/guide-utile-gyroroue#navi"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Trouver son chemin
@@ -249,7 +286,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#batterie"
+                  href="/guide-utile-gyroroue#batterie"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Batterie et autonomie
@@ -257,7 +294,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#vrac"
+                  href="/guide-utile-gyroroue#vrac"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Savoir en vrac
@@ -265,7 +302,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#infos"
+                  href="/guide-utile-gyroroue#infos"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Infos constructeurs
@@ -275,9 +312,10 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Merci')}>
-            <Link href="/Merci" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/merci')}>
+            <Link href="/merci" className="text-white hover:text-text-link">
               Remerciements
             </Link>
           </NavbarItem>
@@ -290,6 +328,7 @@ export function Top() {
           </div>
         </div>
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
           <ThemeSwitcher />
@@ -299,6 +338,7 @@ export function Top() {
           className="md:hidden"
         />
       </NavbarContent>
+
       <NavbarMenu
         className="mt-8"
         style={{ maxHeight: '370px', overflowY: 'auto' }}
@@ -307,7 +347,7 @@ export function Top() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={'foreground'}
-              className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-2/3 "
+              className="w-full hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl hover:w-2/3"
               href={item.path}
               size="lg"
             >

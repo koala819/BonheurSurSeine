@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
-/*import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'*/
+//import Link from 'next/link'
+//import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'
 import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballage'
 import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
 import Assurance from '@/src/components/atoms/Débuter_3Assurance'
@@ -9,12 +9,11 @@ import HighwayCode from '@/src/components/atoms/Débuter_4HighwayCode'
 import Associations from '@/src/components/atoms/Débuter_5Associations'
 
 export const metadata: Metadata = {
-  title:
-    'Conseils pour apprendre et bien démarrer en gyroroue, monoroue, roue électrique',
+  title: 'Bien débuter la gyroroue / monoroue / roue électrique',
   description:
-    'Apprendre la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
+    'Apprendre facilement la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/Debuter`,
+    canonical: `${process.env.CLIENT_URL}/debuter-apprendre-gyroroue`,
   },
 }
 
@@ -26,10 +25,11 @@ const Page = () => {
         <div className="mt-0 mb-4 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 mt-0 mb-0">
             <p className="text-justify mt-0 mb-0">
-              Tu viens d&apos;acheter une gyroroue ou tu envisages
+              {/*Tu viens d&apos;acheter une gyroroue ou tu envisages
               d&apos;apprendre&nbsp;? Cette page t&apos;est dédiée.
               <br />
-              Elle regroupe les <strong>bases indispensables</strong> et{' '}
+              Elle*/}
+              Cette page regroupe les <strong>bases indispensables</strong> et{' '}
               <strong>rappels essentiels</strong> pour bien débuter en roue
               électrique, et t&apos;offrir{' '}
               <strong>tout ce qu&apos;il faut savoir</strong> pour commencer la
@@ -44,12 +44,13 @@ const Page = () => {
           </aside>
         </div>
 
-        <div className="pinkBlock_Formation font-medium">
+        {/*<div className="pinkBlock_Formation font-medium">
           <h4 className="text-justify mt-0 mb-3 text-base md:text-lg">
             Si tu veux apprendre la roue électrique mais que tu as peur de te
             lancer, sache que je propose des{' '}
-            <strong>sessions de formation</strong> théorique <u>et</u> pratique
-            pour t&apos;accompagner et dédramatiser.&nbsp;😊
+            <strong className="text-rose-800">sessions de formation</strong>{' '}
+            théorique <u>et</u> pratique pour t&apos;accompagner et
+            dédramatiser.&nbsp;😊
             <br />
             En seulement 1h🕐, tu auras un autre regard sur
             l&apos;objet.&nbsp;😎
@@ -63,7 +64,7 @@ const Page = () => {
               bonheursurseine@gmail.com
             </Link>
           </h4>
-        </div>
+        </div>*/}
       </div>
       {/*<Apprendre />*/}
       <Premier_deballage />

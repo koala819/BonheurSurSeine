@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import Contact from '@/src/components/molecules/Merci'
+import Contact from '@/src/components/atoms/Merci'
 
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine – Vidéaste et Spécialiste Gyroroue',
   description:
-    'Pour en savoir plus sur les gyroroues, monoroues, roues électriques ou monocycles électriques, soutenez Bonheur Sur Seine.',
+    'Pour en savoir plus sur les gyroroues / monoroues / roues électriques / monocycles électriques, soutenez Bonheur Sur Seine.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/Merci`,
+    canonical: `${process.env.CLIENT_URL}/merci`,
   },
 }
 

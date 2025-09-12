@@ -9,11 +9,11 @@ import Info from '@/src/components/atoms/SavoirUtile_6Infos'
 
 export const metadata: Metadata = {
   title:
-    'Tout Savoir sur les gyroroues : Fonctionnement, Guide et Infos Pratiques sur les gyroroues, monoroues, roues électriques',
+    'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues / monoroues / roues électriques',
   description:
     'Fabricants, entretien, batteries, conseils, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/SavoirUtile`,
+    canonical: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
   },
 }
 
@@ -25,7 +25,7 @@ const Page = () => {
         <div className="mt-0 mb-0 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 space-y-1">
             <p className="text-justify mt-0 mb-0">
-              Ce guide complet sur la gyroroue contient des{' '}
+              Ce <strong>guide complet</strong> sur la gyroroue contient des{' '}
               <strong>infos pratiques</strong> et des conseils{' '}
               <strong>pour bien utiliser ta roue</strong>&nbsp;: fonctionnement,
               entretien, autonomie, batterie, sécurité, applications pratiques
