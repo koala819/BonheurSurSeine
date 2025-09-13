@@ -144,8 +144,9 @@ const Practical_Dico = () => {
     )
   }
 
+  //-----------------------------------------------------
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
-  const [openKeys, setOpenKeys] = useState<string[]>([])
+  const [openKeys, setOpenKeys] = useState<string[]>(['1'])
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
   useEffect(() => {
     const handleHashChange = () => {
@@ -174,7 +175,9 @@ const Practical_Dico = () => {
     }
   }, [scrollTarget])
 
-  //CODE DE LA PAGE
+  //-----------------------------------------------------
+  //                 CODE DE LA PAGE
+  //-----------------------------------------------------
   return (
     <section
       id="dico"

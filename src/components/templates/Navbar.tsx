@@ -27,8 +27,8 @@ export function Top() {
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
     { name: 'Codes Promo', path: '/codepromo' },
-    { name: 'Choisir', path: '/choisir-gyroroue' },
     { name: 'Apprendre', path: '/apprendre-gyroroue' },
+    { name: 'Choisir', path: '/choisir-gyroroue' },
     { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
     { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
     { name: 'Remerciements', path: '/merci' },
@@ -265,14 +265,6 @@ export function Top() {
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/guide-utile-gyroroue#entretien"
-                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                >
-                  🔸L&apos;entretien
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/guide-utile-gyroroue#dico"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
@@ -281,10 +273,10 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/guide-utile-gyroroue#navi"
+                  href="/guide-utile-gyroroue#entretien"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
-                  🔸Trouver son chemin
+                  🔸L&apos;entretien
                 </Link>
               </li>
               <li>
@@ -293,6 +285,14 @@ export function Top() {
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Batterie et autonomie
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide-utile-gyroroue#navi"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Trouver son chemin
                 </Link>
               </li>
               <li>

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
-import Maintenance from '@/src/components/atoms/SavoirUtile_1Entretien'
-import Dico from '@/src/components/atoms/SavoirUtile_2Dico'
-import Navi from '@/src/components/atoms/SavoirUtile_3Navi'
-import Battery from '@/src/components/atoms/SavoirUtile_4Batterie'
+import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
+import Maintenance from '@/src/components/atoms/SavoirUtile_2Entretien'
+import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
+import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 import Info from '@/src/components/atoms/SavoirUtile_6Infos'
 
