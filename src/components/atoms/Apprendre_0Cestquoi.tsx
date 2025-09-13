@@ -188,7 +188,6 @@ const Maintenance = () => {
             des débutants,{' '}
             <Link
               href="/debuter-gyroroue"
-              target="_blank"
               className="link-style font-bold text-blue-800 dark:text-blue-200"
             >
               consulte la page &laquo;&nbsp;Bien Démarrer&nbsp;&raquo;

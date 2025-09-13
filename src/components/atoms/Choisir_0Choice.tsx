@@ -13,8 +13,9 @@ const Choice = () => {
             <strong>regarder que les spécifications techniques</strong> et de
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
-            <br /> Or d&apos;anciens modèles, sortis il y a déjà plusieurs
-            années, constituent encore aujourd&apos;hui des choix tout à fait
+            <br />
+            <br /> D&apos;anciens modèles, sortis il y a déjà plusieurs années,
+            constituent encore aujourd&apos;hui des choix tout à fait
             pertinents.
           </p>
           <p className="text-justify">

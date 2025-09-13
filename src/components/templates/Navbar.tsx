@@ -317,8 +317,11 @@ export function Top() {
 
         {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/merci')}>
-            <Link href="/merci" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/mille-merci')}>
+            <Link
+              href="/mille-merci"
+              className="text-white hover:text-text-link"
+            >
               Remerciements
             </Link>
           </NavbarItem>
