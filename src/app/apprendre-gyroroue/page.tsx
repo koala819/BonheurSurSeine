@@ -1,14 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import Cestquoi from '@/src/components/atoms/Découvrir_0Cestquoi'
-import Apprendre from '@/src/components/atoms/Découvrir_1Apprendre'
+import Cestquoi from '@/src/components/atoms/Apprendre_0Cestquoi'
+import Apprendre from '@/src/components/atoms/Apprendre_1Apprendre'
 
 export const metadata: Metadata = {
-  title:
-    'Conseils pour bien apprendre la gyroroue / monoroue / roue électrique',
+  title: 'Apprendre la gyroroue / monoroue / roue électrique',
   description:
-    'Apprendre facilement la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
+    'Comment apprendre facilement la gyroroue ? Méthode pour progresser facilement : conseils, initiation, apprentissage, erreurs à éviter, et plus encore.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/debuter-apprendre-gyroroue`,
   },
@@ -22,15 +21,15 @@ const Page = () => {
         <div className="mt-0 mb-4 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 mt-0 mb-0">
             <p className="mt-0 mb-0">
-              Bravo&nbsp;! Tu viens d&apos;acheter une gyroroue ou tu envisages
+              Tu t&apos;intéresse à la gyroroue ou tu envisages
               d&apos;apprendre&nbsp;? Tu es motivé&nbsp;? <br />
-              Cette page t&apos;est entièrement dédiée.
+              Bravo&nbsp;! Cette page t&apos;est entièrement dédiée.
               <br />
             </p>
           </aside>
           <aside className="md:w-1/2 blueBlock mt-0 mb-0">
             <h4 className="text-center mt-0 mb-0">
-              ❤️ &laquo;&nbsp;C&apos;est parti&nbsp;!&nbsp;&raquo;
+              ❤️ &laquo;&nbsp;Et c&apos;est parti&nbsp;!&nbsp;&raquo;
             </h4>
           </aside>
         </div>

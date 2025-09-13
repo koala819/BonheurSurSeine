@@ -11,7 +11,7 @@ import Associations from '@/src/components/atoms/Débuter_5Associations'
 export const metadata: Metadata = {
   title: 'Bien débuter la gyroroue / monoroue / roue électrique',
   description:
-    'Apprendre facilement la gyroroue : conseils, initiation, sécurité, assurance, code de la route, et plus encore. Débuter en toute confiance.',
+    'Conseils, sécurité, assurance, code de la route, et plus encore. Débuter et progressez en toute confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/debuter-apprendre-gyroroue`,
   },

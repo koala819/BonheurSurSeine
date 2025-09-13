@@ -94,6 +94,7 @@ const Maintenance = () => {
           </div>
 
           {/*------------------------------------*/}
+          {/*------------------------------------*/}
           <div className="mt-4 mb-0">
             <h4 className="text-left mt-0 mb-1">
               🚀 Comment ça fonctionne&nbsp;?
@@ -120,17 +121,35 @@ const Maintenance = () => {
               </li>
               <li className="">
                 Aller à <b>gauche ou droite</b> → transférer son poids sur un
-                côté, comme en vélo ou en ski. Elle tournera et suivre
-                précisément les mouvements de ton corps.
+                côté, comme en vélo ou en ski. Elle tournera et suivra
+                naturellement les mouvements de ton corps.
               </li>
             </ul>
           </div>
+
+          {/*------------------------------------*/}
           {/*------------------------------------*/}
           <div className="flex flex-col sm:flex-row mt-0 mb-0 space-x-4">
-            <aside className="sm:w-3/5 md:w-1/2 lg:w-1/2 flex text-justify place-items-start">
+            <aside className="sm:w-full md:w-3/5 lg:w-1/2 flex flex-col space-y-0 mt-1 mb-0 place-content-center">
+              <div className="w-full aspect-video">
+                <iframe
+                  className="w-full h-full rounded-xl shadow-md"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/qOapkq09Oz0?si=_AX-CJDe8BbCaXfZ"
+                  title="Apprendre la gyroroue (méthode simple)"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
+              <p className="mt-0 mb-0 text-xs text-center italic text-gray-600 dark:text-gray-400">
+                Comment fonctionne une gyroroue (version simple)
+              </p>
+            </aside>
+            {/*------------------------------------*/}
+            <aside className="md:w-2/5 lg:w-1/2 flex text-justify place-items-start">
               <span className="text-justify text-base">
                 <div className="mt-4 mb-0">
-                  <h4 className="text-left mt-0 mb-1">
+                  <h4 className="text-left mt-0 mb-0">
                     🧠 Pourquoi ça tient debout ?
                   </h4>
                   <ul className="compactlist mb-6">
@@ -147,14 +166,14 @@ const Maintenance = () => {
                       >
                         l&apos;effet gyroscope&nbsp;(📹)
                       </Link>{' '}
-                      et permet l&apos;équilibre.
+                      et assure l&apos;équilibre.
                     </li>
                     <li className="">
                       Pour la direction gauche/droite, c&apos;est au pilotage
                       d&apos;agir (comme en vélo ou en ski).
                     </li>
                   </ul>
-                  <h4 className="mt-4 mb-2">🚫 Non aux idées reçues&nbsp;:</h4>
+                  <h4 className="mt-2 mb-0">🚫 Non aux idées reçues&nbsp;:</h4>
                   <ul className="compactlist mb-6">
                     <li className="">C&apos;est trop compliqué.</li>
                     <li className="">C&apos;est trop dangereux.</li>
@@ -162,25 +181,11 @@ const Maintenance = () => {
                 </div>
               </span>
             </aside>
-            <aside className="sm:w-2/5 md:w-1/2 lg:w-1/2 flex flex-col space-y-0 place-items-center mt-1 mb-3">
-              <div className="w-full aspect-video">
-                <iframe
-                  className="w-full h-full rounded-xl shadow-md"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/qOapkq09Oz0?si=_AX-CJDe8BbCaXfZ"
-                  title="Apprendre la gyroroue (méthode simple)"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
-              </div>
-              <p className="mt-0 mb-0 text-xs text-center italic text-gray-600 dark:text-gray-400">
-                Comment fonctionne une gyroroue (version simple)
-              </p>
-            </aside>
           </div>
           <p>
-            Pour le reste, tout savoir (code de la route, assurance) et éviter
-            les erreurs des débutants,{' '}
+            Pour le reste, tout savoir (
+            <i>astuce, code de la route, assurance</i>) et éviter les erreurs
+            des débutants,{' '}
             <Link
               href="/debuter-gyroroue"
               target="_blank"

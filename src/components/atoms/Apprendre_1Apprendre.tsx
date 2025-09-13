@@ -7,16 +7,16 @@ import { useEffect, useState } from 'react'
 //import Image from 'next/image'
 //import Link from 'next/link'
 
-const Associations = () => {
+const Apprendre = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>(['1'])
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '')
-      if (hash === 'asso') {
+      if (hash === 'Apprendre') {
         setOpenKeys(['1']) // Ouvre l'accordéon
-        setScrollTarget('asso')
+        setScrollTarget('Apprendre')
       }
     } // Appel initial
 
@@ -57,58 +57,34 @@ const Associations = () => {
             {/*--------------------------------------------*/}
             {/*              INTRO + VIDEO                 */}
             {/*--------------------------------------------*/}
-            <div className="mt-0 mb-2">
-              <h4 className="text-left mt-0 mb-1">
-                🚀 Pourquoi apprendre la gyroroue&nbsp;?
-              </h4>
-              <p className="text-justify mt-0 mb-1">
-                La roue électrique est le meilleur moyen de transport
-                personnel&nbsp;:{' '}
-                <strong className="text-blue-800 dark:text-blue-200">
-                  compacte, fun
-                </strong>{' '}
-                et électrique, il n&apos;existe pas plus{' '}
-                <strong className="text-blue-800 dark:text-blue-200">
-                  pratique, efficace et polyvalent
-                </strong>
-                . Elle permet de se déplacer librement et facilement en ville, à
-                la campagne ou en randonnée. <br />
-                Son fonctionnement est unique&nbsp;: dépourvue de guidon et de
-                freins mécaniques, la gyroroue{' '}
-                <strong className="text-blue-800 dark:text-blue-200">
-                  se pilote uniquement grâce au corps
-                </strong>
-                , par transfert de poids et anticipation. Ce mode de conduite
-                intuitif procure des{' '}
-                <strong className="text-blue-800 dark:text-blue-200">
-                  sensations de glisse incomparables
-                </strong>
-                , alliant équilibre et liberté, proche du ski ou du snowboard…
-                mais sur la terre ferme.
-              </p>
-            </div>
             <div className="flex flex-col sm:flex-row mt-0 mb-4 gap-4">
-              <aside className="sm:w-3/5 md:w-1/2 lg:w-1/2 flex text-justify place-items-center">
-                <span className="text-justify text-base">
+              <aside className="sm:w-3/5 md:w-1/2 lg:w-1/2 flex place-content-center">
+                <span className="text-base">
                   <h4 className="text-left mb-1">
                     🤷 Comment apprendre la gyroroue&nbsp;?
                   </h4>
-                  <p className="text-justify mt-0 mb-1">
-                    Tu veux apprendre la gyroroue mais tu ne sais pas par où
-                    commencer&nbsp;?{' '}
+                  <p className="mt-0 mb-1">
+                    Tu ne sais pas par où commencer&nbsp;?{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
                       Cette vidéo est faite pour toi{' '}
                     </strong>
                     et facilitera ton apprentissage. <br />
-                    Tu vas pouvoir{' '}
+                    <br />
+                    Pas de miracles, mais 2 mots&nbsp;:{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
-                      découvrir
+                      méthode
                     </strong>{' '}
-                    la roue électrique,{' '}
+                    et{' '}
+                    <strong className="text-blue-800 dark:text-blue-200">
+                      persévérance
+                    </strong>
+                    &nbsp;!
+                    <br />
+                    Tu vas rapidement pouvoir découvrir la roue électrique,{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
                       progresser
                     </strong>{' '}
-                    rapidement, et{' '}
+                    pas à pas, et surtout{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
                       éviter les pièges courants
                     </strong>
@@ -116,7 +92,7 @@ const Associations = () => {
                   </p>
                 </span>
               </aside>
-              <aside className="sm:w-2/5 md:w-1/2 lg:w-1/2 flex flex-col space-y-0 place-items-center mt-2 justify-center">
+              <aside className="sm:w-2/5 md:w-1/2 lg:w-1/2 flex flex-col space-y-0 place-content-center mt-2 justify-center">
                 <div className="w-full aspect-video">
                   <iframe
                     className="w-full h-full rounded-xl shadow-md"
@@ -128,7 +104,7 @@ const Associations = () => {
                   ></iframe>
                 </div>
                 <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
-                  Apprendre la Gyroroue (méthode simple)
+                  Apprendre la gyroroue (méthode simple)
                 </p>
               </aside>
             </div>
@@ -201,8 +177,9 @@ const Associations = () => {
                       >
                         vidéos d&apos;Hirsute (Damien Gaumet)
                       </a>{' '}
-                      sont idéales pour progresser (qu&apos;on soit débutant ou
-                      confirmé).
+                      sont idéales pour progresser (qu&apos;on soit{' '}
+                      <b>débutant</b> ou <b>confirmé</b>
+                      ).
                     </p>
                   </div>
                 </div>
@@ -239,7 +216,7 @@ const Associations = () => {
                     <br />
                     😁
                   </h4>
-                  Alors regarde&nbsp;! &Ccedil;a, c&apos;était moi en 2018.{' '}
+                  Alors regarde&nbsp;! {/*&Ccedil;a,*/}C&apos;était moi en 2018.{' '}
                   <br />
                   Et moi aussi j&apos;ai galéré...
                   <br />
@@ -279,4 +256,4 @@ const Associations = () => {
   )
 }
 
-export default Associations
+export default Apprendre

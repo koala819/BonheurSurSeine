@@ -40,10 +40,10 @@ const Page = () => {
           </aside>
         </div>
       </div>
-      <Maintenance />
       <Dico />
-      <Navi />
+      <Maintenance />
       <Battery />
+      <Navi />
       <Vrac />
       <Info />
       <div className="yellowBlock">
