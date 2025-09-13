@@ -94,8 +94,11 @@ export function Top() {
 
         {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/codepromo')}>
-            <Link href="/codepromo" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/code-promo')}>
+            <Link
+              href="/code-promo"
+              className="text-white hover:text-text-link"
+            >
               Codes Promo
             </Link>
           </NavbarItem>

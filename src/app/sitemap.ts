@@ -13,12 +13,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${process.env.CLIENT_URL}/choisir-gyroroue`,
+      url: `${process.env.CLIENT_URL}/code-promo`,
+      lastModified: new Date(),
+      priority: 0.7,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
       lastModified: new Date(),
       priority: 0.9,
     },
     {
-      url: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
+      url: `${process.env.CLIENT_URL}/choisir-gyroroue`,
       lastModified: new Date(),
       priority: 0.9,
     },
@@ -33,12 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${process.env.CLIENT_URL}/codepromo`,
-      lastModified: new Date(),
-      priority: 0.7,
-    },
-    {
-      url: `${process.env.CLIENT_URL}/merci`,
+      url: `${process.env.CLIENT_URL}/mille-merci`,
       lastModified: new Date(),
       priority: 0.5,
     },

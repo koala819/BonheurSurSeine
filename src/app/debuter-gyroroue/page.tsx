@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Conseils, sécurité, assurance, code de la route, et plus encore. Débuter et progressez en toute confiance.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/debuter-apprendre-gyroroue`,
+    canonical: `${process.env.CLIENT_URL}/debuter-gyroroue`,
   },
 }
 

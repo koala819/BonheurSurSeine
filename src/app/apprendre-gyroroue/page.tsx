@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Comment apprendre facilement la gyroroue ? Méthode pour progresser facilement : conseils, initiation, apprentissage, erreurs à éviter, et plus encore.',
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/debuter-apprendre-gyroroue`,
+    canonical: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
   },
 }
 
