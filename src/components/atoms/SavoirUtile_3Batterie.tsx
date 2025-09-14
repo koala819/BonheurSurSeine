@@ -51,7 +51,7 @@ const Practical_Battery = () => {
       >
         <AccordionItem
           key="1"
-          aria-label="Pourcentage batterie"
+          aria-label="Pourcentage batterie et autonomie"
           title={<h3> ⚡ Batterie et autonomie</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
@@ -62,10 +62,10 @@ const Practical_Battery = () => {
             comprendre, mais…{' '}
           </p>
           <div className="pinkBlock mb-2">
-            <h4 className="mb-0 mt-0">
+            <b className="mb-0 mt-0">
               ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
               etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
-            </h4>
+            </b>
           </div>
           <p className="mb-2 text-justify">
             Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
@@ -79,14 +79,16 @@ const Practical_Battery = () => {
             batterie, la roue sera sans énergie&nbsp;et… ce sera la chute&nbsp;!
           </p>
           <div className="blueBlock mb-4">
-            <h4 className="mb-0 mt-0">
+            <b className="mb-0 mt-0">
               L&apos;autonomie n&apos;est pas une donnée absolue. <br />
-            </h4>
-            Elle dépend de nombreux paramètres&nbsp;:{' '}
-            <i>
-              poids du wheeler, accélérations, vitesse, pression et type de
-              pneu, vent, température ambiante, profil et nature du trajet…
-            </i>
+            </b>
+            <p>
+              Elle dépend de nombreux paramètres&nbsp;:{' '}
+              <i>
+                poids du wheeler, accélérations, vitesse, pression et type de
+                pneu, vent, température ambiante, profil et nature du trajet…
+              </i>
+            </p>
           </div>
           {/*---------------------------------------*/}
           {/*---------------------------------------*/}
@@ -139,13 +141,15 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
-            🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
-            151.2v…) et une tension min de fonctionnement. <br />
-            🔸 Le BMS (Battery Management System) mesure en temps réel la
-            tension qui diminue au fur et à mesure de l&apos;utilisation.
-            <br />
-            🔸 C&apos;est un calcul qui convertit cette tension instantanée en
-            un pourcentage approximatif (de 100% à 0%). <br />
+            <p>
+              🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
+              151.2v…) et une tension min de fonctionnement. <br />
+              🔸 Le BMS (Battery Management System) mesure en temps réel la
+              tension qui diminue au fur et à mesure de l&apos;utilisation.
+              <br />
+              🔸 C&apos;est un calcul qui convertit cette tension instantanée en
+              un pourcentage approximatif (de 100% à 0%). <br />
+            </p>
           </div>
           {/*---------------------------------------*/}
           {/*---------------------------------------*/}

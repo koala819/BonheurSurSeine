@@ -26,12 +26,12 @@ export function Top() {
   const menuItems = [
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
-    { name: 'Codes Promo', path: '/codepromo' },
+    { name: 'Codes Promo', path: '/code-promo' },
     { name: 'Apprendre', path: '/apprendre-gyroroue' },
     { name: 'Choisir', path: '/choisir-gyroroue' },
     { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
     { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
-    { name: 'Remerciements', path: '/merci' },
+    { name: 'Remerciements', path: '/mille-merci' },
   ]
 
   return (

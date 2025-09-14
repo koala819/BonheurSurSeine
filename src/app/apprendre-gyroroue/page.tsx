@@ -17,23 +17,25 @@ const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <h1>Apprendre</h1>
-      <div className="space-y-2">
-        <div className="mt-0 mb-4 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
-          <aside className="md:w-1/2 mt-0 mb-0">
-            <p className="mt-0 mb-0">
-              Tu t&apos;intéresses à la gyroroue ou tu envisages
-              d&apos;apprendre&nbsp;? Tu es motivé&nbsp;? <br />
-              Bravo&nbsp;! Cette page t&apos;est entièrement dédiée.
-              <br />
-            </p>
-          </aside>
-          <aside className="md:w-1/2 blueBlock mt-0 mb-0">
-            <h4 className="text-center mt-0 mb-0">
-              ❤️ &laquo;&nbsp;Et c&apos;est parti&nbsp;!&nbsp;&raquo;
-            </h4>
-          </aside>
-        </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-0 items-center">
+        {/* Texte gauche */}
+        <div>
+          <p>
+            Tu t&apos;intéresses à la gyroroue ou tu envisages
+            d&apos;apprendre&nbsp;? Tu&nbsp;es motivé&nbsp;? <br />
+            Bravo&nbsp;! Cette page t&apos;est entièrement dédiée.
+          </p>
+        </div>
+        {/* Bloc bleu à droite */}
+        <div className="blueBlock mt-0 mb-0">
+          <h4 className="text-center mt-0 mb-0">
+            ❤️ &laquo;&nbsp;Et c&apos;est parti&nbsp;!&nbsp;&raquo;
+          </h4>
+        </div>
+      </div>
+
+      <div className="space-y-2">
         <div className="pinkBlock_Formation font-medium">
           <h4 className="text-justify mt-0 mb-3 text-base md:text-lg">
             Si tu veux apprendre la roue électrique mais que tu as peur de te

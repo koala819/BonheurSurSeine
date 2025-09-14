@@ -189,7 +189,7 @@ const Practical_Dico = () => {
       >
         <AccordionItem
           key="1"
-          aria-label="Le p'tit Dico du bonheur"
+          aria-label="Le p'tit Dico du Bonheur"
           title={<h3>📖 Le p&apos;tit Dico du Bonheur</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >

@@ -49,7 +49,7 @@ const Maintenance = () => {
       >
         <AccordionItem
           key="1"
-          aria-label="L'entretien'"
+          aria-label="Bien entretenir sa gyroroue"
           title={<h3>🛠 L&apos;entretien</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
@@ -140,16 +140,18 @@ const Maintenance = () => {
             />
           </div>
           {/*------------------------------------*/}
-          <div className="mt-4 brownBlockentretien text-justify">
-            <b className="text-lg">
+          <div className="mt-4 brownBlockentretien">
+            <b className="mb-2">
               💦 L&apos;eau s&apos;infiltre facilement partout.
               <br />
             </b>
-            ⚠️ L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
-            <br />
-            Les conséquences peuvent être{' '}
-            <strong>immédiates ou à plus long terme</strong> (rouille,
-            surchauffe, court-circuit et risque d&apos;incendie).
+            <p>
+              L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
+              <br />
+              ⚠️ Les conséquences peuvent être{' '}
+              <strong>immédiates ou à plus long terme</strong> (rouille,
+              surchauffe, court-circuit et risque d&apos;incendie).
+            </p>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en mars 2025
