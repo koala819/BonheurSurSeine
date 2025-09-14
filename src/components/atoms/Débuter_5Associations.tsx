@@ -167,7 +167,7 @@ const Associations = () => {
 
               <aside className="lg:w-5/12 pt-8 lg:pt-0 lg:pl-8">
                 <p>Autant d&apos;opportunités de : </p>
-                <ul className="compactlist mt-1 mb-4">
+                <ul className="compactlist2 mt-1 mb-4">
                   <li>
                     <strong className="text-blue-800 dark:text-blue-400">
                       Rencontrer

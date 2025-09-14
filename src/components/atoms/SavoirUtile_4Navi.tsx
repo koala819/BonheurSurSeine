@@ -130,13 +130,13 @@ const Practical_Vrac = () => {
 
             {/* Section avec 2 capsules de même hauteur */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              {/* Capsule CIRCULATION */}
+              {/* Capsule cartographie */}
               <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
                 <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                   🗺️ Site de cartographie
                 </h4>
-                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
-                  <li className="text-justify text-sm">
+                <ul className="list-disc space-y-2 list-outside ml-6 text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-sm">
                     <Link
                       href="https://www.cyclosm.org/"
                       target="_blank"
@@ -145,7 +145,7 @@ const Practical_Vrac = () => {
                       CyclOSM
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://fr.eurovelo.com/#routes-and-countries"
                       target="_blank"
@@ -154,7 +154,7 @@ const Practical_Vrac = () => {
                       Eurovelo
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://gmap2xxx.sdesimeur.com/"
                       target="_blank"
@@ -164,7 +164,7 @@ const Practical_Vrac = () => {
                     </Link>{' '}
                     (pour avoir des fichiers GPX)
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.opencyclemap.org/"
                       target="_blank"
@@ -173,7 +173,7 @@ const Practical_Vrac = () => {
                       OpenCycle Map
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.af3v.org/les-voies-vertes/carte-du-schema-national-des-veloroutes-et-voies-vertes/"
                       target="_blank"
@@ -181,17 +181,17 @@ const Practical_Vrac = () => {
                     >
                       Voies vertes
                     </Link>{' '}
-                    (cartographiées par l&apos;AF3V)
+                    (par l&apos;AF3V)
                   </li>
                 </ul>
               </div>
               {/* Capsule ÉQUIPEMENTS */}
               <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
-                <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
+                <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                   📲 Applis de navigation
                 </h4>
-                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
-                  <li className="text-justify text-sm">
+                <ul className="list-disc space-y-2 list-outide ml-6 text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-sm">
                     <Link
                       href="https://geovelo.app/fr/"
                       target="_blank"
@@ -200,7 +200,7 @@ const Practical_Vrac = () => {
                       Géovélo
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.komoot.com/fr-fr/devices"
                       target="_blank"
@@ -209,7 +209,7 @@ const Practical_Vrac = () => {
                       Komoot
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://fr.wikiloc.com/outdoor-navigation-app?ref=home"
                       target="_blank"
@@ -218,7 +218,7 @@ const Practical_Vrac = () => {
                       Wikiloc
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     Certaines applications dédiées à la roue (Darknessboot{' '}
                     <Link
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"

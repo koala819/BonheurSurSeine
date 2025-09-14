@@ -203,12 +203,14 @@ const CommonSense = () => {
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
           <div className="TealBlockbonsens">
-            <h4>
+            <h4 className="mb-0">
               💟 Et n&apos;oublie pas : bon comportement = bonne image = bonne
               route&nbsp;!
             </h4>
-            On se rend compte que quelque chose est précieux au moment où on le
-            perd.
+            <p>
+              On se rend compte que quelque chose est précieux au moment où on
+              le perd.
+            </p>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en juin 2024

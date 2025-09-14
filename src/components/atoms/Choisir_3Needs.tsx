@@ -36,11 +36,13 @@ const Needs = () => {
               ⚠️ &laquo;&nbsp;La roue parfaite n&apos;existe
               pas&nbsp;!&nbsp;&raquo;
             </h3>
-            Un modèle pourra, dans une situation donnée, être idéal pour une
-            personne, mais inadapté pour une autre.
-            <br />
-            C&apos;est comme pour le vélo, tout le monde n&apos;a pas besoin
-            d&apos;un VTT ou d&apos;un vélo de course&nbsp;! 😉
+            <p>
+              Un modèle pourra, dans une situation donnée, être idéal pour une
+              personne, mais inadapté pour une autre.
+              <br />
+              C&apos;est comme pour le vélo, tout le monde n&apos;a pas besoin
+              d&apos;un VTT ou d&apos;un vélo de course&nbsp;! 😉
+            </p>
           </div>
         </aside>
         {/* Image sur 1 colonnes */}
@@ -57,14 +59,14 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       {/*--                 PARAGRAPHE               --*/}
       {/*----------------------------------------------*/}
-      <div className="space-y-0">
-        <p className="text-justify mb-4">
+      <div>
+        <p className="text-justify mb-2">
           D&apos;expérience, chaque modèle excelle pour un usage précis, avec
           ses forces, ses qualités et ses faiblesses. Et avec la diversité des
           modèles et des fabricants, de nombreux wheelers hésitent avant leur
           achat.
         </p>
-        <p className="text-justify">
+        <p className="text-justify mb-2">
           Pour ne pas se tromper et faire le bon choix, il est essentiel de{' '}
           <strong className="text-emerald-600">
             définir clairement son usage
@@ -75,13 +77,12 @@ const Needs = () => {
           faut aussi, bien évidemment, tenir compte de son budget (
           <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
         </p>
-
         <p className="text-justify">
           Voici les{' '}
           <strong className="text-emerald-600"> principaux critères</strong> à
           prendre en compte pour faire son choix&nbsp;:
         </p>
-        <ul className="compactlist">
+        <ul className="compactlist2">
           <li className="text-justify">
             Le <strong>poids</strong>.
           </li>

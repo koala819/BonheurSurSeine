@@ -105,28 +105,29 @@ const Begin_premier_deballage = () => {
             Lorsque que tu ouvres le carton, il est normal que la roue ne
             s&apos;équilibre pas lorsque tu l&apos;allumes.
           </p>
-          <div className="blueBlock mb-2 text-justify">
+          <div className="blueBlock mb-2 text-justify space-y-0">
             <h4 className="mt-0 mb-1">
               🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?
             </h4>
-            En usine, les roues sont verrouillées dans ce mode afin
-            d&apos;éviter qu&apos;elles ne s&apos;allument de manière inopinée
-            durant le transport, ce qui pourrait causer de sérieux dégâts.
-            <br />
-            Nb : Le mode transport est réversible.
+            <p>
+              En usine, les roues sont verrouillées dans ce mode afin
+              d&apos;éviter qu&apos;elles ne s&apos;allument de manière inopinée
+              durant le transport, ce qui pourrait causer de sérieux dégâts.
+              <br />
+              Nb : Le mode transport est réversible.
+            </p>
           </div>
-          <h5 className="mt-2 mb-2">
-            &nbsp;&nbsp;🔒{' '}
-            <b>Voici comment faire pour sortir du mode transport</b> (les étapes
-            varient en fonction du fabricant)&nbsp;:
-          </h5>
-          <ul className="compactlist mt-0 mb-6 leading-tight">
-            <li className="text-justify">
+          <p className="ml-2 mt-3 mb-0">
+            🔒 Voici comment faire <b>pour sortir du mode transport</b> (les
+            étapes varient en fonction du fabricant)&nbsp;:
+          </p>
+          <ul className="compactlist2 ml-3 mt-0 mb-6 leading-tight">
+            <li className="">
               Généralement, <strong>le plus simple</strong> est de{' '}
               <strong>brancher le chargeur</strong> et le connecter à la roue.
             </li>
-            <li className="text-justify">
+            <li className="">
               Chez Begode, la manipulation est parfaitement décrite{' '}
               <Link
                 href="https://www.youtube.com/watch?v=8HJws4b_Dtw"
@@ -137,7 +138,7 @@ const Begin_premier_deballage = () => {
               </Link>{' '}
               des WheelersPro.
             </li>
-            <li className="text-justify">
+            <li className="">
               Chez LeaperKim, la manipulation est visible{' '}
               <Link
                 href="https://youtu.be/K2Y33w_8SsE"
@@ -148,9 +149,9 @@ const Begin_premier_deballage = () => {
               </Link>
               .
             </li>
-            <li className="text-justify">
-              Les applications mobiles permettent de désactiver/activer le mode
-              transport.
+            <li className="">
+              Les applications mobiles permettent aussi de désactiver/activer le
+              mode transport.
             </li>
           </ul>
 
@@ -159,8 +160,6 @@ const Begin_premier_deballage = () => {
           <p className="text-justify mb-0">
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.
-            <br />
-            Voici les principales applications&nbsp;:
           </p>
           <div className="mt-0 ml-3 overflow-x-auto">
             <p className="mt-2">

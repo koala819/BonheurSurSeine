@@ -115,7 +115,7 @@ const HighwayCode = () => {
               <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                 🚴‍♂️ CIRCULATION
               </h4>
-              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+              <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-justify text-sm">
                   Interdiction de circuler sur les trottoirs (
                   <Link
@@ -212,7 +212,7 @@ const HighwayCode = () => {
               <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
                 🛠️ ÉQUIPEMENT
               </h4>
-              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+              <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-justify text-sm">
                   Vitesse maximale de 25 km/h par construction ou par bridage (
                   <Link

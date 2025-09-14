@@ -57,26 +57,28 @@ const Maintenance = () => {
           {/*--------------------------------------------*/}
           {/*--------------------------------------------*/}
           <div className="mt-0 mb-4">
-            <p className="mt-0 mb-1">
+            <p className="mt-0 mb-3">
               <strong className="text-blue-800 dark:text-blue-200">
                 Compacte, fun
               </strong>{' '}
-              et électrique, il n&apos;existe pas plus{' '}
+              et électrique, la gyroroue est sans aucun doute le moyen de
+              transport le{' '}
               <strong className="text-blue-800 dark:text-blue-200">
                 pratique, efficace et polyvalent
               </strong>
               . La roue électrique permet de se déplacer librement et facilement
               en ville, à la campagne ou en randonnée.
+            </p>
+            <p className="mt-0 mb-1">
+              Je le répète très souvent : c&apos;est à mes yeux le meilleur
+              moyen de transport personnel&nbsp;!
               <br />
-              Je le répète très souvent : il s&apos;agit du meilleur moyen de
-              transport personnel&nbsp;!
-              <br />
-              Ce mode de conduite intuitif procure{' '}
+              Son mode de conduite intuitif procure{' '}
               <strong className="text-blue-800 dark:text-blue-200">
-                des sensations de glisse incomparables
+                des sensations de glisse uniques et incomparables
               </strong>
-              , alliant équilibre et liberté, proche du ski ou du snowboard…
-              mais sur la terre ferme.
+              , mêlant équilibre et liberté, proche de celles du ski ou du
+              snowboard… mais sur la terre ferme.
             </p>
           </div>
 
@@ -84,13 +86,20 @@ const Maintenance = () => {
           {/*--------------------------------------------*/}
           <div className="blueBlock mb-4">
             <b>
-              ✳️ La gyroroue n&apos;est pas un véhicule comme les autres… <br />
+              ✳️ La gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
+              <br />
             </b>
-            Pour en profiter, il faut passer{' '}
-            <strong className="text-blue-800 dark:text-blue-200">
-              par l&apos;apprentissage
-            </strong>
-            . La bonne nouvelle&nbsp;: 😊 tout le monde peut y arriver&nbsp;!
+            <p>
+              Pour en profiter, un petit temps d&apos;
+              <strong className="text-blue-800 dark:text-blue-200">
+                apprentissage
+              </strong>{' '}
+              est{' '}
+              <strong className="text-blue-800 dark:text-blue-200">
+                nécessaire
+              </strong>
+              . La bonne nouvelle&nbsp;: 😊 tout le monde peut y arriver&nbsp;!
+            </p>
           </div>
 
           {/*------------------------------------*/}
@@ -100,10 +109,10 @@ const Maintenance = () => {
               🚀 Comment ça fonctionne&nbsp;?
             </h4>
             <p className="mt-0 mb-1">
-              Son fonctionnement est à la fois simple et unique&nbsp;! Dépourvue
-              de guidon et de freins mécaniques, la gyroroue ne contient que
+              Le principe est à la fois simple et unique&nbsp;! Sans guidon ni
+              freins mécaniques, la gyroroue ne garde que
               l&apos;essentiel&nbsp;: une roue, un moteur, une batterie et
-              quelques capteurs électronique.
+              quelques capteurs électroniques.
               <br />
               Elle{' '}
               <strong className="text-blue-800 dark:text-blue-200">
@@ -111,18 +120,43 @@ const Maintenance = () => {
               </strong>
               , par transfert de poids et anticipation.
             </p>
-            <ul className="compactlist mb-0">
-              <li className="">
-                <b>Avancer</b> → mettre son poid sur l&apos;avant.
+            <ul className="list-none p-0 mb-6">
+              <li className="flex items-start mb-0 ">
+                {/* puce personnalisée alignée en haut */}
+                <span className="mr-2 ml-2" aria-hidden="true">
+                  ⏩
+                </span>
+                <div>
+                  <p>
+                    <b>Avancer</b> → mettre légèrement son poids sur
+                    l&apos;avant.
+                  </p>
+                </div>
               </li>
-              <li className="">
-                <b>Reculer</b> et <b>Freiner</b> → mettre son poid sur
-                l&apos;arrière.
+              <li className="flex items-start mb-0">
+                {/* puce personnalisée alignée en haut */}
+                <span className="mr-2 ml-2" aria-hidden="true">
+                  ⏹️
+                </span>
+                <div>
+                  <p>
+                    <b>Freiner</b>/<b>Reculer</b> → mettre son poids sur
+                    l&apos;arrière.
+                  </p>
+                </div>
               </li>
-              <li className="">
-                Aller à <b>gauche ou droite</b> → transférer son poids sur un
-                côté, comme en vélo ou en ski. Elle tournera et suivra
-                naturellement les mouvements de ton corps.
+              <li className="flex items-start mb-0">
+                {/* puce personnalisée alignée en haut */}
+                <span className="mr-2 ml-2" aria-hidden="true">
+                  ↔️
+                </span>
+                <div>
+                  <p>
+                    Tourner à <b>gauche/droite</b> → mettre son poids sur un
+                    côté, tourner les épaules (comme en ski)&nbsp;: la roue suit
+                    naturellement les mouvements du corps.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
@@ -149,43 +183,69 @@ const Maintenance = () => {
             <aside className="md:w-2/5 lg:w-1/2 flex text-justify place-items-start">
               <span className="text-justify text-base">
                 <div className="mt-4 mb-0">
+                  {/*-------------------------------------------------------*/}
                   <h4 className="text-left mt-0 mb-0">
                     🧠 Pourquoi ça tient debout ?
                   </h4>
-                  <ul className="compactlist mb-6">
+                  <ul className="compactlist2 ml-2 mb-6">
                     <li className="">
-                      L&apos;électronique gère la stabilité des pédales en
-                      permanence.
+                      L&apos;électronique ajuste en continu la stabilité des
+                      pédales.
                     </li>
                     <li className="">
-                      En avançant, le mouvement circulaire produit{' '}
+                      En roulant, le mouvement circulaire crée un{' '}
                       <Link
                         href="https://youtu.be/RSPUdAKqAgY"
                         target="_blank"
                         className="link-style font-bold text-blue-800 dark:text-blue-200"
                       >
-                        l&apos;effet gyroscope&nbsp;(📹)
+                        effet gyroscopique&nbsp;📹
                       </Link>{' '}
-                      et assure l&apos;équilibre.
+                      (<i>comme une toupie qui tourne</i>) et assure
+                      l&apos;équilibre.
                     </li>
                     <li className="">
-                      Pour la direction gauche/droite, c&apos;est au pilotage
-                      d&apos;agir (comme en vélo ou en ski).
+                      Pour la direction (gauche/droite), c&apos;est le pilote
+                      qui agit, comme en vélo ou en ski.
                     </li>
                   </ul>
-                  <h4 className="mt-2 mb-0">🚫 Non aux idées reçues&nbsp;:</h4>
-                  <ul className="compactlist mb-6">
-                    <li className="">C&apos;est trop compliqué.</li>
-                    <li className="">C&apos;est trop dangereux.</li>
+                  {/*-------------------------------------------------------*/}
+                  <h4 className="mt-2 mb-0">🚫 Idées reçues&nbsp;:</h4>
+                  <ul className="list-none p-0 mb-6">
+                    <li className="flex items-start mb-3 ">
+                      {/* puce personnalisée alignée en haut */}
+                      <span className="mr-2 ml-4" aria-hidden="true">
+                        •
+                      </span>
+                      <div>
+                        <p>❌&nbsp;«&nbsp;C&apos;est trop compliqué&nbsp;»</p>
+                        <p>
+                          ✅&nbsp;En réalité, quelques minutes suffisent pour
+                          trouver l&apos;équilibre.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start mb-3">
+                      {/* puce personnalisée alignée en haut */}
+                      <span className="mr-2 ml-4" aria-hidden="true">
+                        •
+                      </span>
+                      <div>
+                        <p>❌«&nbsp;C&apos;est trop dangereux.&nbsp;»</p>
+                        <p>
+                          ✅&nbsp;Comme pour le vélo, avec un peu de pratique et
+                          un équipement adapté, c&apos;est sûr et maîtrisable.
+                        </p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </span>
             </aside>
           </div>
           <p>
-            Pour le reste, tout savoir (
-            <i>astuce, code de la route, assurance</i>) et éviter les erreurs
-            des débutants,{' '}
+            ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et
+            pour éviter les erreurs des débutants,{' '}
             <Link
               href="/debuter-gyroroue"
               className="link-style font-bold text-blue-800 dark:text-blue-200"

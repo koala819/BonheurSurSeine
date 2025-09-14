@@ -76,7 +76,7 @@ const Maintenance = () => {
           </div>
           {/*------------------------------------*/}
           <h4 className="mt-4 mb-2">À retenir&nbsp;:</h4>
-          <ul className="compactlist mb-6">
+          <ul className="compactlist2 mb-6">
             <li className="text-justify">
               Il est important de{' '}
               <strong className="text-amber-900 dark:text-brown-200">
@@ -116,7 +116,7 @@ const Maintenance = () => {
           </ul>
           {/*------------------------------------*/}
           <h4 className="mt-4 mb-2">Prends soin de la batterie&nbsp;:</h4>
-          <ul className="compactlist mb-2">
+          <ul className="compactlist2 mb-2">
             <li className="text-justify">
               Évite de l&apos;exposer à des températures extrêmes (froid ou
               chaud).

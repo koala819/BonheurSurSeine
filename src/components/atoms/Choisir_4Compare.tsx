@@ -19,18 +19,20 @@ const Compare = () => {
     >
       <h2>Comparer</h2>
 
-      <div className="md:ml-6 blueBlock">
-        <h3 className="mb-4">
+      <div className="blueBlock">
+        <h3 className="mb-2">
           📢 &laquo;&nbsp;Choisir, c&apos;est aussi renoncer…&nbsp;&raquo;
         </h3>
-        Pour faire un choix éclairé, il faut peser les avantages et les
-        inconvénients, et tenir compte de ses contraintes.
+        <p>
+          Pour faire un choix éclairé, il faut peser les avantages et les
+          inconvénients, et tenir compte de ses contraintes.
+        </p>
       </div>
       {/*---------------------CONSTATS--------------------------- */}
       <div className="pt-4">
         <h4>➡️ Pas si simple</h4>
         <ul className="list-disc pl-12 space-y-1">
-          <li className="text-justify">
+          <li>
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques{' '}
             <strong className="text-brown-500">
@@ -38,11 +40,11 @@ const Compare = () => {
             </strong>{' '}
             et renouvellent constamment leur gamme.
           </li>
-          <li className="text-justify">
+          <li>
             Les fabricants et les magasins affichent parfois des spécifications
             différentes (valeurs, formats ou unités de mesure).
           </li>
-          <li className="text-justify">
+          <li>
             Les chiffres sont parfois trompeurs, et{' '}
             <strong className="text-brown-500">
               les autonomies annoncées sont souvent surévaluées
@@ -52,7 +54,7 @@ const Compare = () => {
             accélérations, vitesse, pression et type de pneu, vent, température
             ambiante, profil et nature du trajet…).
           </li>
-          <li className="text-justify">
+          <li>
             Certains modèles changent légèrement avec le temps (esthétique ou
             technique) selon le lot de production (on appelle ça les
             <span className="italic ml-1">batchs</span>).
@@ -68,7 +70,7 @@ const Compare = () => {
           </span>
         </h4>
         <ul className="list-disc pl-12 space-y-1">
-          <li className="text-justify">
+          <li>
             La{' '}
             <strong>
               <span className="text-fuchsia-700 dark:text-fuchsia-400">
@@ -89,7 +91,7 @@ const Compare = () => {
             </strong>{' '}
             de chaque roue testée.
           </li>
-          <li className="text-justify">
+          <li>
             Dans{' '}
             <strong>
               <span className="text-fuchsia-700 dark:text-fuchsia-400">
@@ -130,7 +132,7 @@ const Compare = () => {
 
           <aside className="md:w-4/5">
             <ul className="list-disc pl-6 space-y-2 text-justify">
-              <li className="text-justify">
+              <li>
                 Ce <strong>projet</strong> mené par{' '}
                 <Link
                   href="https://www.instagram.com/rafa.pgarcia"
@@ -150,7 +152,7 @@ const Compare = () => {
                 et moi participons) permet de consulter l&apos;ensemble des
                 modèles du marché dans un format standardisé.
               </li>
-              <li className="text-justify">
+              <li>
                 C&apos;est actuellement <strong>le meilleur outil</strong> pour
                 faire des comparaisons. 👉&nbsp;
                 <Link

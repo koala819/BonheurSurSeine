@@ -70,15 +70,15 @@ const Apprendre = () => {
                     </strong>
                     et facilitera ton apprentissage. <br />
                     <br />
-                    Pas de miracles, mais 2 mots&nbsp;:{' '}
+                    👉 Avec un peu de{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
                       méthode
                     </strong>{' '}
-                    et{' '}
+                    et de{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
                       persévérance
                     </strong>
-                    &nbsp;!
+                    , la gyroroue devient intuitive et sécurisante.
                     <br />
                     Tu vas rapidement pouvoir découvrir la roue électrique,{' '}
                     <strong className="text-blue-800 dark:text-blue-200">
@@ -216,16 +216,17 @@ const Apprendre = () => {
                     <br />
                     😁
                   </h4>
-                  Alors regarde&nbsp;! {/*&Ccedil;a,*/}C&apos;était moi en 2018.{' '}
+                  Alors regarde&nbsp;! {/*&Ccedil;a,*/}C&apos;était en 2018.{' '}
                   <br />
                   Et moi aussi j&apos;ai galéré...
                   <br />
                   <br />
-                  Comme pour le vélo, l&apos;apprentissage demande{' '}
+                  Comme pour le vélo, l&apos;apprentissage demande juste un peu
+                  de{' '}
                   <strong className="text-blue-800 dark:text-blue-200">
-                    de la méthode
+                    méthode
                   </strong>{' '}
-                  et juste un peu de{' '}
+                  et de{' '}
                   <strong className="text-blue-800 dark:text-blue-200">
                     persévérance
                   </strong>

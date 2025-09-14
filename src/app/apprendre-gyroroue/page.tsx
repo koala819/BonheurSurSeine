@@ -21,7 +21,7 @@ const Page = () => {
         <div className="mt-0 mb-4 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 mt-0 mb-0">
             <p className="mt-0 mb-0">
-              Tu t&apos;intéresse à la gyroroue ou tu envisages
+              Tu t&apos;intéresses à la gyroroue ou tu envisages
               d&apos;apprendre&nbsp;? Tu es motivé&nbsp;? <br />
               Bravo&nbsp;! Cette page t&apos;est entièrement dédiée.
               <br />

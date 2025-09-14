@@ -77,7 +77,7 @@ const Assurance = () => {
                 </span>
               </div>
             </aside>
-            <aside className="md:w-2/5 text-center text-xs mt-1 mb-1">
+            <aside className="md:w-2/5 text-center text-xs mt-3 mb-1">
               <Image
                 src={Image_assurance}
                 alt="Image_assurance"

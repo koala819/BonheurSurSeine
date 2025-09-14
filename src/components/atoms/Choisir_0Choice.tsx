@@ -14,9 +14,9 @@ const Choice = () => {
             n&apos;être attiré <strong>que par les nouvelles roues</strong> qui
             arrivent sur le marché.
             <br />
-            <br /> D&apos;anciens modèles, sortis il y a déjà plusieurs années,
-            constituent encore aujourd&apos;hui des choix tout à fait
-            pertinents.
+            <br /> D&apos;<b>anciens modèles</b>, sortis il y a déjà plusieurs
+            années, constituent encore aujourd&apos;hui des choix tout à fait{' '}
+            <b>pertinents</b>.
           </p>
           <p className="text-justify">
             Le choix se fait en fonction de ses goûts, de son{' '}
@@ -26,18 +26,19 @@ const Choice = () => {
           </p>
         </aside>
         <aside className="md:w-1/2 blueBlock">
-          <h3 className="mb-4">
+          <h3 className="mb-2">
             📢 &laquo;&nbsp;La meilleure roue, c&apos;est celle qu&apos;on a
             sous les pieds&nbsp;!&nbsp;&raquo;
           </h3>
-          {'  '}
-          😉 Pas besoin d&apos;avoir la dernière roue pour ressentir le{' '}
-          <strong>bonheur de rouler</strong>. <br />
-          {'  '}⚠️ L&apos;important est d&apos;avoir une{' '}
-          <strong className="text-blue-800 dark:text-blue-300">
-            roue adaptée à son usage
-          </strong>
-          .
+          <p>
+            😉 Pas besoin d&apos;avoir la dernière roue pour ressentir le{' '}
+            <strong>bonheur de rouler</strong>. <br />
+            ⚠️ L&apos;important est d&apos;avoir une{' '}
+            <strong className="text-blue-800 dark:text-blue-300">
+              roue adaptée à son usage
+            </strong>
+            .
+          </p>
         </aside>
       </div>
       <p>
