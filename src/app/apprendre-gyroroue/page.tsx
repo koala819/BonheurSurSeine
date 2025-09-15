@@ -35,34 +35,34 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="space-y-2">
-        <div className="pinkBlock_Formation font-medium">
-          <h4 className="text-justify mt-0 mb-3 text-base md:text-lg">
-            Si tu veux apprendre la roue électrique mais que tu as peur de te
-            lancer, sache que je propose des{' '}
-            <strong className="text-rose-800 dark:text-white">
-              sessions de formation
-            </strong>{' '}
-            théorique <u>et</u> pratique pour t&apos;accompagner et
-            dédramatiser.&nbsp;😊
-            <br />
-            En seulement 1h🕐, tu auras un autre regard sur
-            l&apos;objet.&nbsp;😎
-          </h4>
-          <h4 className="mt-0 mb-0">
-            ➡️ Pour <strong>prendre rendez-vous</strong>&nbsp;:{' '}
-            <Link
-              href={'mailto:bonheursurseine@gmail.com'}
-              className="underline text-rose-800 dark:text-black"
-            >
-              bonheursurseine@gmail.com
-            </Link>
-          </h4>
-        </div>
-      </div>
       <Cestquoi />
+
+      <div className="pinkBlock_Formation">
+        <p className="font-semibold mt-0 mb-3 text-base md:text-lg">
+          Si tu veux apprendre la roue électrique mais que tu as peur de te
+          lancer, sache que je propose des{' '}
+          <strong className="text-rose-800 dark:text-white">
+            sessions de formation
+          </strong>{' '}
+          théorique <u>et</u> pratique pour t&apos;accompagner et
+          dédramatiser.&nbsp;😊
+          <br />
+          En seulement 1h🕐, tu auras un autre regard sur
+          l&apos;objet.&nbsp;😎👍
+        </p>
+        <h4 className="mt-0 mb-0">
+          ➡️ <strong>Demande un rendez-vous</strong>&nbsp;:{' '}
+          <Link
+            href={'mailto:bonheursurseine@gmail.com'}
+            className="underline text-rose-800 dark:text-black"
+          >
+            bonheursurseine@gmail.com
+          </Link>
+        </h4>
+      </div>
+
       <Apprendre />
-      <div className="yellowBlock">
+      <div className="blueBlock">
         <h3>
           🥰 Et si tu croises un autre passionné,{' '}
           <strong>n&apos;oublie pas de le saluer&nbsp;!</strong>

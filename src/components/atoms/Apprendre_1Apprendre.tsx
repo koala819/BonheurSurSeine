@@ -12,9 +12,9 @@ const Apprendre = () => {
   return (
     <section
       id="apprendre"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-72 my-8 space-y-6 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
     >
-      <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-2xl shadow-lg">
+      <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg shadow-lg mb-10">
         <Image
           src={apprendre}
           alt="Apprendre la gyroroue"
@@ -30,16 +30,18 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              INTRO + VIDEO                 */}
       {/*--------------------------------------------*/}
-      <div className="flex flex-col sm:flex-row mt-0 mb-4 gap-4">
-        <aside className="sm:w-3/5 md:w-1/2 lg:w-1/2 place-content-center">
-          <h3 className="mb-3 font-bold ">🎓 Comment faire&nbsp;?</h3>
-          <p className="mt-0 mb-1">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-4 items-center px-6">
+        {/* ------------------ Comment ça marche ------------------ */}
+        <div className="place-content-center mb-4">
+          <h3 className="my-3 font-bold">🎓 Comment faire&nbsp;?</h3>
+          <p className="mb-3">
             Tu ne sais pas par où commencer&nbsp;?{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               Cette vidéo est faite pour toi{' '}
             </strong>
-            et facilitera ton apprentissage. <br />
-            <br />
+            et facilitera ton apprentissage.{' '}
+          </p>
+          <p className="">
             👉 Avec un peu de{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               méthode
@@ -60,22 +62,22 @@ const Apprendre = () => {
             </strong>
             .
           </p>
-        </aside>
-        <aside className="sm:w-2/5 md:w-1/2 lg:w-1/2 flex flex-col space-y-0 place-content-center mt-2 justify-center">
-          <div className="w-full aspect-video">
+        </div>
+
+        {/* ------------------ Vidéo ------------------ */}
+        <div className="place-content-center place-items-center order-first lg:order-last">
+          <div className="w-full sm:w-4/5 md:w-3/4 lg:w-full aspect-video rounded-xl shadow-md overflow-hidden">
             <iframe
-              className="w-full h-full rounded-xl shadow-md"
-              width="560"
-              height="315"
+              className="w-full h-full"
               src="https://www.youtube.com/embed/II3MQNy7b0I?si=g5gJhImayjyiaOZ7"
               title="Apprendre la gyroroue (méthode simple)"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
-          <p className="mt-0 mb-0 text-xs place-items-center items-center text-center italic text-gray-600 dark:text-gray-400">
+          <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
             Apprendre la gyroroue (méthode simple)
           </p>
-        </aside>
+        </div>
       </div>
       {/*--------------------------------------------*/}
       {/*              BLOC CONSEIL                  */}
@@ -83,7 +85,7 @@ const Apprendre = () => {
       <div className="my-4">
         <div className="blueBlock my-0 p-4">
           <h4 className="mt-0 mb-2 text-xl font-bold">
-            💡 7 conseils à retenir :
+            💡 7 conseils à retenir&nbsp;:
           </h4>
           <div className="mt-0 mb-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch">
             {/* -- 6 cartes conseils (map) -- */}
@@ -158,7 +160,9 @@ const Apprendre = () => {
       {/*              BLOC PIEGES                   */}
       {/*--------------------------------------------*/}
       <div className="yellowBlock mb-4">
-        <h4 className="mb-2">😱 5 pièges à éviter&nbsp;:</h4>
+        <h4 className="mt-0 mb-2 text-xl font-bold">
+          😱 5 pièges à éviter&nbsp;:
+        </h4>
         🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
         <br />
         🔸 <b>Regarder le sol</b> et ses pieds (fixe l&apos;horizon devant toi

@@ -11,10 +11,10 @@ const Maintenance = () => {
   return (
     <section
       id="cestquoi"
-      className="scroll-mt-80 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-52 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
     >
       {/*<h2 className="mb-8">C&apos;est quoi une gyroroue&nbsp;?</h2>*/}
-      <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-2xl shadow-lg">
+      <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg shadow-lg">
         <Image
           src={gyroroues}
           alt="Découvrir la gyroroue"
@@ -72,7 +72,7 @@ const Maintenance = () => {
       </div>
 
       {/*---------------------------------------------------------*/}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6">
         {/* ------------------ Comment ça marche ------------------ */}
         <div className="space-y-2 mt-4">
           <h3 className="font-bold mb-1">🚀 Comment ça fonctionne&nbsp;?</h3>
@@ -171,15 +171,19 @@ const Maintenance = () => {
           <h3 className="font-bold mb-1">🚫 Idées reçues</h3>
           <div className="space-y-1">
             <div className="p-2 bg-gray-100 dark:bg-gray-600 rounded-lg">
-              <p>❌ «&nbsp;C&apos;est trop compliqué&nbsp;»</p>
-              <p>
+              <p className="text-sm">
+                ❌ «&nbsp;C&apos;est trop compliqué&nbsp;»
+              </p>
+              <p className="text-sm">
                 ✅ En réalité, quelques minutes suffisent pour trouver
                 l&apos;équilibre.
               </p>
             </div>
             <div className="p-2 bg-gray-100 dark:bg-gray-600 rounded-lg">
-              <p>❌ «&nbsp;C&apos;est trop dangereux&nbsp;»</p>
-              <p>
+              <p className="text-sm">
+                ❌ «&nbsp;C&apos;est trop dangereux&nbsp;»
+              </p>
+              <p className="text-sm">
                 ✅ Comme pour le vélo, avec un peu de pratique et un bon
                 équipement, c&apos;est sûr et maîtrisable.
               </p>
