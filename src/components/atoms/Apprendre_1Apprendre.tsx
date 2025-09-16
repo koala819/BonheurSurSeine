@@ -144,12 +144,12 @@ const Apprendre = () => {
                   href="https://youtube.com/playlist?list=PL9xPR9BbyK1dFDQkX_fLsLUwB8OEXw6SE&si=lt4Mjl6Dq-q9sqEk"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-600 dark:text-blue-300 hover:underline"
                 >
                   vidéos d&apos;Hirsute (Damien Gaumet)
                 </a>{' '}
-                sont idéales pour progresser (qu&apos;on soit <b>débutant</b> ou{' '}
-                <b>confirmé</b>
+                sont idéales pour progresser (absolument génial qu&apos;on soit{' '}
+                <b>débutant</b> ou <b>confirmé</b>
                 ).
               </p>
             </div>
@@ -159,43 +159,46 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              BLOC PIEGES                   */}
       {/*--------------------------------------------*/}
-      <div className="yellowBlock mb-4">
-        <h4 className="mt-0 mb-2 text-xl font-bold">
+      <div className="yellowBlockpiege mb-4">
+        <h4 className="mt-0 mb-0 text-xl font-bold">
           😱 5 pièges à éviter&nbsp;:
         </h4>
-        🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
-        <br />
-        🔸 <b>Regarder le sol</b> et ses pieds (fixe l&apos;horizon devant toi
-        pour rester stable) <br />
-        🔸 <b>Se crisper</b> (la décontraction du corps aide à sentir la roue et
-        à réagir aux oscillations, alors respire) <br />
-        🔸 Chercher la <b>vitesse</b> dès le départ (la vitesse vient avec la
-        maîtrise)
-        <br />
-        🔸 <b>S&apos;entêter</b> pendant des heures (n&apos;insiste pas, laisse
-        le temps à ton corps d&apos;assimiler les sensations, fait une pause
-        sinon tu t&apos;épuiseras au risque de te faire mal, et ré-essaye plutôt
-        le lendemain après une bonne nuit de repos)
+        <p>
+          🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
+          <br />
+          🔸 <b>Regarder le sol</b> et ses pieds (fixe l&apos;horizon devant toi
+          pour rester stable) <br />
+          🔸 <b>Se crisper</b> (la décontraction du corps aide à sentir la roue
+          et à réagir aux oscillations, alors respire) <br />
+          🔸 Chercher la <b>vitesse</b> dès le départ (la vitesse vient avec la
+          maîtrise)
+          <br />
+          🔸 <b>S&apos;entêter</b> pendant des heures (n&apos;insiste pas,
+          laisse le temps à ton corps d&apos;assimiler les sensations, fait une
+          pause sinon tu t&apos;épuiseras au risque de te faire mal, et
+          ré-essaye plutôt le lendemain après une bonne nuit de repos)
+        </p>
       </div>
 
       {/*--------------------------------------------*/}
       {/*              BLOC NOSTALGIE                */}
       {/*--------------------------------------------*/}
-      <div className="mt-7 mb-4">
-        <h4 className="text-center">Toujours pas convaincu&nbsp;? 😁</h4>
-        <p className="text-center">
-          {/*&Ccedil;a,*/}
+      <div className="mx-3 mt-7 mb-4">
+        <h4 className="mb-2">Toujours pas convaincu&nbsp;? 😁</h4>
+        <p className="">
+          {/*&Ccedil;a,*/}🎥
           <Link
             href="https://www.youtube.com/watch?v=VPXLMrs_Ne4"
             target="_blank"
             className="link-style font-bold text-blue-700 dark:text-blue-300"
           >
+            {' '}
             Alors regarde
           </Link>
           &nbsp;! C&apos;était en 2018, et moi aussi j&apos;ai galéré...
         </p>
-        <p className="text-center">
-          Comme pour le vélo, cela demande juste un peu d&apos;
+        <p className="">
+          Comme pour le vélo de notre enfance, cela demande juste un peu d&apos;
           <strong className="text-blue-700 dark:text-blue-300">audace</strong>,
           de{' '}
           <strong className="text-blue-700 dark:text-blue-300">méthode</strong>{' '}
@@ -203,7 +206,7 @@ const Apprendre = () => {
           <strong className="text-blue-700 dark:text-blue-300">
             persévérance
           </strong>
-          .
+          . Et la roue non plus, ça ne s&apos;oublie pas&nbsp;!
         </p>
       </div>
 
