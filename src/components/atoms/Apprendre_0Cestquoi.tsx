@@ -56,22 +56,7 @@ const Maintenance = () => {
       </div>
 
       {/*---------------------------------------------------------*/}
-      {/* ------------------ Encadré apprentissage -------------- */}
-      <div className="mb-6 mx-6 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
-        <p className="">
-          ✳️{' '}
-          <b>
-            La gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
-            <br />
-          </b>{' '}
-          Pour en profiter, elle demande un petit temps d&apos;
-          <strong className="text-blue-700 dark:text-blue-300">
-            apprentissage
-          </strong>
-          . Bonne nouvelle&nbsp;: 😊 <b>tout le monde peut y arriver</b>&nbsp;!
-        </p>
-      </div>
-
+      {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md">
         <Accordion isCompact>
@@ -88,7 +73,7 @@ const Maintenance = () => {
             }
           >
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 px-4">
-              {/* ------------------ Comment ça marche ------------------ */}
+              {/* ------------------ TEXTE Comment ça marche ------------------ */}
               <div className="">
                 <p className="mb-3">
                   Sans guidon ni freins mécaniques, la gyroroue se limite à
@@ -225,6 +210,18 @@ const Maintenance = () => {
       </div>
       {/*------------------------------------*/}
       <div className="mb-6 mx-6 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
+        <p className="mb-3">
+          ✳️{' '}
+          <b>
+            La gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
+            <br />
+          </b>{' '}
+          Pour en profiter, elle demande un petit temps d&apos;
+          <strong className="text-blue-700 dark:text-blue-300">
+            apprentissage
+          </strong>
+          . Bonne nouvelle&nbsp;: 😊 <b>tout le monde peut y arriver</b>&nbsp;!
+        </p>
         <p>
           ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et pour
           éviter les erreurs des débutants,{' '}
