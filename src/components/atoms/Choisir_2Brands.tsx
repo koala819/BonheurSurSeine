@@ -62,19 +62,29 @@ const Brands = () => {
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <div className="flex justify-center">
-            <Link href={gyroroues.src} passHref target="_blank">
-              <Image
-                src={gyroroues}
-                alt="5 gyroroues"
-                width={500}
-                height={500}
-                className="rounded-lg cursor-pointer"
-              />
-            </Link>
+            <Image
+              src={gyroroues}
+              alt="5 gyroroues"
+              width={500}
+              height={500}
+              className="rounded-lg cursor-pointer"
+            />
           </div>
           <p className="mt-8 mb-2">
-            Le marché est actuellement dominé par quelques fabricants, tous
-            basés en Chine (près de Shenzen). <br />
+            Voici un panorama des marques les plus présentes dans le monde de la
+            gyroroue. Ce marché est actuellement dominé par quelques{' '}
+            <b>fabricants incontournables</b>, tous basés en Chine (dans la
+            région de Shenzhen).
+            <br />
+            Pour en savoir plus sur chaque fabricant, consulte la section{' '}
+            <Link
+              href="/guide-utile-gyroroue#infos"
+              className="link-style text-blue-700 dark:text-blue-400"
+            >
+              Infos et chaînes Youtube constructeurs
+            </Link>{' '}
+            dans <i>Savoir Utile</i>.
+            <br />
             <span className="text-gray-500 dark:text-gray-300 mt-0 text-right text-small">
               <i>
                 Aucun favoritisme, les marques sont citées par ordre
@@ -88,7 +98,7 @@ const Brands = () => {
               <AccordionItem
                 key="1"
                 aria-label="Begode (auparavant Gotway)"
-                className="accordion-item"
+                className="accordion-item transition"
                 title={
                   <span className="brandGyroroue">
                     Begode (auparavant Gotway)
@@ -100,7 +110,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_BG}
@@ -111,7 +121,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Ce fabricant historique (existe depuis 2014) s&apos;est
                       imposé comme une référence pour de nombreux passionnés,
                       grâce à une très large gamme de modèles axés sur la
@@ -124,6 +134,7 @@ const Brands = () => {
               <AccordionItem
                 key="2"
                 aria-label="Extreme Bull"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Extreme Bull</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -131,7 +142,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_EB}
@@ -142,7 +153,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Apparue en 2021, cette marque partage ses ateliers de
                       fabrication et toute son ADN avec Begode pour continuer à
                       repousser les limites.
@@ -153,6 +164,7 @@ const Brands = () => {
               <AccordionItem
                 key="3"
                 aria-label="Inmotion"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Inmotion</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -160,7 +172,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_IM}
@@ -171,7 +183,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Créé en 2012, ce fabricant propose une gamme lisible et
                       diversifiée, avec des modèles adaptés aussi bien aux
                       débutants qu&apos;aux experts. Ses modèles associent
@@ -184,6 +196,7 @@ const Brands = () => {
               <AccordionItem
                 key="4"
                 aria-label="Kingsong"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Kingsong</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -191,7 +204,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_KS}
@@ -202,7 +215,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Présente sur le marché depuis 2014, cette marque est
                       reconnue pour ses modèles offrant un équilibre entre
                       performance et sécurité. Elle fut la première à proposer
@@ -214,6 +227,7 @@ const Brands = () => {
               <AccordionItem
                 key="5"
                 aria-label="Leaperkim"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Leaperkim</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -221,7 +235,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_LK}
@@ -232,7 +246,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Apparu en 2020, ce fabricant a rapidement gagné en
                       popularité auprès des connaisseurs avec sa gamme Veteran
                       et ses roues robustes, solides et puissantes, offrant
@@ -244,6 +258,7 @@ const Brands = () => {
               <AccordionItem
                 key="6"
                 aria-label="Ninebot by Segway"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Ninebot by Segway</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -251,7 +266,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_NB}
@@ -262,7 +277,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Connue pour ses trottinettes électriques, cette marque a
                       aussi fabriqué quelques modèles populaires entre 2014 et
                       2018. Elle s&apos;est depuis retirée du marché, mais ses
@@ -275,6 +290,7 @@ const Brands = () => {
               <AccordionItem
                 key="7"
                 aria-label="Nosfet"
+                className="accordion-item transition"
                 title={<span className="brandGyroroue">Nosfet</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
@@ -282,7 +298,7 @@ const Brands = () => {
                   </span>
                 }
               >
-                <div className="flex flex-row items-center gap-4 flex-nowrap">
+                <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
                     <Image
                       src={Logo_NF}
@@ -293,7 +309,7 @@ const Brands = () => {
                     />
                   </aside>
                   <aside className="ml-3">
-                    <p className="text-xs sm:text-sm md:text-base text-justify">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base">
                       Créée en 2024 par d&apos;anciens collaborateurs Kingsong,
                       cette marque a l&apos;ambition de proposer des modèles
                       innovants. Leurs 2 premiers modèles ont suscité intérêt et
@@ -304,14 +320,12 @@ const Brands = () => {
               </AccordionItem>
             </Accordion>
           </p>
-          <p className="mt-4 text-justify">
+          <p className="mt-4 mb-6">
             Il existe également d&apos;autres marques&nbsp;: certaines comme
             RockWheel, Solowheel ou IPS ont disparu, et les autres sont moins
             connues/appréciées des connaisseurs. Les caractéristiques de leurs
             modèles n&apos;offrent pas les mêmes garanties (sécurité,
             performance) que ceux des modèles des principaux leaders du marché.
-            <br />
-            <br />
           </p>
 
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">

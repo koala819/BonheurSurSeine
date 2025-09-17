@@ -198,7 +198,7 @@ const Assurance = () => {
               <h3 className="text-lg font-semibold mb-2">
                 🚨 Que faire en cas d&apos;accident&nbsp;?
               </h3>
-              <p className="text-justify text-sm">
+              <p className="text-sm">
                 Un accident génère toujours du stress. Même sans gravité,
                 remplis systématiquement un constat amiable (l&apos;idéal est
                 d&apos;en avoir un prérempli avec ses informations).
@@ -220,7 +220,7 @@ const Assurance = () => {
               <h3 className="text-lg font-semibold mb-2">
                 💰 Le budget assurance
               </h3>
-              <p className="text-justify text-sm">
+              <p className="text-sm">
                 Assurer un EDPM{' '}
                 <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
                   coûte 5-10€/mois

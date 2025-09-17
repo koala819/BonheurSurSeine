@@ -51,7 +51,7 @@ const Practical_Info_officiel = () => {
         <AccordionItem
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
-          title={<h3>🆕 Infos et chaine YouTube constructeurs</h3>}
+          title={<h3>🆕 Infos et chaînes YouTube constructeurs</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <div className="mb-8 flex flex-col sm:flex-row items-center">

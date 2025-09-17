@@ -229,7 +229,7 @@ const Maintenance = () => {
             href="/debuter-gyroroue"
             className="link-style font-bold text-blue-700 dark:text-blue-400"
           >
-            consulte la page &laquo;&nbsp;Bien Démarrer&nbsp;&raquo;
+            consulte la page <i>Bien Démarrer</i>
           </Link>
           .
         </p>
