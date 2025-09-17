@@ -91,6 +91,7 @@ const Practical_Battery = () => {
             </p>
           </div>
           {/*---------------------------------------*/}
+          {/*----------- En quelques mot -----------*/}
           {/*---------------------------------------*/}
           <h4 className="mt-4 mb-2">➡️ En quelques mots&nbsp;:</h4>
           <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
@@ -152,6 +153,7 @@ const Practical_Battery = () => {
             </p>
           </div>
           {/*---------------------------------------*/}
+          {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
           <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
           <p className="text-justify">
@@ -178,6 +180,45 @@ const Practical_Battery = () => {
               />
             </Link>
           </div>
+          {/*---------------------------------------*/}
+          {/*----------- type de cellule -----------*/}
+          {/*---------------------------------------*/}
+          <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
+          <p className="text-justify mb-2">
+            On entend souvent parler du type de cellule (
+            <i>Samsung 50S, Molicel P42A, LG M50LT, etc.</i>) comme s&apos;il
+            s&apos;agissait d&apos;un critère décisif pour une roue plus
+            performante, plus durable, plus sûre ou avec plus d&apos;autonomie.
+          </p>
+          <p className="text-justify">
+            En réalité, si ce choix a une importance technique (densité
+            énergétique, cycles de recharge, capacité de décharge, stabilité
+            thermique…), son <b>impact</b> reste <b>relatif</b> dans
+            l&apos;usage quotidien&nbsp;:
+          </p>
+          <ul className="compactlist2 mb-2">
+            <li>
+              Une <b>batterie bien conçue</b> ne dépend pas seulement des
+              cellules, mais aussi du BMS (Battery Management System), d&apos;un
+              assemblage solide et hermétique, d&apos;une bonne gestion
+              thermique(capteur et dissipation).
+            </li>
+            <li>
+              Le marketing met souvent en avant le type de cellule sans
+              forcément garantir la qualité du reste&nbsp;: un “bon” type de
+              cellule ne suffit pas à lui seul à rendre une roue fiable ou
+              performante si le reste est négligé.
+            </li>
+            <li>
+              Dans la pratique, il est{' '}
+              <b>impossible de ressentir une différence</b> entre deux types de
+              cellules.
+            </li>
+          </ul>
+          <p className="text-justify mb-6">
+            👉 Le type de cellule est donc un paramètre à considérer, mais à
+            replacer dans son contexte.
+          </p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en avril 2025
           </p>

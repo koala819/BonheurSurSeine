@@ -3,8 +3,11 @@
 import { Accordion, AccordionItem } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 
-//import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
+
+import eucone from '@/public/marques/EUC.ONE app-logo.png'
+import rudy from '@/public/marques/RudyTech logo.avif'
 
 const Practical_Vrac = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -55,10 +58,23 @@ const Practical_Vrac = () => {
           {/*--------------------------------------------------------*/}
           {/*                       BLOC 2                           */}
           {/*--------------------------------------------------------*/}
-          <h4 className="mt-0">➡️ Mode d&apos;emploi IQlight V2</h4>
-          <p className="text-justify">
-            La version française (<i>traduite par mes soins</i>) du mode
-            d&apos;emploi des magnifiques{' '}
+          <h4 className="mt-0 mb-2 flex items-center gap-2 justify-between">
+            ➡️ Mode d&apos;emploi IQlight V2
+            <Link
+              href="https://rudy-tech.pl/en/15-iqlight"
+              target="_blank"
+              className="link-style"
+            >
+              <Image
+                src={rudy}
+                alt="logo_rudy"
+                className="p1 border border-black rounded-lg cursor-pointer max-w-[70px] max-h-[40px]"
+              />
+            </Link>
+          </h4>
+          <p className="">
+            Voici la version française du mode d&apos;emploi (
+            <i>traduite par mes soins</i>) des magnifiques{' '}
             <Link
               href="https://rudy-tech.pl/en/15-iqlight"
               target="_blank"
@@ -66,7 +82,8 @@ const Practical_Vrac = () => {
             >
               phares auto inclinable IQlight V2
             </Link>{' '}
-            de Rudy Tech (dont je te parlais dans{' '}
+            de Rudy Tech.
+            <br /> Je t&apos;en parlais dans{' '}
             <Link
               href="https://youtu.be/zWsGDzFLqHo"
               target="_blank"
@@ -76,18 +93,51 @@ const Practical_Vrac = () => {
             </Link>
             ).
             <br />
-            Le PDF est disponible{' '}
+            Le PDF est disponible ❇️
             <Link
               href="/Rudy Tech - mode d'emploi IQlight V2 - FR v20250307.pdf"
               target="_blank"
               className="link-style"
             >
-              ❇️&nbsp;<b>ICI</b>&nbsp;❇️
+              &nbsp;<b>ICI</b>&nbsp;
             </Link>
-            .
+            ❇️.
           </p>
           {/*--------------------------------------------------------*/}
-          {/*                        BLOC 3                          */}
+          {/*                       BLOC 3                           */}
+          {/*--------------------------------------------------------*/}
+          <h4 className="mt-6 mb-2 flex items-center gap-2 justify-between">
+            ➡️ Estimer ton autonomie
+            <Link
+              href="https://euc.one/calculator/fr"
+              target="_blank"
+              className="link-style"
+            >
+              <Image
+                src={eucone}
+                alt="logo_EUCONE"
+                className="p-1 border rounded-lg bg-black cursor-pointer max-w-[70px] max-h-[40px]"
+              />
+            </Link>
+          </h4>
+          <p className="">
+            Le site ❇️
+            <Link
+              href="https://euc.one/calculator/fr"
+              target="_blank"
+              className="link-style"
+            >
+              &nbsp;<b>Euc.one</b>&nbsp;
+            </Link>
+            ❇️ propose de jouer avec tous les paramètres impactant
+            l&apos;autonomie.
+            <br />
+            Tu peux donc estimer au mieux ton autonomie avec ta roue.
+            <br />
+            Merci à eux pour ce magnifique projet.
+          </p>
+          {/*--------------------------------------------------------*/}
+          {/*                 BLOC CONSTRUCTION                      */}
           {/*--------------------------------------------------------*/}
           <h3 className="text-center mt-28 mb-0">
             🚧&nbsp;EN&nbsp;CONSTRUCTION&nbsp;🚧
