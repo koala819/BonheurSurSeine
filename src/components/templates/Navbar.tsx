@@ -328,8 +328,22 @@ export function Top() {
           {/* Sous-menu */}
           <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
             <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li className="text-sm">🔸Merci !</li>
-              <li className="text-sm">🔸Soutenir mon travail</li>
+              <li>
+                <Link
+                  href="/mille-merci#soutien"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Soutenir mon travail
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mille-merci#merci"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Merci !
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

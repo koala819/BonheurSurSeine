@@ -68,7 +68,7 @@ export default function Contact({
   return (
     //<section className="container my-8 mx-auto p-4 space-y-8">
 
-    <section className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
+    <section id="soutien" className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
       {/*
     <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
       <header className="container mx-auto p-4">
@@ -245,7 +245,7 @@ export default function Contact({
           <Link
             href="https://fr.tipeee.com/bonheur-sur-seine"
             target="_blank"
-            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 transition-transform transform hover:scale-110"
+            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 px-6 transition-transform transform hover:scale-110"
           >
             <Image
               alt="Tipee logo"
@@ -258,7 +258,7 @@ export default function Contact({
           <Link
             href="https://www.patreon.com/c/BonheursurSeine"
             target="_blank"
-            className="flex p-2 transition-transform transform hover:scale-110"
+            className="flex p-2 transition-transform transform hover:scale-110 rounded-2xl"
           >
             <Image
               alt="Patreon logo"
@@ -271,20 +271,20 @@ export default function Contact({
           <Link
             href="https://discord.com/invite/Jhgw7C96Jf"
             target="_blank"
-            className="flex p-2 transition-transform transform hover:scale-110"
+            className="flex transition-transform transform hover:scale-110 rounded-2xl"
           >
             <Image
               alt="Discord logo"
               src={Discord}
-              width={64}
-              height={64}
+              width={90}
+              height={90}
               className="opacity-80 hover:opacity-100"
             />
           </Link>
         </div>
       </div>
 
-      <section className="space-y-2 my-4">
+      <section id="merci" className="space-y-2 my-4">
         <h2>Remerciements</h2>
         <p className="text-sm text-justify">
           <b>Bonheur sur Seine</b>, ce sont des vidéos

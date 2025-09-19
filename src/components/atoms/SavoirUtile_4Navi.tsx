@@ -308,7 +308,7 @@ const Practical_Vrac = () => {
           {/*--------------------------------------------------------*/}
           {/*                        BLOC 4                          */}
           {/*--------------------------------------------------------*/}
-          <section className="mt-4 pt-1">
+          <section className="mt-4 mb-4 pt-1">
             <div className="flex flex-col sm:flex-row mb-0">
               <aside className="sm:w-1/2 md:w-2/5 lg:w-2/5 flex text-justify">
                 <p className="text-justify">
@@ -347,6 +347,44 @@ const Practical_Vrac = () => {
               </aside>
             </div>
           </section>
+          {/*--------------------------------------------------------*/}
+          <div className="blueBlock mt-3 mb-3">
+            <h4 className="mt-0 mb-2">
+              📢 Offroad, vous avez dit offroad&nbsp;?
+            </h4>
+            <p>
+              Les gyroroues peuvent rouler sur presque toutes les surfaces. Mais
+              attention : le terme <strong>offroad</strong> (ou tout-terrain)
+              recouvre des réalités très différentes.
+            </p>
+            <ul className="compactlist2">
+              <li>
+                Pour une simple balade hors bitume (chemins, voies vertes), une
+                roue classique suffit.
+              </li>
+              <li>
+                Pour une pratique sportive (franchir des bosses, passer des
+                obstacles, voire sauter), il faut un modèle adapté et surtout de
+                l&apos;expérience et de l&apos;entrainement.
+              </li>
+
+              <li>Quelques règles d&apos;or&nbsp;:</li>
+              <ul className="compactlist2 ml-2">
+                <li>
+                  <Link
+                    href="/debuter-gyroroue#bonsens"
+                    className="link-style font-bold text-black dark:text-white"
+                  >
+                    Fais preuve de <i>bon sens</i>
+                  </Link>
+                  &nbsp;: ne dépasse pas tes propres limites ni celles de ta
+                  roue.
+                </li>
+                <li>Mieux vaut être trop prudent que trop confiant.</li>
+                <li>Si je ne le sens pas, je ne passe pas&nbsp;!</li>
+              </ul>
+            </ul>
+          </div>
           {/*--------------------------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             article mis à jour en juin 2025

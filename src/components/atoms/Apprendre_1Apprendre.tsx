@@ -33,8 +33,24 @@ const Apprendre = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-4 items-center px-6">
         {/* ------------------ Comment ça marche ------------------ */}
         <div className="place-content-center mb-4">
-          <h3 className="my-3 font-bold">🎓 Comment faire&nbsp;?</h3>
-          <p className="mb-3">
+          <h3 className="mt-4 mb-2 font-bold">
+            🛞 Quelle gyroroue choisir quand on débute&nbsp;?
+          </h3>
+          <p className="mb-6">
+            Je recommande de commencer avec un{' '}
+            <strong className="text-blue-700 dark:text-blue-300">
+              modèle léger
+            </strong>{' '}
+            (&lt;25kg), simple et facile à manier. Même si certaines personnes
+            ont pu apprendre sur des roues plus grosses, les petits modèles{' '}
+            <strong className="text-blue-700 dark:text-blue-300">
+              16 pouces
+            </strong>{' '}
+            (exemples&nbsp;: V8S, V10F, 16S) sont un très bon compromis.
+          </p>
+
+          <h3 className="my-2 font-bold">🎓 Comment faire&nbsp;?</h3>
+          <p className="mb-1">
             Tu ne sais pas par où commencer&nbsp;?{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               Cette vidéo est faite pour toi{' '}
@@ -69,9 +85,9 @@ const Apprendre = () => {
           <div className="w-full sm:w-4/5 md:w-3/4 lg:w-full aspect-video rounded-xl shadow-md overflow-hidden">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/II3MQNy7b0I?si=g5gJhImayjyiaOZ7"
+              src="https://www.youtube.com/embed/q5xWl2lZT8A?si=H2hF9qByO8SzMHmI&amp;controls=0"
               title="Apprendre la gyroroue (méthode simple)"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
           </div>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">

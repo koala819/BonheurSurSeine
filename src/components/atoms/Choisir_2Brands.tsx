@@ -228,7 +228,7 @@ const Brands = () => {
                 key="5"
                 aria-label="Leaperkim"
                 className="accordion-item transition"
-                title={<span className="brandGyroroue">Leaperkim</span>}
+                title={<span className="brandGyroroue">LeaperKim</span>}
                 indicator={
                   <span className="chevronAccordionItemsmall2  mr-1">
                     &lsaquo;

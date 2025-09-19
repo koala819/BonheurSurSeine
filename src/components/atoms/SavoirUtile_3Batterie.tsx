@@ -78,6 +78,16 @@ const Practical_Battery = () => {
             Si le moteur demande plus d&apos;énergie que ne peut en fournir la
             batterie, la roue sera sans énergie&nbsp;et… ce sera la chute&nbsp;!
           </p>
+          <p className="mb-2 text-justify">
+            Fait donc{' '}
+            <Link
+              href="/debuter-gyroroue#bonsens"
+              className="link-style font-bold text-black dark:text-white"
+            >
+              preuve de <i>bon sens</i>
+            </Link>{' '}
+            pour ne pas aller au-delà des limites de la roue et de sa batterie.
+          </p>
           <div className="blueBlock mb-4">
             <b className="mb-0 mt-0">
               L&apos;autonomie n&apos;est pas une donnée absolue. <br />
@@ -143,8 +153,10 @@ const Practical_Battery = () => {
           <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
             <p>
-              🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
-              151.2v…) et une tension min de fonctionnement. <br />
+              🔸 La batterie a une tension max (84.0v, 100.8v, 126v, 151.2v…) et
+              une tension min de fonctionnement. Sortir de ces plages risque
+              d&apos;abîmer les cellules.
+              <br />
               🔸 Le BMS (Battery Management System) mesure en temps réel la
               tension qui diminue au fur et à mesure de l&apos;utilisation.
               <br />
@@ -185,38 +197,38 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
           <p className="text-justify mb-2">
-            On entend souvent parler du type de cellule (
+            On entend souvent parler des modèles de cellule (
             <i>Samsung 50S, Molicel P42A, LG M50LT, etc.</i>) comme s&apos;il
             s&apos;agissait d&apos;un critère décisif pour une roue plus
             performante, plus durable, plus sûre ou avec plus d&apos;autonomie.
           </p>
           <p className="text-justify">
-            En réalité, si ce choix a une importance technique (densité
-            énergétique, cycles de recharge, capacité de décharge, stabilité
-            thermique…), son <b>impact</b> reste <b>relatif</b> dans
-            l&apos;usage quotidien&nbsp;:
+            En réalité, les fabricants utilisent ce qui se fait de mieux. Et si
+            ce choix a une importance technique indéniable (densité énergétique,
+            cycles de recharge, capacité de décharge, stabilité thermique,
+            etc.), son <b>impact</b> reste <b>relatif</b> dans l&apos;usage
+            quotidien&nbsp;:
           </p>
           <ul className="compactlist2 mb-2">
             <li>
-              Une <b>batterie bien conçue</b> ne dépend pas seulement des
-              cellules, mais aussi du BMS (Battery Management System), d&apos;un
-              assemblage solide et hermétique, d&apos;une bonne gestion
-              thermique(capteur et dissipation).
-            </li>
-            <li>
-              Le marketing met souvent en avant le type de cellule sans
-              forcément garantir la qualité du reste&nbsp;: un “bon” type de
-              cellule ne suffit pas à lui seul à rendre une roue fiable ou
+              Le marketing met souvent en avant les cellules mais un “bon type”
+              de cellule ne suffit pas à lui seul à rendre une roue fiable ou
               performante si le reste est négligé.
             </li>
             <li>
-              Dans la pratique, il est{' '}
-              <b>impossible de ressentir une différence</b> entre deux types de
-              cellules.
+              Une <b>batterie bien conçue</b> passe surtout par un assemblage
+              solide et hermétique, et une bonne gestion thermique (capteurs et
+              dissipation).
+            </li>
+            <li>
+              Et dans la pratique, il est{' '}
+              <b>impossible de ressentir une différence nette</b> entre deux
+              types de cellules. Les fabricant utilisent les meilleures
+              technologies disponibles.
             </li>
           </ul>
           <p className="text-justify mb-6">
-            👉 Le type de cellule est donc un paramètre à considérer, mais à
+            👉 Le modèle de cellule est donc un paramètre à considérer, mais à
             replacer dans son contexte.
           </p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">

@@ -289,10 +289,10 @@ export function BonheurScore({
                 <Chip
                   variant="shadow"
                   color="primary"
-                  className="mr-0 mt-2 sm:mt-0 bg-indigo-600 text-white dark:bg-cyan-600 dark:text-white"
+                  className="mr-0 mt-2 sm:mt-0 bg-indigo-600 text-white dark:bg-cyan-600 dark:text-white min-w-24 md:min-w-36"
                 >
                   {/*CATEGORIE : Urbaine - Hybride - Loisir*/}
-                  {gyroroue.data.profil}
+                  <p className="text-center">{gyroroue.data.profil}</p>
                 </Chip>
               </div>
             </CardHeader>
