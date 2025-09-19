@@ -159,7 +159,7 @@ const CommonSense = () => {
               </strong>{' '}
               (jet ou intégral) est{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                vivement recommandé
+                vivement recommandé{' '}
               </strong>
               (sans être obligatoire). Porter des{' '}
               <strong className="text-teal-800 dark:text-teal-200">

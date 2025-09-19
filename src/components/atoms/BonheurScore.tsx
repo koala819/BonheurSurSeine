@@ -122,9 +122,9 @@ export function BonheurScore({
               📅 Derniers ajouts
             </h2>
             <ul className="list-disc ml-4 text-sm">
+              <li className="text-sm">Begode C8 &ndash; septembre 2025</li>
               <li className="text-sm">Extreme Bull Rocket &ndash; mai 2025</li>
               <li className="text-sm">Nosfet Aero &ndash; mai 2025</li>
-              <li className="text-sm">Inmotion V9 &ndash; avril 2025</li>
             </ul>
             <p className="mt-1 text-sm text-justify">
               🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
@@ -204,8 +204,8 @@ export function BonheurScore({
               <span className="mx-1 text-center text-sm">
                 Je remercie chaleureusement tous mes contributeurs et
                 partenaires (ponctuels ou réguliers, passés, présents ou
-                futurs). Grâce à ton soutien, je peux continuer cette belle
-                aventure et de réaliser ces tests avec enthousiasme et passion.
+                futurs). Grâce à ton soutien, je peux vivre cette belle aventure
+                et réaliser ces tests avec enthousiasme et passion.
                 <br />
               </span>
               (
