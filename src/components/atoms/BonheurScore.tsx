@@ -8,6 +8,7 @@ import {
   Chip,
   Tooltip,
 } from '@nextui-org/react'
+import { Accordion, AccordionItem } from '@nextui-org/react'
 import { PrismicRichText } from '@prismicio/react'
 import { useState } from 'react'
 import { FaCity, FaMagic, FaRoad, FaTools, FaTrophy } from 'react-icons/fa'
@@ -32,7 +33,7 @@ export function BonheurScore({
   /*PREPARATION DES LISTES DES 2 FILTRES = valeurs uniques et triées*/
   const [selectedBrand, setSelectedBrand] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('')
-  const categoryOrder = ['Urbaine', 'Hybride', 'Loisir']
+  const categoryOrder = ['Centre-Ville', 'Agglomération', 'Loisir']
 
   const uniqueBrands = Array.from(
     new Set(gyroroues.map((g) => g.data.constructeur).sort()),
@@ -55,20 +56,18 @@ export function BonheurScore({
 
   /*PAGE BONHEURSCORE*/
   return (
-    // <div className="container mx-auto p-4">
     <>
-      <div className="py-1 px-4 sm:px-6 lg:px-8 space-y-1">
+      <div className="px-4 sm:px-6 lg:px-8 mb-4">
         <h1 className="whitespace-break-spaces mb-6 mt-9">
           BonheurScore - Tests et Reviews
         </h1>
-
         <div className="grid md:grid-cols-3 gap-4">
           {/* Bloc 1 */}
           <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               🔍 Tu hésites entre plusieurs modèles&nbsp;?
             </h2>
-            <p className="text-justify text-sm">
+            <p className="text-sm">
               Le{' '}
               <strong className="text-fuchsia-700 dark:text-violet-400">
                 BonheurScore
@@ -86,7 +85,7 @@ export function BonheurScore({
               >
                 vidéos YouTube
               </Link>
-              , usages, forces, faiblesses, praticité, équipements…
+              , usages, forces et faiblesses, praticité, équipements…
             </p>
           </div>
 
@@ -95,14 +94,14 @@ export function BonheurScore({
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               💬 Ton avis compte !
             </h2>
-            <p className="text-sm text-justify">
+            <p className="text-sm">
               L&apos;objectif de mes tests est de t&apos;aider à trouver{' '}
               <strong className="text-fuchsia-700 dark:text-violet-400">
                 la roue qui te conviendra le mieux
               </strong>
               , selon tes envies et ton usage.
             </p>
-            <p className="mt-1 text-sm text-justify">
+            <p className="mt-1 text-sm">
               Tu souhaites me partager ton ressenti&nbsp;?
             </p>
             <Link href="https://forms.office.com/r/5k7QAax6Xu" target="_blank">
@@ -116,21 +115,38 @@ export function BonheurScore({
             </Link>
           </div>
 
-          {/* Bloc 3 */}
-          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+          {/* Bloc 3 : Derniers ajouts ça se met à jour automatiquement*/}
+          <div className="bg-blue-50 dark:bg-cyan-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               📅 Derniers ajouts
             </h2>
             <ul className="list-disc ml-4 text-sm">
-              <li className="text-sm">Begode C8 &ndash; septembre 2025</li>
-              <li className="text-sm">Extreme Bull Rocket &ndash; mai 2025</li>
-              <li className="text-sm">Nosfet Aero &ndash; mai 2025</li>
+              {gyroroues
+                .filter((g) => g.data.date) // on garde uniquement ceux avec date
+                .sort(
+                  (a, b) =>
+                    new Date(b.data.date!).getTime() -
+                    new Date(a.data.date!).getTime(),
+                ) // on tri par date les plus récent (pas compris mais ça fonctionne)
+                .slice(0, 3) // on garde uniquement 3 pour affichage ci-dessous
+                .map((g) => (
+                  <li
+                    key={
+                      g.data.constructeur || `${g.data.modele}-${g.data.date}`
+                    }
+                    className="text-sm"
+                  >
+                    {g.data.constructeur}&nbsp;
+                    {g.data.modele} &ndash;{' '}
+                    {moment(g.data.date).format('MMMM YYYY')}
+                  </li>
+                ))}
             </ul>
-            <p className="mt-1 text-sm text-justify">
+            <p className="mt-1 text-sm">
               🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
-              toutes les gyroroues que je teste, je t&apos;invite à{' '}
+              toutes les gyroroues que je teste,{' '}
               <strong className=" text-fuchsia-700 dark:text-violet-400">
-                revenir régulièrement
+                reviens régulièrement
               </strong>
               .
               {/*t&apos;invite à <Link href="/eucgame"><strong className=" text-fuchsia-700 dark:text-fuchsia-400">régulièrement</strong>.</Link>*/}
@@ -141,79 +157,100 @@ export function BonheurScore({
         {/*----------------------------------------------*/}
         {/*---------CAPSULES D'INTRODUCTION--------------*/}
         <section className="px-0 md:px-7 lg:px-14">
-          <div className="mt-3 bg-blue-50 dark:bg-cyan-900 px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow ">
-            <h2 className="text-lg font-semibold mb-2">
-              📢 À propos du BonheurScore
-            </h2>
-            <p className="text-justify text-base mb-2">
-              Ces notes reflètent uniquement{' '}
-              <strong className="text-fuchsia-700 dark:text-violet-400">
-                ma vision
-              </strong>
-              ,{' '}
-              <strong className="text-fuchsia-700 dark:text-violet-400">
-                mon usage
-              </strong>{' '}
-              et{' '}
-              <strong className="text-fuchsia-700 dark:text-violet-400">
-                ma sensibilité
-              </strong>
-              . Je réalise mes tests terrain avec rigueur, centré sur
-              l&apos;expérience utilisateur en mobilité urbaine.
-            </p>
-            <ul className="ml-8">
-              <li className="list-disc text-justify">
-                Mes notes ne sont pas une vérité en soi : elles illustrent du
-                mieux possible{' '}
-                <strong className="text-fuchsia-700 dark:text-violet-400">
-                  mon avis et mes ressentis
-                </strong>
-                .
-              </li>
-              <li className="list-disc text-justify">
-                Dans toutes mes vidéos, je donne{' '}
-                <strong className="text-fuchsia-700 dark:text-violet-400">
-                  librement mon avis
-                </strong>
-                , et j&apos;identifie au mieux les usages pour lesquels la roue
-                excelle.
-              </li>
-              <li className="list-disc text-justify">
-                Chaque roue, même la moins bien notée, m&apos;a offert de vraies
-                sensations de liberté.
-              </li>
-            </ul>
-            <p className="mt-2 text-justify">
-              Pour en savoir plus sur la{' '}
-              <span className="text-fuchsia-700 dark:text-violet-400">
-                <strong>notation</strong>
-              </span>
-              , tu peux consulter :{' '}
-              <Link
-                href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
-                target="_blank"
-                className="link-style text-fuchsia-700 dark:text-violet-400"
+          <div className="mt-3 px-2 bg-blue-50 dark:bg-cyan-900 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <Accordion isCompact>
+              <AccordionItem
+                key="1"
+                aria-label="Comment ça fonctionne ?"
+                title={
+                  <h4 className="ml-2 font-bold mt-1 mb-1">
+                    📢 À propos du BonheurScore&nbsp;?
+                  </h4>
+                }
+                indicator={
+                  <strong className="chevronAccordionItem mr-4">
+                    &lsaquo;
+                  </strong>
+                }
               >
-                <strong>cette vidéo</strong> 🎥
-              </Link>
-            </p>
+                <div className="max-w-6xl mx-auto px-2 mb-1">
+                  <p className="text-justify text-base mb-1">
+                    Ces notes reflètent uniquement{' '}
+                    <strong className="text-fuchsia-700 dark:text-violet-400">
+                      ma vision
+                    </strong>
+                    ,{' '}
+                    <strong className="text-fuchsia-700 dark:text-violet-400">
+                      mon usage
+                    </strong>{' '}
+                    et{' '}
+                    <strong className="text-fuchsia-700 dark:text-violet-400">
+                      ma sensibilité
+                    </strong>
+                    . Je réalise mes tests terrain avec rigueur, centré sur
+                    l&apos;expérience utilisateur en mobilité urbaine.
+                  </p>
+                  <ul className="compactlist2 ml-4 mb-1">
+                    <li className="">
+                      Mes notes ne sont pas une vérité en soi : elles illustrent
+                      du mieux possible{' '}
+                      <strong className="text-fuchsia-700 dark:text-violet-400">
+                        mon avis et mes ressentis
+                      </strong>
+                      .
+                    </li>
+                    <li className="">
+                      Dans toutes mes vidéos, je donne{' '}
+                      <strong className="text-fuchsia-700 dark:text-violet-400">
+                        librement mon avis
+                      </strong>
+                      , et j&apos;identifie au mieux les usages pour lesquels la
+                      roue excelle.
+                    </li>
+                    <li className="">
+                      Chaque roue, même la moins bien notée, m&apos;a offert de
+                      vraies sensations de liberté.
+                    </li>
+                  </ul>
+                  <p className="mt-1">
+                    Pour en savoir plus sur la{' '}
+                    <span className="text-fuchsia-700 dark:text-violet-400">
+                      <strong>notation</strong>
+                    </span>
+                    , tu peux consulter :{' '}
+                    <Link
+                      href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
+                      target="_blank"
+                      className="link-style text-fuchsia-700 dark:text-violet-400"
+                    >
+                      <strong>cette vidéo</strong> 🎥
+                    </Link>
+                  </p>
+                </div>
+              </AccordionItem>
+            </Accordion>
           </div>
-          {/*------------------REMERCIEMENTS-------------------*/}
-          <div className="mt-2 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-            <p className="text-center italic text-gray-900 dark:text-gray-300">
-              <span className="mx-1 text-center text-sm">
+        </section>
+
+        {/*--------------------------------------------------*/}
+        {/*------------------REMERCIEMENTS-------------------*/}
+        <section className="px-0 md:px-7 lg:px-14">
+          <div className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow pt-1 px-3">
+            <p className="italic text-gray-900 dark:text-gray-300">
+              <span className="mx-1 text-xs md:text-sm">
                 Je remercie chaleureusement tous mes contributeurs et
                 partenaires (ponctuels ou réguliers, passés, présents ou
                 futurs). Grâce à ton soutien, je peux vivre cette belle aventure
                 et réaliser ces tests avec enthousiasme et passion.
-                <br />
               </span>
+            </p>
+            <p className="text-center">
               (
               <a
                 href="https://fr.tipeee.com/bonheur-sur-seine"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline italic text-center text-gray-900 dark:text-gray-300 text-sm"
+                className="underline italic text-gray-900 dark:text-gray-300 text-xs md:text-sm"
               >
                 Ne clique pas ici
               </a>
@@ -221,6 +258,7 @@ export function BonheurScore({
             </p>
           </div>
         </section>
+
         {/*----------------------------------------------*/}
         {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
         <div className="mt-4 flex justify-between items-center">

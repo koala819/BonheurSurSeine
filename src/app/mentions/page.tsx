@@ -35,7 +35,16 @@ export default function Page() {
 
       <h3>Hébergement</h3>
       <p>
-        Ce site a été réalisé par{' '}
+        Ce site a été réalisé avec la participation de{' '}
+        <Link
+          href={'https://linktr.ee/fabien.wheel'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Fabien.Wheel
+        </Link>{' '}
+        et{' '}
         <Link
           href={'https://www.dix31.com/'}
           passHref
