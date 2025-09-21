@@ -30,22 +30,22 @@ export default function CardPromo({
   }, [theme, logo_mode_sombre, logo])
 
   return (
-    <section className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col">
+    <section className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col hover:shadow-lg">
       {/* PARTIE IMAGE */}
       <div className="flex justify-center h-[100px] mb-0">
         <div className="relative overflow-hidden rounded-2xl shadow-slate-500 bg-white dark:bg-sky-950 dark:shadow-slate-700 shadow-md h-full w-1/2 sm:w-3/4 xl:w-3/4">
-          <Link href={website} target="_blank" className="">
+          <Link href={website} target="_blank">
             <Image
               alt={alt || 'logo de mon partenaire'}
               src={imageSrc}
+              fill
               priority
-              objectFit="contain"
-              layout="fill"
               className="object-contain"
             />
           </Link>
         </div>
       </div>
+
       {/* PARTIE DESCRIPTION */}
       <div className="mt-0 pl-2 mb-1">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-0">

@@ -58,7 +58,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md">
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
         <Accordion isCompact>
           <AccordionItem
             key="1"
@@ -161,7 +161,9 @@ const Maintenance = () => {
                     L&apos;électronique ajuste en continu la stabilité des
                     pédales.
                   </li>
-                  <li>C&apos;est le moteur qui produit l&apos;effort.</li>
+                  <li>
+                    C&apos;est le moteur qui produit l&apos;effort nécessaire.
+                  </li>
                   <li>
                     Le mouvement crée un{' '}
                     <Link
@@ -212,7 +214,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* -----------------  Et c'est compliqué   --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md">
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
         <Accordion isCompact>
           <AccordionItem
             key="2"
