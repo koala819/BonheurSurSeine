@@ -43,7 +43,7 @@ const Practical_Vrac = () => {
   return (
     <section
       id="vrac"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -83,15 +83,15 @@ const Practical_Vrac = () => {
               phares auto inclinable IQlight V2
             </Link>{' '}
             de Rudy Tech.
-            <br /> Je t&apos;en parlais dans{' '}
+            <br /> Je t&apos;en parlais en mars 2025 dans{' '}
             <Link
               href="https://youtu.be/zWsGDzFLqHo"
               target="_blank"
               className="link-style"
             >
-              cette vidéo&nbsp;📹
+              cette vidéo
             </Link>
-            ).
+            &nbsp;🎥.
             <br />
             Le PDF est disponible ❇️
             <Link
@@ -159,7 +159,27 @@ const Practical_Vrac = () => {
           </h5>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en juin 2025
+            rédigé par{' '}
+            <Link
+              href={'https://www.patreon.com/c/BonheursurSeine'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Bonheur Sur Seine
+            </Link>{' '}
+            et{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            ,
+            <br />
+            dernière mise à jour : septembre 2025
           </p>
         </AccordionItem>
       </Accordion>

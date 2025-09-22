@@ -3,6 +3,7 @@
 import { Checkbox } from '@nextui-org/react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Image_bon_sens from '@/public/Image_choisir_identifier_besoins(light)2.jpg'
 
@@ -223,9 +224,29 @@ const Needs = () => {
           équipements, matériaux…
         </p>
       </div>
+      {/*--------------------------------------------------------*/}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
+        rédigé par{' '}
+        <Link
+          href={'https://www.patreon.com/c/BonheursurSeine'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Bonheur Sur Seine
+        </Link>{' '}
+        et{' '}
+        <Link
+          href={'https://linktr.ee/fabien.wheel'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Fabien.Wheel
+        </Link>
+        ,
         <br />
-        article mis à jour en septembre 2025
+        dernière mise à jour : juin 2025
       </p>
     </section>
   )

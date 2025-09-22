@@ -178,8 +178,29 @@ const Compare = () => {
           </Link>
         </div>
       </div>
+      {/*--------------------------------------------------------*/}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-        article mis à jour en février 2025
+        rédigé par{' '}
+        <Link
+          href={'https://www.patreon.com/c/BonheursurSeine'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Bonheur Sur Seine
+        </Link>{' '}
+        et{' '}
+        <Link
+          href={'https://linktr.ee/fabien.wheel'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Fabien.Wheel
+        </Link>
+        ,
+        <br />
+        dernière mise à jour : juin 2025
       </p>
     </section>
   )

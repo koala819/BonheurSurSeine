@@ -42,7 +42,7 @@ const HighwayCode = () => {
   return (
     <section
       id="code"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -336,7 +336,18 @@ const HighwayCode = () => {
             </h4>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en janvier 2025
+            rédigé par{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            ,
+            <br />
+            dernière mise à jour : janvier 2025
           </p>
         </AccordionItem>
       </Accordion>

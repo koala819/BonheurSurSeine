@@ -235,7 +235,7 @@ export default function Contact({
 */}
       </section>
 
-      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
           Pour soutenir mon travail, accéder à des contenus supplémentaires et
           chatter en privé, rejoins-moi sur

@@ -63,7 +63,7 @@ export function BonheurScore({
         </h1>
         <div className="grid md:grid-cols-3 gap-4">
           {/* Bloc 1 */}
-          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700">
+          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               🔍 Quel modèle choisir&nbsp;?
             </h2>
@@ -91,7 +91,7 @@ export function BonheurScore({
           </div>
 
           {/* Bloc 2 */}
-          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700">
+          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               💬 Ton avis compte !
             </h2>
@@ -117,7 +117,7 @@ export function BonheurScore({
           </div>
 
           {/* Bloc 3 : Derniers ajouts ça se met à jour automatiquement*/}
-          <div className="bg-blue-50 dark:bg-cyan-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700">
+          <div className="bg-blue-50 dark:bg-cyan-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               📅 Derniers ajouts
             </h2>
@@ -158,7 +158,7 @@ export function BonheurScore({
         {/*----------------------------------------------*/}
         {/*---------CAPSULES D'INTRODUCTION--------------*/}
         <section className="px-0 md:px-7 lg:px-14">
-          <div className="mt-3 px-2 bg-blue-50 dark:bg-cyan-900 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700">
+          <div className="mt-3 px-2 bg-blue-50 dark:bg-cyan-900 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
             <Accordion isCompact>
               <AccordionItem
                 key="1"
@@ -236,7 +236,7 @@ export function BonheurScore({
         {/*--------------------------------------------------*/}
         {/*------------------REMERCIEMENTS-------------------*/}
         <section className="px-0 md:px-7 lg:px-14">
-          <div className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow pt-1 px-3">
+          <div className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700 pt-1 px-3">
             <p className="italic text-gray-900 dark:text-gray-300">
               <span className="mx-1 text-xs md:text-sm">
                 Je remercie chaleureusement tous mes contributeurs et
