@@ -241,7 +241,6 @@ const Practical_Battery = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : avril 2025
           </p>

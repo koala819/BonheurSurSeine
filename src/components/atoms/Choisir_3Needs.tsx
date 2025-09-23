@@ -65,11 +65,15 @@ const Needs = () => {
       {/*--                 PARAGRAPHE               --*/}
       {/*----------------------------------------------*/}
       <div className="mt-0 mb-4 ">
-        <p className="text-justify mb-0">
-          D&apos;expérience, chaque modèle excelle pour un usage précis, avec
-          ses forces, ses qualités et ses faiblesses. Avec la diversité des
-          fabricants et des modèles, il est normal d&apos;hésiter avant de se
-          décider.
+        <p className="">
+          Le <strong>piège</strong> serait de ne regarder que les spécifications
+          techniques et de n&apos;être attiré que par les nouvelles roues qui
+          arrivent sur le marché.
+        </p>
+        <p className="text-justify">
+          D&apos;<b>anciens modèles</b>, sortis il y a déjà plusieurs années,
+          constituent encore aujourd&apos;hui des choix tout à fait{' '}
+          <b>pertinents</b>.
         </p>
         <p className="text-justify">
           Pour ne pas se tromper et faire le bon choix, il est essentiel de
@@ -78,9 +82,7 @@ const Needs = () => {
           de bien identifier{' '}
           <strong className="text-emerald-600">ses besoins</strong>,{' '}
           <strong className="text-emerald-600">ses exigences</strong> et{' '}
-          <strong className="text-emerald-600">ses contraintes</strong>. Et il
-          faut aussi, bien évidemment, tenir compte de son budget (
-          <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
+          <strong className="text-emerald-600">ses contraintes</strong>.
         </p>
       </div>
       {/*----------------------------------------------*/}
@@ -119,6 +121,10 @@ const Needs = () => {
             possible pour connaitre ses ressentis et se faire ton propre avis.
           </li>
         </ul>
+        <p className="text-justify ml-1 mt-1">
+          Et il faut aussi, bien évidemment, tenir compte de son budget (
+          <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
+        </p>
       </div>
       {/*----------------------------------------------*/}
       {/*--              surdimensionner             --*/}
@@ -152,7 +158,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       {/*--               7 QUESTIONS                --*/}
       {/*----------------------------------------------*/}
-      <div className="mt-0 mb-4 space-y-0">
+      <div id="8questions" className="scroll-mt-72 mt-0 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
           <span className="text-2xl">🎯</span>
           <strong className="underline font-bold">
@@ -244,7 +250,6 @@ const Needs = () => {
         >
           Fabien.Wheel
         </Link>
-        ,
         <br />
         dernière mise à jour : juin 2025
       </p>

@@ -219,7 +219,6 @@ const Associations = () => {
             >
               Bonheur Sur Seine
             </Link>
-            ,
             <br />
             dernière mise à jour : juin 2024
           </p>

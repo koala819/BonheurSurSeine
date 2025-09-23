@@ -457,7 +457,6 @@ const Begin_premier_deballage = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : avril 2025
           </p>

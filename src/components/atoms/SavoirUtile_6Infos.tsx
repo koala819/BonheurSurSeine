@@ -59,10 +59,17 @@ const Practical_Info_officiel = () => {
               <p className="text-justify">
                 On y pense peu, mais les constructeurs communiquent
                 beaucoup&nbsp;! 😉
-                <br /> <br /> Selon les marques, on a un peu de tout : annonces
-                des nouveaux modèles, spécifications techniques, vidéos de
-                démontage et de changement de pneus, navigation dans les menus,
-                etc.
+              </p>
+              <p>
+                Selon les marques, on a un peu de tout : annonces marketing,
+                photos des nouveaux modèles, spécifications techniques, etc.
+              </p>
+              <p className="text-justify">
+                Sur YouTube, certains fabricants mettent également à diposition
+                des <strong>tutoriels vidéo</strong> pour faciliter
+                l&apos;entretien et le SAV&nbsp;: <strong>démontage</strong>, de{' '}
+                <strong>changement de pneus</strong>, ou encore explications et
+                navigation dans les menus et paramètres, etc.
               </p>
             </aside>
             <aside className="sm:w-1/3 md:w-2/5 text-right text-xs">
@@ -262,17 +269,7 @@ const Practical_Info_officiel = () => {
               className="link-style"
             >
               Bonheur Sur Seine
-            </Link>{' '}
-            et{' '}
-            <Link
-              href={'https://linktr.ee/fabien.wheel'}
-              passHref
-              target="_blank"
-              className="link-style"
-            >
-              Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : avril 2025
           </p>

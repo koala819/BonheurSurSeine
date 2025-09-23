@@ -164,7 +164,6 @@ const Maintenance = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : mars 2025
           </p>

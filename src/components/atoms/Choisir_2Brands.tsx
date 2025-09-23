@@ -93,7 +93,7 @@ const Brands = () => {
               😉
             </span>
           </p>
-          <p className="ml-10">
+          <p className="ml-4 md:ml-10">
             <Accordion isCompact>
               <AccordionItem
                 key="1"
@@ -348,7 +348,6 @@ const Brands = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : septembre 2025
           </p>

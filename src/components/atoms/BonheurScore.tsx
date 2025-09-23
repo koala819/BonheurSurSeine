@@ -268,7 +268,14 @@ export function BonheurScore({
               htmlFor="brand-filter"
               className="block text-xs font-medium text-gray-700 dark:text-gray-400"
             >
-              Filtrer par marque :
+              Filtrer par{' '}
+              <Link
+                href="/choisir-gyroroue#marques"
+                className="link-style font-bold"
+              >
+                marque
+              </Link>{' '}
+              :
             </label>
             <select
               id="brand-filter"
@@ -289,7 +296,14 @@ export function BonheurScore({
               htmlFor="category-filter"
               className="block text-xs font-medium text-gray-700 text-right dark:text-gray-400"
             >
-              Filtrer par catégorie :
+              Filtrer par{' '}
+              <Link
+                href="/choisir-gyroroue#marche"
+                className="link-style font-bold"
+              >
+                catégorie
+              </Link>{' '}
+              :
             </label>
             <select
               id="category-filter"

@@ -39,14 +39,19 @@ const Apprendre = () => {
           <p className="mb-6">
             Je recommande de commencer avec un{' '}
             <strong className="text-blue-700 dark:text-blue-300">
-              modèle léger
+              modèle pas trop lourd
             </strong>{' '}
             (&lt;25kg), simple et facile à manier. Même si certaines personnes
-            ont pu apprendre sur des roues plus grosses, les petits modèles{' '}
+            ont pu apprendre sur des roues plus grosses (
+            <i>
+              oui, ça se fait… mais ce n&apos;est pas la méthode la plus simple
+            </i>
+            ), les petits modèles{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               16 pouces
             </strong>{' '}
-            (exemples&nbsp;: V8S, V10F, 16S) sont un très bon compromis.
+            sont un très bon choix (exemples&nbsp;: V8S, V10F, 16S, 18XL qui
+            offrent un bon compromis poids-stabilité-maniabilité).
           </p>
 
           <h3 className="my-2 font-bold">🎓 Comment faire&nbsp;?</h3>
@@ -245,7 +250,6 @@ const Apprendre = () => {
         >
           Fabien.Wheel
         </Link>
-        ,
         <br />
         dernière mise à jour : septembre 2025
       </p>

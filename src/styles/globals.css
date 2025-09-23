@@ -112,6 +112,10 @@ text {
   font-size: 0.9em; /* optionnel, pour ajuster la taille */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

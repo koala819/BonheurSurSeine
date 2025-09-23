@@ -223,7 +223,6 @@ const CommonSense = () => {
             >
               Bonheur Sur Seine
             </Link>
-            ,
             <br />
             dernière mise à jour : avril 2025
           </p>

@@ -345,7 +345,6 @@ const HighwayCode = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : janvier 2025
           </p>

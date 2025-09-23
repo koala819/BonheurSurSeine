@@ -18,7 +18,7 @@ const Market = () => {
         </strong>{' '}
         sur le marché&nbsp;:
       </p>
-      <Accordion>
+      <Accordion isCompact>
         <AccordionItem
           key="1"
           aria-label="Centre-Ville"
@@ -131,7 +131,6 @@ const Market = () => {
         >
           Fabien.Wheel
         </Link>
-        ,
         <br />
         dernière mise à jour : février 2025
       </p>

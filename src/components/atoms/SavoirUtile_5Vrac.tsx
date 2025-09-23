@@ -177,7 +177,6 @@ const Practical_Vrac = () => {
             >
               Fabien.Wheel
             </Link>
-            ,
             <br />
             dernière mise à jour : septembre 2025
           </p>
