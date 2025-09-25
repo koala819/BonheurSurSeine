@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 //import Link from 'next/link'
-//import Apprendre from '@/src/components/atoms/Débuter_0Apprendre'
 import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballage'
 import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
 import Assurance from '@/src/components/atoms/Débuter_3Assurance'
 import HighwayCode from '@/src/components/atoms/Débuter_4HighwayCode'
 import Associations from '@/src/components/atoms/Débuter_5Associations'
+
+import HeroPhoto from '@/public/contact.jpg'
 
 export const metadata: Metadata = {
   title: 'Bien débuter la gyroroue / monoroue / roue électrique',
@@ -20,53 +22,59 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
-      <h1>Bien démarrer</h1>
-      <div className="space-y-2">
-        <div className="mt-0 mb-4 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
-          <aside className="md:w-1/2 mt-0 mb-0">
-            <p className="text-justify mt-0 mb-0">
-              {/*Tu viens d&apos;acheter une gyroroue ou tu envisages
-              d&apos;apprendre&nbsp;? Cette page t&apos;est dédiée.
-              <br />
-              Elle*/}
-              Cette page regroupe les <strong>bases indispensables</strong> et{' '}
-              <strong>rappels essentiels</strong> pour bien débuter en roue
+      <section className="">
+        {/* Titre */}
+        <h1 className="">Bien démarrer</h1>
+        {/* Image avec citation */}
+
+        {/* Contenu en 2 colonnes */}
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_minmax(400px,1fr)] gap-2 items-center">
+          {/* Colonne de gauche */}
+          <div className="space-y-2 text-justify text-gray-800 dark:text-gray-200 leading-relaxed">
+            <p className="">
+              Cette page regroupe de manière synthétique les{' '}
+              <strong>bases indispensables</strong> pour bien débuter en roue
               électrique, et t&apos;offrir{' '}
               <strong>tout ce qu&apos;il faut savoir</strong> pour commencer la
               gyroroue sereinement <strong>en France</strong>.
             </p>
-          </aside>
-          <aside className="md:w-1/2 blueBlock mt-0 mb-0">
-            <h4 className="mt-0 mb-0">
-              💙 &laquo; Le Bonheur de rouler, c&apos;est se mettre dans les
-              meilleures conditions pour pouvoir en profiter&nbsp;!&nbsp;&raquo;
-            </h4>
-          </aside>
-        </div>
 
-        {/*<div className="pinkBlock_Formation font-medium">
-          <h4 className="text-justify mt-0 mb-3 text-base md:text-lg">
-            Si tu veux apprendre la roue électrique mais que tu as peur de te
-            lancer, sache que je propose des{' '}
-            <strong className="text-rose-800">sessions de formation</strong>{' '}
-            théorique <u>et</u> pratique pour t&apos;accompagner et
-            dédramatiser.&nbsp;😊
-            <br />
-            En seulement 1h🕐, tu auras un autre regard sur
-            l&apos;objet.&nbsp;😎
-          </h4>
-          <h4 className="mt-0 mb-0">
-            ➡️ Pour <strong>prendre rendez-vous</strong>&nbsp;:{' '}
-            <Link
-              href={'mailto:bonheursurseine@gmail.com'}
-              className="underline text-rose-800 dark:text-black"
-            >
-              bonheursurseine@gmail.com
-            </Link>
-          </h4>
-        </div>*/}
-      </div>
-      {/*<Apprendre />*/}
+            <div>
+              <div className="blueBlock p-6 rounded-2xl shadow text-center space-y-1">
+                <p>
+                  ➡️ 5 thèmes{' '}
+                  <strong className="text-blue-800 dark:text-blue-300">
+                    <i>incontournables</i>
+                  </strong>{' '}
+                  à lire attentivement pour bien débuter et éviter les erreurs
+                  des débutants.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Colonne de droite */}
+
+          <div className="relative max-w-4xl mx-auto order-first md:order-last ">
+            <Image
+              src={HeroPhoto}
+              alt="Personne avec une roue"
+              width={900}
+              height={500}
+              className="w-full max-w-lg mx-auto rounded-2xl object-cover object-center shadow-lg"
+              priority
+              placeholder="blur"
+            />
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-cyan-800/80 text-white px-2 py-2 rounded-xl shadow-md max-w-lg text-center min-w-96 text-xs sm:text-sm font-bold">
+              💙 &laquo;&nbsp;Le Bonheur de rouler, c&apos;est se mettre dans
+              les meilleures conditions pour pouvoir en
+              profiter&nbsp;!&nbsp;&raquo;
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Premier_deballage />
       <CommonSense />
       <Assurance />
