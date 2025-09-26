@@ -121,15 +121,6 @@ const Market = () => {
           className="link-style"
         >
           Bonheur Sur Seine
-        </Link>{' '}
-        et{' '}
-        <Link
-          href={'https://linktr.ee/fabien.wheel'}
-          passHref
-          target="_blank"
-          className="link-style"
-        >
-          Fabien.Wheel
         </Link>
         <br />
         dernière mise à jour : février 2025

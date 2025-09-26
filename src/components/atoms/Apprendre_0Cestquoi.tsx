@@ -266,7 +266,7 @@ const Maintenance = () => {
               </div>
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
                 <p className="text-sm">
-                  ❌ «&nbsp;&Ccedil;a risque de déraper&nbsp;»
+                  ❌ «&nbsp;Et &ccedil;a va pas glisser&nbsp;?&nbsp;»
                 </p>
                 <p className="text-sm">
                   ✅ Une gyroroue ne dérape pas. Avec un pneu adéquat, on peut
@@ -283,7 +283,9 @@ const Maintenance = () => {
                 </p>
               </div>
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
-                <p className="text-sm">❌ «&nbsp;&Ccedil;a coûte cher&nbsp;»</p>
+                <p className="text-sm">
+                  ❌ «&nbsp;&Ccedil;a coûte cher, non&nbsp;?&nbsp;»
+                </p>
                 <p className="text-sm">
                   ✅ Oui et non… les coûts d&apos;entretien sont faibles&nbsp;:
                   on économise sur l&apos;essence et les transports. À long
