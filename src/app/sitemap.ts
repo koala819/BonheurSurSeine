@@ -47,5 +47,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 0.5,
     },
+    {
+      url: `${process.env.CLIENT_URL}/plan-du-site`,
+      lastModified: new Date(),
+      priority: 0.5,
+    },
   ]
 }

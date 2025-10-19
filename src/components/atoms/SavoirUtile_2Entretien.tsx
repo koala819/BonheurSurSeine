@@ -51,7 +51,7 @@ const Maintenance = () => {
         <AccordionItem
           key="1"
           aria-label="Bien entretenir sa gyroroue"
-          title={<h3>🛠 L&apos;entretien</h3>}
+          title={<h3>🛠️ L&apos;entretien</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-1 text-justify">

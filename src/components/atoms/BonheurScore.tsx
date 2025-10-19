@@ -57,8 +57,8 @@ export function BonheurScore({
   /*PAGE BONHEURSCORE*/
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-8 mb-4">
-        <h1 className="whitespace-break-spaces mb-6 mt-9">
+      <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+        <h1 className="whitespace-break-spaces">
           BonheurScore - Tests et Reviews
         </h1>
         <div className="grid md:grid-cols-3 gap-4">
@@ -262,7 +262,11 @@ export function BonheurScore({
 
         {/*----------------------------------------------*/}
         {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
-        <div className="mt-4 flex justify-between items-center">
+        <div
+          className="mt-4 flex justify-between items-center
+          scroll-mt-28"
+          id="liste-tests"
+        >
           <div>
             <label
               htmlFor="brand-filter"

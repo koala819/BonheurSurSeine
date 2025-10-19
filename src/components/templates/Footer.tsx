@@ -9,13 +9,14 @@ import Link from 'next/link'
 
 import { Article } from '@/src/components/molecules/Article'
 import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
-import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 
+//import { FooterColumn } from '@/src/components/molecules/FooterColumn'
 import logo from '@/public/BonheurSurSeine_logo.png'
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import Tipeee from '@/public/Tipeee.svg'
-import dix31 from '@/public/white_DIX31.png'
+
+//import dix31 from '@/public/white_DIX31.png'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -123,26 +124,23 @@ export function Footer() {
 
         <aside className="flex justify-center items-center md:w-1/2">
           <div className="">
-            <FooterColumn
-              title=" "
-              items={[{ text: 'Mentions légales', link: '/mentions' }]}
-            />
-            <p className="py-1 flex flex-col md:flex-row space-y-8 md:space-y-0">
-              {currentYear} Created by
+            <p>
               <Link
-                href="https://www.dix31.com"
-                target="_blank"
-                className="mx-1 hover:underline"
+                href="/mentions"
+                className="tracking-widest hover:cursor-pointer hover:underline text-xs xl:text-base"
               >
-                <picture className="flex justify-center md:justify-end text-white pr-1 mt-1">
-                  <Image
-                    src={dix31}
-                    alt="Logo DIX31.com"
-                    height={15}
-                    className="text-white"
-                  />
-                </picture>
+                Mentions légales
               </Link>
+              {' - '}
+              <Link
+                href="/plan-du-site"
+                className="tracking-widest hover:cursor-pointer hover:underline text-xs xl:text-base"
+              >
+                Plan du Site
+              </Link>
+            </p>
+            <p className="text-xs md:text-sm">
+              © {currentYear} Bonheur Sur Seine — Tous droits réservés
             </p>
           </div>
         </aside>

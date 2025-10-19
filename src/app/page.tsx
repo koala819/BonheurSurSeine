@@ -29,7 +29,10 @@ export default async function Page() {
         text={accueil.data.text}
         titre={accueil.data.titre}
       />
-      <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white">
+      <section
+        className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white"
+        id="projet"
+      >
         <FinishSection text={accueil.data.fin} />
         <p className="mt-4">
           Un mot ou une expression qui semble obscure&nbsp;? <br />

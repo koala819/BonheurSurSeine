@@ -32,7 +32,6 @@ export default function Page() {
         <strong>Contributions :</strong> Site développé avec l&apos;aide de deux
         personnes bénévoles.
       </p>
-
       {/***********************************************************************/}
       <h3>Hébergement</h3>
       <p>
@@ -74,7 +73,6 @@ export default function Page() {
         <br />
         <strong>Site web :</strong> https://vercel.com
       </p>
-
       {/***********************************************************************/}
       <h3>Conditions d&apos;utilisation</h3>
       <p>
@@ -224,22 +222,16 @@ export default function Page() {
           <b>Gestion du site</b>
         </li>
         <p>
-          Nous nous réservons le droit, mais non l&apos;obligation, de :
-          <ul className="list-decimal ml-12 space-y-0">
-            <li>
-              Surveiller le site <i>Bonheur sur Seine</i> pour repérer tout cas
-              de violation des présentes conditions d&apos;utilisation.
-            </li>
-            <li>
-              Prendre les mesures juridiques qui s&apos;imposent à
-              l&apos;encontre de toute personne qui, à notre seule discrétion,
-              enfreint la loi ou les présentes conditions d&apos;utilisation.
-            </li>
-            <li>
-              Gérer le site <i>Bonheur sur Seine</i> de manière à protéger nos
-              droits et nos biens et à faciliter le bon fonctionnement du site.
-            </li>
-          </ul>
+          Nous nous réservons le droit, mais non l&apos;obligation, de : <br />
+          &emsp;1.&ensp; Surveiller le site <i>Bonheur sur Seine</i> pour
+          repérer tout cas de violation des présentes conditions
+          d&apos;utilisation. <br />
+          &emsp;2.&ensp; Prendre les mesures juridiques qui s&apos;imposent à
+          l&apos;encontre de toute personne qui, à notre seule discrétion,
+          enfreint la loi ou les présentes conditions d&apos;utilisation. <br />
+          &emsp;3.&ensp; Gérer le site <i>Bonheur sur Seine</i> de manière à
+          protéger nos droits et nos biens et à faciliter le bon fonctionnement
+          du site.
         </p>
         <li>
           <b>Liens Hypertextes</b>
@@ -251,7 +243,6 @@ export default function Page() {
           confidentialité qu&apos;ils adoptent.
         </p>
       </ul>
-
       {/***********************************************************************/}
       <h3>Données Personnelles</h3>
       <p>
@@ -271,10 +262,9 @@ export default function Page() {
         Nous nous engageons à respecter votre confidentialité et à protéger vos
         données personnelles.
       </p>
-
       {/***********************************************************************/}
       <h3>Politique relative aux cookies</h3>
-      <p>
+      <p className="mb-0">
         En poursuivant votre navigation sur ce site internet, vous acceptez
         l&apos;utilisation de cookies. Un cookie est un petit fichier texte créé
         par un serveur web du site internet visité. Les cookies sont stockés sur
@@ -284,27 +274,12 @@ export default function Page() {
         Nous utilisons trois sortes de cookies : les cookies Fonctionnels,
         Statistiques, et Publicitaires.
         <br />
-        Sur ce site web, les cookies sont utilisés pour :
+        Sur ce site web, les cookies sont utilisés pour :<br />
+        &emsp;&bull;&ensp;Réaliser des statistiques de visites avec Google
+        Analytics.
         <br />
-        <ul className="compactlist">
-          <li>Réaliser des statistiques de visites avec Google Analytics.</li>
-          <li>Vous offrir une meilleure expérience utilisateur.</li>
-        </ul>
+        &emsp;&bull;&ensp;Vous offrir une meilleure expérience utilisateur.
       </p>
-
-      {/***********************************************************************/}
-      <h3>Plan du site</h3>
-      <ul className="compactlist">
-        <li>Accueil</li>
-        <li>BonheurScore</li>
-        <li>Codepromo</li>
-        <li>Apprendre</li>
-        <li>Choisir</li>
-        <li>Bien démarrer</li>
-        <li>Savoir Utile</li>
-        <li>Remerciement</li>
-      </ul>
-
       {/***********************************************************************/}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
         Mentions légales créées le <strong>30/01/2024</strong>
