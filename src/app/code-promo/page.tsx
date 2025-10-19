@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import GrillePromo from '@/src/components/atoms/CodePromo_0grillepartenaires'
+import BoutiqueBSS from '@/src/components/atoms/CodePromo_1boutique'
 
-//import BoutiqueBSS from '@/src/components/atoms/CodePromo_1boutique'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default async function Page() {
       </p>
 
       {/* Capsule Boutique avec Timer */}
-      {/*<BoutiqueBSS endDate="2025-09-12T12:29:59" />
+      <BoutiqueBSS endDate="2025-12-23T11:59:59" />
 
       {/* Grille de promos partenaires */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">

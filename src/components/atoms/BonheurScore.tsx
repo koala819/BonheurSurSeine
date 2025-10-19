@@ -146,11 +146,12 @@ export function BonheurScore({
             <p className="mt-1 text-sm">
               🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
               toutes les gyroroues que je teste,{' '}
-              <strong className=" text-fuchsia-700 dark:text-violet-400">
-                reviens régulièrement
-              </strong>
+              <Link href="/EUC-game">
+                <strong className="text-fuchsia-700 dark:text-violet-400">
+                  reviens régulièrement
+                </strong>
+              </Link>
               .
-              {/*t&apos;invite à <Link href="/eucgame"><strong className=" text-fuchsia-700 dark:text-fuchsia-400">régulièrement</strong>.</Link>*/}
             </p>
           </div>
         </div>

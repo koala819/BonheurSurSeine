@@ -84,8 +84,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/BonheurScore"
@@ -116,8 +116,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/code-promo"
@@ -149,8 +149,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/apprendre-gyroroue#cestquoi"
@@ -182,8 +182,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/choisir-gyroroue#marche"
@@ -231,8 +231,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/debuter-gyroroue#deballage"
@@ -288,8 +288,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/guide-utile-gyroroue#dico"
@@ -311,7 +311,7 @@ export function Top() {
                   href="/guide-utile-gyroroue#batterie"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
-                  🔸Batterie et autonomie
+                  🔸La batterie
                 </Link>
               </li>
               <li>
@@ -353,8 +353,8 @@ export function Top() {
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
                   href="/mille-merci#soutien"

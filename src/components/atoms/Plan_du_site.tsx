@@ -159,7 +159,7 @@ export default function Page() {
                 <p key={it.label}>
                   <Link
                     href={it.href}
-                    className="text-green-700 hover:underline"
+                    className="text-green-700 hover:underline dark:text-green-600"
                   >
                     {it.label}
                   </Link>
@@ -171,7 +171,7 @@ export default function Page() {
       </section>
 
       {/* 🧑‍💻 À propos */}
-      <section className="max-w-6xl mx-auto bg-green-50 border border-green-100 rounded-2xl p-6 md:p-8 shadow-sm">
+      <section className="max-w-6xl mx-auto bg-green-50 border border-green-100 rounded-2xl p-6 md:p-8 shadow-sm dark:bg-green-950 dark:border-green-800 ">
         <h2 className="text-2xl font-semibold mb-2">🧑‍💻 À propos</h2>
         <p className="text-sm text-justify leading-relaxed">
           <strong>Bonheur Sur Seine</strong> est un site indépendant dédié à la
