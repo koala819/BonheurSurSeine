@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Discord from '@/public/Discord.png'
-import HeroPhoto from '@/public/contact.jpg'
+import HeroPhoto from '@/public/PhotoBSS - Choisir.jpg'
 
 const Choice = () => {
   return (

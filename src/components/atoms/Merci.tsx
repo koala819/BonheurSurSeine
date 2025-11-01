@@ -9,8 +9,8 @@ import { ContactFriends } from '@/src/types/models'
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
+import bonheurSurSeine from '@/public/PhotoBSS - Remerciements.jpg'
 import Tipeee from '@/public/Tipeee.svg'
-import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Contact({
   // text,
@@ -91,7 +91,6 @@ export default function Contact({
           <div>
             <ul className="list">
               <li>Je voudrais faire une suggestion de sujet pour une vidéo</li>
-              <li>J&apos;ai une question à poser</li>
               <li>J&apos;ai vu un bug, une erreur</li>
               <li>Je veux t&apos;insulter parce que tu fais de la merde</li>
               <li>Autre chose</li>
@@ -231,8 +230,7 @@ export default function Contact({
               <p>Je vous répondrai d&apos;ici 24h maximum.</p>
             )}
           </div>
-        </aside>
-*/}
+        </aside>*/}
       </section>
 
       <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
@@ -284,7 +282,7 @@ export default function Contact({
         </div>
       </div>
 
-      <section id="merci" className="space-y-2 my-4">
+      <section id="copains" className="space-y-2 my-4">
         <h2>Remerciements</h2>
         <p className="text-sm text-justify">
           <b>Bonheur sur Seine</b>, ce sont des vidéos

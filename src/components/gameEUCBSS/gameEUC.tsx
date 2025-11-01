@@ -350,11 +350,14 @@ export default function RexEUC() {
               Jouer
             </button>
             <button
-              onClick={() => router.push('/Merci')}
+              onClick={() => router.push('/mille-merci')}
               className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-yellow-600"
             >
               Quitter
             </button>
+            <p className="absolute bottom-1 items-center text-xs font-bold text-black">
+              Appuie sur Espace pour sauter
+            </p>
           </div>
         </div>
       )}

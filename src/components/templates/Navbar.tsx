@@ -365,7 +365,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/mille-merci#merci"
+                  href="/mille-merci#copains"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Merci !

@@ -63,6 +63,7 @@ export default function CardPromo({
       </div>
       {/* PARTIE REDUCTION */}
       <div className="flex flex-wrap md:flex-nowrap space-y-0 mt-auto items-center">
+        {/* Icône toujours visible */}
         <aside className="w-2/12 flex justify-center items-center">
           <Link
             href={website}
@@ -72,12 +73,20 @@ export default function CardPromo({
             <MdLoyalty className="h-10 w-10 text-bg-light dark:text-white dark:text-bg-gray-300 mr-0" />
           </Link>
         </aside>
-        <aside className="w-10/12">
-          Code&nbsp;:
-          <span className="font-bold text-yellow-600 ml-1">{code}</span>
-          <br />
-          Réduction&nbsp;: {montant}
-        </aside>
+
+        {/* Affiche seulement si au moins un champ existe */}
+        {(code || montant) && (
+          <aside className="w-10/12">
+            {code && (
+              <>
+                Code&nbsp;:
+                <span className="font-bold text-yellow-600 ml-1">{code}</span>
+                <br />
+              </>
+            )}
+            {montant && <>Réduction&nbsp;: {montant}</>}
+          </aside>
+        )}
       </div>
     </section>
   )

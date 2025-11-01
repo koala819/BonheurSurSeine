@@ -13,16 +13,28 @@ export const metadata = {
 export default function GamePage() {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
-      <div className="h-screen bg-gray-700 rounded-lg p-6">
-        <div className="text-white text-center mt-4">
-          <h4>😁Bonheur sur Seine versus Wild😁</h4>
+      <div className="bg-gray-700 rounded-lg p-6">
+        <div className="mb-4">
+          <h2 className="text-white text-center mt-4">
+            Bonheur sur Seine vs. City Wild
+          </h2>
+          <p className="text-yellow-400 text-xs text-center mb-4">
+            <span className="text-large"> 😁Bravo&nbsp;!😁 </span>
+            <br />
+            🎁<i>Tu as trouvé le petit contenu bonus de mon site&nbsp;!</i> 🎁
+          </p>
+          <p
+            className="mt-4 space-y-6 rounded-lg bg-yellow-500 p-4 shadow-md transition-shadow dark:bg-yellow-800 md:ml-2 md:mr-2 md:mt-0
+           font-semibold ml-8 mr-8 text-small"
+          >
+            Tu penses être parmi les 5 premiers à découvrir cette page&nbsp;?
+            <br />
+            Contacte-moi à <i>jeuxbss@gmail.com</i>.
+          </p>
         </div>
-        <p className="text-yellow-400 text-xs text-center mb-4">
-          <span className="text-large"> Bravo&nbsp;! </span>
-          <br />
-          🎁<i>Tu as trouvé le petit contenu bonus de mon site&nbsp;!</i> 🎁
-        </p>
+
         <RexEUC />
+
         <p className="mt-4 text-white text-center mb-4">
           ▶️&nbsp;
           <i>
@@ -56,10 +68,6 @@ export default function GamePage() {
             barrières&nbsp;: prudence, casque, gants, et vitesse maitrisée
           </i>
           &nbsp;».
-        </div>
-        <div className="redBlock ml-8 mr-8 text-small mt-2">
-          Tu penses être parmi les 5 premiers à découvrir cette page&nbsp;?
-          Contacte-moi à jeuxbss@gmail.com.
         </div>
       </div>
     </div>

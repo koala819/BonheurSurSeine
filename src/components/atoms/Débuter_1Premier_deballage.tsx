@@ -309,10 +309,12 @@ const Begin_premier_deballage = () => {
                   </td>
                   <td className="px-2 py-1">
                     <a
+                      href="https://apps.apple.com/us/app/nosfet/id6754307336"
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center text-blue-500 underline gap-2"
                     >
-                      <FaApple /> indisponible
+                      <FaApple /> iOS
                     </a>
                   </td>
                   <td className="px-2 py-1">

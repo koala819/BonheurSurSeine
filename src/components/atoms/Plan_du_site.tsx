@@ -105,7 +105,7 @@ const sections = [
         label: '💬 Rejoindre la communauté Discord',
         href: 'https://discord.com/invite/Jhgw7C96Jf',
       },
-      { label: '🙂 Les copains', href: '/mille-merci#merci' },
+      { label: '🙂 Les copains', href: '/mille-merci#copains' },
     ],
   },
   {
