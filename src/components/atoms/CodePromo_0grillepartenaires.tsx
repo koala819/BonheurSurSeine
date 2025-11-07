@@ -81,8 +81,14 @@ export default function CardPromo({
               <>
                 Contact e-mail&nbsp;:
                 <br />
-                <Link href={website} target="_blank" className="cursor-pointer">
-                  <span className="font-bold text-yellow-600 ml-1">{code}</span>
+                <Link
+                  href="mailto:bonheursurseine@gmail.com"
+                  target="_blank"
+                  className="cursor-pointer"
+                >
+                  <span className="font-bold text-yellow-600 ml-1 text-sm">
+                    {code}
+                  </span>
                 </Link>
               </>
             ) : (
