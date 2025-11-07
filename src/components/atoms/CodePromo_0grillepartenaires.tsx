@@ -73,16 +73,26 @@ export default function CardPromo({
             <MdLoyalty className="h-10 w-10 text-bg-light dark:text-white dark:text-bg-gray-300 mr-0" />
           </Link>
         </aside>
-
         {/* Affiche seulement si au moins un champ existe */}
         {(code || montant) && (
           <aside className="w-10/12">
-            {code && (
+            {/* Cas spécifique : si le code est une adresse mail */}
+            {code === 'bonheursurseine@gmail.com' ? (
               <>
-                Code&nbsp;:
-                <span className="font-bold text-yellow-600 ml-1">{code}</span>
+                Contact e-mail&nbsp;:
                 <br />
+                <Link href={website} target="_blank" className="cursor-pointer">
+                  <span className="font-bold text-yellow-600 ml-1">{code}</span>
+                </Link>
               </>
+            ) : (
+              code && (
+                <>
+                  Code&nbsp;:
+                  <span className="font-bold text-yellow-600 ml-1">{code}</span>
+                  <br />
+                </>
+              )
             )}
             {montant && <>Réduction&nbsp;: {montant}</>}
           </aside>
