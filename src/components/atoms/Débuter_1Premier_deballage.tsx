@@ -59,7 +59,7 @@ const Begin_premier_deballage = () => {
         <AccordionItem
           key="1"
           aria-label="Premier déballage"
-          title={<h3>📦 Premier déballage</h3>}
+          title={<h3>📦 Le premier déballage</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           {/*---------------------------------------------------------------------*/}

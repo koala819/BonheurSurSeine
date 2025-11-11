@@ -43,9 +43,9 @@ const Page = () => {
             <div>
               <div className="blueBlock p-6 rounded-2xl shadow text-center space-y-1">
                 <p>
-                  ➡️ 5 thèmes{' '}
+                  ➡️{' '}
                   <strong className="text-blue-800 dark:text-blue-300">
-                    <i>incontournables</i>
+                    5 thèmes <i>incontournables</i>
                   </strong>{' '}
                   à lire attentivement pour bien débuter et éviter les erreurs
                   des débutants.

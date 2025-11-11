@@ -237,7 +237,7 @@ const Maintenance = () => {
               {/* ------------------ Idées reçues ------------------ */}
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
                 <p className="text-sm">
-                  ❌ «&nbsp;Il faut avoir de l&apos;équilibre&nbsp;»
+                  ❌ «&nbsp;Il faut avoir de l&apos;équilibre.&nbsp;»
                 </p>
                 <p className="text-sm">
                   ✅ Nul besoin d&apos;être acrobate&nbsp;! En réalité, quelques
@@ -246,7 +246,7 @@ const Maintenance = () => {
               </div>
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
                 <p className="text-sm">
-                  ❌ «&nbsp;C&apos;est trop dangereux&nbsp;»
+                  ❌ «&nbsp;Mais c&apos;est dangereux...&nbsp;»
                 </p>
                 <p className="text-sm">
                   ✅ Comme tout véhicule, il y a des risques, mais avec un peu
@@ -256,7 +256,7 @@ const Maintenance = () => {
               </div>
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
                 <p className="text-sm">
-                  ❌ «&nbsp;C&apos;est pour les jeunes&nbsp;!&nbsp;»
+                  ❌ «&nbsp;C&apos;est pour les jeunes, ça&nbsp;!&nbsp;»
                 </p>
                 <p className="text-sm">
                   ✅ Pas du tout ! On croise des wheelers de 7 à 77 ans. La
@@ -275,7 +275,7 @@ const Maintenance = () => {
               </div>
               <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
                 <p className="text-sm">
-                  ❌ «&nbsp;Il faut un équipement&nbsp;»
+                  ❌ «&nbsp;Il faut un équipement.&nbsp;»
                 </p>
                 <p className="text-sm">
                   ✅ Pas besoin d&apos;armure&nbsp;! Un casque et des gants

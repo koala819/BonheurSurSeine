@@ -51,7 +51,7 @@ const Assurance = () => {
         <AccordionItem
           key="1"
           aria-label="L'assurance"
-          title={<h3>🛡️ Assurance</h3>}
+          title={<h3>🛡️ L&apos;assurance</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <div className="mb-8 flex flex-col md:flex-row items-center">

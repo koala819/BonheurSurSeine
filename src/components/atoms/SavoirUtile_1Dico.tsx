@@ -193,15 +193,15 @@ const Practical_Dico = () => {
           title={<h3>📖 Le p&apos;tit Dico du Bonheur</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
-          <div className="mb-4 flex flex-col sm:flex-row items-center">
-            <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
-              <p className="mb-4 text-justify">
+          <div className="mb-4 flex flex-col sm:flex-row items-center gap-2">
+            <aside className="sm:w-2/3 md:w-3/5 space-y-4">
+              <p className="text-justify">
                 Ce lexique propose des{' '}
                 <strong>explications simples et concises</strong> de quelques
                 termes fréquemment utilisés dans l&apos;univers de la roue
                 électrique.
               </p>
-              <div className="blueBlock mb-1">
+              <div className="blueBlock">
                 <b>
                   📖 Pour décrypter le langage des wheelers&nbsp;: 1&nbsp;mot
                   juste vaut 1&nbsp;000 explications&nbsp;!
@@ -212,8 +212,6 @@ const Practical_Dico = () => {
               <Image
                 src={Image_dico}
                 alt="Image_dico"
-                width={400}
-                height={195}
                 className="rounded-lg cursor-pointer"
               />
             </aside>

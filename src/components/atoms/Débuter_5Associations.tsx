@@ -57,7 +57,7 @@ const Associations = () => {
         <AccordionItem
           key="1"
           aria-label="Groupes & associations"
-          title={<h3>🌍 Groupes & associations</h3>}
+          title={<h3>🌍 Les groupes & associations</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           {/* Le Bonheur */}

@@ -51,7 +51,7 @@ const HighwayCode = () => {
         <AccordionItem
           key="1"
           aria-label="Le code de la route"
-          title={<h3>🚦 Code de la route</h3>}
+          title={<h3>🚦 Le code de la route</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-4 text-justify">

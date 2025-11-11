@@ -67,11 +67,14 @@ const sections = [
   {
     title: 'Bien Démarrer',
     items: [
-      { label: '📦 Premier déballage', href: '/debuter-gyroroue#deballage' },
+      { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
       { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },
-      { label: '🛡️ Assurance', href: '/debuter-gyroroue#assurance' },
-      { label: '🚦 Code de la route', href: '/debuter-gyroroue#code' },
-      { label: '🌍 Groupes & associations', href: '/debuter-gyroroue#asso' },
+      { label: "🛡️ L'assurance", href: '/debuter-gyroroue#assurance' },
+      { label: '🚦 Le code de la route', href: '/debuter-gyroroue#code' },
+      {
+        label: '🌍 Les groupes & associations',
+        href: '/debuter-gyroroue#asso',
+      },
     ],
   },
   {
@@ -159,6 +162,7 @@ export default function Page() {
                 <p key={it.label}>
                   <Link
                     href={it.href}
+                    target="_blank"
                     className="text-green-700 hover:underline dark:text-green-600"
                   >
                     {it.label}

@@ -216,7 +216,7 @@ const Apprendre = () => {
             {' '}
             Alors regarde
           </Link>
-          &nbsp;! C&apos;était en 2018, et moi aussi j&apos;ai galéré...
+          &nbsp;! C&apos;était mes débuts, et moi aussi j&apos;ai galéré...
         </p>
         <p className="">
           Comme pour le vélo de notre enfance, cela demande juste un peu d&apos;
