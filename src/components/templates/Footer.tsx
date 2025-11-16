@@ -101,7 +101,7 @@ export function Footer() {
                       <FiInstagram size={32} />
                     </Link>
                   </Tooltip>
-                  <Tooltip showArrow={true} color={'danger'} content="Tipee">
+                  <Tooltip showArrow={true} color={'danger'} content="Tipeee">
                     <Link
                       href="https://fr.tipeee.com/bonheur-sur-seine"
                       target="_blank"

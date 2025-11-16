@@ -26,7 +26,7 @@ export function Top() {
   const menuItems = [
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
-    { name: 'Codes Promo', path: '/code-promo' },
+    { name: 'Codes Promo', path: '/codes-promo' },
     { name: 'Apprendre la roue', path: '/apprendre-gyroroue' },
     { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
     { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
@@ -72,13 +72,13 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex " justify="center">
+      <NavbarContent className="hidden md:flex gap-3" justify="center">
         {/*--------------------------------------------*/}
         <div className="relative group">
           <NavbarItem isActive={path.includes('/BonheurScore')}>
             <Link
               href="/BonheurScore"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               BonheurScore
             </Link>
@@ -107,10 +107,10 @@ export function Top() {
         </div>
         {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/code-promo')}>
+          <NavbarItem isActive={path.includes('/codes-promo')}>
             <Link
-              href="/code-promo"
-              className="text-white hover:text-text-link"
+              href="/codes-promo"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Codes Promo
             </Link>
@@ -120,7 +120,7 @@ export function Top() {
             <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/code-promo"
+                  href="/codes-promo"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Mes Partenaires
@@ -128,7 +128,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/code-promo"
+                  href="/codes-promo"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Offres Exclusives
@@ -143,7 +143,7 @@ export function Top() {
           <NavbarItem isActive={path.includes('/apprendre-gyroroue')}>
             <Link
               href="/apprendre-gyroroue"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Apprendre
             </Link>
@@ -176,7 +176,7 @@ export function Top() {
           <NavbarItem isActive={path.includes('/choisir-gyroroue')}>
             <Link
               href="/choisir-gyroroue"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Choisir
             </Link>
@@ -225,7 +225,7 @@ export function Top() {
           <NavbarItem isActive={path.includes('/debuter-gyroroue')}>
             <Link
               href="/debuter-gyroroue"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Bien Démarrer
             </Link>
@@ -282,7 +282,7 @@ export function Top() {
           <NavbarItem isActive={path.includes('/guide-utile-gyroroue')}>
             <Link
               href="/guide-utile-gyroroue"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Savoir Utile
             </Link>
@@ -347,7 +347,7 @@ export function Top() {
           <NavbarItem isActive={path.includes('/mille-merci')}>
             <Link
               href="/mille-merci"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Remerciements
             </Link>

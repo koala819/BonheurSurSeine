@@ -52,7 +52,7 @@ export default function CardPromo({
           <Link
             href={website}
             target="_blank"
-            className="flex items-center mb-1 mt-4 mr-4 group cursor-pointer text-gray-800 dark:text-gray-300"
+            className="flex items-center mb-0 mt-3 mr-4 group cursor-pointer text-gray-800 dark:text-gray-300"
           >
             {name}
           </Link>
@@ -78,7 +78,7 @@ export default function CardPromo({
           <aside className="w-10/12">
             {/* Cas spécifique : si le code est une adresse mail */}
             {code === 'bonheursurseine@gmail.com' ? (
-              <>
+              <p>
                 Contact e-mail&nbsp;:
                 <br />
                 <Link
@@ -90,17 +90,17 @@ export default function CardPromo({
                     {code}
                   </span>
                 </Link>
-              </>
+              </p>
             ) : (
               code && (
-                <>
+                <p>
                   Code&nbsp;:
                   <span className="font-bold text-yellow-600 ml-1">{code}</span>
                   <br />
-                </>
+                </p>
               )
             )}
-            {montant && <>Réduction&nbsp;: {montant}</>}
+            {montant && <p>Réduction&nbsp;: {montant}</p>}
           </aside>
         )}
       </div>

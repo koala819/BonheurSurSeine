@@ -228,7 +228,7 @@ const Assurance = () => {
                 . La plupart des assureurs proposent des contrats adaptés.
                 <br />
                 Tu trouveras un{' '}
-                <Link href="/CodePromo" className="link-style">
+                <Link href="/codes-promo" className="link-style">
                   code Promo
                 </Link>{' '}
                 à utiliser chez Wizzas, un courtier en assurance spécialisé et

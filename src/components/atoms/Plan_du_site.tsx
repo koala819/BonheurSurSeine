@@ -27,8 +27,8 @@ const sections = [
   {
     title: 'Codes Promo',
     items: [
-      { label: '🛒 Mes Partenaires', href: '/code-promo' },
-      { label: '💶 Offres Exclusives', href: '/code-promo' },
+      { label: '🛒 Mes Partenaires', href: '/codes-promo' },
+      { label: '💶 Offres Exclusives', href: '/codes-promo' },
     ],
   },
   {
