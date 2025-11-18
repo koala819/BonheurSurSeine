@@ -28,11 +28,6 @@ const nextConfig = {
     return [
       // --- Anciennes URLs obsolètes ---
       {
-        source: '/bonheurscore',
-        destination: '/BonheurScore',
-        permanent: true,
-      },
-      {
         source: '/promo',
         destination: '/codes-promo',
         permanent: true,
