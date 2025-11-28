@@ -182,13 +182,15 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       <div className="yellowBlockpiege mb-4" id="5pièges">
         <h4 className="mt-0 mb-0 text-xl font-bold">
-          😱 5 pièges à éviter&nbsp;:
+          😱 6 pièges à éviter&nbsp;:
         </h4>
         <p>
           🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
           <br />
           🔸 <b>Regarder le sol</b> et ses pieds (fixe l&apos;horizon devant toi
           pour rester stable) <br />
+          🔸 <b>Serrer la roue</b> avec ses jambes (la roue doit vivre sous tes
+          pieds) <br />
           🔸 <b>Se crisper</b> (la décontraction du corps aide à sentir la roue
           et à réagir aux oscillations, alors respire) <br />
           🔸 Chercher la <b>vitesse</b> dès le départ (la vitesse vient avec la
