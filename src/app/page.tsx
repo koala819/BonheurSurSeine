@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 // import CountTimer from '../components/atoms/CounTimer'
@@ -11,7 +12,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroues',
   description:
-    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Le monde des monoroues et roues électriques avec BonheurSurSeine, expert à Paris : tests, essais, reviews, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique.",
+    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Le monde des monoroues / roues électriques avec BonheurSurSeine, expert à Paris : tests, essais, reviews, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique.",
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },
@@ -28,6 +29,24 @@ export default async function Page() {
         text={accueil.data.text}
         titre={accueil.data.titre}
       />
+      <section
+        className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white"
+        id="projet"
+      >
+        <FinishSection text={accueil.data.fin} />
+        <p className="mt-4">
+          Un mot ou une expression qui semble obscure&nbsp;? <br />
+          ➡️ N&apos;hésite pas à{' '}
+          <Link
+            href="/guide-utile-gyroroue#dico"
+            className="link-style font-bold text-emerald-600 dark:text-emerald-400"
+          >
+            consulter le P&apos;tit Dico du Bonheur
+          </Link>{' '}
+          sur la page <i>Savoir Utile</i>.
+        </p>
+      </section>
+      <Quote />
       <div className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <p className="text-center text-emerald-600 dark:text-emerald-400 md:text-lg lg:text-xl font-medium leading-relaxed">
           Ce site est entièrement gratuit.
@@ -42,8 +61,6 @@ export default async function Page() {
           plus grand nombre de manière <strong>simple et lisible</strong>.
         </p>
       </div>
-      <Quote />
-      <FinishSection text={accueil.data.fin} />
     </section>
   )
 }

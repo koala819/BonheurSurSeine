@@ -71,7 +71,7 @@ const Practical_Vrac = () => {
   return (
     <section
       id="navi"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -130,13 +130,13 @@ const Practical_Vrac = () => {
 
             {/* Section avec 2 capsules de même hauteur */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              {/* Capsule CIRCULATION */}
+              {/* Capsule cartographie */}
               <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
                 <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                   🗺️ Site de cartographie
                 </h4>
-                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
-                  <li className="text-justify text-sm">
+                <ul className="list-disc space-y-2 list-outside ml-6 text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-sm">
                     <Link
                       href="https://www.cyclosm.org/"
                       target="_blank"
@@ -145,7 +145,7 @@ const Practical_Vrac = () => {
                       CyclOSM
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://fr.eurovelo.com/#routes-and-countries"
                       target="_blank"
@@ -154,7 +154,7 @@ const Practical_Vrac = () => {
                       Eurovelo
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://gmap2xxx.sdesimeur.com/"
                       target="_blank"
@@ -164,7 +164,7 @@ const Practical_Vrac = () => {
                     </Link>{' '}
                     (pour avoir des fichiers GPX)
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.opencyclemap.org/"
                       target="_blank"
@@ -173,7 +173,7 @@ const Practical_Vrac = () => {
                       OpenCycle Map
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.af3v.org/les-voies-vertes/carte-du-schema-national-des-veloroutes-et-voies-vertes/"
                       target="_blank"
@@ -181,17 +181,17 @@ const Practical_Vrac = () => {
                     >
                       Voies vertes
                     </Link>{' '}
-                    (cartographiées par l&apos;AF3V)
+                    (par l&apos;AF3V)
                   </li>
                 </ul>
               </div>
               {/* Capsule ÉQUIPEMENTS */}
               <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow flex flex-col">
-                <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
+                <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                   📲 Applis de navigation
                 </h4>
-                <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
-                  <li className="text-justify text-sm">
+                <ul className="list-disc space-y-2 list-outide ml-6 text-sm flex-1 text-gray-800 dark:text-gray-100">
+                  <li className="text-sm">
                     <Link
                       href="https://geovelo.app/fr/"
                       target="_blank"
@@ -200,7 +200,7 @@ const Practical_Vrac = () => {
                       Géovélo
                     </Link>{' '}
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://www.komoot.com/fr-fr/devices"
                       target="_blank"
@@ -209,7 +209,7 @@ const Practical_Vrac = () => {
                       Komoot
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     <Link
                       href="https://fr.wikiloc.com/outdoor-navigation-app?ref=home"
                       target="_blank"
@@ -218,7 +218,7 @@ const Practical_Vrac = () => {
                       Wikiloc
                     </Link>
                   </li>
-                  <li className="text-justify text-sm">
+                  <li className="text-sm">
                     Certaines applications dédiées à la roue (Darknessboot{' '}
                     <Link
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
@@ -308,7 +308,7 @@ const Practical_Vrac = () => {
           {/*--------------------------------------------------------*/}
           {/*                        BLOC 4                          */}
           {/*--------------------------------------------------------*/}
-          <section className="mt-4 pt-1">
+          <section className="mt-4 mb-4 pt-1">
             <div className="flex flex-col sm:flex-row mb-0">
               <aside className="sm:w-1/2 md:w-2/5 lg:w-2/5 flex text-justify">
                 <p className="text-justify">
@@ -348,8 +348,65 @@ const Practical_Vrac = () => {
             </div>
           </section>
           {/*--------------------------------------------------------*/}
+          <div className="blueBlock mt-3 mb-3">
+            <h4 className="mt-0 mb-2">
+              📢 Offroad, vous avez dit offroad&nbsp;?
+            </h4>
+            <p>
+              Les gyroroues peuvent rouler sur presque toutes les surfaces. Mais
+              attention : le terme <strong>offroad</strong> (ou tout-terrain)
+              recouvre des réalités très différentes.
+            </p>
+            <ul className="compactlist2">
+              <li>
+                Pour une simple balade hors bitume (chemins, voies vertes), une
+                roue classique suffit.
+              </li>
+              <li>
+                Pour une pratique sportive (franchir des bosses, passer des
+                obstacles, voire sauter), il faut un modèle adapté et surtout de
+                l&apos;expérience et de l&apos;entrainement.
+              </li>
+
+              <li>Quelques règles d&apos;or&nbsp;:</li>
+              <ul className="compactlist2 ml-2">
+                <li>
+                  <Link
+                    href="/debuter-gyroroue#bonsens"
+                    className="link-style font-bold text-black dark:text-white"
+                  >
+                    Fais preuve de <i>bon sens</i>
+                  </Link>
+                  &nbsp;: ne dépasse pas tes propres limites ni celles de ta
+                  roue.
+                </li>
+                <li>Mieux vaut être trop prudent que trop confiant.</li>
+                <li>Si je ne le sens pas, je ne passe pas&nbsp;!</li>
+              </ul>
+            </ul>
+          </div>
+          {/*--------------------------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en juin 2025
+            rédigé par{' '}
+            <Link
+              href={'https://www.patreon.com/c/BonheursurSeine'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Bonheur Sur Seine
+            </Link>{' '}
+            et{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            <br />
+            dernière mise à jour : juin 2025
           </p>
         </AccordionItem>
       </Accordion>

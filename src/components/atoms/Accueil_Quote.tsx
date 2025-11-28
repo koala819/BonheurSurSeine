@@ -45,22 +45,21 @@ const Quote = () => {
           />
         </Link>
       </div>
-
-      <div className="flex flex-wrap items-center justify-center mt-6 gap-3">
-        <p className="text-sm md:text-base font-medium">
+      <div className="flex flex-wrap items-center justify-center mt-0 mb-0">
+        <p className="text-center text-base md:text-lg font-medium">
           Tu peux aussi rejoindre la communauté sur le serveur Discord
         </p>
         <Link
           href="https://discord.com/invite/Jhgw7C96Jf"
           target="_blank"
-          className="w-12 h-12 md:w-16 md:h-16 transition-transform transform hover:scale-110 flex items-center"
+          className="flex items-center"
         >
           <Image
             alt="Discord logo"
             src={Discord}
-            width={48}
-            height={48}
-            className="rounded-full opacity-80 hover:opacity-100"
+            width={56}
+            height={56}
+            className="rounded-full opacity-80 hover:opacity-100 transition-transform transform hover:scale-150 max-h-48 "
           />
         </Link>
       </div>

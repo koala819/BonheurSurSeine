@@ -4,6 +4,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Image_bon_sens from '@/public/Image_bon-sens_nuage-de-mots.png'
 
@@ -41,7 +42,7 @@ const CommonSense = () => {
   return (
     <section
       id="bonsens"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -159,7 +160,7 @@ const CommonSense = () => {
               </strong>{' '}
               (jet ou intégral) est{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                vivement recommandé
+                vivement recommandé{' '}
               </strong>
               (sans être obligatoire). Porter des{' '}
               <strong className="text-teal-800 dark:text-teal-200">
@@ -203,15 +204,27 @@ const CommonSense = () => {
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
           <div className="TealBlockbonsens">
-            <h4>
+            <h4 className="mb-0">
               💟 Et n&apos;oublie pas : bon comportement = bonne image = bonne
               route&nbsp;!
             </h4>
-            On se rend compte que quelque chose est précieux au moment où on le
-            perd.
+            <p>
+              On se rend compte que quelque chose est précieux au moment où on
+              le perd.
+            </p>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en juin 2024
+            rédigé par{' '}
+            <Link
+              href={'https://www.patreon.com/c/BonheursurSeine'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Bonheur Sur Seine
+            </Link>
+            <br />
+            dernière mise à jour : avril 2025
           </p>
         </AccordionItem>
       </Accordion>

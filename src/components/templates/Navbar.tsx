@@ -26,11 +26,12 @@ export function Top() {
   const menuItems = [
     { name: 'Accueil', path: '/' },
     { name: 'BonheurScore', path: '/BonheurScore' },
-    { name: 'Codes Promo', path: '/CodePromo' },
-    { name: 'Choisir sa Roue', path: '/Choisir' },
-    { name: 'Bien Démarrer', path: '/Debuter' },
-    { name: 'Savoir Utile', path: '/SavoirUtile' },
-    { name: 'Remerciements', path: '/Merci' },
+    { name: 'Codes Promo', path: '/codes-promo' },
+    { name: 'Apprendre la roue', path: '/apprendre-gyroroue' },
+    { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
+    { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
+    { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
+    { name: 'Remerciements', path: '/mille-merci' },
   ]
 
   return (
@@ -71,52 +72,121 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex " justify="center">
+      <NavbarContent className="hidden md:flex gap-3" justify="center">
+        {/*--------------------------------------------*/}
         <div className="relative group">
           <NavbarItem isActive={path.includes('/BonheurScore')}>
             <Link
               href="/BonheurScore"
-              className="text-white hover:text-text-link"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               BonheurScore
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-5">
-            <ul className="text-s italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li className="text-sm">🔸Mes tests</li>
-              <li className="text-sm">🔸Mes vidéos</li>
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
+              <li>
+                <Link
+                  href="/BonheurScore"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸À propos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/BonheurScore#liste-tests"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Tous mes Tests
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
-
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/CodePromo')}>
-            <Link href="/CodePromo" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/codes-promo')}>
+            <Link
+              href="/codes-promo"
+              className="text-white hover:text-text-link whitespace-nowrap"
+            >
               Codes Promo
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li className="text-sm">🔸Mes Partenaires</li>
-              <li className="text-sm">🔸Offres Exclusives</li>
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
+              <li>
+                <Link
+                  href="/codes-promo"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Mes Partenaires
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/codes-promo"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Offres Exclusives
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Choisir')}>
-            <Link href="/Choisir" className="text-white hover:text-text-link">
-              Choisir sa Roue
+          <NavbarItem isActive={path.includes('/apprendre-gyroroue')}>
+            <Link
+              href="/apprendre-gyroroue"
+              className="text-white hover:text-text-link whitespace-nowrap"
+            >
+              Apprendre
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/Choisir#marche"
+                  href="/apprendre-gyroroue#cestquoi"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Comment ça fonctionne
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/apprendre-gyroroue#apprendre"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Apprendre la gyroroue
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/*--------------------------------------------*/}
+        <div className="relative group">
+          <NavbarItem isActive={path.includes('/choisir-gyroroue')}>
+            <Link
+              href="/choisir-gyroroue"
+              className="text-white hover:text-text-link whitespace-nowrap"
+            >
+              Choisir
+            </Link>
+          </NavbarItem>
+          {/* Sous-menu */}
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
+              <li>
+                <Link
+                  href="/choisir-gyroroue#marche"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le marché
@@ -124,7 +194,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#marques"
+                  href="/choisir-gyroroue#marques"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Les marques
@@ -132,7 +202,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#besoins"
+                  href="/choisir-gyroroue#besoins"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Ses besoins
@@ -140,7 +210,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Choisir#comparer"
+                  href="/choisir-gyroroue#comparer"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Comparer
@@ -150,26 +220,22 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Debuter')}>
-            <Link href="/Debuter" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/debuter-gyroroue')}>
+            <Link
+              href="/debuter-gyroroue"
+              className="text-white hover:text-text-link whitespace-nowrap"
+            >
               Bien Démarrer
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              {/*<li>
-                <Link
-                  href="/Debuter#apprendre"
-                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                >
-                  🔸Apprendre
-                </Link>
-              </li>*/}
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/Debuter#deballage"
+                  href="/debuter-gyroroue#deballage"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Premier déballage
@@ -177,7 +243,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#bonsens"
+                  href="/debuter-gyroroue#bonsens"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le bon sens
@@ -185,7 +251,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#assurance"
+                  href="/debuter-gyroroue#assurance"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Assurance
@@ -193,7 +259,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#code"
+                  href="/debuter-gyroroue#code"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Code de la route
@@ -201,7 +267,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/Debuter#asso"
+                  href="/debuter-gyroroue#asso"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Groupes & associations
@@ -211,29 +277,22 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/SavoirUtile')}>
+          <NavbarItem isActive={path.includes('/guide-utile-gyroroue')}>
             <Link
-              href="/SavoirUtile"
-              className="text-white hover:text-text-link"
+              href="/guide-utile-gyroroue"
+              className="text-white hover:text-text-link whitespace-nowrap"
             >
               Savoir Utile
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
+          <div className="absolute left-0 top-full pt-1 w-52 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
               <li>
                 <Link
-                  href="/SavoirUtile#entretien"
-                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                >
-                  🔸L&apos;entretien
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/SavoirUtile#dico"
+                  href="/guide-utile-gyroroue#dico"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Le p&apos;tit Dico du Bonheur
@@ -241,7 +300,23 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#navi"
+                  href="/guide-utile-gyroroue#entretien"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸L&apos;entretien
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide-utile-gyroroue#batterie"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸La batterie
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guide-utile-gyroroue#navi"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Trouver son chemin
@@ -249,15 +324,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#batterie"
-                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                >
-                  🔸Batterie et autonomie
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/SavoirUtile#vrac"
+                  href="/guide-utile-gyroroue#vrac"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Savoir en vrac
@@ -265,7 +332,7 @@ export function Top() {
               </li>
               <li>
                 <Link
-                  href="/SavoirUtile#infos"
+                  href="/guide-utile-gyroroue#infos"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
                   🔸Infos constructeurs
@@ -275,21 +342,40 @@ export function Top() {
           </div>
         </div>
 
+        {/*--------------------------------------------*/}
         <div className="relative group">
-          <NavbarItem isActive={path.includes('/Merci')}>
-            <Link href="/Merci" className="text-white hover:text-text-link">
+          <NavbarItem isActive={path.includes('/mille-merci')}>
+            <Link
+              href="/mille-merci"
+              className="text-white hover:text-text-link whitespace-nowrap"
+            >
               Remerciements
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
-          <div className="absolute left-0 top-full pt-2 w-48 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50">
-            <ul className="italic flex flex-col p-2 text-sm text-gray-800 dark:text-gray-100">
-              <li className="text-sm">🔸Merci !</li>
-              <li className="text-sm">🔸Soutenir mon travail</li>
+          <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
+            <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
+              <li>
+                <Link
+                  href="/mille-merci#soutien"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Soutenir mon travail
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mille-merci#copains"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Merci !
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
           <ThemeSwitcher />
@@ -299,6 +385,7 @@ export function Top() {
           className="md:hidden"
         />
       </NavbarContent>
+
       <NavbarMenu
         className="mt-8"
         style={{ maxHeight: '370px', overflowY: 'auto' }}
@@ -307,7 +394,7 @@ export function Top() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={'foreground'}
-              className="w-full hover:bg-rose-500 hover:text-white p-2 hover:rounded-xl hover:w-2/3 "
+              className="w-full hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl hover:w-2/3"
               href={item.path}
               size="lg"
             >

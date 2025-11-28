@@ -23,7 +23,7 @@ export default function Hero({
           <text>{RichText.render(text)}</text>
         </aside>
 
-        <aside className="flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
+        <aside className="mt-2 flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
           {/* Image de Derrière */}
           <div className="absolute inset-0 lg:m-10 overflow-hidden rounded-lg shadow-lg w-full h-full lg:min-w-full">
             <Image

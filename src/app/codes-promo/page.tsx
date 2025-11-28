@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import CardPromo from '@/src/components/atoms/CodePromo'
+import GrillePromo from '@/src/components/atoms/CodePromo_0grillepartenaires'
 
+//import BoutiqueBSS from '@/src/components/atoms/CodePromo_1boutique'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title:
     'Codes Promo : Offres Partenaires Bonheur Sur Seine et Réductions Exclusives',
   description:
-    "Guide d'achat et promotions exclusives chez les partenaires de Bonheur Sur Seine (accessoires monoroues, gyroroues, roues électriques).",
+    "Guide d'achat et promotions exclusives chez les partenaires de Bonheur Sur Seine (accessoires monoroue / gyroroue / roue électrique).",
   alternates: {
-    canonical: `${process.env.CLIENT_URL}/CodePromo`,
+    canonical: `${process.env.CLIENT_URL}/codes-promo`,
   },
 }
 
@@ -43,13 +44,15 @@ export default async function Page() {
         </strong>{' '}
         😁
       </p>
-      <div
-        className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
-        /*"flex-col justify-center sm:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"*/
-      >
+
+      {/* Capsule Boutique avec Timer */}
+      {/*<BoutiqueBSS endDate="2025-12-23T11:59:59" />*/}
+
+      {/* Grille de promos partenaires */}
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {sortedPromos.map((promo: any, id: number) => (
           <div key={id}>
-            <CardPromo
+            <GrillePromo
               key={id}
               name={promo.data.name}
               logo={promo.data.logo.url}

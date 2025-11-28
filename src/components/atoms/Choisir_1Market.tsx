@@ -2,6 +2,8 @@
 
 import { Accordion, AccordionItem } from '@nextui-org/react'
 
+import Link from 'next/link'
+
 const Market = () => {
   return (
     <section
@@ -16,7 +18,7 @@ const Market = () => {
         </strong>{' '}
         sur le marché&nbsp;:
       </p>
-      <Accordion>
+      <Accordion isCompact>
         <AccordionItem
           key="1"
           aria-label="Centre-Ville"
@@ -109,8 +111,19 @@ const Market = () => {
         </AccordionItem>
       </Accordion>
 
+      {/*--------------------------------------------------------*/}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-        article mis à jour en février 2025
+        rédigé par{' '}
+        <Link
+          href={'https://www.patreon.com/c/BonheursurSeine'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Bonheur Sur Seine
+        </Link>
+        <br />
+        dernière mise à jour : février 2025
       </p>
     </section>
   )

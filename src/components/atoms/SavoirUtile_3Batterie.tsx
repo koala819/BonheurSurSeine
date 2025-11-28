@@ -43,7 +43,7 @@ const Practical_Battery = () => {
   return (
     <section
       id="batterie"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -51,7 +51,7 @@ const Practical_Battery = () => {
       >
         <AccordionItem
           key="1"
-          aria-label="Pourcentage batterie"
+          aria-label="Pourcentage batterie et autonomie"
           title={<h3> ⚡ Batterie et autonomie</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
@@ -62,10 +62,10 @@ const Practical_Battery = () => {
             comprendre, mais…{' '}
           </p>
           <div className="pinkBlock mb-2">
-            <h4 className="mb-0 mt-0">
+            <b className="mb-0 mt-0">
               ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
               etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
-            </h4>
+            </b>
           </div>
           <p className="mb-2 text-justify">
             Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
@@ -78,17 +78,30 @@ const Practical_Battery = () => {
             Si le moteur demande plus d&apos;énergie que ne peut en fournir la
             batterie, la roue sera sans énergie&nbsp;et… ce sera la chute&nbsp;!
           </p>
+          <p className="mb-2 text-justify">
+            Fait donc{' '}
+            <Link
+              href="/debuter-gyroroue#bonsens"
+              className="link-style font-bold text-black dark:text-white"
+            >
+              preuve de <i>bon sens</i>
+            </Link>{' '}
+            pour ne pas aller au-delà des limites de la roue et de sa batterie.
+          </p>
           <div className="blueBlock mb-4">
-            <h4 className="mb-0 mt-0">
+            <b className="mb-0 mt-0">
               L&apos;autonomie n&apos;est pas une donnée absolue. <br />
-            </h4>
-            Elle dépend de nombreux paramètres&nbsp;:{' '}
-            <i>
-              poids du wheeler, accélérations, vitesse, pression et type de
-              pneu, vent, température ambiante, profil et nature du trajet…
-            </i>
+            </b>
+            <p>
+              Elle dépend de nombreux paramètres&nbsp;:{' '}
+              <i>
+                poids du wheeler, accélérations, vitesse, pression et type de
+                pneu, vent, température ambiante, profil et nature du trajet…
+              </i>
+            </p>
           </div>
           {/*---------------------------------------*/}
+          {/*----------- En quelques mot -----------*/}
           {/*---------------------------------------*/}
           <h4 className="mt-4 mb-2">➡️ En quelques mots&nbsp;:</h4>
           <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
@@ -139,15 +152,20 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           <div className="blueBlock mb-2">
             <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
-            🔸 La batterie a une tension max (ex.&nbsp;: 84.0v, 100.8v, 126v,
-            151.2v…) et une tension min de fonctionnement. <br />
-            🔸 Le BMS (Battery Management System) mesure en temps réel la
-            tension qui diminue au fur et à mesure de l&apos;utilisation.
-            <br />
-            🔸 C&apos;est un calcul qui convertit cette tension instantanée en
-            un pourcentage approximatif (de 100% à 0%). <br />
+            <p>
+              🔸 La batterie a une tension max (84.0v, 100.8v, 126v, 151.2v…) et
+              une tension min de fonctionnement. Sortir de ces plages risque
+              d&apos;abîmer les cellules.
+              <br />
+              🔸 Le BMS (Battery Management System) mesure en temps réel la
+              tension qui diminue au fur et à mesure de l&apos;utilisation.
+              <br />
+              🔸 C&apos;est un calcul qui convertit cette tension instantanée en
+              un pourcentage approximatif (de 100% à 0%). <br />
+            </p>
           </div>
           {/*---------------------------------------*/}
+          {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
           <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
           <p className="text-justify">
@@ -174,8 +192,57 @@ const Practical_Battery = () => {
               />
             </Link>
           </div>
+          {/*---------------------------------------*/}
+          {/*----------- type de cellule -----------*/}
+          {/*---------------------------------------*/}
+          <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
+          <p className="text-justify mb-2">
+            On entend souvent parler des modèles de cellule (
+            <i>Samsung 50S, Molicel P42A, LG M50LT, etc.</i>) comme s&apos;il
+            s&apos;agissait d&apos;un critère décisif pour une roue plus
+            performante, plus durable, plus sûre ou avec plus d&apos;autonomie.
+          </p>
+          <p className="text-justify">
+            En réalité, les fabricants utilisent ce qui se fait de mieux. Et si
+            ce choix a une importance technique indéniable (densité énergétique,
+            cycles de recharge, capacité de décharge, stabilité thermique,
+            etc.), son <b>impact</b> reste <b>relatif</b> dans l&apos;usage
+            quotidien&nbsp;:
+          </p>
+          <ul className="compactlist2 mb-2">
+            <li>
+              Le marketing met souvent en avant les cellules mais un “bon type”
+              de cellule ne suffit pas à lui seul à rendre une roue fiable ou
+              performante si le reste est négligé.
+            </li>
+            <li>
+              Une <b>batterie bien conçue</b> passe surtout par un assemblage
+              solide et hermétique, et une bonne gestion thermique (capteurs et
+              dissipation).
+            </li>
+            <li>
+              Et dans la pratique, il est{' '}
+              <b>impossible de ressentir une différence nette</b> entre deux
+              types de cellules. Les fabricant utilisent les meilleures
+              technologies disponibles.
+            </li>
+          </ul>
+          <p className="text-justify mb-6">
+            👉 Le modèle de cellule est donc un paramètre à considérer, mais à
+            replacer dans son contexte.
+          </p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en avril 2025
+            rédigé par{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            <br />
+            dernière mise à jour : avril 2025
           </p>
         </AccordionItem>
       </Accordion>

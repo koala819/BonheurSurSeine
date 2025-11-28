@@ -42,7 +42,7 @@ const Assurance = () => {
   return (
     <section
       id="assurance"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -51,7 +51,7 @@ const Assurance = () => {
         <AccordionItem
           key="1"
           aria-label="L'assurance"
-          title={<h3>🛡️ Assurance</h3>}
+          title={<h3>🛡️ L&apos;assurance</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <div className="mb-8 flex flex-col md:flex-row items-center">
@@ -77,7 +77,7 @@ const Assurance = () => {
                 </span>
               </div>
             </aside>
-            <aside className="md:w-2/5 text-center text-xs mt-1 mb-1">
+            <aside className="md:w-2/5 text-center text-xs mt-3 mb-1">
               <Image
                 src={Image_assurance}
                 alt="Image_assurance"
@@ -198,7 +198,7 @@ const Assurance = () => {
               <h3 className="text-lg font-semibold mb-2">
                 🚨 Que faire en cas d&apos;accident&nbsp;?
               </h3>
-              <p className="text-justify text-sm">
+              <p className="text-sm">
                 Un accident génère toujours du stress. Même sans gravité,
                 remplis systématiquement un constat amiable (l&apos;idéal est
                 d&apos;en avoir un prérempli avec ses informations).
@@ -220,7 +220,7 @@ const Assurance = () => {
               <h3 className="text-lg font-semibold mb-2">
                 💰 Le budget assurance
               </h3>
-              <p className="text-justify text-sm">
+              <p className="text-sm">
                 Assurer un EDPM{' '}
                 <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
                   coûte 5-10€/mois
@@ -228,7 +228,7 @@ const Assurance = () => {
                 . La plupart des assureurs proposent des contrats adaptés.
                 <br />
                 Tu trouveras un{' '}
-                <Link href="/CodePromo" className="link-style">
+                <Link href="/codes-promo" className="link-style">
                   code Promo
                 </Link>{' '}
                 à utiliser chez Wizzas, un courtier en assurance spécialisé et
@@ -238,7 +238,17 @@ const Assurance = () => {
           </div>
 
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en avril 2025
+            rédigé par{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            <br />
+            dernière mise à jour : avril 2025
           </p>
         </AccordionItem>
       </Accordion>

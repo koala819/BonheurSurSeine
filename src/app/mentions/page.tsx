@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <section className="container px-4 my-20 mx-auto space-y-4 text-justify">
       <h1>Mentions légales</h1>
-
+      {/***********************************************************************/}
       <h3>Identification et publication</h3>
       <p>
         <strong>Nom du site web :</strong> Bonheur Sur Seine
@@ -32,10 +32,20 @@ export default function Page() {
         <strong>Contributions :</strong> Site développé avec l&apos;aide de deux
         personnes bénévoles.
       </p>
-
+      {/***********************************************************************/}
       <h3>Hébergement</h3>
       <p>
-        Ce site a été réalisé par{' '}
+        Ce site a vu le jour grâce à l&apos;implication active et aux précieux
+        conseils de{' '}
+        <Link
+          href={'https://linktr.ee/fabien.wheel'}
+          passHref
+          target="_blank"
+          className="link-style"
+        >
+          Fabien.Wheel
+        </Link>
+        , ainsi qu&apos;au soutien de{' '}
         <Link
           href={'https://www.dix31.com/'}
           passHref
@@ -44,8 +54,8 @@ export default function Page() {
         >
           DIX31
         </Link>{' '}
-        spécialiste en création de sites web. La gestion de l&apos;hébergement
-        est effectuée par l&apos;entreprise{' '}
+        spécialiste en création de sites web. <br />
+        La gestion de l&apos;hébergement est assurée par l&apos;entreprise{' '}
         <Link
           href={'https://www.dix31.com/'}
           passHref
@@ -54,8 +64,8 @@ export default function Page() {
         >
           DIX31
         </Link>
-        , immatriculée à TOULOUSE sous le numéro RCS 852 548 379 et dont le
-        siège social est situé à Toulouse (CP 31300).
+        , immatriculée sous le numéro RCS 852 548 379 et dont le siège social
+        est situé à Toulouse (CP 31300).
         <br />
         <strong>Hébergeur :</strong> Vercel Inc.
         <br />
@@ -63,9 +73,8 @@ export default function Page() {
         <br />
         <strong>Site web :</strong> https://vercel.com
       </p>
-
+      {/***********************************************************************/}
       <h3>Conditions d&apos;utilisation</h3>
-
       <p>
         En accédant au site, vous reconnaissez avoir lu, compris et accepté
         l&apos;ensemble de ces <strong>conditions d&apos;utilisation</strong>.
@@ -213,22 +222,16 @@ export default function Page() {
           <b>Gestion du site</b>
         </li>
         <p>
-          Nous nous réservons le droit, mais non l&apos;obligation, de :
-          <ul className="list-decimal ml-12 space-y-0">
-            <li>
-              Surveiller le site <i>Bonheur sur Seine</i> pour repérer tout cas
-              de violation des présentes conditions d&apos;utilisation.
-            </li>
-            <li>
-              Prendre les mesures juridiques qui s&apos;imposent à
-              l&apos;encontre de toute personne qui, à notre seule discrétion,
-              enfreint la loi ou les présentes conditions d&apos;utilisation.
-            </li>
-            <li>
-              Gérer le site <i>Bonheur sur Seine</i> de manière à protéger nos
-              droits et nos biens et à faciliter le bon fonctionnement du site.
-            </li>
-          </ul>
+          Nous nous réservons le droit, mais non l&apos;obligation, de : <br />
+          &emsp;1.&ensp; Surveiller le site <i>Bonheur sur Seine</i> pour
+          repérer tout cas de violation des présentes conditions
+          d&apos;utilisation. <br />
+          &emsp;2.&ensp; Prendre les mesures juridiques qui s&apos;imposent à
+          l&apos;encontre de toute personne qui, à notre seule discrétion,
+          enfreint la loi ou les présentes conditions d&apos;utilisation. <br />
+          &emsp;3.&ensp; Gérer le site <i>Bonheur sur Seine</i> de manière à
+          protéger nos droits et nos biens et à faciliter le bon fonctionnement
+          du site.
         </p>
         <li>
           <b>Liens Hypertextes</b>
@@ -240,7 +243,7 @@ export default function Page() {
           confidentialité qu&apos;ils adoptent.
         </p>
       </ul>
-
+      {/***********************************************************************/}
       <h3>Données Personnelles</h3>
       <p>
         Aucune donnée personnelle n&apos;est collectée à votre insu.
@@ -259,8 +262,9 @@ export default function Page() {
         Nous nous engageons à respecter votre confidentialité et à protéger vos
         données personnelles.
       </p>
+      {/***********************************************************************/}
       <h3>Politique relative aux cookies</h3>
-      <p>
+      <p className="mb-0">
         En poursuivant votre navigation sur ce site internet, vous acceptez
         l&apos;utilisation de cookies. Un cookie est un petit fichier texte créé
         par un serveur web du site internet visité. Les cookies sont stockés sur
@@ -270,13 +274,13 @@ export default function Page() {
         Nous utilisons trois sortes de cookies : les cookies Fonctionnels,
         Statistiques, et Publicitaires.
         <br />
-        Sur ce site web, les cookies sont utilisés pour :
+        Sur ce site web, les cookies sont utilisés pour :<br />
+        &emsp;&bull;&ensp;Réaliser des statistiques de visites avec Google
+        Analytics.
         <br />
-        <ul className="compactlist">
-          <li>Réaliser des statistiques de visites avec Google Analytics.</li>
-          <li>Vous offrir une meilleure expérience utilisateur.</li>
-        </ul>
+        &emsp;&bull;&ensp;Vous offrir une meilleure expérience utilisateur.
       </p>
+      {/***********************************************************************/}
       <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
         Mentions légales créées le <strong>30/01/2024</strong>
       </p>

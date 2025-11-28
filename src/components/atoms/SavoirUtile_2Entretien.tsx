@@ -4,6 +4,7 @@ import { Accordion, AccordionItem } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Tableaux_tensions from '@/public/techniques/risques-batteries-lithium (by cnpp).png'
 
@@ -41,7 +42,7 @@ const Maintenance = () => {
   return (
     <section
       id="entretien"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -49,8 +50,8 @@ const Maintenance = () => {
       >
         <AccordionItem
           key="1"
-          aria-label="L'entretien'"
-          title={<h3>🛠 L&apos;entretien</h3>}
+          aria-label="Bien entretenir sa gyroroue"
+          title={<h3>🛠️ L&apos;entretien</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-1 text-justify">
@@ -76,7 +77,7 @@ const Maintenance = () => {
           </div>
           {/*------------------------------------*/}
           <h4 className="mt-4 mb-2">À retenir&nbsp;:</h4>
-          <ul className="compactlist mb-6">
+          <ul className="compactlist2 mb-6">
             <li className="text-justify">
               Il est important de{' '}
               <strong className="text-amber-900 dark:text-brown-200">
@@ -116,7 +117,7 @@ const Maintenance = () => {
           </ul>
           {/*------------------------------------*/}
           <h4 className="mt-4 mb-2">Prends soin de la batterie&nbsp;:</h4>
-          <ul className="compactlist mb-2">
+          <ul className="compactlist2 mb-2">
             <li className="text-justify">
               Évite de l&apos;exposer à des températures extrêmes (froid ou
               chaud).
@@ -140,19 +141,31 @@ const Maintenance = () => {
             />
           </div>
           {/*------------------------------------*/}
-          <div className="mt-4 brownBlockentretien text-justify">
-            <b className="text-lg">
+          <div className="mt-4 brownBlockentretien">
+            <b className="mb-2">
               💦 L&apos;eau s&apos;infiltre facilement partout.
               <br />
             </b>
-            ⚠️ L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
-            <br />
-            Les conséquences peuvent être{' '}
-            <strong>immédiates ou à plus long terme</strong> (rouille,
-            surchauffe, court-circuit et risque d&apos;incendie).
+            <p>
+              L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
+              <br />
+              ⚠️ Les conséquences peuvent être{' '}
+              <strong>immédiates ou à plus long terme</strong> (rouille,
+              surchauffe, court-circuit et risque d&apos;incendie).
+            </p>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en mars 2025
+            rédigé par{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            <br />
+            dernière mise à jour : mars 2025
           </p>
         </AccordionItem>
       </Accordion>

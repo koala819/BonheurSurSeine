@@ -42,7 +42,7 @@ const HighwayCode = () => {
   return (
     <section
       id="code"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -51,7 +51,7 @@ const HighwayCode = () => {
         <AccordionItem
           key="1"
           aria-label="Le code de la route"
-          title={<h3>🚦 Code de la route</h3>}
+          title={<h3>🚦 Le code de la route</h3>}
           indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
         >
           <p className="mb-4 text-justify">
@@ -115,7 +115,7 @@ const HighwayCode = () => {
               <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                 🚴‍♂️ CIRCULATION
               </h4>
-              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+              <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-justify text-sm">
                   Interdiction de circuler sur les trottoirs (
                   <Link
@@ -212,7 +212,7 @@ const HighwayCode = () => {
               <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
                 🛠️ ÉQUIPEMENT
               </h4>
-              <ul className="list-disc space-y-2 list-inside text-sm flex-1 text-gray-800 dark:text-gray-100">
+              <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-justify text-sm">
                   Vitesse maximale de 25 km/h par construction ou par bridage (
                   <Link
@@ -336,7 +336,17 @@ const HighwayCode = () => {
             </h4>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en janvier 2025
+            rédigé par{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
+            </Link>
+            <br />
+            dernière mise à jour : janvier 2025
           </p>
         </AccordionItem>
       </Accordion>

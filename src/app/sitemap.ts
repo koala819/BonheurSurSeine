@@ -13,32 +13,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${process.env.CLIENT_URL}/Choisir`,
-      lastModified: new Date(),
-      priority: 0.9,
-    },
-    {
-      url: `${process.env.CLIENT_URL}/Debuter`,
-      lastModified: new Date(),
-      priority: 0.9,
-    },
-    {
-      url: `${process.env.CLIENT_URL}/SavoirUtile`,
-      lastModified: new Date(),
-      priority: 0.9,
-    },
-    {
-      url: `${process.env.CLIENT_URL}/CodePromo`,
+      url: `${process.env.CLIENT_URL}/code-promo`,
       lastModified: new Date(),
       priority: 0.7,
     },
     {
-      url: `${process.env.CLIENT_URL}/Merci`,
+      url: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/choisir-gyroroue`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/debuter-gyroroue`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/mille-merci`,
       lastModified: new Date(),
       priority: 0.5,
     },
     {
       url: `${process.env.CLIENT_URL}/mentions`,
+      lastModified: new Date(),
+      priority: 0.5,
+    },
+    {
+      url: `${process.env.CLIENT_URL}/plan-du-site`,
       lastModified: new Date(),
       priority: 0.5,
     },

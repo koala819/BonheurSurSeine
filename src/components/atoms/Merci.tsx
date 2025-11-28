@@ -9,8 +9,8 @@ import { ContactFriends } from '@/src/types/models'
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
+import bonheurSurSeine from '@/public/PhotoBSS - Remerciements.jpg'
 import Tipeee from '@/public/Tipeee.svg'
-import bonheurSurSeine from '@/public/contact.jpg'
 
 export default function Contact({
   // text,
@@ -68,7 +68,7 @@ export default function Contact({
   return (
     //<section className="container my-8 mx-auto p-4 space-y-8">
 
-    <section className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
+    <section id="soutien" className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
       {/*
     <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
       <header className="container mx-auto p-4">
@@ -91,7 +91,6 @@ export default function Contact({
           <div>
             <ul className="list">
               <li>Je voudrais faire une suggestion de sujet pour une vidéo</li>
-              <li>J&apos;ai une question à poser</li>
               <li>J&apos;ai vu un bug, une erreur</li>
               <li>Je veux t&apos;insulter parce que tu fais de la merde</li>
               <li>Autre chose</li>
@@ -231,11 +230,10 @@ export default function Contact({
               <p>Je vous répondrai d&apos;ici 24h maximum.</p>
             )}
           </div>
-        </aside>
-*/}
+        </aside>*/}
       </section>
 
-      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
           Pour soutenir mon travail, accéder à des contenus supplémentaires et
           chatter en privé, rejoins-moi sur
@@ -245,7 +243,7 @@ export default function Contact({
           <Link
             href="https://fr.tipeee.com/bonheur-sur-seine"
             target="_blank"
-            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 transition-transform transform hover:scale-110"
+            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 px-6 transition-transform transform hover:scale-110"
           >
             <Image
               alt="Tipee logo"
@@ -258,7 +256,7 @@ export default function Contact({
           <Link
             href="https://www.patreon.com/c/BonheursurSeine"
             target="_blank"
-            className="flex p-2 transition-transform transform hover:scale-110"
+            className="flex p-2 transition-transform transform hover:scale-110 rounded-2xl"
           >
             <Image
               alt="Patreon logo"
@@ -271,20 +269,20 @@ export default function Contact({
           <Link
             href="https://discord.com/invite/Jhgw7C96Jf"
             target="_blank"
-            className="flex p-2 transition-transform transform hover:scale-110"
+            className="flex transition-transform transform hover:scale-110 rounded-2xl"
           >
             <Image
               alt="Discord logo"
               src={Discord}
-              width={64}
-              height={64}
+              width={90}
+              height={90}
               className="opacity-80 hover:opacity-100"
             />
           </Link>
         </div>
       </div>
 
-      <section className="space-y-2 my-4">
+      <section id="copains" className="space-y-2 my-4">
         <h2>Remerciements</h2>
         <p className="text-sm text-justify">
           <b>Bonheur sur Seine</b>, ce sont des vidéos

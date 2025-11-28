@@ -42,7 +42,7 @@ const Practical_Info_officiel = () => {
   return (
     <section
       id="infos"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -51,9 +51,7 @@ const Practical_Info_officiel = () => {
         <AccordionItem
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
-          title={
-            <h3>🆕 Infos et chaine YouTube officiels des constructeurs</h3>
-          }
+          title={<h3>🆕 Infos et chaînes YouTube constructeurs</h3>}
           indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
         >
           <div className="mb-8 flex flex-col sm:flex-row items-center">
@@ -61,10 +59,17 @@ const Practical_Info_officiel = () => {
               <p className="text-justify">
                 On y pense peu, mais les constructeurs communiquent
                 beaucoup&nbsp;! 😉
-                <br /> <br /> Selon les marques, on a un peu de tout : annonces
-                des nouveaux modèles, spécifications techniques, vidéos de
-                démontage et de changement de pneus, navigation dans les menus,
-                etc.
+              </p>
+              <p>
+                Selon les marques, on a un peu de tout : annonces marketing,
+                photos des nouveaux modèles, spécifications techniques, etc.
+              </p>
+              <p className="text-justify">
+                Sur YouTube, certains fabricants mettent également à diposition
+                des <strong>tutoriels vidéo</strong> pour faciliter
+                l&apos;entretien et le SAV&nbsp;: <strong>démontage</strong>, de{' '}
+                <strong>changement de pneus</strong>, ou encore explications et
+                navigation dans les menus et paramètres, etc.
               </p>
             </aside>
             <aside className="sm:w-1/3 md:w-2/5 text-right text-xs">
@@ -256,7 +261,17 @@ const Practical_Info_officiel = () => {
           </ul>
           <p></p>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-            article mis à jour en avril 2025
+            rédigé par{' '}
+            <Link
+              href={'https://www.patreon.com/c/BonheursurSeine'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Bonheur Sur Seine
+            </Link>
+            <br />
+            dernière mise à jour : avril 2025
           </p>
         </AccordionItem>
       </Accordion>
