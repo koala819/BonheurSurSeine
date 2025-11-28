@@ -18,18 +18,13 @@ export default function GamePage() {
           <h2 className="text-white text-center mt-4">
             Bonheur sur Seine vs. City Wild
           </h2>
-          <p className="text-yellow-400 text-xs text-center mb-4">
+          <p
+            className="mt-4 space-y-6 rounded-lg bg-yellow-500 p-4 shadow-md transition-shadow dark:bg-yellow-800 md:ml-2 md:mr-2 md:mt-0
+           font-semibold ml-8 mr-8 text-center"
+          >
             <span className="text-large"> 😁Bravo&nbsp;!😁 </span>
             <br />
             🎁<i>Tu as trouvé le petit contenu bonus de mon site&nbsp;!</i> 🎁
-          </p>
-          <p
-            className="mt-4 space-y-6 rounded-lg bg-yellow-500 p-4 shadow-md transition-shadow dark:bg-yellow-800 md:ml-2 md:mr-2 md:mt-0
-           font-semibold ml-8 mr-8 text-small"
-          >
-            Tu penses être parmi les 5 premiers à découvrir cette page&nbsp;?
-            <br />
-            Contacte-moi à <i>jeuxbss@gmail.com</i>.
           </p>
         </div>
 
