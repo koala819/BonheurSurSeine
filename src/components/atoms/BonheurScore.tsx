@@ -146,7 +146,7 @@ export function BonheurScore({
             <p className="mt-1 text-sm">
               🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
               toutes les gyroroues que je teste,{' '}
-              <Link href="/euc-game">
+              <Link href="/game-euc">
                 <strong className="text-fuchsia-700 dark:text-violet-400">
                   reviens régulièrement
                 </strong>
