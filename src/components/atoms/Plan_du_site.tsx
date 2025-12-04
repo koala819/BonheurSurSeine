@@ -44,8 +44,8 @@ const sections = [
         href: '/apprendre-gyroroue#apprendre',
       },
       {
-        label: '⚠️ 5 pièges à éviter',
-        href: '/apprendre-gyroroue#5pièges',
+        label: '⚠️ 6 pièges à éviter',
+        href: '/apprendre-gyroroue#pièges',
       },
     ],
   },

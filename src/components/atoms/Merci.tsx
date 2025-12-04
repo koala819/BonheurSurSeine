@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
+import RatingStars from '@/src/components/atoms/Merci_RatingStars'
+
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
@@ -280,6 +282,10 @@ export default function Contact({
             />
           </Link>
         </div>
+      </div>
+      {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
+      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <RatingStars />
       </div>
 
       <section id="copains" className="space-y-2 my-4">
