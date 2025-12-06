@@ -66,11 +66,11 @@ const Page = () => {
               priority
               placeholder="blur"
             />
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-cyan-800/80 text-white px-2 py-2 rounded-xl shadow-md max-w-lg text-center min-w-96 text-xs sm:text-sm font-bold">
-              💙 &laquo;&nbsp;Le Bonheur de rouler, c&apos;est se mettre dans
-              les
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-cyan-800/80 text-white px-2 py-2 rounded-xl shadow-md max-w-lg text-center min-w-max text-xs sm:text-sm font-bold">
+              🩵 &laquo;&nbsp;Le Bonheur de rouler… c&apos;est se mettre
               <br />
-              meilleures conditions pour en profiter&nbsp;!&nbsp;&raquo;
+              dans les meilleures conditions pour en
+              profiter&nbsp;!&nbsp;&raquo;
             </div>
           </div>
         </div>
