@@ -49,38 +49,36 @@ export default function RatingStars() {
     <div className="flex flex-col items-center">
       {/* Ligne : invitation à donner son avis */}
       <div>
-        <div className="text-lg text-left font-bold text-black cursor-pointer dark:text-white">
+        <div className="text-lg text-center font-bold text-black cursor-pointer dark:text-white">
           Tu as apprécié mon site&nbsp;?
           <span className="font-normal"> Dis-le&nbsp;! 🙂</span>
         </div>
         {/* Ligne 1 : étoiles + note + nombre d'avis */}
-        <div className="flex items-center space-x-2 text-lg font-semibold cursor-pointer">
+        <div className="text-center items-center space-x-1 font-semibold cursor-pointer">
           {/* Étoiles cliquables */}
-          <div className="flex space-x-1">
-            {[1, 2, 3, 4, 5].map((value) => (
-              <span
-                key={value}
-                onMouseEnter={() => setHovered(value)}
-                onMouseLeave={() => setHovered(0)}
-                onClick={() => sendRating(value)}
-                className={`text-2xl transition ${
-                  value <= (hovered || selected)
-                    ? 'text-orange-500'
-                    : 'text-gray-400'
-                }`}
-              >
-                ★
-              </span>
-            ))}
-          </div>
-
+          {[1, 2, 3, 4, 5].map((value) => (
+            <span
+              key={value}
+              onMouseEnter={() => setHovered(value)}
+              onMouseLeave={() => setHovered(0)}
+              onClick={() => sendRating(value)}
+              className={`text-3xl transition ${
+                value <= (hovered || selected)
+                  ? 'text-orange-500'
+                  : 'text-gray-400'
+              }`}
+            >
+              ★
+            </span>
+          ))}
+        </div>
+        <div className="text-center">
           {/* Note moyenne */}
-          <span className="text-yellow-500 font-bold">
-            {average.toFixed(1)}⭐
+          <span className="text-yellow-500 font-bold text-base">
+            {average.toFixed(2)}⭐
           </span>
-
           {/* Nombre d'avis */}
-          <span className="text-gray-500 dark:text-black font-normal">
+          <span className="text-gray-500 dark:text-black font-normal text-base">
             ({count} avis)
           </span>
         </div>
