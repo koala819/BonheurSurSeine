@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
+import RatingStars from '@/src/components/atoms/Merci_RatingStars'
+
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
@@ -281,6 +283,10 @@ export default function Contact({
           </Link>
         </div>
       </div>
+      {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
+      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <RatingStars />
+      </div>
 
       <section id="copains" className="space-y-2 my-4">
         <h2>Remerciements</h2>
@@ -294,7 +300,7 @@ export default function Contact({
           >
             YouTube
           </Link>
-          , mais c&apos;est aussi et surtout des rencontres,{' '}
+          , mais c&apos;est aussi et surtout, avec les années, des rencontres,{' '}
           <i className="text-emerald-800 dark:text-emerald-500">
             &laquo;&nbsp;des gens qui m&apos;ont tendu la main, peut-être à un
             moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et

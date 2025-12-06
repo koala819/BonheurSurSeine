@@ -180,7 +180,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              BLOC PIEGES                   */}
       {/*--------------------------------------------*/}
-      <div className="yellowBlockpiege mb-4" id="5pièges">
+      <div className="yellowBlockpiege mb-4" id="pièges">
         <h4 className="mt-0 mb-0 text-xl font-bold">
           😱 6 pièges à éviter&nbsp;:
         </h4>
