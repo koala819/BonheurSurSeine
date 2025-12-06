@@ -8,7 +8,7 @@ export default function RatingStars() {
   const [average, setAverage] = useState(0)
   const [count, setCount] = useState(0)
 
-  // Ref pour garder le timestamp du dernier envoi
+  // Ref pour garder le timestamp du dernier envoi = OK
   const lastSubmitTimeRef = useRef<number>(0)
 
   async function fetchAverage() {
