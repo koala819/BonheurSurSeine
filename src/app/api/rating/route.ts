@@ -28,7 +28,7 @@ export async function GET() {
   }
 
   const sum = rows.reduce((acc, r) => acc + Number(r.rating), 0)
-  const average = (sum / count).toFixed(1)
+  const average = (sum / count).toFixed(2)
 
   return NextResponse.json({ average, count })
 }
