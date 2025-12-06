@@ -65,7 +65,7 @@ export default function RatingStars() {
                 onClick={() => sendRating(value)}
                 className={`text-2xl transition ${
                   value <= (hovered || selected)
-                    ? 'text-yellow-400'
+                    ? 'text-orange-500'
                     : 'text-gray-400'
                 }`}
               >
