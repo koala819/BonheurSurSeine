@@ -300,7 +300,7 @@ export default function Contact({
           >
             YouTube
           </Link>
-          , mais c&apos;est aussi et surtout des rencontres,{' '}
+          , mais c&apos;est aussi et surtout, avec les années, des rencontres,{' '}
           <i className="text-emerald-800 dark:text-emerald-500">
             &laquo;&nbsp;des gens qui m&apos;ont tendu la main, peut-être à un
             moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et
