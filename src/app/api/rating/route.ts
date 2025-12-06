@@ -1,13 +1,8 @@
 import { NextResponse } from 'next/server'
 
-import { createClient } from '@libsql/client'
+import client from '@/src/lib/turso'
 
-const client = createClient({
-  url: process.env.TURSO_DATABASE_URL!,
-  authToken: process.env.TURSO_AUTH_TOKEN!,
-})
-
-// Initialisation sécurisée : exécutée au premier appel GET/POST
+// Initialisation de la table au démarrage
 async function initDB() {
   await client.execute(`
     CREATE TABLE IF NOT EXISTS ratings (
@@ -17,33 +12,31 @@ async function initDB() {
   `)
 }
 
+// On s'assure que la DB est prête avant toute requête
+const dbReady = initDB()
+
 export async function GET() {
-  await initDB()
+  await dbReady
 
   const result = await client.execute('SELECT rating FROM ratings')
 
-  // TS n’aime pas "row.rating" car Row est "Record<string, unknown>"
-  const rows = result.rows.map((r) => ({
-    rating: Number(r.rating),
-  }))
-
+  const rows = result.rows as any[]
   const count = rows.length
 
   if (count === 0) {
     return NextResponse.json({ average: 0, count: 0 })
   }
 
-  const sum = rows.reduce((acc, r) => acc + r.rating, 0)
-  const average = +(sum / count).toFixed(1)
+  const sum = rows.reduce((acc, r) => acc + Number(r.rating), 0)
+  const average = (sum / count).toFixed(1)
 
   return NextResponse.json({ average, count })
 }
 
 export async function POST(request: Request) {
-  await initDB()
+  await dbReady
 
-  const body = await request.json()
-  const rating = Number(body.rating)
+  const { rating } = await request.json()
 
   if (!rating || rating < 1 || rating > 5) {
     return NextResponse.json({ error: 'Note invalide' }, { status: 400 })
