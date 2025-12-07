@@ -1,6 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Slider from 'react-slick'
+
+import 'slick-carousel/slick/slick-theme.css'
+// Import CSS slick-carousel
+import 'slick-carousel/slick/slick.css'
 
 type CommentItem = {
   rating: number
@@ -21,7 +26,6 @@ export default function RatingStars2() {
   const [count, setCount] = useState(0)
 
   const [comments, setComments] = useState<CommentItem[]>([])
-  const [current, setCurrent] = useState<CommentItem | null>(null)
 
   const [pseudo, setPseudo] = useState('')
   const [comment, setComment] = useState('')
@@ -84,18 +88,6 @@ export default function RatingStars2() {
     }
   }
 
-  // Rotation auto des commentaires
-  useEffect(() => {
-    if (comments.length === 0) return
-
-    const interval = setInterval(() => {
-      const random = comments[Math.floor(Math.random() * comments.length)]
-      setCurrent(random)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [comments])
-
   useEffect(() => {
     fetchData()
   }, [])
@@ -106,6 +98,20 @@ export default function RatingStars2() {
     const percent = count > 0 ? Math.round((total / count) * 100) : 0
     return { star, total, percent }
   })
+
+  // Configuration react-slick pour commentaires
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    pauseOnHover: false,
+    adaptiveHeight: false,
+  }
 
   return (
     <div className="flex flex-col items-center">
@@ -153,6 +159,7 @@ export default function RatingStars2() {
           className="border rounded px-2 py-2 text-black dark:text-white resize-none"
         />
       </div>
+
       {/* Feedback doux */}
       {feedback && (
         <div className="text-sm text-emerald-600 dark:text-emerald-400 transition-opacity">
@@ -191,23 +198,26 @@ export default function RatingStars2() {
             </div>
           ))}
         </div>
-        {/* Défilement commentaires */}
+
+        {/* Slider commentaires */}
         <div className="w-full md:w-1/2 max-w-md space-y-0 p-1">
-          {current && (
-            <div className="w-full max-w-md text-center bg-slate-400 dark:bg-gray-800 rounded-lg animate-pulse transition-opacity">
-              {/* Pseudo */}
-              <div className="font-semibold">{current.pseudo}</div>
-              {/* Étoiles */}
-              <div className="text-orange-400 text-xl">
-                {'★'.repeat(current.rating)}
-                {'☆'.repeat(5 - current.rating)}
+          <Slider {...sliderSettings}>
+            {comments.map((c, i) => (
+              <div
+                key={i}
+                className="w-full max-w-md text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-2"
+              >
+                <div className="font-semibold">{c.pseudo}</div>
+                <div className="text-orange-400 text-xl">
+                  {'★'.repeat(c.rating)}
+                  {'☆'.repeat(5 - c.rating)}
+                </div>
+                <div className="text-sm italic text-gray-700 dark:text-gray-300">
+                  “{c.comment}”
+                </div>
               </div>
-              {/* Commentaire */}
-              <div className="text-sm italic text-gray-700 dark:text-gray-300">
-                “{current.comment}”
-              </div>
-            </div>
-          )}
+            ))}
+          </Slider>
         </div>
       </div>
 
