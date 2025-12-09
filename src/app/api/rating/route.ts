@@ -14,6 +14,7 @@ const bannedWords = [
   'fdp',
   'bobo',
   'parisien',
+  'travelo',
   'juif',
   'youpin',
   'shit',
@@ -23,7 +24,11 @@ const bannedWords = [
   'salope',
   'tamere',
   'triso',
-  'encule',
+  'pauv',
+  'gogo',
+  'debile',
+  'encul',
+  'naz',
 ]
 
 // =====================================================
@@ -89,7 +94,7 @@ function initDBOnce() {
 }
 
 // =====================================================
-// GET — données + commentaires aléatoires
+// GET — données + commentaires aléatoires + répartition par note
 // =====================================================
 export async function GET() {
   await initDBOnce()
@@ -110,17 +115,33 @@ export async function GET() {
     average = Number((sum / count).toFixed(2))
   }
 
-  // 1. Récupère uniquement les IDs approuvés
+  // Répartition nombre d'avis par note
+  const countsByRatingResult = await client.execute(`
+    SELECT rating, COUNT(*) as count
+    FROM ratingsfull
+    WHERE approved = 1
+    GROUP BY rating
+  `)
+
+  const countsByRatingRows = countsByRatingResult.rows as any[]
+
+  const countsByRating: Record<number, number> = {}
+  for (const row of countsByRatingRows) {
+    countsByRating[row.rating] = row.count
+  }
+
+  // 1. Récupère uniquement les IDs approuvés avec commentaire
   const idsResult = await client.execute(`
     SELECT id
     FROM ratingsfull
     WHERE approved = 1 AND comment IS NOT NULL AND comment != ''
+    ORDER BY created_at DESC
   `)
   const ids = idsResult.rows.map((r: any) => r.id)
 
-  // 2. Mélange local (Fisher-Yates) — super rapide
-  for (let i = ids.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+  // 2. Mélange local (Fisher-Yates) en conservant le premier élément en tête
+  for (let i = ids.length - 1; i > 1; i--) {
+    const j = Math.floor(Math.random() * (i - 1)) + 1
     ;[ids[i], ids[j]] = [ids[j], ids[i]]
   }
 
@@ -149,6 +170,7 @@ export async function GET() {
   return NextResponse.json({
     average,
     count,
+    countsByRating,
     comments,
   })
 }

@@ -17,6 +17,7 @@ type Stats = {
   average: number
   count: number
   comments: CommentItem[]
+  countsByRating?: Record<number, number>
 }
 
 export default function RatingStars2() {
@@ -26,6 +27,9 @@ export default function RatingStars2() {
   const [count, setCount] = useState(0)
 
   const [comments, setComments] = useState<CommentItem[]>([])
+  const [countsByRating, setCountsByRating] = useState<Record<number, number>>(
+    {},
+  )
 
   const [pseudo, setPseudo] = useState('')
   const [comment, setComment] = useState('')
@@ -34,6 +38,9 @@ export default function RatingStars2() {
 
   const lastSubmitTimeRef = useRef<number>(0)
 
+  // Référence au slider
+  const sliderRef = useRef<Slider>(null)
+
   async function fetchData() {
     const response = await fetch('/api/rating')
     const data: Stats = await response.json()
@@ -41,21 +48,19 @@ export default function RatingStars2() {
     setAverage(Number(data.average))
     setCount(data.count)
     setComments(data.comments || [])
+    setCountsByRating(data.countsByRating || {})
   }
 
   async function sendRating(rating: number) {
     const now = Date.now()
-
     if (now - lastSubmitTimeRef.current < 10000) {
       setFeedback('⏳ Tu as déjà envoyé une note…')
       return
     }
-
     if (!pseudo.trim()) {
       setFeedback('✏️ Entre un pseudo et un commentaire')
       return
     }
-
     if (!comment.trim()) {
       setFeedback('✏️ Entre un pseudo et un commentaire')
       return
@@ -77,12 +82,21 @@ export default function RatingStars2() {
         }),
       })
 
-      setFeedback('✅ Merci pour ton avis !')
-
+      const newComment = { rating, pseudo, comment }
       setPseudo('')
       setComment('')
 
-      fetchData()
+      // Ajout immédiat du commentaire dans le carrousel
+      setComments((prev) => [newComment, ...prev])
+
+      // Forcer le slider à afficher la première slide (nouveau commentaire)
+      sliderRef.current?.slickGoTo(0)
+
+      // Après 4 secondes, on recharge les commentaires "officiels"
+      setTimeout(() => {
+        fetchData()
+        setFeedback('✅ Merci pour ton avis !')
+      }, 4000)
     } catch {
       setFeedback('❌ Une erreur est survenue')
     }
@@ -94,7 +108,7 @@ export default function RatingStars2() {
 
   // Calcul répartition des étoiles
   const starStats = [5, 4, 3, 2, 1].map((star) => {
-    const total = comments.filter((c) => c.rating === star).length
+    const total = countsByRating[star] || 0
     const percent = count > 0 ? Math.round((total / count) * 100) : 0
     return { star, total, percent }
   })
@@ -121,6 +135,7 @@ export default function RatingStars2() {
         <span className="font-normal"> Dis-le 🙂</span>
       </div>
 
+      {/* ------------------------------------------------------ */}
       {/* Étoiles cliquables */}
       <div className="text-center items-center space-x-1 font-semibold cursor-pointer">
         {[1, 2, 3, 4, 5].map((value) => (
@@ -167,6 +182,7 @@ export default function RatingStars2() {
         </div>
       )}
 
+      {/* ------------------------------------------------------ */}
       {/* Moyenne */}
       <div className="text-center mt-4">
         <span className="text-yellow-500 font-bold text-base">
@@ -201,11 +217,11 @@ export default function RatingStars2() {
 
         {/* Slider commentaires */}
         <div className="w-full md:w-1/2 max-w-md space-y-0 p-1">
-          <Slider {...sliderSettings}>
+          <Slider ref={sliderRef} {...sliderSettings}>
             {comments.map((c, i) => (
               <div
                 key={i}
-                className="w-full max-w-md text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-2"
+                className="w-full h-full text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-2"
               >
                 <div className="font-semibold">{c.pseudo}</div>
                 <div className="text-orange-400 text-xl">
@@ -221,6 +237,7 @@ export default function RatingStars2() {
         </div>
       </div>
 
+      {/* ------------------------------------------------------ */}
       <div className="text-left text-gray-500 dark:text-gray-300 text-xs">
         Les propos haineux, discriminatoires ou offensants seront supprimés sans
         préavis.
