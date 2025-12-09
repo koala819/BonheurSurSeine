@@ -1,7 +1,10 @@
 'use client'
 
+//import { Button } from '@nextui-org/react'
 import { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
+
+import ModalAvis from '@/src/components/atoms/Merci_VoirtouslesAvis'
 
 import 'slick-carousel/slick/slick-theme.css'
 // Import CSS slick-carousel
@@ -38,6 +41,9 @@ export default function RatingStars2() {
 
   const lastSubmitTimeRef = useRef<number>(0)
 
+  // pour affichage de la fenetre supplémentaire
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   // Référence au slider
   const sliderRef = useRef<Slider>(null)
 
@@ -53,7 +59,8 @@ export default function RatingStars2() {
 
   async function sendRating(rating: number) {
     const now = Date.now()
-    if (now - lastSubmitTimeRef.current < 10000) {
+    //anti-spam 30sec entre chaque envoi
+    if (now - lastSubmitTimeRef.current < 30000) {
       setFeedback('⏳ Tu as déjà envoyé une note…')
       return
     }
@@ -187,11 +194,24 @@ export default function RatingStars2() {
       <div className="text-center mt-4">
         <span className="text-yellow-500 font-bold text-base">
           {average.toFixed(2)}⭐
+        </span>{' '}
+        (
+        <span
+          onClick={() => setIsModalOpen(true)}
+          className="text-gray-500 dark:text-white font-normal text-base cursor-pointer underline hover:no-underline"
+          title="Voir tous les avis"
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              setIsModalOpen(true)
+            }
+          }}
+        >
+          {count} avis
         </span>
-        <span className="text-gray-500 dark:text-white font-normal text-base">
-          {' '}
-          ({count} avis)
-        </span>
+        )
       </div>
 
       {/* Historique */}
@@ -237,11 +257,25 @@ export default function RatingStars2() {
         </div>
       </div>
 
-      {/* ------------------------------------------------------ */}
-      <div className="text-left text-gray-500 dark:text-gray-300 text-xs">
+      {/* ------------------- Bouton inutile ------------------- */}
+      {/*<div className="m-1 flex justify-center">
+        <Button
+          color="primary"
+          variant="flat"
+          onPress={() => setIsModalOpen(true)}
+        >
+          Voir les avis
+        </Button>
+      </div>*/}
+
+      {/* ----Phrase supprimée pour pas attirer l'attention : mise dans mentions légales ---- */}
+      {/*<div className="text-left text-gray-500 dark:text-gray-300 text-xs">
         Les propos haineux, discriminatoires ou offensants seront supprimés sans
         préavis.
-      </div>
+      </div>*/}
+
+      {/* ------------------------------------------------------ */}
+      <ModalAvis isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }

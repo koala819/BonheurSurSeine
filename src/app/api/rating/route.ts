@@ -27,7 +27,10 @@ const bannedWords = [
   'pauv',
   'gogo',
   'debile',
+  'bite',
   'encul',
+  'cul',
+  'tarace',
   'naz',
 ]
 
@@ -94,12 +97,19 @@ function initDBOnce() {
 }
 
 // =====================================================
-// GET — données + commentaires aléatoires + répartition par note
+// GET — données + commentaires sélectionnnés et triés aléatoires + répartition par note
 // =====================================================
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+}
+
 export async function GET() {
   await initDBOnce()
 
-  // Notes approuvées
+  // Notes approuvées : total et moyenne
   const ratingsResult = await client.execute(`
     SELECT rating
     FROM ratingsfull
@@ -140,14 +150,14 @@ export async function GET() {
   const ids = idsResult.rows.map((r: any) => r.id)
 
   // 2. Mélange local (Fisher-Yates) en conservant le premier élément en tête
+  // Ce premier élément correspond au commentaire le plus récent.
   for (let i = ids.length - 1; i > 1; i--) {
     const j = Math.floor(Math.random() * (i - 1)) + 1
     ;[ids[i], ids[j]] = [ids[j], ids[i]]
   }
 
-  // 3. Garde seulement 10 IDs
+  // 3. Garde seulement les 10 IDs ci-dessus
   const selectedIds = ids.slice(0, 10)
-
   let comments = []
   if (selectedIds.length > 0) {
     const placeholders = selectedIds.map(() => '?').join(',')
@@ -159,12 +169,14 @@ export async function GET() {
       `,
       selectedIds,
     )
-
+    // 3. On a les 10 commentaires
     comments = commentsResult.rows.map((r: any) => ({
       rating: Number(r.rating),
       pseudo: r.pseudo || 'Anonyme',
       comment: r.comment,
     }))
+    // 3. On est mélange encore
+    shuffleArray(comments)
   }
 
   return NextResponse.json({
