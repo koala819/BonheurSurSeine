@@ -7,6 +7,7 @@ import client from '@/src/lib/turso'
 // =====================================================
 const bannedWords = [
   'con',
+  'wizzas',
   'connard',
   'idiot',
   'pd',

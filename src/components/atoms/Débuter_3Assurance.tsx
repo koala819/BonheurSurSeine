@@ -221,18 +221,13 @@ const Assurance = () => {
                 💰 Le budget assurance
               </h3>
               <p className="text-sm">
-                Assurer un EDPM{' '}
+                L&apos;assurance d&apos;un EDPM est accessible{' '}
                 <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
-                  coûte 5-10€/mois
-                </span>
-                . La plupart des assureurs proposent des contrats adaptés.
-                <br />
-                Tu trouveras un{' '}
-                <Link href="/codes-promo" className="link-style">
-                  code Promo
-                </Link>{' '}
-                à utiliser chez Wizzas, un courtier en assurance spécialisé et
-                partenaire de la chaîne.
+                  à partir de 5-10€/mois
+                </span>{' '}
+                (couverture RC). La majorité des compagnies proposent des
+                formules variées, avec des niveaux de couverture adaptés aux
+                besoins de chacun.
               </p>
             </div>
           </div>

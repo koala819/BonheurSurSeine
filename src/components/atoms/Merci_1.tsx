@@ -1,6 +1,12 @@
 'use client'
 
+import { Button, Input, Textarea } from '@nextui-org/react'
 //import { Bolt } from 'lucide-react'
+//import { RichText } from 'prismic-reactjs'
+import { useMemo, useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -21,87 +27,54 @@ export default function Contact({
   // text: any
   friends: ContactFriends[]
 }) {
-  // const [hideForm, setHideForm] = useState<boolean>(false)
-  // const [value, setValue] = useState<string>('')
+  const [hideForm, setHideForm] = useState<boolean>(false)
+  const [value, setValue] = useState<string>('')
 
-  // const validateEmail = (value: string) =>
-  //   value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
+  const validateEmail = (value: string) =>
+    value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i)
 
-  // const isInvalid = useMemo(() => {
-  //   if (value === '') return false
+  const isInvalid = useMemo(() => {
+    if (value === '') return false
 
-  //   return validateEmail(value) ? false : true
-  // }, [value])
+    return validateEmail(value) ? false : true
+  }, [value])
 
-  // const { control, handleSubmit } = useForm<any>()
-  // async function handleSendMail(values: {
-  //   email: string
-  //   firstName: string
-  //   lastName: string
-  //   msg: string
-  // }) {
-  //   const data = {
-  //     email: values.email,
-  //     prenom: values.firstName,
-  //     nom: values.lastName,
-  //     message: values.msg,
-  //   }
+  const { control, handleSubmit } = useForm<any>()
+  async function handleSendMail(values: {
+    email: string
+    firstName: string
+    lastName: string
+    msg: string
+  }) {
+    const data = {
+      email: values.email,
+      prenom: values.firstName,
+      nom: values.lastName,
+      message: values.msg,
+    }
 
-  //   const options = {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify(data),
-  //   }
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    }
 
-  //   fetch(`${process.env.CLIENT_URL}/api/mail`, options)
-  //     .then((response: any) => {
-  //       if (response.status === 200) {
-  //         toast.success('Votre message a bien été envoyé')
-  //         setHideForm(true)
-  //       } else {
-  //         toast.error("Une erreur s'est produite", response.statusText)
-  //       }
-  //     })
-  //     .catch((error: any) => {
-  //       toast.error("Une erreur s'est produite", error)
-  //     })
-  // }
+    fetch(`${process.env.CLIENT_URL}/api/mail`, options)
+      .then((response: any) => {
+        if (response.status === 200) {
+          toast.success('Votre message a bien été envoyé')
+          setHideForm(true)
+        } else {
+          toast.error("Une erreur s'est produite", response.statusText)
+        }
+      })
+      .catch((error: any) => {
+        toast.error("Une erreur s'est produite", error)
+      })
+  }
 
   return (
-    //<section className="container my-8 mx-auto p-4 space-y-8">
-
     <section id="soutien" className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
-      {/*
-    <h1 className="whitespace-break-spaces">Formulaire de contact</h1>
-      <header className="container mx-auto p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <ul className="list">
-              <li>J&apos;ai envie de dire merci (dis le aussi en commentaires
-                <Link
-                  href={'https://www.youtube.com/c/BonheursurSeine'}
-                  passHref
-                  target="_blank"
-                  className="link-style ml-1"
-                >  des vidéos </Link> ) </li>
-              <li>Je voudrais t&apos;écrire ou t&apos;envoyer un truc</li>
-              <li>J&apos;ai un projet de partenariat à proposer</li>
-              <li>Je souhaite t&apos;inviter à un événement</li>
-              <li>Je voudrais ré-utiliser une partie de ton travail et/ou de ton image sur un site/blog/vidéo/etc. </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="list">
-              <li>Je voudrais faire une suggestion de sujet pour une vidéo</li>
-              <li>J&apos;ai vu un bug, une erreur</li>
-              <li>Je veux t&apos;insulter parce que tu fais de la merde</li>
-              <li>Autre chose</li>
-            </ul>
-          </div>
-        </div>
-      </header>
-*/}
-
       <section className="flex flex-col lg:flex-row my-2 lg:my-6">
         <aside className="w-full flex justify-center mb-0 lg:mb-0">
           {/*lg:w-1/2 */}
@@ -131,15 +104,14 @@ export default function Contact({
           </picture>
         </aside>
 
-        {/*
         <aside className="w-full lg:w-1/2 flex justify-center">
-          <div className="flex items-center justify-center w-full">
+          <div className="flex items-center justify-center w-full bg-white border-1.5 rounded-lg p-2">
             {!hideForm ? (
               <form
                 onSubmit={handleSubmit(handleSendMail)}
                 className="space-y-4"
               >
-                <div className="rich-text">{RichText.render(text)}</div>
+                {/*<div className="rich-text">{RichText.render(text)}</div>*/}
 
                 <div className="flex justify-between space-x-2">
                   <Controller
@@ -232,7 +204,7 @@ export default function Contact({
               <p>Je vous répondrai d&apos;ici 24h maximum.</p>
             )}
           </div>
-        </aside>*/}
+        </aside>
       </section>
 
       {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
@@ -240,6 +212,7 @@ export default function Contact({
         <RatingStars2 />
       </div>
 
+      {/* APPEL AU SOUTIEN*/}
       <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
           Pour soutenir mon travail, accéder à des contenus supplémentaires et
@@ -289,6 +262,7 @@ export default function Contact({
         </div>
       </div>
 
+      {/* ZONE Remerciements */}
       <section id="copains" className="space-y-2 my-4">
         <h2>Remerciements</h2>
         <p className="text-sm text-justify">
@@ -330,6 +304,8 @@ export default function Contact({
           <strong>MERCI LES COPAINS !!!</strong>
         </p>
       </section>
+
+      {/* AFFICHAGE DES COPAINS */}
       <div className="container mx-auto px-2">
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2">
           {friends.map((friend, index) => (
