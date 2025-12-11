@@ -57,6 +57,9 @@ export default function RatingStars2() {
     setCountsByRating(data.countsByRating || {})
   }
 
+  // ---------------------------------------
+  // ⬇️ Envoi note + email
+  // ---------------------------------------
   async function sendRating(rating: number) {
     const now = Date.now()
     //anti-spam 30sec entre chaque envoi
@@ -64,11 +67,7 @@ export default function RatingStars2() {
       setFeedback('⏳ Tu as déjà envoyé une note…')
       return
     }
-    if (!pseudo.trim()) {
-      setFeedback('✏️ Entre un pseudo et un commentaire')
-      return
-    }
-    if (!comment.trim()) {
+    if (!pseudo.trim() || !comment.trim()) {
       setFeedback('✏️ Entre un pseudo et un commentaire')
       return
     }
@@ -79,6 +78,7 @@ export default function RatingStars2() {
     setFeedback('⏳ Envoi en cours…')
 
     try {
+      // 1️⃣ Sauvegarde Turso
       await fetch('/api/ratingv2', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -87,6 +87,13 @@ export default function RatingStars2() {
           pseudo,
           comment,
         }),
+      })
+
+      // 2️⃣ Envoi email
+      await fetch('/api/notifcommentaire', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rating, pseudo, comment }),
       })
 
       const newComment = { rating, pseudo, comment }
@@ -145,16 +152,14 @@ export default function RatingStars2() {
       {/* ------------------------------------------------------ */}
       {/* Étoiles cliquables */}
       <div className="text-center items-center space-x-1 font-semibold cursor-pointer">
-        {[1, 2, 3, 4, 5].map((value) => (
+        {[1, 2, 3, 4, 5].map((val) => (
           <span
-            key={value}
-            onMouseEnter={() => setHovered(value)}
+            key={val}
+            onMouseEnter={() => setHovered(val)}
             onMouseLeave={() => setHovered(0)}
-            onClick={() => sendRating(value)}
+            onClick={() => sendRating(val)}
             className={`text-3xl cursor-pointer transition ${
-              value <= (hovered || selected)
-                ? 'text-orange-500'
-                : 'text-gray-400'
+              val <= (hovered || selected) ? 'text-orange-500' : 'text-gray-400'
             }`}
           >
             ★
@@ -163,7 +168,7 @@ export default function RatingStars2() {
       </div>
 
       {/* Formulaire */}
-      <div className="flex flex-col gap-1 w-full max-w-md text-sm ">
+      <div className="flex flex-col gap-1 w-full max-w-md text-sm">
         <input
           type="text"
           placeholder="Ton prénom"
@@ -172,6 +177,7 @@ export default function RatingStars2() {
           onChange={(e) => setPseudo(e.target.value)}
           className="border rounded px-2 py-2 text-black dark:text-white"
         />
+
         <textarea
           placeholder="Ton commentaire (100 caractères max)"
           maxLength={100}
