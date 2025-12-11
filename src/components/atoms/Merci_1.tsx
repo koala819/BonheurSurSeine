@@ -1,20 +1,19 @@
 'use client'
 
-import { Button, Input, Textarea } from '@nextui-org/react'
+//import { Button, Input, Textarea } from '@nextui-org/react'
 //import { Bolt } from 'lucide-react'
 //import { RichText } from 'prismic-reactjs'
-import { useMemo, useState } from 'react'
-import { Controller, useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
-
+//import { useMemo, useState } from 'react'
+//import { Controller, useForm } from 'react-hook-form'
+//import toast from 'react-hot-toast'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
-import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
+//import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
+import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 
-//import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
@@ -28,7 +27,8 @@ export default function Contact({
   // text: any
   friends: ContactFriends[]
 }) {
-  const [hideForm, setHideForm] = useState<boolean>(false)
+  {
+    /*const [hideForm, setHideForm] = useState<boolean>(false)
   const [value, setValue] = useState<string>('')
 
   const validateEmail = (value: string) =>
@@ -72,13 +72,13 @@ export default function Contact({
       .catch((error: any) => {
         toast.error("Une erreur s'est produite", error)
       })
+  }*/
   }
 
   return (
     <section id="soutien" className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
       <section className="flex flex-col lg:flex-row my-2 lg:my-6">
         <aside className="w-full flex justify-center mb-0 lg:mb-0">
-          {/*lg:w-1/2 */}
           <picture className="flex flex-col items-center px-4 w-full">
             <Image
               src={bonheurSurSeine}
@@ -106,10 +106,10 @@ export default function Contact({
         </aside>
       </section>
 
-      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      {/*<div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         {!hideForm ? (
           <form onSubmit={handleSubmit(handleSendMail)} className="space-y-4">
-            {/*<div className="rich-text">{RichText.render(text)}</div>*/}
+            <div className="rich-text">{RichText.render(text)}</div>
             <div className="flex justify-between space-x-2">
               <Controller
                 name="lastName"
@@ -200,16 +200,16 @@ export default function Contact({
         ) : (
           <p>Je vous répondrai d&apos;ici 24h maximum.</p>
         )}
-      </div>
+      </div>*/}
 
       {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
 
       <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
-        <RatingStars1 />
+        <RatingStars2 />
       </div>
       {/*
       <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
-        <RatingStars2 />
+        <RatingStars1 />
       </div>
       */}
       {/* APPEL AU SOUTIEN*/}
