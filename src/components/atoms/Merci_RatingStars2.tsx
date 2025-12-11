@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 
-import ModalAvis from '@/src/components/atoms/Merci_VoirtouslesAvis'
+import ModalAvis from '@/src/components/atoms/Merci_RatingStars2touslesAvis'
 
 import 'slick-carousel/slick/slick-theme.css'
 // Import CSS slick-carousel
@@ -48,7 +48,7 @@ export default function RatingStars2() {
   const sliderRef = useRef<Slider>(null)
 
   async function fetchData() {
-    const response = await fetch('/api/rating')
+    const response = await fetch('/api/ratingv2')
     const data: Stats = await response.json()
 
     setAverage(Number(data.average))
@@ -79,7 +79,7 @@ export default function RatingStars2() {
     setFeedback('⏳ Envoi en cours…')
 
     try {
-      await fetch('/api/rating', {
+      await fetch('/api/ratingv2', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

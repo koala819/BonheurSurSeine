@@ -12,7 +12,7 @@ export default function RatingStars() {
   const lastSubmitTimeRef = useRef<number>(0)
 
   async function fetchAverage() {
-    const response = await fetch('/api/rating')
+    const response = await fetch('/api/ratingv1')
     const data = await response.json()
     setAverage(Number(data.average))
     setCount(data.count)
@@ -30,7 +30,7 @@ export default function RatingStars() {
     setSelected(rating)
 
     try {
-      await fetch('/api/rating', {
+      await fetch('/api/ratingv1', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rating }),

@@ -12,8 +12,9 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
-import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
+import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
 
+//import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 import Discord from '@/public/Discord.png'
 import Patreon from '@/public/Patreon.svg'
 import undefindAvatar from '@/public/People.png'
@@ -103,115 +104,114 @@ export default function Contact({
             </p>
           </picture>
         </aside>
-
-        <aside className="w-full lg:w-1/2 flex justify-center">
-          <div className="flex items-center justify-center w-full bg-white border-1.5 rounded-lg p-2">
-            {!hideForm ? (
-              <form
-                onSubmit={handleSubmit(handleSendMail)}
-                className="space-y-4"
-              >
-                {/*<div className="rich-text">{RichText.render(text)}</div>*/}
-
-                <div className="flex justify-between space-x-2">
-                  <Controller
-                    name="lastName"
-                    control={control}
-                    render={({ field: { onChange, value } }) => (
-                      <Input
-                        isRequired
-                        type="text"
-                        color={undefined}
-                        variant="bordered"
-                        label="Nom"
-                        id="lastName"
-                        onChange={onChange}
-                        value={value}
-                        className="max-w-full"
-                      />
-                    )}
-                  />
-
-                  <Controller
-                    name="firstName"
-                    control={control}
-                    render={({ field: { onChange, value } }) => (
-                      <Input
-                        isRequired
-                        type="text"
-                        color={undefined}
-                        variant="bordered"
-                        label="Prénom"
-                        id="firstName"
-                        onChange={onChange}
-                        value={value}
-                        className="max-w-full"
-                      />
-                    )}
-                  />
-                </div>
-
-                <div className="w-full">
-                  <Controller
-                    name="email"
-                    control={control}
-                    render={({ field: { onChange, value } }) => (
-                      <Input
-                        isRequired
-                        onChange={onChange}
-                        value={value}
-                        type="email"
-                        label="Email"
-                        variant="bordered"
-                        isInvalid={isInvalid}
-                        color={isInvalid ? 'danger' : undefined}
-                        errorMessage={
-                          isInvalid && 'Saisissez une adresse mail valide svp'
-                        }
-                        onValueChange={setValue}
-                      />
-                    )}
-                  />
-                </div>
-
-                <Controller
-                  name="msg"
-                  control={control}
-                  defaultValue=""
-                  render={({ field: { onChange, value } }) => (
-                    <Textarea
-                      isRequired
-                      type="text"
-                      color={undefined}
-                      variant="bordered"
-                      value={value}
-                      onChange={onChange}
-                      label="Veuillez saisir votre message"
-                      autoFocus
-                      className="max-w-full"
-                    />
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  className="black-button w-full text-center mt-16"
-                >
-                  Envoyer
-                </Button>
-              </form>
-            ) : (
-              <p>Je vous répondrai d&apos;ici 24h maximum.</p>
-            )}
-          </div>
-        </aside>
       </section>
 
+      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        {!hideForm ? (
+          <form onSubmit={handleSubmit(handleSendMail)} className="space-y-4">
+            {/*<div className="rich-text">{RichText.render(text)}</div>*/}
+            <div className="flex justify-between space-x-2">
+              <Controller
+                name="lastName"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    type="text"
+                    color={undefined}
+                    variant="bordered"
+                    label="Nom"
+                    id="lastName"
+                    onChange={onChange}
+                    value={value}
+                    className="max-w-full"
+                  />
+                )}
+              />
+
+              <Controller
+                name="firstName"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    type="text"
+                    color={undefined}
+                    variant="bordered"
+                    label="Prénom"
+                    id="firstName"
+                    onChange={onChange}
+                    value={value}
+                    className="max-w-full"
+                  />
+                )}
+              />
+            </div>
+
+            <div className="w-full">
+              <Controller
+                name="email"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    isRequired
+                    onChange={onChange}
+                    value={value}
+                    type="email"
+                    label="Email"
+                    variant="bordered"
+                    isInvalid={isInvalid}
+                    color={isInvalid ? 'danger' : undefined}
+                    errorMessage={
+                      isInvalid && 'Saisissez une adresse mail valide svp'
+                    }
+                    onValueChange={setValue}
+                  />
+                )}
+              />
+            </div>
+
+            <Controller
+              name="msg"
+              control={control}
+              defaultValue=""
+              render={({ field: { onChange, value } }) => (
+                <Textarea
+                  isRequired
+                  type="text"
+                  color={undefined}
+                  variant="bordered"
+                  value={value}
+                  onChange={onChange}
+                  label="Veuillez saisir votre message"
+                  autoFocus
+                  className="max-w-full"
+                />
+              )}
+            />
+
+            <Button
+              type="submit"
+              className="black-button w-full text-center mt-16"
+            >
+              Envoyer
+            </Button>
+          </form>
+        ) : (
+          <p>Je vous répondrai d&apos;ici 24h maximum.</p>
+        )}
+      </div>
+
       {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
+
+      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <RatingStars1 />
+      </div>
+      {/*
       <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <RatingStars2 />
       </div>
-
+      */}
       {/* APPEL AU SOUTIEN*/}
       <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">

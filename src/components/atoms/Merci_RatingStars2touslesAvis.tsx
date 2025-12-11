@@ -35,7 +35,7 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
     setLoading(true)
 
     const res = await fetch(
-      `/api/ratings/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
+      `/api/ratingv2p/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
     )
     const json = await res.json()
 
