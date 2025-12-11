@@ -248,6 +248,9 @@ export default function Page() {
       <p>
         Aucune donnée personnelle n&apos;est collectée à votre insu.
         <br />
+        Les propos haineux, discriminatoires ou offensants des commentaires sont
+        supprimés sans préavis.
+        <br />
         Conformément au RGPD et à la loi Informatique et Libertés du 6 janvier
         1978, vous pouvez demander l&apos;accès, la rectification ou la
         suppression de vos données. Pour exercer ce droit, veuillez
