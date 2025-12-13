@@ -6,6 +6,7 @@ import Slider from 'react-slick'
 
 import ModalAvis from '@/src/components/atoms/Merci_RatingStars2touslesAvis'
 
+//import confetti from 'canvas-confetti'
 import 'slick-carousel/slick/slick-theme.css'
 // Import CSS slick-carousel
 import 'slick-carousel/slick/slick.css'
@@ -55,6 +56,18 @@ export default function RatingStars2() {
     setCount(data.count)
     setComments(data.comments || [])
     setCountsByRating(data.countsByRating || {})
+  }
+
+  // Lancement de l'animation confetti
+  {
+    /*const launchConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    })
+  }
+    */
   }
 
   // ---------------------------------------
@@ -114,6 +127,17 @@ export default function RatingStars2() {
     } catch {
       setFeedback('❌ Une erreur est survenue')
     }
+  }
+
+  // Surveille le feedback pour déclencher le confetti uniquement quand le message est le message de succès
+  {
+    /*
+  useEffect(() => {
+    if (feedback === '✅ Merci pour ton avis !') {
+      launchConfetti()
+    }
+  }, [feedback])
+*/
   }
 
   useEffect(() => {

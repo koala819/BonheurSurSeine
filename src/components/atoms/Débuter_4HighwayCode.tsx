@@ -314,7 +314,50 @@ const HighwayCode = () => {
             </div>
           </div>
           {/*-------------------------------------------*/}
-          <p className="mb-8 text-justify">
+          <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
+            <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
+              🪖 ET LE CASQUE&nbsp;?
+            </h4>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
+              En agglomération, sur voies vertes et pistes cyclable, la
+              législation ne rend pas obligatoire le port du casque (jet ou
+              intégral)&nbsp;: il est cependant{' '}
+              <strong>fortement recommandé</strong>.
+            </p>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
+              Le casque n&apos;est obligatoire, tout comme le port
+              d&apos;équipements rétroréﬂéchissants, que sur les routes hors
+              agglomération autorisées par dérogation (
+              <Link
+                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783"
+                target="_blank"
+                className="link-style"
+              >
+                R412-43-1 IV
+              </Link>
+              ).
+            </p>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
+              Mais surtout,{' '}
+              <strong>les protections ne rendent pas invulnérables</strong>.
+            </p>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
+              Gardons à l&apos;esprit que{' '}
+              <strong>
+                la prudence est bien plus efficace que n&apos;importe quel
+                casque.
+              </strong>
+            </p>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100">
+              💡 Rappelons également que le port (nombre, nature, etc.) des
+              protections est un <u>choix personnel</u> et est{' '}
+              <u>fonction de l&apos;usage</u>&nbsp;: si nous imposions nos
+              choix, d&apos;autres nous imposeraient alors les leurs... et nous
+              interdiraient, pourquoi pas, d&apos;utiliser une roue, considérant
+              que c&apos;est trop dangereux.
+            </p>
+          </div>
+          <p className="mt-6 mb-8 text-justify">
             Ces dispositions peuvent paraitre contraignantes, mais elles sont{' '}
             <b>
               importantes et efficaces pour ta propre sécurité et celle des
