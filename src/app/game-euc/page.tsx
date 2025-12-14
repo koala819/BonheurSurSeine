@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import RexEUC from '@/src/components/gameEUCBSS/gameEUC'
+import Notifeucgame from '@/src/components/gameEUCBSS/notif-eucgame1'
 
 // Ajuste le chemin si nécessaire
 export const metadata = {
@@ -64,6 +65,9 @@ export default function GamePage() {
           </i>
           &nbsp;».
         </div>
+      </div>
+      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <Notifeucgame />
       </div>
     </div>
   )
