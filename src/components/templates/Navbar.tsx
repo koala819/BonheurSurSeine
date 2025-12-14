@@ -34,6 +34,7 @@ export function Top() {
     { name: 'Remerciements', path: '/mille-merci' },
   ]
 
+  /* --------------------------------------------- */
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
@@ -58,6 +59,7 @@ export function Top() {
         ],
       }}
     >
+      {/* Logo */}
       <NavbarContent>
         <NavbarBrand>
           <Link href="/" aria-current="page">
@@ -72,6 +74,7 @@ export function Top() {
         </NavbarBrand>
       </NavbarContent>
 
+      {/* Menu desktop */}
       <NavbarContent className="hidden md:flex gap-3" justify="center">
         {/*--------------------------------------------*/}
         <div className="relative group">
@@ -376,6 +379,7 @@ export function Top() {
         </div>
       </NavbarContent>
 
+      {/* Actions droite */}
       <NavbarContent justify="end">
         <NavbarItem>
           <ThemeSwitcher />
@@ -386,19 +390,23 @@ export function Top() {
         />
       </NavbarContent>
 
+      {/* Menu mobile aligné à droite */}
       <NavbarMenu
-        className="mt-8"
+        className="mt-8 items-start text-left pr-4"
         style={{ maxHeight: '370px', overflowY: 'auto' }}
       >
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem
+            key={`${item.name}-${index}`}
+            className="w-full flex justify-left"
+          >
             <Link
               color={'foreground'}
-              className="w-full hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl hover:w-2/3"
+              className="justify-left w-2/3 rounded-xl hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl font-semibold transition-colors"
               href={item.path}
               size="lg"
             >
-              {item.name}
+              🔵&nbsp;&nbsp;{item.name}
             </Link>
           </NavbarMenuItem>
         ))}

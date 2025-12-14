@@ -76,7 +76,7 @@ export default function Contact({
   }
 
   return (
-    <section id="soutien" className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
+    <section className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
       <section className="flex flex-col lg:flex-row my-2 lg:my-6">
         <aside className="w-full flex justify-center mb-0 lg:mb-0">
           <picture className="flex flex-col items-center px-4 w-full">
@@ -89,7 +89,7 @@ export default function Contact({
               height={500}
               placeholder="blur"
             />
-            <p className="mt-0 mb-0 ">
+            <p className="mt-0 mb-0 scroll-mt-24" id="soutien">
               ▶️&nbsp;
               <i>
                 <Link
@@ -263,7 +263,7 @@ export default function Contact({
       </div>
 
       {/* ZONE Remerciements */}
-      <section id="copains" className="space-y-2 my-4">
+      <section id="copains" className="space-y-2 my-4 scroll-mt-48">
         <h2>Remerciements</h2>
         <p className="text-sm text-justify">
           <b>Bonheur sur Seine</b>, ce sont des vidéos
