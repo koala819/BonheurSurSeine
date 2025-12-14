@@ -318,16 +318,14 @@ const HighwayCode = () => {
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
               🪖 ET LE CASQUE&nbsp;?
             </h4>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
-              En agglomération, sur voies vertes et pistes cyclable, la
-              législation ne rend pas obligatoire le port du casque (jet ou
-              intégral)&nbsp;: il est cependant{' '}
-              <strong>fortement recommandé</strong>.
-            </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
-              Le casque n&apos;est obligatoire, tout comme le port
-              d&apos;équipements rétroréﬂéchissants, que sur les routes hors
-              agglomération autorisées par dérogation (
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2 text-justify">
+              En agglomération, sur voies vertes et pistes cyclable, le port du
+              casque (jet ou intégral) n&apos;est pas obligatoire&nbsp;: il est
+              cependant <strong>fortement recommandé</strong>.
+              <br />
+              Le casque, comme les équipements rétroréﬂéchissants, n&apos;est
+              obligatoire que sur les routes hors agglomération autorisées par
+              dérogation (
               <Link
                 href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783"
                 target="_blank"
@@ -337,24 +335,22 @@ const HighwayCode = () => {
               </Link>
               ).
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
-              Mais surtout,{' '}
-              <strong>les protections ne rendent pas invulnérables</strong>.
-            </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-1">
-              Gardons à l&apos;esprit que{' '}
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2 text-justify">
+              <strong>Les protections </strong> sont importantes mais{' '}
               <strong>
-                la prudence est bien plus efficace que n&apos;importe quel
-                casque.
+                ne rendent pas invulnérable&nbsp;: la prudence reste la
+                meilleure protection
               </strong>
+              , bien plus efficace que n&apos;importe quel équipement.
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100">
-              💡 Rappelons également que le port (nombre, nature, etc.) des
-              protections est un <u>choix personnel</u> et est{' '}
-              <u>fonction de l&apos;usage</u>&nbsp;: si nous imposions nos
-              choix, d&apos;autres nous imposeraient alors les leurs... et nous
-              interdiraient, pourquoi pas, d&apos;utiliser une roue, considérant
-              que c&apos;est trop dangereux.
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 text-justify">
+              💡 Rappelons aussi que le port des protections (nombre, type,
+              etc.) est un <u>choix personnel</u> également{' '}
+              <u>lié à l&apos;usage</u>. <br />
+              Imposer ses choix aux autres revient à accepter que d&apos;autres
+              nous imposent les leurs… jusqu&apos;à remettre en cause
+              l&apos;usage même de la roue électrique, trop dangereuse à leurs
+              yeux.
             </p>
           </div>
           <p className="mt-6 mb-8 text-justify">

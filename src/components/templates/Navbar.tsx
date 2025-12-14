@@ -392,21 +392,21 @@ export function Top() {
 
       {/* Menu mobile aligné à droite */}
       <NavbarMenu
-        className="mt-8 items-end text-right pr-4"
+        className="mt-8 items-start text-left pr-4"
         style={{ maxHeight: '370px', overflowY: 'auto' }}
       >
         {menuItems.map((item, index) => (
           <NavbarMenuItem
             key={`${item.name}-${index}`}
-            className="w-full flex justify-stretch"
+            className="w-full flex justify-left"
           >
             <Link
               color={'foreground'}
-              className="justify-end w-full rounded-xl hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl font-semibold"
+              className="justify-left w-2/3 rounded-xl hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl font-semibold transition-colors"
               href={item.path}
               size="lg"
             >
-              {item.name}&nbsp;&nbsp;⚫
+              🔵&nbsp;&nbsp;{item.name}
             </Link>
           </NavbarMenuItem>
         ))}
