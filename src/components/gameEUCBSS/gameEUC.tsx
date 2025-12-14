@@ -83,8 +83,9 @@ export default function RexEUC() {
       }, 200)
     }
   }
-  // Gestion Barre espace
-  useEffect(() => {
+  // Gestion Barre espace = ancienne version : le jeu était lançable avec.
+  {
+    /*  useEffect(() => {
     const startHandler = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
         e.preventDefault()
@@ -114,6 +115,36 @@ export default function RexEUC() {
     window.addEventListener('keyup', keyUpHandler)
     return () => {
       window.removeEventListener('keydown', startHandler)
+      window.removeEventListener('keyup', keyUpHandler)
+    }
+  }, [isStarted, isGameOver, isJumping])*/
+  }
+
+  // Gestion Barre espace (écriture libre hors jeu)
+  useEffect(() => {
+    const keyDownHandler = (e: KeyboardEvent) => {
+      if (e.code !== 'Space') return
+      // ✅ laisser l'espace fonctionner hors jeu
+      if (!isStarted || isGameOver) return
+      // ❌ bloquer le scroll / comportement navigateur uniquement en jeu
+      e.preventDefault()
+      if (!isJumping && jumpAllowed.current) {
+        handleJump()
+        jumpAllowed.current = false
+      }
+    }
+
+    const keyUpHandler = (e: KeyboardEvent) => {
+      if (e.code === 'Space') {
+        jumpAllowed.current = true
+      }
+    }
+
+    window.addEventListener('keydown', keyDownHandler)
+    window.addEventListener('keyup', keyUpHandler)
+
+    return () => {
+      window.removeEventListener('keydown', keyDownHandler)
       window.removeEventListener('keyup', keyUpHandler)
     }
   }, [isStarted, isGameOver, isJumping])

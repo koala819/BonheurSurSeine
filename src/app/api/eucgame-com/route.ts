@@ -81,7 +81,7 @@ function initDBOnce() {
     dbReady = client
       .execute(
         `
-      CREATE TABLE IF NOT EXISTS ratingsfull (
+      CREATE TABLE IF NOT EXISTS eucgame_avis (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         rating INTEGER NOT NULL,
         pseudo TEXT,
@@ -113,7 +113,7 @@ export async function GET() {
   // Notes approuvées : total et moyenne
   const ratingsResult = await client.execute(`
     SELECT rating
-    FROM ratingsfull
+    FROM eucgame_avis
     WHERE rating IS NOT NULL AND approved = 1
   `)
 
@@ -129,7 +129,7 @@ export async function GET() {
   // Répartition nombre d'avis par note
   const countsByRatingResult = await client.execute(`
     SELECT rating, COUNT(*) as count
-    FROM ratingsfull
+    FROM eucgame_avis
     WHERE approved = 1
     GROUP BY rating
   `)
@@ -144,7 +144,7 @@ export async function GET() {
   // 1. Récupère uniquement les IDs approuvés avec commentaire
   const idsResult = await client.execute(`
     SELECT id
-    FROM ratingsfull
+    FROM eucgame_avis
     WHERE approved = 1 AND comment IS NOT NULL AND comment != ''
     ORDER BY created_at DESC
   `)
@@ -165,7 +165,7 @@ export async function GET() {
     const commentsResult = await client.execute(
       `
         SELECT rating, pseudo, comment
-        FROM ratingsfull
+        FROM eucgame_avis
         WHERE id IN (${placeholders})
       `,
       selectedIds,
@@ -230,7 +230,7 @@ export async function POST(request: Request) {
   // Insertion en base
   await client.execute({
     sql: `
-      INSERT INTO ratingsfull (rating, pseudo, comment, approved, flagged)
+      INSERT INTO eucgame_avis (rating, pseudo, comment, approved, flagged)
       VALUES (?, ?, ?, ?, ?)
     `,
     args: [rating, safePseudo, safeComment || null, approved, flagged],
