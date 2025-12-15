@@ -149,6 +149,33 @@ export default function RexEUC() {
     }
   }, [isStarted, isGameOver, isJumping])
 
+  // Gestion du toucher écran (saut)
+  useEffect(() => {
+    const touchHandler = (e: TouchEvent) => {
+      // ❌ hors jeu → comportement normal
+      if (!isStarted || isGameOver) return
+      // ❌ bloque le scroll uniquement pendant le jeu
+      e.preventDefault()
+      if (!isJumping && jumpAllowed.current) {
+        handleJump()
+        jumpAllowed.current = false
+      }
+    }
+
+    const touchEndHandler = () => {
+      jumpAllowed.current = true
+    }
+
+    // passive: false obligatoire pour preventDefault
+    window.addEventListener('touchstart', touchHandler, { passive: false })
+    window.addEventListener('touchend', touchEndHandler)
+
+    return () => {
+      window.removeEventListener('touchstart', touchHandler)
+      window.removeEventListener('touchend', touchEndHandler)
+    }
+  }, [isStarted, isGameOver, isJumping])
+
   //-------------------------------------------------------------------//
   // Création des castus = chaque cactus a un id unique
   const addCactus = () => {
