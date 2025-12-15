@@ -175,7 +175,7 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease forwards;
+  animation: gradientAnimation 3s ease forwards;
 }
 
 @keyframes gradientAnimation {
