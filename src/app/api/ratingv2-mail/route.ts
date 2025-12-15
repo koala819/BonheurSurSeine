@@ -43,20 +43,20 @@ export async function POST(req: Request): Promise<Response> {
   const rating = body.rating || 0
 
   const mailOptions = {
-    from: `"Page Mystère EUC-game" <${email}>`,
-    to: 'fabien.wheeler@gmail.com',
-    subject: `🏆 ${pseudo} a trouvé la page`,
+    from: `"Site BsS - Avis" <${email}>`,
+    to: 'bonheursurseine@gmail.com;fabien.wheeler@gmail.com',
+    subject: `💬 Nouvel avis (${rating}⭐) : ${pseudo}`,
     text: `
 Pseudo : ${pseudo}
 Note : ${rating}/5
-Messages :
+Commentaire :
 ${comment}
     `,
     html: `
-      <h2>Nouveau message reçu</h2>
+      <h2>Nouveau commentaire reçu</h2>
       <p><strong>Pseudo :</strong> ${pseudo}</p>
-      <p><strong>Note :</strong> ${rating} </p>
-      <p><strong>Message :</strong><br>${comment}</p>
+      <p><strong>Note :</strong> ${rating} ⭐</p>
+      <p><strong>Commentaire :</strong><br>${comment}</p>
     `,
   }
 

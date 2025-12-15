@@ -94,7 +94,7 @@ export default function RatingStars2() {
       })
 
       // 2️⃣ Envoi email
-      await fetch('/api/eucgame-notif', {
+      await fetch('/api/eucgame-mail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rating, pseudo, comment }),
@@ -152,11 +152,11 @@ export default function RatingStars2() {
   return (
     <div className="flex flex-col items-center">
       {/* Titre */}
-      <div className="text-lg text-center font-bold text-black cursor-pointer dark:text-white">
-        Tu as trouvé la page mystère du site...
+      <div className="text-lg text-center font-bold text-black dark:text-white">
+        Félicitations ! Tu as trouvé la page mystère du site...
+        <br />
         <span className="font-normal">
-          {' '}
-          alors laisse une trace de ton passage 🙂
+          Alors laisse une trace de ton passage 🙂
         </span>
       </div>
 
@@ -189,23 +189,31 @@ export default function RatingStars2() {
         </div>
       )}
 
-      <Button color="success" variant="flat" onPress={() => sendRating(5)}>
+      <Button
+        style={{
+          backgroundColor: '#0ea5e9',
+          color: 'white',
+        }}
+        variant="flat"
+        onPress={() => sendRating(5)}
+        className="mb-3"
+      >
         Envoyer
       </Button>
 
       {/* ------------------------------------------------------ */}
       {/* Historique */}
-      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500  bg-slate-950 relative p-3 space-x-1 mt-1 gap-3">
+      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 relative p-3 space-x-1 gap-3 bg-slate-400">
         {/* Slider commentaires */}
         <div className="w-full space-y-0 px-4 mb-4">
           <Slider ref={sliderRef} {...sliderSettings}>
             {comments.map((c, i) => (
               <div
                 key={i}
-                className="w-full h-full text-center bg-gray-800 rounded-lg p-2"
+                className="w-full h-full text-center bg-white dark:bg-gray-800 rounded-lg p-2"
               >
-                <div className="font-semibold text-white">{c.pseudo}</div>
-                <div className="text-sm italic text-gray-300">
+                <div className="font-semibold dark:text-white">{c.pseudo}</div>
+                <div className="text-sm italic dark:text-gray-300">
                   “{c.comment}”
                 </div>
               </div>
@@ -214,10 +222,13 @@ export default function RatingStars2() {
         </div>
       </div>
 
-      {/* ------------------- Bouton inutile ------------------- */}
+      {/* ------------------- Bouton ------------------- */}
       <div className="m-1 flex justify-center">
         <Button
-          color="primary"
+          style={{
+            backgroundColor: '#0ea5e9',
+            color: 'white',
+          }}
           variant="flat"
           onPress={() => setIsModalOpen(true)}
         >
