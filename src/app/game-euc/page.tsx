@@ -26,6 +26,10 @@ export default function GamePage() {
             <span className="text-large"> 😁Bravo&nbsp;!😁 </span>
             <br />
             🎁<i>Tu as trouvé le petit contenu bonus de mon site&nbsp;!</i> 🎁
+            <br />
+            <span className="text-sm font-light italic">
+              (Page non optimisée pour les mobiles et écrans tactiles)
+            </span>
           </p>
         </div>
 

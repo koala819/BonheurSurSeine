@@ -49,7 +49,7 @@ export default function RatingStars2() {
   const sliderRef = useRef<Slider>(null)
 
   async function fetchData() {
-    const response = await fetch('/api/ratingv2')
+    const response = await fetch('/api/ratingv2-com')
     const data: Stats = await response.json()
 
     setAverage(Number(data.average))
@@ -92,7 +92,7 @@ export default function RatingStars2() {
 
     try {
       // 1️⃣ Sauvegarde Turso
-      await fetch('/api/ratingv2', {
+      await fetch('/api/ratingv2-com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -103,7 +103,7 @@ export default function RatingStars2() {
       })
 
       // 2️⃣ Envoi email
-      await fetch('/api/notifcommentaire', {
+      await fetch('/api/ratingv2-mail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rating, pseudo, comment }),
