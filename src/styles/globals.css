@@ -167,6 +167,29 @@ html {
 .slick-slide > div {
   margin: 0 4px;
 }
+
+/* Mise en higlight du lien vers le jeux */
+.animated-gradient-text {
+  background: linear-gradient(270deg, #e259f7, #7c3aed, #d946ef, #7c3aed);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease forwards;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /*---------------------------------------*/
 /*           AJOUT GAME                  */
 /*---------------------------------------*/

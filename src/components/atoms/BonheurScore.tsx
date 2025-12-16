@@ -10,7 +10,7 @@ import {
 } from '@nextui-org/react'
 import { Accordion, AccordionItem } from '@nextui-org/react'
 import { PrismicRichText } from '@prismicio/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaCity, FaMagic, FaRoad, FaTools, FaTrophy } from 'react-icons/fa'
 import { SiSpringCreators } from 'react-icons/si'
 
@@ -29,6 +29,15 @@ export function BonheurScore({
   gyroroues: BonheurScoreProps[]
 }) {
   moment.locale('fr')
+
+  const [animationDone, setAnimationDone] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimationDone(true)
+    }, 5000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   /*PREPARATION DES LISTES DES 2 FILTRES = valeurs uniques et triées*/
   const [selectedBrand, setSelectedBrand] = useState('')
@@ -147,7 +156,13 @@ export function BonheurScore({
               🆙 Ce comparatif est mis à jour lors de mes essais. Pour découvrir
               toutes les gyroroues que je teste,{' '}
               <Link href="/game-euc">
-                <strong className="text-fuchsia-700 dark:text-violet-400">
+                <strong
+                  className={
+                    animationDone
+                      ? 'text-fuchsia-700 dark:text-violet-400'
+                      : 'animated-gradient-text'
+                  }
+                >
                   reviens régulièrement
                 </strong>
               </Link>
