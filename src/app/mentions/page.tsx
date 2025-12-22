@@ -14,6 +14,10 @@ export default function Page() {
     <section className="container px-4 my-20 mx-auto space-y-4 text-justify">
       <h1>Mentions légales</h1>
       {/***********************************************************************/}
+      <p className="text-gray-500 dark:text-gray-300 mt-4 text-base">
+        Dernière mise à jour&nbsp;: 30 novembre 2025
+      </p>
+      {/***********************************************************************/}
       <h3>Identification et publication</h3>
       <p>
         <strong>Nom du site web :</strong> Bonheur Sur Seine
@@ -22,7 +26,7 @@ export default function Page() {
         <br />
         <strong>Directeur de la publication :</strong> Raphaël L.
         <br />
-        <strong>Numéro de Siret :</strong> 80294141900011
+        <strong>SIRET :</strong> 80294141900011
         <br />
         <strong>Activité :</strong> Se déplacer en roue change la perception de
         la mobilité !!
@@ -284,9 +288,6 @@ export default function Page() {
         &emsp;&bull;&ensp;Vous offrir une meilleure expérience utilisateur.
       </p>
       {/***********************************************************************/}
-      <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
-        Mentions légales créées le <strong>30/01/2024</strong>
-      </p>
     </section>
   )
 }

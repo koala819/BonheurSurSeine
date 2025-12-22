@@ -164,6 +164,14 @@ export function Top() {
               </li>
               <li>
                 <Link
+                  href="/apprendre-gyroroue#mes_formations"
+                  className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                >
+                  🔸Mes formations
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/apprendre-gyroroue#apprendre"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >

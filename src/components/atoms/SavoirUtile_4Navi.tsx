@@ -219,7 +219,8 @@ const Practical_Vrac = () => {
                     </Link>
                   </li>
                   <li className="text-sm">
-                    Certaines applications dédiées à la roue (Darknessboot{' '}
+                    Certaines applications dédiées à la roue (
+                    <u>Darknessboot</u>{' '}
                     <Link
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
                       rel="noopener noreferrer"
@@ -237,7 +238,7 @@ const Practical_Vrac = () => {
                     >
                       <FaAndroid />
                     </Link>{' '}
-                    et EUC&nbsp;World{' '}
+                    et <u>EUC&nbsp;World</u>{' '}
                     <Link
                       href="https://euc.world/"
                       target="_blank"
@@ -368,7 +369,7 @@ const Practical_Vrac = () => {
                 l&apos;expérience et de l&apos;entrainement.
               </li>
 
-              <li>Quelques règles d&apos;or&nbsp;:</li>
+              <li>Quelques règles en or&nbsp;:</li>
               <ul className="compactlist2 ml-2">
                 <li>
                   <Link

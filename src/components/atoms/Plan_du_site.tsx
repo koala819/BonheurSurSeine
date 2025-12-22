@@ -38,7 +38,10 @@ const sections = [
         label: '🚀 Comment fonctionne une gyroroue',
         href: '/apprendre-gyroroue#cestquoi',
       },
-      { label: '🎓 Mes Formations', href: '/apprendre-gyroroue#apprendre' },
+      {
+        label: '🎓 Mes Formations',
+        href: '/apprendre-gyroroue#mes_formations',
+      },
       {
         label: '💡 Apprendre facilement',
         href: '/apprendre-gyroroue#apprendre',
@@ -101,11 +104,15 @@ const sections = [
     title: 'Remerciements',
     items: [
       {
+        label: '💬 Donner son avis',
+        href: '/mille-merci#soutien',
+      },
+      {
         label: '💲 Me soutenir (Tipeee, Patreon, etc.)',
         href: 'https://fr.tipeee.com/bonheur-sur-seine',
       },
       {
-        label: '💬 Rejoindre la communauté Discord',
+        label: '🌐 Rejoindre la communauté Discord',
         href: 'https://discord.com/invite/Jhgw7C96Jf',
       },
       { label: '🙂 Les copains', href: '/mille-merci#copains' },
