@@ -150,62 +150,53 @@ const Maintenance = () => {
                   Comment ça fonctionne (<b>version longue</b>)
                 </p>
               </div>
-
-              {/* ------------------ Explications ------------------ */}
-              <div className="">
-                <h4 className="font-bold mb-1">
-                  🧠 Pourquoi ça tient debout&nbsp;?
-                </h4>
-                <ul className="list-disc ml-6 mt-2 space-y-1 mb-3">
-                  <li>
-                    L&apos;électronique ajuste en continu la stabilité des
-                    pédales.
-                  </li>
-                  <li>
-                    C&apos;est le moteur qui produit l&apos;effort nécessaire.
-                  </li>
-                  <li>
-                    Le mouvement crée un{' '}
-                    <Link
-                      href="https://youtu.be/RSPUdAKqAgY?t=3"
-                      target="_blank"
-                      className="font-bold text-blue-700 dark:text-blue-300 underline"
-                    >
-                      effet gyroscopique{' '}
-                    </Link>
-                    🎥 (<i>comme une toupie</i>) et assure l&apos;équilibre.
-                  </li>
-                  <li>
-                    Le pilote contrôle la direction (gauche/droite) comme en
-                    vélo ou en ski.
-                  </li>
-                </ul>
-              </div>
-
-              {/* ------------------ Idées reçues ------------------ */}
-              {/*<div>
-                <h3 className="font-bold mb-1">🚫 Idées reçues</h3>
-                <div className="space-y-1 mb-3">
-                  <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
-                    <p className="text-sm">
-                      ❌ «&nbsp;C&apos;est trop compliqué&nbsp;»
-                    </p>
-                    <p className="text-sm">
-                      ✅ En réalité, quelques minutes suffisent pour trouver
-                      l&apos;équilibre.
-                    </p>
-                  </div>
-                  <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
-                    <p className="text-sm">
-                      ❌ «&nbsp;C&apos;est trop dangereux&nbsp;»
-                    </p>
-                    <p className="text-sm">
-                      ✅ Comme pour le vélo, avec un peu de pratique et un bon
-                      équipement, c&apos;est sûr et maîtrisable.
-                    </p>
-                  </div>
-                </div>
-              </div>*/}
+            </div>
+          </AccordionItem>
+        </Accordion>
+      </div>
+      {/*---------------------------------------------------------*/}
+      {/* ---------------  Pourquoi ça tient debout ------------- */}
+      {/*---------------------------------------------------------*/}
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
+        <Accordion isCompact>
+          <AccordionItem
+            key="2"
+            aria-label="Et ?"
+            title={
+              <h4 className="mx-5 font-bold mt-1 mb-1">
+                🧠 Pourquoi ça tient debout&nbsp;?
+              </h4>
+            }
+            indicator={
+              <strong className="chevronAccordionItem mr-4">&lsaquo;</strong>
+            }
+          >
+            <div className="mx-auto px-4">
+              <ul className="list-disc ml-6 space-y-1 mb-3">
+                <li>
+                  L&apos;électronique ajuste en continu la stabilité des pédales
+                  (programmées pour toujours rester à l&apos;horizontale).
+                </li>
+                <li>
+                  C&apos;est le moteur qui produit tout l&apos;effort nécessaire
+                  pour avancer.
+                </li>
+                <li>
+                  Le mouvement (la rotation) crée un{' '}
+                  <Link
+                    href="https://youtu.be/RSPUdAKqAgY?t=3"
+                    target="_blank"
+                    className="font-bold text-blue-700 dark:text-blue-300 underline"
+                  >
+                    effet gyroscopique{' '}
+                  </Link>
+                  🎥 (<i>comme une toupie</i>) et assure l&apos;équilibre.
+                </li>
+                <li>
+                  Le pilote, lui, contrôle la direction (gauche/droite) comme en
+                  vélo ou en ski.
+                </li>
+              </ul>
             </div>
           </AccordionItem>
         </Accordion>

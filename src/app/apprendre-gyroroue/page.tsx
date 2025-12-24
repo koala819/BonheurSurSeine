@@ -37,7 +37,7 @@ const Page = () => {
 
       <Cestquoi />
 
-      <div className="pinkBlock_Formation">
+      <div className="pinkBlock_Formation scroll-mt-72" id="mes_formations">
         <p className="font-semibold mt-0 mb-3 text-base md:text-lg">
           Si tu veux apprendre la roue électrique mais que tu as peur de te
           lancer, sache que je propose des{' '}
