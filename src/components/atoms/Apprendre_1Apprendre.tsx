@@ -92,7 +92,7 @@ const Apprendre = () => {
               className="w-full h-full"
               src="https://www.youtube.com/embed/rPafjIrsg9s?si=Lv0nqbcOqJ8yaze5"
               title="Apprendre la gyroroue (méthode simple)"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
