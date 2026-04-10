@@ -10,19 +10,18 @@ const nextConfig = {
     MAIL_USER: process.env.MAIL_USER,
   },
   images: {
-    domains: [
-      'images.unsplash.com',
-      'lh6.googleusercontent.com',
-      'images.prismic.io',
-      'bonheursurseine.cdn.prismic.io',
-      's2.wklcdn.com',
-      's0.wklcdn.com',
-      'avatars.githubusercontent.com',
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'lh6.googleusercontent.com' },
+      { protocol: 'https', hostname: 'images.prismic.io' },
+      { protocol: 'https', hostname: 'bonheursurseine.cdn.prismic.io' },
+      { protocol: 'https', hostname: 's2.wklcdn.com' },
+      { protocol: 'https', hostname: 's0.wklcdn.com' },
+      { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
-  swcMinify: true,
 
   async redirects() {
     return [
