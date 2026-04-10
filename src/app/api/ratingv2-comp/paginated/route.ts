@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server'
 
 import client from '@/src/lib/turso'
 
+export const dynamic = 'force-dynamic'
+
 // Initialisation DB
 let dbReady: Promise<void> | null = null
 

@@ -2,21 +2,27 @@ import { NextResponse } from 'next/server'
 
 import client from '@/src/lib/turso'
 
+export const dynamic = 'force-dynamic'
+
 // Initialisation de la table au démarrage
-async function initDB() {
-  await client.execute(`
+let dbReady: Promise<void> | null = null
+
+function initDBOnce() {
+  if (!dbReady) {
+    dbReady = client
+      .execute(`
     CREATE TABLE IF NOT EXISTS ratings (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       rating INTEGER NOT NULL
     );
   `)
+      .then(() => {})
+  }
+  return dbReady
 }
 
-// On s'assure que la DB est prête avant toute requête
-const dbReady = initDB()
-
 export async function GET() {
-  await dbReady
+  await initDBOnce()
 
   const result = await client.execute('SELECT rating FROM ratings')
 
@@ -34,7 +40,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  await dbReady
+  await initDBOnce()
 
   const { rating } = await request.json()
 

@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 import { WikilocProfil } from '@/src/types/models'
 
-import Wikiloc from '/public/marques/wikiloc_logo.svg'
+import Wikiloc from '@/public/marques/wikiloc_logo.svg'
 
 import { createClient } from '@/prismicio'
 import Image_carto from '@/public/Image_cartographie(light).jpg'
