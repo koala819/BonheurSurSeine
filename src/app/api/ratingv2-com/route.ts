@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 
 import client from '@/src/lib/turso'
 
+export const dynamic = 'force-dynamic'
+
 // =====================================================
 // Mots interdits
 // =====================================================
