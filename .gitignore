@@ -4,7 +4,6 @@
 /node_modules
 /site/.pnp
 /site/.pnp.js
-pnpm-lock.yaml
 /site/.vscode
 .next
 .env.local
