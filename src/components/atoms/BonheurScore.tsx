@@ -7,8 +7,8 @@ import {
   CardHeader,
   Chip,
   Tooltip,
-} from '@nextui-org/react'
-import { Accordion, AccordionItem } from '@nextui-org/react'
+} from '@heroui/react'
+import { Accordion, AccordionItem } from '@heroui/react'
 import { PrismicRichText } from '@prismicio/react'
 import { useEffect, useState } from 'react'
 import { FaCity, FaMagic, FaRoad, FaTools, FaTrophy } from 'react-icons/fa'

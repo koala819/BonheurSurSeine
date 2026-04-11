@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@nextui-org/react'
+import { Button } from '@heroui/react'
 import { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 

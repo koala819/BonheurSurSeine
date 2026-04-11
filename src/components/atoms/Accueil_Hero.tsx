@@ -30,7 +30,8 @@ export default function Hero({
               src={photo_back.url || ''}
               alt={photo_back.alt || ''}
               className="object-cover"
-              layout="fill"
+              fill
+              sizes="(max-width: 768px) 100vw, 66vw"
             />
           </div>
 
@@ -40,7 +41,6 @@ export default function Hero({
               src={photo_front.url || ''}
               alt={photo_front.alt || ''}
               className="object-cover object-center rounded-full"
-              layout="responsive"
               width={30}
               height={30}
             />

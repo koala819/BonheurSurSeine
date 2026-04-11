@@ -1,5 +1,5 @@
 "use client";
-import { Button as ButtonNextUI } from "@nextui-org/react";
+import { Button as ButtonNextUI } from "@heroui/react";
 import Link from "next/link";
 
 export function Button({
