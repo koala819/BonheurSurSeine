@@ -1,6 +1,6 @@
 'use client'
 
-import { Image } from '@nextui-org/react'
+import { Image } from '@heroui/react'
 
 import { Button } from '@/src/components/atoms/Article_Button'
 import { Text } from '@/src/components/atoms/Article_Text'

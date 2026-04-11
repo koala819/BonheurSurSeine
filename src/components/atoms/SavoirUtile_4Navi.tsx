@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion, AccordionItem } from '@nextui-org/react'
+import { Accordion, AccordionItem } from '@heroui/react'
 import { useEffect, useState } from 'react'
 import { FaAndroid, FaApple } from 'react-icons/fa'
 
