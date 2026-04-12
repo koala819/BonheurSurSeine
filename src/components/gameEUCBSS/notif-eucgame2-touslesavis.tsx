@@ -28,14 +28,14 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
   const [offset, setOffset] = useState(0)
   const [hasMore, setHasMore] = useState(true)
 
-  const LIMIT = 10
+  const LIMIT = 8
 
   async function loadMore(firstLoad = false) {
     if (loading) return
     setLoading(true)
 
     const res = await fetch(
-      `/api/eucgame-comp/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
+      `/api/ratingv2-comp/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
     )
     const json = await res.json()
 
@@ -61,13 +61,24 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
   }, [isOpen])
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size="lg" scrollBehavior="inside">
-      <ModalContent>
-        <ModalHeader className="text-lg font-semibold">
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      size="lg"
+      placement="center"
+      backdrop="opaque"
+      scrollBehavior="inside"
+      classNames={{
+        backdrop: 'bg-black/50 backdrop-blur-sm',
+        closeButton: 'right-3 left-auto top-1',
+      }}
+    >
+      <ModalContent className="rounded-xl bg-white p-1">
+        <ModalHeader className="text-lg font-semibold mt-1 -ml-3 mb-1">
           Avis des utilisateurs
         </ModalHeader>
 
-        <ModalBody className="space-y-4">
+        <ModalBody className="space-y-2 max-h-[60vh] overflow-y-auto">
           {reviews.length === 0 && !loading && (
             <p className="text-center text-neutral-500">
               Aucun avis pour le moment…
@@ -97,6 +108,7 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
                 variant="flat"
                 onPress={() => loadMore()}
                 isLoading={loading}
+                className="font-semibold text-xs"
               >
                 Voir plus
               </Button>
@@ -104,8 +116,12 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
           )}
         </ModalBody>
 
-        <ModalFooter>
-          <Button variant="ghost" onPress={onClose}>
+        <ModalFooter className="">
+          <Button
+            variant="ghost"
+            onPress={onClose}
+            className="rounded-xl bg-slate-50"
+          >
             Fermer
           </Button>
         </ModalFooter>
