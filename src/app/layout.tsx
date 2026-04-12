@@ -29,7 +29,9 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <Providers>
           <div className="min-h-screen min-w-screen flex flex-col">
-            <ClientNavbar />
+            <div className="sticky top-0 z-[100]">
+              <ClientNavbar />
+            </div>
 
             <main className="flex-1 bg-bg-light dark:bg-bg-dark text-black dark:text-white flex items-center justify-center">
               <div className="w-full px-4 mx-auto mt-6 max-w-7xl">

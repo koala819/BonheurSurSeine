@@ -34,11 +34,9 @@ export function Top() {
   /* --------------------------------------------- */
   return (
     <Navbar
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      className="pb-4 mx-auto -px-4 py-5 bg-nav-light dark:bg-nav-dark z-[100]"
+      className="pb-4 mx-auto -px-4 py-5 bg-nav-light dark:bg-nav-dark"
       isBordered={true}
-      position="sticky"
+      position="static"
       classNames={{
         item: [
           'flex',
