@@ -44,7 +44,7 @@ const Page = () => {
           <strong className="text-rose-800 dark:text-white">
             sessions de formation
           </strong>{' '}
-          théorique <u>et</u> pratique pour t&apos;accompagner et
+          théorique <u>et</u>&nbsp;pratique pour t&apos;accompagner et
           dédramatiser.&nbsp;😊
           <br />
           En seulement 1h🕐, tu auras un autre regard sur

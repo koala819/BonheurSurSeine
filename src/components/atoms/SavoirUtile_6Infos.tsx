@@ -65,11 +65,11 @@ const Practical_Info_officiel = () => {
                 photos des nouveaux modèles, spécifications techniques, etc.
               </p>
               <p className="text-justify">
-                Sur YouTube, certains fabricants mettent également à diposition
-                des <strong>tutoriels vidéo</strong> pour faciliter
-                l&apos;entretien et le SAV&nbsp;: <strong>démontage</strong>, de{' '}
-                <strong>changement de pneus</strong>, ou encore explications et
-                navigation dans les menus et paramètres, etc.
+                Sur YouTube, certains fabricants mettent également à disposition
+                des <strong>tutoriels vidéo </strong>pour faciliter
+                l&apos;entretien et le SAV&nbsp;: <strong>démontage</strong>,{' '}
+                <strong>changement de pneus</strong>, explications des réglages,
+                ou navigation dans les menus, etc.
               </p>
             </aside>
             <aside className="sm:w-1/3 md:w-2/5 text-right text-xs">
@@ -271,7 +271,7 @@ const Practical_Info_officiel = () => {
               Bonheur Sur Seine
             </Link>
             <br />
-            dernière mise à jour : avril 2025
+            dernière mise à jour : avril 2026
           </p>
         </AccordionItem>
       </Accordion>
