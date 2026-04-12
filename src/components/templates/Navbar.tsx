@@ -6,9 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
 } from '@heroui/react'
 import { useState } from 'react'
 
@@ -37,8 +34,9 @@ export function Top() {
   /* --------------------------------------------- */
   return (
     <Navbar
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="pb-4 mx-auto -px-4 py-5 bg-nav-light dark:bg-nav-dark"
+      className="pb-4 mx-auto -px-4 py-5 bg-nav-light dark:bg-nav-dark z-[100]"
       isBordered={true}
       position="sticky"
       classNames={{
@@ -392,33 +390,42 @@ export function Top() {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="md:hidden"
-        />
+        <button
+          type="button"
+          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          className="md:hidden p-2"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          )}
+        </button>
       </NavbarContent>
 
-      {/* Menu mobile aligné à droite */}
-      <NavbarMenu
-        className="mt-8 items-start text-left pr-4"
-        style={{ maxHeight: '370px', overflowY: 'auto' }}
-      >
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem
-            key={`${item.name}-${index}`}
-            className="w-full flex justify-left"
-          >
+      {/* Menu mobile */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 z-[100] bg-nav-light dark:bg-nav-dark shadow-lg flex flex-col py-2 px-4 max-h-[370px] overflow-y-auto">
+          {menuItems.map((item, index) => (
             <Link
-              color={'foreground'}
-              className="justify-left w-2/3 rounded-xl hover:bg-rose-500 hover:text-white px-2 py-1 hover:rounded-xl font-semibold transition-colors"
+              key={`${item.name}-${index}`}
               href={item.path}
-              size="lg"
+              className="w-full rounded-xl hover:bg-rose-500 hover:text-white px-3 py-2 font-semibold transition-colors text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
               🔵&nbsp;&nbsp;{item.name}
             </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+          ))}
+        </div>
+      )}
     </Navbar>
   )
 }
