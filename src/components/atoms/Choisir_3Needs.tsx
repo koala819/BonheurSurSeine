@@ -173,7 +173,8 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div className="greenBlockChoisir mb-0 mt-0">
         <h3 className="mb-0 mt-0 text-left">
-          💡 Pas besoin d&apos;avoir la dernière grosse roue&nbsp;!
+          💡 Pas besoin d&apos;avoir la dernière grosse roue pour découvrir le
+          bonheur de rouler&nbsp;!
         </h3>
         <p className="mb-0 mt-0">
           D&apos;<b>anciens modèles</b>, sortis il y a plusieurs années,
