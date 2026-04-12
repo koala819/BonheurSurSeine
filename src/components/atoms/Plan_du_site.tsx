@@ -68,7 +68,7 @@ const sections = [
     ],
   },
   {
-    title: 'Bien Démarrer',
+    title: "L'essentiel pour bien démarrer",
     items: [
       { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
       { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },

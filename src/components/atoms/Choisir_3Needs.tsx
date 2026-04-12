@@ -1,22 +1,66 @@
 'use client'
 
-import { Checkbox } from '@heroui/react'
+//import { Checkbox } from '@heroui/react'
+import { useState } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
 import Image_bon_sens from '@/public/Image_choisir_identifier_besoins(light)2.jpg'
 
+//import { color } from 'framer-motion'
+
 //-----------------------------------------------
 //style des Checkbox utilisés pour les 7 questions.
-const checkboxClassNames = {
-  label: 'w-full text-justify text-sm md:text-base',
-  base:
-    'w-full mt-1 mb-0 max-w-full cursor-pointer rounded-lg border-1 ' +
-    'border-transparent py-0 gap-1 ' +
-    'hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-150 ' +
-    'data-[selected=true]:border-emerald-600 ',
-  wrapper: 'bg-white rounded-md transition-colors',
+const QuestionItem = ({ children }: { children: any }) => {
+  const [isSelected, setIsSelected] = useState(false)
+
+  return (
+    <div
+      onClick={() => setIsSelected(!isSelected)}
+      className={`
+        ml-4 group flex items-center gap-3 p-0.5 rounded-lg cursor-pointer transition-all duration-200 border-[0.5px]
+        ${
+          isSelected
+            ? 'border-emerald-600 bg-emerald-50/50 dark:bg-emerald-900/20'
+            : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-800'
+        }
+      `}
+    >
+      {/* Checkbox sur mesure */}
+      <div
+        className={`
+        flex-shrink-0 m-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors
+        ${
+          isSelected
+            ? 'bg-emerald-600 border-emerald-600'
+            : 'bg-white border-gray-300 dark:bg-gray-700 dark:border-gray-500'
+        }
+      `}
+      >
+        {isSelected && (
+          <svg
+            className="w-3.5 h-3.5 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={4}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        )}
+      </div>
+
+      {/* Texte de la question */}
+      <p className="flex-1 text-justify text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200">
+        {children}
+      </p>
+    </div>
+  )
 }
 
 const Needs = () => {
@@ -61,21 +105,17 @@ const Needs = () => {
           />
         </aside>
       </div>
+
       {/*----------------------------------------------*/}
       {/*--                 PARAGRAPHE               --*/}
       {/*----------------------------------------------*/}
       <div className="mt-0 mb-4 ">
         <p className="">
-          Le <strong>piège</strong> serait de ne regarder que les spécifications
-          techniques et de n&apos;être attiré que par les nouvelles roues qui
-          arrivent sur le marché.
+          Le <strong className="text-emerald-600">piège </strong>serait de ne
+          regarder que les spécifications techniques et de n&apos;être attiré
+          que par les nouvelles roues qui arrivent sur le marché.
         </p>
-        <p className="text-justify">
-          D&apos;<b>anciens modèles</b>, sortis il y a déjà plusieurs années,
-          constituent encore aujourd&apos;hui des choix tout à fait{' '}
-          <b>pertinents</b>.
-        </p>
-        <p className="text-justify">
+        <p className="">
           Pour ne pas se tromper et faire le bon choix, il est essentiel de
           définir clairement{' '}
           <strong className="text-emerald-600">son usage principal</strong>, et
@@ -85,6 +125,7 @@ const Needs = () => {
           <strong className="text-emerald-600">ses contraintes</strong>.
         </p>
       </div>
+
       {/*----------------------------------------------*/}
       {/*--                 critères                 --*/}
       {/*----------------------------------------------*/}
@@ -126,10 +167,24 @@ const Needs = () => {
           <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
         </p>
       </div>
+
+      {/*----------------------------------------------*/}
+      {/*--                  BLOCS                   --*/}
+      {/*----------------------------------------------*/}
+      <div className="greenBlockChoisir mb-0 mt-0">
+        <h3 className="mb-0 mt-0 text-left">
+          💡 Pas besoin d&apos;avoir la dernière grosse roue&nbsp;!
+        </h3>
+        <p className="mb-0 mt-0">
+          D&apos;<b>anciens modèles</b>, sortis il y a plusieurs années,
+          constituent toujours aujourd&apos;hui des choix <b>pertinents</b>.
+        </p>
+      </div>
+
       {/*----------------------------------------------*/}
       {/*--              surdimensionner             --*/}
       {/*----------------------------------------------*/}
-      <div className="mt-0 mb-4">
+      <div className="mt-4 mb-4">
         <p className="mt-0 mb-0 font-semibold">
           <span className="text-2xl">📏</span>
           <strong className="font-bold">Pas besoin de surdimensionner</strong>
@@ -137,15 +192,16 @@ const Needs = () => {
         </p>
         <p className="mt-0 mb-4 ml-2 text-justify">
           Il est tentant de{' '}
-          <strong className="text-emerald-600">vouloir le meilleur</strong> et
+          <strong className="text-emerald-600">vouloir le meilleur </strong>et
           de choisir une roue aux chiffres impressionnants (puissance, vitesse,
           autonomie). En réalité, rares sont les occasions d&apos;exploiter ces
           spécifications extrêmes. <br />
-          En contrepartie, le{' '}
-          <strong className="text-emerald-600">poids</strong> grimpe, le{' '}
-          <strong className="text-emerald-600">prix d&apos;achat</strong>{' '}
-          augmente, et le <strong className="text-emerald-600">stockage</strong>{' '}
-          / <strong className="text-emerald-600">transport</strong> se
+          En contrepartie,
+          <strong className="text-emerald-600"> le poids </strong> grimpe,
+          <strong className="text-emerald-600"> le prix </strong>
+          d&apos;achat augmente, et
+          <strong className="text-emerald-600"> le stockage</strong> et
+          <strong className="text-emerald-600"> le transport </strong> se
           compliquent. Si ton usage est en centre-ville, que tu roules peu, ou
           que ton trajet est plat, tu n&apos;exploiteras probablement jamais
           tout ce potentiel. <br />
@@ -155,64 +211,51 @@ const Needs = () => {
           .
         </p>
       </div>
+
       {/*----------------------------------------------*/}
-      {/*--               7 QUESTIONS                --*/}
+      {/*--               8 QUESTIONS                --*/}
       {/*----------------------------------------------*/}
-      <div id="8questions" className="scroll-mt-72 mt-0 mb-4 space-y-0">
+      <div id="8questions" className="scroll-mt-72 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
           <span className="text-2xl">🎯</span>
-          <strong className="underline font-bold">
+          <strong className="underline font-bold text-lg">
             8 questions essentielles
           </strong>{' '}
-          à se poser avant d&apos;acheter et choisir ta gyroroue&nbsp;:
+          à se poser avant de choisir et acheter ta gyroroue&nbsp;:
         </p>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+        <div className="space-y-0.5">
+          <QuestionItem>
             Je recherche une roue pour&nbsp;: essayer-apprendre&nbsp;? pratiquer
             régulièrement&nbsp;? un usage quotidien&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Mon objectif principal&nbsp;: compléter-remplacer les transports en
             commun (aller du point A au point B)&nbsp;? partir en balade&nbsp;?
             du loisir&nbsp;? faire de très longs trajets&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Mon utilisation principale&nbsp;: pistes cyclables&nbsp;?
             centre-ville&nbsp;? longs trajets&nbsp;? voies vertes&nbsp;?
             terrains offroad&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Ma priorité&nbsp;: le confort&nbsp;? les équipements&nbsp;? la
             performance&nbsp;? la praticité&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Je recherche une roue avant tout munie d&apos;une suspension&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Je veux une roue simple à entretenir ou bien suis-je prêt à
             bricoler&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Vais-je devoir souvent porter ma roue&nbsp;? combien suis-je capable
             de soulever&nbsp;: 20kg&nbsp;? 25kg&nbsp;? 30kg&nbsp;?
-          </Checkbox>
-        </div>
-        <div className="ml-4">
-          <Checkbox color="success" classNames={checkboxClassNames}>
+          </QuestionItem>
+          <QuestionItem>
             Mon budget&nbsp;: &lt;1500€&nbsp;? &lt;2500€&nbsp;? ou plus&nbsp;?
-          </Checkbox>
+          </QuestionItem>
         </div>
       </div>
 
@@ -251,7 +294,7 @@ const Needs = () => {
           Fabien.Wheel
         </Link>
         <br />
-        dernière mise à jour : juin 2025
+        dernière mise à jour : avril 2026
       </p>
     </section>
   )

@@ -173,11 +173,11 @@ export default function RatingStars2() {
         />
 
         <textarea
-          placeholder="Ton message (160 caractères max)"
-          maxLength={160}
+          placeholder="Ton message (250 caractères max)"
+          maxLength={250}
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          rows={3}
+          rows={5}
           className="border rounded px-2 py-2 text-black dark:text-white resize-none"
         />
       </div>
