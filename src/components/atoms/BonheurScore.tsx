@@ -342,10 +342,15 @@ export function BonheurScore({
         </div>
       </div>
       {/*SECONDE PARTIE AVEC LES NOTATIONS*/}
-      <div className="py-1 px-2 sm:px-4 lg:px-6 space-y-2">
+      <div className="py-1 px-2 sm:px-4 lg:px-6 space-y-2 ">
         {/*AFFICHAGE DES ROUES*/}
         {filteredGyroroues.map((gyroroue, index) => (
-          <Card key={index} shadow="md" radius="lg" className="mb-1">
+          <Card
+            key={index}
+            shadow="md"
+            radius="lg"
+            className="mb-1 rounded-xl bg-white dark:bg-slate-700"
+          >
             {/*PREMIERE PARTIE : NOM, DATE ET CATEGORIE*/}
             <CardHeader className="gap-0">
               <div className="flex sm:flex-row justify-between items-center w-full">
