@@ -197,7 +197,7 @@ const Practical_Dico = () => {
             <aside className="sm:w-2/3 md:w-3/5 space-y-4">
               <p className="text-justify">
                 Ce lexique propose des{' '}
-                <strong>explications simples et concises</strong> de quelques
+                <strong>explications simples et concises </strong>de quelques
                 termes fréquemment utilisés dans l&apos;univers de la roue
                 électrique.
               </p>

@@ -170,7 +170,7 @@ const Practical_Battery = () => {
           <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
           <p className="text-justify">
             Certains préfèrent{' '}
-            <strong>surveiller directement la tension</strong> pour connaitre
+            <strong>surveiller directement la tension </strong>pour connaitre
             l&apos;état de la batterie.
             <br />
             Voici quelques valeurs utiles pour décider dans quelle mesure
@@ -206,7 +206,7 @@ const Practical_Battery = () => {
             En réalité, les fabricants utilisent ce qui se fait de mieux. Et si
             ce choix a une importance technique indéniable (densité énergétique,
             cycles de recharge, capacité de décharge, stabilité thermique,
-            etc.), son <b>impact</b> reste <b>relatif</b> dans l&apos;usage
+            etc.), son <b>impact</b> reste <b>relatif </b>dans l&apos;usage
             quotidien&nbsp;:
           </p>
           <ul className="compactlist2 mb-2">

@@ -185,18 +185,18 @@ const Apprendre = () => {
           😱 6 pièges à éviter&nbsp;:
         </h4>
         <p>
-          🔸 Se <b>pencher</b> vers l&apos;avant (garde ton buste droit)
+          🔸 Se <b>pencher </b>vers l&apos;avant (garde ton buste droit)
           <br />
-          🔸 <b>Regarder le sol</b> et ses pieds (fixe l&apos;horizon devant toi
+          🔸 <b>Regarder le sol </b>et ses pieds (fixe l&apos;horizon devant toi
           pour rester stable) <br />
-          🔸 <b>Serrer la roue</b> avec ses jambes (la roue doit vivre sous tes
+          🔸 <b>Serrer la roue </b>avec ses jambes (la roue doit vivre sous tes
           pieds) <br />
-          🔸 <b>Se crisper</b> (la décontraction du corps aide à sentir la roue
+          🔸 <b>Se crisper </b>(la décontraction du corps aide à sentir la roue
           et à réagir aux oscillations, alors respire) <br />
-          🔸 Chercher la <b>vitesse</b> dès le départ (la vitesse vient avec la
+          🔸 Chercher la <b>vitesse </b>dès le départ (la vitesse vient avec la
           maîtrise)
           <br />
-          🔸 <b>S&apos;entêter</b> pendant des heures (n&apos;insiste pas,
+          🔸 <b>S&apos;entêter </b>pendant des heures (n&apos;insiste pas,
           laisse le temps à ton corps d&apos;assimiler les sensations, fait une
           pause sinon tu t&apos;épuiseras au risque de te faire mal, et
           ré-essaye plutôt le lendemain après une bonne nuit de repos)
