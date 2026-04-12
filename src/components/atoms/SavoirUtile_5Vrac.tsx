@@ -109,7 +109,7 @@ const Practical_Vrac = () => {
           <h4 className="mt-6 mb-2 flex items-center gap-2 justify-between">
             ➡️ Estimer ton autonomie
             <Link
-              href="https://euc.one/calculator/fr"
+              href="https://www.euc.one/calculator"
               target="_blank"
               className="link-style"
             >
@@ -123,7 +123,7 @@ const Practical_Vrac = () => {
           <p className="">
             Le site ❇️
             <Link
-              href="https://euc.one/calculator/fr"
+              href="https://www.euc.one/calculator"
               target="_blank"
               className="link-style"
             >
