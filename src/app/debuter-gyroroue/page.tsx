@@ -24,7 +24,10 @@ const Page = () => {
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <section className="">
         {/* Titre */}
-        <h1 className="">Bien démarrer</h1>
+        <h1 className="">
+          L&apos;essentiel <br />
+          pour bien démarrer
+        </h1>
         {/* Image avec citation */}
 
         {/* Contenu en 2 colonnes */}
