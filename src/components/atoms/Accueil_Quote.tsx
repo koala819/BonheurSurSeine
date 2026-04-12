@@ -47,7 +47,7 @@ const Quote = () => {
       </div>
       <div className="flex flex-wrap items-center justify-center mt-0 mb-0">
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
-          Tu peux aussi rejoindre la communauté sur le serveur Discord
+          Et rejoins la communauté sur le serveur Discord
         </p>
         <Link
           href="https://discord.com/invite/Jhgw7C96Jf"
