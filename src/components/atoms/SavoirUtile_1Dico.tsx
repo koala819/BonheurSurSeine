@@ -80,10 +80,10 @@ const Practical_Dico = () => {
       const mot = entry.mot.toLowerCase()
       const definitionText = Array.isArray(entry.definition_new)
         ? entry.definition_new
-            .map((block) =>
-              typeof block.text === 'string' ? block.text.toLowerCase() : '',
-            )
-            .join(' ')
+          .map((block) =>
+            typeof block.text === 'string' ? block.text.toLowerCase() : '',
+          )
+          .join(' ')
         : ''
       const search = searchTerm.toLowerCase()
       return mot.includes(search) || definitionText.includes(search)
@@ -185,7 +185,7 @@ const Practical_Dico = () => {
     >
       <Accordion
         selectedKeys={openKeys}
-        onSelectionChange={(keys) => setOpenKeys(Array.from(keys) as string[])}
+        onSelectionChange={(keys: any) => setOpenKeys(Array.from(keys) as string[])}
       >
         <AccordionItem
           key="1"
@@ -235,13 +235,12 @@ const Practical_Dico = () => {
                 <button
                   key={letter}
                   onClick={() => handleLetterClick(letter)}
-                  className={`mx-0 px-1 py-0.5 md:px-1.5 md:py-1 border dark:border-gray-600 ${
-                    activeLetter === letter
+                  className={`mx-0 px-1 py-0.5 md:px-1.5 md:py-1 border dark:border-gray-600 ${activeLetter === letter
                       ? 'bg-blue-500 text-white'
                       : glossary[letter]
                         ? 'bg-gray-300 text-black dark:bg-gray-800 dark:text-gray-300'
                         : 'bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500 cursor-not-allowed'
-                  }`}
+                    }`}
                   disabled={!glossary[letter]} // Désactiver si aucune donnée pour cette lettre
                 >
                   {letter}
