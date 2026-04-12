@@ -19,8 +19,8 @@ export default function Hero({
     <section className="mx-auto px-4 lg:px-8 mt-8">
       <div className="flex flex-wrap justify-between md:mb-16">
         <aside className="flex w-full lg:w-1/3 flex-col justify-center">
-          <h1>{titre}</h1>
-          <text>{RichText.render(text)}</text>
+          <h1 className="text-3xl font-bold">{titre}</h1>
+          <div className="prose">{RichText.render(text)}</div>
         </aside>
 
         <aside className="mt-2 flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
@@ -31,20 +31,21 @@ export default function Hero({
               alt={photo_back.alt || ''}
               className="object-cover"
               fill
+              priority
               sizes="(max-width: 768px) 100vw, 66vw"
             />
           </div>
 
           {/* Image de Devant */}
-          <picture className="z-10 w-1/3 md:w-1/4 lg:w-1/3 lg:p-9 p-4 flex justify-center items-center">
+          <div className="z-10 relative w-1/3 md:w-1/4 aspect-square lg:ml-12 mt-auto mb-4">
             <Image
               src={photo_front.url || ''}
               alt={photo_front.alt || ''}
-              className="object-cover object-center rounded-full"
-              width={30}
-              height={30}
+              className="object-cover rounded-full"
+              fill
+              sizes="(max-width: 768px) 30vw, 20vw"
             />
-          </picture>
+          </div>
         </aside>
       </div>
     </section>
