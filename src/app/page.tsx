@@ -121,7 +121,7 @@ export default async function Page() {
           </h2>
           {/* Google Translate Button */}
           <a
-            href={`https://translate.google.com/translate?sl=fr&tl=en&u=${process.env.NEXT_PUBLIC_SITE_URL}`}
+            href={`https://www-bonheursurseine-com.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=wapp&_x_tr_hist=true`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-0 text-sm font-medium text-black bg-cyan-300  hover:bg-cyan-400 dark:bg-cyan-400 dark:hover:bg-cyan-300 px-4 py-2 rounded-lg transition-colors"
