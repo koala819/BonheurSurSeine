@@ -29,9 +29,9 @@ export function Top() {
     { name: 'Codes Promo', path: '/codes-promo' },
     { name: 'Apprendre la roue', path: '/apprendre-gyroroue' },
     { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
-    { name: 'Bien Démarrer', path: '/debuter-gyroroue' },
+    { name: "L'essentiel", path: '/debuter-gyroroue' },
     { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
-    { name: 'Remerciements', path: '/mille-merci' },
+    { name: 'Merci', path: '/mille-merci' },
   ]
 
   /* --------------------------------------------- */
@@ -238,7 +238,7 @@ export function Top() {
               href="/debuter-gyroroue"
               className="text-white hover:text-text-link whitespace-nowrap"
             >
-              Bien Démarrer
+              L&apos;essentiel
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
@@ -360,7 +360,7 @@ export function Top() {
               href="/mille-merci"
               className="text-white hover:text-text-link whitespace-nowrap"
             >
-              Remerciements
+              Merci
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
@@ -379,7 +379,7 @@ export function Top() {
                   href="/mille-merci#copains"
                   className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                 >
-                  🔸Merci !
+                  🔸Remerciements
                 </Link>
               </li>
             </ul>
