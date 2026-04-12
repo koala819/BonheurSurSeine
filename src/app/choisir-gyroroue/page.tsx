@@ -8,7 +8,7 @@ import Compare from '@/src/components/atoms/Choisir_4Compare'
 
 export const metadata: Metadata = {
   title:
-    'Comment bien choisir sa gyroroue ? Guide, comparaisons et conseils pour bien acheter sa gyroroue',
+    "Comment bien choisir sa gyroroue ? Guide d'achat, comparaisons et conseils pour acheter sa gyroroue",
   description:
     'Quel modèle choisir ? Marques, guide, conseils et comparatifs des meilleures gyroroues pour acheter la roue électrique idéale sans se tromper.',
   alternates: {

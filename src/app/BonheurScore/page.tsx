@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Bonheur Sur Seine - Mobilité urbaine : Tests, Conseils d'achat, et Reviews de gyroroues / monoroues / roues électriques",
   description:
-    'Gyroroue / Roue électrique : conseils et tests produits, évaluations détaillées, avis, comparatifs, photos et vidéos YouTube pour faire son choix avec le BonheurScore.',
+    'Gyroroue / Roue électrique : tests produits, évaluations détaillées, avis, comparatifs des marques et des modèles, photos et vidéos YouTube pour faire son choix avec le BonheurScore.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/BonheurScore`,
   },

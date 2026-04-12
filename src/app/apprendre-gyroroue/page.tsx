@@ -7,7 +7,7 @@ import Apprendre from '@/src/components/atoms/Apprendre_1Apprendre'
 export const metadata: Metadata = {
   title: 'Apprendre la gyroroue / monoroue / roue électrique',
   description:
-    'Comment apprendre facilement la gyroroue ? Méthode pour progresser facilement : conseils, initiation, apprentissage, erreurs à éviter, et plus encore.',
+    'Comment apprendre facilement la gyroroue ? Méthode simple pour progresser facilement : conseils, vidéo, initiation, apprentissage, erreurs à éviter, et plus encore.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
   },

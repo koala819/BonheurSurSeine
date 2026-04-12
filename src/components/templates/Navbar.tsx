@@ -432,7 +432,7 @@ export function Top() {
             <Link
               key={`${item.name}-${index}`}
               href={item.path}
-              className="w-full rounded-xl hover:bg-rose-500 hover:text-white px-3 py-2 font-semibold transition-colors text-white"
+              className="w-full rounded-xl hover:bg-rose-800 hover:text-white px-3 py-2 font-semibold transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               🔵&nbsp;&nbsp;{item.name}

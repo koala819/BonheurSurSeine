@@ -11,9 +11,10 @@ import Associations from '@/src/components/atoms/Débuter_5Associations'
 import HeroPhoto from '@/public/PhotoBSS - Bien Démarrer.jpg'
 
 export const metadata: Metadata = {
-  title: 'Bien débuter la gyroroue / monoroue / roue électrique',
+  title:
+    'Les Fondamentaux à connaître pour bien débuter la gyroroue / monoroue / roue électrique',
   description:
-    'Conseils, sécurité, assurance, code de la route, et plus encore. Débuter et progressez en toute confiance.',
+    "Conseils indispensables, la sécurité, les assurances, le code de la route, les informations essentielles avant d'aller rouler et plus encore. Débuter et progressez en toute confiance.",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/debuter-gyroroue`,
   },
