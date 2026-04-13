@@ -240,7 +240,7 @@ const Maintenance = () => {
             }
             indicator={
               <svg
-                className="mx-8 w-7 h-7"
+                className="mx-8 w-7 h-7 inline-block transition-transform duration-300 ease-out data-[open=true]:rotate-90"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
