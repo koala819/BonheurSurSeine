@@ -180,19 +180,6 @@ const Maintenance = () => {
                 🧠 Pourquoi ça tient debout&nbsp;?
               </h4>
             }
-            indicator={
-              <svg
-                className="mx-8 w-7 h-7"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M15 6l-6 6 6 6" />
-              </svg>
-            }
           >
             <div className="mx-auto px-4">
               <ul className="list-disc ml-6 space-y-1 mb-3">
