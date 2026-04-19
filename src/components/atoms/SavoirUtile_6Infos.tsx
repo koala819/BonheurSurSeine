@@ -52,7 +52,24 @@ const Practical_Info_officiel = () => {
           key="1"
           aria-label="Trouver les infos/news officiels des constructeurs"
           title={<h3>🆕 Infos et chaînes YouTube constructeurs</h3>}
-          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <div className="mb-8 flex flex-col sm:flex-row items-center">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">

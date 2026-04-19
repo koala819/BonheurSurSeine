@@ -52,7 +52,24 @@ const Maintenance = () => {
           key="1"
           aria-label="Bien entretenir sa gyroroue"
           title={<h3>🛠️ L&apos;entretien</h3>}
-          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <p className="mb-1 text-justify">
             <strong className="text-amber-900 dark:text-brown-200">

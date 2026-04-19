@@ -52,7 +52,24 @@ const HighwayCode = () => {
           key="1"
           aria-label="Le code de la route"
           title={<h3>🚦 Le code de la route</h3>}
-          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <p className="mb-4 text-justify">
             Depuis le 23 octobre 2019, les gyroroues sont officiellement

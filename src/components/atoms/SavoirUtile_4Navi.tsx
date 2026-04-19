@@ -80,7 +80,24 @@ const Practical_Vrac = () => {
           key="1"
           aria-label="Trouver son chemin : applis & cartes"
           title={<h3>🛣️ Trouver son chemin : applis & cartes</h3>}
-          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           {/*--------------------------------------------------------*/}
           {/*                        BLOC 1                          */}
