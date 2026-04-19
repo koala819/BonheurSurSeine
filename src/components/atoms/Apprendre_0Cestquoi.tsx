@@ -72,18 +72,23 @@ const Maintenance = () => {
               </h4>
             }
             indicator={
-              <svg
-                className="mx-8 w-7 h-7"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M15 6l-6 6 6 6" />
-              </svg>
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
             }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 mb-2">
               {/* ------------------ TEXTE Comment ça marche ------------------ */}
@@ -180,6 +185,24 @@ const Maintenance = () => {
                 🧠 Pourquoi ça tient debout&nbsp;?
               </h4>
             }
+            indicator={
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
+            }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <div className="mx-auto px-4">
               <ul className="list-disc ml-6 space-y-1 mb-3">
@@ -226,18 +249,23 @@ const Maintenance = () => {
               </h4>
             }
             indicator={
-              <svg
-                className="mx-8 w-7 h-7 inline-block transition-transform duration-300 ease-out data-[open=true]:rotate-90"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M15 6l-6 6 6 6" />
-              </svg>
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
             }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <p className="max-w-6xl mx-auto gap-4 px-4 mb-2">
               La gyroroue, ça intrigue… et ça alimente pas mal{' '}
