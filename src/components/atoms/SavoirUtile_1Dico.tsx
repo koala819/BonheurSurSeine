@@ -80,10 +80,10 @@ const Practical_Dico = () => {
       const mot = entry.mot.toLowerCase()
       const definitionText = Array.isArray(entry.definition_new)
         ? entry.definition_new
-          .map((block) =>
-            typeof block.text === 'string' ? block.text.toLowerCase() : '',
-          )
-          .join(' ')
+            .map((block) =>
+              typeof block.text === 'string' ? block.text.toLowerCase() : '',
+            )
+            .join(' ')
         : ''
       const search = searchTerm.toLowerCase()
       return mot.includes(search) || definitionText.includes(search)
@@ -185,13 +185,32 @@ const Practical_Dico = () => {
     >
       <Accordion
         selectedKeys={openKeys}
-        onSelectionChange={(keys: any) => setOpenKeys(Array.from(keys) as string[])}
+        onSelectionChange={(keys: any) =>
+          setOpenKeys(Array.from(keys) as string[])
+        }
       >
         <AccordionItem
           key="1"
           aria-label="Le p'tit Dico du Bonheur"
           title={<h3>📖 Le p&apos;tit Dico du Bonheur</h3>}
-          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <div className="mb-4 flex flex-col sm:flex-row items-center gap-2">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4">
@@ -235,12 +254,13 @@ const Practical_Dico = () => {
                 <button
                   key={letter}
                   onClick={() => handleLetterClick(letter)}
-                  className={`mx-0 px-1 py-0.5 md:px-1.5 md:py-1 border dark:border-gray-600 ${activeLetter === letter
+                  className={`mx-0 px-1 py-0.5 md:px-1.5 md:py-1 border dark:border-gray-600 ${
+                    activeLetter === letter
                       ? 'bg-blue-500 text-white'
                       : glossary[letter]
                         ? 'bg-gray-300 text-black dark:bg-gray-800 dark:text-gray-300'
                         : 'bg-gray-100 text-gray-400 dark:bg-gray-700 dark:text-gray-500 cursor-not-allowed'
-                    }`}
+                  }`}
                   disabled={!glossary[letter]} // Désactiver si aucune donnée pour cette lettre
                 >
                   {letter}

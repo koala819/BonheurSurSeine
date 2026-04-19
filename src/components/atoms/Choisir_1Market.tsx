@@ -26,6 +26,9 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
@@ -61,6 +64,9 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
@@ -87,6 +93,9 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
