@@ -118,7 +118,7 @@ const Begin_premier_deballage = () => {
             </p>
           </div>
           <p className="ml-2 mt-3 mb-0">
-            🔒 Voici comment faire <b>pour sortir du mode transport</b> (les
+            🔒 Voici comment faire <b>pour sortir du mode transport </b>(les
             étapes varient en fonction du fabricant)&nbsp;:
           </p>
           <ul className="compactlist2 ml-3 mt-0 mb-6 leading-tight">

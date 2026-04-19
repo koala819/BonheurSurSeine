@@ -150,7 +150,7 @@ const Maintenance = () => {
               L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
               <br />
               ⚠️ Les conséquences peuvent être{' '}
-              <strong>immédiates ou à plus long terme</strong> (rouille,
+              <strong>immédiates ou à plus long terme </strong>(rouille,
               surchauffe, court-circuit et risque d&apos;incendie).
             </p>
           </div>
