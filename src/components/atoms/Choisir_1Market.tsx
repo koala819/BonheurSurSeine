@@ -26,6 +26,9 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
@@ -48,7 +51,7 @@ const Market = () => {
               <strong className="text-brown-700">centres-villes</strong> et les{' '}
               <strong className="text-brown-700">pistes cyclables</strong> sont
               leur terrain de jeux favori. Elles sont parfaites pour{' '}
-              <strong className="text-brown-700">rester discret</strong> (sous
+              <strong className="text-brown-700">rester discret </strong>(sous
               un siège, dans un magasin), pour l&apos;intermodalité, et faire
               des trajets de quelques kilomètres.
             </li>
@@ -61,6 +64,9 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
@@ -87,10 +93,13 @@ const Market = () => {
           indicator={
             <span className="chevronAccordionItemsmall1 mr-1">&lsaquo;</span>
           }
+          classNames={{
+            indicator: 'data-[open=true]:-rotate-90 transition-transform',
+          }}
         >
           <ul className="list-disc pl-4 space-y-1 mb-0 ml-4">
             <li className="text-justify">
-              Ici, <strong className="text-brown-700">aucune limite</strong> de
+              Ici, <strong className="text-brown-700">aucune limite </strong>de
               taille, ni de poids ! La praticité n&apos;est plus un argument,
               car ces modèles sont plutôt dédiés à la pratique sportive :
               performance ou grande randonnée. Ces roues affichent des{' '}
@@ -102,7 +111,7 @@ const Market = () => {
             </li>
             <li className="text-justify">
               On est sur les{' '}
-              <strong className="text-brown-700">poids lourds</strong> de la
+              <strong className="text-brown-700">poids lourds </strong>de la
               micromobilité (40kg est un minimum). Avec seulement quelques
               modèles au début, l&apos;offre s&apos;est étoffée au fur et a
               mesure des améliorations techniques (suspension, voltage).

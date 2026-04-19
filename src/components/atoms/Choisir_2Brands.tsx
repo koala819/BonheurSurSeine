@@ -59,7 +59,24 @@ const Brands = () => {
           key="1"
           aria-label="Les principales marques"
           title={<h2>Les principales marques</h2>}
-          indicator={<strong className="chevronAccordionItem">&lsaquo;</strong>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <div className="flex justify-center">
             <Image
@@ -93,7 +110,7 @@ const Brands = () => {
               😉
             </span>
           </p>
-          <p className="ml-4 md:ml-10">
+          <div className="ml-4 md:ml-10">
             <Accordion isCompact>
               <AccordionItem
                 key="1"
@@ -109,6 +126,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -141,6 +161,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -171,6 +194,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -203,6 +229,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -234,6 +263,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -265,6 +297,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -297,6 +332,9 @@ const Brands = () => {
                     &lsaquo;
                   </span>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:-rotate-90 transition-transform',
+                }}
               >
                 <div className="flex flex-row items-center gap-2 flex-nowrap">
                   <aside className="mb-2 flex-shrink-0">
@@ -319,7 +357,7 @@ const Brands = () => {
                 </div>
               </AccordionItem>
             </Accordion>
-          </p>
+          </div>
           <p className="mt-4 mb-6">
             Il existe également d&apos;autres marques&nbsp;: certaines comme
             RockWheel, Solowheel ou IPS ont disparu, et les autres sont moins

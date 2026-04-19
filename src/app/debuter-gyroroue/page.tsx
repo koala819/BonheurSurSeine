@@ -35,10 +35,10 @@ const Page = () => {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_minmax(400px,1fr)] gap-2 items-center">
           {/* Colonne de gauche */}
-          <div className="space-y-2 text-justify text-gray-800 dark:text-gray-200 leading-relaxed">
+          <div className="space-y-2 text-gray-800 dark:text-gray-200 leading-relaxed">
             <p className="">
               Cette page regroupe de manière synthétique les{' '}
-              <strong>bases indispensables</strong> pour bien débuter en roue
+              <strong>bases indispensables </strong>pour bien débuter en roue
               électrique, et t&apos;offrir{' '}
               <strong>tout ce qu&apos;il faut savoir</strong> pour commencer la
               gyroroue sereinement <strong>en France</strong>.

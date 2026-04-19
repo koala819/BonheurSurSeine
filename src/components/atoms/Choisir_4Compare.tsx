@@ -153,8 +153,9 @@ const Compare = () => {
                 modèles du marché dans un format standardisé.
               </li>
               <li>
-                C&apos;est actuellement <strong>le meilleur outil</strong> pour
-                faire des comparaisons. 👉&nbsp;
+                C&apos;est actuellement <strong>le meilleur outil </strong>pour
+                faire des comparaisons.
+                <br /> 👉&nbsp;
                 <Link
                   href="https://finder.eucfinder.com/fr"
                   className="underline hover:text-blue-500"

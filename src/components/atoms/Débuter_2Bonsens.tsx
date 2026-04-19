@@ -52,7 +52,24 @@ const CommonSense = () => {
           key="1"
           aria-label="Le bon sens"
           title={<h3>😊 Le bon sens</h3>}
-          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           <div className="mb-3 grid grid-cols-1 md:grid-cols-5 gap-1 items-stretch">
             {/* Bloc texte sur 3 colonnes */}

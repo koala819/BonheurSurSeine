@@ -60,7 +60,24 @@ const Begin_premier_deballage = () => {
           key="1"
           aria-label="Premier déballage"
           title={<h3>📦 Le premier déballage</h3>}
-          indicator={<span className="chevronAccordionItem">&lsaquo;</span>}
+          indicator={
+            <strong className="transition-transform">
+              <svg
+                className="mx-2 w-7 h-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </strong>
+          }
+          classNames={{
+            indicator: 'data-[open=true]:rotate-180 transition-transform',
+          }}
         >
           {/*---------------------------------------------------------------------*/}
           <div className="blueBlockdeballage mt-0 mb-6 relative border-l-4 border-blue-400 pl-6">
@@ -118,7 +135,7 @@ const Begin_premier_deballage = () => {
             </p>
           </div>
           <p className="ml-2 mt-3 mb-0">
-            🔒 Voici comment faire <b>pour sortir du mode transport</b> (les
+            🔒 Voici comment faire <b>pour sortir du mode transport </b>(les
             étapes varient en fonction du fabricant)&nbsp;:
           </p>
           <ul className="compactlist2 ml-3 mt-0 mb-6 leading-tight">
@@ -461,7 +478,7 @@ const Begin_premier_deballage = () => {
             réactive… et souvent moins fatigante et plus sécurisante dans les
             manœuvres délicates.
             <br />
-            🟠 <strong>À l&apos;inverse,</strong> sur une roue peu puissante ou
+            🟠 <strong>À l&apos;inverse, </strong>sur une roue peu puissante ou
             relativement légère par rapport au gabarit du wheeler, les powerpads
             sont superflus (voir dangeureux si la roue n&apos;a pas la puissance
             pour répondre à l&apos;effet de levier généré). Mal positionnés, ils

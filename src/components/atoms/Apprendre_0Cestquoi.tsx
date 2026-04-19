@@ -43,15 +43,18 @@ const Maintenance = () => {
           . Parfait pour se déplacer librement en ville ou à la campagne&nbsp;!
         </p>
         <p className="mt-0 mb-1">
-          {/*Je le répète très souvent : c&apos;est à mes yeux le meilleur moyen de
-          transport personnel&nbsp;!
-          <br />*/}
           Son pilotage intuitif procure{' '}
           <strong className="text-blue-700 dark:text-blue-400">
             des sensations de glisse uniques et incomparables
           </strong>
           , mêlant équilibre et liberté, proche de celles du ski.
+          <br />
           {/*… mais sur la terre ferme.*/}
+          Je le répète souvent&nbsp;: c&apos;est à mes yeux{' '}
+          <strong className="text-blue-700 dark:text-blue-400">
+            le meilleur moyen de transport
+          </strong>
+          &nbsp;!
         </p>
       </div>
 
@@ -59,18 +62,33 @@ const Maintenance = () => {
       {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
-        <Accordion isCompact>
+        <Accordion variant="light" className="px-0">
           <AccordionItem
             key="1"
             aria-label="Comment ça fonctionne ?"
             title={
-              <h4 className="mx-5 font-bold mt-1 mb-1">
+              <h4 className="ml-5 font-bold mt-4 mb-4">
                 🚀 Comment ça fonctionne&nbsp;?
               </h4>
             }
             indicator={
-              <strong className="chevronAccordionItem mr-4">&lsaquo;</strong>
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
             }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 mb-2">
               {/* ------------------ TEXTE Comment ça marche ------------------ */}
@@ -158,18 +176,33 @@ const Maintenance = () => {
       {/* ---------------  Pourquoi ça tient debout ------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
-        <Accordion isCompact>
+        <Accordion variant="light" className="px-0">
           <AccordionItem
-            key="2"
-            aria-label="Et ?"
+            key="1"
+            aria-label="Et pourquoi ça tient debout ?"
             title={
-              <h4 className="mx-5 font-bold mt-1 mb-1">
+              <h4 className="ml-5 font-bold mt-4 mb-4">
                 🧠 Pourquoi ça tient debout&nbsp;?
               </h4>
             }
             indicator={
-              <strong className="chevronAccordionItem mr-4">&lsaquo;</strong>
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
             }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <div className="mx-auto px-4">
               <ul className="list-disc ml-6 space-y-1 mb-3">
@@ -206,18 +239,33 @@ const Maintenance = () => {
       {/* -----------------  Et c'est compliqué   --------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
-        <Accordion isCompact>
+        <Accordion variant="light" className="px-0">
           <AccordionItem
-            key="2"
-            aria-label="Et ?"
+            key="1"
+            aria-label="Et c'est compliqué ?"
             title={
-              <h4 className="mx-5 font-bold mt-1 mb-1">
+              <h4 className="ml-5 font-bold mt-4 mb-4">
                 🤔 Et c&apos;est compliqué&nbsp;?
               </h4>
             }
             indicator={
-              <strong className="chevronAccordionItem mr-4">&lsaquo;</strong>
+              <strong className="transition-transform">
+                <svg
+                  className="mx-8 w-7 h-7"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </strong>
             }
+            classNames={{
+              indicator: 'data-[open=true]:rotate-180 transition-transform',
+            }}
           >
             <p className="max-w-6xl mx-auto gap-4 px-4 mb-2">
               La gyroroue, ça intrigue… et ça alimente pas mal{' '}

@@ -185,10 +185,23 @@ export function BonheurScore({
                   </h4>
                 }
                 indicator={
-                  <strong className="chevronAccordionItem mr-4">
-                    &lsaquo;
+                  <strong className="transition-transform">
+                    <svg
+                      className="mx-4 w-7 h-7"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
                   </strong>
                 }
+                classNames={{
+                  indicator: 'data-[open=true]:rotate-180 transition-transform',
+                }}
               >
                 <div className="max-w-6xl mx-auto px-2 mb-1">
                   <p className="text-justify text-base mb-1">

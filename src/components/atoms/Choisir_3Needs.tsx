@@ -149,8 +149,8 @@ const Needs = () => {
             La <strong className="text-emerald-600">suspension</strong>.
           </li>
           <li className="text-justify">
-            L&apos;<strong className="text-emerald-600">autonomie</strong> (la
-            batterie).
+            L&apos;<strong className="text-emerald-600">autonomie</strong>{' '}
+            (batterie et puissance moteur).
           </li>
           <li className="text-justify">
             La qualité des{' '}
@@ -158,12 +158,13 @@ const Needs = () => {
             éclairage, pneus, coupe-circuit, etc.).
           </li>
           <li className="text-justify">
-            Et surtout, <strong className="text-emerald-600">tester</strong> si
-            possible pour connaitre ses ressentis et se faire ton propre avis.
+            Et surtout, <strong className="text-emerald-600">tester </strong>si
+            possible pour connaitre ses ressentis et se faire son propre avis.
           </li>
         </ul>
         <p className="text-justify ml-1 mt-1">
-          Et il faut aussi, bien évidemment, tenir compte de son budget (
+          Et bien évidemment, il faut aussi tenir compte de son{' '}
+          <strong className="text-emerald-600">budget </strong>(
           <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
         </p>
       </div>
@@ -197,7 +198,7 @@ const Needs = () => {
           de choisir une roue aux chiffres impressionnants (puissance, vitesse,
           autonomie). En réalité, rares sont les occasions d&apos;exploiter ces
           spécifications extrêmes. <br />
-          En contrepartie,
+          Et en contrepartie,
           <strong className="text-emerald-600"> le poids </strong> grimpe,
           <strong className="text-emerald-600"> le prix </strong>
           d&apos;achat augmente, et
