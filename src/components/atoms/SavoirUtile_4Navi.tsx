@@ -9,10 +9,9 @@ import Link from 'next/link'
 
 import { WikilocProfil } from '@/src/types/models'
 
-import Wikiloc from '@/public/marques/wikiloc_logo.svg'
-
 import { createClient } from '@/prismicio'
 import Image_carto from '@/public/Image_cartographie(light).jpg'
+import Wikiloc from '@/public/marques/wikiloc_logo.svg'
 
 /*import { ImageField, KeyTextField, NumberField } from '@prismicio/client'*/
 
@@ -270,7 +269,7 @@ const Practical_Vrac = () => {
               </aside>
               <aside className="sm:w-2/3 lg:w-2/3 space-y-3 mb-1 ml-2">
                 <p className="text-justify">
-                  <b>Wikiloc</b> est particulièrement apprécié par certains
+                  <b>Wikiloc </b>est particulièrement apprécié par certains
                   wheelers. Deux catégories sont utilisées&nbsp;:{' '}
                   <i>&laquo;&nbsp;Monocycle de montagne&nbsp;&raquo;</i> et{' '}
                   <i>&laquo;&nbsp;Segway&nbsp;&raquo;</i>.
