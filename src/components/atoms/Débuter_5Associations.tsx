@@ -301,13 +301,14 @@ const Associations = () => {
               </div>
             </div>
             {/* ------------------ GOOGLE MAPS ------------------ */}
-            <div className="max-w-6xl mx-auto gap-x-4 place-items-center px-6">
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1Y9MEriN0xb-_4wEnTdJdRho7BXps4cy1&ehbc=2E312F"
-                width="640"
-                height="480"
-                className="rounded-md"
-              ></iframe>
+            <div className="place-items-center w-full">
+              <div className="w-full aspect-[16/9]">
+                <iframe
+                  src="https://wheelerssarthois.github.io/Groupes-EDPM/"
+                  className="w-full h-full rounded-md"
+                  scrolling="no"
+                ></iframe>
+              </div>
             </div>
           </section>
 
