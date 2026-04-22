@@ -161,7 +161,7 @@ const Associations = () => {
               {/* Lightbox */}
               {isOpen && (
                 <div
-                  className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                  className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 pt-40"
                   onClick={() => setIsOpen(false)} // clic fond ferme
                 >
                   <div className="relative max-w-5xl w-full p-4 ">
@@ -174,9 +174,7 @@ const Associations = () => {
                     <Image
                       src={Discord2}
                       alt="Salon Discord de la chaîne"
-                      width={800}
-                      height={800}
-                      className="w-full h-auto rounded-xl shadow-lg border-medium border-blue-300"
+                      className="w-full rounded-xl shadow-lg border-medium border-blue-300"
                       priority
                     />
                   </div>
@@ -323,7 +321,7 @@ const Associations = () => {
               Bonheur Sur Seine
             </Link>
             <br />
-            dernière mise à jour : juin 2024
+            dernière mise à jour : avril 2026
           </p>
         </AccordionItem>
       </Accordion>
