@@ -302,7 +302,7 @@ const Associations = () => {
             </div>
             {/* ------------------ GOOGLE MAPS ------------------ */}
             <div className="place-items-center w-full">
-              <div className="w-full aspect-[16/9]">
+              <div className="w-full aspect-[16/9] min-h-[800px]">
                 <iframe
                   src="https://wheelerssarthois.github.io/Groupes-EDPM/"
                   className="w-full h-full rounded-md"
