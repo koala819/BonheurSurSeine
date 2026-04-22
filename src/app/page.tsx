@@ -61,7 +61,7 @@ export default async function Page() {
             className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Voir <br />
-            les reviews
+            mes reviews
           </Link>
           <Link
             href="/codes-promo"
@@ -75,13 +75,15 @@ export default async function Page() {
             href="/debuter-gyroroue"
             className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
-            Découvrir l&apos;essentiel
+            Découvrir <br />
+            l&apos;essentiel
           </Link>
           <Link
             href="/guide-utile-gyroroue"
             className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
-            Savoir utile
+            Savoir <br />
+            utile
           </Link>
         </div>
       </div>
