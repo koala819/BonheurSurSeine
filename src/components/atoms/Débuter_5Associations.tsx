@@ -161,7 +161,7 @@ const Associations = () => {
               {/* Lightbox */}
               {isOpen && (
                 <div
-                  className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                  className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 pt-40"
                   onClick={() => setIsOpen(false)} // clic fond ferme
                 >
                   <div className="relative max-w-5xl w-full p-4 ">
@@ -174,9 +174,7 @@ const Associations = () => {
                     <Image
                       src={Discord2}
                       alt="Salon Discord de la chaîne"
-                      width={800}
-                      height={800}
-                      className="w-full h-auto rounded-xl shadow-lg border-medium border-blue-300"
+                      className="w-full rounded-xl shadow-lg border-medium border-blue-300"
                       priority
                     />
                   </div>
@@ -301,13 +299,14 @@ const Associations = () => {
               </div>
             </div>
             {/* ------------------ GOOGLE MAPS ------------------ */}
-            <div className="max-w-6xl mx-auto gap-x-4 place-items-center px-6">
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1Y9MEriN0xb-_4wEnTdJdRho7BXps4cy1&ehbc=2E312F"
-                width="640"
-                height="480"
-                className="rounded-md"
-              ></iframe>
+            <div className="place-items-center w-full">
+              <div className="w-full aspect-[16/9] min-h-[800px]">
+                <iframe
+                  src="https://wheelerssarthois.github.io/Groupes-EDPM/"
+                  className="w-full h-full rounded-md"
+                  scrolling="no"
+                ></iframe>
+              </div>
             </div>
           </section>
 
@@ -322,7 +321,7 @@ const Associations = () => {
               Bonheur Sur Seine
             </Link>
             <br />
-            dernière mise à jour : juin 2024
+            dernière mise à jour : avril 2026
           </p>
         </AccordionItem>
       </Accordion>
