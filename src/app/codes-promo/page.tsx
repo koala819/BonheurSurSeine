@@ -8,7 +8,7 @@ import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title:
-    'Codes Promo : Offres Partenaires Bonheur Sur Seine et Réductions Exclusives',
+    'Codes Promo Bonheur Sur Seine : Offres Partenaires et Réductions Exclusives',
   description:
     "Guide d'achat et promotions exclusives chez les partenaires de Bonheur Sur Seine (accessoires monoroue / gyroroue / roue électrique).",
   alternates: {

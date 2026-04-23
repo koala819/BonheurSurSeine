@@ -26,8 +26,8 @@ export function Top() {
     { name: 'Codes Promo', path: '/codes-promo' },
     { name: 'Apprendre la roue', path: '/apprendre-gyroroue' },
     { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
-    { name: "L'essentiel", path: '/debuter-gyroroue' },
-    { name: 'Savoir Utile', path: '/guide-utile-gyroroue' },
+    { name: "L'essentiel pour bien démarrer", path: '/debuter-gyroroue' },
+    { name: 'Guide pratique', path: '/guide-utile-gyroroue' },
     { name: 'Merci', path: '/mille-merci' },
   ]
 
@@ -291,7 +291,7 @@ export function Top() {
               href="/guide-utile-gyroroue"
               className="text-white hover:text-text-link whitespace-nowrap"
             >
-              Savoir Utile
+              Guide pratique
             </Link>
           </NavbarItem>
           {/* Sous-menu */}
@@ -432,7 +432,7 @@ export function Top() {
             <Link
               key={`${item.name}-${index}`}
               href={item.path}
-              className="w-full rounded-xl hover:bg-rose-800 hover:text-white px-3 py-2 font-semibold transition-colors text-white"
+              className="w-full rounded-xl hover:bg-rose-700 hover:text-white px-3 py-2 font-semibold transition-colors text-white"
               onClick={() => setIsMenuOpen(false)}
             >
               🔵&nbsp;&nbsp;{item.name}
