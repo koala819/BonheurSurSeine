@@ -17,6 +17,16 @@ export const metadata: Metadata = {
   title: 'Bonheur Sur Seine',
   description:
     'Salut à toi ! Ici, tu trouveras des informations complémentaires à ma chaine Youtube, et tout un tas d&#39;informations exclusives difficiles à partager sur mes autres réseaux ! Enjoy, et surtout n&#39;hésite pas à me dire ce que tu en penses...',
+  icons: {
+    apple: '/apple-touch-icon.png',
+    icon: '/favicon.ico',
+  },
+
+  appleWebApp: {
+    capable: true,
+    title: 'Bonheur sur Seine',
+    statusBarStyle: 'default',
+  },
 }
 
 export default function RootLayout({
