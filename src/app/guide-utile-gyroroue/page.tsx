@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
-      <h1>Savoir utile</h1>
+      <h1>Guide pratique</h1>
       <div className="space-y-1">
         <div className="mt-0 mb-0 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 space-y-1">
