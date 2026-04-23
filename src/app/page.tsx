@@ -43,22 +43,22 @@ export default async function Page() {
           <strong>curieux, aux débutants et aux passionnés</strong>.
         </p>
         <p className="mt-2 text-left font-bold">Que souhaites-tu faire ?</p>
-        <div className="mt-1 mb-3 grid mx-8 grid-cols-2 sm:grid-cols-3 gap-3 text-center">
+        <div className="mt-1 mb-3 grid mx-3 grid-cols-2 sm:grid-cols-3 gap-3 text-center">
           <Link
             href="/apprendre-gyroroue"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Apprendre
           </Link>
           <Link
             href="/choisir-gyroroue"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Choisir
           </Link>
           <Link
             href="/BonheurScore"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Voir
             <br />
@@ -66,7 +66,7 @@ export default async function Page() {
           </Link>
           <Link
             href="/codes-promo"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Profiter
             <br />
@@ -75,17 +75,18 @@ export default async function Page() {
 
           <Link
             href="/debuter-gyroroue"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
             Découvrir <br />
             l&apos;essentiel
           </Link>
           <Link
             href="/guide-utile-gyroroue"
-            className="p-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
+            className="px-1 py-2 rounded-lg font-semibold bg-white hover:bg-cyan-200 dark:bg-cyan-800 shadow dark:hover:bg-cyan-700 transition-all duration-100 hover:scale-105 flex items-center justify-center"
           >
-            En apprendre <br />
-            plus
+            Aller
+            <br />
+            plus loin
           </Link>
         </div>
       </div>
