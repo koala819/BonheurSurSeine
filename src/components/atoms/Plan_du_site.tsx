@@ -25,7 +25,7 @@ const sections = [
     ],
   },
   {
-    title: 'Codes Promo',
+    title: 'Profiter des Codes Promo',
     items: [
       { label: '🛒 Mes Partenaires', href: '/codes-promo' },
       { label: '💶 Offres Exclusives', href: '/codes-promo' },
@@ -43,7 +43,7 @@ const sections = [
         href: '/apprendre-gyroroue#mes_formations',
       },
       {
-        label: '💡 Apprendre facilement',
+        label: '💡 Apprendre facilement - Tutoriel',
         href: '/apprendre-gyroroue#apprendre',
       },
       {
@@ -81,7 +81,7 @@ const sections = [
     ],
   },
   {
-    title: 'Savoir Utile',
+    title: 'Guide Pratique',
     items: [
       {
         label: "📖 Le p'tit Dico du Bonheur",
@@ -92,7 +92,7 @@ const sections = [
         href: '/guide-utile-gyroroue#entretien',
       },
       {
-        label: '⚡ Batterie et autonomie',
+        label: "⚡ La batterie et l'autonomie",
         href: '/guide-utile-gyroroue#batterie',
       },
       { label: '🛣️ Trouver son chemin', href: '/guide-utile-gyroroue#navi' },
