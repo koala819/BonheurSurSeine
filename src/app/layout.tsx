@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine',
   description:
-    'Salut à toi ! Ici, tu trouveras des informations complémentaires à ma chaine Youtube, et tout un tas d&#39;informations exclusives difficiles à partager sur mes autres réseaux ! Enjoy, et surtout n&#39;hésite pas à me dire ce que tu en penses...',
+    "Site web dédié à la roue électrique (aussi appelée gyroroue). Il s'adresse à un large public, et est pensé d'intérêt général pour partager au plus grand nombre et de manière simple des informations complémentaires à ma chaine Youtube.",
   icons: {
     apple: '/apple-touch-icon.png',
     icon: '/favicon.ico',
