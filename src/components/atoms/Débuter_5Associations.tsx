@@ -15,7 +15,7 @@ const Associations = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>([])
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
-
+  //Pour l'image
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {

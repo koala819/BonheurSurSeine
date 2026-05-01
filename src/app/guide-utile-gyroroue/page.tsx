@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
 import Maintenance from '@/src/components/atoms/SavoirUtile_2Entretien'
 import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
+import Pneu from '@/src/components/atoms/SavoirUtile_3Pneu'
 import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 import Info from '@/src/components/atoms/SavoirUtile_6Infos'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title:
     'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues / monoroues / roues électriques',
   description:
-    'Fabricants, entretien, batteries, conseils, guide pratique pour aller plus loin, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
+    'Fabricants, entretien, batteries, pneus, conseils, guide pratique pour aller plus loin, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
   },
@@ -43,6 +44,7 @@ const Page = () => {
       <Dico />
       <Maintenance />
       <Battery />
+      <Pneu />
       <Navi />
       <Vrac />
       <Info />

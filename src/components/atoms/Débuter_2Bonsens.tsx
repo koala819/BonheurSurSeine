@@ -215,7 +215,9 @@ const CommonSense = () => {
               .
             </li>
             <li className="text-justify">
-              Je répète : connais bien les limites de ta roue et respecte les.
+              Je répète : connais bien les limites de ta roue et respecte les.{' '}
+              <br />
+              Respecte le tilt-back et ne désactive jamais les “bips”.
             </li>
           </ul>
           {/*-----------------------------------------*/}

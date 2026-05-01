@@ -88,14 +88,21 @@ const sections = [
         href: '/guide-utile-gyroroue#dico',
       },
       {
-        label: '🛠️ Entretenir sa gyroroue',
+        label: '🛠️ Bien entretenir sa gyroroue',
         href: '/guide-utile-gyroroue#entretien',
       },
       {
-        label: "⚡ La batterie et l'autonomie",
+        label: '⚡ La batterie : fonctionnement et autonomie',
         href: '/guide-utile-gyroroue#batterie',
       },
-      { label: '🛣️ Trouver son chemin', href: '/guide-utile-gyroroue#navi' },
+      {
+        label: '🛞 Le pneu : choix, pression et entretien',
+        href: '/guide-utile-gyroroue#pneu',
+      },
+      {
+        label: '🛣️ Trouver son chemin : applis & cartes',
+        href: '/guide-utile-gyroroue#navi',
+      },
       { label: '😉 Savoir en vrac', href: '/guide-utile-gyroroue#vrac' },
       { label: '🆕 Infos constructeurs', href: '/guide-utile-gyroroue#infos' },
     ],
@@ -104,8 +111,8 @@ const sections = [
     title: 'Remerciements',
     items: [
       {
-        label: '💬 Donner son avis',
-        href: '/mille-merci#soutien',
+        label: '💬 Donner ton avis',
+        href: '/mille-merci#tonavis',
       },
       {
         label: '💲 Me soutenir (Tipeee, Patreon, etc.)',

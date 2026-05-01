@@ -52,7 +52,7 @@ const Practical_Battery = () => {
         <AccordionItem
           key="1"
           aria-label="Pourcentage batterie et autonomie"
-          title={<h3> ⚡ Batterie et autonomie</h3>}
+          title={<h3> ⚡ La batterie : fonctionnement et autonomie</h3>}
           indicator={
             <strong className="transition-transform">
               <svg
@@ -80,12 +80,13 @@ const Practical_Battery = () => {
           </p>
           <div className="pinkBlock mb-2">
             <b className="mb-0 mt-0">
-              ⚠️ On ne sollicite <u>pas</u> (accélération, freinage, vitesse,
-              etc.) sa roue de la même manière à 100%, 50%, ou 20% de batterie…
+              ⚠️ On ne sollicite <u>pas</u>&thinsp;(accélération, freinage,
+              vitesse, etc.) sa roue de la même manière à 100%, 50%, ou 20% de
+              batterie…
             </b>
           </div>
           <p className="mb-2 text-justify">
-            Il est <strong>vitale</strong>, pour rouler en sécurité,{' '}
+            Il est <strong>vitale</strong>, <u>pour rouler en sécurité</u>,{' '}
             <strong>
               de veiller à ce que la batterie ait, à tout moment, suffisamment
               d&apos;énergie
@@ -101,26 +102,48 @@ const Practical_Battery = () => {
               href="/debuter-gyroroue#bonsens"
               className="link-style font-bold text-black dark:text-white"
             >
-              preuve de <i>bon sens</i>
-            </Link>{' '}
-            pour ne pas aller au-delà des limites de la roue et de sa batterie.
+              <i>preuve de bon sens</i>
+            </Link>
+            &nbsp;: ne va pas au-delà des limites de la roue et de sa batterie.
+            Respecte le tilt-back et ne désactive jamais les{' '}
+            <i>&ldquo;bips&rdquo;</i>.
+            <br />
+            Pour cela, l&apos;indicateur le plus utilisé est le P.W.M. (pour en
+            savoir plus sur les cellules et le PWM, consulte{' '}
+            <Link
+              href="/guide-utile-gyroroue#dico"
+              className="link-style font-bold text-black dark:text-white"
+            >
+              Le P&apos;tit Dico du Bonheur
+            </Link>
+            ).
           </p>
-          <div className="blueBlock mb-4">
-            <b className="mb-0 mt-0">
-              L&apos;autonomie n&apos;est pas une donnée absolue. <br />
-            </b>
-            <p>
-              Elle dépend de nombreux paramètres&nbsp;:{' '}
-              <i>
-                poids du wheeler, accélérations, vitesse, pression et type de
-                pneu, vent, température ambiante, profil et nature du trajet…
-              </i>
-            </p>
-          </div>
           {/*---------------------------------------*/}
           {/*----------- En quelques mot -----------*/}
           {/*---------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ En quelques mots&nbsp;:</h4>
+          <h4 className="mt-4 mb-2">➡️ Fonctionnement&nbsp;:</h4>
+          <div className="blueBlock mb-4">
+            <p className="mt-0 mb-0 font-bold">
+              {' '}
+              Ce qu&apos;il faut savoir&nbsp;:
+            </p>
+            <p>
+              🔸 Les batteries des gyroroues sont à ce jour composées de
+              cellules lithium-ion.
+              <br />
+              🔸 La batterie a une tension max (exemple&nbsp;: 84.0v, 100.8v,
+              126v, 151.2v…) et une tension min de fonctionnement. Sortir de
+              cette plage risque d&apos;abîmer les cellules.
+              <br />
+              🔸 Le BMS (Battery Management System) gère les cellules de la
+              batterie, et mesure en temps réel la tension (celle-ci diminue au
+              fur et à mesure de l&apos;utilisation).
+              <br />
+              🔸 C&apos;est un calcul qui convertit cette tension instantanée en
+              un pourcentage approximatif (de 100% à 0%). <br />
+            </p>
+          </div>
+
           <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
             <aside className="md:w-3/5">
               <p className="text-justify ml-2">
@@ -167,18 +190,17 @@ const Practical_Battery = () => {
             </aside>
           </div>
           {/*---------------------------------------*/}
-          <div className="blueBlock mb-2">
-            <h4 className="mt-0 mb-0"> Ce qu&apos;il faut savoir&nbsp;:</h4>
+          <div className="blueBlock mb-4">
+            <b className="mb-0 mt-0">
+              Avec un moteur électrique, l&apos;autonomie n&apos;est pas une
+              donnée absolue. <br />
+            </b>
             <p>
-              🔸 La batterie a une tension max (84.0v, 100.8v, 126v, 151.2v…) et
-              une tension min de fonctionnement. Sortir de ces plages risque
-              d&apos;abîmer les cellules.
-              <br />
-              🔸 Le BMS (Battery Management System) mesure en temps réel la
-              tension qui diminue au fur et à mesure de l&apos;utilisation.
-              <br />
-              🔸 C&apos;est un calcul qui convertit cette tension instantanée en
-              un pourcentage approximatif (de 100% à 0%). <br />
+              Elle dépend de nombreux paramètres&nbsp;:{' '}
+              <i>
+                poids du wheeler, accélérations, vitesse, pression et type de
+                pneu, vent, température ambiante, profil et nature du trajet…
+              </i>
             </p>
           </div>
           {/*---------------------------------------*/}
@@ -194,9 +216,9 @@ const Practical_Battery = () => {
             solliciter la roue&nbsp;:
           </p>
           <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">
-            Attention, il s&apos;agit de <u>données théoriques</u> soumises à
-            l&apos;algorithme du fabricant et aux modèles des cellules qui
-            feront varier ces données.
+            Attention, il s&apos;agit de <u>données théoriques</u>
+            &thinsp;soumises à l&apos;algorithme du fabricant et aux modèles des
+            cellules qui feront varier ces données.
           </p>
           <div className="mt-2 flex justify-center">
             <Link href={Tableaux_tensions.src} passHref target="_blank">
@@ -215,15 +237,17 @@ const Practical_Battery = () => {
           <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
           <p className="text-justify mb-2">
             On entend souvent parler des modèles de cellule (
-            <i>Samsung 50S, Molicel P42A, LG M50LT, etc.</i>) comme s&apos;il
-            s&apos;agissait d&apos;un critère décisif pour une roue plus
-            performante, plus durable, plus sûre ou avec plus d&apos;autonomie.
+            <i>Samsung 50S, 50E, 50GB, Molicel P42A, LG M50LT, etc.</i>) comme
+            s&apos;il s&apos;agissait d&apos;un critère décisif pour une roue
+            plus performante, plus durable, plus sûre ou avec plus
+            d&apos;autonomie.
           </p>
           <p className="text-justify">
-            En réalité, les fabricants utilisent ce qui se fait de mieux. Et si
+            En réalité, les fabricants utilisent ce qui se fait de mieux (la
+            technologie lithium-ion présente beaucoup d&apos;avantages). Et si
             ce choix a une importance technique indéniable (densité énergétique,
             cycles de recharge, capacité de décharge, stabilité thermique,
-            etc.), son <b>impact</b> reste <b>relatif </b>dans l&apos;usage
+            etc.), son <b>impact reste relatif </b>dans l&apos;usage
             quotidien&nbsp;:
           </p>
           <ul className="compactlist2 mb-2">
@@ -238,10 +262,9 @@ const Practical_Battery = () => {
               dissipation).
             </li>
             <li>
-              Et dans la pratique, il est{' '}
-              <b>impossible de ressentir une différence nette</b> entre deux
-              types de cellules. Les fabricant utilisent les meilleures
-              technologies disponibles.
+              Dans la pratique, il est{' '}
+              <b>impossible de ressentir une différence nette</b> entre 2 types
+              de cellules. Les différences se mesurent en laboratoire.
             </li>
           </ul>
           <p className="text-justify mb-6">
@@ -259,7 +282,7 @@ const Practical_Battery = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : avril 2025
+            dernière mise à jour : mai 2026
           </p>
         </AccordionItem>
       </Accordion>
