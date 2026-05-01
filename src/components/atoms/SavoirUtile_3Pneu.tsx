@@ -102,74 +102,67 @@ const Pneu = () => {
           {/*---------------------------------------------------------------*/}
           {/*------------------TYPES----------------------------------------*/}
           <h4 className="mt-6 mb-2">➡️ Les types de pneus&nbsp;?</h4>
-          <p className="mt-2">Techniquement, il existe&nbsp;: </p>
-          <ul className="compactlist2 mb-0">
-            <li>
-              Les<b> pneus vélos</b>. Ils sont pour la plupart équipés de{' '}
-              <b>chambre à air </b>(simple, économique). <br />
-              Leur taille est généralement décrite par la largeur extérieure .
-              <br />
-              Exemple&nbsp;: une roue
-              <i> 18&quot;x2.5&quot;</i> (exprimée en pouce).
-            </li>
-            <li>
-              Les<b> pneus scooter</b>. Ils sont majoritairement
-              <b> tubeless </b>(meilleure résistance aux crevaisons, mais plus
-              lourds et montage/réparation plus techniques). <br />
-              La taille indique ici la largeur du pneu et le diamètre de la
-              jante. <br />
-              Exemple&nbsp;:
-              <i> 2.5&quot;-14&quot; </i> en pouce ou<i> 80/90-14</i> en
-              métrique.
-            </li>
-          </ul>
-          <p className="mt-1 mb-2">
-            Petite particularité sur les gyroroues&nbsp;: la valve est très
-            souvent coudée pour des raisons d&apos;accessibilité.
+          <p className="mt-2">
+            Techniquement, il existe 2 grandes familles&nbsp;:
           </p>
-          {/*
-          <p className="mt-1 mb-0">
-            Deux particularité dans le monde des gyroroues&nbsp;:
-          </p>
-          <ul className="compactlist2 mb-4">
-            <li>
-              la valve est très souvent coudée pour des raisons
-              d&apos;accessibilité.
-            </li>
-            <li>Les tailles de roues sont </li>
-          </ul>*/}
 
-          {/*---------------------------------------------------------------*/}
-          <p className="mt-4">Il existe 3 grandes catégories&nbsp;:</p>
-          <ul className="compactlist2 mb-0">
+          <ul className="compactlist2 mb-0 space-y-3">
             <li>
-              <b>Route / Street </b>(slick)&nbsp;: structure et surface lisse.
+              <b>Les pneus vélo</b>
               <br />
-              Avantages&nbsp;: stabilité, silence, gain d&apos;autonomie si
-              correctement gonflé.
-              <br />
-              Inconvénients&nbsp;: adhérence limitée sur terrain humide ou
-              meuble.
+              Ils sont pour la plupart équipés de <b>chambre à air </b>(simple,
+              économique). <br />
+              Leur taille correspond au <b>diamètre extérieur du pneu</b> et à
+              la <b>largeur du pneu </b>(exprimé en pouce).
+              <div className="mt-1 ml-4 text-sm">
+                Exemple&nbsp;: <i>18&quot;x2.5&quot;</i>
+                <br />
+                &nbsp;&nbsp;- 18&quot; = diamètre total de la roue
+                <br />
+                &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+              </div>
             </li>
+
             <li>
-              <b>Tout-terrain / Off-road </b>(cramponné)&nbsp;: structure et
-              reliefs marqués.
+              <b>Les pneus scooter</b>
               <br />
-              Avantages&nbsp;: meilleure accroche sur terre, gravier, herbe,
-              boue.
+              Ils sont majoritairement
+              <b> tubeless </b>(plus résistants aux crevaisons, mais plus lourds
+              et montage/réparation plus techniques).
               <br />
-              Inconvénients&nbsp;: bruit, vibrations, moins d&apos;autonomie.
-            </li>
-            <li>
-              <b>Hybrides / Mixte </b>(semi-cramponné)&nbsp;: <br />
-              Avantages&nbsp;: très bon compromis pour la ville et les chemins.
-              <br />
-              Inconvénients&nbsp;: mauvais nul part, mais aussi excellent nul
-              part.
-              <br />
-              Dans la pratique, ils sont les plus polyvalents.
+              Leur taille correspond à la <b>largeur du pneu</b> et au{' '}
+              <b>diamètre de la jante</b>.
+              <div className="mt-1 ml-4 text-sm">
+                Exemple&nbsp;: <i>2.5&quot;-14&quot;</i>
+                <br />
+                &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+                <br />
+                &nbsp;&nbsp;- 14&quot; = diamètre de la jante
+                <br />
+                Exemple&nbsp;: <i>80/90-14</i> (exprimé en pouce)
+                <br />
+                &nbsp;&nbsp;- 80 = largeur (mm)
+                <br />
+                &nbsp;&nbsp;- 90 = hauteur (en %) = 90% de 80 mm (≈ 72 mm)
+                <br />
+                &nbsp;&nbsp;- 14 = diamètre de la jante (pouces)
+              </div>
             </li>
           </ul>
+          <p className="mt-4 mb-0">
+            Deux petites particularités dans le monde des gyroroues&nbsp;:
+          </p>
+          <ul className="compactlist2 mb-0">
+            <li>
+              La valve est très souvent <b>coudée</b>, pour faciliter
+              l&apos;accès et le gonflage.
+            </li>
+            <li>
+              Les tailles des gyroroues sont historiquement exprimées en pouces
+              (14&quot;, 16&quot;, 18&quot;, 20&quot;).
+            </li>
+          </ul>
+          {/*---------------------------------------------------------------*/}
           <div className="relative max-w-4xl mx-auto order-first md:order-last">
             <Image
               src={Les3pneus}
@@ -202,6 +195,38 @@ const Pneu = () => {
               </div>
             </div>
           )}
+          {/*---------------------------------------------------------------*/}
+          <p className="mt-4">Il existe 3 grandes catégories&nbsp;:</p>
+          <ul className="compactlist2 mb-0">
+            <li>
+              <b>Route / Street </b>(slick)&nbsp;: structure et surface lisse.
+              <br />
+              Avantages&nbsp;: stabilité, silence, gain d&apos;autonomie si
+              correctement gonflé.
+              <br />
+              Inconvénients&nbsp;: adhérence limitée sur terrain humide ou
+              meuble.
+            </li>
+            <li>
+              <b>Tout-terrain / Off-road </b>(cramponné)&nbsp;: structure et
+              reliefs marqués.
+              <br />
+              Avantages&nbsp;: meilleure accroche sur terre, gravier, herbe,
+              boue.
+              <br />
+              Inconvénients&nbsp;: bruit, vibrations, moins d&apos;autonomie.
+            </li>
+            <li>
+              <b>Hybrides / Mixte </b>(semi-cramponné)&nbsp;: <br />
+              Avantages&nbsp;: très bon compromis pour la ville et les chemins.
+              <br />
+              Inconvénients&nbsp;: mauvais nul part, mais aussi excellent nul
+              part.
+              <br />
+              Dans la pratique, ils sont les plus polyvalents.
+            </li>
+          </ul>
+
           <p className="mt-3">
             Comme en voiture ou en moto où, par exemple, on n&apos;utilise pas
             des pneus neige toute l&apos;année, chaque type de pneu correspond à
