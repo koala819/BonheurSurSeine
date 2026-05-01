@@ -103,7 +103,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              BLOC CONSEIL                  */}
       {/*--------------------------------------------*/}
-      <div className="my-4">
+      <div className="my-4" id="conseils">
         <div className="blueBlock my-0 p-4">
           <h4 className="mt-0 mb-2 text-xl font-bold">
             💡 7 conseils à retenir&nbsp;:

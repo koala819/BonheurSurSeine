@@ -39,12 +39,16 @@ const sections = [
         href: '/apprendre-gyroroue#cestquoi',
       },
       {
-        label: '🎓 Mes Formations',
+        label: '👉 Mes Formations',
         href: '/apprendre-gyroroue#mes_formations',
       },
       {
-        label: '💡 Apprendre facilement - Tutoriel',
+        label: '🎓 Tutoriel pour apprendre facilement',
         href: '/apprendre-gyroroue#apprendre',
+      },
+      {
+        label: '💡 7 conseils à retenir',
+        href: '/apprendre-gyroroue#conseils',
       },
       {
         label: '⚠️ 6 pièges à éviter',
