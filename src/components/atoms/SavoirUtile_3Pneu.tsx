@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Les3pneus from '@/public/Pneus1_les_structures.jpg'
-import Jantes from '@/public/Pneus2_les jantes.jpg'
+import Jantes from '@/public/Pneus2_les jantes_toutes.jpg'
 
 const Pneu = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -152,15 +152,15 @@ const Pneu = () => {
           <p className="mt-4 mb-0">
             Deux petites particularités dans le monde des gyroroues&nbsp;:
           </p>
-          <ul className="compactlist2 mb-0">
+          <ul className="compactlist2 mb-2">
             <li>
               La valve est très souvent <b>coudée</b>, pour faciliter
               l&apos;accès et le gonflage.
             </li>
             <li>
-              La taille des gyroroues (14&quot;, 16&quot;, 18&quot;, 20&quot;,
-              22&quot;) se base sur le diamètre extérieur du pneu (roue
-              complète), comme pour les vélos.
+              Les tailles des gyroroues (14&quot;, 16&quot;, 18&quot;, 20&quot;,
+              22&quot;) se basent sur le diamètre extérieur du pneu (roue
+              complète), comme pour les pneus vélo.
             </li>
           </ul>
           {/*---------------------------------------------------------------*/}
@@ -168,7 +168,7 @@ const Pneu = () => {
             <Image
               src={Les3pneus}
               alt="Image de pneus"
-              className="w-full max-w-lg mx-auto rounded-2xl object-cover object-center cursor-pointer shadow-md hover:shadow-lg dark:shadow-slate-600"
+              className="w-full max-w-3xl mx-auto rounded-2xl object-cover object-center cursor-pointer shadow-md hover:shadow-lg dark:shadow-slate-600"
               priority
               placeholder="blur"
               onClick={() => setIsOpen1(true)} // 👈 ouvre la lightbox
@@ -288,20 +288,20 @@ const Pneu = () => {
 
           {/*---------------------------------------------------------------*/}
           <p className="mt-3">
-            Les indications des pneus ne sont pas simple à lire, avant tout
-            penser pour des véhicules à au moins 2 ou 3 roues : et on ne sait
-            pas forcément comment les lire/interpréter.
+            Les indications des pneus ne sont pas toujours simples à lire, et
+            avant tout penser pour des véhicules à au moins 2 ou 3 roues : on ne
+            sait donc pas forcément comment les interpréter.
           </p>
           <p className="" id="pression">
-            La pression du pneu dépendra principalement du poids du wheeler mais
-            aussi de la taille de la roue (16&quot;, 18&quot;, 20&quot;). Elle
-            peut être exprimée&nbsp;:
+            La pression du pneu dépendra principalement du poids du wheeler et
+            de la taille de la roue (16&quot;, 18&quot;, 20&quot;). Elle peut
+            être exprimée&nbsp;:
           </p>
           <ul className="compactlist2">
             <li>soit en bar</li>
             <li>soit en psi (unité anglo-saxonne 14,5psi &asymp; 1bar)</li>
           </ul>
-          <p className="font-semibold mt-2">
+          <p className="font-semibold mt-3">
             🔍 Quelques repères pratiques&nbsp;:
           </p>
           <ul className="mb-0 list-none pl-5 [&>li]:relative [&>li]:pl-4 [&>li::before]:content-['➤'] [&>li::before]:absolute [&>li::before]:left-0">
@@ -424,12 +424,11 @@ const Pneu = () => {
             équilibre&nbsp;!
           </p>
           <p className="pl-5 text-gray-600 dark:text-gray-400 text-sm">
-            Ces valeurs sont des repères issus de retours d&apos;expérience et
-            de pratiques courantes (elles doivent être ajustées en fonction des
-            éventuelles recommandations des fabricants).
-            <br />
-            Elles restent indicatives&nbsp;: en cas de doute, privilégier une
-            pression légèrement plus élevée plutôt que trop faible.
+            Ces valeurs sont des repères issus de retours d&apos;expérience.
+            Elles restent indicatives et doivent être ajustées en fonction des
+            éventuelles recommandations des fabricants (en cas de doute,
+            privilégier une pression légèrement plus élevée plutôt que trop
+            faible).
           </p>
 
           {/*---------------------------------------------------------------*/}
