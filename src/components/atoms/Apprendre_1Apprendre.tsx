@@ -12,7 +12,7 @@ const Apprendre = () => {
   return (
     <section
       id="apprendre"
-      className="scroll-mt-72 my-8 space-y-6 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-60 my-8 space-y-6 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
     >
       <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg shadow-lg mb-10">
         <Image
