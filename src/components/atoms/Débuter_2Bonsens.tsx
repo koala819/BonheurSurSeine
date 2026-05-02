@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Image_bon_sens from '@/public/Image_bon-sens_nuage-de-mots.png'
+import Image_equipements from '@/public/Image_bon-sens_équipements.jpg'
 
 const CommonSense = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -172,56 +173,70 @@ const CommonSense = () => {
               vigilance, oui&nbsp;!
             </h4>
           </div>
-
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
           <h3 className="mt-8 mb-1">L&apos;équipement indispensable</h3>
-          <ul className="list-disc pl-8 space-y-1 mb-1">
-            <li className="">
-              <strong className="text-teal-800 dark:text-teal-200">
-                Le casque
-              </strong>{' '}
-              (jet ou intégral)&nbsp;: son port est{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                vivement recommandé{' '}
-              </strong>
-              (sans être pourtant obligatoire).
-            </li>
-            <li className="">
-              <strong className="text-teal-800 dark:text-teal-200">
-                Les gants
-              </strong>
-              &nbsp;: beaucoup de wheeler en choisissent avec protège-poignets.{' '}
-              <br />
-              Certains complètent leur tenue par des genouillères ou des
-              coudières pour se protéger en cas de chute.
-            </li>
-            <li>
-              <strong className="text-teal-800 dark:text-teal-200">
-                Des lunettes
-              </strong>
-              &nbsp;: elles protègeront tes yeux (vent, insectes, froid) et
-              t&apos;éviteront toute gêne.
-            </li>
-            <li className="">
-              <strong className="text-teal-800 dark:text-teal-200">
-                La sonnette
-              </strong>
-              &nbsp;: elle est obligatoire (cf.{' '}
-              <Link
-                href="/debuter-gyroroue#code"
-                className="link-style font-bold text-teal-800 dark:text-teal-200"
-              >
-                <i>le code de la route</i>
-              </Link>
-              ). Utilise la pour signaler{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                amicalement
-              </strong>{' '}
-              ton approche et tes dépassements.
-            </li>
-          </ul>
-          <p className="pl-2 mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center">
+            {/* Image (1/4) */}
+            <aside className="md:col-span-1 flex justify-center md:justify-center">
+              <Image
+                src={Image_equipements}
+                alt="Équipement gyroroue"
+                width={200}
+                height={200}
+                className="max-w-full h-auto object-contain rounded-lg shadow-md"
+              />
+            </aside>
+            {/* Texte (3/4) */}
+            <div className="md:col-span-3">
+              <ul className="list-disc pl-8 space-y-1 mb-1">
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Le casque
+                  </strong>{' '}
+                  (jet ou intégral)&nbsp;: son port est{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    vivement recommandé{' '}
+                  </strong>
+                  (sans être pourtant obligatoire).
+                </li>
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Les gants
+                  </strong>
+                  &nbsp;: beaucoup de wheeler en choisissent avec
+                  protège-poignets. <br />
+                  Certains complètent leur tenue par des genouillères ou des
+                  coudières pour se protéger en cas de chute.
+                </li>
+                <li>
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Des lunettes
+                  </strong>
+                  &nbsp;: elles protègeront tes yeux (vent, insectes, froid) et
+                  t&apos;éviteront toute gêne.
+                </li>
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    La sonnette
+                  </strong>
+                  &nbsp;: elle est obligatoire (cf.{' '}
+                  <Link
+                    href="/debuter-gyroroue#code"
+                    className="link-style font-bold text-teal-800 dark:text-teal-200"
+                  >
+                    <i>le code de la route</i>
+                  </Link>
+                  ). Utilise la pour signaler{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    amicalement
+                  </strong>{' '}
+                  ton approche et tes dépassements.
+                </li>
+              </ul>
+            </div>
+          </div>{' '}
+          <p className="pl-2 mt-1 mb-3">
             <strong className="text-teal-800 dark:text-teal-200">
               Protège toi&nbsp;!
             </strong>{' '}
@@ -244,7 +259,6 @@ const CommonSense = () => {
               environnement…).
             </p>
           </div>
-
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
           <h3 className="mt-8 mb-1">À retenir :</h3>
@@ -283,9 +297,7 @@ const CommonSense = () => {
               le perd.
             </p>
           </div>
-
           {/*-----------------------------------------*/}
-
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
