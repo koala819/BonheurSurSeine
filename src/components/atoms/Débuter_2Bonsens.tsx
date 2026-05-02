@@ -177,45 +177,44 @@ const CommonSense = () => {
           {/*-----------------------------------------*/}
           <h3 className="mt-8 mb-1">L&apos;équipement indispensable</h3>
           <ul className="list-disc pl-8 space-y-1 mb-1">
-            <li className="text-justify">
-              <strong className="text-teal-800 dark:text-teal-200">
-                Protège toi&nbsp;!
-              </strong>
-            </li>
             <li className="">
-              Le port du{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                casque
+                Le casque
               </strong>{' '}
-              (jet ou intégral) est{' '}
+              (jet ou intégral)&nbsp;: son port est{' '}
               <strong className="text-teal-800 dark:text-teal-200">
                 vivement recommandé{' '}
               </strong>
-              (sans être obligatoire).
+              (sans être pourtant obligatoire).
             </li>
             <li className="">
-              Beaucoup de wheeler choisissent de{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                porter des gants
-              </strong>{' '}
-              (certains avec protège-poignets). <br />
-              Certains complètent leur tenus par des genouillères ou des
+                Les gants
+              </strong>
+              &nbsp;: beaucoup de wheeler en choisissent avec protège-poignets.{' '}
+              <br />
+              Certains complètent leur tenue par des genouillères ou des
               coudières pour se protéger en cas de chute.
             </li>
-            <li>Souvent sous-estimé&nbsp;: </li>
-            <li className="">
-              Utilise une{' '}
+            <li>
               <strong className="text-teal-800 dark:text-teal-200">
-                sonnette
-              </strong>{' '}
-              (obligatoire cf.{' '}
+                Des lunettes
+              </strong>
+              &nbsp;: elles protègeront tes yeux (vent, insectes, froid) et
+              t&apos;éviteront toute gêne.
+            </li>
+            <li className="">
+              <strong className="text-teal-800 dark:text-teal-200">
+                La sonnette
+              </strong>
+              &nbsp;: elle est obligatoire (cf.{' '}
               <Link
                 href="/debuter-gyroroue#code"
                 className="link-style font-bold text-teal-800 dark:text-teal-200"
               >
                 <i>le code de la route</i>
               </Link>
-              ) pour signaler{' '}
+              ). Utilise la pour signaler{' '}
               <strong className="text-teal-800 dark:text-teal-200">
                 amicalement
               </strong>{' '}
@@ -223,9 +222,14 @@ const CommonSense = () => {
             </li>
           </ul>
           <p className="pl-2 mb-3">
-            Imposer ses choix aux autres revient à accepter que d&apos;autres
-            nous imposent les leurs… jusqu&apos;à remettre en cause l&apos;usage
-            même de la roue électrique, trop dangereuse à leurs yeux.
+            <strong className="text-teal-800 dark:text-teal-200">
+              Protège toi&nbsp;!
+            </strong>{' '}
+            <br />
+            Cependant, imposer ses choix aux autres revient à accepter que
+            d&apos;autres nous imposent les leurs… jusqu&apos;à remettre en
+            cause l&apos;usage même de la roue électrique, trop dangereuse à
+            leurs yeux.
           </p>
           {/*-----------------------------------------*/}
           <div className="TealBlockbonsens mb-6">
