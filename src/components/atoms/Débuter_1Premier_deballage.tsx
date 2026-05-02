@@ -460,30 +460,34 @@ const Begin_premier_deballage = () => {
           <p className="mb-1">
             La réponse courte est simple&nbsp;:{' '}
             <strong>pas obligatoires mais parfois indispensables&nbsp;!</strong>
+          </p>{' '}
+          <p className="mb-1">
+            Pour certaines roues, les powerpads sont parfois inclus dans le
+            carton. Leur usage s&apos;est généralisé à mesure que les roues ont
+            gagné en poids et en performances.
           </p>
           <p className="mb-1">
-            Les powerpads se sont généralisés à mesure que les roues ont gagné
-            en poids et en performances. À force d&apos;en voir partout (vidéos,
-            réseaux sociaux, etc.), on pourrait penser à tort qu&apos;ils sont
-            absolument nécessaires…
+            Et à force d&apos;en voir partout (vidéos, réseaux sociaux, etc.),
+            on pourrait penser à tort qu&apos;ils sont absolument nécessaires…
           </p>
           <p className="ml-4 mb-1">
             🟢 <strong>Bien positionnés</strong>, les powerpads améliorent le
             confort et le contrôle. Par effet de levier, ils facilitent la
             transmission de puissance, rendant accélérations et freinages
             (notamment d&apos;urgence) plus efficaces. Ils prennent tout leur
-            sens sur des roues lourdes, dont il faut maitriser l&apos;inertie,
-            ou puissantes, pour en tirer un maximum de performance. <br />
+            sens sur des roues lourdes (≈30kg et plus) dont il faut maitriser
+            l&apos;inertie, ou puissantes, pour en tirer un maximum de
+            performance. <br />
             Résultat&nbsp;: une conduite plus précise, plus dynamique, plus
             réactive… et souvent moins fatigante et plus sécurisante dans les
             manœuvres délicates.
             <br />
             🟠 <strong>À l&apos;inverse, </strong>sur une roue peu puissante ou
             relativement légère par rapport au gabarit du wheeler, les powerpads
-            sont superflus (voir dangereux si la roue n&apos;a pas la puissance
-            pour répondre à l&apos;effet de levier généré). Mal positionnés, ils
-            peuvent gêner la liberté de mouvement et nuire aux sensations de
-            pilotage. <br />
+            sont superflus (et même <b>dangereux </b>si la roue n&apos;a pas la
+            puissance pour répondre à l&apos;effet de levier généré). Mal
+            positionnés, ils peuvent gêner la liberté de mouvement et nuire aux
+            sensations de pilotage. <br />
             Sans eux, la roue conserve aussi une allure plus discrète et une
             silhouette plus fine, point apprécié par certains wheelers urbains.
           </p>
