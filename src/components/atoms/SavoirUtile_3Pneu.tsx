@@ -158,8 +158,9 @@ const Pneu = () => {
               l&apos;accès et le gonflage.
             </li>
             <li>
-              Les tailles des gyroroues sont historiquement exprimées en pouces
-              (14&quot;, 16&quot;, 18&quot;, 20&quot;).
+              La taille des gyroroues (14&quot;, 16&quot;, 18&quot;, 20&quot;,
+              22&quot;) se base sur le diamètre extérieur du pneu (roue
+              complète), comme pour les vélos.
             </li>
           </ul>
           {/*---------------------------------------------------------------*/}
@@ -425,7 +426,7 @@ const Pneu = () => {
           <p className="pl-5 text-gray-600 dark:text-gray-400 text-sm">
             Ces valeurs sont des repères issus de retours d&apos;expérience et
             de pratiques courantes (elles doivent être ajustées en fonction des
-            conditions d&apos;usage).
+            éventuelles recommandations des fabricants).
             <br />
             Elles restent indicatives&nbsp;: en cas de doute, privilégier une
             pression légèrement plus élevée plutôt que trop faible.
