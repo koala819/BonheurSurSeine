@@ -47,7 +47,7 @@ const sections = [
         href: '/apprendre-gyroroue#apprendre',
       },
       {
-        label: '💡 7 conseils à retenir',
+        label: '💡 7 conseils pour apprendre',
         href: '/apprendre-gyroroue#conseils',
       },
       {
