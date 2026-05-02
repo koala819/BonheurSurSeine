@@ -71,7 +71,7 @@ const HighwayCode = () => {
             indicator: 'data-[open=true]:rotate-180 transition-transform',
           }}
         >
-          <p className="mb-4 text-justify">
+          <p className="mb-4">
             Depuis le 23 octobre 2019, les gyroroues sont officiellement
             reconnues dans le Code de la Route (catégorie EDPM{' '}
             <strong>Engins de Déplacement Personnel à Moteur</strong>&nbsp;:{' '}
@@ -88,12 +88,12 @@ const HighwayCode = () => {
           <div className="mb-2 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-1">
               <div className="slateBlockcoderoute mb-1 mr-1">
-                <h4>
+                <h4 className="my-0">
                   ❤️‍🩹 Quand on est sur la route, il ne faut jamais être trop
                   pressé&nbsp;!
                 </h4>
               </div>
-              <p className="mb-1 text-justify mr-3">
+              <p className="mb-1 mr-3">
                 Par conséquent,{' '}
                 <b>TOUTES les règles du Code de la Route s&apos;appliquent</b>{' '}
                 (alcoolémie, circulation, signalisation, etc.). Et pour circuler{' '}
@@ -335,7 +335,7 @@ const HighwayCode = () => {
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
               🪖 ET LE CASQUE&nbsp;?
             </h4>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2 text-justify">
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
               En agglomération, sur voies vertes et pistes cyclable, le port du
               casque (jet ou intégral) n&apos;est pas obligatoire&nbsp;: il est
               cependant <strong>fortement recommandé</strong>.
@@ -352,7 +352,7 @@ const HighwayCode = () => {
               </Link>
               ).
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2 text-justify">
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
               <strong>Les protections </strong> sont importantes mais{' '}
               <strong>
                 ne rendent pas invulnérable&nbsp;: la prudence reste la
@@ -370,7 +370,7 @@ const HighwayCode = () => {
               yeux.
             </p>
           </div>
-          <p className="mt-6 mb-8 text-justify">
+          <p className="mt-6 mb-8">
             Ces dispositions peuvent paraitre contraignantes, mais elles sont{' '}
             <b>
               importantes et efficaces pour ta propre sécurité et celle des
