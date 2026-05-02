@@ -480,7 +480,7 @@ const Begin_premier_deballage = () => {
             <br />
             🟠 <strong>À l&apos;inverse, </strong>sur une roue peu puissante ou
             relativement légère par rapport au gabarit du wheeler, les powerpads
-            sont superflus (voir dangeureux si la roue n&apos;a pas la puissance
+            sont superflus (voir dangereux si la roue n&apos;a pas la puissance
             pour répondre à l&apos;effet de levier généré). Mal positionnés, ils
             peuvent gêner la liberté de mouvement et nuire aux sensations de
             pilotage. <br />
