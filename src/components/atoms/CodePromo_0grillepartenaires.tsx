@@ -30,7 +30,11 @@ export default function CardPromo({
   }, [theme, logo_mode_sombre, logo])
 
   return (
-    <section className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col hover:shadow-lg">
+    <section
+      className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col hover:shadow-lg
+    shadow-gray-400 hover:shadow-gray-400
+    dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+    >
       {/* PARTIE IMAGE */}
       <div className="flex justify-center h-[100px] mb-0">
         <div className="relative overflow-hidden rounded-2xl shadow-slate-500 bg-white dark:bg-sky-950 dark:shadow-slate-700 shadow-md h-full w-1/2 sm:w-3/4 xl:w-3/4">
