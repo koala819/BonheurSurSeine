@@ -117,11 +117,11 @@ const Begin_premier_deballage = () => {
           <h4 className="mt-4 mb-1">
             ➡️ Sortir la roue du mode transport&nbsp;:
           </h4>
-          <p className="mb-1 text-justify">
+          <p className="mb-1">
             Lorsque que tu ouvres le carton, il est normal que la roue ne
             s&apos;équilibre pas lorsque tu l&apos;allumes.
           </p>
-          <div className="blueBlock mb-2 text-justify space-y-0">
+          <div className="blueBlock mb-2 space-y-0">
             <h4 className="mt-0 mb-1">
               🚚 Le &laquo;&nbsp;mode transport&nbsp;&raquo; c&apos;est
               quoi&nbsp;?
@@ -172,7 +172,7 @@ const Begin_premier_deballage = () => {
           </ul>
           {/*---------------------------------------------------------------------*/}
           <h4 className="mt-4 mb-1">➡️ Les applications mobiles&nbsp;:</h4>
-          <p className="text-justify mb-0">
+          <p className="mb-0">
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.
           </p>
@@ -183,17 +183,19 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
-                    <Image
-                      src={logo_app_begode}
-                      alt="logo_app_begode"
-                      width={32}
-                      height={32}
-                      className="rounded-lg"
-                    />
-                    <strong>Begode</strong>
+                  <td className="w-[155px] px-2 py-1">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={logo_app_begode}
+                        alt="logo_app_begode"
+                        width={32}
+                        height={32}
+                        className="rounded-lg"
+                      />
+                      <strong>Begode</strong>
+                    </div>
                   </td>
-                  <td className="px-2 py-1">
+                  <td className="w-[30%] px-2 py-1">
                     <a
                       href="https://apps.apple.com/us/app/begode/id1549181193"
                       target="_blank"
@@ -203,27 +205,36 @@ const Begin_premier_deballage = () => {
                       <FaApple /> iOS
                     </a>
                   </td>
-                  <td className="px-2 py-1">
+                  <td className="w-[30%] px-2 py-1">
                     <a
                       href="https://www.begode.com/pages/app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 gap-2"
                     >
-                      <FaAndroid /> Android
+                      <FaAndroid className="shrink-0" />
+
+                      <div className="flex flex-col leading-tight">
+                        <span className="underline">Android</span>
+                        <span className="text-xs text-gray-600">
+                          via le site Begode
+                        </span>
+                      </div>
                     </a>
                   </td>
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
-                    <Image
-                      src={logo_app_inmotion}
-                      alt="logo_app_inmotion"
-                      width={32}
-                      height={32}
-                      className="rounded-lg"
-                    />
-                    <strong>Inmotion</strong>
+                  <td className="px-2 py-1">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={logo_app_inmotion}
+                        alt="logo_app_inmotion"
+                        width={32}
+                        height={32}
+                        className="rounded-lg"
+                      />
+                      <strong>Inmotion</strong>
+                    </div>
                   </td>
                   <td className="px-2 py-1">
                     <a
@@ -247,15 +258,17 @@ const Begin_premier_deballage = () => {
                   </td>
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
-                    <Image
-                      src={logo_app_kingsong}
-                      alt="logo_app_Kingsong"
-                      width={32}
-                      height={32}
-                      className="rounded-lg"
-                    />
-                    <strong>Kingsong</strong>
+                  <td className="px-2 py-1">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={logo_app_kingsong}
+                        alt="logo_app_kingsong"
+                        width={32}
+                        height={32}
+                        className="rounded-lg"
+                      />
+                      <strong>Kingsong</strong>
+                    </div>
                   </td>
                   <td className="px-2 py-1">
                     <a
@@ -279,15 +292,17 @@ const Begin_premier_deballage = () => {
                   </td>
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
-                    <Image
-                      src={logo_app_leaperkim}
-                      alt="logo_app_leaperkim"
-                      width={32}
-                      height={32}
-                      className="rounded-lg"
-                    />
-                    <strong>LeaperKim</strong>
+                  <td className="px-2 py-1">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={logo_app_leaperkim}
+                        alt="logo_app_leaperkim"
+                        width={32}
+                        height={32}
+                        className="rounded-lg"
+                      />
+                      <strong>LeaperKim</strong>
+                    </div>
                   </td>
                   <td className="px-2 py-1">
                     <a
@@ -312,15 +327,17 @@ const Begin_premier_deballage = () => {
                 </tr>
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
-                    <Image
-                      src={logo_app_nosfet}
-                      alt="logo_app_nosfet"
-                      width={32}
-                      height={32}
-                      className="rounded-lg"
-                    />
-                    <strong>Nosfet</strong>
+                  <td className="px-2 py-1">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={logo_app_nosfet}
+                        alt="logo_app_nosfet"
+                        width={32}
+                        height={32}
+                        className="rounded-lg"
+                      />
+                      <strong>Nosfet</strong>
+                    </div>
                   </td>
                   <td className="px-2 py-1">
                     <a
@@ -337,15 +354,23 @@ const Begin_premier_deballage = () => {
                       href="https://www.nosfet.com/support"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 gap-2"
                     >
-                      <FaAndroid /> Android
+                      <FaAndroid className="shrink-0" />
+
+                      <div className="flex flex-col leading-tight">
+                        <span className="underline">Android</span>
+                        <span className="text-xs text-gray-600">
+                          APK sur le site Nosfet
+                        </span>
+                      </div>
                     </a>
                   </td>
                 </tr>
               </tbody>
             </table>
 
+            {/*--------------------------------------------*/}
             <p className="mt-2">
               <strong>Applications Universelles</strong>
             </p>
@@ -353,7 +378,7 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
+                  <td className="w-[155px] px-2 py-1 flex items-center center gap-2">
                     <Image
                       src={logo_app_darknessbot}
                       alt="logo_app_darknessbot"
@@ -363,7 +388,7 @@ const Begin_premier_deballage = () => {
                     />
                     <strong>DarknessBot</strong>
                   </td>
-                  <td className="px-2 py-1">
+                  <td className="w-[30%] px-2 py-1">
                     <a
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
                       target="_blank"
@@ -373,14 +398,15 @@ const Begin_premier_deballage = () => {
                       <FaApple /> iOS
                     </a>
                   </td>
-                  <td className="px-2 py-1">
+                  <td className="w-[30%] px-2 py-1">
                     <a
                       href="https://play.google.com/store/apps/details?id=com.darknessproduction.darknessbot"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 underline gap-2"
                     >
-                      <FaAndroid /> Android
+                      <FaAndroid className="shrink-0" />
+                      <span className="truncate">Android</span>
                     </a>
                   </td>
                 </tr>
@@ -401,7 +427,9 @@ const Begin_premier_deballage = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      <FaApple /> indisponible
+                      <FaApple className="shrink-0" />
+                      <span className="hidden sm:inline">indisponible</span>
+                      <span className="sm:hidden">—</span>
                     </a>
                   </td>
                   <td className="px-2 py-1">
@@ -411,7 +439,8 @@ const Begin_premier_deballage = () => {
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 underline gap-2"
                     >
-                      <FaAndroid /> Android
+                      <FaAndroid className="shrink-0" />
+                      <span className="truncate">Android</span>
                     </a>
                   </td>
                 </tr>
@@ -432,7 +461,9 @@ const Begin_premier_deballage = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      <FaApple /> indisponible
+                      <FaApple className="shrink-0" />
+                      <span className="hidden sm:inline">indisponible</span>
+                      <span className="sm:hidden">—</span>
                     </a>
                   </td>
                   <td className="px-2 py-1">
@@ -442,7 +473,8 @@ const Begin_premier_deballage = () => {
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 underline gap-2"
                     >
-                      <FaAndroid /> Android
+                      <FaAndroid className="shrink-0" />
+                      <span className="truncate">Android</span>
                     </a>
                   </td>
                 </tr>
@@ -460,31 +492,32 @@ const Begin_premier_deballage = () => {
           <p className="mb-1">
             La réponse courte est simple&nbsp;:{' '}
             <strong>pas obligatoires mais parfois indispensables&nbsp;!</strong>
-          </p>{' '}
-          <p className="mb-1">
-            Pour certaines roues, les powerpads sont parfois inclus dans le
-            carton. Leur usage s&apos;est généralisé à mesure que les roues ont
-            gagné en poids et en performances.
           </p>
           <p className="mb-1">
-            Et à force d&apos;en voir partout (vidéos, réseaux sociaux, etc.),
-            on pourrait penser à tort qu&apos;ils sont absolument nécessaires…
+            À force d&apos;en voir partout (vidéos, réseaux sociaux, etc.), on
+            pourrait penser à tort qu&apos;ils sont absolument nécessaires…
           </p>
+          <p className="mb-1">
+            Ils sont aussi parfois inclus dans le carton. Et leur usage
+            s&apos;est généralisé à mesure que les roues ont gagné en poids et
+            en performances.
+          </p>
+
           <p className="ml-4 mb-1">
             🟢 <strong>Bien positionnés</strong>, les powerpads améliorent le
             confort et le contrôle. Par effet de levier, ils facilitent la
             transmission de puissance, rendant accélérations et freinages
             (notamment d&apos;urgence) plus efficaces. Ils prennent tout leur
-            sens sur des roues lourdes (≈30kg et plus) dont il faut maitriser
-            l&apos;inertie, ou puissantes, pour en tirer un maximum de
-            performance. <br />
+            sens sur des roues puissantes (pour en tirer un maximum de
+            performance) ou lourdes (≈30kg et plus) dont il faut maitriser
+            l&apos;inertie. <br />
             Résultat&nbsp;: une conduite plus précise, plus dynamique, plus
             réactive… et souvent moins fatigante et plus sécurisante dans les
             manœuvres délicates.
             <br />
-            🟠 <strong>À l&apos;inverse, </strong>sur une roue peu puissante ou
-            relativement légère par rapport au gabarit du wheeler, les powerpads
-            sont superflus (et même <b>dangereux </b>si la roue n&apos;a pas la
+            🟠 <strong>À l&apos;inverse, </strong>sur une roue relativement
+            légère par rapport au gabarit du wheeler, les powerpads sont
+            superflus (et même <b>dangereux </b>si la roue n&apos;a pas la
             puissance pour répondre à l&apos;effet de levier généré). Mal
             positionnés, ils peuvent gêner la liberté de mouvement et nuire aux
             sensations de pilotage. <br />
@@ -493,7 +526,7 @@ const Begin_premier_deballage = () => {
           </p>
           <p className="mb-0">
             <strong>En résumé</strong>, inutile de se sentir obligé d&apos;en
-            installer, surtout en débutant ou avec une roue légère.{' '}
+            installer, surtout quand on débuté ou que la roue est légère.{' '}
             <strong>
               Les powerpads sont un outil au service d&apos;un usage, pas une
               obligation&nbsp;!
@@ -520,7 +553,7 @@ const Begin_premier_deballage = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : avril 2025
+            dernière mise à jour : février 2026
           </p>
         </AccordionItem>
       </Accordion>
