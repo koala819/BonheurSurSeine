@@ -54,7 +54,7 @@ const Page = () => {
           ➡️ <strong>Demande un rendez-vous</strong>&nbsp;:{' '}
           <Link
             href={'mailto:bonheursurseine@gmail.com'}
-            className="underline text-rose-800 dark:text-black"
+            className="underline font-bold text-rose-800 dark:text-white"
           >
             bonheursurseine@gmail.com
           </Link>
