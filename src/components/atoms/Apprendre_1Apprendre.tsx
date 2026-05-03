@@ -36,13 +36,16 @@ const Apprendre = () => {
           <h3 className="mt-4 mb-2 font-bold">
             🛞 Quelle gyroroue choisir quand on débute&nbsp;?
           </h3>
-          <p className="mb-6">
+          <p className="mb-1">
             Je recommande de commencer avec un{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               modèle pas trop lourd
             </strong>{' '}
-            (&lt;25kg), simple et facile à manier. Même si certaines personnes
-            ont pu apprendre sur des roues plus grosses (
+            (&lt;25kg), simple et facile à manier.
+          </p>{' '}
+          <p className="mb-6">
+            Même si certaines personnes ont pu apprendre sur des roues plus
+            grosses (
             <i>
               oui, ça se fait… mais ce n&apos;est pas la méthode la plus simple
             </i>
@@ -53,7 +56,6 @@ const Apprendre = () => {
             sont un très bon choix (exemples&nbsp;: V8S, V10F, 16S, 18XL qui
             offrent un bon compromis poids-stabilité-maniabilité).
           </p>
-
           <h3 className="my-2 font-bold">🎓 Comment faire&nbsp;?</h3>
           <p className="mb-1">
             Tu ne sais pas par où commencer&nbsp;?{' '}

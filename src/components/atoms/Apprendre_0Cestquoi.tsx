@@ -366,7 +366,7 @@ const Maintenance = () => {
           </ul>
         </div>
         <p className="mx-3 mt-1">
-          ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et pour
+          ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et
           éviter les erreurs des débutants,{' '}
           <Link
             href="/debuter-gyroroue"

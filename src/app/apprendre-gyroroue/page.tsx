@@ -40,12 +40,12 @@ const Page = () => {
       <div className="pinkBlock_Formation scroll-mt-72" id="mes_formations">
         <p className="font-semibold mt-0 mb-3 text-base md:text-lg">
           Si tu veux apprendre la roue électrique mais que tu as peur de te
-          lancer, sache que je propose des{' '}
+          lancer, je propose des{' '}
           <strong className="text-rose-800 dark:text-white">
-            sessions de formation
+            sessions de formation et d&apos;initiation
           </strong>{' '}
-          théorique <u>et</u>&nbsp;pratique pour t&apos;accompagner et
-          dédramatiser.&nbsp;😊
+          <u>théorique et pratique</u>
+          &nbsp;pour t&apos;accompagner et dédramatiser.&nbsp;😊
           <br />
           En seulement 1h🕐, tu auras un autre regard sur
           l&apos;objet.&nbsp;😎👍
