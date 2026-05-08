@@ -15,7 +15,7 @@ const Associations = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>([])
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
-
+  //Pour l'image
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -120,7 +120,7 @@ const Associations = () => {
                     Ce Discord a été créé spécialement pour ça&nbsp;!
                   </p>
                   <p className="mt-2">
-                    Alors n&apos;hésites plus&nbsp;! Il{' '}
+                    Alors n&apos;hésite plus&nbsp;! Il{' '}
                     <strong className="text-blue-800 dark:text-blue-400">
                       est là pour ça
                     </strong>
@@ -232,9 +232,6 @@ const Associations = () => {
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-4 items-center px-6">
               <div className="place-content-center mb-4">
                 <p className="mt-0 mb-0">
-                  Si tu te sens seul dans ta région, ce n&apos;est surement
-                  qu&apos;une fausse impression&nbsp;!
-                  <br />
                   Ce sont autant d&apos;opportunités de :{' '}
                 </p>
                 <ul className="compactlist2 mt-0 mb-2">
@@ -254,8 +251,8 @@ const Associations = () => {
                     <strong className="text-blue-800 dark:text-blue-400">
                       Découvrir
                     </strong>{' '}
-                    d&apos;autres façons de faire de la roue (freestyle,
-                    randonneurs, racer, off road, acrobates, etc.).
+                    d&apos;autres façons de faire de la roue (polowheel,
+                    freestyle, randonneurs, racer, off road, acrobates, etc.).
                   </li>
                   <li>
                     <strong className="text-blue-800 dark:text-blue-400">
@@ -263,9 +260,12 @@ const Associations = () => {
                     </strong>{' '}
                     à l&apos;organisation d&apos;événements.
                   </li>
-                  <li>Faire connaitre la roue électrique.</li>
+                  <li>Faire connaître la roue électrique.</li>
                 </ul>
                 <p className="mt-0 mb-0">
+                  Si tu te sens seul dans ta région, ce n&apos;est surement
+                  qu&apos;une fausse impression&nbsp;!
+                  <br />
                   Des groupes et des associations existent un peu partout.
                 </p>
                 <p className="mt-0 mb-2">

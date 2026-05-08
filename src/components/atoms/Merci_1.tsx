@@ -89,7 +89,7 @@ export default function Contact({
               height={500}
               placeholder="blur"
             />
-            <p className="mt-0 mb-0 scroll-mt-24" id="soutien">
+            <p className="mt-0 mb-0 scroll-mt-24" id="tonavis">
               ▶️&nbsp;
               <i>
                 <Link
@@ -213,7 +213,10 @@ export default function Contact({
       */}
 
       {/* APPEL AU SOUTIEN*/}
-      <div className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      <div
+        className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl"
+        id="soutien"
+      >
         <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
           Pour soutenir mon travail, accéder à des contenus supplémentaires et
           chatter en privé, rejoins-moi sur

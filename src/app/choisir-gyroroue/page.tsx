@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "Comment bien choisir sa gyroroue ? Guide d'achat, comparaisons et conseils pour acheter sa gyroroue",
   description:
-    'Quel modèle choisir ? Marques, guide, conseils et comparatifs des meilleures gyroroues pour acheter la roue électrique idéale sans se tromper.',
+    "Quel modèle choisir ? Comparatifs des meilleures gyroroues : marques, guide d'achat, conseils pour acheter sa roue électrique idéale sans se tromper.",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/choisir-gyroroue`,
   },

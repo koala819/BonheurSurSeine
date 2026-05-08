@@ -5,9 +5,9 @@ import Cestquoi from '@/src/components/atoms/Apprendre_0Cestquoi'
 import Apprendre from '@/src/components/atoms/Apprendre_1Apprendre'
 
 export const metadata: Metadata = {
-  title: 'Apprendre facilement la gyroroue / monoroue / roue électrique',
+  title: 'Apprendre la gyroroue / monoroue / roue électrique - méthode simple',
   description:
-    'Comment apprendre la gyroroue ? Méthode simple pour progresser facilement : conseils, vidéo, initiation, apprentissage, erreurs à éviter, et plus encore.',
+    'Comment apprendre la gyroroue ? TUTORIEL pour progresser facilement : conseils, vidéo, initiation, apprentissage, erreurs à éviter, méthode simple.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
   },
@@ -40,12 +40,12 @@ const Page = () => {
       <div className="pinkBlock_Formation scroll-mt-72" id="mes_formations">
         <p className="font-semibold mt-0 mb-3 text-base md:text-lg">
           Si tu veux apprendre la roue électrique mais que tu as peur de te
-          lancer, sache que je propose des{' '}
+          lancer, je propose des{' '}
           <strong className="text-rose-800 dark:text-white">
-            sessions de formation
+            sessions de formation et d&apos;initiation
           </strong>{' '}
-          théorique <u>et</u>&nbsp;pratique pour t&apos;accompagner et
-          dédramatiser.&nbsp;😊
+          <u>théorique et pratique</u>
+          &nbsp;pour t&apos;accompagner et dédramatiser.&nbsp;😊
           <br />
           En seulement 1h🕐, tu auras un autre regard sur
           l&apos;objet.&nbsp;😎👍
@@ -54,7 +54,7 @@ const Page = () => {
           ➡️ <strong>Demande un rendez-vous</strong>&nbsp;:{' '}
           <Link
             href={'mailto:bonheursurseine@gmail.com'}
-            className="underline text-rose-800 dark:text-black"
+            className="underline font-bold text-rose-800 dark:text-white"
           >
             bonheursurseine@gmail.com
           </Link>

@@ -61,7 +61,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion variant="light" className="px-0">
           <AccordionItem
             key="1"
@@ -175,7 +175,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* ---------------  Pourquoi ça tient debout ------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion variant="light" className="px-0">
           <AccordionItem
             key="1"
@@ -205,7 +205,7 @@ const Maintenance = () => {
             }}
           >
             <div className="mx-auto px-4">
-              <ul className="list-disc ml-6 space-y-1 mb-3">
+              <ul className="list-disc ml-6 space-y-1 mb-6">
                 <li>
                   L&apos;électronique ajuste en continu la stabilité des pédales
                   (programmées pour toujours rester à l&apos;horizontale).
@@ -238,7 +238,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* -----------------  Et c'est compliqué   --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-700">
+      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion variant="light" className="px-0">
           <AccordionItem
             key="1"
@@ -274,7 +274,7 @@ const Maintenance = () => {
             </p>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 px-4 mb-2">
               {/* ------------------ Idées reçues ------------------ */}
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;Il faut avoir de l&apos;équilibre.&nbsp;»
                 </p>
@@ -283,7 +283,7 @@ const Maintenance = () => {
                   minutes suffisent pour trouver l&apos;équilibre.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;Mais c&apos;est dangereux...&nbsp;»
                 </p>
@@ -293,7 +293,7 @@ const Maintenance = () => {
                   maîtrisable qu&apos;un vélo ou une trottinette.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;C&apos;est pour les jeunes, ça&nbsp;!&nbsp;»
                 </p>
@@ -303,7 +303,7 @@ const Maintenance = () => {
                   plaisir.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;Et &ccedil;a va pas glisser&nbsp;?&nbsp;»
                 </p>
@@ -312,7 +312,7 @@ const Maintenance = () => {
                   évoluer sur toutes les surfaces, même la neige&nbsp;!
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;Il faut un équipement.&nbsp;»
                 </p>
@@ -321,7 +321,7 @@ const Maintenance = () => {
                   suffisent pour rouler sereinement, comme pour le vélo.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-700 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
                 <p className="text-sm">
                   ❌ «&nbsp;&Ccedil;a coûte cher, non&nbsp;?&nbsp;»
                 </p>
@@ -339,17 +339,34 @@ const Maintenance = () => {
       {/*------------------------------------*/}
       <div className="mb-6 mx-6 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
         <h4 className="mx-3 font-bold mt-1 mb-1">
-          ✳️ La gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
+          ✳️ Oui, la gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
         </h4>
         <p className="mx-3 mt-1">
-          Pour en profiter, elle demande un petit temps d&apos;
+          Bonne nouvelle&nbsp;:{' '}
           <strong className="text-blue-700 dark:text-blue-300">
-            apprentissage
+            tout le monde peut y arriver
           </strong>
-          . Bonne nouvelle&nbsp;: 😊 <b>tout le monde peut y arriver</b>&nbsp;!
+          &nbsp;!😊
         </p>
+        <p className="mx-3 mt-3">Et pour en profiter&nbsp;:</p>
+        <div className="mx-3 mb-3">
+          <ul className="list-disc ml-6 space-y-0">
+            <li>
+              Pas besoin d&apos;avoir un don, un sens de l&apos;équilibre
+              particulier, d&apos;être motard, etc…
+            </li>
+            <li>
+              Elle demande juste{' '}
+              <strong className="text-blue-700 dark:text-blue-300">
+                un petit temps d&apos;apprentissage
+              </strong>
+              …
+            </li>
+            <li>Et un peu de curiosité, d&apos;envie et de motivation…</li>
+          </ul>
+        </div>
         <p className="mx-3 mt-1">
-          ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et pour
+          ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et
           éviter les erreurs des débutants,{' '}
           <Link
             href="/debuter-gyroroue"
@@ -382,7 +399,7 @@ const Maintenance = () => {
           Fabien.Wheel
         </Link>
         <br />
-        dernière mise à jour : septembre 2025
+        dernière mise à jour : avril 2026
       </p>
       {/*</AccordionItem>
       </Accordion>*/}

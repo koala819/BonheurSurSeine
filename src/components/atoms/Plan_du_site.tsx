@@ -35,16 +35,20 @@ const sections = [
     title: 'Apprendre la gyroroue',
     items: [
       {
-        label: '🚀 Comment fonctionne une gyroroue',
+        label: '🚀 Fonctionnement',
         href: '/apprendre-gyroroue#cestquoi',
       },
       {
-        label: '🎓 Mes Formations',
+        label: '👉 Mes Formations',
         href: '/apprendre-gyroroue#mes_formations',
       },
       {
-        label: '💡 Apprendre facilement - Tutoriel',
+        label: '🎓 Tutoriel',
         href: '/apprendre-gyroroue#apprendre',
+      },
+      {
+        label: '💡 7 conseils pour apprendre',
+        href: '/apprendre-gyroroue#conseils',
       },
       {
         label: '⚠️ 6 pièges à éviter',
@@ -61,7 +65,7 @@ const sections = [
         href: '/choisir-gyroroue#marques',
       },
       {
-        label: '🎯 8 questions essentielles à se poser',
+        label: '🎯 8 questions à se poser',
         href: '/choisir-gyroroue#besoins',
       },
       { label: '🪄 Comparer les modèles', href: '/choisir-gyroroue#comparer' },
@@ -88,14 +92,21 @@ const sections = [
         href: '/guide-utile-gyroroue#dico',
       },
       {
-        label: '🛠️ Entretenir sa gyroroue',
+        label: '🛠️ Bien entretenir sa gyroroue',
         href: '/guide-utile-gyroroue#entretien',
       },
       {
-        label: "⚡ La batterie et l'autonomie",
+        label: '⚡ La batterie : fonctionnement et autonomie',
         href: '/guide-utile-gyroroue#batterie',
       },
-      { label: '🛣️ Trouver son chemin', href: '/guide-utile-gyroroue#navi' },
+      {
+        label: '🛞 Le pneu : choix, pression et entretien',
+        href: '/guide-utile-gyroroue#pneu',
+      },
+      {
+        label: '🛣️ Trouver son chemin : applis & cartes',
+        href: '/guide-utile-gyroroue#navi',
+      },
       { label: '😉 Savoir en vrac', href: '/guide-utile-gyroroue#vrac' },
       { label: '🆕 Infos constructeurs', href: '/guide-utile-gyroroue#infos' },
     ],
@@ -104,8 +115,8 @@ const sections = [
     title: 'Remerciements',
     items: [
       {
-        label: '💬 Donner son avis',
-        href: '/mille-merci#soutien',
+        label: '💬 Donner ton avis',
+        href: '/mille-merci#tonavis',
       },
       {
         label: '💲 Me soutenir (Tipeee, Patreon, etc.)',
@@ -160,11 +171,11 @@ export default function Page() {
       </form>
 
       {/* 🧭 Sections du plan du site */}
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {sections.map((section) => (
-          <div key={section.title} className="space-y-2">
-            <h2 className="text-2xl font-semibold">{section.title}</h2>
-            <ul className="list-disc list-inside space-y-1">
+          <div key={section.title} className="space-y-2 sm:mb-5">
+            <h2 className="text-2xl font-semibold mb-1">{section.title}</h2>
+            <ul className="ml-3 list-disc list-inside space-y-1">
               {section.items.map((it) => (
                 <p key={it.label}>
                   <Link

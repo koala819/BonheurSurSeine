@@ -12,7 +12,7 @@ const Apprendre = () => {
   return (
     <section
       id="apprendre"
-      className="scroll-mt-72 my-8 space-y-6 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-60 my-8 space-y-6 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
     >
       <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg shadow-lg mb-10">
         <Image
@@ -36,13 +36,16 @@ const Apprendre = () => {
           <h3 className="mt-4 mb-2 font-bold">
             🛞 Quelle gyroroue choisir quand on débute&nbsp;?
           </h3>
-          <p className="mb-6">
+          <p className="mb-1">
             Je recommande de commencer avec un{' '}
             <strong className="text-blue-700 dark:text-blue-300">
               modèle pas trop lourd
             </strong>{' '}
-            (&lt;25kg), simple et facile à manier. Même si certaines personnes
-            ont pu apprendre sur des roues plus grosses (
+            (&lt;25kg), simple et facile à manier.
+          </p>{' '}
+          <p className="mb-6">
+            Même si certaines personnes ont pu apprendre sur des roues plus
+            grosses (
             <i>
               oui, ça se fait… mais ce n&apos;est pas la méthode la plus simple
             </i>
@@ -53,7 +56,6 @@ const Apprendre = () => {
             sont un très bon choix (exemples&nbsp;: V8S, V10F, 16S, 18XL qui
             offrent un bon compromis poids-stabilité-maniabilité).
           </p>
-
           <h3 className="my-2 font-bold">🎓 Comment faire&nbsp;?</h3>
           <p className="mb-1">
             Tu ne sais pas par où commencer&nbsp;?{' '}
@@ -103,7 +105,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              BLOC CONSEIL                  */}
       {/*--------------------------------------------*/}
-      <div className="my-4">
+      <div className="my-4" id="conseils">
         <div className="blueBlock my-0 p-4">
           <h4 className="mt-0 mb-2 text-xl font-bold">
             💡 7 conseils à retenir&nbsp;:

@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Image_bon_sens from '@/public/Image_bon-sens_nuage-de-mots.png'
+import Image_equipements from '@/public/Image_bon-sens_équipements.jpg'
 
 const CommonSense = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -74,7 +75,7 @@ const CommonSense = () => {
           <div className="mb-3 grid grid-cols-1 md:grid-cols-5 gap-1 items-stretch">
             {/* Bloc texte sur 3 colonnes */}
             <aside className="md:col-span-3">
-              <div className="TealBlockbonsens my-0 grid grid-cols-1 gap-1 mb-0 h-full">
+              <div className="TealBlockbonsens my-0 grid grid-cols-1 gap-1 h-full">
                 {[
                   {
                     icon: '☠️',
@@ -95,9 +96,9 @@ const CommonSense = () => {
                 ].map(({ icon, text }, i) => (
                   <div
                     key={i}
-                    className="bg-teal-50 dark:bg-teal-900 rounded-xl px-2 py-1 shadow text-left"
+                    className="bg-teal-50 dark:bg-teal-900 rounded-xl px-2 py-2 my-0 shadow text-left"
                   >
-                    <h4 className="text-lg font-semibold mb-0 mt-0">
+                    <h4 className="text-lg font-semibold my-0">
                       {icon} {text}
                     </h4>
                   </div>
@@ -117,92 +118,151 @@ const CommonSense = () => {
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <h3 className="mt-1">Prudence est mère de sûreté</h3>
-          <ul className="list-disc pl-6 space-y-1 mb-6">
-            <li className="text-justify">
-              Respecte le{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                code de la route
-              </strong>{' '}
-              (circulation, stationnement, signalisation).
+          <h3 className="mt-8 mb-1">Prudence est mère de sûreté</h3>
+          <ul className="list-disc pl-8 space-y-1 mb-3">
+            <li className="">
+              Respecte{' '}
+              <Link
+                href="/debuter-gyroroue#code"
+                className="link-style font-bold text-teal-800 dark:text-teal-200"
+              >
+                <i>le code de la route</i>
+              </Link>{' '}
+              (circulation, signalisation, stationnement).
             </li>
-            <li className="text-justify">
-              Respecte les autres usagers (piétons, cyclistes, etc.), et met toi
-              à leur place :{' '}
+            <li className="">
+              Respecte les autres usagers (piétons, cyclistes, etc.). <br />
               <strong className="text-teal-800 dark:text-teal-200">
-                pense à ce qu&apos;ils peuvent ressentir
-              </strong>{' '}
-              en te voyant arriver.
+                Mets-toi à leur place
+              </strong>
+              &nbsp;: pense à ce qu&apos;ils peuvent ressentir en te voyant
+              arriver.
             </li>
-            <li className="text-justify">
-              Anticipe les{' '}
+            <li className="">
               <strong className="text-teal-800 dark:text-teal-200">
-                trajectoires
-              </strong>{' '}
-              (les tiennes et celles des autres usagers) et garde des{' '}
+                Anticipe&nbsp;:{' '}
+              </strong>
+              trajectoires , obstacles, comportements des autres usagers.{' '}
+            </li>
+            <li className="">
+              Respecte les{' '}
               <strong className="text-teal-800 dark:text-teal-200">
                 distances de sécurité
               </strong>
               .
             </li>
-            <li className="text-justify">
-              Maitrise toujours ta{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                vitesse
-              </strong>{' '}
-              ! (Ne roule jamais plus vite que ce que tu peux freiner).
-            </li>
-          </ul>
-          {/*-----------------------------------------*/}
-          {/*-----------------------------------------*/}
-          <div className="TealBlockbonsens mb-6">
-            <h4>
-              🔥 Les protections n&apos;évitent pas le danger, la vigilance,
-              oui&nbsp;!
-            </h4>
-          </div>
-          {/*-----------------------------------------*/}
-          {/*-----------------------------------------*/}
-          <h3>À retenir :</h3>
-          <ul className="list-disc pl-6 space-y-1 mb-4">
-            <li className="text-justify">
-              <strong className="text-teal-800 dark:text-teal-200">
-                Protège toi&nbsp;!
-              </strong>
-            </li>
-            <li className="text-justify">
-              Le port du{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                casque
-              </strong>{' '}
-              (jet ou intégral) est{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                vivement recommandé{' '}
-              </strong>
-              (sans être obligatoire). Porter des{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                gants
-              </strong>{' '}
-              ou des genouillères permet également de se protéger.
-            </li>
-            <li className="text-justify">
+            <li className="">
               Sois{' '}
               <strong className="text-teal-800 dark:text-teal-200">
                 visible
               </strong>{' '}
               mais n&apos;aveugle pas les autres.
             </li>
-            <li className="text-justify">
-              Utilise une{' '}
+            <li className="">
+              Maitrise toujours ta{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                sonnette
+                vitesse
               </strong>{' '}
-              pour signaler{' '}
-              <strong className="text-teal-800 dark:text-teal-200">
-                amicalement
-              </strong>{' '}
-              ton approche et tes dépassements.
+              ! Ne roule jamais plus vite que ce que tu peux freiner.
             </li>
+          </ul>
+          {/*-----------------------------------------*/}
+          <div className="TealBlockbonsens mb-6">
+            <h4 className="my-0">
+              🔥 Les protections n&apos;évitent ni le danger ni la chute, la
+              vigilance, oui&nbsp;!
+            </h4>
+          </div>
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
+          <h3 className="mt-8 mb-1">L&apos;équipement indispensable</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center">
+            {/* Image (1/4) */}
+            <aside className="md:col-span-1 flex justify-center md:justify-center">
+              <Image
+                src={Image_equipements}
+                alt="Équipement gyroroue"
+                width={200}
+                height={200}
+                className="max-w-full h-auto object-contain rounded-lg shadow-md"
+              />
+            </aside>
+            {/* Texte (3/4) */}
+            <div className="md:col-span-3">
+              <ul className="list-disc pl-8 space-y-1 mb-1">
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Le casque
+                  </strong>{' '}
+                  (jet ou intégral)&nbsp;: son port est{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    vivement recommandé{' '}
+                  </strong>
+                  (sans être pourtant obligatoire).
+                </li>
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Les gants
+                  </strong>
+                  &nbsp;: beaucoup de wheeler en choisissent avec
+                  protège-poignets. <br />
+                  Certains complètent leur tenue par des genouillères ou des
+                  coudières pour se protéger en cas de chute.
+                </li>
+                <li>
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    Des lunettes
+                  </strong>
+                  &nbsp;: elles protègeront tes yeux (vent, insectes, froid) et
+                  t&apos;éviteront toute gêne.
+                </li>
+                <li className="">
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    La sonnette
+                  </strong>
+                  &nbsp;: elle est obligatoire (cf.{' '}
+                  <Link
+                    href="/debuter-gyroroue#code"
+                    className="link-style font-bold text-teal-800 dark:text-teal-200"
+                  >
+                    <i>le code de la route</i>
+                  </Link>
+                  ). Utilise la pour signaler{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    amicalement
+                  </strong>{' '}
+                  ton approche et tes dépassements.
+                </li>
+              </ul>
+            </div>
+          </div>{' '}
+          <p className="pl-2 mt-1 mb-3">
+            <strong className="text-teal-800 dark:text-teal-200">
+              Protège toi&nbsp;!
+            </strong>{' '}
+            <br />
+            Cependant, imposer ses choix aux autres revient à accepter que
+            d&apos;autres nous imposent les leurs… jusqu&apos;à remettre en
+            cause l&apos;usage même de la roue électrique, trop dangereuse à
+            leurs yeux.
+          </p>
+          {/*-----------------------------------------*/}
+          <div className="TealBlockbonsens mb-6">
+            <h4 className="mb-0">
+              🪖+🧤+…&nbsp; Abondance de biens ne nuit pas&nbsp;!
+            </h4>
+            <p>
+              Mais inutile d&apos;être en armure pour rouler sereinement.
+              <br />
+              Gardons à l&apos;esprit que le port des protections (nombre, type,
+              etc.) est un choix personnel lié à l&apos;usage (vitesse,
+              environnement…).
+            </p>
+          </div>
+          {/*-----------------------------------------*/}
+          {/*-----------------------------------------*/}
+          <h3 className="mt-8 mb-1">À retenir :</h3>
+          <ul className="list-disc pl-8 space-y-1 mb-3">
             <li className="text-justify">
               Prend le temps de connaitre tes capacités, de{' '}
               <strong className="text-teal-800 dark:text-teal-200">
@@ -215,10 +275,17 @@ const CommonSense = () => {
               .
             </li>
             <li className="text-justify">
-              Je répète : connais bien les limites de ta roue et respecte les.
+              Je répète : connais bien les limites de ta roue, respecte les, et{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                ne va pas au-delà&nbsp;!
+              </strong>
+            </li>
+            <li>Respecte le tilt-back. </li>
+            <li>
+              Les bips sont là pour la sécurité&nbsp;: ne les désactive
+              jamais&nbsp;!
             </li>
           </ul>
-          {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
           <div className="TealBlockbonsens">
             <h4 className="mb-0">
@@ -230,6 +297,7 @@ const CommonSense = () => {
               le perd.
             </p>
           </div>
+          {/*-----------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
@@ -241,7 +309,7 @@ const CommonSense = () => {
               Bonheur Sur Seine
             </Link>
             <br />
-            dernière mise à jour : avril 2025
+            dernière mise à jour : mars 2026
           </p>
         </AccordionItem>
       </Accordion>

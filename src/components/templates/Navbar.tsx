@@ -326,6 +326,14 @@ export function Top() {
                 </li>
                 <li>
                   <Link
+                    href="/guide-utile-gyroroue#pneu"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸Le pneu
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/guide-utile-gyroroue#navi"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
@@ -365,6 +373,14 @@ export function Top() {
             {/* Sous-menu */}
             <div className="absolute left-0 top-full pt-1 w-44 rounded-lg bg-white dark:bg-gray-800 shadow-lg z-50 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 pointer-events-none delay-50 dark:border-cyan-900 border-1">
               <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
+                <li>
+                  <Link
+                    href="/mille-merci#tonavis"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸Donner ton avis
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/mille-merci#soutien"

@@ -1,6 +1,5 @@
 'use client'
 
-//import { Button } from '@heroui/react'
 import { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 
@@ -21,12 +20,13 @@ type Stats = {
   average: number
   count: number
   comments: CommentItem[]
-  countsByRating?: Record<number, number>
+  countsByRating: Record<number, number>
 }
 
 export default function RatingStars2() {
   const [hovered, setHovered] = useState(0)
   const [selected, setSelected] = useState(0)
+
   const [average, setAverage] = useState(0)
   const [count, setCount] = useState(0)
 
@@ -39,62 +39,67 @@ export default function RatingStars2() {
   const [comment, setComment] = useState('')
 
   const [feedback, setFeedback] = useState('')
-
-  const lastSubmitTimeRef = useRef<number>(0)
+  const [loading, setLoading] = useState(false)
 
   // pour affichage de la fenetre supplémentaire
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   // Référence au slider
   const sliderRef = useRef<Slider>(null)
+  const lastSubmitTimeRef = useRef<number>(0)
 
   async function fetchData() {
-    const response = await fetch('/api/ratingv2-com')
-    const data: Stats = await response.json()
+    try {
+      const response = await fetch('/api/ratingv3')
 
-    setAverage(Number(data.average))
-    setCount(data.count)
-    setComments(data.comments || [])
-    setCountsByRating(data.countsByRating || {})
+      if (!response.ok) {
+        throw new Error('Erreur chargement')
+      }
+
+      const data: Stats = await response.json()
+
+      setAverage(Number(data.average || 0))
+      setCount(Number(data.count || 0))
+      setComments(data.comments || [])
+      setCountsByRating(data.countsByRating || {})
+    } catch {
+      setFeedback('❌ Impossible de charger les avis')
+    }
   }
 
-  // Lancement de l'animation confetti
-  {
-    /*const launchConfetti = () => {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    })
-  }
-    */
-  }
+  useEffect(() => {
+    fetchData()
+  }, [])
 
-  // ---------------------------------------
-  // ⬇️ Envoi note + email
-  // ---------------------------------------
   async function sendRating(rating: number) {
     const now = Date.now()
-    //anti-spam 30sec entre chaque envoi
-    if (now - lastSubmitTimeRef.current < 30000) {
-      setFeedback('⏳ Tu as déjà envoyé une note…')
+    if (loading) {
       return
     }
-    if (!pseudo.trim() || !comment.trim()) {
+    if (!pseudo.trim()) {
+      setFeedback('✏️ Entre un pseudo et un commentaire')
+      return
+    }
+    if (!comment.trim()) {
       setFeedback('✏️ Entre un pseudo et un commentaire')
       return
     }
 
+    if (now - lastSubmitTimeRef.current < 30000) {
+      setFeedback('⏳ Tu as déjà envoyé une note…')
+      return
+    }
     lastSubmitTimeRef.current = now
+    setLoading(true)
     setSelected(rating)
-
     setFeedback('⏳ Envoi en cours…')
 
     try {
-      // 1️⃣ Sauvegarde Turso
-      await fetch('/api/ratingv2-com', {
+      const response = await fetch('/api/ratingv3', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           rating,
           pseudo,
@@ -102,75 +107,70 @@ export default function RatingStars2() {
         }),
       })
 
-      // 2️⃣ Envoi email
-      await fetch('/api/ratingv2-mail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ rating, pseudo, comment }),
-      })
+      const data = await response.json()
 
-      const newComment = { rating, pseudo, comment }
+      if (!response.ok) {
+        throw new Error(data.error || 'Erreur')
+      }
+
+      if (data.approved) {
+        const newComment: CommentItem = {
+          rating,
+          pseudo,
+          comment,
+        }
+
+        setComments((prev) => [newComment, ...prev.slice(0, 9)])
+
+        sliderRef.current?.slickGoTo(0)
+      }
+
       setPseudo('')
       setComment('')
 
-      // Ajout immédiat du commentaire dans le carrousel
-      setComments((prev) => [newComment, ...prev])
+      setFeedback(
+        data.approved
+          ? '✅ Merci pour ton avis !'
+          : '✅ Commentaire bien reçu !',
+      )
 
-      // Forcer le slider à afficher la première slide (nouveau commentaire)
-      sliderRef.current?.slickGoTo(0)
-
-      // Après 4 secondes, on recharge les commentaires "officiels"
-      setTimeout(() => {
-        fetchData()
-        setFeedback('✅ Merci pour ton avis !')
-      }, 4000)
-    } catch {
+      fetchData()
+    } catch (err) {
       setFeedback('❌ Une erreur est survenue')
+    } finally {
+      setLoading(false)
     }
   }
 
-  // Surveille le feedback pour déclencher le confetti uniquement quand le message est le message de succès
-  {
-    /*
-  useEffect(() => {
-    if (feedback === '✅ Merci pour ton avis !') {
-      launchConfetti()
-    }
-  }, [feedback])
-*/
-  }
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-  // Calcul répartition des étoiles
   const starStats = [5, 4, 3, 2, 1].map((star) => {
     const total = countsByRating[star] || 0
     const percent = count > 0 ? Math.round((total / count) * 100) : 0
-    return { star, total, percent }
+
+    return {
+      star,
+      total,
+      percent,
+    }
   })
 
   // Configuration react-slick pour commentaires
   const sliderSettings = {
     dots: false,
-    infinite: true,
+    infinite: comments.length > 1,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: comments.length > 1,
     autoplaySpeed: 4000,
     arrows: false,
-    pauseOnHover: false,
-    adaptiveHeight: false,
+    pauseOnHover: true,
+    adaptiveHeight: true,
   }
 
   return (
     <div className="flex flex-col items-center">
-      {/* Titre */}
-      <div className="text-lg text-center font-bold text-black cursor-pointer dark:text-white">
-        Tu as apprécié mon site&nbsp;?
-        <span className="font-normal"> Dis-le 🙂</span>
+      <div className="text-lg text-center font-bold text-black dark:text-white">
+        Tu as apprécié mon site ?<span className="font-normal"> Dis-le 🙂</span>
       </div>
 
       {/* ------------------------------------------------------ */}
@@ -182,7 +182,7 @@ export default function RatingStars2() {
             onMouseEnter={() => setHovered(val)}
             onMouseLeave={() => setHovered(0)}
             onClick={() => sendRating(val)}
-            className={`text-3xl cursor-pointer transition ${
+            className={`text-3xl transition ${
               val <= (hovered || selected) ? 'text-orange-500' : 'text-gray-400'
             }`}
           >
@@ -191,8 +191,7 @@ export default function RatingStars2() {
         ))}
       </div>
 
-      {/* Formulaire */}
-      <div className="flex flex-col gap-1 w-full max-w-md text-sm">
+      <div className="flex flex-col gap-2 w-full max-w-md text-sm mt-2">
         <input
           type="text"
           placeholder="Ton prénom"
@@ -214,7 +213,7 @@ export default function RatingStars2() {
 
       {/* Feedback doux */}
       {feedback && (
-        <div className="text-sm text-emerald-600 dark:text-emerald-400 transition-opacity">
+        <div className="text-sm mt-2 text-emerald-600 dark:text-emerald-400">
           {feedback}
         </div>
       )}
@@ -232,58 +231,51 @@ export default function RatingStars2() {
           title="Voir tous les avis"
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              setIsModalOpen(true)
-            }
-          }}
         >
           {count} avis
         </span>
         )
       </div>
 
-      {/* Historique */}
-      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 bg-slate-50 dark:bg-slate-950 relative p-1 space-x-1">
-        {/* Stats par étoiles */}
-        <div className="w-full md:w-1/2 max-w-md space-y-0 p-1">
+      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 bg-slate-50 dark:bg-slate-950 relative p-2 gap-2">
+        <div className="w-full md:w-1/2 max-w-md space-y-1 p-1">
           {starStats.map((s) => (
-            <div
-              key={s.star}
-              className="flex items-center text-sm font-mono ml-2"
-            >
+            <div key={s.star} className="flex items-center text-sm font-mono">
               <span className="w-8">{s.star}★</span>
-              <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded h-3 mx-0 overflow-hidden">
+
+              <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
                 <div
                   className="bg-orange-400 h-3 transition-all"
                   style={{ width: `${s.percent}%` }}
                 />
               </div>
-              <span className="w-8 text-right font-mono">{s.total}</span>
+
+              <span className="w-8 text-right">{s.total}</span>
             </div>
           ))}
         </div>
 
-        {/* Slider commentaires */}
-        <div className="w-full md:w-1/2 max-w-md space-y-0 p-1">
-          <Slider ref={sliderRef} {...sliderSettings}>
-            {comments.map((c, i) => (
-              <div
-                key={i}
-                className="w-full h-full text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-2"
-              >
-                <div className="font-semibold">{c.pseudo}</div>
-                <div className="text-orange-400 text-xl">
-                  {'★'.repeat(c.rating)}
-                  {'☆'.repeat(5 - c.rating)}
+        <div className="w-full md:w-1/2 max-w-md">
+          {comments.length > 0 && (
+            <Slider ref={sliderRef} {...sliderSettings}>
+              {comments.map((c, i) => (
+                <div key={i}>
+                  <div className="text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-3 min-h-[120px] flex flex-col justify-center">
+                    <div className="font-semibold">{c.pseudo}</div>
+
+                    <div className="text-orange-400 text-xl">
+                      {'★'.repeat(c.rating)}
+                      {'☆'.repeat(5 - c.rating)}
+                    </div>
+
+                    <div className="text-sm italic text-gray-700 dark:text-gray-300 break-words">
+                      “{c.comment}”
+                    </div>
+                  </div>
                 </div>
-                <div className="text-sm italic text-gray-700 dark:text-gray-300">
-                  “{c.comment}”
-                </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          )}
         </div>
       </div>
 
