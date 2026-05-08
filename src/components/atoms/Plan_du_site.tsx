@@ -35,7 +35,7 @@ const sections = [
     title: 'Apprendre la gyroroue',
     items: [
       {
-        label: '🚀 Comment fonctionne une gyroroue',
+        label: '🚀 Fonctionnement',
         href: '/apprendre-gyroroue#cestquoi',
       },
       {
@@ -43,7 +43,7 @@ const sections = [
         href: '/apprendre-gyroroue#mes_formations',
       },
       {
-        label: '🎓 Tutoriel pour apprendre facilement',
+        label: '🎓 Tutoriel',
         href: '/apprendre-gyroroue#apprendre',
       },
       {
@@ -65,7 +65,7 @@ const sections = [
         href: '/choisir-gyroroue#marques',
       },
       {
-        label: '🎯 8 questions essentielles à se poser',
+        label: '🎯 8 questions à se poser',
         href: '/choisir-gyroroue#besoins',
       },
       { label: '🪄 Comparer les modèles', href: '/choisir-gyroroue#comparer' },
@@ -171,11 +171,11 @@ export default function Page() {
       </form>
 
       {/* 🧭 Sections du plan du site */}
-      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {sections.map((section) => (
-          <div key={section.title} className="space-y-2">
-            <h2 className="text-2xl font-semibold">{section.title}</h2>
-            <ul className="list-disc list-inside space-y-1">
+          <div key={section.title} className="space-y-2 sm:mb-5">
+            <h2 className="text-2xl font-semibold mb-1">{section.title}</h2>
+            <ul className="ml-3 list-disc list-inside space-y-1">
               {section.items.map((it) => (
                 <p key={it.label}>
                   <Link
