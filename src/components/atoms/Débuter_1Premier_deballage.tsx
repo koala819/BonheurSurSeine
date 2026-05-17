@@ -15,6 +15,7 @@ import logo_app_kingsong from '@/public/marques/logo_app_kingsong.webp'
 import logo_app_leaperkim from '@/public/marques/logo_app_leaperkim.webp'
 import logo_app_nosfet from '@/public/marques/logo_app_nosfet.png'
 import logo_app_wheelLog from '@/public/marques/logo_app_wheelLog.webp'
+import powerpads from '@/public/techniques/Powerpads - Patton Beidou orange.jpg'
 
 const Begin_premier_deballage = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -26,6 +27,10 @@ const Begin_premier_deballage = () => {
       if (hash === 'deballage') {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('deballage')
+      }
+      if (hash === 'powerpads') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('powerpads')
       }
     } // Appel initial
 
@@ -488,20 +493,46 @@ const Begin_premier_deballage = () => {
             😉
           </p>
           {/*---------------------------------------------------------------------*/}
-          <h4 className="mt-4 mb-1">➡️ Et les powerpads&nbsp;?</h4>
-          <p className="mb-1">
-            La réponse courte est simple&nbsp;:{' '}
-            <strong>pas obligatoires mais parfois indispensables&nbsp;!</strong>
-          </p>
-          <p className="mb-1">
-            À force d&apos;en voir partout (vidéos, réseaux sociaux, etc.), on
-            pourrait penser à tort qu&apos;ils sont absolument nécessaires…
-          </p>
-          <p className="mb-1">
-            Ils sont aussi parfois inclus dans le carton. Et leur usage
-            s&apos;est généralisé à mesure que les roues ont gagné en poids et
-            en performances.
-          </p>
+          <h4 className="mt-4 mb-1 scroll-mt-24" id="powerpads">
+            ➡️ Et les powerpads&nbsp;?
+          </h4>
+          <div className="flex flex-col sm:flex-row items-center mb-1 gap-1">
+            {/* TEXTE */}
+            <aside className="flex-1">
+              <p className="mb-3">
+                La réponse courte est simple&nbsp;:{' '}
+                <strong>
+                  pas obligatoires mais parfois indispensables&nbsp;!
+                </strong>
+              </p>
+              <p className="mb-0">
+                À force d&apos;en voir partout (vidéos, réseaux sociaux, etc.),
+                on pourrait penser à tort qu&apos;ils sont absolument
+                nécessaires…
+              </p>
+              <p className="mb-1">
+                Ils sont aussi parfois inclus dans le carton. Et leur usage
+                s&apos;est généralisé à mesure que les roues ont gagné en poids
+                et en performances.
+              </p>
+            </aside>
+            {/* LOGO */}
+            <aside className="flex-shrink-0">
+              <div
+                className="rounded-2xl
+                          bg-gray-100 dark:bg-gray-800
+                          p-2 shadow-sm"
+              >
+                <Image
+                  src={powerpads}
+                  alt="Assemblage d'une batterie lithium-ion"
+                  className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[250px]"
+                  priority={false}
+                />
+              </div>
+            </aside>
+          </div>
 
           <p className="ml-4 mb-1">
             🟢 <strong>Bien positionnés</strong>, les powerpads améliorent le
