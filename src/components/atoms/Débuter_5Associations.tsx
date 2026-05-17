@@ -252,7 +252,7 @@ const Associations = () => {
                       Découvrir
                     </strong>{' '}
                     d&apos;autres façons de faire de la roue (polowheel,
-                    freestyle, randonneurs, racer, off road, acrobates, etc.).
+                    freestyle, randonneurs, racer, off-road, acrobates, etc.).
                   </li>
                   <li>
                     <strong className="text-blue-800 dark:text-blue-400">
@@ -263,7 +263,7 @@ const Associations = () => {
                   <li>Faire connaître la roue électrique.</li>
                 </ul>
                 <p className="mt-0 mb-0">
-                  Si tu te sens seul dans ta région, ce n&apos;est surement
+                  Si tu te sens seul dans ta région, ce n&apos;est sûrement
                   qu&apos;une fausse impression&nbsp;!
                   <br />
                   Des groupes et des associations existent un peu partout.

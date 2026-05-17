@@ -86,7 +86,7 @@ const Pneu = () => {
             <p>
               De lui va dépendre une très grande partie de tes ressentis&nbsp;:{' '}
               <i>
-                sensation de glisse, confort, autonomie, sensibilité au devers,
+                sensation de glisse, confort, autonomie, sensibilité au dévers,
                 stabilité, maniabilité…
               </i>
               <br />
@@ -221,8 +221,8 @@ const Pneu = () => {
               <b>Hybrides / Mixte </b>(semi-cramponné)&nbsp;: <br />
               Avantages&nbsp;: très bon compromis pour la ville et les chemins.
               <br />
-              Inconvénients&nbsp;: mauvais nul part, mais aussi excellent nul
-              part.
+              Inconvénients&nbsp;: mauvais nulle part, mais aussi excellent
+              nulle part.
               <br />
               Dans la pratique, ils sont les plus polyvalents.
             </li>
@@ -248,7 +248,7 @@ const Pneu = () => {
           <div className="pinkBlock mb-2">
             <b className="mb-0 mt-0">
               ⚠️ Sous gonfler son pneu (&lt;2 bars), c&apos;est prendre le
-              risque d&apos;abimer la jante…
+              risque d&apos;abîmer la jante…
               <br />
             </b>
             Vérifie régulièrement la pression du pneu (toutes les 3-4 semaines).
@@ -278,7 +278,7 @@ const Pneu = () => {
                 </button>
                 <Image
                   src={Jantes}
-                  alt="Jantes abimées"
+                  alt="Jantes abîmées"
                   className="w-full rounded-xl shadow-lg border-medium border-blue-300"
                   priority
                 />
@@ -289,8 +289,8 @@ const Pneu = () => {
           {/*---------------------------------------------------------------*/}
           <p className="mt-3">
             Les indications des pneus ne sont pas toujours simples à lire, et
-            avant tout penser pour des véhicules à au moins 2 ou 3 roues : on ne
-            sait donc pas forcément comment les interpréter.
+            avant tout pensées pour des véhicules à au moins 2 ou 3 roues : on
+            ne sait donc pas forcément comment les interpréter.
           </p>
           <p className="" id="pression">
             La pression du pneu dépendra principalement du poids du wheeler et

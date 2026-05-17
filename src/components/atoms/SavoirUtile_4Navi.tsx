@@ -117,7 +117,7 @@ const Practical_Vrac = () => {
                   target="_blank"
                   className="link-style"
                 >
-                  Google&nbsp;Map
+                  Google&nbsp;Maps
                 </Link>
                 &nbsp;! Mais ce n&apos;est pas le plus adapté&nbsp;!
                 <br />
@@ -186,7 +186,7 @@ const Practical_Vrac = () => {
                       target="_blank"
                       className="link-style"
                     >
-                      OpenCycle Map
+                      OpenCycleMap
                     </Link>{' '}
                   </li>
                   <li className="text-sm">
@@ -285,7 +285,7 @@ const Practical_Vrac = () => {
                 </Link>
               </aside>
               <aside className="sm:w-2/3 lg:w-2/3 space-y-3 mb-1 ml-2">
-                <p className="text-justify">
+                <p className="">
                   <b>Wikiloc </b>est particulièrement apprécié par certains
                   wheelers. Deux catégories sont utilisées&nbsp;:{' '}
                   <i>&laquo;&nbsp;Monocycle de montagne&nbsp;&raquo;</i> et{' '}
@@ -293,7 +293,7 @@ const Practical_Vrac = () => {
                 </p>
                 <p className="mb-0">
                   Voici quelques contributeurs très actifs pour{' '}
-                  <strong>découvrir de supers parcours</strong>&nbsp;:
+                  <strong>découvrir de super parcours</strong>&nbsp;:
                 </p>
               </aside>
             </div>
@@ -327,8 +327,8 @@ const Practical_Vrac = () => {
           {/*--------------------------------------------------------*/}
           <section className="mt-4 mb-4 pt-1">
             <div className="flex flex-col sm:flex-row mb-0">
-              <aside className="sm:w-1/2 md:w-2/5 lg:w-2/5 flex text-justify">
-                <p className="text-justify">
+              <aside className="sm:w-1/2 md:w-2/5 lg:w-2/5 flex">
+                <p className="">
                   La plateforme permet de{' '}
                   <strong>
                     découvrir, télécharger, suivre, et enregistrer des
@@ -382,7 +382,7 @@ const Practical_Vrac = () => {
               <li>
                 Pour une pratique sportive (franchir des bosses, passer des
                 obstacles, voire sauter), il faut un modèle adapté et surtout de
-                l&apos;expérience et de l&apos;entrainement.
+                l&apos;expérience et de l&apos;entraînement.
               </li>
 
               <li>Quelques règles en or&nbsp;:</li>

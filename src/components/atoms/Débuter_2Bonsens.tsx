@@ -142,7 +142,7 @@ const CommonSense = () => {
               <strong className="text-teal-800 dark:text-teal-200">
                 Anticipe&nbsp;:{' '}
               </strong>
-              trajectoires , obstacles, comportements des autres usagers.{' '}
+              trajectoires, obstacles, comportements des autres usagers.{' '}
             </li>
             <li className="">
               Respecte les{' '}
@@ -159,7 +159,7 @@ const CommonSense = () => {
               mais n&apos;aveugle pas les autres.
             </li>
             <li className="">
-              Maitrise toujours ta{' '}
+              Maîtrise toujours ta{' '}
               <strong className="text-teal-800 dark:text-teal-200">
                 vitesse
               </strong>{' '}
@@ -227,7 +227,7 @@ const CommonSense = () => {
                   >
                     <i>le code de la route</i>
                   </Link>
-                  ). Utilise la pour signaler{' '}
+                  ). Utilise-la pour signaler{' '}
                   <strong className="text-teal-800 dark:text-teal-200">
                     amicalement
                   </strong>{' '}
@@ -238,7 +238,7 @@ const CommonSense = () => {
           </div>{' '}
           <p className="pl-2 mt-1 mb-3">
             <strong className="text-teal-800 dark:text-teal-200">
-              Protège toi&nbsp;!
+              Protège-toi&nbsp;!
             </strong>{' '}
             <br />
             Cependant, imposer ses choix aux autres revient à accepter que
@@ -264,9 +264,9 @@ const CommonSense = () => {
           <h3 className="mt-8 mb-1">À retenir :</h3>
           <ul className="list-disc pl-8 space-y-1 mb-3">
             <li className="text-justify">
-              Prend le temps de connaitre tes capacités, de{' '}
+              Prends le temps de connaître tes capacités, de{' '}
               <strong className="text-teal-800 dark:text-teal-200">
-                connaitre ta roue
+                connaître ta roue
               </strong>
               , et{' '}
               <strong className="text-teal-800 dark:text-teal-200">

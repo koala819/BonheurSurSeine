@@ -96,7 +96,7 @@ const Practical_Battery = () => {
                 </b>
               </div>
               <p className="mb-2 text-justify">
-                Il est <strong>vitale</strong>, <u>pour rouler en sécurité</u>,{' '}
+                Il est <strong>vital</strong>, <u>pour rouler en sécurité</u>,{' '}
                 <strong>
                   de veiller à ce que la batterie ait, à tout moment,
                   suffisamment d&apos;énergie
@@ -129,7 +129,7 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
 
           <p className="mb-2 text-justify">
-            Fait donc{' '}
+            Fais donc{' '}
             <Link
               href="/debuter-gyroroue#bonsens"
               className="link-style font-bold text-black dark:text-white"
@@ -183,7 +183,7 @@ const Practical_Battery = () => {
                 <br />
                 🤔 Entre les 2&nbsp;? Le fabricant décide de la manière dont le
                 % évolue, ainsi que des tensions max/min (pour avoir une{' '}
-                <strong>marge de sécurité</strong> et ne pas abimer les cellules
+                <strong>marge de sécurité</strong> et ne pas abîmer les cellules
                 de la batterie). <br />
                 La diminution du % peut prendre une forme&nbsp;:
                 <br />
@@ -230,7 +230,8 @@ const Practical_Battery = () => {
               Elle dépend de nombreux paramètres&nbsp;:{' '}
               <i>
                 poids du wheeler, accélérations, vitesse, pression et type de
-                pneu, vent, température ambiante, profil et nature du trajet…
+                pneu, vent, température ambiante, terrain, profil et nature du
+                trajet…
               </i>
             </p>
           </div>
@@ -317,7 +318,7 @@ const Practical_Battery = () => {
             d&apos;échauffement).
           </p>
           <p className="mb-0">
-            Bien que le choix a une importance technique indéniable (densité
+            Bien que le choix ait une importance technique indéniable (densité
             énergétique, cycles de recharge, capacité de décharge, stabilité
             thermique, etc.), son <b>impact reste relatif </b>dans l&apos;usage
             quotidien&nbsp;:
@@ -347,7 +348,7 @@ const Practical_Battery = () => {
                 à replacer dans son contexte.
               </p>
               <p className="">
-                Et c&apos;est surtout la façon d&apos;utliser la batterie qui
+                Et c&apos;est surtout la façon d&apos;utiliser la batterie qui
                 impactera les performances et leur durée de vie (éviter
                 décharges profondes, le stockage prolongé batterie pleine, les
                 températures extrêmes, etc.)

@@ -102,7 +102,7 @@ const Begin_premier_deballage = () => {
               },
               {
                 title: 'Ajuste la suspension',
-                text: 'Prend le temps de comprendre les réglages, et assure-toi que les pièces mobiles fonctionnent correctement.',
+                text: 'Prends le temps de comprendre les réglages, et assure-toi que les pièces mobiles fonctionnent correctement.',
               },
               {
                 title: 'Fais quelques photos',
@@ -123,7 +123,7 @@ const Begin_premier_deballage = () => {
             ➡️ Sortir la roue du mode transport&nbsp;:
           </h4>
           <p className="mb-1">
-            Lorsque que tu ouvres le carton, il est normal que la roue ne
+            Lorsque tu ouvres le carton, il est normal que la roue ne
             s&apos;équilibre pas lorsque tu l&apos;allumes.
           </p>
           <div className="blueBlock mb-2 space-y-0">
@@ -157,7 +157,7 @@ const Begin_premier_deballage = () => {
               >
                 dans cette vidéo
               </Link>{' '}
-              des WheelersPro.
+              🎥 des WheelersPro.
             </li>
             <li className="">
               Chez LeaperKim, la manipulation est visible{' '}
@@ -168,7 +168,7 @@ const Begin_premier_deballage = () => {
               >
                 dans cette vidéo
               </Link>
-              .
+              🎥.
             </li>
             <li className="">
               Les applications mobiles permettent aussi de désactiver/activer le
@@ -553,11 +553,12 @@ const Begin_premier_deballage = () => {
             positionnés, ils peuvent gêner la liberté de mouvement et nuire aux
             sensations de pilotage. <br />
             Sans eux, la roue conserve aussi une allure plus discrète et une
-            silhouette plus fine, point apprécié par certains wheelers urbains.
+            silhouette plus fine, un point apprécié par certains wheelers
+            urbains.
           </p>
           <p className="mb-0">
             <strong>En résumé</strong>, inutile de se sentir obligé d&apos;en
-            installer, surtout quand on débuté ou que la roue est légère.{' '}
+            installer, surtout quand on débute ou que la roue est légère.{' '}
             <strong>
               Les powerpads sont un outil au service d&apos;un usage, pas une
               obligation&nbsp;!

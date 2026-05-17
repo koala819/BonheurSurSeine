@@ -122,7 +122,7 @@ const HighwayCode = () => {
           </div>
 
           <p className="mb-4">
-            Il y a <strong>quelques spécificités à connaitre.</strong>
+            Il y a <strong>quelques spécificités à connaître.</strong>
           </p>
           {/*-------------------------------------------*/}
           {/* Section avec 2 capsules de même hauteur */}
@@ -336,7 +336,7 @@ const HighwayCode = () => {
               🪖 ET LE CASQUE&nbsp;?
             </h4>
             <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
-              En agglomération, sur voies vertes et pistes cyclable, le port du
+              En agglomération, sur voies vertes et pistes cyclables, le port du
               casque (jet ou intégral) n&apos;est pas obligatoire&nbsp;: il est
               cependant <strong>fortement recommandé</strong>.
               <br />
@@ -371,7 +371,7 @@ const HighwayCode = () => {
             </p>
           </div>
           <p className="mt-6 mb-8">
-            Ces dispositions peuvent paraitre contraignantes, mais elles sont{' '}
+            Ces dispositions peuvent paraître contraignantes, mais elles sont{' '}
             <b>
               importantes et efficaces pour ta propre sécurité et celle des
               autres

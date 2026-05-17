@@ -53,8 +53,8 @@ const Compare = () => {
             (il faut parfois diviser par 2). <br />
             <i>Important&nbsp;</i>: l&apos;autonomie réelle est fonction de
             nombreux paramètres (poids du wheeler, accélérations, vitesse,
-            pression et type de pneu, vent, température ambiante, profil et
-            nature du trajet…).
+            pression et type de pneu, vent, température ambiante, terrain,
+            profil et nature du trajet…).
           </li>
           <li>
             Certains modèles changent légèrement avec le temps (esthétique ou
