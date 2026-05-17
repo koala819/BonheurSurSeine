@@ -19,7 +19,7 @@ const Compare = () => {
     >
       <h2>Comparer</h2>
 
-      <div className="blueBlock">
+      <div className="FuchiaBlockCompare">
         <h3 className="mb-2">
           📢 &laquo;&nbsp;Choisir, c&apos;est aussi renoncer…&nbsp;&raquo;
         </h3>
@@ -35,7 +35,7 @@ const Compare = () => {
           <li>
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques{' '}
-            <strong className="text-brown-500">
+            <strong className="text-fuchsia-700 dark:text-fuchsia-400">
               enchaînent les &quot;nouveautés&quot;
             </strong>{' '}
             et renouvellent constamment leur gamme.
@@ -46,14 +46,15 @@ const Compare = () => {
           </li>
           <li>
             Les chiffres sont parfois trompeurs, et{' '}
-            <strong className="text-brown-500">
-              les autonomies annoncées sont souvent surévaluées
+            <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+              les autonomies annoncées par les constructeurs sont souvent
+              surévaluées
             </strong>{' '}
             (il faut parfois diviser par 2). <br />
-            <i>Important&nbsp;</i>: l&apos;autonomie est fonction de nombreux
-            paramètres (poids du wheeler, accélérations, vitesse, pression et
-            type de pneu, vent, température ambiante, profil et nature du
-            trajet…).
+            <i>Important&nbsp;</i>: l&apos;autonomie réelle est fonction de
+            nombreux paramètres (poids du wheeler, accélérations, vitesse,
+            pression et type de pneu, vent, température ambiante, profil et
+            nature du trajet…).
           </li>
           <li>
             Certains modèles changent légèrement avec le temps (esthétique ou
@@ -134,7 +135,11 @@ const Compare = () => {
           <aside className="md:w-4/5">
             <ul className="list-disc pl-6 space-y-2 text-justify">
               <li>
-                Ce <strong>projet</strong> mené par{' '}
+                Ce{' '}
+                <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                  projet
+                </strong>{' '}
+                mené par{' '}
                 <Link
                   href="https://www.instagram.com/rafa.pgarcia"
                   className="underline hover:text-blue-500"
@@ -154,8 +159,11 @@ const Compare = () => {
                 modèles du marché dans un format standardisé.
               </li>
               <li>
-                C&apos;est actuellement <strong>le meilleur outil </strong>pour
-                faire des comparaisons.
+                C&apos;est actuellement{' '}
+                <strong className="text-fuchsia-700 dark:text-fuchsia-400">
+                  le meilleur outil{' '}
+                </strong>
+                pour faire des comparaisons.
                 <br /> 👉&nbsp;
                 <Link
                   href="https://finder.eucfinder.com/fr"

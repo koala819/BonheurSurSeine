@@ -62,7 +62,22 @@ const Maintenance = () => {
       {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
-        <Accordion variant="light" className="px-0">
+        <Accordion
+          variant="light"
+          className="px-0"
+          itemClasses={{
+            base: `group
+                  rounded-xl px-2
+                  border border-gray-200 dark:border-gray-600
+                  bg-indigo-100 dark:bg-sky-800
+                  transition-all duration-300
+                  hover:shadow-lg
+                  hover:border-sky-700
+                  dark:hover:border-sky-600
+                  hover:-translate-y-[2px]
+                `,
+          }}
+        >
           <AccordionItem
             key="1"
             aria-label="Comment ça fonctionne ?"
@@ -176,7 +191,22 @@ const Maintenance = () => {
       {/* ---------------  Pourquoi ça tient debout ------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
-        <Accordion variant="light" className="px-0">
+        <Accordion
+          variant="light"
+          className="px-0"
+          itemClasses={{
+            base: `group
+                  rounded-xl px-2
+                  border border-gray-200 dark:border-gray-600
+                  bg-indigo-100 dark:bg-sky-800
+                  transition-all duration-300
+                  hover:shadow-lg
+                  hover:border-sky-700
+                  dark:hover:border-sky-600
+                  hover:-translate-y-[2px]
+                `,
+          }}
+        >
           <AccordionItem
             key="1"
             aria-label="Et pourquoi ça tient debout ?"
@@ -239,7 +269,22 @@ const Maintenance = () => {
       {/* -----------------  Et c'est compliqué   --------------- */}
       {/*---------------------------------------------------------*/}
       <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
-        <Accordion variant="light" className="px-0">
+        <Accordion
+          variant="light"
+          className="px-0"
+          itemClasses={{
+            base: `group
+                  rounded-xl px-2
+                  border border-gray-200 dark:border-gray-600
+                  bg-indigo-100 dark:bg-sky-800
+                  transition-all duration-300
+                  hover:shadow-lg
+                  hover:border-sky-700
+                  dark:hover:border-sky-600
+                  hover:-translate-y-[2px]
+                `,
+          }}
+        >
           <AccordionItem
             key="1"
             aria-label="Et c'est compliqué ?"
@@ -274,7 +319,7 @@ const Maintenance = () => {
             </p>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 px-4 mb-2">
               {/* ------------------ Idées reçues ------------------ */}
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;Il faut avoir de l&apos;équilibre.&nbsp;»
                 </p>
@@ -283,7 +328,7 @@ const Maintenance = () => {
                   minutes suffisent pour trouver l&apos;équilibre.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;Mais c&apos;est dangereux...&nbsp;»
                 </p>
@@ -293,7 +338,7 @@ const Maintenance = () => {
                   maîtrisable qu&apos;un vélo ou une trottinette.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;C&apos;est pour les jeunes, ça&nbsp;!&nbsp;»
                 </p>
@@ -303,7 +348,7 @@ const Maintenance = () => {
                   plaisir.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;Et &ccedil;a va pas glisser&nbsp;?&nbsp;»
                 </p>
@@ -312,7 +357,7 @@ const Maintenance = () => {
                   évoluer sur toutes les surfaces, même la neige&nbsp;!
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;Il faut un équipement.&nbsp;»
                 </p>
@@ -321,7 +366,7 @@ const Maintenance = () => {
                   suffisent pour rouler sereinement, comme pour le vélo.
                 </p>
               </div>
-              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg">
+              <div className="p-2 bg-indigo-50 dark:bg-sky-950 rounded-lg hover:shadow-lg transition-shadow">
                 <p className="text-sm">
                   ❌ «&nbsp;&Ccedil;a coûte cher, non&nbsp;?&nbsp;»
                 </p>

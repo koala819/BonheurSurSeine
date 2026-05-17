@@ -51,7 +51,7 @@ const sections = [
         href: '/apprendre-gyroroue#conseils',
       },
       {
-        label: '⚠️ 6 pièges à éviter',
+        label: '⚠️ 7 pièges à éviter',
         href: '/apprendre-gyroroue#pièges',
       },
     ],
@@ -75,6 +75,7 @@ const sections = [
     title: "L'essentiel pour bien démarrer",
     items: [
       { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
+      { label: '🦿 Les powerpads', href: '/debuter-gyroroue#powerpads' },
       { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },
       { label: "🛡️ L'assurance", href: '/debuter-gyroroue#assurance' },
       { label: '🚦 Le code de la route', href: '/debuter-gyroroue#code' },
@@ -98,6 +99,10 @@ const sections = [
       {
         label: '⚡ La batterie : fonctionnement et autonomie',
         href: '/guide-utile-gyroroue#batterie',
+      },
+      {
+        label: '🔋 Les cellules : choix et caractérisques',
+        href: '/guide-utile-gyroroue#cells',
       },
       {
         label: '🛞 Le pneu : choix, pression et entretien',
