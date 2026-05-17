@@ -91,13 +91,13 @@ const Practical_Vrac = () => {
           </h4>
           <p className="">
             Voici la version française du mode d&apos;emploi (
-            <i>traduite par mes soins</i>) des magnifiques{' '}
+            <i>traduite par mes soins</i>) du magnifique{' '}
             <Link
               href="https://rudy-tech.pl/en/15-iqlight"
               target="_blank"
               className="link-style"
             >
-              phares auto inclinable IQlight V2
+              phare auto-inclinable IQlight V2
             </Link>{' '}
             de Rudy Tech.
             <br /> Je t&apos;en parlais en mars 2025 dans{' '}
@@ -163,7 +163,7 @@ const Practical_Vrac = () => {
           <h5>🔜 Les moteurs</h5>
           <h5>🔜 Les suspensions</h5>
           <h5>
-            🔜 Pleins d&apos;autres sujets&nbsp;:{' '}
+            🔜 Plein d&apos;autres sujets&nbsp;:{' '}
             <i>
               <Link
                 href="https://fr.tipeee.com/bonheur-sur-seine"

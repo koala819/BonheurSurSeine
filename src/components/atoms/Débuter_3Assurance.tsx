@@ -120,50 +120,6 @@ const Assurance = () => {
             </li>
 
             <li className="text-justify">
-              La vignette (papillon vert){' '}
-              <Link
-                href="https://www.service-public.fr/particuliers/vosdroits/F1362"
-                target="_blank"
-                className="link-style"
-              >
-                doit être affichée
-              </Link>{' '}
-              sur le véhicule (
-              <Link
-                href="https://www.service-public.fr/particuliers/actualites/A17230"
-                target="_blank"
-                className="link-style"
-              >
-                <i>à la différence des véhicules immatriculées</i>
-              </Link>
-              , articles{' '}
-              <Link
-                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812169"
-                target="_blank"
-                className="link-style"
-              >
-                R211-21-1
-              </Link>{' '}
-              et{' '}
-              <Link
-                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812176"
-                target="_blank"
-                className="link-style"
-              >
-                R211-21-5
-              </Link>
-              ), en plus d&apos;avoir sur soi l&apos;attestation
-              d&apos;assurance (i.e. la carte verte,{' '}
-              <Link
-                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048547657"
-                target="_blank"
-                className="link-style"
-              >
-                R211-21-14
-              </Link>
-              ).
-            </li>
-            <li className="text-justify">
               <i>Attention</i>, les contrats d&apos;assurance habitation ne
               couvrent généralement pas les EDPM, catégorie à laquelle
               appartiennent les roues. Il faut un{' '}
@@ -181,9 +137,10 @@ const Assurance = () => {
               <strong className="text-rose-600 dark:text-rose-500">
                 2&nbsp;véhicules = 2&nbsp;contrats
               </strong>
-              . Les packs ou formules multi-roue sont rares, et il n&apos;existe
-              pas d&apos;assurance &laquo;&nbsp;par personne&nbsp;&raquo; qui
-              couvre automatiquement toutes les roues que vous utilisez.
+              . Les packs ou formules multi-roues sont rares, et il
+              n&apos;existe pas d&apos;assurance &laquo;&nbsp;par
+              personne&nbsp;&raquo; qui couvre automatiquement toutes les roues
+              que vous utilisez.
             </li>
             <li className="text-justify">
               En l&apos;absence d&apos;assurance, tu risques une amende
@@ -198,6 +155,60 @@ const Assurance = () => {
               ), la confiscation du véhicule, et surtout des dizaines de
               milliers d&apos;euros à charge en cas de collision/blessure
               d&apos;un autre usager.
+            </li>
+
+            <li className="text-justify">
+              En France, la carte verte (i.e. attestation d&apos;assurance) et
+              la vignette verte (i.e. papillon vert) ont été officiellement
+              supprimées le 1er avril 2024 (
+              <Link
+                href="https://www.service-public.fr/particuliers/actualites/A17230"
+                target="_blank"
+                className="link-style"
+              >
+                <i>pour les véhicules immatriculés</i>
+              </Link>
+              ).
+              <br />
+              Les EDPM (trottinettes, gyroroues) n&apos;ayant pas de plaque
+              d&apos;immatriculation, ils ne sont pas enregistrés&nbsp;: la
+              vignette{' '}
+              <Link
+                href="https://www.service-public.fr/particuliers/vosdroits/F1362"
+                target="_blank"
+                className="link-style"
+              >
+                doit être affichée
+              </Link>{' '}
+              sur le véhicule (articles{' '}
+              <Link
+                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812169"
+                target="_blank"
+                className="link-style"
+              >
+                R211-21-1
+              </Link>{' '}
+              et{' '}
+              <Link
+                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812176"
+                target="_blank"
+                className="link-style"
+              >
+                R211-21-5
+              </Link>
+              ), et il faut{' '}
+              <strong className="text-rose-600 dark:text-rose-500">
+                avoir sur soi l&apos;attestation d&apos;assurance
+              </strong>{' '}
+              (
+              <Link
+                href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048547657"
+                target="_blank"
+                className="link-style"
+              >
+                R211-21-14
+              </Link>
+              ).
             </li>
           </ul>
           {/*-----------------------------------------------------------*/}
