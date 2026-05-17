@@ -100,13 +100,27 @@ export default async function Page() {
       >
         {/*<FinishSection text={accueil.data.fin} />*/}
         <p className="mt-3">
-          <strong>Un terme trop technique&nbsp;?</strong> <br />
-          ➡️ Consulte{' '}
+          ➡️ <strong>Un terme trop technique&nbsp;?</strong> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Découvre{' '}
           <Link
             href="/guide-utile-gyroroue#dico"
             className="link-style font-bold hover:text-cyan-700 dark:hover:text-cyan-200"
           >
             Le P&apos;tit Dico du Bonheur
+          </Link>
+          .
+        </p>
+        <p className="mt-3">
+          💡{' '}
+          <strong>A la recherche d&apos;un thème en particulier&nbsp;?</strong>
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulte{' '}
+          <Link
+            href="/plan-du-site"
+            target="_blank"
+            className="link-style font-bold hover:text-cyan-700 dark:hover:text-cyan-200"
+          >
+            Le Plan du Site
           </Link>
           .
         </p>
