@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Cellules1 from '@/public/techniques/BSS-Batterie - cellules1.jpg'
+import Cellules2 from '@/public/techniques/BSS-Batterie - cellules2.jpg'
+import jauge_simple from '@/public/techniques/BSS-Batterie simple.png'
 import Graphique_diminution from '@/public/techniques/BSS-Batterie_et_diminution_v20250419.png'
 import Tableaux_tensions from '@/public/techniques/BSS-Batterie_et_tension_v20250419.png'
 
@@ -19,6 +22,10 @@ const Practical_Battery = () => {
       if (hash === 'batterie') {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('batterie')
+      }
+      if (hash === 'cells') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('cells')
       }
     } // Appel initial
 
@@ -73,29 +80,54 @@ const Practical_Battery = () => {
           }}
         >
           {/*---------------------------------------*/}
-          {/*---------------------------------------*/}
-          <p className="mb-2">
-            Le pourcentage batterie est utile, rapide à lire, simple à
-            comprendre, mais…{' '}
-          </p>
-          <div className="pinkBlock mb-2">
-            <b className="mb-0 mt-0">
-              ⚠️ On ne sollicite <u>pas</u>&thinsp;(accélération, freinage,
-              vitesse, etc.) sa roue de la même manière à 100%, 50%, ou 20% de
-              batterie…
-            </b>
+
+          <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
+            {/* TEXTE */}
+            <aside className="flex-1">
+              <p className="mb-2">
+                Le pourcentage batterie est utile, rapide à lire, simple à
+                comprendre, mais…{' '}
+              </p>
+              <div className="pinkBlock mb-2">
+                <b className="mb-0 mt-0">
+                  ⚠️ On ne sollicite <u>pas</u>&thinsp;(accélération, freinage,
+                  vitesse, etc.) sa roue de la même manière à 100%, 50%, ou 20%
+                  de batterie…
+                </b>
+              </div>
+              <p className="mb-2 text-justify">
+                Il est <strong>vitale</strong>, <u>pour rouler en sécurité</u>,{' '}
+                <strong>
+                  de veiller à ce que la batterie ait, à tout moment,
+                  suffisamment d&apos;énergie
+                </strong>{' '}
+                pour répondre à la demande du moteur.
+                <br />
+                Si le moteur demande plus d&apos;énergie que ne peut en fournir
+                la batterie, la roue sera sans énergie&nbsp;et… ce sera la
+                chute&nbsp;!
+              </p>
+            </aside>
+            {/* LOGO */}
+            <aside className="flex-shrink-0">
+              <div
+                className="rounded-2xl
+                          bg-gray-100 dark:bg-gray-800
+                          p-2 shadow-sm"
+              >
+                <Image
+                  src={jauge_simple}
+                  alt="Assemblage d'une batterie lithium-ion"
+                  className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[400px]"
+                  priority={false}
+                />
+              </div>
+            </aside>
           </div>
-          <p className="mb-2 text-justify">
-            Il est <strong>vitale</strong>, <u>pour rouler en sécurité</u>,{' '}
-            <strong>
-              de veiller à ce que la batterie ait, à tout moment, suffisamment
-              d&apos;énergie
-            </strong>{' '}
-            pour répondre à la demande du moteur.
-            <br />
-            Si le moteur demande plus d&apos;énergie que ne peut en fournir la
-            batterie, la roue sera sans énergie&nbsp;et… ce sera la chute&nbsp;!
-          </p>
+
+          {/*---------------------------------------*/}
+
           <p className="mb-2 text-justify">
             Fait donc{' '}
             <Link
@@ -104,9 +136,9 @@ const Practical_Battery = () => {
             >
               <i>preuve de bon sens</i>
             </Link>
-            &nbsp;: ne va pas au-delà des limites de la roue et de sa batterie.
-            Respecte le tilt-back et ne désactive jamais les{' '}
-            <i>&ldquo;bips&rdquo;</i>.
+            &nbsp;: ne va pas au-delà des limites de la roue (de son moteur
+            et/ou de sa batterie). Respecte le tilt-back et ne désactive jamais
+            les <i>&ldquo;bips&rdquo;</i>.
             <br />
             Pour cela, l&apos;indicateur le plus utilisé est le P.W.M. (pour en
             savoir plus sur les cellules et le PWM, consulte{' '}
@@ -143,7 +175,6 @@ const Practical_Battery = () => {
               un pourcentage approximatif (de 100% à 0%). <br />
             </p>
           </div>
-
           <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
             <aside className="md:w-3/5">
               <p className="text-justify ml-2">
@@ -192,8 +223,8 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           <div className="blueBlock mb-4">
             <b className="mb-0 mt-0">
-              Avec un moteur électrique, l&apos;autonomie n&apos;est pas une
-              donnée absolue. <br />
+              Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
+              une donnée absolue. <br />
             </b>
             <p>
               Elle dépend de nombreux paramètres&nbsp;:{' '}
@@ -234,20 +265,61 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           {/*----------- type de cellule -----------*/}
           {/*---------------------------------------*/}
-          <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
-          <p className="text-justify mb-2">
-            On entend souvent parler des modèles de cellule (
-            <i>Samsung 50S, 50E, 50GB, Molicel P42A, LG M50LT, etc.</i>) comme
-            s&apos;il s&apos;agissait d&apos;un critère décisif pour une roue
-            plus performante, plus durable, plus sûre ou avec plus
-            d&apos;autonomie.
+          <h4 className="mt-6 mb-2 scroll-mt-24" id="cells">
+            ➡️ Et le type de cellule&nbsp;?
+          </h4>
+          <div className="flex flex-col sm:flex-row items-center mb-2 gap-1">
+            {/* TEXTE */}
+            <aside className="flex-1">
+              <p className="mb-0">
+                On entend souvent parler des modèles de cellule (
+                <i>Samsung 50S, 50E, 50GB, Molicel P42A, LG M50LT, etc.</i>)
+                comme s&apos;il s&apos;agissait d&apos;un critère décisif pour
+                une roue plus performante, plus durable, plus sûre ou avec plus
+                d&apos;autonomie.
+                <br />
+                D&apos;ailleurs, les fabricants proposent parfois plusieurs
+                choix. Et s&apos;il est normal de vouloir le meilleur pour sa
+                roue, les fabricants utilisent en réalité déjà ce qui se fait de
+                mieux (la technologie lithium-ion présente beaucoup
+                d&apos;avantages et est déjà très optimisée).
+              </p>
+            </aside>
+            {/* LOGO */}
+            <aside className="flex-shrink-0">
+              <div
+                className="rounded-2xl
+                          bg-gray-100 dark:bg-gray-800
+                          p-2 shadow-sm"
+              >
+                <Image
+                  src={Cellules1}
+                  alt="Cellules lithium-ion cylindriques"
+                  className="rounded-lg  shadow-sm w-auto object-contain
+                            min-w-[90px] max-w-[180px]"
+                  priority={false}
+                />
+              </div>
+            </aside>
+          </div>
+          <p className="mb-2">
+            Les cellules lithium-ion ne sont pas toutes identiques. Les
+            différences reposent notamment sur la conception des électrodes, la
+            chimie et la résistance interne, qui influencent les pertes
+            thermiques et la chute de tension sous forte sollicitation. On
+            distingue généralement 2 grandes familles&nbsp;:
+            <br />
+            🔹 les cellules orientées capacité (pour maximiser
+            l&apos;autonomie).
+            <br />
+            🔹 les cellules orientées puissance (capables de mieux supporter les
+            forts appels de courant, avec moins de chute de tension et moins
+            d&apos;échauffement).
           </p>
-          <p className="text-justify">
-            En réalité, les fabricants utilisent ce qui se fait de mieux (la
-            technologie lithium-ion présente beaucoup d&apos;avantages). Et si
-            ce choix a une importance technique indéniable (densité énergétique,
-            cycles de recharge, capacité de décharge, stabilité thermique,
-            etc.), son <b>impact reste relatif </b>dans l&apos;usage
+          <p className="mb-0">
+            Bien que le choix a une importance technique indéniable (densité
+            énergétique, cycles de recharge, capacité de décharge, stabilité
+            thermique, etc.), son <b>impact reste relatif </b>dans l&apos;usage
             quotidien&nbsp;:
           </p>
           <ul className="compactlist2 mb-2">
@@ -267,10 +339,39 @@ const Practical_Battery = () => {
               de cellules. Les différences se mesurent en laboratoire.
             </li>
           </ul>
-          <p className="text-justify mb-6">
-            👉 Le modèle de cellule est donc un paramètre à considérer, mais à
-            replacer dans son contexte.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center mb-6 gap-1">
+            {/* TEXTE */}
+            <aside className="flex-1">
+              <p className="mb-2">
+                👉 Le modèle de cellule est donc un paramètre à considérer, mais
+                à replacer dans son contexte.
+              </p>
+              <p className="">
+                Et c&apos;est surtout la façon d&apos;utliser la batterie qui
+                impactera les performances et leur durée de vie (éviter
+                décharges profondes, le stockage prolongé batterie pleine, les
+                températures extrêmes, etc.)
+              </p>
+            </aside>
+            {/* LOGO */}
+            <aside className="flex-shrink-0">
+              <div
+                className="rounded-2xl
+                          bg-gray-100 dark:bg-gray-800
+                          p-2 shadow-sm"
+              >
+                <Image
+                  src={Cellules2}
+                  alt="Assemblage d'une batterie lithium-ion"
+                  className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[250px]"
+                  priority={false}
+                />
+              </div>
+            </aside>
+          </div>
+
+          {/*---------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
