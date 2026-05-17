@@ -159,7 +159,7 @@ export function BonheurScore({
                 <strong
                   className={
                     animationDone
-                      ? 'text-fuchsia-700 dark:text-violet-400'
+                      ? 'text-fuchsia-700 dark:text-violet-400 underline'
                       : 'animated-gradient-text'
                   }
                 >
