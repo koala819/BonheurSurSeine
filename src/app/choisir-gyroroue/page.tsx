@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 import Choice from '@/src/components/atoms/Choisir_0Choice'
 import Market from '@/src/components/atoms/Choisir_1Market'
-import Brands from '@/src/components/atoms/Choisir_2Brands'
+//import Brands from '@/src/components/atoms/Choisir_2Brands'
+import Marques from '@/src/components/atoms/Choisir_2Marques'
 import Needs from '@/src/components/atoms/Choisir_3Needs'
 import Compare from '@/src/components/atoms/Choisir_4Compare'
 
@@ -21,7 +22,7 @@ const Page = () => {
     <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
       <Choice />
       <Market />
-      <Brands />
+      <Marques />
       <Needs />
       <Compare />
     </div>
