@@ -98,7 +98,7 @@ const Apprendre = () => {
             ></iframe>
           </div>
           <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
-            Apprendre la gyroroue (méthode simple)
+            Apprendre facilement la gyroroue (méthode simple - tutoriel)
           </p>
         </div>
       </div>
@@ -146,7 +146,7 @@ const Apprendre = () => {
             ].map(({ title, icon, text }, i) => (
               <div
                 key={i}
-                className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify h-full flex flex-col"
+                className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify h-full flex flex-col hover:shadow-lg transition-shadow"
               >
                 <h5 className="text-lg font-semibold mb-2">
                   {icon} {title}
@@ -157,7 +157,7 @@ const Apprendre = () => {
               </div>
             ))}
             {/* -- Tuto : placé DANS la même grid et qui occupe toute la largeur -- */}
-            <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify col-span-1 sm:col-span-2 lg:col-span-3 h-full flex flex-col">
+            <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify col-span-1 sm:col-span-2 lg:col-span-3 h-full flex flex-col hover:shadow-lg transition-shadow">
               <h5 className="text-lg font-semibold mb-2">
                 🎥 Les « Tutos de la semaine »
               </h5>
@@ -184,7 +184,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       <div className="yellowBlockpiege mb-4" id="pièges">
         <h4 className="mt-0 mb-0 text-xl font-bold">
-          😱 6 pièges à éviter&nbsp;:
+          😱 7 pièges à éviter&nbsp;:
         </h4>
         <p>
           🔸 Se <b>pencher </b>vers l&apos;avant (garde ton buste droit)
@@ -193,6 +193,19 @@ const Apprendre = () => {
           pour rester stable) <br />
           🔸 <b>Serrer la roue </b>avec ses jambes (la roue doit vivre sous tes
           pieds) <br />
+          🔸 Vouloir{' '}
+          <b>
+            utiliser{' '}
+            <Link
+              href="/debuter-gyroroue#powerpads"
+              target="_blank"
+              className="hover:underline hover:text-blue-700 dark:hover:text-blue-300"
+            >
+              les powerpads
+            </Link>
+          </b>{' '}
+          (ils sont inutiles pour l&apos;apprentissage)
+          <br />
           🔸 <b>Se crisper </b>(la décontraction du corps aide à sentir la roue
           et à réagir aux oscillations, alors respire) <br />
           🔸 Chercher la <b>vitesse </b>dès le départ (la vitesse vient avec la
