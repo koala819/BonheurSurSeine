@@ -131,7 +131,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div className="mt-0 mb-4">
         <p className="mt-0 mb-0 font-semibold">
-          <span className="text-2xl">👉</span>
+          <span className="text-2xl">👉 </span>
           <strong className="font-bold">
             Les principaux critères de choix
           </strong>
@@ -188,7 +188,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div className="mt-4 mb-4">
         <p className="mt-0 mb-0 font-semibold">
-          <span className="text-2xl">📏</span>
+          <span className="text-2xl">📏 </span>
           <strong className="font-bold">Pas besoin de surdimensionner</strong>
           &nbsp;:
         </p>
@@ -219,7 +219,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div id="8questions" className="scroll-mt-72 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
-          <span className="text-2xl">🎯</span>
+          <span className="text-2xl">🎯 </span>
           <strong className="underline font-bold text-lg">
             8 questions essentielles
           </strong>{' '}
