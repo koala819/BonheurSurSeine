@@ -67,7 +67,7 @@ const Maintenance = () => {
           className="px-0"
           itemClasses={{
             base: `group
-                  rounded-xl px-2
+                  rounded-xl
                   border border-gray-200 dark:border-gray-600
                   bg-indigo-100 dark:bg-sky-800
                   transition-all duration-300
@@ -82,14 +82,14 @@ const Maintenance = () => {
             key="1"
             aria-label="Comment ça fonctionne ?"
             title={
-              <h4 className="ml-5 font-bold mt-4 mb-4">
-                🚀 Comment ça fonctionne&nbsp;?
+              <h4 className="ml-4 font-bold mt-4 mb-4">
+                🚀&nbsp;Comment ça fonctionne&nbsp;?
               </h4>
             }
             indicator={
               <strong className="transition-transform">
                 <svg
-                  className="mx-8 w-7 h-7"
+                  className="mx-5 w-7 h-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -196,7 +196,7 @@ const Maintenance = () => {
           className="px-0"
           itemClasses={{
             base: `group
-                  rounded-xl px-2
+                  rounded-xl
                   border border-gray-200 dark:border-gray-600
                   bg-indigo-100 dark:bg-sky-800
                   transition-all duration-300
@@ -211,14 +211,14 @@ const Maintenance = () => {
             key="1"
             aria-label="Et pourquoi ça tient debout ?"
             title={
-              <h4 className="ml-5 font-bold mt-4 mb-4">
-                🧠 Pourquoi ça tient debout&nbsp;?
+              <h4 className="ml-4 font-bold mt-4 mb-4">
+                🧠&nbsp;Pourquoi ça tient debout&nbsp;?
               </h4>
             }
             indicator={
               <strong className="transition-transform">
                 <svg
-                  className="mx-8 w-7 h-7"
+                  className="mx-5 w-7 h-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -274,7 +274,7 @@ const Maintenance = () => {
           className="px-0"
           itemClasses={{
             base: `group
-                  rounded-xl px-2
+                  rounded-xl
                   border border-gray-200 dark:border-gray-600
                   bg-indigo-100 dark:bg-sky-800
                   transition-all duration-300
@@ -289,14 +289,14 @@ const Maintenance = () => {
             key="1"
             aria-label="Et c'est compliqué ?"
             title={
-              <h4 className="ml-5 font-bold mt-4 mb-4">
-                🤔 Et c&apos;est compliqué&nbsp;?
+              <h4 className="ml-4 font-bold mt-4 mb-4">
+                🤔&nbsp;Et c&apos;est compliqué&nbsp;?
               </h4>
             }
             indicator={
               <strong className="transition-transform">
                 <svg
-                  className="mx-8 w-7 h-7"
+                  className="mx-5 w-7 h-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -383,18 +383,18 @@ const Maintenance = () => {
 
       {/*------------------------------------*/}
       <div className="mb-6 mx-6 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
-        <h4 className="mx-3 font-bold mt-1 mb-1">
+        <h4 className="mx-2 font-bold mt-1 mb-1">
           ✳️ Oui, la gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
         </h4>
-        <p className="mx-3 mt-1">
+        <p className="mx-2 mt-1">
           Bonne nouvelle&nbsp;:{' '}
           <strong className="text-blue-700 dark:text-blue-300">
             tout le monde peut y arriver
           </strong>
           &nbsp;!😊
         </p>
-        <p className="mx-3 mt-3">Et pour en profiter&nbsp;:</p>
-        <div className="mx-3 mb-3">
+        <p className="mx-2 mt-3">Et pour en profiter&nbsp;:</p>
+        <div className="mx-2 mb-3">
           <ul className="list-disc ml-6 space-y-0">
             <li>
               Pas besoin d&apos;avoir un don, un sens de l&apos;équilibre
@@ -410,7 +410,7 @@ const Maintenance = () => {
             <li>Et un peu de curiosité, d&apos;envie et de motivation…</li>
           </ul>
         </div>
-        <p className="mx-3 mt-1">
+        <p className="mx-2 mt-1">
           ℹ️ Pour le reste (<i>astuces, code de la route, assurance</i>) et
           éviter les erreurs des débutants,{' '}
           <Link
