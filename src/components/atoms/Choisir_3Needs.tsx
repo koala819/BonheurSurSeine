@@ -19,7 +19,7 @@ const QuestionItem = ({ children }: { children: any }) => {
     <div
       onClick={() => setIsSelected(!isSelected)}
       className={`
-        ml-4 group flex items-center gap-3 p-0.5 rounded-lg cursor-pointer transition-all duration-200 border-[0.5px]
+        ml-3 group flex items-center gap-2 p-0.5 rounded-lg cursor-pointer transition-all duration-200 border-[0.5px]
         ${
           isSelected
             ? 'border-emerald-600 bg-emerald-50/50 dark:bg-emerald-900/20'
@@ -56,7 +56,7 @@ const QuestionItem = ({ children }: { children: any }) => {
       </div>
 
       {/* Texte de la question */}
-      <p className="flex-1 text-justify text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200">
+      <p className="flex-1 text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200">
         {children}
       </p>
     </div>
@@ -141,28 +141,28 @@ const Needs = () => {
           <li className="text-justify">
             Le <strong className="text-emerald-600">poids</strong>.
           </li>
-          <li className="text-justify">
+          <li className="">
             La <strong className="text-emerald-600">taille</strong> et le
             diamètre de la roue.
           </li>
-          <li className="text-justify">
+          <li className="">
             La <strong className="text-emerald-600">suspension</strong>.
           </li>
-          <li className="text-justify">
+          <li className="">
             L&apos;<strong className="text-emerald-600">autonomie</strong>{' '}
             (batterie et puissance moteur).
           </li>
-          <li className="text-justify">
+          <li className="">
             La qualité des{' '}
             <strong className="text-emerald-600">équipements</strong> (trolley,
             éclairage, pneus, coupe-circuit, etc.).
           </li>
-          <li className="text-justify">
+          <li className="">
             Et surtout, <strong className="text-emerald-600">tester </strong>si
             possible pour connaitre ses ressentis et se faire son propre avis.
           </li>
         </ul>
-        <p className="text-justify ml-1 mt-1">
+        <p className="ml-1 mt-1">
           Et bien évidemment, il faut aussi tenir compte de son{' '}
           <strong className="text-emerald-600">budget </strong>(
           <i>même si, quand on aime, on ne compte pas</i>&nbsp;😅).
@@ -192,7 +192,7 @@ const Needs = () => {
           <strong className="font-bold">Pas besoin de surdimensionner</strong>
           &nbsp;:
         </p>
-        <p className="mt-0 mb-4 ml-2 text-justify">
+        <p className="mt-0 mb-4 ml-2">
           Il est tentant de{' '}
           <strong className="text-emerald-600">vouloir le meilleur </strong>et
           de choisir une roue aux chiffres impressionnants (puissance, vitesse,
@@ -231,18 +231,19 @@ const Needs = () => {
             régulièrement&nbsp;? un usage quotidien&nbsp;?
           </QuestionItem>
           <QuestionItem>
-            Mon objectif principal&nbsp;: compléter-remplacer les transports en
-            commun (aller du point A au point B)&nbsp;? partir en balade&nbsp;?
-            du loisir&nbsp;? faire de très longs trajets&nbsp;?
+            Mon objectif principal&nbsp;: compléter/remplacer les transports en
+            commun (aller du point A au point&nbsp;B)&nbsp;? partir
+            en&nbsp;balade&nbsp;? du&nbsp;loisir&nbsp;? faire de très longs
+            trajets&nbsp;?
           </QuestionItem>
           <QuestionItem>
-            Mon utilisation principale&nbsp;: pistes cyclables&nbsp;?
-            centre-ville&nbsp;? longs trajets&nbsp;? voies vertes&nbsp;?
-            terrains offroad&nbsp;?
+            Mon utilisation principale&nbsp;: pistes&nbsp;cyclables&nbsp;?
+            centre&#8209;ville&nbsp;? longs&nbsp;trajets&nbsp;?
+            voies&nbsp;vertes&nbsp;? terrains&nbsp;offroad&nbsp;?
           </QuestionItem>
           <QuestionItem>
-            Ma priorité&nbsp;: le confort&nbsp;? les équipements&nbsp;? la
-            performance&nbsp;? la praticité&nbsp;?
+            Ma priorité&nbsp;: le confort&nbsp;? les&nbsp;équipements&nbsp;?
+            la&nbsp;performance&nbsp;? la&nbsp;praticité&nbsp;?
           </QuestionItem>
           <QuestionItem>
             Je recherche une roue avant tout munie d&apos;une suspension&nbsp;?
@@ -256,7 +257,8 @@ const Needs = () => {
             de soulever&nbsp;: 20kg&nbsp;? 25kg&nbsp;? 30kg&nbsp;?
           </QuestionItem>
           <QuestionItem>
-            Mon budget&nbsp;: &lt;1500€&nbsp;? &lt;2500€&nbsp;? ou plus&nbsp;?
+            Mon budget&nbsp;: &lt;1500€&nbsp;? &lt;2500€&nbsp;?
+            ou&nbsp;plus&nbsp;?
           </QuestionItem>
         </div>
       </div>

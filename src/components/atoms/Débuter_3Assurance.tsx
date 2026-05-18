@@ -107,7 +107,7 @@ const Assurance = () => {
 
           <h3>À retenir :</h3>
           <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li className="text-justify">
+            <li className="text-left">
               <strong className="text-rose-600 dark:text-rose-500">
                 La roue est un véhicule
               </strong>{' '}
@@ -119,7 +119,7 @@ const Assurance = () => {
               .
             </li>
 
-            <li className="text-justify">
+            <li className="">
               <i>Attention</i>, les contrats d&apos;assurance habitation ne
               couvrent généralement pas les EDPM, catégorie à laquelle
               appartiennent les roues. Il faut un{' '}
@@ -128,7 +128,7 @@ const Assurance = () => {
               </strong>{' '}
               (comme pour une moto ou une voiture).
             </li>
-            <li className="text-justify">
+            <li className="">
               Chaque roue doit être assurée individuellement.{' '}
               <strong className="text-rose-600 dark:text-rose-500">
                 Le contrat est lié au véhicule
@@ -142,7 +142,7 @@ const Assurance = () => {
               personne&nbsp;&raquo; qui couvre automatiquement toutes les roues
               que vous utilisez.
             </li>
-            <li className="text-justify">
+            <li className="">
               En l&apos;absence d&apos;assurance, tu risques une amende
               (jusqu&apos;à 3750€ -{' '}
               <Link
@@ -157,7 +157,7 @@ const Assurance = () => {
               d&apos;un autre usager.
             </li>
 
-            <li className="text-justify">
+            <li className="">
               En France, la carte verte (i.e. attestation d&apos;assurance) et
               la vignette verte (i.e. papillon vert) ont été officiellement
               supprimées le 1er avril 2024 (
@@ -171,8 +171,8 @@ const Assurance = () => {
               ).
               <br />
               Les EDPM (trottinettes, gyroroues) n&apos;ayant pas de plaque
-              d&apos;immatriculation, ils ne sont pas enregistrés&nbsp;: la
-              vignette{' '}
+              d&apos;immatriculation, ils n&apos;y sont pas enregistrés&nbsp;:
+              la vignette{' '}
               <Link
                 href="https://www.service-public.fr/particuliers/vosdroits/F1362"
                 target="_blank"
@@ -180,7 +180,7 @@ const Assurance = () => {
               >
                 doit être affichée
               </Link>{' '}
-              sur le véhicule (articles{' '}
+              sur le véhicule (
               <Link
                 href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812169"
                 target="_blank"

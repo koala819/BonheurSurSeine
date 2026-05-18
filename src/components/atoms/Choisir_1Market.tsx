@@ -49,7 +49,7 @@ const Market = () => {
             }
             subtitle={
               <span
-                className="ml-2 text-sm text-brown-900 dark:text-brown-300"
+                className="block ml-2 text-sm text-brown-900 dark:text-brown-300"
                 title="Cliquer pour déplier"
               >
                 Idéale pour les petits trajets urbains
@@ -136,7 +136,7 @@ const Market = () => {
             }
             subtitle={
               <span
-                className="ml-2 text-sm text-brown-900 dark:text-brown-300"
+                className="block ml-2 text-sm text-brown-900 dark:text-brown-300"
                 title="Cliquer pour déplier"
               >
                 Confortable pour les trajets quotidiens
@@ -211,7 +211,7 @@ const Market = () => {
             }
             subtitle={
               <span
-                className="ml-2 text-sm text-brown-900 dark:text-brown-300"
+                className="block ml-2 text-sm text-brown-900 dark:text-brown-300"
                 title="Cliquer pour déplier"
               >
                 Optimisée pour l&apos;aventure et l&apos;endurance

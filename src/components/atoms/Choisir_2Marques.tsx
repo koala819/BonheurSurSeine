@@ -18,12 +18,12 @@ import Logo_NF from '@/public/marques/Logo_Nosfet.png'
 const brands = [
   {
     key: '1',
-    name: 'Begode (auparavant Gotway)',
+    name: 'Begode',
     logo: Logo_BG,
     alt: 'Logo_Begode',
     width: 707,
     height: 217,
-    text: `Ce fabricant historique (existe depuis 2014) s'est imposé comme une référence pour de nombreux passionnés, grâce à une très large gamme de modèles axés sur la performance, et un renouvellement constant de sa gamme (allant des très très petites aux très très grosses).`,
+    text: `Ce fabricant historique (auparavant Gotway) existe depuis 2014. Il s'est imposé comme une référence pour de nombreux passionnés, grâce à une très large gamme de modèles axés sur la performance, et un renouvellement constant de sa gamme (allant des très très petites aux très très grosses).`,
   },
   {
     key: '2',
@@ -54,15 +54,15 @@ const brands = [
   },
   {
     key: '5',
-    name: 'LeaperKim (auparavant Veteran)',
+    name: 'LeaperKim',
     logo: Logo_LK,
     alt: 'Logo_Leaperkim',
     width: 960,
     height: 346,
-    text: `Apparu en 2020, ce fabricant a rapidement gagné en
-                      popularité auprès des connaisseurs avec sa gamme Veteran
-                      et ses roues robustes, solides et puissantes, offrant
-                      aussi une belle qualité de fabrication.`,
+    text: `Apparu en 2020, ce fabricant (parfois encore appelé Veteran) a rapidement gagné en
+    popularité auprès des connaisseurs avec sa gamme Veteran
+    et ses roues robustes, solides et puissantes, offrant
+    aussi une belle qualité de fabrication.`,
   },
   {
     key: '6',
@@ -72,10 +72,10 @@ const brands = [
     width: 900,
     height: 434,
     text: `Connue pour ses trottinettes électriques, cette marque a
-                      aussi fabriqué quelques modèles très populaires entre 2014 et
-                      2018. Elle s'est depuis retirée du marché, mais ses
-                      modèles ont durablement influencé le marché par leur
-                      qualité, leur design et leur fiabilité.`,
+     aussi fabriqué quelques modèles très populaires entre 2014 et
+     2018. Elle s'est depuis retirée du marché, mais ses
+     modèles ont durablement influencé le marché par leur
+     qualité, leur design et leur fiabilité.`,
   },
   {
     key: '7',
@@ -188,7 +188,7 @@ const Marques = () => {
           </div>
 
           {/* INTRO */}
-          <div className="mt-8 space-y-4">
+          <div className="mt-8 space-y-4 mb-1">
             <p className="mt-8 mb-2">
               Voici un panorama complet des marques les plus présentes dans le
               monde de la gyroroue.{' '}
@@ -210,17 +210,17 @@ const Marques = () => {
               </Link>{' '}
               dans <i>Guide Pratique</i>.
             </p>
-            <p className="text-gray-500 dark:text-gray-300 mt-0 text-right text-small">
+            <p className="text-gray-500 dark:text-gray-300 text-right text-small sm:ml-32">
               <i>
                 Aucun favoritisme, les marques sont affichées par ordre
                 alphabétique
-              </i>{' '}
-              😉
+              </i>
+              &nbsp;😉
             </p>
           </div>
 
           {/* LISTE DES MARQUES */}
-          <div className="ml-4 mb-4">
+          <div className="sm:ml-2 md:ml-4 mb-4">
             <Accordion
               variant="splitted"
               isCompact

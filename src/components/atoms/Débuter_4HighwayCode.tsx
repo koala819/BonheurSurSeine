@@ -133,7 +133,7 @@ const HighwayCode = () => {
                 🚴‍♂️ CIRCULATION
               </h4>
               <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Interdiction de circuler sur les trottoirs (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
@@ -144,7 +144,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Obligation d&apos;emprunter les pistes cyclables si elles
                   existent (
                   <Link
@@ -156,7 +156,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Interdiction de circuler sur les routes où la vitesse est
                   &gt;50km/h et sur les routes hors agglomération, sauf sur
                   pistes cyclables et voies vertes (
@@ -169,7 +169,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Interdiction de tenir un téléphone en main (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422/"
@@ -188,7 +188,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Interdiction de porter des écouteurs ou des oreillettes (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422"
@@ -199,7 +199,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Utilisation possible du panneau M12 en cédant le passage aux
                   piétons et aux autres usagers (
                   <Link
@@ -211,7 +211,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Âge minimum de 14 ans (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035778"
@@ -230,7 +230,7 @@ const HighwayCode = () => {
                 🛠️ ÉQUIPEMENT
               </h4>
               <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Vitesse maximale de 25 km/h par construction ou par bridage (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039478722/"
@@ -241,7 +241,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Sonnette obligatoire (klaxon électrique non valable,{' '}
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
@@ -252,7 +252,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Feux de position non éblouissants et fixes&nbsp;: blanc à
                   l&apos;avant, rouge à l&apos;arrière (
                   <Link
@@ -288,7 +288,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Catadioptres nécessaires&nbsp;: blanc à l&apos;avant, rouge à
                   l&apos;arrière, orange sur les côtés (
                   <Link
@@ -316,7 +316,7 @@ const HighwayCode = () => {
                   </Link>
                   ).
                 </li>
-                <li className="text-justify text-sm">
+                <li className="text-sm">
                   Interdiction de pousser ou tracter une charge ou un véhicule (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039276191"
@@ -360,7 +360,7 @@ const HighwayCode = () => {
               </strong>
               , bien plus efficace que n&apos;importe quel équipement.
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 text-justify">
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100">
               💡 Rappelons aussi que le port des protections (nombre, type,
               etc.) est un <u>choix personnel</u> également{' '}
               <u>lié à l&apos;usage</u>. <br />
