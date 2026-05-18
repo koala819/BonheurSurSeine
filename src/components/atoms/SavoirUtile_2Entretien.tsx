@@ -71,7 +71,7 @@ const Maintenance = () => {
             indicator: 'data-[open=true]:rotate-180 transition-transform',
           }}
         >
-          <p className="mb-1 text-justify">
+          <p className="mb-1 text-left">
             <strong className="text-amber-900 dark:text-brown-200">
               Comme tout véhicule
             </strong>
@@ -82,7 +82,7 @@ const Maintenance = () => {
             </strong>{' '}
             pour garantir leur durabilité et leur bon fonctionnement.
           </p>
-          <p className="mt-1 mb-4 text-justify">
+          <p className="mt-1 mb-4 text-left">
             Rappel&nbsp;: pour être utilisée sur voie publique, la roue doit
             être <span className="underline">bridée à 25km/h</span>.
           </p>
@@ -93,23 +93,23 @@ const Maintenance = () => {
             </b>
           </div>
           {/*------------------------------------*/}
-          <h4 className="mt-4 mb-2">À retenir&nbsp;:</h4>
+          <h4 className="mt-4 mb-2">➡️ À retenir</h4>
           <ul className="compactlist2 mb-6">
-            <li className="text-justify">
+            <li className="text-left">
               Il est important de{' '}
               <strong className="text-amber-900 dark:text-brown-200">
                 vérifier
               </strong>{' '}
               son engin avant chaque trajet.
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               Révise le{' '}
               <strong className="text-amber-900 dark:text-brown-200">
                 régulièrement
               </strong>
               . Sois attentif à tout bruit suspect.
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               <strong className="text-amber-900 dark:text-brown-200">
                 Chaque élément
               </strong>{' '}
@@ -117,14 +117,15 @@ const Maintenance = () => {
               <strong className="text-amber-900 dark:text-brown-200">
                 essentiel
               </strong>
-              &nbsp;: usure du pneu, pédales, éclairages, électronique, état et
-              charge de la batterie, poussières, visseries...
+              &nbsp;: usure du pneu, pédales, éclairages, électronique,
+              suspension, état et charge de la batterie, poussières,
+              visseries...
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               Vérifie attentivement la coque&nbsp;: identifie tout risque
               d&apos;infiltration ou toute trace d&apos;humidité.
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               Vérifie régulièrement la{' '}
               <strong className="text-amber-900 dark:text-brown-200">
                 pression du pneu
@@ -133,17 +134,17 @@ const Maintenance = () => {
             </li>
           </ul>
           {/*------------------------------------*/}
-          <h4 className="mt-4 mb-2">Prends soin de la batterie&nbsp;:</h4>
+          <h4 className="mt-4 mb-2">➡️ Prends soin de la batterie</h4>
           <ul className="compactlist2 mb-2">
-            <li className="text-justify">
+            <li className="text-left">
               Évite de l&apos;exposer à des températures extrêmes (froid ou
               chaud).
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               Ne laisse jamais la batterie se décharger complètement (stocker
               entre 30%-70% en cas d&apos;immobilisation prolongée).
             </li>
-            <li className="text-justify">
+            <li className="text-left">
               Évite de recharger immédiatement à chaud, et ne laisse pas la
               charge sans surveillance.
             </li>

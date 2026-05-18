@@ -118,7 +118,7 @@ const CommonSense = () => {
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <h3 className="mt-8 mb-1">Prudence est mère de sûreté</h3>
+          <h3 className="mt-8 mb-1">❇️ Prudence est mère de&nbsp;sûreté</h3>
           <ul className="list-disc pl-8 space-y-1 mb-3">
             <li className="">
               Respecte{' '}
@@ -175,7 +175,7 @@ const CommonSense = () => {
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <h3 className="mt-8 mb-1">L&apos;équipement indispensable</h3>
+          <h3 className="mt-8 mb-1">❇️ L&apos;équipement indispensable</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center">
             {/* Image (1/4) */}
             <aside className="md:col-span-1 flex justify-center md:justify-center">
@@ -261,7 +261,7 @@ const CommonSense = () => {
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <h3 className="mt-8 mb-1">À retenir :</h3>
+          <h3 className="mt-8 mb-1">❇️ En synthèse</h3>
           <ul className="list-disc pl-8 space-y-1 mb-3">
             <li className="text-justify">
               Prends le temps de connaître tes capacités, de{' '}
