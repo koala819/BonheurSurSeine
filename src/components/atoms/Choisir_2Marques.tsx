@@ -23,7 +23,7 @@ const brands = [
     alt: 'Logo_Begode',
     width: 707,
     height: 217,
-    text: `Ce fabricant historique (auparavant Gotway) existe depuis 2014. Il s'est imposé comme une référence pour de nombreux passionnés, grâce à une très large gamme de modèles axés sur la performance, et un renouvellement constant de sa gamme (allant des très très petites aux très très grosses).`,
+    text: `Ce fabricant historique (auparavant nommé Gotway) existe depuis 2014. Il s'est imposé comme une référence pour de nombreux passionnés, grâce à une très large gamme de modèles axés sur la performance, et un renouvellement constant de sa gamme (allant des très très petites aux très très grosses).`,
   },
   {
     key: '2',
@@ -198,7 +198,15 @@ const Marques = () => {
               <strong className="text-sky-800 dark:text-sky-400">
                 quelques fabricants incontournables
               </strong>
-              , tous basés en Chine (dans la région de Shenzhen).
+              , tous basés en Chine (
+              <Link
+                href="https://maps.app.goo.gl/1mAawTBrb1diP3ok8"
+                target="_blank"
+                className="link-style text-sky-800 dark:text-sky-400"
+              >
+                dans la région de Shenzhen
+              </Link>
+              ).
               <br />
               Pour savoir comment suivre l&apos;actualité des fabricants et en
               savoir plus sur eux, consulte la section{' '}
