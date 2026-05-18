@@ -30,7 +30,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              INTRO + VIDEO                 */}
       {/*--------------------------------------------*/}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-4 items-center px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-4 items-center px-2">
         {/* ------------------ Comment ça marche ------------------ */}
         <div className="place-content-center mb-4">
           <h3 className="mt-4 mb-2 font-bold">
@@ -157,7 +157,7 @@ const Apprendre = () => {
               </div>
             ))}
             {/* -- Tuto : placé DANS la même grid et qui occupe toute la largeur -- */}
-            <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow text-justify col-span-1 sm:col-span-2 lg:col-span-3 h-full flex flex-col hover:shadow-lg transition-shadow">
+            <div className="bg-blue-50 dark:bg-cyan-950 rounded-xl p-4 shadow col-span-1 sm:col-span-2 lg:col-span-3 h-full flex flex-col hover:shadow-lg transition-shadow">
               <h5 className="text-lg font-semibold mb-2">
                 🎥 Les « Tutos de la semaine »
               </h5>
@@ -221,7 +221,7 @@ const Apprendre = () => {
       {/*--------------------------------------------*/}
       {/*              BLOC NOSTALGIE                */}
       {/*--------------------------------------------*/}
-      <div className="mx-3 mt-7 mb-4">
+      <div className="mx-2 mt-7 mb-4">
         <h4 className="mb-2">Toujours pas convaincu&nbsp;? 😁</h4>
         <p className="">
           {/*&Ccedil;a,*/}🎥

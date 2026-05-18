@@ -48,7 +48,7 @@ const Associations = () => {
   return (
     <section
       id="asso"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-4 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -197,7 +197,7 @@ const Associations = () => {
             </div>
             <div className="max-w-6xl mx-auto gap-x-4 px-6 flex flex-col lg:flex-row">
               <aside className="lg:w-7/12 space-y-2">
-                <p className="text-justify">
+                <p className="">
                   L&apos;
                   <strong>
                     Association Nationale des Utilisateurs de Micro-Mobilité

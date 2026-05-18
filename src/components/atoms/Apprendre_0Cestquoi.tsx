@@ -31,7 +31,7 @@ const Maintenance = () => {
 
       {/*---------------------------------------------*/}
       {/* ------------------ Intro ------------------ */}
-      <div className="mx-6 mt-0 mb-4">
+      <div className="mx-2 mt-0 mb-4">
         <p className="mt-0 mb-2">
           <strong className="text-blue-700 dark:text-blue-400">
             Compacte, fun
@@ -61,7 +61,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* ----------------- Comment ça fonctionne --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
+      <div className="my-1 mx-2 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion
           variant="light"
           className="px-0"
@@ -190,7 +190,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* ---------------  Pourquoi ça tient debout ------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
+      <div className="my-1 mx-2 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion
           variant="light"
           className="px-0"
@@ -268,7 +268,7 @@ const Maintenance = () => {
       {/*---------------------------------------------------------*/}
       {/* -----------------  Et c'est compliqué   --------------- */}
       {/*---------------------------------------------------------*/}
-      <div className="my-1 mx-6 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
+      <div className="my-1 mx-2 bg-indigo-100 dark:bg-sky-800 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-sky-950">
         <Accordion
           variant="light"
           className="px-0"
@@ -382,7 +382,7 @@ const Maintenance = () => {
       </div>
 
       {/*------------------------------------*/}
-      <div className="mb-6 mx-6 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
+      <div className="mb-6 mx-2 bg-indigo-100 dark:bg-sky-800 p-4 rounded-xl shadow-md">
         <h4 className="mx-2 font-bold mt-1 mb-1">
           ✳️ Oui, la gyroroue n&apos;est pas un véhicule comme les autres&nbsp;!{' '}
         </h4>
