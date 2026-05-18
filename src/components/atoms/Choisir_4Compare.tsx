@@ -31,7 +31,7 @@ const Compare = () => {
       {/*---------------------CONSTATS--------------------------- */}
       <div className="pt-4">
         <h4>➡️ Pas si simple</h4>
-        <ul className="list-disc pl-12 space-y-1">
+        <ul className="list-disc pl-8 space-y-1">
           <li>
             Bien que très petit, le marché propose énormément de modèles.
             Certaines marques{' '}
@@ -71,7 +71,7 @@ const Compare = () => {
             BonheurScore
           </span>
         </h4>
-        <ul className="list-disc pl-12 space-y-1">
+        <ul className="list-disc pl-8 space-y-1">
           <li>
             La{' '}
             <strong>

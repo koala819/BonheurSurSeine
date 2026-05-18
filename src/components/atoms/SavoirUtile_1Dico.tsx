@@ -181,7 +181,7 @@ const Practical_Dico = () => {
   return (
     <section
       id="dico"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-4 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -214,7 +214,7 @@ const Practical_Dico = () => {
         >
           <div className="mb-4 flex flex-col sm:flex-row items-center gap-2">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4">
-              <p className="text-justify">
+              <p className="text-left">
                 Ce lexique propose des{' '}
                 <strong>explications simples et concises </strong>de quelques
                 termes fréquemment utilisés dans l&apos;univers de la roue

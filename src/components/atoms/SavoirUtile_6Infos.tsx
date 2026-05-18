@@ -42,7 +42,7 @@ const Practical_Info_officiel = () => {
   return (
     <section
       id="infos"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-4 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -73,7 +73,7 @@ const Practical_Info_officiel = () => {
         >
           <div className="mb-8 flex flex-col sm:flex-row items-center">
             <aside className="sm:w-2/3 md:w-3/5 space-y-4 mr-4">
-              <p className="text-justify">
+              <p className="text-left">
                 On y pense peu, mais les constructeurs communiquent
                 beaucoup&nbsp;! 😉
               </p>
@@ -81,7 +81,7 @@ const Practical_Info_officiel = () => {
                 Selon les marques, on a un peu de tout : annonces marketing,
                 photos des nouveaux modèles, spécifications techniques, etc.
               </p>
-              <p className="text-justify">
+              <p className="">
                 Sur YouTube, certains fabricants mettent également à disposition
                 des <strong>tutoriels vidéo </strong>pour faciliter
                 l&apos;entretien et le SAV&nbsp;: <strong>démontage</strong>,{' '}

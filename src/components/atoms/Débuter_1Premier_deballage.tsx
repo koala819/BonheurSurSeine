@@ -55,7 +55,7 @@ const Begin_premier_deballage = () => {
   return (
     <section
       id="deballage"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-4 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -188,8 +188,8 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="w-[155px] px-2 py-1">
-                    <div className="flex items-center gap-2">
+                  <td className="w-[150px] px-2 py-1 flex items-center center gap-1">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_begode}
                         alt="logo_app_begode"
@@ -205,7 +205,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/us/app/begode/id1549181193"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -215,7 +215,7 @@ const Begin_premier_deballage = () => {
                       href="https://www.begode.com/pages/app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 gap-2"
+                      className="flex items-center text-green-500 gap-1"
                     >
                       <FaAndroid className="shrink-0" />
 
@@ -230,7 +230,7 @@ const Begin_premier_deballage = () => {
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
                   <td className="px-2 py-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_inmotion}
                         alt="logo_app_inmotion"
@@ -246,7 +246,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/us/app/inmotion-life-in-motion/id1452771445"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -256,7 +256,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=com.inmotion.android.app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid /> Android
                     </a>
@@ -264,7 +264,7 @@ const Begin_premier_deballage = () => {
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
                   <td className="px-2 py-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_kingsong}
                         alt="logo_app_kingsong"
@@ -280,7 +280,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/us/app/king-song/id1497491652"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -290,7 +290,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=com.kingsong.dlc"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid /> Android
                     </a>
@@ -298,7 +298,7 @@ const Begin_premier_deballage = () => {
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
                   <td className="px-2 py-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_leaperkim}
                         alt="logo_app_leaperkim"
@@ -314,7 +314,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/us/app/leaperkim/id6466134098"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -324,7 +324,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=com.laoniao.leaperkim"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid /> Android
                     </a>
@@ -333,7 +333,7 @@ const Begin_premier_deballage = () => {
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
                   <td className="px-2 py-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_nosfet}
                         alt="logo_app_nosfet"
@@ -349,7 +349,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/us/app/nosfet/id6754307336"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -359,14 +359,14 @@ const Begin_premier_deballage = () => {
                       href="https://www.nosfet.com/support"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 gap-2"
+                      className="flex items-center text-green-500 gap-1"
                     >
                       <FaAndroid className="shrink-0" />
 
                       <div className="flex flex-col leading-tight">
                         <span className="underline">Android</span>
                         <span className="text-xs text-gray-600">
-                          APK sur le site Nosfet
+                          APK sur site Nosfet
                         </span>
                       </div>
                     </a>
@@ -383,7 +383,7 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="w-[155px] px-2 py-1 flex items-center center gap-2">
+                  <td className="w-[150px] px-2 py-1 flex items-center center gap-1">
                     <Image
                       src={logo_app_darknessbot}
                       alt="logo_app_darknessbot"
@@ -398,7 +398,7 @@ const Begin_premier_deballage = () => {
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-blue-500 underline gap-2"
+                      className="flex items-center text-blue-500 underline gap-1"
                     >
                       <FaApple /> iOS
                     </a>
@@ -408,7 +408,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=com.darknessproduction.darknessbot"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid className="shrink-0" />
                       <span className="truncate">Android</span>
@@ -417,7 +417,7 @@ const Begin_premier_deballage = () => {
                 </tr>
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
+                  <td className="px-2 py-1 flex items-center gap-1">
                     <Image
                       src={logo_app_eucworld}
                       alt="logo_app_eucworld"
@@ -430,7 +430,7 @@ const Begin_premier_deballage = () => {
                   <td className="px-2 py-1">
                     <a
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-1"
                     >
                       <FaApple className="shrink-0" />
                       <span className="hidden sm:inline">indisponible</span>
@@ -442,7 +442,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=net.lastowski.eucworld"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid className="shrink-0" />
                       <span className="truncate">Android</span>
@@ -451,7 +451,7 @@ const Begin_premier_deballage = () => {
                 </tr>
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-2">
+                  <td className="px-2 py-1 flex items-center gap-1">
                     <Image
                       src={logo_app_wheelLog}
                       alt="logo_app_wheelLog"
@@ -464,7 +464,7 @@ const Begin_premier_deballage = () => {
                   <td className="px-2 py-1">
                     <a
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-1"
                     >
                       <FaApple className="shrink-0" />
                       <span className="hidden sm:inline">indisponible</span>
@@ -476,7 +476,7 @@ const Begin_premier_deballage = () => {
                       href="https://play.google.com/store/apps/details?id=com.cooper.wheellog&pli=1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 underline gap-2"
+                      className="flex items-center text-green-500 underline gap-1"
                     >
                       <FaAndroid className="shrink-0" />
                       <span className="truncate">Android</span>
