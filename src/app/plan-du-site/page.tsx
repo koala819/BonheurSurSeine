@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import PlanDuSiteClient from '@/src/components/atoms/Plan_du_site'
+import PlanDuSiteClient from '@/src/components/atoms/XPlan_du_site'
 
 export const metadata: Metadata = {
   title: 'BonheurSurSeine.com',

@@ -64,6 +64,7 @@ const sections = [
         label: '🛞 Les principales marques',
         href: '/choisir-gyroroue#marques',
       },
+      { label: '🆕 Infos constructeurs', href: '/choisir-gyroroue#infos' },
       {
         label: '🎯 8 questions à se poser',
         href: '/choisir-gyroroue#besoins',
@@ -77,6 +78,7 @@ const sections = [
       { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
       { label: '🦿 Les powerpads', href: '/debuter-gyroroue#powerpads' },
       { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },
+      { label: "🪖 Comment s'équiper ?", href: '/debuter-gyroroue#equipement' },
       { label: "🛡️ L'assurance", href: '/debuter-gyroroue#assurance' },
       { label: '🚦 Le code de la route', href: '/debuter-gyroroue#code' },
       {
@@ -113,7 +115,6 @@ const sections = [
         href: '/guide-utile-gyroroue#navi',
       },
       { label: '😉 Savoir en vrac', href: '/guide-utile-gyroroue#vrac' },
-      { label: '🆕 Infos constructeurs', href: '/guide-utile-gyroroue#infos' },
     ],
   },
   {

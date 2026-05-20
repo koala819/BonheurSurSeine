@@ -348,14 +348,6 @@ export function Top() {
                     🔸Savoir en vrac
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/guide-utile-gyroroue#infos"
-                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                  >
-                    🔸Infos constructeurs
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -459,6 +451,14 @@ export function Top() {
                 🔵&nbsp;&nbsp;{item.name}
               </Link>
             ))}
+            <p className="text-right font-medium">
+              <Link
+                href="/plan-du-site"
+                className="tracking-widest hover:cursor-pointer hover:underline text-xs xl:text-base text-white"
+              >
+                Plan du Site
+              </Link>
+            </p>
           </div>
         )}
       </div>
