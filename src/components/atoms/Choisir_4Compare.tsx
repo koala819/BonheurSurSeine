@@ -30,7 +30,7 @@ const Compare = () => {
       </div>
       {/*---------------------CONSTATS--------------------------- */}
       <div className="pt-4">
-        <h4>➡️ Pas si simple</h4>
+        <h4 className="mb-1">➡️ Pas si simple</h4>
         <ul className="list-disc pl-8 space-y-1">
           <li>
             Bien que très petit, le marché propose énormément de modèles.
@@ -65,7 +65,7 @@ const Compare = () => {
       </div>
       {/*---------------------REVIEWS--------------------------- */}
       <div className="pt-4">
-        <h4>
+        <h4 className="mb-1">
           ➡️ Mes reviews et le{' '}
           <span className="text-xl sm:text-xl md:text-xl text-fuchsia-700 dark:text-fuchsia-400">
             BonheurScore
@@ -118,22 +118,26 @@ const Compare = () => {
       </div>
       {/*---------------------EUC FINDER--------------------------- */}
       <div className="pt-4">
-        <h4>➡️ EUC Finder</h4>
-        <div className="flex flex-col md:flex-row gap-6 mt-4 mb-4">
-          <aside className="md:w-1/5 flex items-center justify-center">
-            <Link href="https://www.eucfinder.com/fr" passHref target="_blank">
-              <Image
-                src={logo}
-                alt="EUC Finder Logo"
-                width={100}
-                height={100}
-                className="rounded-lg cursor-pointer"
-              />
+        <h4 className="mb-1">➡️ EUC Finder</h4>
+        <div className="flex flex-col min-[520px]:flex-row items-center gap-5 mb-6">
+          {/* LOGO */}
+          <div className="flex-shrink-0">
+            <Link href="https://www.eucfinder.com/fr" target="_blank">
+              <div className="rounded-2xl bg-white dark:bg-gray-800 p-3 shadow-sm hover:shadow-md transition">
+                <Image
+                  src={logo}
+                  alt="EUC Finder Logo"
+                  width={100}
+                  height={100}
+                  className="rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
+                />
+              </div>
             </Link>
-          </aside>
+          </div>
 
-          <aside className="md:w-4/5">
-            <ul className="list-disc pl-6 space-y-2 text-justify">
+          {/* TEXTE */}
+          <div className="flex-1">
+            <ul className="list-disc pl-3 space-y-1 text-sm sm:text-base leading-relaxed">
               <li>
                 Ce{' '}
                 <strong className="text-fuchsia-700 dark:text-fuchsia-400">
@@ -161,20 +165,22 @@ const Compare = () => {
               <li>
                 C&apos;est actuellement{' '}
                 <strong className="text-fuchsia-700 dark:text-fuchsia-400">
-                  le meilleur outil{' '}
-                </strong>
-                pour faire des comparaisons.
-                <br /> 👉&nbsp;
-                <Link
-                  href="https://finder.eucfinder.com/fr"
-                  className="underline hover:text-blue-500"
-                  target="_blank"
-                >
-                  Accès direct au comparateur
-                </Link>
+                  le meilleur outil
+                </strong>{' '}
+                pour comparer les modèles.
+                <div className="mt-2">
+                  👉{' '}
+                  <Link
+                    href="https://finder.eucfinder.com/fr"
+                    className="underline hover:text-blue-500"
+                    target="_blank"
+                  >
+                    Accès direct au comparateur
+                  </Link>
+                </div>
               </li>
             </ul>
-          </aside>
+          </div>
         </div>
         <div className="flex justify-center mt-4">
           <Link href="https://www.eucfinder.com/fr" passHref target="_blank">
