@@ -20,6 +20,10 @@ const CommonSense = () => {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('bonsens')
       }
+      if (hash === 'equipement') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('equipement')
+      }
     } // Appel initial
 
     handleHashChange() // Écoute les changements de hash (clics internes)
@@ -175,10 +179,17 @@ const CommonSense = () => {
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}
-          <h3 className="mt-8 mb-1">❇️ L&apos;équipement indispensable</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center">
+          <h3 className="mt-8 mb-1 scroll-mt-24" id="equipement">
+            ❇️ L&apos;équipement indispensable
+          </h3>
+          <p className="mb-1">
+            Comment s&apos;équiper pour rouler sereinement&nbsp;? Quelle
+            protection choisir&nbsp;?
+            <br /> Que faire pour se protéger en cas de chute&nbsp;?
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 items-center">
             {/* Image (1/4) */}
-            <aside className="md:col-span-1 flex justify-center md:justify-center">
+            <aside className="col-span-1 sm:col-span-1 md:col-span-1 flex justify-center">
               <Image
                 src={Image_equipements}
                 alt="Équipement gyroroue"
@@ -188,7 +199,7 @@ const CommonSense = () => {
               />
             </aside>
             {/* Texte (3/4) */}
-            <div className="md:col-span-3">
+            <div className="col-span-1 sm:col-span-2 md:col-span-3">
               <ul className="list-disc pl-8 space-y-1 mb-1">
                 <li className="">
                   <strong className="text-teal-800 dark:text-teal-200">
@@ -198,16 +209,18 @@ const CommonSense = () => {
                   <strong className="text-teal-800 dark:text-teal-200">
                     vivement recommandé{' '}
                   </strong>
-                  (sans être pourtant obligatoire).
+                  (sans pourtant être obligatoire).
                 </li>
                 <li className="">
                   <strong className="text-teal-800 dark:text-teal-200">
                     Les gants
                   </strong>
-                  &nbsp;: beaucoup de wheeler en choisissent avec
-                  protège-poignets. <br />
-                  Certains complètent leur tenue par des genouillères ou des
-                  coudières pour se protéger en cas de chute.
+                  &nbsp;: beaucoup de wheelers en choisissent avec{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    protège-poignets
+                  </strong>
+                  . Certains complètent parfois leur tenue par des genouillères
+                  ou des coudières.
                 </li>
                 <li>
                   <strong className="text-teal-800 dark:text-teal-200">
@@ -219,23 +232,38 @@ const CommonSense = () => {
                 <li className="">
                   <strong className="text-teal-800 dark:text-teal-200">
                     La sonnette
-                  </strong>
-                  &nbsp;: elle est obligatoire (cf.{' '}
+                  </strong>{' '}
+                  (cf.{' '}
                   <Link
                     href="/debuter-gyroroue#code"
-                    className="link-style font-bold text-teal-800 dark:text-teal-200"
+                    className="link-style font-semibold text-teal-800 dark:text-teal-200"
                   >
-                    <i>le code de la route</i>
+                    le code de la route
                   </Link>
-                  ). Utilise-la pour signaler{' '}
+                  )&nbsp;: utile pour signaler{' '}
                   <strong className="text-teal-800 dark:text-teal-200">
                     amicalement
                   </strong>{' '}
-                  ton approche et tes dépassements.
+                  ton approche et tes dépassements (astuce&nbsp;: fixe-la sur un
+                  sac ou un vêtement).
+                </li>
+                <li>
+                  Souvent oublié&nbsp;: un vêtement ou équipement{' '}
+                  <strong className="text-teal-800 dark:text-teal-200">
+                    rétroréﬂéchissant
+                  </strong>{' '}
+                  lorsque la visibilité est insuffisante (cf.{' '}
+                  <Link
+                    href="/debuter-gyroroue#code"
+                    className="link-style font-semibold text-teal-800 dark:text-teal-200"
+                  >
+                    le code de la route
+                  </Link>
+                  ).
                 </li>
               </ul>
             </div>
-          </div>{' '}
+          </div>
           <p className="pl-2 mt-1 mb-3">
             <strong className="text-teal-800 dark:text-teal-200">
               Protège-toi&nbsp;!
@@ -307,6 +335,15 @@ const CommonSense = () => {
               className="link-style"
             >
               Bonheur Sur Seine
+            </Link>{' '}
+            et{' '}
+            <Link
+              href={'https://linktr.ee/fabien.wheel'}
+              passHref
+              target="_blank"
+              className="link-style"
+            >
+              Fabien.Wheel
             </Link>
             <br />
             dernière mise à jour : mars 2026
