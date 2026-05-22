@@ -119,7 +119,8 @@ const Practical_Vrac = () => {
                 >
                   Google&nbsp;Maps
                 </Link>
-                &nbsp;! Mais ce n&apos;est pas le plus adapté&nbsp;!
+                &nbsp;! Mais ce n&apos;est pas le plus adapté pour planifier ses
+                randos&nbsp;!
                 <br />
                 Il existe d&apos;autres sites spécialisés très pratiques.
               </p>

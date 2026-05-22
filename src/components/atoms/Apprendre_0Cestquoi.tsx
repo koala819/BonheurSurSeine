@@ -82,7 +82,7 @@ const Maintenance = () => {
             key="1"
             aria-label="Comment ça fonctionne ?"
             title={
-              <h4 className="ml-4 font-bold mt-4 mb-4">
+              <h4 className="ml-4 font-bold mt-3 mb-0">
                 🚀&nbsp;Comment ça fonctionne&nbsp;?
               </h4>
             }
@@ -211,7 +211,7 @@ const Maintenance = () => {
             key="1"
             aria-label="Et pourquoi ça tient debout ?"
             title={
-              <h4 className="ml-4 font-bold mt-4 mb-4">
+              <h4 className="ml-4 font-bold mt-3 mb-0">
                 🧠&nbsp;Pourquoi ça tient debout&nbsp;?
               </h4>
             }
@@ -289,7 +289,7 @@ const Maintenance = () => {
             key="1"
             aria-label="Et c'est compliqué ?"
             title={
-              <h4 className="ml-4 font-bold mt-4 mb-4">
+              <h4 className="ml-4 font-bold mt-3 mb-0">
                 🤔&nbsp;Et c&apos;est compliqué&nbsp;?
               </h4>
             }

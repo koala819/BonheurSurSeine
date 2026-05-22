@@ -60,9 +60,9 @@ const Apprendre = () => {
           <p className="mb-1">
             Tu ne sais pas par où commencer&nbsp;?{' '}
             <strong className="text-blue-700 dark:text-blue-300">
-              Cette vidéo est faite pour toi{' '}
+              Cette vidéo est faite pour toi&nbsp;:{' '}
             </strong>
-            et facilitera ton apprentissage.{' '}
+            elle facilitera ton apprentissage.{' '}
           </p>
           <p className="">
             👉 Avec un peu de{' '}

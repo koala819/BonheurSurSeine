@@ -95,7 +95,7 @@ const Practical_Battery = () => {
                   de batterie…
                 </b>
               </div>
-              <p className="mb-2 text-justify">
+              <p className="mb-2 text-left">
                 Il est <strong>vital</strong>, <u>pour rouler en sécurité</u>,{' '}
                 <strong>
                   de veiller à ce que la batterie ait, à tout moment,
@@ -128,7 +128,7 @@ const Practical_Battery = () => {
 
           {/*---------------------------------------*/}
 
-          <p className="mb-2 text-justify">
+          <p className="mb-2 text-left">
             Fais donc{' '}
             <Link
               href="/debuter-gyroroue#bonsens"
@@ -153,7 +153,7 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           {/*----------- En quelques mot -----------*/}
           {/*---------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ Fonctionnement&nbsp;:</h4>
+          <h4 className="mt-4 mb-2">➡️ Fonctionnement</h4>
           <div className="blueBlock mb-4">
             <p className="mt-0 mb-0 font-bold">
               {' '}
@@ -177,7 +177,7 @@ const Practical_Battery = () => {
           </div>
           <div className="mb-2 flex flex-col md:flex-row gap-4 items-center">
             <aside className="md:w-3/5">
-              <p className="text-justify ml-2">
+              <p className="text-left ml-2">
                 🔋&nbsp;100%&nbsp;: la tension maximale. <br />
                 🪫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;: la tension minimum.{' '}
                 <br />
@@ -199,7 +199,7 @@ const Practical_Battery = () => {
                 </span>
                 <br />
               </p>
-              <p className="text-justify mt-2 ml-2">
+              <p className="text-left mt-2 ml-2">
                 Il faut aussi garder à l&apos;esprit que{' '}
                 <strong>la tension ne diminue pas de manière linéaire</strong>{' '}
                 avec le kilométrage parcouru&nbsp;!
@@ -239,7 +239,7 @@ const Practical_Battery = () => {
           {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
           <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
-          <p className="text-justify">
+          <p className="text-left">
             Certains préfèrent{' '}
             <strong>surveiller directement la tension </strong>pour connaitre
             l&apos;état de la batterie.
