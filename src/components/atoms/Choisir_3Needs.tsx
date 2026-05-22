@@ -67,9 +67,9 @@ const Needs = () => {
   return (
     <section
       id="besoins"
-      className="scroll-mt-24 my-8 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6"
+      className="scroll-mt-24 my-8 bg-white dark:bg-gray-700 shadow-md rounded-lg p-2 md:p-4 lg:p-6"
     >
-      <h2>Bien identifier ses besoins</h2>
+      <h2 className="ml-2 md:ml-0">Bien identifier ses besoins</h2>
       {/*----------------------------------------------*/}
       {/*--               BLOC ET IMAGE              --*/}
       {/*----------------------------------------------*/}

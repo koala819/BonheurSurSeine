@@ -22,7 +22,7 @@ export default async function Page() {
   const accueil = await client.getSingle('accueil').catch(() => notFound())
 
   return (
-    <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white mb-8 space-y-8">
+    <section className="mx-auto max-w-2xl md:max-w-6xl lg:max-w-7xl px-2 sm:px-4 md:px-6 lg:px-8 text-gray-900 dark:text-white mb-8 space-y-4">
       {/*----------------------------------------------*/}
       {/*            CONTENU PRISMIC + PHOTO           */}
       {/*----------------------------------------------*/}
@@ -92,7 +92,7 @@ export default async function Page() {
       </div>
 
       {/*----------------------------------------------*/}
-      {/*            DICO                              */}
+      {/*            DICO + PLAN DU SITE               */}
       {/*----------------------------------------------*/}
       <section
         className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white"

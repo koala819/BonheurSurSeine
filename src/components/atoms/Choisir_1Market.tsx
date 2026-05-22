@@ -8,10 +8,10 @@ const Market = () => {
   return (
     <section
       id="marche"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-2 md:p-4 lg:p-6 mb-6"
     >
-      <h2>Le marché</h2>
-      <p className="mt-0 mb-0">
+      <h2 className="ml-2 md:ml-0">Le marché</h2>
+      <p className="mt-0 mb-0 ml-2 md:ml-0">
         Sur la base de mes tests, il est possible de distinguer{' '}
         <strong>
           <span className="text-brown-800 dark:text-brown-700">

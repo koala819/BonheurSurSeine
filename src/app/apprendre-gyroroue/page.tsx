@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="py-10 px-2 sm:px-4 md:px-6 lg:px-8 space-y-8">
       <h1>Apprendre</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-0 items-center">
