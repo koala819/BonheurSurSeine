@@ -526,8 +526,8 @@ const Marques = () => {
             {/* TEXTE */}
             <div className="flex-1 space-y-2">
               <p className="">
-                Pour se tenir informé, il faut suivre l&apos;actualité des
-                fabricants, notamment sur les réseaux sociaux&nbsp;: certains
+                Pour rester informé, il faut suivre l&apos;actualité des
+                fabricants, notamment sur les réseaux sociaux où certains
                 constructeurs communiquent énormément.
               </p>
               <p className="">
