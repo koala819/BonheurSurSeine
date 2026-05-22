@@ -12,7 +12,7 @@ const Maintenance = () => {
   return (
     <section
       id="cestquoi"
-      className="scroll-mt-52 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-6 mb-6"
+      className="scroll-mt-52 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md rounded-lg p-2 md:p-4 lg:p-6 mb-6"
     >
       {/*<h2 className="mb-8">C&apos;est quoi une gyroroue&nbsp;?</h2>*/}
       <div className="relative w-full h-48 md:h-64 lg:h-80 overflow-hidden rounded-lg shadow-lg">

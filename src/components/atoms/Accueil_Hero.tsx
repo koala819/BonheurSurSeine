@@ -16,14 +16,14 @@ export default function Hero({
   titre: KeyTextField
 }) {
   return (
-    <section className="mx-auto px-4 lg:px-8 mt-8">
-      <div className="flex flex-wrap justify-between md:mb-16">
-        <aside className="flex w-full lg:w-1/3 flex-col justify-center">
+    <section className="mx-auto px-4 md:px-6 lg:px-8 mt-8 mb-2 sm:mb-4 md:mb-8 lg:mb-10">
+      <div className="flex flex-wrap justify-between">
+        <aside className="flex w-full md:w-5/12 lg:w-1/3 flex-col justify-center">
           <h1 className="text-3xl font-bold">{titre}</h1>
           <div className="prose">{RichText.render(text)}</div>
         </aside>
 
-        <aside className="mt-2 flex w-full relative lg:w-2/3 h-[200px] md:h-[400px]">
+        <aside className="mt-2 flex w-full relative md:w-7/12 lg:w-2/3 h-[200px] sm:h-[300px] md:h-[500px] lg:h-[400px]">
           {/* Image de Derrière */}
           <div className="absolute inset-0 lg:m-10 overflow-hidden rounded-lg shadow-lg w-full h-full lg:min-w-full">
             <Image
@@ -37,7 +37,7 @@ export default function Hero({
           </div>
 
           {/* Image de Devant */}
-          <div className="z-10 relative w-1/3 md:w-1/4 aspect-square lg:ml-12 mt-auto mb-4">
+          <div className="z-10 relative w-1/4 md:w-1/3 lg:w-1/6 aspect-square lg:ml-12 mt-auto mb-2">
             <Image
               src={photo_front.url || ''}
               alt={photo_front.alt || ''}

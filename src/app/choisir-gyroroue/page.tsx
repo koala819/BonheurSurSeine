@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="py-10 px-2 sm:px-4 md:px-6 lg:px-8 space-y-8">
       <Choice />
       <Market />
       <Marques />
