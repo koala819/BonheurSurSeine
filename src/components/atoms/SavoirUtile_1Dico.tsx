@@ -181,7 +181,7 @@ const Practical_Dico = () => {
   return (
     <section
       id="dico"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-4 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-2 md:p-4 mb-6"
     >
       <Accordion
         selectedKeys={openKeys}
@@ -273,7 +273,8 @@ const Practical_Dico = () => {
           </div>
 
           {/* Tableau des mots et définitions */}
-          <div className="overflow-x-auto">
+          {/* Desktop : tableau */}
+          <div className="hidden md:block overflow-x-auto">
             {isLoading ? (
               <p className="text-center text-gray-500">Chargement...</p>
             ) : (
@@ -318,6 +319,37 @@ const Practical_Dico = () => {
                   )}
                 </tbody>
               </table>
+            )}
+          </div>
+
+          {/* Mobile : cards */}
+          <div className="md:hidden space-y-1">
+            {isLoading ? (
+              <p className="text-center text-gray-500">Chargement...</p>
+            ) : wordsToDisplay.length > 0 ? (
+              wordsToDisplay.map((entry, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border border-gray-200 dark:border-gray-100
+                  bg-gray-100 dark:bg-gray-600 shadow-sm"
+                >
+                  <div className="rounded-lg font-bold text-base mb-2 p-1 bg-gray-200 dark:bg-neutral-500 dark:text-white">
+                    {highlightText(entry.mot, searchTerm)}
+                  </div>
+
+                  <div className="rounded-lg text-sm leading-relaxed break-words space-y-1 px-2 mb-1 dark:bg-gray-600 dark:text-gray-100">
+                    {entry.definition_new ? (
+                      highlightRichText(entry.definition_new, searchTerm)
+                    ) : (
+                      <span>Pas de définition.</span>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center text-gray-400 dark:text-gray-200">
+                Aucun mot trouvé.
+              </div>
             )}
           </div>
           {/* notes de fin et crédits */}
