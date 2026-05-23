@@ -499,21 +499,33 @@ const Begin_premier_deballage = () => {
           <div className="flex flex-col sm:flex-row items-center mb-1 gap-1">
             {/* TEXTE */}
             <aside className="flex-1">
+              <p>
+                Difficile de s&apos;y retrouver tant les modèles et formats se
+                sont multipliés (cf.{' '}
+                <Link
+                  href="/guide-utile-gyroroue#dico"
+                  className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+                >
+                  Le P&apos;tit Dico du Bonheur
+                </Link>
+                ).
+              </p>
+
+              <p className="mb-0">
+                Et à force d&apos;en voir partout (vidéos, réseaux sociaux,
+                etc.), on pourrait penser à tort qu&apos;ils sont absolument
+                nécessaires…
+              </p>
               <p className="mb-3">
+                Ils sont aussi parfois inclus dans le carton. Et leur usage
+                s&apos;est généralisé à mesure que les roues ont gagné en poids
+                et en performances.
+              </p>
+              <p className="mb-1">
                 La réponse courte est simple&nbsp;:{' '}
                 <strong>
                   pas obligatoires mais parfois indispensables&nbsp;!
                 </strong>
-              </p>
-              <p className="mb-0">
-                À force d&apos;en voir partout (vidéos, réseaux sociaux, etc.),
-                on pourrait penser à tort qu&apos;ils sont absolument
-                nécessaires…
-              </p>
-              <p className="mb-1">
-                Ils sont aussi parfois inclus dans le carton. Et leur usage
-                s&apos;est généralisé à mesure que les roues ont gagné en poids
-                et en performances.
               </p>
             </aside>
             {/* LOGO */}

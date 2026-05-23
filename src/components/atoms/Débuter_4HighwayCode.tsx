@@ -200,10 +200,16 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Utilisation possible du panneau M12 en cédant le passage aux
-                  piétons et aux autres usagers (
+                  Utilisation possible du panneau M12 (cf.{' '}
                   <Link
-                    href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038120387"
+                    href="/guide-utile-gyroroue#dico"
+                    className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+                  >
+                    Le P&apos;tit Dico du Bonheur
+                  </Link>
+                  ) en cédant le passage aux piétons et aux autres usagers (
+                  <Link
+                    href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000049319384/2024-03-24#LEGIARTI000049319384"
                     target="_blank"
                     className="link-style"
                   >

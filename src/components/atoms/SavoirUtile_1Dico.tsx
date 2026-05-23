@@ -136,9 +136,22 @@ const Practical_Dico = () => {
                 )}
               </p>
             )
-          } else {
-            return null
           }
+          // AJOUT IMPORTANT (pour afficher les images associé)
+          else if (block.type === 'image') {
+            return (
+              <Image
+                key={i}
+                src={block.url}
+                alt={block.alt || ''}
+                width={600}
+                height={400}
+                className="rounded-lg my-2"
+              />
+            )
+          }
+
+          return null
         })}
       </>
     )
@@ -278,7 +291,7 @@ const Practical_Dico = () => {
             {isLoading ? (
               <p className="text-center text-gray-500">Chargement...</p>
             ) : (
-              <table className="min-w-full bg-white border-collapse dark:borders-gray-900">
+              <table className="min-w-full bg-white border-collapse border-gray-500 dark:border-gray-900">
                 <thead>
                   <tr>
                     <th className="w-1/5 py-0.5 px-2 border-b bg-neutral-200 dark:bg-neutral-600">
@@ -293,12 +306,19 @@ const Practical_Dico = () => {
                   {wordsToDisplay.length > 0 ? (
                     wordsToDisplay.map((entry, index) => (
                       <tr key={index}>
-                        <td className="py-2 px-4 border-b dark:bg-gray-600 dark:text-gray-100">
+                        <td
+                          className="py-2 px-4 border-b border-gray-400  dark:border-gray-200
+                         dark:bg-gray-600 dark:text-gray-100"
+                        >
                           <strong>
                             {highlightText(entry.mot, searchTerm)}
                           </strong>
                         </td>
-                        <td className="py-2 px-4 border-b text-justify text-xs sm:text-sm md:text-base dark:bg-gray-600 dark:text-gray-100">
+                        <td
+                          className="py-2 px-4 border-b border-gray-400 dark:border-gray-200
+                         text-justify text-xs sm:text-sm md:text-base
+                         dark:bg-gray-600 dark:text-gray-100"
+                        >
                           {entry.definition_new ? (
                             highlightRichText(entry.definition_new, searchTerm)
                           ) : (
