@@ -216,7 +216,7 @@ export default function Contact({
       {/* ZONE Remerciements */}
       <section id="copains" className="space-y-2 my-4 scroll-mt-48">
         <h2>Remerciements</h2>
-        <p className="text-sm text-justify">
+        <p className="text-sm">
           <b>Bonheur sur Seine</b>, ce sont des vidéos
           <Link
             href={'https://www.youtube.com/c/BonheursurSeine'}
