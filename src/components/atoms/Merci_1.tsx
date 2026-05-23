@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
-import Quote_financement from '@/src/components/atoms/Block_CTA'
+import Quote_financement from '@/src/components/atoms/Accueil_block_CTA'
 //import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
 import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 

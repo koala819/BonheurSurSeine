@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 // import CountTimer from '../components/atoms/CounTimer'
 //import FinishSection from '@/src/components/atoms/Accueil_FinishSection'
 import Hero from '@/src/components/atoms/Accueil_Hero'
-import Quote_financement from '@/src/components/atoms/Block_CTA'
+import Quote_financement from '@/src/components/atoms/Accueil_block_CTA'
 
 import { createClient } from '@/prismicio'
 
