@@ -8,7 +8,7 @@ import Assurance from '@/src/components/atoms/Débuter_3Assurance'
 import HighwayCode from '@/src/components/atoms/Débuter_4HighwayCode'
 import Associations from '@/src/components/atoms/Débuter_5Associations'
 
-import HeroPhoto from '@/public/PhotoBSS - Bien Démarrer.jpg'
+import HeroPhoto from '@/public/3.debuter/PhotoBSS - Bien Démarrer.jpg'
 
 export const metadata: Metadata = {
   title:

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Tableaux_tensions from '@/public/techniques/risques-batteries-lithium (by cnpp).png'
+import Tableaux_tensions from '@/public/4.guide/Entretien-risques (by cnpp).png'
 
 const Maintenance = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

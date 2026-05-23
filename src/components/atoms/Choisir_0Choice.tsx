@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Discord from '@/public/Discord.png'
-import HeroPhoto from '@/public/PhotoBSS - Choisir.jpg'
+import Discord from '@/public/2.choisir/Discord.png'
+import HeroPhoto from '@/public/2.choisir/PhotoBSS - Choisir.jpg'
 
 const Choice = () => {
   return (

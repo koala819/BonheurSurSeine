@@ -2,8 +2,8 @@
 
 import { Image } from '@heroui/react'
 
-import { Button } from '@/src/components/atoms/Article_Button'
-import { Text } from '@/src/components/atoms/Article_Text'
+import { Button } from '@/src/components/molecules/Article2_Button'
+import { Text } from '@/src/components/molecules/Article2_Text'
 
 export function Article({
   button,

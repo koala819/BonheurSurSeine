@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_HighwayCode from '@/public/Image_code_de_la_route(light).jpg'
+import Image_HighwayCode from '@/public/3.debuter/Image_code_de_la_route(light).jpg'
 
 const HighwayCode = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

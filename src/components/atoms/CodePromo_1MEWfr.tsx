@@ -5,8 +5,8 @@ import { MdLoyalty } from 'react-icons/md'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_mewfr from '@/public/marques/myewheel-logo-france.png'
-import vendeurRapha from '@/public/marques/myewheel-logo-raph.jpg'
+import Image_mewfr from '@/public/0.boutique/myewheel-logo-france.png'
+import vendeurRapha from '@/public/0.boutique/myewheel-logo-raph.jpg'
 
 const MYEWFR = () => {
   return (

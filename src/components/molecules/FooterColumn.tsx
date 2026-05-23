@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Text } from '@/src/components/atoms/Article_Text'
+import { Text } from '@/src/components/molecules/Article2_Text'
 
 export function FooterColumn({
   title,

@@ -6,7 +6,7 @@ import { Accordion, AccordionItem } from '@heroui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import gyroroues from '@/public/gyroroues_bss202502.jpg'
+import gyroroues from '@/public/1.apprendre/gyroroues_bss_202502.jpg'
 
 const Maintenance = () => {
   return (

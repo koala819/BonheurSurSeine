@@ -10,8 +10,8 @@ import Link from 'next/link'
 import { WikilocProfil } from '@/src/types/models'
 
 import { createClient } from '@/prismicio'
-import Image_carto from '@/public/Image_cartographie(light).jpg'
-import Wikiloc from '@/public/marques/wikiloc_logo.svg'
+import Image_carto from '@/public/4.guide/Image_cartographie(light).jpg'
+import Wikiloc from '@/public/4.guide/wikiloc_logo.svg'
 
 /*import { ImageField, KeyTextField, NumberField } from '@prismicio/client'*/
 

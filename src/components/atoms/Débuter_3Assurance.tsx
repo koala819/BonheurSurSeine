@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_assurance from '@/public/Image_assurance.jpg'
+import Image_assurance from '@/public/3.debuter/Image_assurance.jpg'
 
 const Assurance = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

@@ -6,7 +6,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_bon_sens from '@/public/Image_choisir_identifier_besoins(light)2.jpg'
+import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //import { color } from 'framer-motion'
 
