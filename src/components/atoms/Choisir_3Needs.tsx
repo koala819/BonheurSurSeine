@@ -217,7 +217,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       {/*--               8 QUESTIONS                --*/}
       {/*----------------------------------------------*/}
-      <div id="8questions" className="scroll-mt-72 mt-4 mb-4 space-y-0">
+      <div id="8questions" className="scroll-mt-56 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
           <span className="text-2xl">🎯 </span>
           <strong className="underline font-bold text-lg">

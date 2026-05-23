@@ -66,8 +66,12 @@ const sections = [
       },
       { label: '🆕 Infos constructeurs', href: '/choisir-gyroroue#infos' },
       {
-        label: '🎯 8 questions à se poser',
+        label: '👉 Faire son choix',
         href: '/choisir-gyroroue#besoins',
+      },
+      {
+        label: '🎯 8 questions à se poser',
+        href: '/choisir-gyroroue#8questions',
       },
       { label: '🪄 Comparer les modèles', href: '/choisir-gyroroue#comparer' },
     ],

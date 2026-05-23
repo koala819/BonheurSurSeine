@@ -26,14 +26,14 @@ export default function Page() {
         <br />
         <strong>Directeur de la publication :</strong> Raphaël L.
         <br />
-        <strong>SIRET :</strong> 80294141900011
+        <strong>SIRET : </strong>80294141900011
         <br />
-        <strong>Activité :</strong> Se déplacer en roue change la perception de
+        <strong>Activité : </strong>Se déplacer en roue change la perception de
         la mobilité !!
         <br />
-        <strong>Localisation :</strong> 75000 Paris - France
+        <strong>Localisation : </strong>75000 Paris - France
         <br />
-        <strong>Contributions :</strong> Site développé avec l&apos;aide de deux
+        <strong>Contributions : </strong>Site développé avec l&apos;aide de deux
         personnes bénévoles.
       </p>
       {/***********************************************************************/}
