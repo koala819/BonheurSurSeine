@@ -11,14 +11,12 @@ import Link from 'next/link'
 
 import { ContactFriends } from '@/src/types/models'
 
+import Quote_financement from '@/src/components/atoms/Accueil_block_CTA'
 //import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
 import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 
-import Discord from '@/public/Discord.png'
-import Patreon from '@/public/Patreon.svg'
-import undefindAvatar from '@/public/People.png'
-import bonheurSurSeine from '@/public/PhotoBSS - Remerciements.jpg'
-import Tipeee from '@/public/Tipeee.svg'
+import undefindAvatar from '@/public/5.merci/People.png'
+import bonheurSurSeine from '@/public/5.merci/PhotoBSS - Remerciements.jpg'
 
 export default function Contact({
   // text,
@@ -213,62 +211,12 @@ export default function Contact({
       */}
 
       {/* APPEL AU SOUTIEN*/}
-      <div
-        className="bg-white dark:bg-cyan-800 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl"
-        id="soutien"
-      >
-        <p className="text-center md:text-lg lg:text-xl font-medium leading-relaxed">
-          Pour soutenir mon travail, accéder à des contenus supplémentaires et
-          chatter en privé, rejoins-moi sur
-        </p>
-
-        <div className="flex flex-row justify-center items-center gap-4 mt-0">
-          <Link
-            href="https://fr.tipeee.com/bonheur-sur-seine"
-            target="_blank"
-            className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2 px-6 transition-transform transform hover:scale-110"
-          >
-            <Image
-              alt="Tipee logo"
-              src={Tipeee}
-              width={40}
-              height={40}
-              className="opacity-80 hover:opacity-100"
-            />
-          </Link>
-          <Link
-            href="https://www.patreon.com/c/BonheursurSeine"
-            target="_blank"
-            className="flex p-2 transition-transform transform hover:scale-110 rounded-2xl"
-          >
-            <Image
-              alt="Patreon logo"
-              src={Patreon}
-              width={40}
-              height={40}
-              className="opacity-80 hover:opacity-100"
-            />
-          </Link>
-          <Link
-            href="https://discord.com/invite/Jhgw7C96Jf"
-            target="_blank"
-            className="flex transition-transform transform hover:scale-110 rounded-2xl"
-          >
-            <Image
-              alt="Discord logo"
-              src={Discord}
-              width={90}
-              height={90}
-              className="opacity-80 hover:opacity-100"
-            />
-          </Link>
-        </div>
-      </div>
+      <Quote_financement />
 
       {/* ZONE Remerciements */}
       <section id="copains" className="space-y-2 my-4 scroll-mt-48">
         <h2>Remerciements</h2>
-        <p className="text-sm text-justify">
+        <p className="text-sm">
           <b>Bonheur sur Seine</b>, ce sont des vidéos
           <Link
             href={'https://www.youtube.com/c/BonheursurSeine'}

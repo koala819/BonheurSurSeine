@@ -6,7 +6,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_bon_sens from '@/public/Image_choisir_identifier_besoins(light)2.jpg'
+import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //import { color } from 'framer-motion'
 
@@ -217,7 +217,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       {/*--               8 QUESTIONS                --*/}
       {/*----------------------------------------------*/}
-      <div id="8questions" className="scroll-mt-72 mt-4 mb-4 space-y-0">
+      <div id="8questions" className="scroll-mt-56 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
           <span className="text-2xl">🎯 </span>
           <strong className="underline font-bold text-lg">

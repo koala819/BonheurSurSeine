@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Les3pneus from '@/public/techniques/Pneus1_les_structures.jpg'
-import Jantes from '@/public/techniques/Pneus2_les jantes_toutes.jpg'
+import Les3pneus from '@/public/4.guide/Pneus1_les_structures.jpg'
+import Jantes from '@/public/4.guide/Pneus2_les jantes_toutes.jpg'
 
 const Pneu = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

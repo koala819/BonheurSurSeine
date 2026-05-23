@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 // import CountTimer from '../components/atoms/CounTimer'
 //import FinishSection from '@/src/components/atoms/Accueil_FinishSection'
 import Hero from '@/src/components/atoms/Accueil_Hero'
-import Quote from '@/src/components/atoms/Accueil_Quote'
+import Quote_financement from '@/src/components/atoms/Accueil_block_CTA'
 
 import { createClient } from '@/prismicio'
 
@@ -126,7 +126,7 @@ export default async function Page() {
         </p>
       </section>
 
-      <Quote />
+      <Quote_financement />
 
       {/*----------------------------------------------*/}
       {/*            English content                   */}

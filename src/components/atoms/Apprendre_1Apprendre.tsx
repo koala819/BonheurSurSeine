@@ -6,7 +6,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import apprendre from '@/public/gyroroues_apprendre202509.png'
+import apprendre from '@/public/1.apprendre/gyroroues_apprendre_202509.png'
 
 const Apprendre = () => {
   return (

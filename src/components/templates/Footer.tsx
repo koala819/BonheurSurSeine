@@ -7,14 +7,14 @@ import { FiInstagram } from 'react-icons/fi'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Article } from '@/src/components/molecules/Article'
+import { Article } from '@/src/components/molecules/Article1'
 import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 
 //import { FooterColumn } from '@/src/components/molecules/FooterColumn'
-import logo from '@/public/BonheurSurSeine_logo.png'
-import Discord from '@/public/Discord.png'
-import Patreon from '@/public/Patreon.svg'
-import Tipeee from '@/public/Tipeee.svg'
+import logo from '@/public/quote_foot/BonheurSurSeine_logo.png'
+import Discord from '@/public/quote_foot/Discord.png'
+import Patreon from '@/public/quote_foot/Patreon.svg'
+import Tipeee from '@/public/quote_foot/Tipeee.svg'
 
 //import dix31 from '@/public/white_DIX31.png'
 

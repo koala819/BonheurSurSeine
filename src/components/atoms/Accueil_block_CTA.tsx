@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Discord from '@/public/Discord.png'
-import Patreon from '@/public/Patreon.svg'
-import Tipeee from '@/public/Tipeee.svg'
+import Discord from '@/public/block_CTA/Discord.png'
+import Patreon from '@/public/block_CTA/Patreon.svg'
+import Tipeee from '@/public/block_CTA/Tipeee.svg'
 
 const Quote = () => {
   return (

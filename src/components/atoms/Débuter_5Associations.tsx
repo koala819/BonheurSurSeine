@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Discord from '@/public/Discord.png'
-import Discord2 from '@/public/Discord_screenshot.jpg'
-import Anumme from '@/public/marques/Anumme.jpg'
+import Anumme from '@/public/3.debuter/Anumme.jpg'
+import Discord from '@/public/3.debuter/Discord.png'
+import Discord2 from '@/public/3.debuter/Discord_screenshot.jpg'
 
 const Associations = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

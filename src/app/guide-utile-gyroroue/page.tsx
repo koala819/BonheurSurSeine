@@ -6,7 +6,8 @@ import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
 import Pneu from '@/src/components/atoms/SavoirUtile_3Pneu'
 import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
-import Info from '@/src/components/atoms/SavoirUtile_6Infos'
+
+//import Info from '@/src/components/atoms/SavoirUtile_6Infos'
 
 export const metadata: Metadata = {
   title:
@@ -25,7 +26,7 @@ const Page = () => {
       <div className="space-y-1">
         <div className="mt-0 mb-0 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 space-y-1">
-            <p className="text-justify mt-0 mb-0">
+            <p className="text-left mt-0 mb-0">
               Ce <strong>guide complet</strong> sur la gyroroue contient des{' '}
               <strong>infos pratiques</strong> et des conseils{' '}
               <strong>pour bien utiliser ta roue</strong>&nbsp;: fonctionnement,
@@ -47,7 +48,7 @@ const Page = () => {
       <Pneu />
       <Navi />
       <Vrac />
-      <Info />
+      {/*<Info />*/}
       <div className="yellowBlock">
         <h3>
           ❤️ Enjoy, et n&apos;hésite pas à me dire ce que tu en penses... <br />

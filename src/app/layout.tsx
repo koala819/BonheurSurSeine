@@ -44,8 +44,12 @@ export default function RootLayout({
             </div>
 
             <main className="flex-1 bg-bg-light dark:bg-bg-dark text-black dark:text-white flex items-center justify-center">
-              <div className="w-full px-4 mx-auto mt-6 max-w-7xl">
-                <div className="flex flex-col min-w-0 break-words w-full mb-6 bg-gray-200 dark:bg-slate-800 rounded-lg border-0">
+              <div
+                className="w-full px-2 sm:px-3 md:px-4
+                                  my-2 sm:my-3 md:my-4
+              mx-auto max-w-7xl"
+              >
+                <div className="flex flex-col min-w-0 break-words w-full bg-gray-200 dark:bg-slate-800 rounded-lg border-0">
                   <GoogleAnalytics />
                   {children}
                   <Analytics />

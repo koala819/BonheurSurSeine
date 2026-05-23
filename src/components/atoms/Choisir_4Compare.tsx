@@ -4,9 +4,9 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import whitelogo from '@/public/EUCFinder/EUCFinder_Logo_Claro-ok.jpg'
-import blackLogo from '@/public/EUCFinder/EUCFinder_Logo_Oscuro-ok.jpg'
-import EUCFinder from '@/public/EUCFinder/EUCFinder_aperçu.png'
+import whitelogo from '@/public/2.choisir/EUCFinder/EUCFinder_Logo_Claro-ok.jpg'
+import blackLogo from '@/public/2.choisir/EUCFinder/EUCFinder_Logo_Oscuro-ok.jpg'
+import EUCFinder from '@/public/2.choisir/EUCFinder/EUCFinder_aperçu.png'
 
 const Compare = () => {
   const { theme } = useTheme()

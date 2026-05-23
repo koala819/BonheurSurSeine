@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_bon_sens from '@/public/Image_bon-sens_nuage-de-mots.png'
-import Image_equipements from '@/public/Image_bon-sens_équipements.jpg'
+import Image_bon_sens from '@/public/3.debuter/Image_bon-sens_nuage-de-mots.png'
+import Image_equipements from '@/public/3.debuter/Image_bon-sens_équipements.jpg'
 
 const CommonSense = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

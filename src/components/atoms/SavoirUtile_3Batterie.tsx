@@ -6,11 +6,11 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Cellules1 from '@/public/techniques/BSS-Batterie - cellules1.jpg'
-import Cellules2 from '@/public/techniques/BSS-Batterie - cellules2.jpg'
-import jauge_simple from '@/public/techniques/BSS-Batterie simple.png'
-import Graphique_diminution from '@/public/techniques/BSS-Batterie_et_diminution_v20250419.png'
-import Tableaux_tensions from '@/public/techniques/BSS-Batterie_et_tension_v20250419.png'
+import Graphique_diminution from '@/public/4.guide/BSS-Batterie - Diminution_v20250419.png'
+import Tableaux_tensions from '@/public/4.guide/BSS-Batterie - Tableau-tensions_v20250419.png'
+import Cellules1 from '@/public/4.guide/BSS-Batterie - cellules1.jpg'
+import Cellules2 from '@/public/4.guide/BSS-Batterie - cellules2.jpg'
+import jauge_simple from '@/public/4.guide/BSS-Batterie - simple.png'
 
 const Practical_Battery = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT

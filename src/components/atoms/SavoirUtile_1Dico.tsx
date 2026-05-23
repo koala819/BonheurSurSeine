@@ -8,7 +8,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { createClient } from '@/prismicio'
-import Image_dico from '@/public/Image_dico (light).jpg'
+import Image_dico from '@/public/4.guide/Image_dico (light).jpg'
 
 //import { KeyTextField } from '@prismicio/types'
 

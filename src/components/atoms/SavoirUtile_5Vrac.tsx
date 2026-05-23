@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import eucone from '@/public/marques/EUC.ONE app-logo.png'
-import rudy from '@/public/marques/RudyTech logo.avif'
+import eucone from '@/public/4.guide/EUC.ONE app-logo.png'
+import rudy from '@/public/4.guide/RudyTech logo.avif'
 
 const Practical_Vrac = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -112,7 +112,7 @@ const Practical_Vrac = () => {
             <br />
             Le PDF est disponible ❇️
             <Link
-              href="/Rudy Tech - mode d'emploi IQlight V2 - FR v20250307.pdf"
+              href="/4.guide/Rudy Tech - mode d'emploi IQlight V2 - FR v20250307.pdf"
               target="_blank"
               className="link-style"
             >
