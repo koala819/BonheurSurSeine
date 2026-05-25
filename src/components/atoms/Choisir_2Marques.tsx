@@ -325,11 +325,42 @@ const Marques = () => {
 
           {/* INTRO */}
           <div className="mt-8 mb-1">
-            <h4 className="mt-4 mb-1">🧭 Principaux fabricants</h4>
-            <p className="mt-0 mb-4">
-              Le marché des gyroroues est actuellement dominé par seulement{' '}
+            <h4 className="mt-4 mb-1">🌍 Un marché de niche</h4>
+            <p className="mt-0 mb-2">
+              Contrairement aux grandes industries (vélo, automobile,
+              électronique), le marché de la gyroroue reste un secteur{' '}
               <strong className="text-sky-800 dark:text-sky-400">
-                quelques fabricants incontournables
+                petit et spécialisé
+              </strong>
+              . Même les fabricants les plus connus produisent des volumes très
+              faibles comparés à ce qui se fait, par exemple, pour la
+              trottinette électrique.
+            </p>
+            <p className="mt-0 mb-2">
+              Les premières gyroroues grand public sont{' '}
+              <strong className="text-sky-800 dark:text-sky-400">
+                apparues au mileu des années 2010
+              </strong>
+              , dans la continuité des technologies d&apos;auto-équilibrage
+              popularisées par le Segway. Le marché s&apos;est peu à peu
+              structuré avec le développement des principaux fabricants chinois
+              et les innovations techniques.
+            </p>
+            <p className="mt-0 mb-2">
+              Le secteur reste donc jeune et a connu{' '}
+              <strong className="text-sky-800 dark:text-sky-400">
+                beaucoup d&apos;évolutions
+              </strong>
+              . Certaines technologies (suspension, haute puissance) sont
+              devenues courantes en seulement quelques années.
+            </p>
+          </div>
+          <div className="mt-6 mb-1">
+            <h4 className="mt-4 mb-1">🧭 Principaux fabricants</h4>
+            <p className="mt-0 mb-2">
+              Le marché des gyroroues est actuellement dominé par{' '}
+              <strong className="text-sky-800 dark:text-sky-400">
+                seulement quelques fabricants incontournables
               </strong>
               , tous basés en Chine (
               <Link
@@ -337,9 +368,26 @@ const Marques = () => {
                 target="_blank"
                 className="link-style text-sky-800 dark:text-sky-400"
               >
-                dans la région de Shenzhen
+                dans la région de Shenzhen / Hong-Kong
               </Link>
               ).
+            </p>
+            <p className="mt-0 mb-2">
+              Cette région est reconnue pour son expertise dans
+              l&apos;électronique. Cette proximité géographique favorise
+              l&apos;accès aux composants et le recrutement de techniciens et
+              d&apos;ingénieurs spécialisés.
+            </p>
+            <p className="mt-0 mb-4">
+              Mais il faut garder à l&apos;esprit que ces fabricants, pourtant
+              connus dans le monde entier, restent de{' '}
+              <strong className="text-sky-800 dark:text-sky-400">
+                très petites structures
+              </strong>{' '}
+              (parfois &lt;100 employés). La conception, la fabrication et
+              l&apos;assemblage des produits sont réalisés en interne et en
+              petites séries, avec une part encore significative de travail
+              manuel.
             </p>
             <p className="text-gray-500 dark:text-gray-300 text-right text-small sm:ml-32">
               <i>
