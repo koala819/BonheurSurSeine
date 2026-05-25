@@ -31,25 +31,36 @@ export default function CardPromo({
 
   return (
     <section
-      className="relative h-full bg-slate-300 dark:bg-slate-950 shadow-md rounded-3xl p-2 mx-1 my-1 flex flex-col hover:shadow-lg
-    shadow-gray-400 hover:shadow-gray-400
-    dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+      className="relative h-full bg-slate-300 dark:bg-slate-700
+      rounded-3xl py-2 flex flex-col w-full max-w-[300px] lg:max-w-[350px] mx-auto
+      border border-gray-200 dark:border-gray-600
+      shadow-md hover:shadow-lg transition-shadow duration-300
+     shadow-gray-400 hover:shadow-gray-400
+     dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+     hover:border-sky-700    dark:hover:border-sky-600
+       hover:-translate-y-[1px]"
     >
       {/* PARTIE IMAGE */}
-      <div className="flex justify-center h-[100px] mb-0">
-        <div className="relative overflow-hidden rounded-2xl shadow-slate-500 bg-white dark:bg-sky-950 dark:shadow-slate-700 shadow-md h-full w-1/2 sm:w-3/4 xl:w-3/4">
+      <div className="flex justify-center mb-0">
+        <div
+          className="relative overflow-hidden rounded-xl
+          shadow-md shadow-gray-400 dark:shadow-neutral-900
+          bg-slate-50 dark:bg-slate-800
+          aspect-[16/9] w-1/2 sm:w-3/4 xl:w-3/4
+          flex items-center
+           hover:shadow-lg"
+        >
           <Link href={website} target="_blank">
             <Image
               alt={alt || 'logo de mon partenaire'}
               src={imageSrc}
               fill
               priority
-              className="object-contain"
+              className="object-contain object-center rounded-xl"
             />
           </Link>
         </div>
       </div>
-
       {/* PARTIE DESCRIPTION */}
       <div className="mt-0 pl-2 mb-1">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-200 mb-0">
@@ -74,7 +85,7 @@ export default function CardPromo({
             target="_blank"
             className="flex items-center mb-1 mt-1 mr-2 group cursor-pointer text-gray-800 dark:text-gray-300"
           >
-            <MdLoyalty className="h-10 w-10 text-bg-light dark:text-white dark:text-bg-gray-300 mr-0" />
+            <MdLoyalty className="h-10 w-10 text-bg-light dark:text-white dark:text-bg-gray-300 mr-0 object-center" />
           </Link>
         </aside>
         {/* Affiche seulement si au moins un champ existe */}
