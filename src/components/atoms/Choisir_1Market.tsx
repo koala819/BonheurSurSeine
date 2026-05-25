@@ -35,7 +35,7 @@ const Market = () => {
                   hover:shadow-lg
                   hover:border-orange-700
                   dark:hover:border-brown-600
-                  hover:-translate-y-[2px]
+                  hover:-translate-y-[1px]
                 `,
           }}
         >

@@ -127,8 +127,6 @@ const Compare = () => {
                 <Image
                   src={logo}
                   alt="EUC Finder Logo"
-                  width={100}
-                  height={100}
                   className="rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
                 />
               </div>
