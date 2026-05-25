@@ -46,10 +46,10 @@ export default async function Page() {
       </p>
 
       {/* Capsule Boutique avec Timer */}
-      {/*<BoutiqueMEWfr />*/}
+      {/* <BoutiqueMEWfr /> */}
 
       {/* Grille de promos partenaires */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">
         {sortedPromos.map((promo: any, id: number) => (
           <div key={id}>
             <GrillePromo

@@ -21,7 +21,7 @@ const MYEWFR = () => {
           src={Image_mewfr}
           alt="MyEWheel France"
           className="rounded-lg w-full object-cover shadow-sm
-                  bg-white/50  min-w-[90px] max-w-[250px] items-center"
+                  bg-white/80 dark:bg-white/50 min-w-[90px] max-w-[250px] items-center"
           priority={false}
         />
       </Link>
@@ -31,17 +31,17 @@ const MYEWFR = () => {
         {/* gauche */}
         <div className="flex-1 place-content-center">
           <p className="text-center">
-            Découvre{' '}
             <Link
               href="https://www.youtube.com/watch?v=VPXLMrs_Ne4"
               target="_blank"
               className="link-style font-bold hover:text-pink-600 dark:hover:text-pink-900"
             >
-              la boutique où je travaille
+              Découvre la boutique dans laquelle je travaille
             </Link>
             &nbsp;🎥
-            <br /> Proche des clients, de la communauté, et qui met toute son
-            énergie à leur service…
+            <br /> Proche des clients, elle met toute son énergie à leur
+            service, et elle <u>m&apos;offre les moyens</u> de faire vivre la
+            communauté…
           </p>
         </div>
         {/* droite */}
@@ -50,7 +50,7 @@ const MYEWFR = () => {
             src={vendeurRapha}
             alt="Raphael"
             className="rounded-lg object-cover shadow-sm bg-white/50
-                       w-24 sm:w-28 md:w-32 h-auto"
+                       w-28 sm:w-32 md:w-36 lg:w-40 h-auto"
             priority={false}
           />
         </div>
@@ -58,7 +58,7 @@ const MYEWFR = () => {
 
       {/* TEXTE */}
       <p className="font-semibold text-center mx-4 sm:mx-8 md:mx-10">
-        En achetant ta roue chez MyEWheel, tu soutiens réellement la chaîne et
+        En achetant ta roue chez MyEWheel, tu soutiens réellement la chaîne, et
         tu lui permets de continuer à vivre.
       </p>
 
@@ -66,7 +66,7 @@ const MYEWFR = () => {
       <Link
         href="https://myewheel.com/fr/"
         target="_blank"
-        className="inline-flex items-center gap-3 font-semibold px-4 py-2 rounded-lg shadow text-white bg-pink-600 hover:bg-pink-700 transition dark:bg-white dark:text-pink-600 dark:hover:bg-gray-100"
+        className="inline-flex items-center gap-3 font-semibold px-4 py-2 rounded-lg shadow text-white bg-pink-600 hover:bg-pink-800 transition dark:bg-white dark:text-pink-600 dark:hover:bg-pink-200"
       >
         <MdLoyalty className="h-10 w-10 flex-shrink-0 text-white dark:text-pink-600" />
 
