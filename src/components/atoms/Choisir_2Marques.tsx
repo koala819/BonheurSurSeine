@@ -347,12 +347,12 @@ const Marques = () => {
               et les innovations techniques.
             </p>
             <p className="mt-0 mb-2">
-              Le secteur reste donc jeune et a connue{' '}
+              Le secteur reste donc jeune et a connu{' '}
               <strong className="text-sky-800 dark:text-sky-400">
                 beaucoup d&apos;évolutions
               </strong>
-              . Certaines technologies devenues courantes (suspensions, haute
-              puissance) étaient encore rares avant 2023.
+              . Certaines technologies (suspension, haute puissance) sont
+              devenues courantes en seulement quelques années.
             </p>
           </div>
           <div className="mt-6 mb-1">
@@ -379,13 +379,14 @@ const Marques = () => {
               d&apos;ingénieurs spécialisés.
             </p>
             <p className="mt-0 mb-4">
-              Ces fabricants sont de{' '}
+              Mais il faut garder à l&apos;esprit que ces fabricants, pourtant
+              connus dans le monde entier, restent de{' '}
               <strong className="text-sky-800 dark:text-sky-400">
                 très petites structures
               </strong>{' '}
-              (&lt;100 employés). La conception, la fabrication et
-              l&apos;assemblage des produits sont réalisés en interne, souvent
-              en petites séries, avec une part encore significative de travail
+              (parfois &lt;100 employés). La conception, la fabrication et
+              l&apos;assemblage des produits sont réalisés en interne et en
+              petites séries, avec une part encore significative de travail
               manuel.
             </p>
             <p className="text-gray-500 dark:text-gray-300 text-right text-small sm:ml-32">
