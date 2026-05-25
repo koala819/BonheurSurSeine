@@ -43,7 +43,14 @@ const Practical_Vrac = () => {
   return (
     <section
       id="vrac"
-      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 rounded-lg p-2 md:p-4 mb-6"
+      className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700
+      rounded-lg p-2 md:p-4 mb-6
+      border border-gray-200 dark:border-gray-600
+      shadow-md hover:shadow-lg transition-shadow duration-300
+     shadow-gray-400 hover:shadow-gray-400
+     dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+     hover:border-sky-700    dark:hover:border-sky-600
+       hover:-translate-y-[1px]"
     >
       <Accordion
         selectedKeys={openKeys}
