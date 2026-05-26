@@ -74,7 +74,7 @@ const Maintenance = () => {
                   hover:shadow-lg
                   hover:border-sky-700
                   dark:hover:border-sky-600
-                  hover:-translate-y-[2px]
+                  hover:-translate-y-[1px]
                 `,
           }}
         >
@@ -203,7 +203,7 @@ const Maintenance = () => {
                   hover:shadow-lg
                   hover:border-sky-700
                   dark:hover:border-sky-600
-                  hover:-translate-y-[2px]
+                  hover:-translate-y-[1px]
                 `,
           }}
         >
@@ -281,7 +281,7 @@ const Maintenance = () => {
                   hover:shadow-lg
                   hover:border-sky-700
                   dark:hover:border-sky-600
-                  hover:-translate-y-[2px]
+                  hover:-translate-y-[1px]
                 `,
           }}
         >

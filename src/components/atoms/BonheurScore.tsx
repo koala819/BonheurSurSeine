@@ -66,13 +66,19 @@ export function BonheurScore({
   /*PAGE BONHEURSCORE*/
   return (
     <>
-      <div className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <h1 className="whitespace-break-spaces">
           BonheurScore - Tests et Reviews
         </h1>
-        <div className="grid md:grid-cols-3 gap-4">
+        {/*----------------------------------------------*/}
+        {/*-------3 CAPSULES D'INTRODUCTION--------------*/}
+        <div className="grid md:grid-cols-3 gap-2 lg:gap-x-4">
           {/* Bloc 1 */}
-          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
+          <div
+            className="bg-blue-50 dark:bg-cyan-900 rounded-2xl pt-1 py-2 px-3
+            shadow-md hover:shadow-lg transition-shadow
+          dark:shadow-neutral-900 dark:hover:shadow-neutral-950 "
+          >
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               🔍 Quel modèle choisir&nbsp;?
             </h2>
@@ -100,7 +106,11 @@ export function BonheurScore({
           </div>
 
           {/* Bloc 2 */}
-          <div className="bg-blue-50 dark:bg-cyan-900  px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
+          <div
+            className="bg-blue-50 dark:bg-cyan-900 rounded-2xl pt-1 py-2 px-3
+            shadow-md hover:shadow-lg transition-shadow
+          dark:shadow-neutral-900 dark:hover:shadow-neutral-950 "
+          >
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               💬 Ton avis compte !
             </h2>
@@ -126,7 +136,11 @@ export function BonheurScore({
           </div>
 
           {/* Bloc 3 : Derniers ajouts ça se met à jour automatiquement*/}
-          <div className="bg-blue-50 dark:bg-cyan-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
+          <div
+            className="bg-blue-50 dark:bg-cyan-900 rounded-2xl pt-1 py-2 px-3
+            shadow-md hover:shadow-lg transition-shadow
+          dark:shadow-neutral-900 dark:hover:shadow-neutral-950 "
+          >
             <h2 className="text-xl font-semibold text-fuchsia-700 dark:text-violet-400 mb-2">
               📅 Derniers ajouts
             </h2>
@@ -172,15 +186,24 @@ export function BonheurScore({
         </div>
 
         {/*----------------------------------------------*/}
-        {/*---------CAPSULES D'INTRODUCTION--------------*/}
-        <section className="px-0 md:px-7 lg:px-14">
-          <div className="mt-3 px-2 bg-blue-50 dark:bg-cyan-900 rounded-xl shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600">
+        {/*--------CAPSULES NOTATION BONHEURSCORE--------*/}
+        <div className="mt-5 px-0 md:px-7 lg:px-14">
+          <div
+            className="mt-3 px-2 bg-blue-50 dark:bg-cyan-900 rounded-xl
+            shadow-md transition-shadow duration-300
+            border border-gray-200 dark:border-gray-600
+          shadow-gray-400 hover:shadow-gray-400
+          dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            hover:shadow-lg
+          hover:border-sky-700  dark:hover:border-sky-600
+            hover:-translate-y-[1px]"
+          >
             <Accordion isCompact>
               <AccordionItem
                 key="1"
-                aria-label="Comment ça fonctionne ?"
+                aria-label="À propos du BonheurScore"
                 title={
-                  <h4 className="ml-2 font-bold mt-1 mb-1">
+                  <h4 className="ml-2 font-bold mt-3 mb-0">
                     📢 À propos du BonheurScore&nbsp;?
                   </h4>
                 }
@@ -260,14 +283,18 @@ export function BonheurScore({
               </AccordionItem>
             </Accordion>
           </div>
-        </section>
+        </div>
 
         {/*--------------------------------------------------*/}
         {/*------------------REMERCIEMENTS-------------------*/}
-        <section className="px-0 md:px-7 lg:px-14">
-          <div className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-700 pt-1 px-3">
-            <p className="italic text-gray-900 dark:text-gray-300">
-              <span className="mx-1 text-xs md:text-sm">
+        <div className="mt-4 px-0 md:px-7 lg:px-14">
+          <div
+            className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md pt-1 px-3
+            hover:shadow-lg transition-shadow
+          dark:shadow-neutral-900 dark:hover:shadow-neutral-950 "
+          >
+            <p className="italic text-gray-900 dark:text-gray-300 text-center">
+              <span className="mx-1 text-xs md:text-sm ">
                 Je remercie chaleureusement tous mes contributeurs et
                 partenaires (ponctuels ou réguliers, passés, présents ou
                 futurs). Grâce à ton soutien, je peux vivre cette belle aventure
@@ -287,7 +314,7 @@ export function BonheurScore({
               )
             </p>
           </div>
-        </section>
+        </div>
 
         {/*----------------------------------------------*/}
         {/*AFFICHAGE DES 2 FILTES : MARQUES ET CATEGORIES*/}
@@ -353,19 +380,20 @@ export function BonheurScore({
             </select>
           </div>
         </div>
-      </div>
+      </section>
+      {/*---------------------------------*/}
       {/*SECONDE PARTIE AVEC LES NOTATIONS*/}
-      <div className="py-1 px-2 sm:px-4 lg:px-6 space-y-2 ">
+      <div className="py-1 px-2 sm:px-4 lg:px-6 pace-y-0 sm:space-y-1 space-y-2 ">
         {/*AFFICHAGE DES ROUES*/}
         {filteredGyroroues.map((gyroroue, index) => (
           <Card
             key={index}
             shadow="md"
             radius="lg"
-            className="mb-1 rounded-xl bg-white dark:bg-slate-700"
+            className="mb-0 rounded-xl bg-white dark:bg-slate-700"
           >
             {/*PREMIERE PARTIE : NOM, DATE ET CATEGORIE*/}
-            <CardHeader className="gap-0">
+            <CardHeader className="gap-0 px-2 pb-0">
               <div className="flex sm:flex-row justify-between items-center w-full">
                 <div className="text-left sm:text-left">
                   <h3 className="mb-0 font-semibold">
@@ -380,7 +408,7 @@ export function BonheurScore({
                 <Chip
                   variant="shadow"
                   color="primary"
-                  className="mr-0 mt-2 sm:mt-0 bg-indigo-600 text-white dark:bg-cyan-600 dark:text-white min-w-24 md:min-w-36"
+                  className="mr-0 mt-2 sm:mt-0 bg-indigo-600 text-white dark:bg-cyan-600 dark:text-white min-w-24 md:min-w-36 lg:min-w-40"
                 >
                   {/*CATEGORIE : Urbaine - Hybride - Loisir*/}
                   <p className="text-center">{gyroroue.data.profil}</p>
@@ -389,7 +417,7 @@ export function BonheurScore({
             </CardHeader>
             {/*SECONDE PARTIE : IMAGE ET COMMENTAIRE*/}
             <CardBody className="gap-0">
-              <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 mt-0 mb-0 items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-1 md:gap-2 mt-0 mb-0 items-center">
                 <div className="flex flex-col items-center sm:col-span-1">
                   {/*IMAGE DE LA ROUE*/}
                   <Image
@@ -398,7 +426,8 @@ export function BonheurScore({
                     alt={gyroroue.data.photo.alt ?? 'Gyroroue Image'}
                     width={gyroroue.data.photo.dimensions?.width}
                     height={gyroroue.data.photo.dimensions?.height}
-                    className="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover bg-center"
+                    className="rounded-full w-40 h-40 md:w-48 md:h-48
+                    lg:w-52 lg:h-52 object-cover bg-center"
                   />
                   {/*LIEN VERS LA VIDEO YOUTUBE*/}
                   <p className="text-center mt-1 mb-0">
@@ -409,7 +438,7 @@ export function BonheurScore({
                         'https://dix31.com'
                       }
                       target="_blank"
-                      className="center hover:font-semibold transition
+                      className="center font-semibold hover:font-bold transition-all
                       hover:text-indigo-500
                       dark:hover:text-cyan-500"
                     >
@@ -424,7 +453,7 @@ export function BonheurScore({
                     className="ml-2 mr-2 text-gray-800 [&_strong]:text-indigo-500
                      dark:text-gray-50 dark:[&_strong]:text-cyan-500
                   [&_p]:text-xs [&_p]:sm:text-sm [&_p]:md:text-medium
-                  [&_p]:text-justify "
+                  [&_p]:text-left "
                   >
                     {/*{gyroroue.data.commentaire}*/}
                     <PrismicRichText field={gyroroue.data.commentaire_new} />
@@ -433,10 +462,16 @@ export function BonheurScore({
               </div>
             </CardBody>
             {/*TROISIEME PARTIE : NOTE ET POINTS*/}
-            <CardFooter className="flex flex-col md:flex-row gap-1 items-center place-items-center mt-3 mb-2 p-0">
+            <CardFooter
+              className="flex md:flex-row gap-1 items-center
+            place-items-center mt-2 mb-2 p-0"
+            >
               {/* Colonne Note Globale */}
-              <aside className="w-full md:w-1/3 flex items-center justify-center">
-                <div className="relative rounded-full w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
+              <aside className="w-1/3 flex items-center justify-center md:ml-6">
+                <div
+                  className="relative rounded-full
+                w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40"
+                >
                   <picture
                     className="absolute inset-0 rounded-full bg-transparent border-0"
                     style={{
@@ -449,14 +484,17 @@ export function BonheurScore({
                     <p className="text-xs lg:text-xl font-extrabold text-black dark:text-gray-100">
                       Note Globale
                     </p>
-                    <p className="text-2xl lg:text-3xl font-semibold text-red-600 dark:text-red-400">
+                    <p className="text-2xl lg:text-3xl font-bold text-red-600 dark:text-red-400">
                       {gyroroue.data.note}/10
                     </p>
                   </div>
                 </div>
               </aside>
               {/* Colonne Critères */}
-              <aside className="w-2/3 md:w-2/3 lg:w-3/5 grid grid-cols-3 gap-2 my-0 mb-1">
+              <aside
+                className="w-2/3 grid grid-cols-3
+                md:mx-12 lg:mx-20"
+              >
                 {[
                   {
                     icon: FaTrophy,
@@ -498,7 +536,7 @@ export function BonheurScore({
                   <Tooltip
                     key={idx}
                     content={item.survol}
-                    className="w-[150px] text-center text-xs shadow-lg py-1
+                    className="w-[150px] text-center text-xs shadow-lg py-1 rounded-sm
                      bg-slate-100   dark:bg-cyan-700
                      text-indigo-600  dark:text-white"
                     offset={-17}
