@@ -42,7 +42,7 @@ const MYEWFR = () => {
         <div className="flex-1 place-content-center">
           <p className="text-center mb-1 text-lg">
             <Link
-              href="https://www.youtube.com/watch?v=VPXLMrs_Ne4"
+              href="https://www.youtube.com/@MyEWheel/videos"
               target="_blank"
               className="link-style font-bold hover:text-pink-600 dark:hover:text-pink-900"
             >
