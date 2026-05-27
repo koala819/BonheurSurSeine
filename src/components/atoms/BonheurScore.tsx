@@ -227,8 +227,8 @@ export function BonheurScore({
                 }}
               >
                 <div className="max-w-6xl mx-auto px-2 mb-1">
-                  <p className="text-justify text-base mb-1">
-                    Ces notes reflètent uniquement{' '}
+                  <p className="text-left text-base mb-1">
+                    Les notes du BonheurScore reflètent uniquement{' '}
                     <strong className="text-fuchsia-700 dark:text-violet-400">
                       ma vision
                     </strong>
@@ -266,11 +266,11 @@ export function BonheurScore({
                     </li>
                   </ul>
                   <p className="mt-1">
-                    Pour en savoir plus sur la{' '}
+                    Pour en savoir plus sur comment je fais ma{' '}
                     <span className="text-fuchsia-700 dark:text-violet-400">
                       <strong>notation</strong>
                     </span>
-                    , tu peux consulter :{' '}
+                    , tu peux consulter{' '}
                     <Link
                       href="https://www.youtube.com/watch?v=-oyKpFbDgR8"
                       target="_blank"

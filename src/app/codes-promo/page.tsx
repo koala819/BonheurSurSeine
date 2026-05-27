@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-//import BoutiqueMEWfr from '@/src/components/atoms/CodePromo_1MEWfr'
+import BoutiqueMEWfr from '@/src/components/atoms/CodePromo_1MEWfr'
 import GrillePromo from '@/src/components/atoms/CodePromo_2grillepartenaires'
 
 import { createClient } from '@/prismicio'
@@ -28,25 +28,29 @@ export default async function Page() {
       <h1 className="whitespace-break-spaces">
         Profite d&apos;Offres Exclusives&nbsp;!
       </h1>
-      <p className="text-justify">
+      <p className="text-left">
         Retrouve ici tous les{' '}
         <strong className="dark:text-brown-300">codes promo exclusifs</strong>{' '}
         négociés avec les partenaires de la chaîne Bonheur sur Seine.
         <br />
         Parfait pour acheter une gyroroue, s&apos;équiper en accessoires de
-        mobilité électrique ou{' '}
+        mobilité électrique et{' '}
         <strong className="dark:text-brown-300">
           profiter de réductions
         </strong>{' '}
         dans des boutiques spécialisées -{' '}
         <strong className="dark:text-brown-300">
-          tout en soutenant directement la chaîne&nbsp;!
+          tout en soutenant directement la chaîne et lui permettre de continuer
+          à exister&nbsp;!
         </strong>{' '}
         😁
       </p>
 
       {/* Capsule Boutique avec Timer */}
       {/* <BoutiqueMEWfr /> */}
+      <div className="md:mx-4">
+        <BoutiqueMEWfr />
+      </div>
 
       {/* Grille de promos partenaires */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">

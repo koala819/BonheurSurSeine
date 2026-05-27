@@ -11,37 +11,48 @@ import vendeurRapha from '@/public/0.boutique/myewheel-logo-raph.jpg'
 const MYEWFR = () => {
   return (
     <div
-      className="rounded-2xl p-4 shadow-md flex flex-col items-center justify-center text-center space-y-2
-      bg-gradient-to-r from-indigo-200 to-purple-200 text-gray-900
-      dark:from-pink-500 dark:to-orange-400 dark:text-white"
+      className="rounded-2xl py-4 shadow-md flex flex-col items-center justify-center text-center space-y-2
+      bg-gradient-to-r from-green-100 to-sky-200 text-gray-900
+      dark:from-pink-500/90 dark:to-orange-400/90 dark:text-white"
     >
       {/* LOGO */}
       <Link href={'https://myewheel.com/fr/'} target="_blank">
         <Image
           src={Image_mewfr}
           alt="MyEWheel France"
-          className="rounded-lg w-full object-cover shadow-sm
-                  bg-white/80 dark:bg-white/50 min-w-[90px] max-w-[250px] items-center"
+          className="rounded-lg w-full object-cover
+                  bg-white/80 dark:bg-white/50 min-w-[90px] max-w-[250px] items-center
+              border border-gray-200 dark:border-gray-600
+              shadow-md hover:shadow-lg transition-shadow duration-300
+            shadow-gray-400 hover:shadow-gray-400
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            hover:border-sky-700    dark:hover:border-sky-600
+              hover:-translate-y-[1px]"
           priority={false}
         />
       </Link>
 
       {/* TEXTE + IMAGE */}
-      <div className="flex flex-col-reverse min-[485px]:flex-row items-center gap-1 md:gap-6">
+      <div
+        className="flex flex-col-reverse min-[485px]:flex-row items-center
+        mx-1 sm:mx-2 md:mx-4
+        gap-0.5 sm:gap-1 md:gap-6"
+      >
         {/* gauche */}
         <div className="flex-1 place-content-center">
-          <p className="text-center">
+          <p className="text-center mb-1 text-lg">
             <Link
               href="https://www.youtube.com/watch?v=VPXLMrs_Ne4"
               target="_blank"
               className="link-style font-bold hover:text-pink-600 dark:hover:text-pink-900"
             >
-              Découvre la boutique dans laquelle je travaille
+              C&apos;est la boutique où je travaille
             </Link>
             &nbsp;🎥
-            <br /> Proche des clients, elle met toute son énergie à leur
-            service, et elle <u>m&apos;offre les moyens</u> de faire vivre la
-            communauté…
+          </p>
+          <p className="text-left sm:text-center ml-3">
+            Proche des clients, elle met toute son énergie à leur service, et
+            elle <u>m&apos;offre les moyens</u> de faire vivre la communauté…
           </p>
         </div>
         {/* droite */}
@@ -57,7 +68,7 @@ const MYEWFR = () => {
       </div>
 
       {/* TEXTE */}
-      <p className="font-semibold text-center mx-4 sm:mx-8 md:mx-10">
+      <p className="font-semibold text-left sm:text-center mx-4 sm:mx-8 md:mx-10">
         En achetant ta roue chez MyEWheel, tu soutiens réellement la chaîne, et
         tu lui permets de continuer à vivre.
       </p>
