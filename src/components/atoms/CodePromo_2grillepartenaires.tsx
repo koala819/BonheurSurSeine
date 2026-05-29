@@ -46,7 +46,7 @@ export default function CardPromo({
           className="relative overflow-hidden rounded-xl
           shadow-md shadow-gray-400 dark:shadow-neutral-900
           bg-slate-50 dark:bg-slate-800
-          aspect-[16/9] w-1/2 sm:w-3/4 xl:w-3/4
+          aspect-[16/9] w-[150px] lg:w-[200px]
           flex items-center
            hover:shadow-lg"
         >
