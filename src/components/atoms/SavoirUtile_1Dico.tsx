@@ -269,7 +269,7 @@ const Practical_Dico = () => {
 
           {/* Barre de navigation alphabétique */}
           <div className="p-4">
-            <div className="flex flex-wrap justify-center gap-1 my-2 text-sm mt-0 mb-0">
+            <div className="flex flex-wrap justify-center gap-1 my-2 text-sm mt-0 mb-0 sm:mx-12">
               {alphabet.map((letter) => (
                 <button
                   key={letter}

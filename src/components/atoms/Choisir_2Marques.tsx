@@ -386,15 +386,24 @@ const Marques = () => {
               d&apos;ingénieurs spécialisés.
             </p>
             <p className="mt-0 mb-4">
-              Mais il faut garder à l&apos;esprit que ces fabricants, pourtant
-              connus dans le monde entier, restent de{' '}
+              💡&nbsp;
+              <strong className="text-sky-800 dark:text-sky-400">
+                Le savais-tu&nbsp;?
+              </strong>{' '}
+              Ces fabricants, pourtant connus dans le monde entier, ne sont pas
+              des multinationales aux budgets illimités. Ce sont de{' '}
               <strong className="text-sky-800 dark:text-sky-400">
                 très petites structures
               </strong>{' '}
-              (parfois &lt;100 employés). La conception, la fabrication et
-              l&apos;assemblage des produits sont réalisés en interne et en
-              petites séries, avec une part encore significative de travail
-              manuel.
+              de quelques centaines d&apos;employés (parfois
+              &lt;50&nbsp;employés) avec de petites équipes de passionnés et
+              d&apos;ingénieurs. <br />
+              Ici, les moyens sont limités&nbsp;: la conception, la fabrication
+              et l&apos;assemblage sont réalisés en interne et en petites
+              séries. Une part significative du travail reste manuelle, ce qui
+              donne à notre passion ce côté presque &laquo;artisanal&raquo;,
+              avec ses incroyables innovations… mais aussi ses petits défauts de
+              jeunesse&nbsp;!
             </p>
             <p className="text-gray-500 dark:text-gray-300 text-right text-small sm:ml-32">
               <i>
