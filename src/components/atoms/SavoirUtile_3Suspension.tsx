@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Les3pneus from '@/public/4.guide/Pneus1_les_structures.jpg'
+import Les3suspensions from '@/public/4.guide/Pneus1_les_structures.jpg'
 
 const Pneu = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -14,7 +14,7 @@ const Pneu = () => {
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
   //Pour l'image
   const [isOpen1, setIsOpen1] = useState(false)
-  const [isOpen2, setIsOpen2] = useState(false)
+  //const [isOpen2, setIsOpen2] = useState(false)
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -82,77 +82,18 @@ const Pneu = () => {
             indicator: 'data-[open=true]:rotate-180 transition-transform',
           }}
         >
-          {/*------------------INTRO----------------------------------------*/}
-
           {/*---------------------------------------------------------------*/}
-          <div className="relative max-w-4xl mx-auto order-first md:order-last">
-            <Image
-              src={Les3pneus}
-              alt="Image de pneus"
-              className="w-full max-w-3xl mx-auto rounded-2xl object-cover object-center cursor-pointer shadow-md hover:shadow-lg dark:shadow-slate-600"
-              priority
-              placeholder="blur"
-              onClick={() => setIsOpen1(true)} // 👈 ouvre la lightbox
-            />
-          </div>
-          {/* Lightbox */}
-          {isOpen1 && (
-            <div
-              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 pt-40"
-              onClick={() => setIsOpen1(false)} // clic fond ferme
-            >
-              <div className="relative max-w-5xl w-full p-4 ">
-                <button
-                  className="absolute top-4 right-4 text-blue-300 text-5xl font-bold"
-                  onClick={() => setIsOpen1(false)}
-                >
-                  ✕&nbsp;
-                </button>
-                <Image
-                  src={Les3pneus}
-                  alt="Image de pneus"
-                  className="w-full rounded-xl shadow-lg border-medium border-blue-300"
-                  priority
-                />
-              </div>
-            </div>
-          )}
-          {/*---------------------------------------------------------------*/}
-
-          {/*---------------------------------------------------------------*/}
-          {/*------------------ENTRETIEN -----------------------------------*/}
-          <h4 className="mt-6 mb-2">➡️ Entretenir et changer son pneu</h4>
-          <div className="pinkBlock mb-2">
-            <b className="mb-0 mt-0">
-              ⚠️ Un pneu usé = moins d&apos;adhérence + risque de chute.
-            </b>
-          </div>
-          <p className="">
-            Inspecte régulièrement les signes visuels d&apos;usure&nbsp;:
-          </p>
-          <ul className="compactlist2 mb-2">
-            <li>Coupures, traces de clous, micro-fissures…</li>
-            <li>Bande centrale lisse, perte d&apos;adhérence notable…</li>
-          </ul>
-          <p className="">
-            <b>Usure et durée de vie&nbsp;: </b>en moyenne, 6&nbsp;000 à
-            8&nbsp;000&nbsp;km (variable selon la conduite, le poids, le
-            terrain…).
-          </p>
-          {/*---------------------------------------------------------------*/}
-          {/*------------------CHOIX SUSPENSION----------------------------*/}
-          <h4 className="mt-6 mb-2">
-            ➡️ Un critère de choix : gadget ou révolution ?
-          </h4>
-
           <p>
             À leurs débuts, les gyroroues ne possédaient aucune suspension. Le
             confort dépendait alors uniquement du pneu, de sa pression… et des
             jambes du wheeler 😅
           </p>
-
-          <div className="blueBlock my-3">
-            <p className="mb-0">
+          <p>
+            Mais il faut reconnaître qu&apos;une fois habitués à une roue
+            suspendue, beaucoup de wheelers ont du mal à revenir en arrière.
+          </p>
+          <div className="blueBlock">
+            <p className="">
               Et pourtant, des milliers de kilomètres ont été parcourus ainsi.
               La suspension n&apos;est donc pas indispensable. D&apos;ailleurs,
               les roues les plus compactes, légères et pratiques du quotidien en
@@ -160,29 +101,23 @@ const Pneu = () => {
             </p>
           </div>
 
-          <p>
-            Mais il faut reconnaître qu&apos;une fois habitués à une roue
-            suspendue, beaucoup de wheelers ont du mal à revenir en arrière.
-          </p>
+          {/*------------------CHOIX SUSPENSION----------------------------*/}
+          <h4 className="mt-6 mb-2">➡️ Gadget ou révolution ?</h4>
 
           <p>
             La suspension est devenue un véritable critère lors du choix
             d&apos;une roue.
           </p>
-
           <p>
             Pourquoi un tel succès ? Parce qu&apos;elle améliore fortement le
             confort et la stabilité en absorbant une partie des irrégularités du
             terrain : pavés, trous, racines, bosses ou défauts du bitume.
           </p>
-
           <p>
             Le wheeler est moins secoué et les longs trajets deviennent souvent
             beaucoup plus agréables.
           </p>
-
           <p>Pour autant, une roue suspendue n&apos;est pas obligatoire.</p>
-
           <p>
             Pour les petits trajets urbains, l&apos;apprentissage, un budget
             réduit ou une conduite tranquille, une roue sans suspension peut
@@ -190,7 +125,6 @@ const Pneu = () => {
           </p>
 
           <p>Elle sera souvent :</p>
-
           <ul className="compactlist2">
             <li>plus légère ;</li>
             <li>plus compacte ;</li>
@@ -199,7 +133,6 @@ const Pneu = () => {
           </ul>
 
           <p>La suspension devient particulièrement intéressante :</p>
-
           <ul className="compactlist2">
             <li>sur mauvais revêtements ;</li>
             <li>en offroad ;</li>
@@ -208,7 +141,6 @@ const Pneu = () => {
           </ul>
 
           <p>En contrepartie, elle apporte aussi quelques inconvénients :</p>
-
           <ol className="compactlist2">
             <li>
               davantage de pièces mécaniques et donc une complexité supérieure ;
@@ -306,134 +238,126 @@ const Pneu = () => {
             en encourageant certains wheelers à rouler plus vite ou sur des
             terrains plus engagés.
           </p>
-
-          {/*------------------IDEES RECUES----------------------------*/}
-          <div className="grid gap-4 md:grid-cols-2 mt-4">
-            {/* Bloc 1 - Accident */}
-            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">
-                🚨 Que faire en cas d&apos;accident&nbsp;?
-              </h3>
-              <p className="text-sm">
-                Un accident génère toujours du stress. Même sans gravité,
-                remplis systématiquement un constat amiable (l&apos;idéal est
-                d&apos;en avoir un prérempli avec ses informations).
-                <br />
-                Pour savoir comment réagir, consulte cet{' '}
-                <Link
-                  href="https://www.anumme.fr/2020/02/29/edpm-nvei-que-faire-en-cas-daccident-guide-du-constat-amiable/"
-                  target="_blank"
-                  className="link-style text-sm font-semibold"
-                >
-                  article très complet rédigé par l&apos;ANUMME
-                </Link>
-                &nbsp;!
-              </p>
-            </div>
-
-            {/* Bloc 2 - Assurance */}
-            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-2">
-                💰 Le budget assurance
-              </h3>
-              <p className="text-sm">
-                L&apos;assurance d&apos;un EDPM est accessible{' '}
-                <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
-                  à partir de 5-10€/mois
-                </span>{' '}
-                (couverture RC). La majorité des compagnies proposent des
-                formules variées, avec des niveaux de couverture adaptés aux
-                besoins de chacun.
-              </p>
-            </div>
+          {/*---------------------------------------------------------------*/}
+          <div className="relative max-w-4xl mx-auto order-first md:order-last">
+            <Image
+              src={Les3suspensions}
+              alt="Image de pneus"
+              className="w-full max-w-3xl mx-auto rounded-2xl object-cover object-center cursor-pointer shadow-md hover:shadow-lg dark:shadow-slate-600"
+              priority
+              placeholder="blur"
+              onClick={() => setIsOpen1(true)} // 👈 ouvre la lightbox
+            />
           </div>
+          {/* Lightbox */}
+          {isOpen1 && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 pt-40"
+              onClick={() => setIsOpen1(false)} // clic fond ferme
+            >
+              <div className="relative max-w-5xl w-full p-4 ">
+                <button
+                  className="absolute top-4 right-4 text-blue-300 text-5xl font-bold"
+                  onClick={() => setIsOpen1(false)}
+                >
+                  ✕&nbsp;
+                </button>
+                <Image
+                  src={Les3suspensions}
+                  alt="Image de pneus"
+                  className="w-full rounded-xl shadow-lg border-medium border-blue-300"
+                  priority
+                />
+              </div>
+            </div>
+          )}
+          {/*------------------IDEES RECUES----------------------------*/}
           <h4 className="mt-8 mb-2">➡️ Attention aux idées reçues</h4>
 
-          <div className="blueBlock my-3">
+          <div className="grid gap-4 md:grid-cols-2 mt-4">
+            {/* Bloc 1 ------------------DEBATTEMENT----------------------------*/}
+            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold mb-2">
+                🟠 Le débattement : un indicateur parmi d&apos;autres
+              </h4>
+              <p className="text-sm">
+                Le débattement correspond à la course maximale de la suspension.
+                On parle généralement de 60 mm, 70 mm, 90 mm ou davantage.
+              </p>
+              <p className="text-sm">
+                Sur le papier, un grand débattement permet d&apos;absorber des
+                chocs plus importants.
+              </p>
+              <p className="text-sm">
+                Mais un débattement de 90 mm n&apos;est pas automatiquement
+                meilleur qu&apos;un débattement de 60 mm. La qualité d&apos;une
+                suspension dépend aussi :
+              </p>
+              <ul className="compactlist2">
+                <li className="text-sm">de sa conception ;</li>
+                <li className="text-sm">de ses réglages ;</li>
+                <li className="text-sm">de sa progressivité ;</li>
+                <li className="text-sm">de sa rigidité ;</li>
+                <li className="text-sm">du comportement global de la roue.</li>
+              </ul>
+              <p className="text-sm">
+                Une suspension bien conçue avec peu de débattement peut parfois
+                être plus efficace qu&apos;une suspension mal conçue avec une
+                grande course.
+              </p>
+              <p className="text-sm">
+                Comme souvent, les chiffres seuls ne racontent pas toute
+                l&apos;histoire.
+              </p>
+            </div>
+
+            {/* Bloc 2 ------------------CONDUITE---------------------------- */}
+            <div className="bg-stone-100 dark:bg-zinc-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h4 className="text-lg font-semibold mb-2">
+                🟠 Suspension ≠ conduite sans effort
+              </h4>
+              <p className="text-sm">
+                Une roue suspendue pardonne davantage certaines imperfections du
+                terrain.
+              </p>
+              <p className="text-sm">
+                Mais cela peut aussi créer un faux sentiment de sécurité.
+              </p>
+              <ul className="compactlist2">
+                <li className="text-sm">un nid-de-poule reste dangereux ;</li>
+                <li className="text-sm">
+                  un trottoir mal abordé peut provoquer une chute ;
+                </li>
+                <li className="text-sm">
+                  une mauvaise trajectoire reste une mauvaise trajectoire.
+                </li>
+              </ul>
+              <p className="text-sm">
+                La suspension doit être considérée comme un équipement
+                complémentaire, pas comme une solution miracle.
+              </p>
+              <p className="text-sm">
+                Les gyroroues n&apos;ont d&apos;ailleurs pas été conçues à
+                l&apos;origine pour dévaler des escaliers ou réaliser des sauts
+                comme un VTT de descente.
+              </p>
+              <p className="text-sm">
+                Certaines roues modernes en sont capables, mais cela reste une
+                pratique exigeante qui sollicite énormément le matériel.
+              </p>
+              <div className="greenBlock my-4">
+                <p className="mb-0">
+                  👉 Le bon sens reste le meilleur amortisseur 😉
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="blueBlock mb-4">
             <p className="mb-0">
               👉 Comme souvent en gyroroue, il n&apos;existe pas de solution
               parfaite. Le meilleur choix dépend avant tout de ton usage, de ton
               terrain et des sensations que tu recherches.
-            </p>
-          </div>
-
-          {/*------------------DEBATTEMENT----------------------------*/}
-          <h4 className="mt-8 mb-2">
-            ➡️ Le débattement : un indicateur parmi d&apos;autres
-          </h4>
-
-          <p>
-            Le débattement correspond à la course maximale de la suspension.
-          </p>
-
-          <p>On parle généralement de 60 mm, 70 mm, 90 mm ou davantage.</p>
-
-          <p>
-            Sur le papier, un grand débattement permet d&apos;absorber des chocs
-            plus importants.
-          </p>
-
-          <p>
-            Mais un débattement de 90 mm n&apos;est pas automatiquement meilleur
-            qu&apos;un débattement de 60 mm.
-          </p>
-
-          <p>La qualité d&apos;une suspension dépend aussi :</p>
-
-          <ul className="compactlist2">
-            <li>de sa conception ;</li>
-            <li>de ses réglages ;</li>
-            <li>de sa progressivité ;</li>
-            <li>de sa rigidité ;</li>
-            <li>du comportement global de la roue.</li>
-          </ul>
-
-          <p>
-            Une suspension bien conçue avec peu de débattement peut parfois être
-            plus efficace qu&apos;une suspension mal conçue avec une grande
-            course.
-          </p>
-
-          <p>
-            Comme souvent, les chiffres seuls ne racontent pas toute
-            l&apos;histoire.
-          </p>
-
-          {/*------------------CONDUITE----------------------------*/}
-          <h4 className="mt-8 mb-2">➡️ Suspension ≠ conduite sans effort</h4>
-
-          <p>
-            Une roue suspendue pardonne davantage certaines imperfections du
-            terrain.
-          </p>
-
-          <p>Mais cela peut aussi créer un faux sentiment de sécurité.</p>
-
-          <ul className="compactlist2">
-            <li>un nid-de-poule reste dangereux ;</li>
-            <li>un trottoir mal abordé peut provoquer une chute ;</li>
-            <li>une mauvaise trajectoire reste une mauvaise trajectoire.</li>
-          </ul>
-
-          <p>
-            La suspension doit être considérée comme un équipement
-            complémentaire, pas comme une solution miracle.
-          </p>
-
-          <p>
-            Les gyroroues n&apos;ont d&apos;ailleurs pas été conçues à
-            l&apos;origine pour dévaler des escaliers ou réaliser des sauts
-            comme un VTT de descente.
-          </p>
-
-          <p>
-            Certaines roues modernes en sont capables, mais cela reste une
-            pratique exigeante qui sollicite énormément le matériel.
-          </p>
-
-          <div className="greenBlock my-4">
-            <p className="mb-0">
-              👉 Le bon sens reste le meilleur amortisseur 😉
             </p>
           </div>
 
@@ -451,7 +375,20 @@ const Pneu = () => {
             techniques et continuent encore aujourd&apos;hui à faire évoluer
             leurs systèmes.
           </p>
-
+          <div className="blueBlock mb-4">
+            <b className="mb-0 mt-0">
+              Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
+              une donnée absolue. <br />
+            </b>
+            <p>
+              Elle dépend de nombreux paramètres&nbsp;:{' '}
+              <i>
+                poids du wheeler, accélérations, vitesse, pression et type de
+                pneu, vent, température ambiante, terrain, profil et nature du
+                trajet…
+              </i>
+            </p>
+          </div>
           <p>
             Chaque fabricant fait des choix différents selon l&apos;usage visé :
             roue urbaine, tout-terrain, randonnée ou pratique sportive.
