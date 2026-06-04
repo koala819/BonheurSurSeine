@@ -85,12 +85,12 @@ const Pneu = () => {
           {/*--------------------- INTRO ---------------------------------*/}
           <p>
             À leurs débuts, les gyroroues ne possédaient aucune suspension. Le
-            confort dépendait alors uniquement du pneu, de sa pression… et des
-            jambes du wheeler 😅
+            confort dépendait alors uniquement du pneu… et des jambes du wheeler
+            😅
           </p>
           <p>
-            Mais il faut reconnaître qu&apos;une fois habitués à une roue
-            suspendue, beaucoup de wheelers ont du mal à revenir en arrière.
+            Mais il faut reconnaître qu&apos;une fois habitué à une roue
+            suspendue, difficile revenir en arrière.
           </p>
           <div className="blueBlock">
             <p className="">
@@ -101,179 +101,104 @@ const Pneu = () => {
           </div>
 
           {/*------------- Gadget ou révolution -----------------------*/}
-
-          <h4 className="mt-6 mb-2">➡️ Gadget ou révolution ?</h4>
-
+          <h4 className="mt-6 mb-2">➡️ Vraiment une révolution ?</h4>
           <p>
-            La suspension est devenue un véritable critère lors du choix
-            d&apos;une roue.
+            L&apos;ajout d&apos;une suspension a été une des évolutions les plus
+            marquantes de la gyroroue. C&apos;en est devenu{' '}
+            <Link href={'/choisir-gyroroue#besoins'} target="_blank">
+              un véritable critère de choix{' '}
+            </Link>
+            lors de l&apos;achat d&apos;une roue.
           </p>
           <p>
-            Pourquoi un tel succès ? Parce qu&apos;elle améliore fortement le
-            confort et la stabilité en absorbant une partie des irrégularités du
-            terrain : pavés, trous, racines, bosses ou défauts du bitume.
-          </p>
-          <p>
-            Le wheeler est moins secoué et les longs trajets deviennent souvent
-            beaucoup plus agréables.
-          </p>
-          <p>
-            Pour les petits trajets urbains, l&apos;apprentissage, un budget
-            réduit ou une conduite tranquille, une roue sans suspension peut
-            largement suffire. D&apos;ailleurs, les roues les plus compactes,
-            légères et pratiques du quotidien en sont souvent dépourvues.
+            Pourquoi un tel succès ? Parce qu&apos;elle améliore le confort et
+            la stabilité en absorbant une grande partie des chocs et des
+            vibrations du terrain&nbsp;: pavés, trous, racines, nids de poules,
+            bosses... Tout devient beaucoup moins fatigants et plus
+            agréable&nbsp;!
           </p>
 
-          <p>Elle sera souvent :</p>
-          <ul className="compactlist2">
-            <li>plus légère ;</li>
-            <li>plus compacte ;</li>
-            <li>plus simple mécaniquement ;</li>
-            <li>parfois plus joueuse.</li>
-          </ul>
-
-          <p>La suspension devient particulièrement intéressante :</p>
-          <ul className="compactlist2">
-            <li>sur mauvais revêtements ;</li>
-            <li>en offroad ;</li>
-            <li>en conduite sportive ;</li>
-            <li>pour améliorer le confort au quotidien.</li>
-          </ul>
-
-          <p>En contrepartie, elle apporte aussi quelques inconvénients :</p>
-          <ol className="compactlist2">
-            <li>
-              davantage de pièces mécaniques et donc une complexité supérieure ;
-            </li>
-            <li>
-              un prix et un poids plus élevés à batterie et puissance égales ;
-            </li>
-            <li>un entretien régulier indispensable.</li>
-          </ol>
-
-          <p>
-            À poids équivalent, il faut souvent choisir entre davantage de
-            batterie ou la présence d&apos;une suspension.
+          <p className="mt-2">
+            Mais cette amélioration du confort a un coût&nbsp;: prix,
+            encombrement, poids, usure, pièces mécaniques, entretien...{' '}
           </p>
 
           <div className="blueBlock my-4">
             <p className="mb-0">
-              👉 Une suspension n&apos;est ni indispensable… ni inutile. Tout
-              dépend avant tout de ton usage.
+              👉 La vraie question n&apos;est donc pas juste « avec ou sans
+              suspension&nbsp;? », mais plutôt&nbsp;:{' '}
+              <strong>mon usage justifie-t-il ces compromis ?</strong>
             </p>
           </div>
-          <h4 className="mt-6 mb-2">➡️ Gadget ou révolution ?</h4>
-
-          <p>
-            La suspension est devenue l'une des évolutions les plus marquantes
-            de la gyroroue moderne.
-          </p>
-
-          <p>
-            Son principal objectif est simple : améliorer le confort en
-            absorbant une partie des chocs et vibrations transmis au pilote.
-          </p>
-
-          <p>
-            Pavés, trous, racines, bosses ou revêtements dégradés deviennent
-            alors beaucoup moins fatigants à parcourir.
-          </p>
-
-          <div className="greenBlock my-4">
-            <p className="mb-0">
-              👉 Plus le terrain est irrégulier et plus le trajet est long, plus
-              l'intérêt d'une suspension se fait généralement ressentir.
-            </p>
-          </div>
-
-          <p>
-            Mais cette amélioration du confort a un coût. Une suspension ajoute
-            des composants mécaniques, du poids, de l'encombrement et nécessite
-            davantage d'entretien.
-          </p>
-
-          <p>
-            À batterie et puissance équivalentes, une roue suspendue est souvent
-            plus lourde et plus chère qu'une roue rigide.
-          </p>
-
-          <div className="blueBlock my-4">
-            <p className="mb-0">
-              👉 La vraie question n'est donc pas « suspension ou non ? », mais
-              plutôt : <strong>mon usage justifie-t-il ses compromis ?</strong>
-            </p>
-          </div>
-
-          <p>
-            Pour un usage urbain occasionnel, de courts trajets ou un budget
-            limité, une roue sans suspension peut parfaitement convenir.
-          </p>
-
-          <p>
-            À l'inverse, les longues distances, les routes dégradées, l'offroad
-            ou une pratique plus sportive sont souvent les situations où la
-            suspension apporte le plus de bénéfices.
-          </p>
 
           {/*----------------------------Tableau-----------------------------------*/}
-          <div className="overflow-x-auto my-6">
-            <table className="w-full border-collapse rounded-lg overflow-hidden shadow-md">
+          <div className="overflow-x-auto p-1">
+            <table
+              className="w-full border-collapse rounded-lg overflow-hidden shadow-md
+            dark:shadow-neutral-900"
+            >
               <thead>
-                <tr className="bg-sky-700 text-white">
-                  <th className="p-3 text-left">✅ Avantages</th>
-                  <th className="p-3 text-left">⚠️ Inconvénients / limites</th>
+                <tr className="bg-sky-700 text-white text-base">
+                  <th className="py-3 px-2 text-left">Situation</th>
+                  <th className="py-3 px-2 text-center">Intérêt</th>
+                  <th className="py-3 px-2 text-right">Gains / compromis</th>
                 </tr>
               </thead>
-
-              <tbody>
-                <tr className="border-b dark:border-gray-600">
-                  <td className="p-3">Confort supérieur</td>
-                  <td className="p-3">Prix d&apos;achat plus élevé</td>
-                </tr>
-
-                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-800/30">
-                  <td className="p-3">Réduction de la fatigue</td>
-                  <td className="p-3">
-                    Poids supérieur (à batterie équivalente)
+              <tbody className="text-sm md:text-base">
+                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
+                  <td className="p-2">🏙️ Urbain court / occasionnel</td>
+                  <td className="p-2">🤔 Faible</td>
+                  <td className="p-2">
+                    + simplicité, légèreté, coût réduit <br />− confort limité
+                    sur routes dégradées
                   </td>
                 </tr>
-
-                <tr className="border-b dark:border-gray-600">
-                  <td className="p-3">
-                    Gain de sécurité (absorption des trous, bosses et pavés)
-                  </td>
-                  <td className="p-3">Complexité mécanique</td>
-                </tr>
-
-                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-800/30">
-                  <td className="p-3">
-                    Passe partout (chemin, offroad, sauts)
-                  </td>
-                  <td className="p-3">Entretien supplémentaire</td>
-                </tr>
-
-                <tr className="border-b dark:border-gray-600">
-                  <td className="p-3">
-                    Plus de stabilité sur les surfaces irrégulières
-                  </td>
-                  <td className="p-3">Roue souvent plus encombrante</td>
-                </tr>
-
-                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-800/30">
-                  <td className="p-3">
-                    Permet de rouler plus confort à vitesse égale
-                  </td>
-                  <td className="p-3">
-                    Peut encourager une prise de risque excessive
+                <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
+                  <td className="p-2">🎓 Apprentissage</td>
+                  <td className="p-2">🤔 Optionnelle</td>
+                  <td className="p-2">
+                    + tolérance aux irrégularités <br />− complexité et coût non
+                    essentiels
                   </td>
                 </tr>
-
-                <tr>
-                  <td className="p-3">
-                    Facilite l&apos;accès aux terrains accidentés
+                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
+                  <td className="p-2">🎒 Légèreté / compacité</td>
+                  <td className="p-2">❌ Peu adaptée</td>
+                  <td className="p-2">
+                    + confort supplémentaire <br />− poids, encombrement,
+                    multi-modalité réduite
                   </td>
-                  <td className="p-3">
-                    À poids égal, moins de marge pour embarquer de la batterie
+                </tr>
+                <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
+                  <td className="p-2">💰 Budget limité</td>
+                  <td className="p-2">❌ Peu adaptée</td>
+                  <td className="p-2">
+                    + confort et sécurité <br />− prix élevé, entretien,
+                    complexité
+                  </td>
+                </tr>
+                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
+                  <td className="p-2">🚗 Trajets longs / quotidiens</td>
+                  <td className="p-2">✅ Très intéressante</td>
+                  <td className="p-2">
+                    + forte réduction de fatigue, confort <br />− poids et coût
+                    supérieurs
+                  </td>
+                </tr>
+                <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
+                  <td className="p-2">🌲 Offroad / chemins dégradés</td>
+                  <td className="p-2">✅ Recommandée</td>
+                  <td className="p-2">
+                    + absorption des chocs, stabilité, sécurité <br />−
+                    entretien plus important
+                  </td>
+                </tr>
+                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
+                  <td className="p-2">⚡ Conduite sportive</td>
+                  <td className="p-2">👍 Variable selon usage</td>
+                  <td className="p-2">
+                    + contrôle et confort à haute vitesse <br />− risque de
+                    surconfiance, poids
                   </td>
                 </tr>
               </tbody>
@@ -292,17 +217,6 @@ const Pneu = () => {
             </p>
           </div>
 
-          <p>
-            Certaines recherches parlent d&apos;homéostasie du risque :
-            lorsqu&apos;un équipement nous donne un sentiment de sécurité
-            supplémentaire, nous avons parfois tendance à prendre davantage de
-            risques.
-            <br />
-            La suspension peut donc améliorer le confort et la stabilité tout en
-            encourageant certains à rouler plus vite ou sur des terrains plus
-            engagés.
-          </p>
-
           <h5 className="font-bold mt-5 mb-0">🔧 Et l&apos;entretien&nbsp;?</h5>
           <p>
             Comme sur un vélo ou une moto, une suspension travaille en
@@ -319,6 +233,7 @@ const Pneu = () => {
             Une suspension mal entretenue peut perdre en efficacité, devenir
             inconfortable, voire dangereuse (généré des déséquilibres).
           </p>
+
           {/*----------------------------image-----------------------------------*/}
           <div className="relative max-w-4xl mx-auto order-first md:order-last">
             <Image
