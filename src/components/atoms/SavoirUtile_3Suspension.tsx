@@ -14,7 +14,6 @@ const Suspension = () => {
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
   //Pour l'image
   const [isOpen1, setIsOpen1] = useState(false)
-  //const [isOpen2, setIsOpen2] = useState(false)
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -239,6 +238,15 @@ const Suspension = () => {
               de marche ! Mais les suspensions ne sont pas conçues pour
               encaisser cela au quotidien.
             </p>
+            <p className="">
+              Les gyroroues n&apos;ont d&apos;ailleurs pas été conçues à
+              l&apos;origine pour dévaler des escaliers ou réaliser des sauts
+              comme un VTT de descente.
+            </p>
+            <p className="">
+              Certaines roues modernes en sont capables, mais cela reste une
+              pratique exigeante qui sollicite énormément le matériel.
+            </p>
           </div>
           {/*------------------------------------------------------------*/}
           {/*------------------ IDEES RECUES ----------------------------*/}
@@ -270,7 +278,7 @@ const Suspension = () => {
                 <ul className="compactlist2">
                   <li className="text-sm">de la conception (la cinématique)</li>
                   <li className="text-sm">
-                    des réglages disponibles (précharge, compression, détente…)
+                    des réglages (précharge, compression, détente…)
                   </li>
                   <li className="text-sm">
                     de la progressivité de l&apos;amortisseur
@@ -288,7 +296,7 @@ const Suspension = () => {
               </div>
               <p className="text-sm">
                 👉 Un grand débattement ne fait pas systématiquement une
-                meilleure suspenion..
+                meilleure suspension.
               </p>
             </div>
 
@@ -298,13 +306,12 @@ const Suspension = () => {
                 🟠 Suspension ≠ conduite sans effort
               </h4>
               <p className="text-sm">
-                Une roue suspendue absorbe une partie des irrégularités du
-                terrain, ce qui améliore nettement le confort et la tolérance à
-                certaines erreurs.
+                La suspension absorbe une grande partie des irrégularités du
+                terrain.
               </p>
               <p className="text-sm">
                 Mais cet avantage peut aussi créer un faux sentiment de
-                sécurité.
+                sécurité&nbsp;:
               </p>
               <ul className="compactlist2">
                 <li className="text-sm">un nid-de-poule reste dangereux</li>
@@ -318,19 +325,10 @@ const Suspension = () => {
                   une mauvaise trajectoire reste une mauvaise trajectoire
                 </li>
               </ul>
-              <p className="text-sm">
-                La suspension doit être considérée comme un équipement
-                complémentaire, pas comme une garantie de sécurité.
-              </p>
               <div className="bg-taupe-100 dark:bg-taupe-700 py-1 px-3 my-2 rounded-lg">
                 <p className="text-sm">
-                  Les gyroroues n&apos;ont d&apos;ailleurs pas été conçues à
-                  l&apos;origine pour dévaler des escaliers ou réaliser des
-                  sauts comme un VTT de descente.
-                </p>
-                <p className="text-sm">
-                  Certaines roues modernes en sont capables, mais cela reste une
-                  pratique exigeante qui sollicite énormément le matériel.
+                  La suspension doit être considérée comme un équipement
+                  complémentaire, pas comme une garantie de sécurité.
                 </p>
               </div>
               <p className="text-sm">
