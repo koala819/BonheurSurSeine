@@ -228,13 +228,13 @@ const Suspension = () => {
           </ul>
           <p>
             Une suspension mal entretenue peut perdre en efficacité, devenir
-            inconfortable, voire dangereuse (généré des déséquilibres).
+            inconfortable, voire dangereuse (générant des déséquilibres).
           </p>
           <div className="BlockSuspension">
             <p className="mb-0 font-bold">⚠️ Attention&nbsp;</p>
             <p className="mt-1">
               Youtube et internet permettent de voir les performances de
-              certains wheelers : saut monstrueux, descente / monté de dizaine
+              certains wheelers : saut monstrueux, descente / montée de dizaine
               de marche ! Mais les suspensions ne sont pas conçues pour
               encaisser cela au quotidien.
             </p>
@@ -290,7 +290,7 @@ const Suspension = () => {
               </ul>
               <div className="bg-taupe-100 dark:bg-taupe-700 py-1 px-3 my-2 rounded-lg">
                 <p className="text-sm">
-                  Le type et la taille du débattement necessaire dépend de
+                  Le type et la taille du débattement nécessaire dépend de
                   l&apos;usage. Pas grave non plus si une suspension talonne.
                 </p>
               </div>
@@ -338,6 +338,7 @@ const Suspension = () => {
             </div>
           </div>
 
+          {/*-------------------------- bloc homéostasie --------------------------*/}
           <div className="yellowBlock my-3">
             <p className="">
               ⚠️ La suspension améliore le confort et la stabilité, mais elle
@@ -349,6 +350,7 @@ const Suspension = () => {
               tendance à compenser en prenant davantage de risques.
             </p>
           </div>
+
           {/*----------------------------image-----------------------------------*/}
           <div className="relative max-w-4xl mx-auto order-first md:order-last">
             <Image
@@ -506,7 +508,7 @@ const Suspension = () => {
                 <ul className="compactlist2 [&>li]:text-sm mb-1">
                   <li>grande plage d&apos;ajustement</li>
                   <li>nécessite une pompe haute pression</li>
-                  <li>pression à vérifier réguilièrement</li>
+                  <li>pression à vérifier régulièrement</li>
                   <li>souvent plus léger</li>
                 </ul>
                 <div className="bg-taupe-100 dark:bg-taupe-700 rounded-md p-1 mt-auto">
