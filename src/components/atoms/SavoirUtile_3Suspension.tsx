@@ -386,16 +386,37 @@ const Suspension = () => {
           <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
 
           <p>
-            Avant toute chose, il faut comprendre comment fonctionne la
-            suspension de sa roue.
+            Une suspension ne se résume pas à son débattement ou à sa
+            technologie. Même une excellente suspension peut devenir
+            inconfortable si elle est mal réglée.
           </p>
 
           <p>
-            Les premières gyroroues suspendues sont apparues au début des années
-            2020. Depuis, les constructeurs ont multiplié les approches
-            techniques et continuent encore aujourd&apos;hui à faire évoluer
-            leurs systèmes.
+            Les constructeurs ont développé des approches très différentes selon
+            l&apos;usage visé : roue urbaine, randonnée, offroad ou pratique
+            sportive.
           </p>
+
+          <div className="BlockSuspension">
+            <p className="mb-0">
+              👉 Une suspension bien réglée améliore le confort, le contrôle et
+              la stabilité. Une suspension mal réglée peut au contraire rendre
+              la roue fatigante, imprécise ou désagréable.
+            </p>
+          </div>
+
+          <p>
+            Comme pour la pression du pneu, il n&apos;existe pas un réglage
+            universel. Le bon compromis dépend du poids du pilote, du terrain et
+            du style de conduite.
+          </p>
+
+          <p>
+            Avant de modifier les réglages, il est utile de comprendre les
+            différentes architectures de suspension et les technologies
+            d&apos;amortissement utilisées sur les gyroroues modernes.
+          </p>
+
           <div className="blueBlock mb-4">
             <b className="mb-0 mt-0">
               Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
@@ -410,6 +431,337 @@ const Suspension = () => {
               </i>
             </p>
           </div>
+
+          {/*------------------REGLAGE----------------------------*/}
+          <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
+
+          <p>
+            Une suspension ne se résume pas à son débattement ou à sa
+            technologie. Même une excellente suspension peut devenir
+            inconfortable si elle est mal réglée.
+          </p>
+
+          <p>
+            Les constructeurs ont développé des approches très différentes selon
+            l&apos;usage visé : roue urbaine, randonnée, offroad ou pratique
+            sportive.
+          </p>
+
+          <div className="BlockSuspension">
+            <p className="mb-0">
+              👉 Une suspension bien réglée améliore le confort, le contrôle et
+              la stabilité. Une suspension mal réglée peut au contraire rendre
+              la roue fatigante, imprécise ou désagréable.
+            </p>
+          </div>
+
+          <p>
+            Comme pour la pression du pneu, il n&apos;existe pas de réglage
+            universel. Le bon compromis dépend notamment :
+          </p>
+
+          <ul className="compactlist2">
+            <li>du poids du wheeler ;</li>
+            <li>du terrain pratiqué ;</li>
+            <li>de la vitesse habituelle ;</li>
+            <li>du style de conduite ;</li>
+            <li>du confort recherché.</li>
+          </ul>
+
+          <p>
+            Avant de modifier les réglages, il est utile de comprendre les
+            principaux systèmes de suspension présents sur les gyroroues
+            modernes.
+          </p>
+
+          {/*------------------ARCHITECTURE----------------------------*/}
+
+          <h5 className="mt-6 mb-2">🔹 Architecture de suspension</h5>
+
+          <p>
+            L&apos;architecture correspond à la façon dont la suspension est
+            intégrée dans la roue.
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-2 mb-4">
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md">
+              <h6 className="font-semibold mb-2">⚙️ Suspension centrale</h6>
+
+              <p className="text-sm">
+                L&apos;amortisseur est placé au centre de la roue.
+              </p>
+
+              <ul className="compactlist2 text-sm">
+                <li>structure généralement robuste ;</li>
+                <li>bonne répartition des efforts ;</li>
+                <li>souvent utilisée sur les roues récentes.</li>
+              </ul>
+
+              <p className="text-sm">
+                Exemples : V11Y, Sherman-S, Lynx, Blitz...
+              </p>
+            </div>
+
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md">
+              <h6 className="font-semibold mb-2">⚙️ Suspension déportée</h6>
+
+              <p className="text-sm">
+                L&apos;amortisseur est visible sur un côté de la roue.
+              </p>
+
+              <ul className="compactlist2 text-sm">
+                <li>accès facile aux réglages ;</li>
+                <li>entretien souvent simplifié ;</li>
+                <li>design parfois plus léger.</li>
+              </ul>
+
+              <p className="text-sm">Exemple emblématique : S18.</p>
+            </div>
+          </div>
+
+          {/*------------------TYPE D'AMORTISSEUR----------------------------*/}
+
+          <h5 className="mt-6 mb-2">
+            🔹 Les principaux types d&apos;amortisseurs
+          </h5>
+
+          <p>
+            L&apos;architecture de la suspension est une chose. Le type
+            d&apos;amortisseur en est une autre.
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-3 mb-4">
+            {/* Ressort */}
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h6 className="font-semibold mb-2">🟢 Ressort</h6>
+
+              <p className="text-sm">
+                Utilise un ressort métallique pour absorber les chocs.
+              </p>
+
+              <ul className="compactlist2 text-sm">
+                <li>simple et robuste ;</li>
+                <li>peu sensible aux variations de température ;</li>
+                <li>très apprécié en usage intensif.</li>
+                <li>réglage souvent plus limité.</li>
+              </ul>
+
+              <div className="bg-taupe-100 dark:bg-taupe-700 rounded-lg px-3 py-2 mt-2">
+                <p className="text-sm mb-0">👍 Fiabilité et constance.</p>
+              </div>
+            </div>
+
+            {/* Air */}
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h6 className="font-semibold mb-2">🔵 Air</h6>
+
+              <p className="text-sm">
+                Utilise de l&apos;air comprimé à la place d&apos;un ressort
+                métallique.
+              </p>
+
+              <ul className="compactlist2 text-sm">
+                <li>réglage facile selon le poids ;</li>
+                <li>nécessite une pompe haute pression ;</li>
+                <li>pression à vérifier périodiquement.</li>
+                <li>souvent plus léger ;</li>
+                <li>grande plage d&apos;ajustement.</li>
+              </ul>
+
+              <div className="bg-taupe-100 dark:bg-taupe-700 rounded-lg px-3 py-2 mt-2">
+                <p className="text-sm mb-0">
+                  👍 Polyvalence et personnalisation.
+                </p>
+              </div>
+            </div>
+
+            {/* Hydraulique */}
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+              <h6 className="font-semibold mb-2">🟠 Hydraulique</h6>
+
+              <p className="text-sm">
+                Contrôle la vitesse des mouvements de la suspension grâce à un
+                circuit d&apos;huile.
+              </p>
+
+              <ul className="compactlist2 text-sm">
+                <li>limite les rebonds ;</li>
+                <li>améliore le contrôle ;</li>
+                <li>rend la suspension plus progressive.</li>
+              </ul>
+
+              <div className="bg-taupe-100 dark:bg-taupe-700 rounded-lg px-3 py-2 mt-2">
+                <p className="text-sm mb-0">
+                  👍 Précision et comportement dynamique.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="BlockSuspension mb-4">
+            <p className="mb-0">
+              👉 Sur les gyroroues modernes, les technologies sont souvent
+              combinées. On retrouve fréquemment un ressort ou une chambre à air
+              associés à un amortissement hydraulique.
+            </p>
+          </div>
+
+          {/*------------------REGLAGES----------------------------*/}
+
+          <h5 className="mt-6 mb-2">🔹 Les réglages que l&apos;on rencontre</h5>
+
+          <p>
+            Selon les modèles, plusieurs réglages peuvent être disponibles. Tous
+            les amortisseurs n&apos;offrent pas forcément toutes ces
+            possibilités.
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-3 mb-4">
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md">
+              <h6 className="font-semibold mb-2">⚙️ Précharge</h6>
+
+              <p className="text-sm">
+                Elle détermine l&apos;enfoncement initial de la suspension sous
+                le poids du pilote.
+              </p>
+
+              <p className="text-sm">
+                Plus elle est élevée, plus la suspension résiste à
+                l&apos;enfoncement.
+              </p>
+            </div>
+
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md">
+              <h6 className="font-semibold mb-2">⚙️ Compression</h6>
+
+              <p className="text-sm">
+                Elle contrôle la vitesse à laquelle la suspension s&apos;enfonce
+                lors d&apos;un choc.
+              </p>
+
+              <p className="text-sm">
+                Trop faible : sensation molle.
+                <br />
+                Trop forte : suspension sèche.
+              </p>
+            </div>
+
+            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-3 rounded-2xl shadow-md">
+              <h6 className="font-semibold mb-2">⚙️ Détente (rebond)</h6>
+
+              <p className="text-sm">
+                Elle contrôle la vitesse à laquelle la suspension revient à sa
+                position initiale après un choc.
+              </p>
+
+              <p className="text-sm">
+                Trop rapide : effet trampoline.
+                <br />
+                Trop lente : suspension paresseuse.
+              </p>
+            </div>
+          </div>
+          {/*------------------REGLAGES----------------------------*/}
+
+          <h5 className="mt-6 mb-2">🔹 Trouver le bon réglage</h5>
+
+          <p>
+            L&apos;objectif est simple : permettre à la suspension de travailler
+            sans être trop molle ni trop dure.
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-2 mb-4">
+            <div className="bg-red-50 dark:bg-red-950/30 px-4 py-3 rounded-2xl border border-red-200 dark:border-red-900">
+              <h6 className="font-semibold mb-2">🔴 Suspension trop souple</h6>
+
+              <ul className="compactlist2 text-sm">
+                <li>pompage excessif ;</li>
+                <li>talonnage fréquent ;</li>
+                <li>manque de précision ;</li>
+                <li>perte d&apos;efficacité à haute vitesse.</li>
+              </ul>
+            </div>
+
+            <div className="bg-orange-50 dark:bg-orange-950/30 px-4 py-3 rounded-2xl border border-orange-200 dark:border-orange-900">
+              <h6 className="font-semibold mb-2">🟠 Suspension trop dure</h6>
+
+              <ul className="compactlist2 text-sm">
+                <li>absorbe mal les chocs ;</li>
+                <li>perte de confort ;</li>
+                <li>adhérence dégradée sur terrain irrégulier ;</li>
+                <li>suspension sous-exploitée.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-green-50 dark:bg-green-950/30 px-4 py-3 rounded-2xl border border-green-200 dark:border-green-900 mb-4">
+            <h6 className="font-semibold mb-2">🟢 Bon réglage</h6>
+
+            <p className="text-sm mb-0">
+              La suspension utilise une partie significative de son débattement
+              sans talonner fréquemment. La roue reste confortable, stable et
+              prévisible, quelles que soient les irrégularités rencontrées.
+            </p>
+          </div>
+
+          <p>
+            Comme pour la pression d&apos;un pneu, plusieurs essais sont souvent
+            nécessaires avant de trouver le réglage qui correspond réellement à
+            son poids et à sa pratique.
+          </p>
+          <div className="BlockSuspension">
+            <p className="mb-0">
+              👉 Le meilleur réglage n&apos;est pas celui utilisé par un autre
+              wheeler sur YouTube, mais celui qui correspond à ton poids, ton
+              terrain et ta façon de rouler.
+            </p>
+          </div>
+
+          <h5 className="mt-6 mb-2">🔹 Le SAG : le réglage de base</h5>
+
+          <p>
+            Le SAG correspond à l&apos;enfoncement naturel de la suspension
+            lorsque le wheeler monte sur la roue.
+          </p>
+
+          <p>
+            Une suspension trop enfoncée manquera de réserve pour absorber les
+            gros chocs. Une suspension trop peu enfoncée deviendra dure et
+            inconfortable.
+          </p>
+
+          <div className="BlockSuspension">
+            <p className="mb-0">
+              👉 Sur la plupart des gyroroues, on cherche généralement un SAG
+              compris entre 20 % et 30 % du débattement total.
+            </p>
+          </div>
+          <div className="blueBlock mb-4">
+            <b className="mb-0 mt-0">
+              Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
+              une donnée absolue. <br />
+            </b>
+            <p>
+              Elle dépend de nombreux paramètres&nbsp;:{' '}
+              <i>
+                poids du wheeler, accélérations, vitesse, pression et type de
+                pneu, vent, température ambiante, terrain, profil et nature du
+                trajet…
+              </i>
+            </p>
+          </div>
+          <p>
+            Avant toute chose, il faut comprendre comment fonctionne la
+            suspension de sa roue.
+          </p>
+
+          <p>
+            Les premières gyroroues suspendues sont apparues au début des années
+            2020. Depuis, les constructeurs ont multiplié les approches
+            techniques et continuent encore aujourd&apos;hui à faire évoluer
+            leurs systèmes.
+          </p>
+
           <p>
             Chaque fabricant fait des choix différents selon l&apos;usage visé :
             roue urbaine, tout-terrain, randonnée ou pratique sportive.
@@ -441,18 +793,6 @@ const Suspension = () => {
             <li>les systèmes centraux (V11, Sherman-S…) ;</li>
             <li>les systèmes déportés (S18…).</li>
           </ul>
-
-          <h5 className="mt-6 mb-2">🔹 Amortisseur à ressort</h5>
-
-          <p>À compléter.</p>
-
-          <h5 className="mt-6 mb-2">🔹 Amortisseur à air</h5>
-
-          <p>À compléter.</p>
-
-          <h5 className="mt-6 mb-2">🔹 Amortisseur hydraulique</h5>
-
-          <p>À compléter.</p>
 
           {/*---------------------------------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
