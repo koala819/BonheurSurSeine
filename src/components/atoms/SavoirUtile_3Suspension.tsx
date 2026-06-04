@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 import Les3suspensions from '@/public/4.guide/Pneus1_les_structures.jpg'
 
-const Pneu = () => {
+const Suspension = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
   const [openKeys, setOpenKeys] = useState<string[]>([])
   const [scrollTarget, setScrollTarget] = useState<string | null>(null)
@@ -45,7 +45,7 @@ const Pneu = () => {
 
   return (
     <section
-      id="pneu"
+      id="suspension"
       className="scroll-mt-24 my-8 space-y-4 bg-white dark:bg-gray-700
       rounded-lg p-2 md:p-4 mb-6
       border border-gray-200 dark:border-gray-600
@@ -62,7 +62,7 @@ const Pneu = () => {
         <AccordionItem
           key="1"
           aria-label="Choisir et régler la suspension"
-          title={<h3>🦿 La suspension : comprendre, choisir et régler</h3>}
+          title={<h3>🦿 La suspension : choisir et régler</h3>}
           indicator={
             <strong className="transition-transform">
               <svg
@@ -120,7 +120,8 @@ const Pneu = () => {
 
           <p className="mt-2">
             Mais cette amélioration du confort a un coût&nbsp;: prix,
-            encombrement, poids, usure, pièces mécaniques, entretien...{' '}
+            encombrement, poids, pédales plus hautes, usure de pièces
+            mécaniques...{' '}
           </p>
 
           <div className="blueBlock my-4">
@@ -138,67 +139,62 @@ const Pneu = () => {
             dark:shadow-neutral-900"
             >
               <thead>
-                <tr className="bg-sky-700 text-white text-base">
+                <tr className="border-b dark:border-gray-600 bg-sky-700 text-white text-base">
                   <th className="py-3 px-2 text-left">Situation</th>
                   <th className="py-3 px-2 text-center">Intérêt</th>
-                  <th className="py-3 px-2 text-right">Gains / compromis</th>
+                  <th className="py-3 px-2 text-center">Pourquoi ?</th>
                 </tr>
               </thead>
               <tbody className="text-sm md:text-base">
-                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
-                  <td className="p-2">🏙️ Urbain court / occasionnel</td>
-                  <td className="p-2">🤔 Faible</td>
-                  <td className="p-2">
-                    + simplicité, légèreté, coût réduit <br />− confort limité
-                    sur routes dégradées
-                  </td>
-                </tr>
                 <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
                   <td className="p-2">🎓 Apprentissage</td>
-                  <td className="p-2">🤔 Optionnelle</td>
-                  <td className="p-2">
-                    + tolérance aux irrégularités <br />− complexité et coût non
-                    essentiels
+                  <td className="p-2">🤔 Optionnel</td>
+                  <td className="p-2 text-right">
+                    Pas nécessaire pour débuter <br /> (surcoût peu utile)
                   </td>
                 </tr>
                 <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
-                  <td className="p-2">🎒 Légèreté / compacité</td>
-                  <td className="p-2">❌ Peu adaptée</td>
-                  <td className="p-2">
-                    + confort supplémentaire <br />− poids, encombrement,
-                    multi-modalité réduite
+                  <td className="p-2">🚆 Multi-modalité, transports denses</td>
+                  <td className="p-2">❌ Peu adapté</td>
+                  <td className="p-2 text-right">
+                    Elle augmente le poids et l&apos;encombrement
                   </td>
                 </tr>
                 <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
                   <td className="p-2">💰 Budget limité</td>
-                  <td className="p-2">❌ Peu adaptée</td>
-                  <td className="p-2">
-                    + confort et sécurité <br />− prix élevé, entretien,
-                    complexité
+                  <td className="p-2">❌ Peu adapté</td>
+                  <td className="p-2 text-right">
+                    Généralement plus cher à performances équivalentes
+                  </td>
+                </tr>
+                <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
+                  <td className="p-2">🏙️ Trajet court / occasionnel</td>
+                  <td className="p-2">🤔 Optionnel</td>
+                  <td className="p-2 text-right">
+                    Sans, c&apos;est plus simple, léger, compact et économique
                   </td>
                 </tr>
                 <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
                   <td className="p-2">🚗 Trajets longs / quotidiens</td>
-                  <td className="p-2">✅ Très intéressante</td>
-                  <td className="p-2">
-                    + forte réduction de fatigue, confort <br />− poids et coût
-                    supérieurs
+                  <td className="p-2">✅ Très intéressant</td>
+                  <td className="p-2 text-right">
+                    Réduit la fatigue (mais aussi la place pour la batterie)
                   </td>
                 </tr>
                 <tr className="border-b dark:border-gray-600 bg-blue-50 dark:bg-sky-800/30">
                   <td className="p-2">🌲 Offroad / chemins dégradés</td>
-                  <td className="p-2">✅ Recommandée</td>
-                  <td className="p-2">
-                    + absorption des chocs, stabilité, sécurité <br />−
-                    entretien plus important
+                  <td className="p-2">✅ Très intéressant</td>
+                  <td className="p-2 text-right">
+                    Meilleure stabilité et contrôle (mais nécessite de
+                    l&apos;entretien)
                   </td>
                 </tr>
                 <tr className="border-b dark:border-gray-600 bg-gray-50 dark:bg-gray-900/50">
                   <td className="p-2">⚡ Conduite sportive</td>
-                  <td className="p-2">👍 Variable selon usage</td>
-                  <td className="p-2">
-                    + contrôle et confort à haute vitesse <br />− risque de
-                    surconfiance, poids
+                  <td className="p-2">✅ Variable selon usage</td>
+                  <td className="p-2 text-right">
+                    Confort mais augmente la surconfiance et le centre de
+                    gravité
                   </td>
                 </tr>
               </tbody>
@@ -207,8 +203,8 @@ const Pneu = () => {
 
           <div className="yellowBlock">
             <p className="">
-              ⚠️ Une suspension améliore le confort et la stabilité, mais elle
-              peut aussi donner davantage confiance.
+              ⚠️ La suspension améliore le confort et la stabilité, mais elle
+              augmente aussi le risque de surconfiance.
               <br />
               Certains chercheurs parlent{' '}
               <strong>«&nbsp;d&apos;homéostasie du risque&nbsp;»</strong>&nbsp;:
@@ -451,4 +447,4 @@ const Pneu = () => {
   )
 }
 
-export default Pneu
+export default Suspension

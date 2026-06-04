@@ -115,6 +115,10 @@ const sections = [
         href: '/guide-utile-gyroroue#pneu',
       },
       {
+        label: '🦿 La suspension : choisir et régler',
+        href: '/guide-utile-gyroroue#suspension',
+      },
+      {
         label: '🛣️ Trouver son chemin : applis & cartes',
         href: '/guide-utile-gyroroue#navi',
       },
