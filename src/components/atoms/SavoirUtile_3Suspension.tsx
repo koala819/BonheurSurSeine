@@ -390,40 +390,26 @@ const Suspension = () => {
           <h4 className="mt-8 mb-2">➡️ Conception</h4>
           <div className="mb-2 md:mb-4">
             <p>
-              Les constructeurs ont développé des approches très différentes
-              selon l&apos;usage visé : roue urbaine, randonnée, offroad ou
-              pratique sportive.
-            </p>
-            <p>
               Les premières gyroroues suspendues sont apparues au début des
-              années 2020. Depuis, les constructeurs ont multiplié les approches
-              techniques et continuent encore aujourd&apos;hui à faire évoluer
-              leurs systèmes.
+              années 2020. Depuis, les fabricants ont testé et développé
+              différentes architectures et systèmes de suspension.
             </p>
             <p>
-              Chaque fabricant fait des choix différents selon l&apos;usage visé
-              : roue urbaine, tout-terrain, randonnée ou pratique sportive.
+              Certains systèmes privilégient le confort, d&apos;autres la
+              simplicité mécanique ou la robustesse.
             </p>
-            <p>
-              Certaines suspensions privilégient le confort, d&apos;autres la
-              sportivité ou la simplicité mécanique.
-            </p>
-
-            <p className="mt-4">
-              Avant de modifier les réglages, il est utile de comprendre les
-              principaux systèmes de suspension existants.
-            </p>
+            <p>Une suspension est composée de plusieurs éléments</p>
           </div>
           {/*------------------ARCHITECTURE----------------------------*/}
 
           <h5 className="mt-4 font-semibold">🔸 L&apos;architecture</h5>
           <div className="mx-4 mb-2 md:mb-4">
-            <p>
+            <p className="mb-2">
               L&apos;architecture correspond à la façon dont la suspension est
               intégrée dans la roue.
             </p>
             <div className="grid gap-4 md:grid-cols-2 mb-4">
-              <div className="bg-taupe-50 dark:bg-taupe-800 px-3 py-2 rounded-xl shadow-md">
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md">
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
                   L&apos;amortisseur est placé au centre de la roue.
@@ -435,7 +421,7 @@ const Suspension = () => {
                 </ul>
                 <p className="text-sm">Exemples : V11Y, Sherman-S, Lynx...</p>
               </div>
-              <div className="bg-taupe-50 dark:bg-taupe-800 px-3 py-2 rounded-xl shadow-md">
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md">
                 <h6 className="font-semibold mb-1">⚙️ Suspension déportée</h6>
                 <p className="text-sm">
                   L&apos;amortisseur est visible sur un côté de la roue.
@@ -455,11 +441,13 @@ const Suspension = () => {
             🔸 Les principaux types d&apos;amortisseurs
           </h5>
           <div className="mx-4 mb-2 md:mb-4">
-            <p>L&apos;amortisseur peut prendre plusieurs formes.</p>
+            <p className="mb-2">
+              L&apos;amortisseur peut prendre plusieurs formes.
+            </p>
 
             <div className="grid gap-2 md:gap-4 md:grid-cols-3 mb-4">
               {/* Ressort */}
-              <div className="bg-taupe-50 dark:bg-taupe-800 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
                 <h6 className="font-semibold mb-1">🟤 Ressort</h6>
                 <p className="text-sm">
                   Utilise un ressort métallique pour absorber les chocs.
@@ -469,13 +457,13 @@ const Suspension = () => {
                   <li>peu sensible</li>
                   <li>réglage souvent plus limité</li>
                 </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-700 rounded-md p-1 mt-auto">
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
                   <p className="text-sm mb-0">👍 Fiable et constance</p>
                 </div>
               </div>
 
               {/* Air */}
-              <div className="bg-taupe-50 dark:bg-taupe-800 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
                 <h6 className="font-semibold mb-1">🟤 Air</h6>
                 <p className="text-sm">
                   Utilise de l&apos;air comprimé à la place d&apos;un ressort
@@ -487,13 +475,13 @@ const Suspension = () => {
                   <li>pression à vérifier régulièrement</li>
                   <li>souvent plus léger</li>
                 </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-700 rounded-md p-1 mt-auto">
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
                   <p className="text-sm mb-0">👍 Polyvalente</p>
                 </div>
               </div>
 
               {/* Hydraulique */}
-              <div className="bg-taupe-50 dark:bg-taupe-800 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
                 <h6 className="font-semibold mb-1">🟤 Hydraulique</h6>
                 <p className="text-sm">
                   Contrôle la vitesse des mouvements de la suspension grâce à un
@@ -504,7 +492,7 @@ const Suspension = () => {
                   <li>améliore le contrôle</li>
                   <li>rend la suspension plus progressive</li>
                 </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-700 rounded-md p-1 mt-auto">
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
                   <p className="text-sm mb-0">👍 Précise et dynamique</p>
                 </div>
               </div>
@@ -617,7 +605,7 @@ const Suspension = () => {
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-2 mt-2">
               <div
-                className="bg-red-50 dark:bg-red-950/50 px-3 py-2 rounded-xl
+                className="bg-red-50 dark:bg-red-900/50 px-3 py-2 rounded-xl
               border border-red-200 dark:border-red-800"
               >
                 <p className="font-semibold mb-1">🔴 Suspension trop souple</p>
@@ -629,7 +617,7 @@ const Suspension = () => {
                 </ul>
               </div>
               <div
-                className="bg-orange-50 dark:bg-orange-950/50 px-3 py-2 rounded-xl
+                className="bg-orange-50 dark:bg-orange-900/60 px-3 py-2 rounded-xl
               border border-orange-200 dark:border-orange-800"
               >
                 <p className="font-semibold">🟠 Suspension trop dure</p>
@@ -642,7 +630,7 @@ const Suspension = () => {
               </div>
             </div>
             <div
-              className="bg-green-50 dark:bg-green-950/50 px-3 py-2 rounded-xl
+              className="bg-green-50 dark:bg-green-900/50 px-3 py-2 rounded-xl
             border border-green-200 dark:border-green-800 mt-2 md:mt-4"
             >
               <p className="font-semibold">🟢 Bon réglage</p>
