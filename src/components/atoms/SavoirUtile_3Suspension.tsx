@@ -564,19 +564,16 @@ const Suspension = () => {
                 </p>
               </div>
             </div>
-            <p className="font-semibold">👉 Et le SAG ?</p>
             <p>
-              Le SAG correspond à l&apos;enfoncement naturel de la suspension
-              lorsque le wheeler monte sur la roue.
-            </p>
-            <p>
-              Une suspension trop enfoncée manquera de réserve pour absorber les
-              gros chocs. Une suspension trop peu enfoncée deviendra dure et
-              inconfortable.
+              <span className="font-semibold">👉 Et le SAG&nbsp;? </span>
+              Il s&apos;agit de la conséquence du réglage de précharge
+              (l&apos;enfoncement lorsque le wheeler monte sur la roue). Une
+              suspension trop enfoncée manquera de réserve pour absorber
+              certains chocs (deviendra dure ou talonnera).
             </p>
             <p className="mb-0">
-              Sur la plupart des gyroroues, on cherche généralement un SAG
-              compris entre 20 % et 30 % du débattement total.
+              Généralement, on cherche un SAG compris entre 30% et 40% du
+              débattement total.
             </p>
             <div className="BlockSuspension">
               <p className="mb-0">
