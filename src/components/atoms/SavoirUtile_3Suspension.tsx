@@ -165,7 +165,8 @@ const Suspension = () => {
                   <td className="p-1">🎓 Apprentissage</td>
                   <td className="p-1 text-center">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Pas nécessaire pour débuter (surcoût peu utile)
+                    Peu utile pour débuter (surcoût, alourdit la roue, éléments
+                    exposés aux chutes)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
@@ -187,6 +188,13 @@ const Suspension = () => {
                   <td className="p-1 text-center">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Sans, c&apos;est plus simple, léger, compact et économique
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
+                  <td className="p-1">🚴 Trajets réguliers</td>
+                  <td className="p-1 text-center">✅ Un vrai plus</td>
+                  <td className="p-1 text-right">
+                    Le confort donne encore plus envie d&apos;utiliser sa roue
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
@@ -322,240 +330,121 @@ const Suspension = () => {
             🔸 Les 3 technologies de l&apos;amortissement
           </h5>
           <div className="mx-4 mb-2 md:mb-4">
-            <p className="mb-2">
+            <p className="mb-0">
               Un amortisseur utilise une ou plusieurs technologies combinées
               (parfois les trois) pour supporter le poids et contrôler les
               mouvements de la roue.
             </p>
-
-            <div className="grid gap-2 md:gap-4 md:grid-cols-3 mb-4">
-              {/* Ressort */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">
-                  🟤 Le Ressort (Mécanique)
-                </h6>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  Gère le support de charge.
-                </p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>Excellente réactivité sur les petits chocs</li>
-                  <li>Comportement linéaire et prévisible</li>
-                  <li>
-                    Réglage physique (nécessite de changer le ressort selon le
-                    poids)
-                  </li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Fiable & Sensible</p>
-                </div>
-              </div>
-
-              {/* Air */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">
-                  🟤 L&apos;Air (Pneumatique)
-                </h6>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  Gère le support de charge.
-                </p>
-                <ul className="compactlist2 [&>li]:text-sm mb-1">
-                  <li>
-                    Grande plage d&apos;ajustement (via une pompe haute
-                    pression)
-                  </li>
-                  <li>
-                    Naturellement progressif (durcit en fin de course pour
-                    éviter de talonner)
-                  </li>
-                  <li>Pression à vérifier et ajuster régulièrement</li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Léger & Ajustable</p>
-                </div>
-              </div>
-
-              {/* Hydraulique */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">
-                  🟤 L&apos;Hydraulique (Huile)
-                </h6>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                  Gère le contrôle du mouvement.
-                </p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>
-                    Freine le mouvement pour éliminer l&apos;effet trampoline
-                  </li>
-                  <li>
-                    Permet de régler précisément la vitesse de compression et de
-                    rebond
-                  </li>
-                  <li>
-                    Indispensable en complément du ressort ou de l&apos;air
-                  </li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Maîtrise & Stabilité</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h5 className="mt-4 font-semibold">
-            🔸 Les principaux types d&apos;amortisseurs
-          </h5>
-          <div className="mx-4 mb-2 md:mb-4">
-            <p className="mb-2">
+            <p className="mb-0">
               L&apos;amortisseur peut prendre plusieurs formes.
             </p>
-
-            <div className="grid gap-2 md:gap-4 md:grid-cols-3 mb-4">
-              {/* Ressort */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">🟤 Ressort</h6>
-                <p className="text-sm">Utilise un ressort métallique.</p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>simple (fait l&apos;essentiel)</li>
-                  <li>peu sensible</li>
-                  <li>réglage souvent plus limité</li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Robuste</p>
-                </div>
-              </div>
-
-              {/* Air */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">🟤 Air</h6>
-                <p className="text-sm">Utilise de l&apos;air comprimé.</p>
-                <ul className="compactlist2 [&>li]:text-sm mb-1">
-                  <li>grande plage d&apos;ajustement</li>
-                  <li>pompe haute pression nécessaire</li>
-                  <li>pression à vérifier régulièrement</li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Polyvalente</p>
-                </div>
-              </div>
-
-              {/* Hydraulique */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
-                <h6 className="font-semibold mb-1">🟤 Hydraulique</h6>
-                <p className="text-sm">Utilise un circuit d&apos;huile.</p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>suspension plus progressive</li>
-                  <li>limite les rebonds</li>
-                </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
-                  <p className="text-sm mb-0">👍 Dynamique</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h5 className="mt-4 font-semibold">
-            🔸 Comment fonctionne l&apos;amortissement ?
-          </h5>
-          <div className="mx-4 mb-2 md:mb-4">
-            <p className="mb-4">
+            <p className="mb-2">
               Pour suspendre une roue, les fabricants combinent obligatoirement
               deux éléments distincts : un <strong>support de charge</strong>{' '}
               (qui porte votre poids) et un{' '}
               <strong>contrôle hydraulique</strong> (qui calme le mouvement).
             </p>
-
-            <div className="grid gap-4 md:grid-cols-3 mb-4">
+            <div className="grid gap-2 md:gap-3 md:grid-cols-3 mb-4">
               {/* BLOC 1: RESSORT */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-t-4 border-amber-600">
-                <div className="mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-amber-600 bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded">
-                    Option de Support 1
-                  </span>
-                </div>
-                <h6 className="font-semibold mb-1">🟤 Le Ressort Mécanique</h6>
-                <p className="text-xs text-gray-500 mb-2">
-                  Un ressort hélicoïdal métallique en acier.
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+              >
+                <h6 className="font-semibold mb-1">
+                  🟤 Le Ressort (Mécanique)
+                </h6>
+                <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
+                  Un ressort hélicoïdal métallique.
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Sensibilité :</strong> Ultra-réactif sur les petits
-                    pavés et ondulations.
+                    <strong>Comportement :</strong> prévisible
                   </li>
                   <li>
-                    <strong>Comportement :</strong> Linéaire (il s&apos;enfonce
-                    de la même manière du début à la fin).
+                    <strong>Réglage : </strong>limité (il faut changer le
+                    ressort pour changer la dureté)
                   </li>
                   <li>
-                    <strong>Contrainte :</strong> Pour changer la dureté, il
-                    faut physiquement remplacer le ressort.
+                    <strong>Contrainte : </strong>simple (fait l&apos;essentiel)
                   </li>
                 </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1.5 mt-3 text-center text-sm font-medium">
-                  🎯 Idéal pour la réactivité brute
+                <div
+                  className="bg-taupe-100 dark:bg-taupe-800 rounded-md
+                p-1.5 mt-3 text-center text-sm font-medium"
+                >
+                  🎯 Robuste / réactivité brute
                 </div>
               </div>
 
               {/* BLOC 2: AIR */}
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-t-4 border-sky-600">
-                <div className="mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-sky-600 bg-sky-50 dark:bg-sky-950/40 px-2 py-0.5 rounded">
-                    Option de Support 2
-                  </span>
-                </div>
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+              >
                 <h6 className="font-semibold mb-1">
-                  🟤 Le Ressort Pneumatique (Air)
+                  🟤 L&apos;Air (Pneumatique)
                 </h6>
-                <p className="text-xs text-gray-500 mb-2">
-                  Une cartouche étanche d&apos;air sous haute pression.
+                <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
+                  Une cartouche d&apos;air sous haute pression.
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Ajustement :</strong> Réglable à l&apos;infini selon
-                    votre poids avec une pompe haute pression.
+                    <strong>Comportement : </strong>naturellement progressif
+                    (devient plus dur en s&apos;enfonçant pour éviter de
+                    talonner)
                   </li>
                   <li>
-                    <strong>Comportement :</strong> Progressif (plus il
-                    s&apos;enfonce, plus il devient dur : parfait
-                    anti-talonnage).
+                    <strong>Réglage : </strong>grande plage d&apos;ajustement
+                    (via une pompe haute pression)
                   </li>
                   <li>
-                    <strong>Contrainte :</strong> Nécessite une vérification
-                    régulière de la pression.
+                    <strong>Contrainte :</strong> pression à vérifier et ajuster
+                    régulièrement
                   </li>
                 </ul>
-                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1.5 mt-3 text-center text-sm font-medium">
-                  🎯 Idéal pour la polyvalence
+                <div
+                  className="bg-taupe-100 dark:bg-taupe-800 rounded-md
+                p-1.5 mt-3 text-center text-sm font-medium"
+                >
+                  🎯 Polyvalente / ajustable
                 </div>
               </div>
-
               {/* BLOC 3: HYDRAULIQUE */}
-              <div className="bg-olive-50/60 dark:bg-olive-950/20 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-2 border-olive-400 dark:border-olive-800">
-                <div className="mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-olive-600 bg-olive-100 dark:bg-olive-900/40 px-2 py-0.5 rounded">
-                    Le Cerveau Obligatoire
-                  </span>
-                </div>
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+              >
                 <h6 className="font-semibold mb-1">
-                  🟢 La Cartouche Hydraulique
+                  🟤 L&apos;Hydraulique (Huile)
                 </h6>
-                <p className="text-xs text-olive-700 dark:text-olive-400 mb-2">
+                <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Un circuit d&apos;huile interne.
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Rôle :</strong> Sans elle, la roue ferait le pogo.
-                    L&apos;huile freine et dompte le ressort (métal ou air).
+                    <strong>Rôle : </strong>Le cerveau du système. L&apos;huile
+                    freine, dompte et stabilise l&apos;énergie du ressort (métal
+                    ou air) pour éliminer l&apos;effet pogo / trampoline.
                   </li>
                   <li>
-                    <strong>Réglages :</strong> C&apos;est elle qui permet
-                    d&apos;ajuster la vitesse de <em>Compression</em> et de{' '}
-                    <em>Rebond</em>.
+                    <strong>Réglage : </strong>Permet d&apos;ajuster précisément
+                    la vitesse de <em>Compression</em> (absorption du choc) et
+                    de <em>Rebond</em> (vitesse de retour).
                   </li>
                   <li>
-                    <strong>Sur le marché :</strong> Présente partout, sauf sur
-                    les entrées de gamme low-cost (effet trampoline garanti).
+                    <strong>Contrainte : </strong>Mécanique plus complexe.
+                    Nécessite une étanchéité parfaite pour éviter les fuites
+                    d&apos;huile au fil des ans.
                   </li>
                 </ul>
-                <div className="bg-olive-100 dark:bg-olive-900/60 rounded-md p-1.5 mt-3 text-center text-sm font-semibold text-olive-800 dark:text-olive-200">
-                  ⚡ Indispensable pour le contrôle
+                <div
+                  className="bg-taupe-100 dark:bg-taupe-800 rounded-md
+                p-1.5 mt-3 text-center text-sm font-medium text-olive-700 dark:text-olive-300"
+                >
+                  🎯 Maîtrise / contrôle du mouvement
                 </div>
               </div>
             </div>
@@ -854,9 +743,9 @@ const Suspension = () => {
 
           {/*--------------------------------------------------------------*/}
           {/*--------------------------------------------------------------*/}
-          <div className="suspensionBlock">
+          <div className="BlockSuspension">
             💡 En résumé :
-            <ul className="compactListe2">
+            <ul className="compactlist2">
               <li>
                 Débutant ou budget serré ? Une roue non suspendue reste un
                 excellent choix (plus léger et plus fiable).
