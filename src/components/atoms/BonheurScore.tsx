@@ -289,7 +289,7 @@ export function BonheurScore({
         {/*------------------REMERCIEMENTS-------------------*/}
         <div className="mt-4 px-0 md:px-7 lg:px-14">
           <div
-            className="mt-2 mb-4 bg-stone-50 dark:bg-zinc-700 rounded-lg shadow-md pt-1 px-3
+            className="mt-2 mb-4 bg-stone-50/80 dark:bg-zinc-700/50 rounded-lg shadow-md px-3 py-1
             hover:shadow-lg transition-shadow
           dark:shadow-neutral-900 dark:hover:shadow-neutral-950 "
           >
