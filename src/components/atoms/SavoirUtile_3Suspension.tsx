@@ -149,7 +149,7 @@ const Suspension = () => {
           </div>
 
           {/*----------------------------Tableau-----------------------------------*/}
-          <div className="overflow-x-auto p-1 mb-3">
+          <div className="overflow-x-auto mb-3 md:mx-2">
             <table className="w-full border-collapse rounded-lg overflow-hidden shadow-md dark:shadow-neutral-900">
               <thead>
                 <tr className="border-b border-gray-200 dark:border-gray-800 text-white text-base bg-olive-500 dark:bg-taupe-900">
@@ -259,7 +259,7 @@ const Suspension = () => {
           </p>
           <div className="grid gap-4 md:grid-cols-2 mb-4">
             {/* Bloc 1 ------------------DEBATTEMENT----------------------------*/}
-            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold mb-2">
                 🟠 Gros débattement = meilleure suspension
               </h4>
@@ -288,7 +288,7 @@ const Suspension = () => {
                   </li>
                 </ul>
               </ul>
-              <div className="bg-taupe-100 dark:bg-taupe-700 py-1 px-3 my-2 rounded-lg">
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg">
                 <p className="text-sm">
                   Le type et la taille du débattement nécessaire dépend de
                   l&apos;usage. Pas grave non plus si une suspension talonne.
@@ -301,7 +301,7 @@ const Suspension = () => {
             </div>
 
             {/* Bloc 2 ------------------CONDUITE---------------------------- */}
-            <div className="bg-taupe-50 dark:bg-taupe-800 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold mb-2">
                 🟠 Suspension ≠ conduite sans effort
               </h4>
@@ -325,7 +325,7 @@ const Suspension = () => {
                   une mauvaise trajectoire reste une mauvaise trajectoire
                 </li>
               </ul>
-              <div className="bg-taupe-100 dark:bg-taupe-700 py-1 px-3 my-2 rounded-lg">
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg">
                 <p className="text-sm">
                   La suspension doit être considérée comme un équipement
                   complémentaire, pas comme une garantie de sécurité.
@@ -517,8 +517,7 @@ const Suspension = () => {
           <div className="mb-2 md:mb-4">
             <p>
               Une suspension ne se résume pas à son débattement ou à sa
-              technologie. Même une excellente suspension peut devenir
-              inconfortable si elle est mal réglée.
+              technologie. Mal réglée, elle sera innefficace ou inconfortable...
             </p>
             <p>
               Comme pour la pression du pneu, il n&apos;existe pas de réglage
@@ -531,23 +530,15 @@ const Suspension = () => {
               <li>du style de conduite ;</li>
               <li>du confort recherché.</li>
             </ul>
-            <div className="BlockSuspension">
-              <p className="mb-0">
-                👉 Une suspension bien réglée améliore le confort, le contrôle
-                et la stabilité. Une suspension mal réglée peut au contraire
-                rendre la roue fatigante, imprécise ou désagréable.
-              </p>
-            </div>
           </div>
           {/*------------------REGLAGES POSSIBLES----------------------------*/}
-          <h5 className="mt-4 font-semibold">🔹 Les réglages possibles</h5>
+          <h5 className="mt-4 font-semibold">🔹 Les 3 réglages possibles</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
               Selon les modèles, plusieurs réglages peuvent être disponibles,
               mais tous les amortisseurs n&apos;offrent pas forcément toutes ces
               possibilités.
             </p>
-
             <div className="grid gap-2 md:gap-4 md:grid-cols-3 mt-2 mb-2">
               <div className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl shadow-md">
                 <p className="font-semibold">⚙️ Précharge</p>
@@ -601,6 +592,13 @@ const Suspension = () => {
               Sur la plupart des gyroroues, on cherche généralement un SAG
               compris entre 20 % et 30 % du débattement total.
             </p>
+            <div className="BlockSuspension">
+              <p className="mb-0">
+                👉 Une suspension bien réglée améliore le confort, le contrôle
+                et la stabilité. Une suspension mal réglée peut au contraire
+                rendre la roue fatigante, imprécise ou désagréable.
+              </p>
+            </div>
           </div>
 
           {/*------------------Trouver le bon réglages----------------------------*/}
