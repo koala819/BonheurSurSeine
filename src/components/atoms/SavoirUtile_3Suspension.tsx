@@ -88,9 +88,6 @@ const Suspension = () => {
             confort dépendait alors uniquement du pneu… et des jambes du wheeler
             😅
           </p>
-          <p className="">
-            Et des milliers de kilomètres ont été parcourus ainsi.
-          </p>
 
           {/*----------------------------------------------------------------*/}
           {/*----------------- Vraiment une révolution ? --------------------*/}
@@ -108,7 +105,7 @@ const Suspension = () => {
             </Link>{' '}
             sa roue.
           </p>
-          <p>
+          <p className="mt-2">
             Pourquoi un tel succès ? Parce qu&apos;elle améliore le confort et
             la stabilité en absorbant une grande partie des chocs et des
             vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses...{' '}
@@ -117,9 +114,9 @@ const Suspension = () => {
             </strong>
           </p>
           <p>
-            Une fois habitué à une roue suspendue, difficile revenir en arrière.
+            Et malgré les milliers de kilomètres parcourus sans, une fois
+            habitué à la suspension, difficile revenir en arrière.
           </p>
-
           <p className="mt-2">
             Mais{' '}
             <strong className="text-olive-600 dark:text-olive-300">
@@ -180,7 +177,7 @@ const Suspension = () => {
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
-                  <td className="p-1">🏙️ Trajet court / occasionnel</td>
+                  <td className="p-1">🚶Trajet court / occasionnel</td>
                   <td className="p-1 text-center">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Sans, c&apos;est plus simple, léger, compact et économique
