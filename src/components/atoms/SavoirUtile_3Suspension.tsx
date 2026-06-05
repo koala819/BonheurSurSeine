@@ -104,8 +104,8 @@ const Suspension = () => {
           <h4 className="mt-6 mb-2">➡️ Vraiment une révolution ?</h4>
           <p>
             L&apos;arrivée de la suspension (premier modèle fin 2020) a été une
-            des évolutions les plus marquantes de la gyroroue. Elle est
-            rapidement devenu{' '}
+            des évolutions les plus marquantes de la gyroroue. Elle s&apos;est
+            très vite généralisée et est rapidement devenue{' '}
             <Link
               href={'/choisir-gyroroue#besoins'}
               className="text-olive-600 dark:text-olive-300 underline hover:text-blue-700 dark:hover:text-blue-400"
@@ -155,59 +155,59 @@ const Suspension = () => {
             <table className="w-full border-collapse rounded-lg overflow-hidden shadow-md dark:shadow-neutral-900">
               <thead>
                 <tr className="border-b border-gray-200 dark:border-gray-800 text-white text-base bg-olive-500 dark:bg-taupe-900">
-                  <th className="py-3 px-2 text-left">Situation</th>
-                  <th className="py-3 px-2 text-center">Intérêt</th>
-                  <th className="py-3 px-2 text-center">Pourquoi ?</th>
+                  <th className="py-2 px-2 text-left">Situation</th>
+                  <th className="py-2 px-2 text-center">Intérêt</th>
+                  <th className="py-2 px-2 text-center">Pourquoi ?</th>
                 </tr>
               </thead>
               <tbody className="text-sm md:text-base text-gray-800 dark:text-gray-100 bg-olive-50 dark:bg-taupe-800">
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">🎓 Apprentissage</td>
-                  <td className="p-2">🤔 Optionnel</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">🎓 Apprentissage</td>
+                  <td className="p-1">🤔 Optionnel</td>
+                  <td className="p-1 text-right">
                     Pas nécessaire pour débuter (surcoût peu utile)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">🚆 Multi-modalité, transports denses</td>
-                  <td className="p-2">❌ Peu adapté</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">🚆 Multi-modalité, transports denses</td>
+                  <td className="p-1">❌ Peu adapté</td>
+                  <td className="p-1 text-right">
                     Elle augmente le poids et l&apos;encombrement
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">💰 Budget limité</td>
-                  <td className="p-2">❌ Peu adapté</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">💰 Budget limité</td>
+                  <td className="p-1">❌ Peu adapté</td>
+                  <td className="p-1 text-right">
                     Généralement plus cher à performances équivalentes
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">🏙️ Trajet court / occasionnel</td>
-                  <td className="p-2">🤔 Optionnel</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">🏙️ Trajet court / occasionnel</td>
+                  <td className="p-1">🤔 Optionnel</td>
+                  <td className="p-1 text-right">
                     Sans, c&apos;est plus simple, léger, compact et économique
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">🚗 Trajets longs / quotidiens</td>
-                  <td className="p-2">✅ Très intéressant</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">🚗 Trajets longs / quotidiens</td>
+                  <td className="p-1">✅ Très intéressant</td>
+                  <td className="p-1 text-right">
                     Réduit la fatigue (mais aussi la place pour la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">🌲 Offroad / chemins dégradés</td>
-                  <td className="p-2">✅ Très intéressant</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">🌲 Offroad / chemins dégradés</td>
+                  <td className="p-1">✅ Très intéressant</td>
+                  <td className="p-1 text-right">
                     Meilleure stabilité et contrôle (mais nécessite de
                     l&apos;entretien)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-taupe-700 transition">
-                  <td className="p-2">⚡ Conduite sportive</td>
-                  <td className="p-2">✅ Variable selon usage</td>
-                  <td className="p-2 text-right">
+                  <td className="p-1">⚡ Conduite sportive</td>
+                  <td className="p-1">✅ Variable selon usage</td>
+                  <td className="p-1 text-right">
                     Confort mais augmente la surconfiance et le centre de
                     gravité
                   </td>
@@ -219,15 +219,15 @@ const Suspension = () => {
           <h5 className="font-bold mt-5 mb-0">🔧 Et l&apos;entretien&nbsp;?</h5>
           <p>
             Comme sur un vélo ou une moto, une suspension comporte des pièces
-            mobiles qui travaillent en permanence. <br />
-            Elles nécessitent quelques contrôles réguliers&nbsp;:
+            mobiles qui travaillent en permanence, et qui nécessitent quelques
+            contrôles réguliers&nbsp;:
           </p>
           <ul className="compactlist2">
-            <li>les jeux mécaniques</li>
-            <li>les vis desserrées</li>
-            <li>les bruits anormaux</li>
-            <li>les fuites éventuelles</li>
-            <li>l&apos;usure des pièces mobiles</li>
+            <li>jeux mécaniques</li>
+            <li>vis desserrées</li>
+            <li>bruits anormaux</li>
+            <li>fuites éventuelles</li>
+            <li>usure des pièces mobiles</li>
           </ul>
           <p>
             Une suspension mal entretenue peut perdre en efficacité, devenir
@@ -257,7 +257,7 @@ const Suspension = () => {
           </p>
           <div className="grid gap-4 md:grid-cols-2 mb-4">
             {/* Bloc 1 ------------------DEBATTEMENT----------------------------*/}
-            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
               <h4 className="text-lg font-semibold mb-2">
                 🟠 Gros débattement = meilleure suspension
               </h4>
@@ -268,38 +268,29 @@ const Suspension = () => {
               <ul className="compactlist2">
                 <li className="text-sm">
                   Sur le papier, un grand débattement permet d&apos;absorber des
-                  chocs plus importants.
-                </li>{' '}
-                <li className="text-sm">
-                  En pratique, le comportement dépend aussi&nbsp;:
+                  chocs plus importants
                 </li>
-                <ul className="compactlist2">
-                  <li className="text-sm">de la conception (la cinématique)</li>
-                  <li className="text-sm">
-                    des réglages (précharge, compression, détente…)
-                  </li>
-                  <li className="text-sm">
-                    de la progressivité de l&apos;amortisseur
-                  </li>
-                  <li className="text-sm">
-                    de sa rigidité et de l&apos;usure mécanique
-                  </li>
-                </ul>
+                <li className="text-sm">
+                  En pratique, le comportement dépend de la cinématique, la
+                  progressivité de l&apos;amortisseur, sa rigidité, l&apos;usure
+                  et des réglages
+                </li>
               </ul>
-              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg">
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg  mt-auto">
                 <p className="text-sm">
-                  Le type et la taille du débattement nécessaire dépend de
-                  l&apos;usage. Pas grave non plus si une suspension talonne.
+                  Un talonnage occasionnel n&apos;est pas problématique. En
+                  revanche, un talonnage fréquent indique souvent un réglage
+                  inadapté.
                 </p>
               </div>
-              <p className="text-sm">
+              <p className="text-sm font-semibold">
                 👉 Un grand débattement ne fait pas systématiquement une
                 meilleure suspension.
               </p>
             </div>
 
             {/* Bloc 2 ------------------CONDUITE---------------------------- */}
-            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
               <h4 className="text-lg font-semibold mb-2">
                 🟠 Suspension ≠ conduite sans effort
               </h4>
@@ -323,13 +314,94 @@ const Suspension = () => {
                   une mauvaise trajectoire reste une mauvaise trajectoire
                 </li>
               </ul>
-              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg">
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 my-2 rounded-lg mt-auto">
                 <p className="text-sm">
                   La suspension doit être considérée comme un équipement
                   complémentaire, pas comme une garantie de sécurité.
                 </p>
               </div>
-              <p className="text-sm">
+              <p className="text-sm font-semibold">
+                👉 Le bon sens et la vigilance restent les meilleurs
+                amortisseurs.
+              </p>
+            </div>
+
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow h-full grid grid-rows-[auto_auto_1fr_auto_auto]">
+              <h4 className="text-lg font-semibold mb-2">
+                🟠 Gros débattement = meilleure suspension
+              </h4>
+              <div>
+                <p className="text-sm">
+                  Le débattement (souvent entre 60mm à 90mm) correspond à la
+                  course maximale de la suspension.
+                </p>
+                <ul className="compactlist2">
+                  <li className="text-sm">
+                    Sur le papier, un grand débattement permet d&apos;absorber
+                    des chocs plus importants
+                  </li>
+                  <li className="text-sm">
+                    En pratique, le comportement dépend de la cinématique, la
+                    progressivité de l&apos;amortisseur, sa rigidité,
+                    l&apos;usure, et des réglages
+                  </li>
+                </ul>
+              </div>
+              {/* spacer automatique */}
+              <div />
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
+                <p className="text-sm">
+                  Un talonnage occasionnel n&apos;est pas problématique... En
+                  revanche, un talonnage fréquent indique souvent un réglage
+                  inadapté.
+                </p>
+              </div>
+              <p className="text-sm font-semibold mt-2">
+                👉 Un grand débattement ne fait pas systématiquement une
+                meilleure suspension.
+              </p>
+            </div>
+            <div className="bg-olive-50 dark:bg-olive-900 px-4 py-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow h-full grid grid-rows-[auto_auto_1fr_auto_auto]">
+              <h4 className="text-lg font-semibold mb-2">
+                🟠 Suspension ≠ conduite sans effort
+              </h4>
+
+              <div>
+                <p className="text-sm">
+                  La suspension absorbe une grande partie des irrégularités du
+                  terrain.
+                </p>
+
+                <p className="text-sm">
+                  Mais cet avantage peut aussi créer un faux sentiment de
+                  sécurité&nbsp;:
+                </p>
+
+                <ul className="compactlist2">
+                  <li className="text-sm">un nid-de-poule reste dangereux</li>
+                  <li className="text-sm">
+                    un trottoir mal abordé peut provoquer une chute
+                  </li>
+                  <li className="text-sm">
+                    la route demande une attention constante
+                  </li>
+                  <li className="text-sm">
+                    une mauvaise trajectoire reste une mauvaise trajectoire
+                  </li>
+                </ul>
+              </div>
+
+              {/* spacer automatique */}
+              <div />
+
+              <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
+                <p className="text-sm">
+                  La suspension doit être considérée comme un équipement
+                  complémentaire, pas comme une garantie de sécurité.
+                </p>
+              </div>
+
+              <p className="text-sm font-semibold mt-2">
                 👉 Le bon sens et la vigilance restent les meilleurs
                 amortisseurs.
               </p>
@@ -401,9 +473,13 @@ const Suspension = () => {
             <p>Une suspension est composée de plusieurs éléments&nbsp;:</p>
             <ul className="compactlist2">
               <li className="">
-                un système de guidage (glissières, bras, biellettes...)
+                un système de guidage (glissières, bras, biellettes...) qui
+                permet à la suspensipn de bouger
               </li>
-              <li className="">un amortisseur</li>
+              <li className="">
+                le(s) amortisseur(s) qui absorbent les chocs provoqués par les
+                irrégularités du terrain
+              </li>
             </ul>
           </div>
 
@@ -569,7 +645,7 @@ const Suspension = () => {
               Il s&apos;agit de la conséquence du réglage de précharge
               (l&apos;enfoncement lorsque le wheeler monte sur la roue). Une
               suspension trop enfoncée manquera de réserve pour absorber
-              certains chocs (deviendra dure ou talonnera).
+              certains chocs (et risque davantage de talonner).
             </p>
             <p className="mb-0">
               Généralement, on cherche un SAG compris entre 30% et 40% du
