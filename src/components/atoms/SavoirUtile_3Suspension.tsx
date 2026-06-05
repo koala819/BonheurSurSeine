@@ -101,7 +101,7 @@ const Suspension = () => {
 
           {/*----------------------------------------------------------------*/}
           {/*----------------- Vraiment une révolution ? --------------------*/}
-          <h4 className="mt-6 mb-2">➡️ Vraiment une révolution ?</h4>
+          <h4 className="mt-6 mb-2">➡️ Le confort... au prix fort&nbsp;?</h4>
           <p>
             L&apos;arrivée de la suspension (premier modèle fin 2020) a été une
             des évolutions les plus marquantes de la gyroroue. Elle s&apos;est
@@ -120,7 +120,7 @@ const Suspension = () => {
             la stabilité en absorbant une grande partie des chocs et des
             vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses...{' '}
             <strong className="text-olive-600 dark:text-olive-300">
-              Tout devient beaucoup moins fatigants et plus agréable&nbsp;!
+              Tout devient beaucoup moins fatigant et plus stable&nbsp;!
             </strong>
           </p>
 
@@ -261,16 +261,16 @@ const Suspension = () => {
               confort, la simplicité mécanique ou la robustesse.
             </p>
             <p>
-              Pour cela, avec le temps, les fabricants ont testé et développé
-              différents systèmes de suspension.
+              Pour cela, les fabricants ont testé et développé différents
+              systèmes de suspension.
             </p>
             <p className="mt-2">
-              Une suspension est composée de plusieurs éléments&nbsp;:
+              Une suspension se compose de plusieurs éléments&nbsp;:
             </p>
             <ul className="compactlist2">
               <li className="">
                 un système de guidage (glissières, bras, biellettes...) qui
-                permet à la suspensipn de bouger
+                permet le mouvement
               </li>
               <li className="">
                 le(s) amortisseur(s) qui absorbent les chocs provoqués par les
@@ -310,14 +310,96 @@ const Suspension = () => {
               </div>
             </div>
             <p>
-              Une architecture ne permet pas, à elle seule, de juger la qualité
-              d&apos;une suspension. Les performances dépendent aussi de la
-              qualité du guidage, de la cinématique, de l&apos;amortisseur, et
-              des réglages.
+              Elle ne permet pas, à elle seule, de juger la qualité d&apos;une
+              suspension. Les performances dépendent aussi de la qualité du
+              guidage, de la cinématique, de l&apos;amortisseur, et des
+              réglages.
             </p>
           </div>
 
           {/*----------------- TYPE D'AMORTISSEUR ---------------------*/}
+          <h5 className="mt-4 font-semibold">
+            🔸 Les 3 technologies de l&apos;amortissement
+          </h5>
+          <div className="mx-4 mb-2 md:mb-4">
+            <p className="mb-2">
+              Un amortisseur utilise une ou plusieurs technologies combinées
+              (parfois les trois) pour supporter le poids et contrôler les
+              mouvements de la roue.
+            </p>
+
+            <div className="grid gap-2 md:gap-4 md:grid-cols-3 mb-4">
+              {/* Ressort */}
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+                <h6 className="font-semibold mb-1">
+                  🟤 Le Ressort (Mécanique)
+                </h6>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                  Gère le support de charge.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm">
+                  <li>Excellente réactivité sur les petits chocs</li>
+                  <li>Comportement linéaire et prévisible</li>
+                  <li>
+                    Réglage physique (nécessite de changer le ressort selon le
+                    poids)
+                  </li>
+                </ul>
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
+                  <p className="text-sm mb-0">👍 Fiable & Sensible</p>
+                </div>
+              </div>
+
+              {/* Air */}
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+                <h6 className="font-semibold mb-1">
+                  🟤 L&apos;Air (Pneumatique)
+                </h6>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                  Gère le support de charge.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm mb-1">
+                  <li>
+                    Grande plage d&apos;ajustement (via une pompe haute
+                    pression)
+                  </li>
+                  <li>
+                    Naturellement progressif (durcit en fin de course pour
+                    éviter de talonner)
+                  </li>
+                  <li>Pression à vérifier et ajuster régulièrement</li>
+                </ul>
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
+                  <p className="text-sm mb-0">👍 Léger & Ajustable</p>
+                </div>
+              </div>
+
+              {/* Hydraulique */}
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col h-full">
+                <h6 className="font-semibold mb-1">
+                  🟤 L&apos;Hydraulique (Huile)
+                </h6>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                  Gère le contrôle du mouvement.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm">
+                  <li>
+                    Freine le mouvement pour éliminer l&apos;effet trampoline
+                  </li>
+                  <li>
+                    Permet de régler précisément la vitesse de compression et de
+                    rebond
+                  </li>
+                  <li>
+                    Indispensable en complément du ressort ou de l&apos;air
+                  </li>
+                </ul>
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
+                  <p className="text-sm mb-0">👍 Maîtrise & Stabilité</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <h5 className="mt-4 font-semibold">
             🔸 Les principaux types d&apos;amortisseurs
           </h5>
@@ -347,7 +429,7 @@ const Suspension = () => {
                 <p className="text-sm">Utilise de l&apos;air comprimé.</p>
                 <ul className="compactlist2 [&>li]:text-sm mb-1">
                   <li>grande plage d&apos;ajustement</li>
-                  <li>pompe haute pression nécessairre</li>
+                  <li>pompe haute pression nécessaire</li>
                   <li>pression à vérifier régulièrement</li>
                 </ul>
                 <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1 mt-auto">
@@ -369,13 +451,130 @@ const Suspension = () => {
               </div>
             </div>
           </div>
+          <h5 className="mt-4 font-semibold">
+            🔸 Comment fonctionne l&apos;amortissement ?
+          </h5>
+          <div className="mx-4 mb-2 md:mb-4">
+            <p className="mb-4">
+              Pour suspendre une roue, les fabricants combinent obligatoirement
+              deux éléments distincts : un <strong>support de charge</strong>{' '}
+              (qui porte votre poids) et un{' '}
+              <strong>contrôle hydraulique</strong> (qui calme le mouvement).
+            </p>
 
+            <div className="grid gap-4 md:grid-cols-3 mb-4">
+              {/* BLOC 1: RESSORT */}
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-t-4 border-amber-600">
+                <div className="mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wide text-amber-600 bg-amber-50 dark:bg-amber-950/40 px-2 py-0.5 rounded">
+                    Option de Support 1
+                  </span>
+                </div>
+                <h6 className="font-semibold mb-1">🟤 Le Ressort Mécanique</h6>
+                <p className="text-xs text-gray-500 mb-2">
+                  Un ressort hélicoïdal métallique en acier.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm flex-1">
+                  <li>
+                    <strong>Sensibilité :</strong> Ultra-réactif sur les petits
+                    pavés et ondulations.
+                  </li>
+                  <li>
+                    <strong>Comportement :</strong> Linéaire (il s&apos;enfonce
+                    de la même manière du début à la fin).
+                  </li>
+                  <li>
+                    <strong>Contrainte :</strong> Pour changer la dureté, il
+                    faut physiquement remplacer le ressort.
+                  </li>
+                </ul>
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1.5 mt-3 text-center text-sm font-medium">
+                  🎯 Idéal pour la réactivité brute
+                </div>
+              </div>
+
+              {/* BLOC 2: AIR */}
+              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-t-4 border-sky-600">
+                <div className="mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wide text-sky-600 bg-sky-50 dark:bg-sky-950/40 px-2 py-0.5 rounded">
+                    Option de Support 2
+                  </span>
+                </div>
+                <h6 className="font-semibold mb-1">
+                  🟤 Le Ressort Pneumatique (Air)
+                </h6>
+                <p className="text-xs text-gray-500 mb-2">
+                  Une cartouche étanche d&apos;air sous haute pression.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm flex-1">
+                  <li>
+                    <strong>Ajustement :</strong> Réglable à l&apos;infini selon
+                    votre poids avec une pompe haute pression.
+                  </li>
+                  <li>
+                    <strong>Comportement :</strong> Progressif (plus il
+                    s&apos;enfonce, plus il devient dur : parfait
+                    anti-talonnage).
+                  </li>
+                  <li>
+                    <strong>Contrainte :</strong> Nécessite une vérification
+                    régulière de la pression.
+                  </li>
+                </ul>
+                <div className="bg-taupe-100 dark:bg-taupe-800 rounded-md p-1.5 mt-3 text-center text-sm font-medium">
+                  🎯 Idéal pour la polyvalence
+                </div>
+              </div>
+
+              {/* BLOC 3: HYDRAULIQUE */}
+              <div className="bg-olive-50/60 dark:bg-olive-950/20 px-3 py-2 rounded-xl shadow-md flex flex-col h-full border-2 border-olive-400 dark:border-olive-800">
+                <div className="mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wide text-olive-600 bg-olive-100 dark:bg-olive-900/40 px-2 py-0.5 rounded">
+                    Le Cerveau Obligatoire
+                  </span>
+                </div>
+                <h6 className="font-semibold mb-1">
+                  🟢 La Cartouche Hydraulique
+                </h6>
+                <p className="text-xs text-olive-700 dark:text-olive-400 mb-2">
+                  Un circuit d&apos;huile interne.
+                </p>
+                <ul className="compactlist2 [&>li]:text-sm flex-1">
+                  <li>
+                    <strong>Rôle :</strong> Sans elle, la roue ferait le pogo.
+                    L&apos;huile freine et dompte le ressort (métal ou air).
+                  </li>
+                  <li>
+                    <strong>Réglages :</strong> C&apos;est elle qui permet
+                    d&apos;ajuster la vitesse de <em>Compression</em> et de{' '}
+                    <em>Rebond</em>.
+                  </li>
+                  <li>
+                    <strong>Sur le marché :</strong> Présente partout, sauf sur
+                    les entrées de gamme low-cost (effet trampoline garanti).
+                  </li>
+                </ul>
+                <div className="bg-olive-100 dark:bg-olive-900/60 rounded-md p-1.5 mt-3 text-center text-sm font-semibold text-olive-800 dark:text-olive-200">
+                  ⚡ Indispensable pour le contrôle
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-taupe-100 dark:bg-taupe-800/50 rounded-xl p-3 text-sm italic">
+              💡 <strong>L&apos;évolution moderne :</strong> Les amortisseurs
+              les plus avancés du marché (comme sur la Lynx-S) ne choisissent
+              plus. Ils intègrent à la fois un petit ressort hélicoïdal pour la
+              sensibilité fine, une chambre à air pour gérer les gros impacts
+              sans talonner, et un circuit d&apos;huile complet pour stabiliser
+              la trajectoire.
+            </div>
+          </div>
           {/*--------------------------------------------------------------------*/}
           {/*----------------------------image-----------------------------------*/}
           <div className="relative max-w-4xl mx-auto order-first md:order-last">
             <Image
               src={Les3suspensions}
-              alt="Image de pneus"
+              alt="Les 3 types d'amortisseurs pour gyroroue : ressort, air et hydraulique"
               className="w-full max-w-3xl mx-auto rounded-2xl object-cover object-center cursor-pointer shadow-md hover:shadow-lg dark:shadow-slate-600"
               priority
               placeholder="blur"
@@ -397,7 +596,7 @@ const Suspension = () => {
                 </button>
                 <Image
                   src={Les3suspensions}
-                  alt="Image de pneus"
+                  alt="Les 3 types d'amortisseurs pour gyroroue : ressort, air et hydraulique"
                   className="w-full rounded-xl shadow-lg border-medium border-blue-300"
                   priority
                 />
@@ -586,11 +785,11 @@ const Suspension = () => {
               certains chocs (et risque davantage de talonner).
             </p>
             <p className="mb-0">
-              Généralement, on cherche un SAG compris entre 30% et 40% du
+              Généralement, on cherche un SAG compris entre 20% et 30% du
               débattement total.
             </p>
             <div className="BlockSuspension">
-              <p>Mal réglée, elle sera innefficace ou inconfortable...</p>
+              <p>Mal réglée, elle sera inefficace ou inconfortable...</p>
               <p className="mb-0">
                 👉 Une suspension bien réglée améliore le confort, le contrôle
                 et la stabilité. Une suspension mal réglée peut au contraire
@@ -599,7 +798,7 @@ const Suspension = () => {
             </div>
           </div>
 
-          {/*--------------- Trouver le bon réglages ------------------*/}
+          {/*--------------- Trouver le bon réglage -------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Trouver le bon réglage</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
@@ -653,8 +852,25 @@ const Suspension = () => {
             </div>
           </div>
 
-          {/*---------------------------------------------------------------*/}
-          {/*---------------------------------------------------------------*/}
+          {/*--------------------------------------------------------------*/}
+          {/*--------------------------------------------------------------*/}
+          <div className="suspensionBlock">
+            💡 En résumé :
+            <ul className="compactListe2">
+              <li>
+                Débutant ou budget serré ? Une roue non suspendue reste un
+                excellent choix (plus léger et plus fiable).
+              </li>
+              <li>
+                Gros rouleur ou adepte de l&apos;offroad ? La suspension
+                changera votre vie, à condition de prendre 5 minutes pour
+                effectuer les réglages et les vérifier régulièrement.
+              </li>
+            </ul>
+          </div>
+
+          {/*--------------------------------------------------------------*/}
+          {/*--------------------------------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
