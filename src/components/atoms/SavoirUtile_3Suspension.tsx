@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Les3suspensions from '@/public/4.guide/Pneus1_les_structures.jpg'
+import Les3suspensions from '@/public/4.guide/Suspension1-les_amortisseurs.jpg'
 
 const Suspension = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -454,7 +454,7 @@ const Suspension = () => {
           {/* Lightbox */}
           {isOpen1 && (
             <div
-              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 pt-40"
+              className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
               onClick={() => setIsOpen1(false)} // clic fond ferme
             >
               <div className="relative max-w-5xl w-full p-4 ">
@@ -663,14 +663,6 @@ const Suspension = () => {
               Généralement, on cherche un SAG compris entre 20% et 30% du
               débattement total.
             </p>
-            <div className="BlockSuspension">
-              <p className="font-bold">
-                👉 Mal réglée, la suspension sera inefficace et désagréable...
-              </p>
-              <p className="mb-0">
-                Bien réglée, le confort, le contrôle et la stabilité.
-              </p>
-            </div>
           </div>
 
           {/*--------------- Trouver le bon réglage -------------------*/}
@@ -730,16 +722,19 @@ const Suspension = () => {
           {/*--------------------------------------------------------------*/}
           {/*--------------------------------------------------------------*/}
           <div className="BlockSuspension">
-            💡 En résumé :
+            <p className="font-bold">💡 En résumé :</p>
             <ul className="compactlist2">
+              <li>
+                Mal réglée, la suspension sera inefficace et désagréable !
+              </li>
               <li>
                 Débutant ou budget serré ? Une roue non suspendue reste un
                 excellent choix (plus léger et plus fiable).
               </li>
               <li>
-                Gros rouleur ou adepte de l&apos;offroad ? La suspension
-                changera votre vie, à condition de prendre 5 minutes pour
-                effectuer les réglages et les vérifier régulièrement.
+                Gros rouleur ou adepte du confort ? La suspension changera votre
+                vie, à condition de prendre 5 minutes pour effectuer les
+                réglages et les vérifier régulièrement.
               </li>
             </ul>
           </div>
