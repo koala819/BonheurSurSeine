@@ -4,6 +4,7 @@ import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
 import Maintenance from '@/src/components/atoms/SavoirUtile_2Entretien'
 import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
 import Pneu from '@/src/components/atoms/SavoirUtile_3Pneu'
+import Suspension from '@/src/components/atoms/SavoirUtile_3Suspension'
 import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
@@ -46,6 +47,7 @@ const Page = () => {
       <Maintenance />
       <Battery />
       <Pneu />
+      <Suspension />
       <Navi />
       <Vrac />
       {/*<Info />*/}

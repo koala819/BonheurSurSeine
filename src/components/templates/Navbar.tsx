@@ -334,6 +334,14 @@ export function Top() {
                 </li>
                 <li>
                   <Link
+                    href="/guide-utile-gyroroue#suspension"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸La suspension
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/guide-utile-gyroroue#navi"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >

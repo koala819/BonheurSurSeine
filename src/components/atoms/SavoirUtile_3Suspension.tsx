@@ -386,61 +386,37 @@ const Suspension = () => {
           )}
 
           {/*-----------------------------------------------------*/}
-          {/*------------------REGLAGE----------------------------*/}
-          <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
+          {/*------------------CONCEPTION-------------------------*/}
+          <h4 className="mt-8 mb-2">➡️ Conception</h4>
+          <div className="mb-2 md:mb-4">
+            <p>
+              Les constructeurs ont développé des approches très différentes
+              selon l&apos;usage visé : roue urbaine, randonnée, offroad ou
+              pratique sportive.
+            </p>
+            <p>
+              Les premières gyroroues suspendues sont apparues au début des
+              années 2020. Depuis, les constructeurs ont multiplié les approches
+              techniques et continuent encore aujourd&apos;hui à faire évoluer
+              leurs systèmes.
+            </p>
+            <p>
+              Chaque fabricant fait des choix différents selon l&apos;usage visé
+              : roue urbaine, tout-terrain, randonnée ou pratique sportive.
+            </p>
+            <p>
+              Certaines suspensions privilégient le confort, d&apos;autres la
+              sportivité ou la simplicité mécanique.
+            </p>
 
-          <p>
-            Une suspension ne se résume pas à son débattement ou à sa
-            technologie. Même une excellente suspension peut devenir
-            inconfortable si elle est mal réglée.
-          </p>
-          <p>
-            Les constructeurs ont développé des approches très différentes selon
-            l&apos;usage visé : roue urbaine, randonnée, offroad ou pratique
-            sportive.
-          </p>
-          <div className="BlockSuspension">
-            <p className="mb-0">
-              👉 Une suspension bien réglée améliore le confort, le contrôle et
-              la stabilité. Une suspension mal réglée peut au contraire rendre
-              la roue fatigante, imprécise ou désagréable.
+            <p className="mt-4">
+              Avant de modifier les réglages, il est utile de comprendre les
+              principaux systèmes de suspension existants.
             </p>
           </div>
-          <p>
-            Comme pour la pression du pneu, il n&apos;existe pas de réglage
-            universel. Le bon compromis dépend notamment :
-          </p>
-          <ul className="compactlist2">
-            <li>du poids du wheeler ;</li>
-            <li>du terrain pratiqué ;</li>
-            <li>de la vitesse habituelle ;</li>
-            <li>du style de conduite ;</li>
-            <li>du confort recherché.</li>
-          </ul>
-
-          <p>
-            Les premières gyroroues suspendues sont apparues au début des années
-            2020. Depuis, les constructeurs ont multiplié les approches
-            techniques et continuent encore aujourd&apos;hui à faire évoluer
-            leurs systèmes.
-          </p>
-          <p>
-            Chaque fabricant fait des choix différents selon l&apos;usage visé :
-            roue urbaine, tout-terrain, randonnée ou pratique sportive.
-          </p>
-          <p>
-            Certaines suspensions privilégient le confort, d&apos;autres la
-            sportivité ou la simplicité mécanique.
-          </p>
-
-          <p className="mt-4">
-            Avant de modifier les réglages, il est utile de comprendre les
-            principaux systèmes de suspension existants.
-          </p>
-
           {/*------------------ARCHITECTURE----------------------------*/}
 
-          <h5 className="mt-4 font-semibold">🔹 L&apos;architecture</h5>
+          <h5 className="mt-4 font-semibold">🔸 L&apos;architecture</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
               L&apos;architecture correspond à la façon dont la suspension est
@@ -476,7 +452,7 @@ const Suspension = () => {
 
           {/*------------------TYPE D'AMORTISSEUR----------------------------*/}
           <h5 className="mt-4 font-semibold">
-            🔹 Les principaux types d&apos;amortisseurs
+            🔸 Les principaux types d&apos;amortisseurs
           </h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>L&apos;amortisseur peut prendre plusieurs formes.</p>
@@ -535,6 +511,34 @@ const Suspension = () => {
             </div>
           </div>
 
+          {/*-----------------------------------------------------*/}
+          {/*------------------REGLAGE----------------------------*/}
+          <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
+          <div className="mb-2 md:mb-4">
+            <p>
+              Une suspension ne se résume pas à son débattement ou à sa
+              technologie. Même une excellente suspension peut devenir
+              inconfortable si elle est mal réglée.
+            </p>
+            <p>
+              Comme pour la pression du pneu, il n&apos;existe pas de réglage
+              universel. Le bon compromis dépend notamment :
+            </p>
+            <ul className="compactlist2">
+              <li>du poids du wheeler ;</li>
+              <li>du terrain pratiqué ;</li>
+              <li>de la vitesse habituelle ;</li>
+              <li>du style de conduite ;</li>
+              <li>du confort recherché.</li>
+            </ul>
+            <div className="BlockSuspension">
+              <p className="mb-0">
+                👉 Une suspension bien réglée améliore le confort, le contrôle
+                et la stabilité. Une suspension mal réglée peut au contraire
+                rendre la roue fatigante, imprécise ou désagréable.
+              </p>
+            </div>
+          </div>
           {/*------------------REGLAGES POSSIBLES----------------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Les réglages possibles</h5>
           <div className="mx-4 mb-2 md:mb-4">
