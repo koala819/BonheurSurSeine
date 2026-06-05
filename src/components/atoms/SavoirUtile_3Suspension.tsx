@@ -216,36 +216,31 @@ const Suspension = () => {
 
           <h5 className="font-bold mt-5 mb-0">🔧 Et l&apos;entretien&nbsp;?</h5>
           <p>
-            Comme sur un vélo ou une moto, une suspension travaille en
-            permanence et nécessite quelques vérifications régulières&nbsp;:
+            Comme sur un vélo ou une moto, une suspension comporte des pièces
+            mobiles qui travaillent en permanence. <br />
+            Elles nécessitent quelques contrôles réguliers&nbsp;:
           </p>
           <ul className="compactlist2">
-            <li>jeux mécaniques</li>
-            <li>visseries</li>
-            <li>bruits anormaux</li>
-            <li>fuites éventuelles</li>
-            <li>usure des pièces mobiles</li>
+            <li>les jeux mécaniques</li>
+            <li>les vis desserrées</li>
+            <li>les bruits anormaux</li>
+            <li>les fuites éventuelles</li>
+            <li>l&apos;usure des pièces mobiles</li>
           </ul>
           <p>
             Une suspension mal entretenue peut perdre en efficacité, devenir
             inconfortable, voire dangereuse (générant des déséquilibres).
           </p>
           <div className="BlockSuspension">
-            <p className="mb-0 font-bold">⚠️ Attention&nbsp;</p>
+            <p className="mb-0 font-bold">
+              ⚠️ Plus la pratique est engagée, plus l&apos;entretien devient
+              important.
+            </p>
             <p className="mt-1">
-              Youtube et internet permettent de voir les performances de
-              certains wheelers : saut monstrueux, descente / montée de dizaine
-              de marche ! Mais les suspensions ne sont pas conçues pour
-              encaisser cela au quotidien.
-            </p>
-            <p className="">
-              Les gyroroues n&apos;ont d&apos;ailleurs pas été conçues à
-              l&apos;origine pour dévaler des escaliers ou réaliser des sauts
-              comme un VTT de descente.
-            </p>
-            <p className="">
-              Certaines roues modernes en sont capables, mais cela reste une
-              pratique exigeante qui sollicite énormément le matériel.
+              Les vidéos de sauts, d&apos;escaliers ou d&apos;offroad extrême
+              sont impressionnantes. Certaines roues modernes en sont capables,
+              mais cela sollicite énormément le matériel (les roues ne sont pas
+              conçues pour encaisser cela au quotidien.).
             </p>
           </div>
           {/*------------------------------------------------------------*/}
@@ -398,10 +393,15 @@ const Suspension = () => {
               Certains systèmes privilégient le confort, d&apos;autres la
               simplicité mécanique ou la robustesse.
             </p>
+          </div>
+
+          {/*-------------- principaux éléments -----------------------*/}
+          <h5 className="mt-4 font-semibold">🔸 Les principaux éléments</h5>
+          <div className="mx-4 mb-2 md:mb-4">
             <p>Une suspension est composée de plusieurs éléments</p>
           </div>
-          {/*------------------ARCHITECTURE----------------------------*/}
 
+          {/*----------------- ARCHITECTURE ---------------------------*/}
           <h5 className="mt-4 font-semibold">🔸 L&apos;architecture</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p className="mb-2">
@@ -436,7 +436,7 @@ const Suspension = () => {
             </div>
           </div>
 
-          {/*------------------TYPE D'AMORTISSEUR----------------------------*/}
+          {/*----------------- TYPE D'AMORTISSEUR ---------------------*/}
           <h5 className="mt-4 font-semibold">
             🔸 Les principaux types d&apos;amortisseurs
           </h5>
@@ -499,8 +499,8 @@ const Suspension = () => {
             </div>
           </div>
 
-          {/*-----------------------------------------------------*/}
-          {/*------------------REGLAGE----------------------------*/}
+          {/*-------------------------------------------------------*/}
+          {/*------------------ REGLAGE ----------------------------*/}
           <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
           <div className="mb-2 md:mb-4">
             <p>
@@ -519,7 +519,7 @@ const Suspension = () => {
               <li>du confort recherché.</li>
             </ul>
           </div>
-          {/*------------------REGLAGES POSSIBLES----------------------------*/}
+          {/*--------------- REGLAGES POSSIBLES -----------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Les 3 réglages possibles</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
@@ -589,7 +589,7 @@ const Suspension = () => {
             </div>
           </div>
 
-          {/*------------------Trouver le bon réglages----------------------------*/}
+          {/*--------------- Trouver le bon réglages ------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Trouver le bon réglage</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
