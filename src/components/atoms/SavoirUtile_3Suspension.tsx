@@ -301,19 +301,21 @@ const Suspension = () => {
                   facilitant l&apos;accès aux réglages mais l&apos;exposant aux
                   chutes et à la saleté.
                 </p>
-                <div className=" place-items-center my-1">
+                <div
+                  className="place-items-center my-1
+                aspect-[16/9] min-h-[90px] max-h-[250px]"
+                >
                   <Image
                     src={suspension1D}
                     alt="Assemblage d'une batterie lithium-ion"
-                    className="rounded-lg w-full object-cover shadow-sm
-                            min-w-[90px] max-w-[250px]"
+                    className="rounded-lg h-full object-cover shadow-sm"
                     priority={false}
                   />
                 </div>
                 <p className="text-sm">
                   Exemples : S16, S18, Master, Extreme...
                 </p>
-              </div>{' '}
+              </div>
               <div
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
@@ -325,12 +327,14 @@ const Suspension = () => {
                   Visuellement plus discret, les amortisseurs sont placés sur
                   chaque côté de la roue (c&apos;est le trolley qui doit).
                 </p>
-                <div className="place-items-center my-1">
+                <div
+                  className="place-items-center my-1
+                aspect-[16/9] min-h-[90px] max-h-[250px]"
+                >
                   <Image
                     src={suspension1C}
                     alt="Assemblage d'une batterie lithium-ion"
-                    className="rounded-lg w-full object-cover shadow-sm
-                            min-w-[90px] max-w-[250px]"
+                    className="rounded-lg h-full object-cover shadow-sm"
                     priority={false}
                   />
                 </div>
@@ -367,14 +371,16 @@ const Suspension = () => {
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Comportement :</strong> prévisible
+                    <strong>Comportement :</strong> prévisible (linéaire ou
+                    progressif selon le type de ressort)
                   </li>
                   <li>
-                    <strong>Réglage : </strong>limité (il faut changer le
-                    ressort pour changer la dureté)
+                    <strong>Réglage : </strong>limité (le réglage se fait à
+                    l&apos;achat&nbsp;: 62lbs, 66lbs, 70lbs)
                   </li>
                   <li>
-                    <strong>Contrainte : </strong>simple (fait l&apos;essentiel)
+                    <strong>Contrainte : </strong>manque de polyvalence (il faut
+                    changer le ressort pour changer la dureté)
                   </li>
                 </ul>
                 <div
