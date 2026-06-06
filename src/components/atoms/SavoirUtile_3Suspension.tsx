@@ -289,7 +289,12 @@ const Suspension = () => {
               des réglages.
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-2 mb-4">
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md dark:shadow-neutral-900 dark:hover:shadow-neutral-950">
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+              >
                 <h6 className="font-semibold mb-1">⚙️ Suspension déportée</h6>
                 <p className="text-sm">
                   L&apos;amortisseur est visible sur l&apos;arrière de la roue,
@@ -308,8 +313,13 @@ const Suspension = () => {
                 <p className="text-sm">
                   Exemples : S16, S18, Master, Extreme...
                 </p>
-              </div>
-              <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md dark:shadow-neutral-900 dark:hover:shadow-neutral-950">
+              </div>{' '}
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+              >
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
                   Visuellement plus discret, les amortisseurs sont placés sur
@@ -337,9 +347,9 @@ const Suspension = () => {
           </h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p className="mb-2">
-              Un amortisseur utilise une ou plusieurs technologies combinées
-              (parfois les trois) pour supporter le poids et contrôler les
-              mouvements de la roue.
+              Un amortisseur peut utiliser une ou plusieurs technologies
+              combinées (parfois les 3) pour supporter le poids et contrôler les
+              mouvements de la suspension.
             </p>
             <div className="grid gap-2 md:gap-3 md:grid-cols-3 mb-4">
               {/* BLOC 1: RESSORT */}
@@ -347,10 +357,10 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+                flex flex-col h-full"
               >
                 <h6 className="font-semibold mb-1">
-                  🟤 Le Ressort (Mécanique)
+                  🟤 Le Ressort (mécanique)
                 </h6>
                 <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Un ressort hélicoïdal métallique.
@@ -380,10 +390,10 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+                flex flex-col h-full"
               >
                 <h6 className="font-semibold mb-1">
-                  🟤 L&apos;Air (Pneumatique)
+                  🟤 L&apos;Air (pneumatique)
                 </h6>
                 <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Une cartouche d&apos;air sous haute pression.
@@ -415,36 +425,33 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+                flex flex-col h-full"
               >
                 <h6 className="font-semibold mb-1">
-                  🟤 L&apos;Hydraulique (Huile)
+                  🟤 L&apos;Hydraulique (huile)
                 </h6>
                 <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">
                   Un circuit d&apos;huile interne.
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Rôle : </strong>Le cerveau du système. L&apos;huile
-                    freine, dompte et stabilise l&apos;énergie du ressort (métal
-                    ou air) pour éliminer l&apos;effet pogo / trampoline.
+                    <strong>Comportement : </strong>l&apos;huile freine, absorbe
+                    et stabilise les mouvements (évite l&apos;effet trampoline)
                   </li>
                   <li>
-                    <strong>Réglage : </strong>Permet d&apos;ajuster précisément
-                    la vitesse de <em>Compression</em> (absorption du choc) et
-                    de <em>Rebond</em> (vitesse de retour).
+                    <strong>Réglage : </strong>permet d&apos;ajuster finement
+                    les vitesses de <em>compression</em> et de <em>rebond</em>
                   </li>
                   <li>
-                    <strong>Contrainte : </strong>Mécanique plus complexe.
-                    Nécessite une étanchéité parfaite pour éviter les fuites
-                    d&apos;huile au fil des ans.
+                    <strong>Contrainte : </strong>
+                    nécessite une étanchéité parfaite pour éviter les fuites
                   </li>
                 </ul>
                 <div
                   className="bg-taupe-100 dark:bg-taupe-800 rounded-md
                 p-1.5 mt-3 text-center text-sm font-medium"
                 >
-                  🎯 Maîtrise / contrôle du mouvement
+                  🎯 Maîtrise des mouvements
                 </div>
               </div>
             </div>
@@ -605,14 +612,17 @@ const Suspension = () => {
           <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
           <div className="mb-2 md:mb-4">
             <p>
-              Comme pour la pression du pneu, il n&apos;existe pas de réglage
-              universel. Le bon compromis dépend notamment :
+              Comme pour la pression du pneu, il n&apos;existe{' '}
+              <strong className="text-olive-600 dark:text-olive-300">
+                pas de réglage universel
+              </strong>
+              . Le bon compromis dépend notamment :
             </p>
             <ul className="compactlist2">
               <li>du poids du wheeler ;</li>
+              <li>du confort recherché ;</li>
               <li>du terrain pratiqué ;</li>
-              <li>du style de conduite ;</li>
-              <li>du confort recherché.</li>
+              <li>du style de conduite.</li>
             </ul>
           </div>
 
@@ -620,13 +630,13 @@ const Suspension = () => {
           <h5 className="mt-4 font-semibold">🔹 Les 3 réglages possibles</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
-              Selon les modèles, plusieurs réglages peuvent être disponibles,
-              mais tous les amortisseurs n&apos;offrent pas forcément toutes ces
-              possibilités.
+              Selon le type de suspension, plusieurs réglages peuvent être
+              disponibles (mais tous les amortisseurs n&apos;offrent pas
+              forcément ces possibilités).
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-3 mt-2 mb-2">
               <div className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl shadow-md">
-                <p className="font-semibold">⚙️ Précharge</p>
+                <p className="font-semibold">⚙️ Précontrainte</p>
                 <p className="text-sm">
                   Elle détermine l&apos;enfoncement initial de la suspension
                   sous le poids du pilote.
@@ -665,7 +675,7 @@ const Suspension = () => {
             </div>
             <p>
               <span className="font-semibold">👉 Et le SAG&nbsp;? </span>
-              Il s&apos;agit de la conséquence du réglage de précharge. Une
+              Il s&apos;agit de la conséquence du réglage de précontrainte. Une
               suspension trop enfoncée manquera de réserve pour absorber
               certains chocs (et risque davantage de talonner).
             </p>
@@ -679,14 +689,23 @@ const Suspension = () => {
           <h5 className="mt-4 font-semibold">🔹 Trouver le bon réglage</h5>
           <div className="mx-4 mb-2 md:mb-4">
             <p>
-              L&apos;objectif est simple&nbsp;: permettre à la suspension de
-              travailler. Comme pour la pression d&apos;un pneu, plusieurs
-              essais sont souvent nécessaires avant de trouver le réglage qui
-              convient.
+              L&apos;objectif est simple&nbsp;:{' '}
+              <strong className="text-olive-600 dark:text-olive-300">
+                permettre à l&apos;ensemble de la suspension de travailler
+              </strong>
+              . Comme pour la pression du pneu, plusieurs essais sont souvent
+              nécessaires pour{' '}
+              <strong className="text-olive-600 dark:text-olive-300">
+                trouver le réglage
+              </strong>
+              qui convient.
             </p>
             <p className="mb-0">
-              Tes choix et tes réglages dépendront avant tout de ton usage, de
-              ton poids, et des sensations que tu recherches (le meilleur
+              Tes choix et{' '}
+              <strong className="text-olive-600 dark:text-olive-300">
+                tes réglages dépendront avant tout de ton usage
+              </strong>
+              , de ton poids, et des sensations que tu recherches (le meilleur
               réglage n&apos;est pas celui d&apos;un autre wheeler sur YouTube).
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-2 mt-2">
@@ -698,7 +717,6 @@ const Suspension = () => {
                 <ul className="compactlist2 [&>li]:text-sm">
                   <li>pompage excessif ;</li>
                   <li>talonnage fréquent ;</li>
-                  <li>manque de précision ;</li>
                   <li>perte d&apos;efficacité à haute vitesse.</li>
                 </ul>
               </div>
@@ -710,7 +728,6 @@ const Suspension = () => {
                 <ul className="compactlist2 [&>li]:text-sm">
                   <li>absorbe mal les chocs ;</li>
                   <li>perte de confort ;</li>
-                  <li>adhérence dégradée sur terrain irrégulier ;</li>
                   <li>suspension sous-exploitée.</li>
                 </ul>
               </div>
@@ -722,7 +739,7 @@ const Suspension = () => {
               <p className="font-semibold">🟢 Bon réglage</p>
               <p className="text-sm mb-0">
                 La suspension utilise une partie significative de son
-                débattement sans talonner fréquemment. La roue reste
+                débattement sans talonner trop fréquemment. La roue reste
                 confortable, stable et prévisible, quelles que soient les
                 irrégularités rencontrées.
               </p>
@@ -732,18 +749,18 @@ const Suspension = () => {
           {/*--------------------------------------------------------------*/}
           {/*--------------------------------------------------------------*/}
           <div className="BlockSuspension">
-            <p className="font-bold">💡 En résumé :</p>
+            <p className="font-bold">🦿 En résumé :</p>
             <ul className="compactlist2">
               <li>
                 Mal réglée, la suspension sera inefficace et désagréable !
               </li>
               <li>
-                Débutant ou budget serré ? Une roue non suspendue reste un
-                excellent choix (plus léger et plus fiable).
+                Débutant ou budget serré&nbsp;? une roue non suspendue reste un
+                excellent choix (plus léger et plus simple).
               </li>
               <li>
-                Gros rouleur ou adepte du confort ? La suspension changera votre
-                vie, à condition de prendre 5 minutes pour effectuer les
+                Gros rouleur ou adepte du confort&nbsp;? la suspension changera
+                votre vie, à condition de prendre 5 minutes pour effectuer les
                 réglages et les vérifier régulièrement.
               </li>
             </ul>
