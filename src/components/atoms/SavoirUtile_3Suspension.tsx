@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Les3suspensions from '@/public/4.guide/Suspension1-les_amortisseurs.jpg'
+import suspension1C from '@/public/4.guide/Suspension1-centrale.jpg'
+import suspension1D from '@/public/4.guide/Suspension1-déportée.jpg'
+import Les3suspensions from '@/public/4.guide/Suspension2-les_amortisseurs.jpg'
 
 const Suspension = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -85,17 +87,18 @@ const Suspension = () => {
           {/*--------------------- INTRO ---------------------------------*/}
           <p>
             À leurs débuts, les gyroroues ne possédaient aucune suspension. Le
-            confort dépendait alors uniquement du pneu… et des jambes du wheeler
-            😅
+            confort dépendait alors uniquement du pneu…
+            <br />
+            et des jambes du wheeler 😅
           </p>
 
           {/*----------------------------------------------------------------*/}
           {/*----------------- Vraiment une révolution ? --------------------*/}
           <h4 className="mt-6 mb-2">➡️ Le confort... au prix fort&nbsp;?</h4>
           <p>
-            L&apos;arrivée de la suspension (premier modèle fin 2020) a été une
-            des évolutions les plus marquantes de la gyroroue. Elle s&apos;est
-            très vite généralisée et est rapidement devenue{' '}
+            L&apos;arrivée de la suspension (fin 2020) a été une des évolutions
+            les plus marquantes de la gyroroue. Elle s&apos;est rapidement
+            généralisée et est très vite devenue{' '}
             <Link
               href={'/choisir-gyroroue#besoins'}
               className="text-olive-600 dark:text-olive-300 underline hover:text-blue-700 dark:hover:text-blue-400"
@@ -115,7 +118,7 @@ const Suspension = () => {
           </p>
           <p>
             Et malgré les milliers de kilomètres parcourus sans, une fois
-            habitué à la suspension, difficile revenir en arrière.
+            habitué à la suspension, difficile revenir en arrière&nbsp;!
           </p>
           <p className="mt-2">
             Mais{' '}
@@ -158,51 +161,49 @@ const Suspension = () => {
                   <td className="p-1">🎓 Apprentissage</td>
                   <td className="p-1 text-center">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Peu utile pour débuter (surcoût, alourdit la roue, éléments
-                    exposés aux chutes)
+                    Peu utile, surcoût, plus lourd
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
-                  <td className="p-1">🚆 Multi-modalité, transports denses</td>
+                  <td className="p-1">🚆 Multi-modalité</td>
                   <td className="p-1 text-center">❌ Peu adapté</td>
                   <td className="p-1 text-right">
-                    Elle augmente le poids et l&apos;encombrement
+                    Augmente le poids et l&apos;encombrement
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">💰 Budget limité</td>
                   <td className="p-1 text-center">❌ Peu adapté</td>
                   <td className="p-1 text-right">
-                    Généralement plus cher à performances équivalentes
+                    Plus cher à performances similaires
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚶Trajet court / occasionnel</td>
                   <td className="p-1 text-center">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Sans, c&apos;est plus simple, léger, compact et économique
+                    Sans, c&apos;est simple, léger et compact
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚴 Trajets réguliers</td>
                   <td className="p-1 text-center">✅ Un vrai plus</td>
                   <td className="p-1 text-right">
-                    Le confort donne encore plus envie d&apos;utiliser sa roue
+                    Donne encore plus envie d&apos;aller rouler
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
                   <td className="p-1 text-center">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Réduit la fatigue (mais aussi la place pour la batterie)
+                    Réduit la fatigue (et la place de la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🌲 Offroad / chemins dégradés</td>
                   <td className="p-1 text-center">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Meilleure stabilité et contrôle (mais nécessite de
-                    l&apos;entretien)
+                    Meilleure stabilité et contrôle (avec de l&apos;entretien)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
@@ -220,7 +221,7 @@ const Suspension = () => {
           <h5 className="font-bold mt-5 mb-0">🔧 Et l&apos;entretien&nbsp;?</h5>
           <p>
             Comme sur un vélo ou une moto, une suspension comporte des pièces
-            mobiles qui travaillent en permanence, et qui{' '}
+            mobiles qui travaillent en permanence et qui{' '}
             <strong className="text-olive-600 dark:text-olive-300">
               nécessitent des contrôles réguliers
             </strong>{' '}
@@ -232,7 +233,7 @@ const Suspension = () => {
             <strong className="text-olive-600 dark:text-olive-300">
               suspension mal entretenue
             </strong>{' '}
-            peut perdre en efficacité, être inconfortable, voire{' '}
+            perdra en efficacité, sera inconfortable, et pourra{' '}
             <strong className="text-olive-600 dark:text-olive-300">
               devenir dangereuse
             </strong>{' '}
@@ -247,7 +248,7 @@ const Suspension = () => {
               Les vidéos de{' '}
               <strong>sauts, d&apos;escaliers ou d&apos;offroad</strong> extrême
               sont impressionnantes. Certaines roues modernes en sont capables,
-              mais cela sollicite énormément le matériel (car{' '}
+              mais cela sollicite énormément le matériel (
               <strong>les roues ne sont pas conçues pour </strong>encaisser cela
               au quotidien).
             </p>
@@ -258,24 +259,18 @@ const Suspension = () => {
           <h4 className="mt-8 mb-2">➡️ Les principaux éléments</h4>
           <div className="mb-2 md:mb-4">
             <p>
-              Certains modèles ont privilégié la performance, d&apos;autres le
-              confort, la simplicité mécanique ou la robustesse.
-            </p>
-            <p>
-              Pour cela, les fabricants ont testé et développé différents
+              Avec le temps, les fabricants ont testé et développé différents
               systèmes de suspension.
             </p>
-            <p className="mt-2">
-              Une suspension se compose de plusieurs éléments&nbsp;:
-            </p>
+            <p className="mt-2">Une suspension se compose&nbsp;:</p>
             <ul className="compactlist2">
               <li className="">
-                un système de guidage (glissières, bras, biellettes...) qui
-                permet le mouvement
+                d&apos;un système de guidage (glissières, bras, biellettes...)
+                qui permet le mouvement.
               </li>
               <li className="">
-                le(s) amortisseur(s) qui absorbent les chocs provoqués par les
-                irrégularités du terrain
+                d&apos;amortisseurs qui absorbent les chocs provoqués par les
+                irrégularités du terrain.
               </li>
             </ul>
           </div>
@@ -283,18 +278,33 @@ const Suspension = () => {
           {/*----------------- ARCHITECTURE ---------------------------*/}
           <h5 className="mt-4 font-semibold">🔸 L&apos;architecture</h5>
           <div className="mx-4 mb-2 md:mb-4">
-            <p className="mb-2">
+            <p className="">
               L&apos;architecture correspond à la façon dont la suspension est
               intégrée dans la roue.
             </p>
-            <div className="grid gap-4 md:grid-cols-2 mb-4">
+            <p className="mb-2">
+              Attention, elle ne permet pas, à elle seule, de juger la qualité
+              d&apos;une suspension. Les performances dépendent aussi de la
+              qualité du guidage, de la cinématique, de l&apos;amortisseur, et
+              des réglages.
+            </p>
+            <div className="grid gap-2 md:gap-4 md:grid-cols-2 mb-4">
               <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md dark:shadow-neutral-900 dark:hover:shadow-neutral-950">
                 <h6 className="font-semibold mb-1">⚙️ Suspension déportée</h6>
                 <p className="text-sm">
                   L&apos;amortisseur est visible sur l&apos;arrière de la roue,
-                  faciliant l&apos;accès aux réglages mais l&apos;exposant à la
-                  saleté.
+                  facilitant l&apos;accès aux réglages mais l&apos;exposant aux
+                  chutes et à la saleté.
                 </p>
+                <div className=" place-items-center my-1">
+                  <Image
+                    src={suspension1D}
+                    alt="Assemblage d'une batterie lithium-ion"
+                    className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[250px]"
+                    priority={false}
+                  />
+                </div>
                 <p className="text-sm">
                   Exemples : S16, S18, Master, Extreme...
                 </p>
@@ -302,20 +312,23 @@ const Suspension = () => {
               <div className="bg-taupe-50 dark:bg-taupe-900 px-3 py-2 rounded-xl shadow-md dark:shadow-neutral-900 dark:hover:shadow-neutral-950">
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
-                  Visuellement plutôt discret, les amortisseurs sont placés sur
-                  les côtés de la roue.
+                  Visuellement plus discret, les amortisseurs sont placés sur
+                  chaque côté de la roue (c&apos;est le trolley qui doit).
                 </p>
-                <p className="text-sm place-content-end">
+                <div className="place-items-center my-1">
+                  <Image
+                    src={suspension1C}
+                    alt="Assemblage d'une batterie lithium-ion"
+                    className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[250px]"
+                    priority={false}
+                  />
+                </div>
+                <p className="text-sm">
                   Exemples : Falcon, V11Y, Sherman-S, Lynx...
                 </p>
               </div>
             </div>
-            <p>
-              Elle ne permet pas, à elle seule, de juger la qualité d&apos;une
-              suspension. Les performances dépendent aussi de la qualité du
-              guidage, de la cinématique, de l&apos;amortisseur, et des
-              réglages.
-            </p>
           </div>
 
           {/*----------------- TYPE D'AMORTISSEUR ---------------------*/}
@@ -429,7 +442,7 @@ const Suspension = () => {
                 </ul>
                 <div
                   className="bg-taupe-100 dark:bg-taupe-800 rounded-md
-                p-1.5 mt-3 text-center text-sm font-medium text-olive-700 dark:text-olive-300"
+                p-1.5 mt-3 text-center text-sm font-medium"
                 >
                   🎯 Maîtrise / contrôle du mouvement
                 </div>
