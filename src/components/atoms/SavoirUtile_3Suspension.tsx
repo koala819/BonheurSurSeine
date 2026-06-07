@@ -156,59 +156,59 @@ const Suspension = () => {
                   <th className="py-2 px-2 text-center">Pourquoi ?</th>
                 </tr>
               </thead>
-              <tbody className="text-sm md:text-base text-gray-800 dark:text-gray-100 bg-c-50 dark:bg-olive-800">
+              <tbody className="text-sm md:text-base text-gray-800 dark:text-gray-100 bg-olive-50 dark:bg-olive-800">
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🎓 Apprentissage</td>
-                  <td className="p-1 text-center">🤔 Optionnel</td>
+                  <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Peu utile, surcoût, plus lourd
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚆 Multi-modalité</td>
-                  <td className="p-1 text-center">❌ Peu adapté</td>
+                  <td className="p-1 text-left">❌ Peu adapté</td>
                   <td className="p-1 text-right">
                     Augmente le poids et l&apos;encombrement
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">💰 Budget limité</td>
-                  <td className="p-1 text-center">❌ Peu adapté</td>
+                  <td className="p-1 text-left">❌ Peu adapté</td>
                   <td className="p-1 text-right">
                     Plus cher à performances similaires
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚶Trajet court / occasionnel</td>
-                  <td className="p-1 text-center">🤔 Optionnel</td>
+                  <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Sans, c&apos;est simple, léger et compact
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚴 Trajets réguliers</td>
-                  <td className="p-1 text-center">✅ Un vrai plus</td>
+                  <td className="p-1 text-left">✅ Un vrai plus</td>
                   <td className="p-1 text-right">
                     Donne encore plus envie d&apos;aller rouler
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
-                  <td className="p-1 text-center">✅ Très intéressant</td>
+                  <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
                     Réduit la fatigue (et la place de la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🌲 Offroad / chemins dégradés</td>
-                  <td className="p-1 text-center">✅ Très intéressant</td>
+                  <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
                     Meilleure stabilité et contrôle (avec de l&apos;entretien)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">⚡ Conduite sportive</td>
-                  <td className="p-1 text-center">✅ Selon usage</td>
+                  <td className="p-1 text-left">✅ Selon usage</td>
                   <td className="p-1 text-right">
                     Confort mais augmente la surconfiance et le centre de
                     gravité
@@ -262,15 +262,17 @@ const Suspension = () => {
               Avec le temps, les fabricants ont testé et développé différents
               systèmes de suspension.
             </p>
-            <p className="mt-2">Une suspension se compose&nbsp;:</p>
+            <p className="mt-2">
+              Une suspension se compose généralement&nbsp;:
+            </p>
             <ul className="compactlist2">
               <li className="">
-                d&apos;un système de guidage (glissières, bras, biellettes...)
-                qui permet le mouvement.
+                <strong>d&apos;un système de guidage</strong> (glissières, bras,
+                biellettes...) qui permet le mouvement.
               </li>
               <li className="">
-                d&apos;amortisseurs qui absorbent les chocs provoqués par les
-                irrégularités du terrain.
+                <strong>d&apos;amortisseurs</strong> qui absorbent les chocs
+                provoqués par les irrégularités du terrain.
               </li>
             </ul>
           </div>
@@ -297,9 +299,11 @@ const Suspension = () => {
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension déportée</h6>
                 <p className="text-sm">
-                  L&apos;amortisseur est visible sur l&apos;arrière de la roue,
-                  facilitant l&apos;accès aux réglages mais l&apos;exposant aux
-                  chutes et à la saleté.
+                  L&apos;amortisseur, relié par un système de biellettes
+                  articulées (cinématique), est installé sur{' '}
+                  <strong>le dessus ou l&apos;arrière de la roue</strong>{' '}
+                  (facilitant l&apos;accès aux réglages mais l&apos;exposant aux
+                  chutes et à la saleté).
                 </p>
                 <div
                   className="place-items-center my-1
@@ -324,8 +328,10 @@ const Suspension = () => {
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
-                  Visuellement plus discret, les amortisseurs sont placés sur
-                  chaque côté de la roue (c&apos;est le trolley qui doit).
+                  Deux amortisseurs sont discrètement{' '}
+                  <strong>placés sur chaque côté</strong> de la roue, en fourche
+                  symétrique (identiques des 2 côtés) ou asymétrique
+                  (compression d&apos;un côté, rebond de l&apos;autre).
                 </p>
                 <div
                   className="place-items-center my-1
@@ -339,7 +345,7 @@ const Suspension = () => {
                   />
                 </div>
                 <p className="text-sm">
-                  Exemples : Falcon, V11Y, Sherman-S, Lynx...
+                  Exemples : Falcon, Aero, V11Y, Sherman-S, Lynx...
                 </p>
               </div>
             </div>
@@ -532,14 +538,19 @@ const Suspension = () => {
                     des chocs plus importants
                   </li>
                   <li className="text-sm">
-                    En pratique, le comportement dépend de la cinématique, de la
-                    progressivité de l&apos;amortisseur, de sa rigidité et des
+                    En pratique, le comportement dépend de la cinématique, de sa
+                    rigidité, de la progressivité de l&apos;amortisseur et des
                     réglages
+                  </li>
+                  <li className="text-sm">
+                    Tout le monde n&apos;a pas besoin (ni l&apos;usage)
+                    d&apos;un grand débattement (qui, par construction, joue sur
+                    la hauteur des pédales)
                   </li>
                 </ul>
               </div>
               {/* FOOTER BLOCK */}
-              <div className="mt-4">
+              <div className="mt-1">
                 <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
                   <p className="text-sm">
                     Un talonnage occasionnel n&apos;est pas problématique. En
@@ -585,7 +596,7 @@ const Suspension = () => {
                 </ul>
               </div>
               {/* FOOTER BLOCK */}
-              <div className="mt-4">
+              <div className="mt-1">
                 <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
                   <p className="text-sm">
                     La suspension doit être considérée comme un équipement
@@ -703,7 +714,7 @@ const Suspension = () => {
               nécessaires pour{' '}
               <strong className="text-olive-600 dark:text-olive-300">
                 trouver le réglage
-              </strong>
+              </strong>{' '}
               qui convient.
             </p>
             <p className="mb-0">
