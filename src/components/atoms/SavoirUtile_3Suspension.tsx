@@ -796,7 +796,7 @@ const Suspension = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : mai 2026
+            dernière mise à jour : juin 2026
           </p>
         </AccordionItem>
       </Accordion>
