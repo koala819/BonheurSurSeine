@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 import apprendre from '@/public/1.apprendre/gyroroues_apprendre_202509.png'
 
-const Apprendre = () => {
+const Apprendre1 = () => {
   return (
     <section
       id="apprendre"
@@ -274,4 +274,4 @@ const Apprendre = () => {
   )
 }
 
-export default Apprendre
+export default Apprendre1

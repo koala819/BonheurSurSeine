@@ -59,7 +59,7 @@ const Quote = () => {
             src={Discord}
             width={56}
             height={56}
-            className="rounded-full opacity-80 hover:opacity-100 transition-transform transform hover:scale-150 max-h-48 "
+            className="rounded-full opacity-80 hover:opacity-100 transition-transform transform hover:scale-150 max-h-48 w-auto h-auto"
           />
         </Link>
       </div>

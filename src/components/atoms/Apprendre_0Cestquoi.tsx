@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 import gyroroues from '@/public/1.apprendre/gyroroues_bss_202502.jpg'
 
-const Maintenance = () => {
+const Apprendre0 = () => {
   return (
     <section
       id="cestquoi"
@@ -21,6 +21,7 @@ const Maintenance = () => {
           alt="Découvrir la gyroroue"
           fill
           className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h2 className="text-white font-bold text-center">
@@ -446,10 +447,8 @@ const Maintenance = () => {
         <br />
         dernière mise à jour : avril 2026
       </p>
-      {/*</AccordionItem>
-      </Accordion>*/}
     </section>
   )
 }
 
-export default Maintenance
+export default Apprendre0

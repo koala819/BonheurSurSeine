@@ -7,7 +7,7 @@ import { FiInstagram } from 'react-icons/fi'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Article } from '@/src/components/molecules/Article1'
+//import { Article } from '@/src/components/molecules/Article1'
 import { DoubleColumn } from '@/src/components/molecules/DoubleColumns'
 
 //import { FooterColumn } from '@/src/components/molecules/FooterColumn'
@@ -31,87 +31,120 @@ export function Footer() {
             rightClassName="flex justify-center"
             left={
               <picture className="w-full flex justify-center md:justify-end pr-4">
-                <Image src={logo} alt="Logo Bonheur Sur Seine" height={80} />
+                <Image
+                  src={logo}
+                  alt="Logo Bonheur Sur Seine"
+                  height={90}
+                  className="w-auto h-auto"
+                />
               </picture>
             }
             right={
               <div className="flex flex-col items-center md:items-start">
-                <Article
-                  title="Bonheur Sur Seine"
-                  classNameTitle="md:text-xl lg:text-4xl"
-                  button={{ display: false }}
-                />
+                <p className="sm:text-xl md:text-2xl lg:text-4xl">
+                  Bonheur&nbsp;Sur&nbsp;Seine
+                </p>
                 <span className="text-xs text-cyan-50 dark:text-sky-50">
-                  {/*<span className="text-xs text-cyan-600 dark:text-sky-950">*/}
                   Vidéaste et Spécialiste gyroroue
                 </span>
-                <picture className="flex space-x-4 items-center justify-center mt-0 w-full">
-                  <Tooltip showArrow={true} color="danger" content="Youtube">
+                <picture className="flex space-x-1 md:space-x-2 items-center justify-center mt-0 w-full">
+                  {/*---------------------------------------------*/}
+                  <Tooltip
+                    showArrow={true}
+                    color="danger"
+                    content="Youtube"
+                    className="bg-white text-red-600 hover:text-red-500 flex items-center rounded-xl p-0.5"
+                  >
                     <Link
                       href="https://www.youtube.com/c/BonheursurSeine"
                       target="_blank"
-                      className="text-red-600 hover:text-red-500 flex items-centerrounded-2xl p-2"
+                      className="text-red-600 hover:text-red-500 flex items-center rounded-2xl p-1 transition-transform transform hover:scale-110"
                     >
                       <BsYoutube size={38} />
                     </Link>
                   </Tooltip>
 
-                  <Tooltip showArrow={true} color="default" content="Patreon">
+                  {/*---------------------------------------------*/}
+                  <Tooltip
+                    showArrow={true}
+                    color="default"
+                    content="Patreon"
+                    className="bg-white text-red-600 hover:text-red-500 flex items-center rounded-xl p-0.5"
+                  >
                     <Link
                       href="https://www.patreon.com/c/BonheursurSeine"
                       target="_blank"
-                      className="flex items-centerrounded-2xl p-2"
+                      className="flex items-center rounded-2xl p-1 transition-transform transform hover:scale-110"
                     >
                       <picture className="w-8 h-8">
                         <Image
                           alt="Patreon logo"
                           src={Patreon}
-                          className="opacity-80 hover:opacity-100"
+                          width={32} // 👈 Ajouté pour Next.js
+                          height={32} // 👈 Ajouté pour Next.js
+                          className="opacity-80 hover:opacity-100 w-auto h-auto"
                         />
                       </picture>
                     </Link>
                   </Tooltip>
 
-                  <Tooltip showArrow={true} color="primary" content="Discord">
+                  {/*---------------------------------------------*/}
+                  <Tooltip
+                    showArrow={true}
+                    color="primary"
+                    content="Discord"
+                    className="bg-white text-red-600 hover:text-red-500 flex items-center rounded-xl p-0.5"
+                  >
                     <Link
                       href="https://discord.com/invite/Jhgw7C96Jf"
                       target="_blank"
-                      className="w-16 h-16 transition-transform transform hover:scale-110 flex items-center"
+                      className="w-16 h-16 flex items-center rounded-2xl transition-transform transform hover:scale-110"
                     >
                       <Image
                         alt="Discord logo"
                         src={Discord}
                         width={64}
                         height={64}
-                        className="rounded-full opacity-80 hover:opacity-100"
+                        className="rounded-full opacity-80 hover:opacity-100 w-auto h-auto"
                       />
                     </Link>
                   </Tooltip>
 
+                  {/*---------------------------------------------*/}
                   <Tooltip
                     showArrow={true}
                     color={'danger'}
                     content="Instagram"
+                    className="bg-white text-red-600 hover:text-red-500 flex items-center rounded-xl p-0.5"
                   >
                     <Link
                       href="https://www.instagram.com/bonheursurseine/"
                       target="_blank"
-                      className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-2"
+                      className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-1 transition-transform transform hover:scale-110"
                     >
                       <FiInstagram size={32} />
                     </Link>
                   </Tooltip>
-                  <Tooltip showArrow={true} color={'danger'} content="Tipeee">
+
+                  {/*---------------------------------------------*/}
+                  <Tooltip
+                    showArrow={true}
+                    color={'danger'}
+                    content="Tipeee"
+                    className="bg-white text-red-600 hover:text-red-500 flex items-center rounded-xl p-0.5"
+                  >
                     <Link
                       href="https://fr.tipeee.com/bonheur-sur-seine"
                       target="_blank"
-                      className="text-rose-500 hover:text-rose-400 flex items-center justify-centerrounded-2xl p-2"
+                      className="text-rose-500 hover:text-rose-400 flex items-center justify-center rounded-2xl p-1 transition-transform transform hover:scale-110"
                     >
                       <picture className="w-8 h-8">
                         <Image
                           alt="Tipee logo"
                           src={Tipeee}
-                          className="opacity-80 hover:opacity-100"
+                          width={32} // 👈 Ajouté pour Next.js
+                          height={32} // 👈 Ajouté pour Next.js
+                          className="opacity-80 hover:opacity-100 w-auto h-auto"
                         />
                       </picture>
                     </Link>
@@ -121,6 +154,9 @@ export function Footer() {
             }
           />
         </aside>
+
+        {/*---------------------------------------------*/}
+        {/*---------------------------------------------*/}
 
         <aside className="flex justify-center items-center md:w-1/2">
           <div className="">

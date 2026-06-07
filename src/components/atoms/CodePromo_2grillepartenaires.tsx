@@ -50,12 +50,17 @@ export default function CardPromo({
           flex items-center
            hover:shadow-lg"
         >
-          <Link href={website} target="_blank">
+          <Link
+            href={website}
+            target="_blank"
+            className="relative w-full h-full block"
+          >
             <Image
               alt={alt || 'logo de mon partenaire'}
               src={imageSrc}
               fill
               priority
+              sizes="(max-width: 1024px) 150px, 200px"
               className="object-contain object-center rounded-xl"
             />
           </Link>

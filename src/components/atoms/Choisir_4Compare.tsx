@@ -187,7 +187,7 @@ const Compare = () => {
               alt="EUCFinder Screenshot"
               width={500}
               height={500}
-              className="rounded-lg cursor-pointer"
+              className="rounded-lg cursor-pointer w-full h-auto max-w-[500px]"
             />
           </Link>
         </div>

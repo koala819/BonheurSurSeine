@@ -64,7 +64,7 @@ const Choice = () => {
             alt="Personne avec une roue"
             width={900}
             height={500}
-            className="w-full max-w-lg mx-auto rounded-2xl object-cover object-center shadow-lg"
+            className="w-full max-w-lg mx-auto rounded-2xl object-cover object-center shadow-lg h-auto"
             priority
             placeholder="blur"
           />

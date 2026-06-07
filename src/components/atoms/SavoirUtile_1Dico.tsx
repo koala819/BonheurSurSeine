@@ -252,6 +252,7 @@ const Practical_Dico = () => {
                 src={Image_dico}
                 alt="Image_dico"
                 className="rounded-lg cursor-pointer"
+                priority
               />
             </aside>
           </div>

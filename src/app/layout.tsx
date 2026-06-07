@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={`${inter.className}`}>
         <Providers>
           <div className="min-h-screen min-w-screen flex flex-col">
