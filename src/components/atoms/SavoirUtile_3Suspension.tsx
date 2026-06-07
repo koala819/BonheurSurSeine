@@ -112,12 +112,13 @@ const Suspension = () => {
             Pourquoi un tel succès ? Parce qu&apos;elle améliore le confort et
             la stabilité en absorbant une grande partie des chocs et des
             vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses...{' '}
+            <br />
             <strong className="text-olive-600 dark:text-olive-300">
               Tout devient beaucoup moins fatigant et plus stable&nbsp;!
             </strong>
           </p>
           <p>
-            Et malgré les milliers de kilomètres parcourus sans, une fois
+            Et malgré des milliers de kilomètres parcourus sans, une fois
             habitué à la suspension, difficile revenir en arrière&nbsp;!
           </p>
           <p className="mt-2">
