@@ -66,7 +66,11 @@ const Practical_Battery = () => {
         <AccordionItem
           key="1"
           aria-label="Pourcentage batterie et autonomie"
-          title={<h3> ⚡ La batterie : fonctionnement et autonomie</h3>}
+          title={
+            <h3 className="line-clamp-2 md:line-clamp-none">
+              ⚡ La batterie : fonctionnement et autonomie
+            </h3>
+          }
           indicator={
             <strong className="transition-transform">
               <svg
