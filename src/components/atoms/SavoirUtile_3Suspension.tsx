@@ -63,7 +63,11 @@ const Suspension = () => {
         <AccordionItem
           key="1"
           aria-label="Choisir et régler la suspension"
-          title={<h3>🦿 La suspension : choisir et régler</h3>}
+          title={
+            <h3 className="line-clamp-2 md:line-clamp-none">
+              🦿 La suspension : fonctionnement, réglages et conseils
+            </h3>
+          }
           indicator={
             <strong className="transition-transform">
               <svg
@@ -97,8 +101,8 @@ const Suspension = () => {
           <h4 className="mt-6 mb-2">➡️ Le confort... au prix fort&nbsp;?</h4>
           <p>
             L&apos;arrivée de la suspension (fin 2020) a été une des évolutions
-            les plus marquantes de la gyroroue. Elle s&apos;est rapidement
-            généralisée et est très vite devenue{' '}
+            les plus marquantes de la gyroroue. Elle s&apos;est généralisée en
+            quelques années et est très vite devenue{' '}
             <Link
               href={'/choisir-gyroroue#besoins'}
               className="text-olive-600 dark:text-olive-300 underline hover:text-blue-700 dark:hover:text-blue-400"
@@ -119,7 +123,7 @@ const Suspension = () => {
           </p>
           <p>
             Et malgré des milliers de kilomètres parcourus sans, une fois
-            habitué à la suspension, difficile revenir en arrière&nbsp;!
+            habitué à la suspension, difficile de revenir en arrière&nbsp;!
           </p>
           <p className="mt-2">
             Mais{' '}
@@ -197,7 +201,7 @@ const Suspension = () => {
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Réduit la fatigue (et la place de la batterie)
+                    Réduit la fatigue (et la place prévue pour la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
@@ -312,7 +316,7 @@ const Suspension = () => {
                 >
                   <Image
                     src={suspension1D}
-                    alt="Assemblage d'une batterie lithium-ion"
+                    alt="Suspension déportée"
                     className="rounded-lg h-full object-cover shadow-sm"
                     priority={false}
                   />
@@ -329,9 +333,9 @@ const Suspension = () => {
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
-                  Deux amortisseurs sont discrètement{' '}
-                  <strong>placés sur chaque côté</strong> de la roue, en fourche
-                  symétrique (identiques des 2 côtés) ou asymétrique
+                  Des amortisseurs (glissières pneumatiques, fourches...) sont
+                  <strong> placés sur chaque côté </strong>de la roue, de
+                  manière symétrique (identiques des 2 côtés) ou asymétrique
                   (compression d&apos;un côté, rebond de l&apos;autre).
                 </p>
                 <div
@@ -340,7 +344,7 @@ const Suspension = () => {
                 >
                   <Image
                     src={suspension1C}
-                    alt="Assemblage d'une batterie lithium-ion"
+                    alt="Suspension centrale"
                     className="rounded-lg h-full object-cover shadow-sm"
                     priority={false}
                   />
@@ -448,8 +452,9 @@ const Suspension = () => {
                 </p>
                 <ul className="compactlist2 [&>li]:text-sm flex-1">
                   <li>
-                    <strong>Comportement : </strong>l&apos;huile freine, absorbe
-                    et stabilise les mouvements (évite l&apos;effet trampoline)
+                    <strong>Comportement : </strong>l&apos;huile complète le
+                    système pour freiner, absorber et stabiliser les mouvements
+                    (évite l&apos;effet trampoline)
                   </li>
                   <li>
                     <strong>Réglage : </strong>permet d&apos;ajuster finement
@@ -545,7 +550,7 @@ const Suspension = () => {
                   </li>
                   <li className="text-sm">
                     Tout le monde n&apos;a pas besoin (ni l&apos;usage)
-                    d&apos;un grand débattement (qui, par construction, joue sur
+                    d&apos;un grand débattement, qui par construction, rehausse
                     la hauteur des pédales)
                   </li>
                 </ul>
@@ -554,8 +559,15 @@ const Suspension = () => {
               <div className="mt-1">
                 <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
                   <p className="text-sm">
-                    Un talonnage occasionnel n&apos;est pas problématique. En
-                    revanche, un talonnage fréquent indique un réglage inadapté.
+                    Un talonnage (cf.{' '}
+                    <Link
+                      href="/guide-utile-gyroroue#dico"
+                      className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+                    >
+                      Le P&apos;tit Dico du Bonheur
+                    </Link>
+                    ) occasionnel n&apos;est pas problématique. En revanche, un
+                    talonnage fréquent indique un réglage inadapté.
                   </p>
                 </div>
                 <p className="text-sm font-semibold">
@@ -619,9 +631,21 @@ const Suspension = () => {
               augmente aussi le risque de surconfiance.
               <br />
               Certains chercheurs parlent{' '}
-              <strong>«&nbsp;d&apos;homéostasie du risque&nbsp;»</strong>&nbsp;:
-              lorsqu&apos;un équipement nous semble plus sûr, nous avons parfois
-              tendance à compenser en prenant davantage de risques.
+              <strong>
+                «&nbsp;d&apos;homéostasie du risque&nbsp;»
+              </strong> (cf.{' '}
+              <Link
+                href="/guide-utile-gyroroue#dico"
+                className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+              >
+                Le P&apos;tit Dico du Bonheur
+              </Link>
+              )&nbsp;: lorsqu&apos;un équipement nous semble plus sûr, nous
+              avons parfois tendance à compenser en prenant davantage de
+              risques. <br />
+              Plus la roue absorbe les défauts, plus on roule vite sans
+              forcément s&apos;en rendre compte, et pourtant en cas de chute,
+              l&apos;impact est identique.
             </p>
           </div>
 
