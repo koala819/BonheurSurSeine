@@ -98,7 +98,7 @@ const Suspension = () => {
 
           {/*----------------------------------------------------------------*/}
           {/*----------------- Vraiment une révolution ? --------------------*/}
-          <h4 className="mt-6 mb-2">➡️ Le confort... au prix fort&nbsp;?</h4>
+          <h4 className="mt-6 mb-2">➡️ Le confort… au prix fort&nbsp;?</h4>
           <p>
             L&apos;arrivée de la suspension (fin 2020) a été une des évolutions
             les plus marquantes de la gyroroue. Elle s&apos;est généralisée en
@@ -115,23 +115,22 @@ const Suspension = () => {
           <p className="mt-2">
             Pourquoi un tel succès ? Parce qu&apos;elle améliore le confort et
             la stabilité en absorbant une grande partie des chocs et des
-            vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses...{' '}
-            <br />
+            vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses…{' '}
             <strong className="text-olive-600 dark:text-olive-300">
               Tout devient beaucoup moins fatigant et plus stable&nbsp;!
             </strong>
           </p>
           <p>
-            Et malgré des milliers de kilomètres parcourus sans, une fois
-            habitué à la suspension, difficile de revenir en arrière&nbsp;!
+            Et malgré les milliers de kilomètres parcourus sans suspension, une
+            fois qu&apos;on y a goûté, difficile de revenir en arrière&nbsp;!
           </p>
           <p className="mt-2">
             Mais{' '}
             <strong className="text-olive-600 dark:text-olive-300">
-              tout ce confort a un coût
-            </strong>{' '}
-            &nbsp;: prix, encombrement, poids, pédales hautes, usure
-            mécanique...{' '}
+              tout ce confort a un coût{' '}
+            </strong>
+            &nbsp;: prix, encombrement, poids, hauteur des pédales, usure
+            mécanique…{' '}
           </p>
 
           <div className="BlockSuspension">
@@ -267,13 +266,13 @@ const Suspension = () => {
               Avec le temps, les fabricants ont testé et développé différents
               systèmes de suspension.
             </p>
-            <p className="mt-2">
+            <p className="mt-0">
               Une suspension se compose généralement&nbsp;:
             </p>
             <ul className="compactlist2">
               <li className="">
                 <strong>d&apos;un système de guidage</strong> (glissières, bras,
-                biellettes...) qui permet le mouvement.
+                biellettes…) qui permet le mouvement.
               </li>
               <li className="">
                 <strong>d&apos;amortisseurs</strong> qui absorbent les chocs
@@ -284,7 +283,7 @@ const Suspension = () => {
 
           {/*----------------- ARCHITECTURE ---------------------------*/}
           <h5 className="mt-4 font-semibold">🔸 L&apos;architecture</h5>
-          <div className="mx-4 mb-2 md:mb-4">
+          <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p className="">
               L&apos;architecture correspond à la façon dont la suspension est
               intégrée dans la roue.
@@ -321,9 +320,7 @@ const Suspension = () => {
                     priority={false}
                   />
                 </div>
-                <p className="text-sm">
-                  Exemples : S16, S18, Master, Extreme...
-                </p>
+                <p className="text-sm">Exemples : S16, S18, Master, Extreme…</p>
               </div>
               <div
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
@@ -333,7 +330,7 @@ const Suspension = () => {
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
-                  Des amortisseurs (glissières pneumatiques, fourches...) sont
+                  Des amortisseurs (glissières pneumatiques, fourches…) sont
                   <strong> placés sur chaque côté </strong>de la roue, de
                   manière symétrique (identiques des 2 côtés) ou asymétrique
                   (compression d&apos;un côté, rebond de l&apos;autre).
@@ -350,7 +347,7 @@ const Suspension = () => {
                   />
                 </div>
                 <p className="text-sm">
-                  Exemples : Falcon, Aero, V11Y, Sherman-S, Lynx...
+                  Exemples : Falcon, Aero, V11Y, Sherman-S, Lynx…
                 </p>
               </div>
             </div>
@@ -360,7 +357,7 @@ const Suspension = () => {
           <h5 className="mt-4 font-semibold">
             🔸 Les technologies des amortisseurs
           </h5>
-          <div className="mx-4 mb-2 md:mb-4">
+          <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p className="mb-2">
               Un amortisseur peut utiliser une ou plusieurs technologies
               combinées (parfois les 3) pour supporter le poids et contrôler les
@@ -670,7 +667,7 @@ const Suspension = () => {
 
           {/*--------------- REGLAGES POSSIBLES -----------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Les 3 réglages possibles</h5>
-          <div className="mx-4 mb-2 md:mb-4">
+          <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p>
               Selon le type de suspension, plusieurs réglages peuvent être
               disponibles (mais tous les amortisseurs n&apos;offrent pas
@@ -729,7 +726,7 @@ const Suspension = () => {
 
           {/*--------------- Trouver le bon réglage -------------------*/}
           <h5 className="mt-4 font-semibold">🔹 Trouver le bon réglage</h5>
-          <div className="mx-4 mb-2 md:mb-4">
+          <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p>
               L&apos;objectif est simple&nbsp;:{' '}
               <strong className="text-olive-600 dark:text-olive-300">
@@ -756,10 +753,22 @@ const Suspension = () => {
               border border-red-200 dark:border-red-800"
               >
                 <p className="font-semibold mb-1">🔴 Suspension trop souple</p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>pompage excessif ;</li>
-                  <li>talonnage fréquent ;</li>
-                  <li>perte d&apos;efficacité à haute vitesse.</li>
+                <p className="text-sm">
+                  Symptômes&nbsp;: pompage excessif, talonnage fréquent…
+                </p>
+                <p className="text-sm">Ajustements :</p>
+                <ul className="[&>li]:text-sm">
+                  <li>
+                    ↗️ la <strong>précontrainte </strong>(moins
+                    d&apos;enfoncement)
+                  </li>
+                  <li>
+                    ↗️ la <strong>compression </strong>(suspension plus ferme)
+                  </li>
+                  <li>
+                    ↘️ légèrement le <strong>rebond</strong> (si effet
+                    “pompage”)
+                  </li>
                 </ul>
               </div>
               <div
@@ -767,10 +776,20 @@ const Suspension = () => {
               border border-orange-200 dark:border-orange-800"
               >
                 <p className="font-semibold">🟠 Suspension trop dure</p>
-                <ul className="compactlist2 [&>li]:text-sm">
-                  <li>absorbe mal les chocs ;</li>
-                  <li>perte de confort ;</li>
-                  <li>suspension sous-exploitée.</li>
+                <p className="text-sm">
+                  Symptômes&nbsp;: perte de confort, absorbe mal les chocs…
+                </p>
+                <p className="text-sm">Ajustements :</p>
+                <ul className="[&>li]:text-sm">
+                  <li>
+                    ↘️ la <strong>précontrainte</strong> (plus de sag)
+                  </li>
+                  <li>
+                    ↘️ la <strong>compression</strong> (meilleure sensibilité)
+                  </li>
+                  <li>
+                    ↗️ légèrement le <strong>rebond</strong> (retour plus libre)
+                  </li>
                 </ul>
               </div>
             </div>
@@ -782,8 +801,8 @@ const Suspension = () => {
               <p className="text-sm mb-0">
                 La suspension utilise une partie significative de son
                 débattement sans talonner trop fréquemment. La roue reste
-                confortable, stable et prévisible, quelles que soient les
-                irrégularités rencontrées.
+                confortable et prévisible, quelles que soient les irrégularités
+                rencontrées.
               </p>
             </div>
           </div>
