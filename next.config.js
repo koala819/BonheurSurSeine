@@ -26,66 +26,66 @@ const nextConfig = {
   async redirects() {
     return [
       // --- Anciennes URLs obsolètes ---
-      {
-        source: '/promo',
-        destination: '/codes-promo',
-        permanent: true,
-      },
-      {
-        source: '/CodePromo',
-        destination: '/codes-promo',
-        permanent: true,
-      },
-      {
-        source: '/codes-promo_1',
-        destination: '/codes-promo',
-        permanent: true,
-      },
+      //{
+      //  source: '/promo',
+      //  destination: '/codes-promo',
+      //  permanent: true,
+      //},
+      //{
+      //  source: '/CodePromo',
+      //  destination: '/codes-promo',
+      //  permanent: true,
+      //},
+      //{
+      //  source: '/codes-promo_1',
+      //  destination: '/codes-promo',
+      //  permanent: true,
+      //},
       {
         source: '/choix',
         destination: '/choisir-gyroroue',
         permanent: true,
       },
-      {
-        source: '/Choisir',
-        destination: '/choisir-gyroroue',
-        permanent: true,
-      },
-      {
-        source: '/begin',
-        destination: '/debuter-gyroroue',
-        permanent: true,
-      },
+      //{
+      //  source: '/Choisir',
+      //  destination: '/choisir-gyroroue',
+      //  permanent: true,
+      //},
+      //{
+      //  source: '/begin',
+      //  destination: '/debuter-gyroroue',
+      //  permanent: true,
+      //},
       {
         source: '/Debuter',
         destination: '/debuter-gyroroue',
         permanent: true,
       },
-      {
-        source: '/Savoir_Utile',
-        destination: '/guide-utile-gyroroue',
-        permanent: true,
-      },
-      {
-        source: '/SavoirUtile',
-        destination: '/guide-utile-gyroroue',
-        permanent: true,
-      },
-      {
-        source: '/Merci',
-        destination: '/mille-merci',
-        permanent: true,
-      },
+      //{
+      //  source: '/Savoir_Utile',
+      //  destination: '/guide-utile-gyroroue',
+      //  permanent: true,
+      //},
+      //{
+      //  source: '/SavoirUtile',
+      //  destination: '/guide-utile-gyroroue',
+      //  permanent: true,
+      //},
+      //{
+      //  source: '/Merci',
+      //  destination: '/mille-merci',
+      //  permanent: true,
+      //},
       {
         source: '/contact',
         destination: '/mille-merci',
         permanent: true,
       },
-      {
-        source: '/mention',
-        destination: '/mentions',
-        permanent: true,
-      },
+      //{
+      //  source: '/mention',
+      //  destination: '/mentions',
+      //  permanent: true,
+      //},
     ]
   },
 }
