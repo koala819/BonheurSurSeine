@@ -383,7 +383,7 @@ const Practical_Dico = () => {
           {/* notes de fin et crédits */}
 
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
-            article mis à jour en juin 2025, <br />
+            dictionnaire mis à jour en juin 2026, <br />
             avec{' '}
             <Link
               href="https://discord.com/invite/Jhgw7C96Jf"
