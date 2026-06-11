@@ -183,6 +183,17 @@ const CommonSense = () => {
               🔥 Les protections n&apos;évitent ni le danger ni la chute, la
               vigilance, oui&nbsp;!
             </h4>
+            <p>
+              Certains chercheurs parlent{' '}
+              <strong>«&nbsp;d&apos;homéostasie du risque&nbsp;»</strong> (cf.{' '}
+              <Link
+                href="/guide-utile-gyroroue#dico"
+                className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+              >
+                Le P&apos;tit Dico du Bonheur
+              </Link>
+              ).
+            </p>
           </div>
           {/*-----------------------------------------*/}
           {/*-----------------------------------------*/}

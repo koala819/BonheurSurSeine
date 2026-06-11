@@ -520,11 +520,13 @@ const Suspension = () => {
             technologie.
           </p>
 
-          <div className="grid gap-4 md:grid-cols-2 mb-4 items-stretch">
-            {/* ===================== CARD 1 ===================== */}
+          {/*-------------------------- NOUVELLE VERSION  -------------------------*/}
+          <div className="grid gap-y-2 gap-x-4 md:grid-cols-2 mb-4 items-stretch">
+            {/* ===================== CARD COLONNE 1 LIGNE 1 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-lg ease-out flex flex-col
-            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            order-1 md:order-1"
             >
               <h4 className="text-lg font-semibold mb-3">
                 🟠 Gros débattement = meilleure suspension
@@ -545,39 +547,15 @@ const Suspension = () => {
                     rigidité, de la progressivité de l&apos;amortisseur et des
                     réglages
                   </li>
-                  <li className="text-sm">
-                    Tout le monde n&apos;a pas besoin (ni l&apos;usage)
-                    d&apos;un grand débattement, qui par construction, rehausse
-                    la hauteur des pédales)
-                  </li>
                 </ul>
-              </div>
-              {/* FOOTER BLOCK */}
-              <div className="mt-1">
-                <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
-                  <p className="text-sm">
-                    Un talonnage (cf.{' '}
-                    <Link
-                      href="/guide-utile-gyroroue#dico"
-                      className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
-                    >
-                      Le P&apos;tit Dico du Bonheur
-                    </Link>
-                    ) occasionnel n&apos;est pas problématique. En revanche, un
-                    talonnage fréquent indique un réglage inadapté.
-                  </p>
-                </div>
-                <p className="text-sm font-semibold">
-                  👉 Un grand débattement ne fait pas systématiquement une
-                  meilleure suspension.
-                </p>
               </div>
             </div>
 
-            {/* ===================== CARD 2 ===================== */}
+            {/* ===================== CARD COLONNE 2 LIGNE 1 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-lg ease-out flex flex-col
-            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            order-3 md:order-2"
             >
               <h4 className="text-lg font-semibold mb-3">
                 🟠 Suspension ≠ conduite sans effort
@@ -605,17 +583,47 @@ const Suspension = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+
+            {/* ===================== CARD COLONNE 1 LIGNE 2 ===================== */}
+            <div
+              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            order-2 md:order-2"
+            >
               {/* FOOTER BLOCK */}
-              <div className="mt-1">
+              <div className="mt-0">
+                <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
+                  <p className="text-sm">
+                    Tout le monde n&apos;a pas besoin (ni l&apos;usage)
+                    d&apos;un grand débattement, qui par construction, rehausse
+                    la hauteur des pédales.
+                  </p>
+                </div>
+                <p className="text-sm font-semibold">
+                  👉 Un grand débattement ne fait pas systématiquement une
+                  meilleure suspension.
+                </p>
+              </div>
+            </div>
+
+            {/* ===================== CARD COLONNE 2 LIGNE 2 ===================== */}
+            <div
+              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+            order-4 md:order-4"
+            >
+              {/* FOOTER BLOCK */}
+              <div className="mt-0 h-full flex flex-col">
                 <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
                   <p className="text-sm">
                     La suspension doit être considérée comme un équipement
                     complémentaire, pas comme une garantie de sécurité.
                   </p>
                 </div>
-                <p className="text-sm font-semibold">
+                <p className="text-sm font-semibold mt-auto">
                   👉 Le bon sens et la vigilance restent les meilleurs
-                  amortisseurs.
+                  amortisseurs qui soient.
                 </p>
               </div>
             </div>
@@ -674,7 +682,11 @@ const Suspension = () => {
               forcément ces possibilités).
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-3 mt-2 mb-2">
-              <div className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl shadow-md">
+              <div
+                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                shadow-sm hover:shadow-md
+              dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+              >
                 <p className="font-semibold">⚙️ Précontrainte</p>
                 <p className="text-sm">
                   Elle détermine l&apos;enfoncement initial de la suspension
@@ -686,7 +698,11 @@ const Suspension = () => {
                 </p>
               </div>
 
-              <div className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl shadow-md">
+              <div
+                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                shadow-sm hover:shadow-md
+              dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+              >
                 <p className="font-semibold">⚙️ Compression</p>
                 <p className="text-sm">
                   Elle contrôle la vitesse/facilité avec laquelle la suspension
@@ -699,7 +715,11 @@ const Suspension = () => {
                 </p>
               </div>
 
-              <div className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl shadow-md">
+              <div
+                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                shadow-sm hover:shadow-md
+              dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
+              >
                 <p className="font-semibold">⚙️ Rebond (détente)</p>
                 <p className="text-sm">
                   C&apos;est la vitesse à laquelle la suspension revient à sa
@@ -750,13 +770,15 @@ const Suspension = () => {
             <div className="grid gap-2 md:gap-4 md:grid-cols-2 mt-2">
               <div
                 className="bg-red-50 dark:bg-red-900/50 px-3 py-2 rounded-xl
-              border border-red-200 dark:border-red-800"
+              border border-red-200 dark:border-red-800
+              shadow-sm hover:shadow-md
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
               >
                 <p className="font-semibold mb-1">🔴 Suspension trop souple</p>
                 <p className="text-sm">
                   Symptômes&nbsp;: pompage excessif, talonnage fréquent…
                 </p>
-                <p className="text-sm">Ajustements :</p>
+                <p className="text-sm">Ajustements possibles&nbsp;:</p>
                 <ul className="[&>li]:text-sm">
                   <li>
                     ↗️ la <strong>précontrainte </strong>(moins
@@ -773,13 +795,15 @@ const Suspension = () => {
               </div>
               <div
                 className="bg-orange-50 dark:bg-orange-900/60 px-3 py-2 rounded-xl
-              border border-orange-200 dark:border-orange-800"
+              border border-orange-200 dark:border-orange-800
+              shadow-sm hover:shadow-md
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
               >
                 <p className="font-semibold">🟠 Suspension trop dure</p>
                 <p className="text-sm">
                   Symptômes&nbsp;: perte de confort, absorbe mal les chocs…
                 </p>
-                <p className="text-sm">Ajustements :</p>
+                <p className="text-sm">Ajustements possibles&nbsp;:</p>
                 <ul className="[&>li]:text-sm">
                   <li>
                     ↘️ la <strong>précontrainte</strong> (plus de sag)
@@ -795,14 +819,27 @@ const Suspension = () => {
             </div>
             <div
               className="bg-green-50 dark:bg-green-900/50 px-3 py-2 rounded-xl
-            border border-green-200 dark:border-green-800 mt-2 md:mt-4"
+            border border-green-200 dark:border-green-800 mt-2 md:mt-4
+            shadow-sm hover:shadow-md
+            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
             >
               <p className="font-semibold">🟢 Bon réglage</p>
               <p className="text-sm mb-0">
+                La roue reste confortable et prévisible, quelles que soient les
+                irrégularités rencontrées.
+              </p>
+              <p className="text-sm mb-0">
                 La suspension utilise une partie significative de son
-                débattement sans talonner trop fréquemment. La roue reste
-                confortable et prévisible, quelles que soient les irrégularités
-                rencontrées.
+                débattement sans talonner (cf.{' '}
+                <Link
+                  href="/guide-utile-gyroroue#dico"
+                  className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+                >
+                  Le P&apos;tit Dico du Bonheur
+                </Link>
+                ) trop fréquemment. Un talonnage <u>occasionnel</u>
+                &nbsp;n&apos;est pas problématique. En revanche s&apos;il est
+                trop fréquent, cela indique un réglage inadapté.
               </p>
             </div>
           </div>
