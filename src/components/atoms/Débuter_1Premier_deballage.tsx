@@ -195,7 +195,7 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="w-[150px] px-2 py-1 flex items-center center gap-1">
+                  <td className="w-[130px] px-2 py-1 flex items-center center gap-1">
                     <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_begode}
@@ -207,7 +207,7 @@ const Begin_premier_deballage = () => {
                       <strong>Begode</strong>
                     </div>
                   </td>
-                  <td className="w-[30%] px-2 py-1">
+                  <td className="w-[25%] px-2 py-1">
                     <a
                       href="https://apps.apple.com/us/app/begode/id1549181193"
                       target="_blank"
@@ -217,7 +217,7 @@ const Begin_premier_deballage = () => {
                       <FaApple /> iOS
                     </a>
                   </td>
-                  <td className="w-[30%] px-2 py-1">
+                  <td className="w-[35%] px-2 py-1">
                     <a
                       href="https://www.begode.com/pages/app"
                       target="_blank"
@@ -228,7 +228,7 @@ const Begin_premier_deballage = () => {
 
                       <div className="flex flex-col leading-tight">
                         <span className="underline">Android</span>
-                        <span className="text-xs text-gray-600">
+                        <span className="text-xs text-gray-500 dark:text-gray-300">
                           via le site Begode
                         </span>
                       </div>
@@ -372,7 +372,7 @@ const Begin_premier_deballage = () => {
 
                       <div className="flex flex-col leading-tight">
                         <span className="underline">Android</span>
-                        <span className="text-xs text-gray-600">
+                        <span className="text-xs text-gray-500 dark:text-gray-300">
                           APK sur site Nosfet
                         </span>
                       </div>
