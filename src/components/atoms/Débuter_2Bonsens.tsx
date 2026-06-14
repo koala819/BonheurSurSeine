@@ -326,7 +326,20 @@ const CommonSense = () => {
                 ne va pas au-delà&nbsp;!
               </strong>
             </li>
-            <li>Respecte le tilt-back. </li>
+            <li>
+              Respecte le{' '}
+              <strong className="text-teal-800 dark:text-teal-200">
+                tilt-back{' '}
+              </strong>
+              (cf.{' '}
+              <Link
+                href="/guide-utile-gyroroue#dico"
+                className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+              >
+                Le P&apos;tit Dico du Bonheur
+              </Link>
+              ).{' '}
+            </li>
             <li>
               Les bips sont là pour la sécurité&nbsp;: ne les désactive
               jamais&nbsp;!
