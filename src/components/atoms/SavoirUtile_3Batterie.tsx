@@ -179,8 +179,15 @@ const Practical_Battery = () => {
               cette plage risque d&apos;abîmer les cellules.
               <br />
               🔸 Le BMS (Battery Management System) gère les cellules de la
-              batterie, et mesure en temps réel la tension (celle-ci diminue au
-              fur et à mesure de l&apos;utilisation).
+              batterie (cf.{' '}
+              <Link
+                href="/guide-utile-gyroroue#dico"
+                className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+              >
+                Le P&apos;tit Dico du Bonheur
+              </Link>
+              ), et mesure en temps réel la tension (celle-ci diminue au fur et
+              à mesure de l&apos;utilisation).
               <br />
               🔸 C&apos;est un calcul qui convertit cette tension instantanée en
               un pourcentage approximatif (de 100% à 0%). <br />
