@@ -80,8 +80,9 @@ const HighwayCode = () => {
         >
           <p className="mb-4">
             Depuis le 23 octobre 2019, les gyroroues sont officiellement
-            reconnues dans le Code de la Route (catégorie EDPM{' '}
-            <strong>Engins de Déplacement Personnel à Moteur</strong>&nbsp;:{' '}
+            reconnues dans le Code de la Route (classées dans la catégorie EDPM{' '}
+            <strong>Engins de Déplacement Personnel à Moteur </strong>qui inclut
+            également les trotinettes&nbsp;:{' '}
             <Link
               href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
               target="_blank"
@@ -427,7 +428,7 @@ const HighwayCode = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : janvier 2025
+            dernière mise à jour : juin 2026
           </p>
         </AccordionItem>
       </Accordion>
