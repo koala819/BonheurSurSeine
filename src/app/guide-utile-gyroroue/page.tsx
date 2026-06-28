@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+//import Info from '@/src/components/atoms/SavoirUtile_6Infos'
+import Image from 'next/image'
 
 import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
 import Maintenance from '@/src/components/atoms/SavoirUtile_2Entretien'
@@ -8,7 +10,7 @@ import Suspension from '@/src/components/atoms/SavoirUtile_3Suspension'
 import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
-//import Info from '@/src/components/atoms/SavoirUtile_6Infos'
+import EUC_idées_clés from '@/public/4.guide/BSS - 3 idées clés sur la roue.png'
 
 export const metadata: Metadata = {
   title:
@@ -42,6 +44,21 @@ const Page = () => {
             </h4>
           </aside>
         </div>
+      </div>
+      <div
+        className="mt-0 mb-6 flex justify-center
+       rounded-lg
+      border border-gray-200 dark:border-gray-600
+      shadow-md hover:shadow-lg transition-shadow duration-300
+     shadow-gray-400 hover:shadow-gray-400
+     dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+         "
+      >
+        <Image
+          src={EUC_idées_clés}
+          alt="3 idées clés sur la gyroroue"
+          className="rounded-lg"
+        />
       </div>
       <Dico />
       <Maintenance />
