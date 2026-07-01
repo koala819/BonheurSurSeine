@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues / monoroues / roues électriques',
   description:
-    'Entretien, batterie, pneus, suspension, conseils, guide pratique pour aller plus loin, trucs et astuce pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
+    'Entretien,réglages, batterie, pneus, suspension, conseils, guide pratique pour aller plus loin, trucs et astuces pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
   },
