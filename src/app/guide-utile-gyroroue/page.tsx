@@ -11,7 +11,7 @@ import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
 //import Info from '@/src/components/atoms/SavoirUtile_6Infos'
-import EUC_idées_clés from '@/public/4.guide/BSS - 3 idées clés sur la roue.png'
+import EUC_idées_clés from '@/public/4.guide/BSS - 3 idées clés sur la roue v1.png'
 
 export const metadata: Metadata = {
   title:
@@ -68,7 +68,8 @@ const Page = () => {
           className="text-xs md:text-sm italic text-gray-600 dark:text-gray-400 text-center
         mt-2"
         >
-          Infographie : Comprendre facilement la gyroroue <br />
+          Infographie : Comprendre facilement le fonctionnement d&apos;une
+          gyroroue <br />
           Les 3 chaînes de perception, de commande et de puissance sont limitées
           par le maillon le plus faible.
         </p>
