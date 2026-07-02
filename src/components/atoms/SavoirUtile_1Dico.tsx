@@ -247,11 +247,11 @@ const Practical_Dico = () => {
                 </b>
               </div>
             </aside>
-            <aside className="sm:w-1/3 md:w-2/5 text-center text-xs mt-1 mb-1">
+            <aside className="sm:w-1/3 md:w-2/5 text-center text-xs mt-1 mb-1 place-items-center">
               <Image
                 src={Image_dico}
                 alt="Image_dico"
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer w-80 sm:w-80"
                 priority
               />
             </aside>

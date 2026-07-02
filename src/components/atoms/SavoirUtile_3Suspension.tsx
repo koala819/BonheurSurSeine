@@ -65,7 +65,7 @@ const Suspension = () => {
           aria-label="Choisir et régler la suspension"
           title={
             <h3 className="line-clamp-2 md:line-clamp-none">
-              🦿 La suspension : fonctionnement, réglages et conseils
+              🦿 La suspension : choix, réglages et conseils
             </h3>
           }
           indicator={
@@ -113,8 +113,8 @@ const Suspension = () => {
             sa roue.
           </p>
           <p className="mt-2">
-            Pourquoi un tel succès ? Parce qu&apos;elle améliore le confort et
-            la stabilité en absorbant une grande partie des chocs et des
+            Pourquoi ce succès ? Parce qu&apos;elle améliore le confort et la
+            stabilité en absorbant une grande partie des chocs et des
             vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses…{' '}
             <strong className="text-olive-600 dark:text-olive-300">
               Tout devient beaucoup moins fatigant et plus stable&nbsp;!
@@ -122,12 +122,15 @@ const Suspension = () => {
           </p>
           <p>
             Et malgré les milliers de kilomètres parcourus sans suspension, une
-            fois qu&apos;on y a goûté, difficile de revenir en arrière&nbsp;!
+            fois qu&apos;on y a goûté,{' '}
+            <strong className="text-olive-600 dark:text-olive-300">
+              difficile de revenir en arrière&nbsp;!
+            </strong>
           </p>
           <p className="mt-2">
             Mais{' '}
             <strong className="text-olive-600 dark:text-olive-300">
-              tout ce confort a un coût{' '}
+              ce confort a un coût{' '}
             </strong>
             &nbsp;: prix, encombrement, poids, hauteur des pédales, usure
             mécanique…{' '}
@@ -142,7 +145,7 @@ const Suspension = () => {
               <span className="italic">
                 &laquo;&nbsp;avec ou sans suspension&nbsp;?&nbsp;&raquo;
               </span>
-              , mais plutôt&nbsp;:
+              , mais plutôt&nbsp;:{' '}
               <strong>
                 &laquo;&nbsp;mon usage justifie-t-il ces
                 compromis&nbsp;?&nbsp;&raquo;
@@ -165,7 +168,7 @@ const Suspension = () => {
                   <td className="p-1">🎓 Apprentissage</td>
                   <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Peu utile, surcoût, plus lourd
+                    Peu utile (surcoût, plus lourd)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
@@ -186,7 +189,7 @@ const Suspension = () => {
                   <td className="p-1">🚶Trajet court / occasionnel</td>
                   <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Sans, c&apos;est simple, léger et compact
+                    Sans, c&apos;est plus simple, plus léger et compact
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
@@ -200,21 +203,21 @@ const Suspension = () => {
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Réduit la fatigue (et la place prévue pour la batterie)
+                    Réduit la fatigue (moins de place pour la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">🌲 Offroad / chemins dégradés</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Meilleure stabilité et contrôle (avec de l&apos;entretien)
+                    Meilleure stabilité et contrôle (bon entretien nécessaire)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
                   <td className="p-1">⚡ Conduite sportive</td>
                   <td className="p-1 text-left">✅ Selon usage</td>
                   <td className="p-1 text-right">
-                    Confort mais augmente la surconfiance et le centre de
+                    Du confort mais accroit la surconfiance et le centre de
                     gravité
                   </td>
                 </tr>
@@ -529,7 +532,7 @@ const Suspension = () => {
             order-1 md:order-1"
             >
               <h4 className="text-lg font-semibold mb-3">
-                🟠 Gros débattement = meilleure suspension
+                🟠 Gros débattement ≠ meilleure suspension
               </h4>
               {/* CONTENU HAUT */}
               <div className="flex-1">
@@ -674,7 +677,9 @@ const Suspension = () => {
           </div>
 
           {/*--------------- REGLAGES POSSIBLES -----------------------*/}
-          <h5 className="mt-4 font-semibold">🔹 Les 3 réglages possibles</h5>
+          <h5 className="mt-4 font-semibold" id="suspension_réglages">
+            🔹 Les 3 réglages possibles
+          </h5>
           <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p>
               Selon le type de suspension, plusieurs réglages peuvent être
