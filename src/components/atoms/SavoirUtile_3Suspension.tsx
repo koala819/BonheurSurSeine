@@ -541,7 +541,7 @@ const Suspension = () => {
               {/* CONTENU HAUT */}
               <div className="flex-1">
                 <p className="text-sm">
-                  Le débattement (souvent entre 60mm à 90mm) correspond à la
+                  Le débattement (souvent entre 60mm et 90mm) correspond à la
                   course maximale de la suspension.
                 </p>
                 <ul className="compactlist2">

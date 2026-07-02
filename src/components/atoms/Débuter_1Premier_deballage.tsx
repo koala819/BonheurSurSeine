@@ -174,7 +174,7 @@ const Begin_premier_deballage = () => {
                 className="link-style"
               >
                 dans cette vidéo
-              </Link>
+              </Link>{' '}
               🎥.
             </li>
             <li className="">
