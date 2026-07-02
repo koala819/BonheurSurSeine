@@ -24,6 +24,10 @@ const Suspension = () => {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('suspension')
       }
+      if (hash === 'suspension_reglages') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('suspension_reglages')
+      }
     } // Appel initial
 
     handleHashChange() // Écoute les changements de hash (clics internes)
@@ -659,7 +663,9 @@ const Suspension = () => {
 
           {/*---------------------------------------------------------------------*/}
           {/*------------------ Bien régler sa suspension ------------------------*/}
-          <h4 className="mt-8 mb-2">➡️ Bien régler sa suspension</h4>
+          <h4 className="mt-8 mb-2 scroll-mt-24" id="suspension_reglages">
+            ➡️ Bien régler sa suspension
+          </h4>
           <div className="mb-2 md:mb-4">
             <p>
               Comme pour la pression du pneu, il n&apos;existe{' '}

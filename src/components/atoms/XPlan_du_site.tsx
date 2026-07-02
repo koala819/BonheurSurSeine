@@ -120,7 +120,7 @@ const sections = [
       },
       {
         label: '↕️ La suspension : réglages',
-        href: '/guide-utile-gyroroue#suspension_réglages',
+        href: '/guide-utile-gyroroue#suspension_reglages',
       },
       {
         label: '🛣️ Trouver son chemin : applis & cartes',
