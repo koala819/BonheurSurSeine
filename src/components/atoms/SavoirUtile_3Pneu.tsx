@@ -24,6 +24,10 @@ const Pneu = () => {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('pneu')
       }
+      if (hash === 'pneu_pression') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('pneu_pression')
+      }
     } // Appel initial
 
     handleHashChange() // Écoute les changements de hash (clics internes)
@@ -246,13 +250,34 @@ const Pneu = () => {
           </p>
 
           {/*---------------------------------------------------------------*/}
-          {/*------------------PRESSION-------------------------------------*/}
-          <h4 className="mt-6 mb-2">➡️ Pression : un réglage clé</h4>
-          <p className="my-2">
-            La pression du pneu influence la sécurité, le confort et
-            l&apos;autonomie.
-          </p>
-          <div className="pinkBlock mb-2">
+          {/*------------------ PRESSION -----------------------------------*/}
+          <h4 className="mt-6 mb-2 scroll-mt-24" id="pneu_pression">
+            ➡️ Pression : un réglage clé
+          </h4>
+          <div className="mt-3 mb-3">
+            <p className="">
+              Les indications sur les pneus ne sont pas toujours simples à lire,
+              et avant tout pensées pour des véhicules à au moins 2 roues&nbsp;:
+              on ne sait donc pas forcément comment les interpréter.
+            </p>{' '}
+            <p className="">
+              Or, la pression du pneu influence la sécurité, le confort et
+              l&apos;autonomie.
+            </p>
+            <p className="mt-2">
+              La pression du pneu{' '}
+              <strong>
+                dépendra principalement du poids du wheeler et de la taille de
+                la roue (14&quot;, 16&quot;, 18&quot;, 20&quot;)
+              </strong>
+              . Elle peut être exprimée&nbsp;:
+            </p>
+            <ul className="compactlist2">
+              <li>soit en bar</li>
+              <li>soit en psi (unité anglo-saxonne 14,5psi &asymp; 1bar)</li>
+            </ul>
+          </div>
+          <div className="pinkBlock_pneu mb-2">
             <b className="mb-0 mt-0">
               ⚠️ Sous gonfler son pneu (&lt;2 bars), c&apos;est prendre le
               risque d&apos;abîmer la jante…
@@ -293,43 +318,31 @@ const Pneu = () => {
             </div>
           )}
 
-          {/*---------------------------------------------------------------*/}
-          <p className="mt-3">
-            Les indications des pneus ne sont pas toujours simples à lire, et
-            avant tout pensées pour des véhicules à au moins 2 ou 3 roues : on
-            ne sait donc pas forcément comment les interpréter.
-          </p>
-          <p className="" id="pression">
-            La pression du pneu dépendra principalement du poids du wheeler et
-            de la taille de la roue (16&quot;, 18&quot;, 20&quot;). Elle peut
-            être exprimée&nbsp;:
-          </p>
-          <ul className="compactlist2">
-            <li>soit en bar</li>
-            <li>soit en psi (unité anglo-saxonne 14,5psi &asymp; 1bar)</li>
-          </ul>
-          <p className="font-semibold mt-3">
-            🔍 Quelques repères pratiques&nbsp;:
-          </p>
-          <ul className="mb-0 list-none pl-5 [&>li]:relative [&>li]:pl-4 [&>li::before]:content-['➤'] [&>li::before]:absolute [&>li::before]:left-0">
-            {' '}
-            <li>
-              &nbsp;Une pression faible apportera plus de confort et de grip,
-              mais réduira l&apos;autonomie.
-            </li>
-            <li>
-              &nbsp;Une pression élevée augmentera l&apos;autonomie, mais
-              diminuera le confort.
-            </li>
-            <li>
-              &nbsp;Plus le poids du wheeler est important, et plus la pression
-              doit être élevée.
-            </li>
-            <li>
-              &nbsp;Plus la roue est petite, et plus la pression doit être
-              élevée.
-            </li>
-          </ul>
+          {/*----------------------- repères pratiques -----------------------------*/}
+          <div>
+            <p className="font-semibold mt-3">
+              🔍 Quelques repères pratiques&nbsp;:
+            </p>
+            <ul className="mb-0 list-none pl-5 [&>li]:relative [&>li]:pl-4 [&>li::before]:content-['➤'] [&>li::before]:absolute [&>li::before]:left-0">
+              {' '}
+              <li>
+                &nbsp;Une pression faible apportera plus de confort et de grip,
+                mais réduira l&apos;autonomie.
+              </li>
+              <li>
+                &nbsp;Une pression élevée augmentera l&apos;autonomie, mais
+                diminuera le confort.
+              </li>
+              <li>
+                &nbsp;Plus le poids du wheeler est important, et plus la
+                pression doit être élevée.
+              </li>
+              <li>
+                &nbsp;Plus la roue est petite, et plus la pression doit être
+                élevée.
+              </li>
+            </ul>
+          </div>
           <div className="overflow-x-auto pl-5 mt-2 flex justify-center">
             <table className="table-auto border-collapse border border-gray-300 text-sm w-full max-w-2xl">
               <thead>
@@ -441,7 +454,7 @@ const Pneu = () => {
           {/*---------------------------------------------------------------*/}
           {/*------------------ENTRETIEN -----------------------------------*/}
           <h4 className="mt-6 mb-2">➡️ Entretenir et changer son pneu</h4>
-          <div className="pinkBlock mb-2">
+          <div className="pinkBlock_pneu mb-2">
             <b className="mb-0 mt-0">
               ⚠️ Un pneu usé = moins d&apos;adhérence + risque de chute.
             </b>

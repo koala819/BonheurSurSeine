@@ -111,8 +111,12 @@ const sections = [
         href: '/guide-utile-gyroroue#cells',
       },
       {
-        label: '🛞 Le pneu : choix, pression et entretien',
+        label: '🛞 Le pneu : types de pneus',
         href: '/guide-utile-gyroroue#pneu',
+      },
+      {
+        label: '🌀 Le pneu : pression et entretien',
+        href: '/guide-utile-gyroroue#pneu_pression',
       },
       {
         label: '🦿 La suspension : choix et conseils',
