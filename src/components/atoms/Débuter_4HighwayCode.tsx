@@ -408,7 +408,7 @@ const HighwayCode = () => {
           </p>
 
           {/************************************************ */}
-          <div className="yellowBlockSecuriteRoutiere mb-2 border-l-4 border-yellow-500">
+          <div className="yellowBlockSecuriteRoutiere mb-2">
             <h4>
               📢 Consulte régulièrement le{' '}
               <Link
@@ -420,15 +420,15 @@ const HighwayCode = () => {
               </Link>
               .
             </h4>
-            <div className="border rounded-lg px-2 pt-2 bg-white hover:bg-gray-50 border-gray-200 dark:bg-gray-300 dark:border-gray-500 transition duration-300 shadow-sm max-w-3xl mx-auto">
+            <div className="border rounded-lg px-2 pt-2 bg-white hover:bg-gray-50 border-gray-200 dark:bg-slate-600 dark:border-slate-500 transition duration-300 shadow-sm max-w-3xl mx-auto">
               {/* HEADER */}
               <div className="flex flex-row items-center justify-between gap-4 mb-1">
                 <div className="flex-1">
-                  <span className="text-sm font-bold text-blue-600 uppercase tracking-normal sm:tracking-wide">
+                  <span className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-normal sm:tracking-wide">
                     Sécurité Routière
                   </span>
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 p-0.5 bg-white rounded">
                   <Link
                     href="https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements"
                     target="_blank"
@@ -436,20 +436,20 @@ const HighwayCode = () => {
                     <Image
                       src={Image_HighwayCode1}
                       alt="Logo Sécurité Routière"
-                      className="rounded object-contain w-[100px] sm:w-[150px] md:w-[180px]"
+                      className="object-contain w-[100px] sm:w-[150px] md:w-[180px]"
                     />
                   </Link>
                 </div>
               </div>
               {/* TITLE */}
-              <div className="text-base md:text-lg font-semibold text-gray-900 mt-1 mb-1">
+              <div className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mt-1 mb-1">
                 Réglementation des EDPM (Engins de Déplacement Personnel
                 Motorisés)
               </div>
               {/* CORPS AVEC LIENS et IMAGE DU SITE*/}
               <div className="flex flex-col sm:flex-row items-center mb-2 gap-1">
                 <div className="flex-1">
-                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-900">
+                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
                     Trottinettes électriques, monoroues, gyropodes,
                     hoverboards&nbsp;: les EDPM, comme les autres usagers,
                     doivent appliquer les règles du code de la route (vitesse
