@@ -117,7 +117,7 @@ const CommonSense = () => {
               </div>
             </aside>
             {/* Image sur 2 colonnes */}
-            <aside className="md:col-span-2 h-full flex justify-center md:justify-end bg-teal-50 dark:bg-teal-900 rounded-lg">
+            <aside className="md:col-span-2 h-full flex justify-center md:justify-end bg-teal-50 dark:bg-teal-100/60 rounded-lg">
               <Image
                 src={Image_bon_sens}
                 alt="Bon sens en gyroroue"
