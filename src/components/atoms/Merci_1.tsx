@@ -81,7 +81,7 @@ export default function Contact({
             <Image
               src={bonheurSurSeine}
               alt="Raphael"
-              className="w-[80%] h-auto object-cover object-center rounded-2xl mb-0"
+              className="w-[70%] h-auto object-cover object-center rounded-2xl mb-0"
               priority
               width={500}
               height={500}
