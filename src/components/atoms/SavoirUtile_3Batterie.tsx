@@ -239,7 +239,7 @@ const Practical_Battery = () => {
             </aside>
           </div>
           {/*---------------------------------------*/}
-          <div className="blueBlock mb-4">
+          <div className="blueBlock_batterie mb-4">
             <b className="mb-0 mt-0">
               Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
               une donnée absolue. <br />

@@ -88,7 +88,7 @@ const Pneu = () => {
           }}
         >
           {/*------------------INTRO----------------------------------------*/}
-          <div className="blueBlock mb-4">
+          <div className="blueBlock_pneu mb-4">
             <b className="mb-0 mt-0">
               💡 Sur une roue électrique, il n&apos;y a qu&apos;une seule roue
               et donc qu&apos;un seul pneu&nbsp;!
