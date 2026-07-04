@@ -123,10 +123,12 @@ const Compare = () => {
           {/* LOGO */}
           <div className="flex-shrink-0">
             <Link href="https://www.eucfinder.com/fr" target="_blank">
-              <div className="rounded-2xl bg-white dark:bg-gray-800 p-3 shadow-sm hover:shadow-md transition">
+              <div className="rounded-2xl bg-fuchsia-200/50 dark:bg-fuchsia-800/50 p-2 shadow-sm hover:shadow-md transition">
                 <Image
                   src={logo}
                   alt="EUC Finder Logo"
+                  width={512}
+                  height={512}
                   className="rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
                 />
               </div>
