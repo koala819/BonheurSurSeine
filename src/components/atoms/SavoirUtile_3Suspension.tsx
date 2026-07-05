@@ -161,63 +161,63 @@ const Suspension = () => {
           <div className="overflow-x-auto mb-3 md:mx-2">
             <table className="w-full border-collapse rounded-lg overflow-hidden shadow-md dark:shadow-neutral-900">
               <thead>
-                <tr className="border-b border-gray-200 dark:border-gray-800 text-white text-base bg-olive-500 dark:bg-olive-900">
+                <tr className="border-b border-gray-200 dark:border-gray-800 text-white text-base bg-taupe-500 dark:bg-taupe-900 ">
                   <th className="py-2 px-2 text-left">Situation</th>
                   <th className="py-2 px-2 text-center">Intérêt</th>
                   <th className="py-2 px-2 text-center">Pourquoi ?</th>
                 </tr>
               </thead>
-              <tbody className="text-sm md:text-base text-gray-800 dark:text-gray-100 bg-olive-50 dark:bg-olive-800">
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+              <tbody className="text-xs sm:text-sm lg:text-base text-gray-800 dark:text-gray-100 bg-taupe-50 dark:bg-taupe-800">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🎓 Apprentissage</td>
                   <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Peu utile (surcoût, plus lourd)
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🚆 Multi-modalité</td>
                   <td className="p-1 text-left">❌ Peu adapté</td>
                   <td className="p-1 text-right">
                     Augmente le poids et l&apos;encombrement
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">💰 Budget limité</td>
                   <td className="p-1 text-left">❌ Peu adapté</td>
                   <td className="p-1 text-right">
                     Plus cher à performances similaires
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🚶Trajet court / occasionnel</td>
                   <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
                     Sans, c&apos;est plus simple, plus léger et compact
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🚴 Trajets réguliers</td>
                   <td className="p-1 text-left">✅ Un vrai plus</td>
                   <td className="p-1 text-right">
                     Donne encore plus envie d&apos;aller rouler
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
                     Réduit la fatigue (moins de place pour la batterie)
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🌲 Offroad / chemins dégradés</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
                     Meilleure stabilité et contrôle (bon entretien nécessaire)
                   </td>
                 </tr>
-                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-olive-100 dark:hover:bg-olive-700 transition">
+                <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">⚡ Conduite sportive</td>
                   <td className="p-1 text-left">✅ Selon usage</td>
                   <td className="p-1 text-right">
@@ -306,12 +306,12 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+                flex flex-col h-full border-t-4 border-taupe-600"
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension déportée</h6>
                 <p className="text-sm">
-                  L&apos;amortisseur, relié par un système de biellettes
-                  articulées (cinématique), est installé sur{' '}
+                  Un amortisseur, relié par un système de biellettes articulées
+                  (cinématique), est installé sur{' '}
                   <strong>le dessus ou l&apos;arrière de la roue</strong>{' '}
                   (facilitant l&apos;accès aux réglages mais l&apos;exposant aux
                   chutes et à la saleté).
@@ -333,7 +333,7 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-1 border-taupe-600"
+                flex flex-col h-full border-t-4 border-taupe-600"
               >
                 <h6 className="font-semibold mb-1">⚙️ Suspension centrale</h6>
                 <p className="text-sm">
@@ -361,9 +361,7 @@ const Suspension = () => {
           </div>
 
           {/*----------------- TYPE D'AMORTISSEUR ---------------------*/}
-          <h5 className="mt-4 font-semibold">
-            🔸 Les technologies des amortisseurs
-          </h5>
+          <h5 className="mt-4 font-semibold">🔸 Les amortisseurs</h5>
           <div className="ml-6 mr-4 mb-2 md:mb-4">
             <p className="mb-2">
               Un amortisseur peut utiliser une ou plusieurs technologies
@@ -376,7 +374,7 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full"
+                flex flex-col h-full border-t-4 border-taupe-600"
               >
                 <h6 className="font-semibold mb-1">
                   🟤 Le Ressort (mécanique)
@@ -411,7 +409,7 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full"
+                flex flex-col h-full border-t-4 border-taupe-600"
               >
                 <h6 className="font-semibold mb-1">
                   🟤 L&apos;Air (pneumatique)
@@ -446,7 +444,7 @@ const Suspension = () => {
                 className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
                 shadow-md hover:shadow-lg transition-shadow
                 dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full"
+                flex flex-col h-full border-t-4 border-taupe-600"
               >
                 <h6 className="font-semibold mb-1">
                   🟤 L&apos;Hydraulique (huile)
@@ -531,7 +529,7 @@ const Suspension = () => {
           <div className="grid gap-y-2 gap-x-4 md:grid-cols-2 mb-4 items-stretch">
             {/* ===================== CARD COLONNE 1 LIGNE 1 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+              className="h-full group bg-olive-50 dark:bg-olive-800 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
             dark:shadow-neutral-900 dark:hover:shadow-neutral-950
             order-1 md:order-1"
             >
@@ -560,7 +558,7 @@ const Suspension = () => {
 
             {/* ===================== CARD COLONNE 2 LIGNE 1 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+              className="h-full group bg-olive-50 dark:bg-olive-800 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
             dark:shadow-neutral-900 dark:hover:shadow-neutral-950
             order-3 md:order-2"
             >
@@ -594,13 +592,13 @@ const Suspension = () => {
 
             {/* ===================== CARD COLONNE 1 LIGNE 2 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+              className="h-full group bg-olive-50 dark:bg-olive-800 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
             dark:shadow-neutral-900 dark:hover:shadow-neutral-950
             order-2 md:order-2"
             >
               {/* FOOTER BLOCK */}
               <div className="mt-0">
-                <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
+                <div className="bg-olive-100 dark:bg-olive-700 py-1 px-3 rounded-lg">
                   <p className="text-sm">
                     Tout le monde n&apos;a pas besoin (ni l&apos;usage)
                     d&apos;un grand débattement, qui par construction, rehausse
@@ -616,13 +614,13 @@ const Suspension = () => {
 
             {/* ===================== CARD COLONNE 2 LIGNE 2 ===================== */}
             <div
-              className="h-full group bg-olive-50 dark:bg-olive-900 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
+              className="h-full group bg-olive-50 dark:bg-olive-800 px-2 py-2 rounded-2xl border border-transparent hover:border-olive-300/40 dark:hover:border-olive-700 shadow-sm hover:shadow-md ease-out flex flex-col
             dark:shadow-neutral-900 dark:hover:shadow-neutral-950
             order-4 md:order-4"
             >
               {/* FOOTER BLOCK */}
               <div className="mt-0 h-full flex flex-col">
-                <div className="bg-olive-100 dark:bg-olive-800 py-1 px-3 rounded-lg">
+                <div className="bg-olive-100 dark:bg-olive-700 py-1 px-3 rounded-lg">
                   <p className="text-sm">
                     La suspension doit être considérée comme un équipement
                     complémentaire, pas comme une garantie de sécurité.
@@ -694,7 +692,7 @@ const Suspension = () => {
             </p>
             <div className="grid gap-2 md:gap-4 md:grid-cols-3 mt-2 mb-2">
               <div
-                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                className="bg-olive-100 dark:bg-olive-800 px-4 py-3 rounded-2xl
                 shadow-sm hover:shadow-md
               dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
               >
@@ -710,7 +708,7 @@ const Suspension = () => {
               </div>
 
               <div
-                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                className="bg-olive-100 dark:bg-olive-800 px-4 py-3 rounded-2xl
                 shadow-sm hover:shadow-md
               dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
               >
@@ -727,7 +725,7 @@ const Suspension = () => {
               </div>
 
               <div
-                className="bg-olive-50 dark:bg-olive-800 px-4 py-3 rounded-2xl
+                className="bg-olive-100 dark:bg-olive-800 px-4 py-3 rounded-2xl
                 shadow-sm hover:shadow-md
               dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
               >
