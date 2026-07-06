@@ -24,7 +24,7 @@ export default async function Page() {
   )
 
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-8">
+    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-4">
       <h1 className="whitespace-break-spaces">
         Profite d&apos;Offres Exclusives&nbsp;!
       </h1>
@@ -33,25 +33,23 @@ export default async function Page() {
         <strong className="dark:text-brown-300">codes promo exclusifs</strong>{' '}
         négociés avec les partenaires de la chaîne Bonheur sur Seine.
         <br />
-        Parfait pour acheter une gyroroue, s&apos;équiper en accessoires de
-        mobilité électrique et{' '}
+        Parfait pour acheter sereinement sa gyroroue, s&apos;équiper en
+        accessoires de mobilité électrique et{' '}
         <strong className="dark:text-brown-300">
           profiter de réductions
         </strong>{' '}
-        dans des boutiques spécialisées -{' '}
+        dans des boutiques spécialisées{' '}
         <strong className="dark:text-brown-300">
-          tout en soutenant directement la chaîne et lui permettre de continuer
-          à exister&nbsp;!
-        </strong>{' '}
-        😁
+          tout en soutenant la chaîne&nbsp;!
+        </strong>
+        &nbsp;😁
       </p>
 
-      {/* Capsule Boutique avec Timer */}
-      {/* -------
+      {/* Capsule Boutique */}
+
       <div className="md:mx-4">
         <BoutiqueMEWfr />
       </div>
-      */}
 
       {/* Grille de promos partenaires */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">
