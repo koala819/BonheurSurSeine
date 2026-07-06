@@ -121,7 +121,7 @@ const Suspension = () => {
             stabilité en absorbant une grande partie des chocs et des
             vibrations&nbsp;: pavés, trous, racines, nids de poules, bosses…{' '}
             <strong className="text-olive-600 dark:text-olive-300">
-              Tout devient beaucoup moins fatigant et plus stable&nbsp;!
+              Tout devient beaucoup moins fatigant&nbsp;!
             </strong>
           </p>
           <p>
@@ -134,10 +134,10 @@ const Suspension = () => {
           <p className="mt-2">
             Mais{' '}
             <strong className="text-olive-600 dark:text-olive-300">
-              ce confort a un coût{' '}
+              ce confort a un coût
             </strong>
             &nbsp;: prix, encombrement, poids, hauteur des pédales, usure
-            mécanique…{' '}
+            mécanique…
           </p>
 
           <div className="BlockSuspension">
@@ -158,7 +158,7 @@ const Suspension = () => {
           </div>
 
           {/*-------------------------- Tableau -------------------------------*/}
-          <div className="overflow-x-auto mb-3 md:mx-2">
+          <div className="overflow-x-auto mt-3 mb-3 md:mx-2">
             <table className="w-full border-collapse rounded-lg overflow-hidden shadow-md dark:shadow-neutral-900">
               <thead>
                 <tr className="border-b border-gray-200 dark:border-gray-800 text-white text-base bg-taupe-500 dark:bg-taupe-900 ">
@@ -193,7 +193,7 @@ const Suspension = () => {
                   <td className="p-1">🚶Trajet court / occasionnel</td>
                   <td className="p-1 text-left">🤔 Optionnel</td>
                   <td className="p-1 text-right">
-                    Sans, c&apos;est plus simple, plus léger et compact
+                    Sans, c&apos;est plus simple, léger et compact
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
@@ -207,22 +207,21 @@ const Suspension = () => {
                   <td className="p-1">🚗 Trajets longs / quotidiens</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Réduit la fatigue (moins de place pour la batterie)
+                    Réduit la fatigue (et la place pour la batterie)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">🌲 Offroad / chemins dégradés</td>
                   <td className="p-1 text-left">✅ Très intéressant</td>
                   <td className="p-1 text-right">
-                    Meilleure stabilité et contrôle (bon entretien nécessaire)
+                    Meilleure contrôle (bon entretien nécessaire)
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200 dark:border-gray-800 hover:bg-taupe-100 dark:hover:bg-taupe-700 transition">
                   <td className="p-1">⚡ Conduite sportive</td>
                   <td className="p-1 text-left">✅ Selon usage</td>
                   <td className="p-1 text-right">
-                    Du confort mais accroit la surconfiance et le centre de
-                    gravité
+                    Accroit le confort et le centre de gravité
                   </td>
                 </tr>
               </tbody>
@@ -886,7 +885,7 @@ const Suspension = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : juin 2026
+            dernière mise à jour : juillet 2026
           </p>
         </AccordionItem>
       </Accordion>

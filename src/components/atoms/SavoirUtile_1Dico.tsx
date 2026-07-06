@@ -390,10 +390,10 @@ const Practical_Dico = () => {
               target="_blank"
               className="w-12 h-12 md:w-16 md:h-16 hover:text-blue-600"
             >
-              l&apos;aimable participation des membres du Discord&nbsp;
+              l&apos;aimable participation des membres du Discord
             </Link>
-            : Fabien.wheel, N1c0, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
-            FabWheel, MaxCzl et Nelson.
+            &nbsp;: Fabien.wheel, N1c0, Coup de cross, DonDiego.euc, LéoF,
+            Dr.Malcom, FabWheel, MaxCzl et Nelson.
           </p>
         </AccordionItem>
       </Accordion>

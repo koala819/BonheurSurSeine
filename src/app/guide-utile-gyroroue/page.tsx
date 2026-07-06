@@ -68,10 +68,10 @@ const Page = () => {
           className="text-xs md:text-sm italic text-gray-600 dark:text-gray-400 text-center
         mt-2"
         >
-          Infographie : Comprendre facilement le fonctionnement d&apos;une
-          gyroroue <br />
+          Infographie fonctionnement d&apos;une gyroroue.
+          <br />
           Les 3 chaînes de perception, de commande et de puissance sont limitées
-          par le maillon le plus faible.
+          par leur maillon le plus faible.
         </p>
       </div>
 
