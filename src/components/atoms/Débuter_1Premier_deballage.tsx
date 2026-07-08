@@ -188,14 +188,14 @@ const Begin_premier_deballage = () => {
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.
           </p>
-          <div className="mt-0 ml-3 overflow-x-auto">
+          <div className="mt-0 ml-0 sm:ml-3 overflow-x-auto">
             <p className="mt-2">
               <strong>Applications Constructeurs</strong>
             </p>
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="w-[130px] px-2 py-1 flex items-center center gap-1">
+                  <td className="min-w-[130px] px-2 py-1 ">
                     <div className="flex items-center gap-1">
                       <Image
                         src={logo_app_begode}
@@ -209,7 +209,6 @@ const Begin_premier_deballage = () => {
                   </td>
                   <td className="w-[25%] px-2 py-1">
                     <a
-                      /* href="https://apps.apple.com/us/app/begode/id1549181193" */
                       href="https://apps.apple.com/us/app/begode/id6762254331"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -219,21 +218,37 @@ const Begin_premier_deballage = () => {
                     </a>
                   </td>
                   <td className="w-[35%] px-2 py-1">
-                    <a
-                      href="https://www.begode.com/pages/app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-green-500 gap-1"
-                    >
-                      <FaAndroid className="shrink-0" />
-
+                    <div className="flex items-center gap-1">
+                      <Link
+                        href="https://www.pgyer.com/YdFJXBvo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 text-green-500 flex items-center"
+                      >
+                        <FaAndroid />
+                      </Link>
                       <div className="flex flex-col leading-tight">
-                        <span className="underline">Android</span>
+                        <Link
+                          href="https://www.pgyer.com/YdFJXBvo"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-green-500"
+                        >
+                          <span className="underline">Android</span>
+                        </Link>
                         <span className="text-xs text-gray-500 dark:text-gray-300">
-                          via site Begode
+                          via site{' '}
+                          <Link
+                            href="https://www.begode.com/pages/app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link-style"
+                          >
+                            Begode
+                          </Link>
                         </span>
                       </div>
-                    </a>
+                    </div>
                   </td>
                 </tr>
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
@@ -369,12 +384,13 @@ const Begin_premier_deballage = () => {
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 gap-1"
                     >
-                      <FaAndroid className="shrink-0" />
-
-                      <div className="flex flex-col leading-tight">
-                        <span className="underline">Android</span>
+                      <div>
+                        <FaAndroid className="shrink-0" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="underline leading-tight">Android</span>
                         <span className="text-xs text-gray-500 dark:text-gray-300">
-                          APK sur site Nosfet
+                          via site Nosfet
                         </span>
                       </div>
                     </a>
@@ -391,7 +407,7 @@ const Begin_premier_deballage = () => {
             <table className="min-w-full text-left border border-gray-300 dark:border-gray-700">
               <tbody className="divide-y divide-gray-300 dark:divide-gray-700">
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="w-[150px] px-2 py-1 flex items-center center gap-1">
+                  <td className="min-w-[145px] px-0.5 md:px-2 py-1 flex items-center center gap-1">
                     <Image
                       src={logo_app_darknessbot}
                       alt="logo_app_darknessbot"
@@ -401,7 +417,7 @@ const Begin_premier_deballage = () => {
                     />
                     <strong>DarknessBot</strong>
                   </td>
-                  <td className="w-[30%] px-2 py-1">
+                  <td className="w-[30%] px-0.5 md:px-2 py-1">
                     <a
                       href="https://apps.apple.com/fr/app/darknessbot/id1108403878"
                       target="_blank"
@@ -425,7 +441,7 @@ const Begin_premier_deballage = () => {
                 </tr>
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-1">
+                  <td className="px-0.5 md:px-2 py-1 flex items-center gap-1">
                     <Image
                       src={logo_app_eucworld}
                       alt="logo_app_eucworld"
@@ -459,7 +475,7 @@ const Begin_premier_deballage = () => {
                 </tr>
 
                 <tr className="bg-gray-100 dark:bg-gray-900 divide-x divide-gray-300 dark:divide-gray-700">
-                  <td className="px-2 py-1 flex items-center gap-1">
+                  <td className="px-0.5 md:px-2 py-1 flex items-center gap-1">
                     <Image
                       src={logo_app_wheelLog}
                       alt="logo_app_wheelLog"
