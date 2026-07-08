@@ -246,7 +246,15 @@ const Needs = () => {
             la&nbsp;performance&nbsp;? la&nbsp;praticité&nbsp;?
           </QuestionItem>
           <QuestionItem>
-            Je recherche une roue avant tout munie d&apos;une suspension&nbsp;?
+            Je recherche une roue avant tout munie d&apos;une suspension (cf.{' '}
+            <Link
+              href={'/guide-utile-gyroroue#suspension'}
+              className="text-emerald-600 underline hover:text-blue-700 dark:hover:text-blue-400"
+              target="_blank"
+            >
+              l&apos;usage de la suspension)
+            </Link>
+            &nbsp;?
           </QuestionItem>
           <QuestionItem>
             Je veux une roue simple à entretenir ou bien suis-je prêt à
