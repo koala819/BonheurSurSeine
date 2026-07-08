@@ -220,8 +220,7 @@ const Begin_premier_deballage = () => {
                   </td>
                   <td className="w-[35%] px-2 py-1">
                     <a
-                      /* href="https://www.begode.com/pages/app" */
-                      href="https://begode.fr.softonic.com/android"
+                      href="https://www.begode.com/pages/app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-green-500 gap-1"
@@ -231,7 +230,7 @@ const Begin_premier_deballage = () => {
                       <div className="flex flex-col leading-tight">
                         <span className="underline">Android</span>
                         <span className="text-xs text-gray-500 dark:text-gray-300">
-                          via Softonic (lien Begode KO)
+                          via site Begode
                         </span>
                       </div>
                     </a>
