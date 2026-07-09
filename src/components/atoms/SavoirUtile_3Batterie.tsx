@@ -253,6 +253,19 @@ const Practical_Battery = () => {
               </i>
             </p>
           </div>
+          <div className="place-content-center place-items-center">
+            <div className="w-full sm:w-4/5 md:w-3/4 lg:w-5/6 aspect-video rounded-xl shadow-md overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/-pTtcu3SqbI?si=K0c_wy7f4ARzHMbi"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
+              De quoi nos batteries sont-elle faites&nbsp;?
+            </p>
+          </div>
           {/*---------------------------------------*/}
           {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
