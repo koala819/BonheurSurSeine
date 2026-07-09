@@ -12,9 +12,11 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
+import { Button } from '@/components/ui/button'
 import { ThemeSwitcher } from '@/src/components/util/ThemeSwitcher'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
+import PlanSite from '@/public/BonheurSurSeine_plandusite.png'
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -404,6 +406,24 @@ export function Top() {
 
         {/* Actions droite */}
         <NavbarContent className="" justify="end">
+          <NavbarItem className="hidden md:inline-flex">
+            <Button
+              title="Plan du site"
+              variant="outline"
+              size="icon"
+              className="dark:bg-cyan-800 p-0.5"
+            >
+              <Link href="/plan-du-site" aria-current="page">
+                <Image
+                  src={PlanSite}
+                  alt="Plan du Site"
+                  className="object-fill dark:invert"
+                  width={60}
+                  height={60}
+                />
+              </Link>
+            </Button>
+          </NavbarItem>
           <NavbarItem>
             <ThemeSwitcher />
           </NavbarItem>
