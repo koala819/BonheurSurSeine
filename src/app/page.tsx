@@ -36,7 +36,7 @@ export default async function Page() {
       {/*----------------------------------------------*/}
       {/*             BLOC MENUS                       */}
       {/*----------------------------------------------*/}
-      <div className="px-4 lg:px-8 text-gray-900 dark:text-white" id="projet">
+      <div className="px-4 lg:px-8 text-gray-900 dark:text-white">
         {/* BLOC MENUS */}
         <p className="mt-0">
           Le contenu de ce site s&apos;adresse aux{' '}
@@ -94,10 +94,7 @@ export default async function Page() {
       {/*----------------------------------------------*/}
       {/*            DICO + PLAN DU SITE               */}
       {/*----------------------------------------------*/}
-      <section
-        className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white"
-        id="projet"
-      >
+      <section className="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8 text-gray-900 dark:text-white">
         {/*<FinishSection text={accueil.data.fin} />*/}
         <p className="mt-3">
           ➡️ <strong>Un terme trop technique&nbsp;?</strong> <br />
@@ -165,7 +162,10 @@ export default async function Page() {
       {/*----------------------------------------------*/}
       {/*               bloc de fin de page            */}
       {/*----------------------------------------------*/}
-      <div className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      <div
+        className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl"
+        id="projet"
+      >
         <h4 className="text-center font-medium mb-0">
           Ce site est entièrement gratuit.
         </h4>
