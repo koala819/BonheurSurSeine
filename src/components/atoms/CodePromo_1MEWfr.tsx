@@ -55,7 +55,7 @@ const MYEWFR = () => {
       {/* BOUTON */}
       <div className="mx-1">
         <Link
-          href="https://myewheel.com/fr/"
+          href="https://myewheel.com/fr/electric-unicycles-fr/"
           target="_blank"
           className="inline-flex items-center gap-1 font-semibold px-1 py-1 rounded-lg shadow text-white bg-pink-600 hover:bg-pink-800 transition dark:bg-white dark:text-pink-600 dark:hover:bg-pink-200"
         >

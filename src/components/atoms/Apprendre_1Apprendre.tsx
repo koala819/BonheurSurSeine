@@ -97,7 +97,7 @@ const Apprendre1 = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
-          <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
+          <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
             Apprendre facilement la gyroroue (méthode simple - tutoriel)
           </p>
         </div>
