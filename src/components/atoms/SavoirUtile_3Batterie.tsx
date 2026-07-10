@@ -205,7 +205,7 @@ const Practical_Battery = () => {
                 de la batterie). <br />
                 La diminution du % peut prendre une forme&nbsp;:
                 <br />
-                <span className="mt-0 mb-0">
+                <span className="mt-0 mb-0 text-sm">
                   &emsp;&bull;&ensp;Linéaire (diminution régulière, en même
                   temps que la tension).
                   <br />
@@ -223,7 +223,7 @@ const Practical_Battery = () => {
                 avec le kilométrage parcouru&nbsp;!
               </p>
             </aside>
-            <aside className="md:w-2/5 text-center text-xs mb-0">
+            <aside className="w-4/5 md:w-2/5 text-center text-xs mb-0">
               <Link href={Graphique_diminution.src} passHref target="_blank">
                 <Image
                   src={Graphique_diminution}
@@ -237,6 +237,25 @@ const Practical_Battery = () => {
               <br />
               <i> (volontairement exagéré)</i>.
             </aside>
+          </div>
+          <p className="text-left mt-4 mb-2">
+            Je t&apos;explique dans cette vidéo l&apos;architecture d&apos;un
+            pack batterie, la différence entre pourcentage et tension, et
+            comment nos roues gèrent leur énergie pour assurer notre sécurité.
+          </p>
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-full sm:w-4/5 md:w-3/4 lg:w-5/6 aspect-video rounded-xl shadow-md overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/-pTtcu3SqbI?si=K0c_wy7f4ARzHMbi"
+                title="Comment fonctionnent nos packs batteries ? - Bonheur sur Seine"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
+              Une introduction simple pour comprendre les packs batteries&nbsp;:
+              tension, ampérage, association en série ou parallèle…
+            </p>
           </div>
           {/*---------------------------------------*/}
           <div className="blueBlock_batterie mb-4">
@@ -253,19 +272,6 @@ const Practical_Battery = () => {
               </i>
             </p>
           </div>
-          <div className="place-content-center place-items-center">
-            <div className="w-full sm:w-4/5 md:w-3/4 lg:w-5/6 aspect-video rounded-xl shadow-md overflow-hidden">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/-pTtcu3SqbI?si=K0c_wy7f4ARzHMbi"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
-            </div>
-            <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
-              De quoi nos batteries sont-elle faites&nbsp;?
-            </p>
-          </div>
           {/*---------------------------------------*/}
           {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
@@ -278,7 +284,7 @@ const Practical_Battery = () => {
             Voici quelques valeurs utiles pour décider dans quelle mesure
             solliciter la roue&nbsp;:
           </p>
-          <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm">
+          <p className="text-center text-gray-600 dark:text-gray-400 mt-2 text-sm mx-0">
             Attention, il s&apos;agit de <u>données théoriques</u>
             &thinsp;soumises à l&apos;algorithme du fabricant et aux modèles des
             cellules qui feront varier ces données.
@@ -312,9 +318,9 @@ const Practical_Battery = () => {
                 <br />
                 D&apos;ailleurs, les fabricants proposent parfois plusieurs
                 choix. Et s&apos;il est normal de vouloir le meilleur pour sa
-                roue, les fabricants utilisent en réalité déjà ce qui se fait de
-                mieux (la technologie lithium-ion présente beaucoup
-                d&apos;avantages et est déjà très optimisée).
+                roue, les <strong>fabricants utilisent </strong>ce qui se fait
+                de mieux&nbsp;: <strong>la technologie lithium-ion </strong>
+                présente beaucoup d&apos;avantages et est déjà très optimisée.
               </p>
             </aside>
             {/* LOGO */}
