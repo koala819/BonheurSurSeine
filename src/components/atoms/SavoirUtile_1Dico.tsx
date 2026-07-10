@@ -247,11 +247,12 @@ const Practical_Dico = () => {
                 </b>
               </div>
             </aside>
-            <aside className="sm:w-1/3 md:w-2/5 text-center text-xs mt-1 mb-1">
+            <aside className="sm:w-1/3 md:w-2/5 text-center text-xs mt-1 mb-1 place-items-center">
               <Image
                 src={Image_dico}
                 alt="Image_dico"
-                className="rounded-lg cursor-pointer"
+                className="rounded-lg cursor-pointer w-80 sm:w-80"
+                priority
               />
             </aside>
           </div>
@@ -382,17 +383,17 @@ const Practical_Dico = () => {
           {/* notes de fin et crédits */}
 
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs mb-4">
-            article mis à jour en juin 2025, <br />
+            dictionnaire mis à jour en juin 2026, <br />
             avec{' '}
             <Link
               href="https://discord.com/invite/Jhgw7C96Jf"
               target="_blank"
               className="w-12 h-12 md:w-16 md:h-16 hover:text-blue-600"
             >
-              l&apos;aimable participation des membres du Discord&nbsp;
+              l&apos;aimable participation des membres du Discord
             </Link>
-            : Fabien.wheel, N1c0, Coup de cross, DonDiego.euc, LéoF, Dr.Malcom,
-            FabWheel, MaxCzl et Nelson.
+            &nbsp;: Fabien.wheel, N1c0, Coup de cross, DonDiego.euc, LéoF,
+            Dr.Malcom, FabWheel, MaxCzl et Nelson.
           </p>
         </AccordionItem>
       </Accordion>

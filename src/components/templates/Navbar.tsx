@@ -12,9 +12,11 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
+import { Button } from '@/components/ui/button'
 import { ThemeSwitcher } from '@/src/components/util/ThemeSwitcher'
 
 import logo from '@/public/BonheurSurSeine_logo.png'
+import PlanSite from '@/public/BonheurSurSeine_plandusite.png'
 
 export function Top() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -59,7 +61,7 @@ export function Top() {
         {/* ----------------------------- */}
         {/*           Menu desktop        */}
         {/* ----------------------------- */}
-        <NavbarContent className="" justify="center">
+        <NavbarContent className="mr-1" justify="center">
           {/* Logo */}
           <NavbarBrand>
             <Link href="/" aria-current="page">
@@ -75,7 +77,10 @@ export function Top() {
         </NavbarContent>
         {/*--------------------------------------------*/}
         {/* Menus */}
-        <NavbarContent className="hidden md:flex gap-2" justify="center">
+        <NavbarContent
+          className="hidden md:flex gap-1 md:gap-1 lg:gap-3"
+          justify="center"
+        >
           <div className="relative group">
             <NavbarItem isActive={path.includes('/BonheurScore')}>
               <Link
@@ -334,6 +339,14 @@ export function Top() {
                 </li>
                 <li>
                   <Link
+                    href="/guide-utile-gyroroue#suspension"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸La suspension
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/guide-utile-gyroroue#navi"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
@@ -396,6 +409,24 @@ export function Top() {
 
         {/* Actions droite */}
         <NavbarContent className="" justify="end">
+          <NavbarItem className="hidden md:inline-flex ml-1">
+            <Button
+              title="Plan du site"
+              variant="outline"
+              size="icon"
+              className="dark:bg-cyan-800 p-0.5"
+            >
+              <Link href="/plan-du-site" aria-current="page">
+                <Image
+                  src={PlanSite}
+                  alt="Plan du Site"
+                  className="object-fill dark:invert"
+                  width={60}
+                  height={60}
+                />
+              </Link>
+            </Button>
+          </NavbarItem>
           <NavbarItem>
             <ThemeSwitcher />
           </NavbarItem>

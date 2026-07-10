@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Image_assurance2 from '@/public/3.debuter/Image_assurance2.jpg'
 import Image_assurance from '@/public/3.debuter/Image_assurance.jpg'
 
 const Assurance = () => {
@@ -80,7 +81,7 @@ const Assurance = () => {
         >
           <div className="mb-8 flex flex-col md:flex-row items-center">
             <aside className="md:w-3/5 space-y-4 mr-4">
-              <div className="pinkBlock mb-0">
+              <div className="pinkBlockassurance1 mb-0">
                 <h3>
                   ✅ L&apos;assurance est{' '}
                   <span className="text-xl sm:text-xl md:text-2xl underline text-rose-600 dark:text-black font-semibold">
@@ -116,7 +117,7 @@ const Assurance = () => {
           <ul className="list-disc pl-6 space-y-2 mb-4">
             <li className="text-left">
               <strong className="text-rose-600 dark:text-rose-500">
-                La roue est un véhicule
+                La gyroroue est un véhicule
               </strong>{' '}
               terrestre à moteur qui doit être assurée. Le type de contrat est
               au minimum en{' '}
@@ -219,12 +220,27 @@ const Assurance = () => {
             </li>
           </ul>
           {/*-----------------------------------------------------------*/}
-          <div className="pinkBlock mb-4">
-            <h4>
-              📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question de
-              sécurité, c&apos;est une question de
-              responsabilité&nbsp;!&nbsp;&raquo;
-            </h4>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center">
+            {/* Image (1/4) */}
+            <div className="col-span-1 sm:col-span-1 md:col-span-1 flex justify-center">
+              <Image
+                src={Image_assurance2}
+                alt="Assurance gyroroue"
+                width={200}
+                height={200}
+                className="max-w-full h-auto object-contain rounded-lg shadow-md"
+              />
+            </div>
+            {/* Texte (3/4) */}
+            <div className="col-span-1 sm:col-span-2">
+              <div className="pinkBlockassurance2">
+                <h4 className="my-0">
+                  📢 &laquo;&nbsp;S&apos;assurer, ce n&apos;est pas une question
+                  de sécurité, c&apos;est une question de
+                  responsabilité&nbsp;!&nbsp;&raquo;
+                </h4>
+              </div>
+            </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 mt-4">
@@ -256,7 +272,7 @@ const Assurance = () => {
                 💰 Le budget assurance
               </h3>
               <p className="text-sm">
-                L&apos;assurance d&apos;un EDPM est accessible{' '}
+                L&apos;assurance d&apos;une gyroroue est accessible{' '}
                 <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
                   à partir de 5-10€/mois
                 </span>{' '}
@@ -278,7 +294,7 @@ const Assurance = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : avril 2025
+            dernière mise à jour : avril 2026
           </p>
         </AccordionItem>
       </Accordion>

@@ -168,7 +168,7 @@ const Practical_Vrac = () => {
           </h3>
           Reviens prochainement pour en savoir plus sur...
           <h5>🔜 Les moteurs</h5>
-          <h5>🔜 Les suspensions</h5>
+          <h5>🔜 Les accessoires</h5>
           <h5>
             🔜 Plein d&apos;autres sujets&nbsp;:{' '}
             <i>

@@ -32,9 +32,9 @@ export default function CardPromo({
   return (
     <section
       className="relative h-full bg-slate-300 dark:bg-slate-700
-      rounded-3xl py-2 flex flex-col w-full max-w-[300px] lg:max-w-[350px] mx-auto
+      rounded-2xl py-2 flex flex-col w-full max-w-[400px] lg:max-w-[350px] mx-auto
       border border-gray-200 dark:border-gray-600
-      shadow-md hover:shadow-lg transition-shadow duration-300
+      shadow hover:shadow-md transition-shadow duration-300
      shadow-gray-400 hover:shadow-gray-400
      dark:shadow-neutral-900 dark:hover:shadow-neutral-950
      hover:border-sky-700    dark:hover:border-sky-600
@@ -50,12 +50,17 @@ export default function CardPromo({
           flex items-center
            hover:shadow-lg"
         >
-          <Link href={website} target="_blank">
+          <Link
+            href={website}
+            target="_blank"
+            className="relative w-full h-full block"
+          >
             <Image
               alt={alt || 'logo de mon partenaire'}
               src={imageSrc}
               fill
               priority
+              sizes="(max-width: 1024px) 150px, 200px"
               className="object-contain object-center rounded-xl"
             />
           </Link>
@@ -79,7 +84,7 @@ export default function CardPromo({
       {/* PARTIE REDUCTION */}
       <div className="flex flex-wrap md:flex-nowrap space-y-0 mt-auto items-center">
         {/* Icône toujours visible */}
-        <aside className="w-2/12 flex justify-center items-center">
+        <aside className="w-3/12 flex justify-center items-center">
           <Link
             href={website}
             target="_blank"
@@ -90,7 +95,7 @@ export default function CardPromo({
         </aside>
         {/* Affiche seulement si au moins un champ existe */}
         {(code || montant) && (
-          <aside className="w-10/12">
+          <aside className="w-9/12">
             {/* Cas spécifique : si le code est une adresse mail */}
             {code === 'bonheursurseine@gmail.com' ? (
               <p>

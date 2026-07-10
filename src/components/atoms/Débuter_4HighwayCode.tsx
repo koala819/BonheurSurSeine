@@ -7,6 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Image_HighwayCode from '@/public/3.debuter/Image_code_de_la_route(light).jpg'
+import Image_HighwayCode1 from '@/public/3.debuter/Image_code_de_la_route(logo-site).jpg'
+import Image_HighwayCode2 from '@/public/3.debuter/Image_code_de_la_route(site).png'
 
 const HighwayCode = () => {
   //CODE POUR OUVRIR LA SECTION AUTOMATIQUEMENT
@@ -80,8 +82,9 @@ const HighwayCode = () => {
         >
           <p className="mb-4">
             Depuis le 23 octobre 2019, les gyroroues sont officiellement
-            reconnues dans le Code de la Route (catégorie EDPM{' '}
-            <strong>Engins de Déplacement Personnel à Moteur</strong>&nbsp;:{' '}
+            reconnues dans le Code de la Route (classées dans la catégorie EDPM{' '}
+            <strong>Engins de Déplacement Personnel à Moteur </strong>qui inclut
+            également les trotinettes&nbsp;:{' '}
             <Link
               href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000025043014"
               target="_blank"
@@ -403,19 +406,95 @@ const HighwayCode = () => {
             </b>
             &nbsp;!
           </p>
-          <div className="yellowBlock mb-8">
+
+          {/************************************************ */}
+          <div className="yellowBlockSecuriteRoutiere mb-2">
             <h4>
-              📢 Consulte régulièrement{' '}
+              📢 Consulte régulièrement le{' '}
               <Link
                 href="https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements/reglementation-des-edpm"
                 target="_blank"
-                className="link-style"
+                className="link-style hover:text-yellow-800 hover:dark:text-yellow-400"
               >
-                le site officiel
-              </Link>{' '}
-              de la Sécurité Routière.
+                site officiel de la Sécurité Routière
+              </Link>
+              .
             </h4>
+            <div className="border rounded-lg px-2 pt-2 bg-white hover:bg-gray-50 border-gray-200 dark:bg-slate-600 dark:border-slate-500 transition duration-300 shadow-sm max-w-3xl mx-auto">
+              {/* HEADER */}
+              <div className="flex flex-row items-center justify-between gap-4 mb-1">
+                <div className="flex-1">
+                  <span className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-normal sm:tracking-wide">
+                    Sécurité Routière
+                  </span>
+                </div>
+                <div className="flex-shrink-0 p-0.5 bg-white rounded">
+                  <Link
+                    href="https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements"
+                    target="_blank"
+                  >
+                    <Image
+                      src={Image_HighwayCode1}
+                      alt="Logo Sécurité Routière"
+                      className="object-contain w-[100px] sm:w-[150px] md:w-[180px]"
+                    />
+                  </Link>
+                </div>
+              </div>
+              {/* TITLE */}
+              <div className="text-base md:text-lg font-semibold text-gray-900 dark:text-white mt-1 mb-1">
+                Réglementation des EDPM (Engins de Déplacement Personnel
+                Motorisés)
+              </div>
+              {/* CORPS AVEC LIENS et IMAGE DU SITE*/}
+              <div className="flex flex-col sm:flex-row items-center mb-2 gap-1">
+                <div className="flex-1">
+                  <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                    Trottinettes électriques, monoroues, gyropodes,
+                    hoverboards&nbsp;: les EDPM, comme les autres usagers,
+                    doivent appliquer les règles du code de la route (vitesse
+                    maximale, équipements, circulation et sanctions en cas
+                    d&apos;infraction) qui garantissent leur sécurité et celle
+                    des autres.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link
+                    href="https://www.securite-routiere.gouv.fr/reglementation-liee-aux-modes-de-deplacements/reglementation-des-edpm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className="mt-2 md:mt-0 md:ml-2 bg-gray-100 p-2
+                  block group relative overflow-hidden rounded-md
+                  border border-gray-200 shadow-md hover:shadow-lg transition
+                  w-[180px] sm:w-[250px] aspect-[16/9]"
+                    >
+                      {/* L'image de la page */}
+                      <Image
+                        src={Image_HighwayCode2}
+                        alt="Aperçu du site Sécurité Routière"
+                        fill
+                        className="rounded-lg cursor-pointer shadow-md
+                        object-cover group-hover:scale-[1.02] transition duration-300"
+                      />
+                      {/* Un petit effet de survol pour inviter au clic */}
+                      <div
+                        className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex
+                      items-center justify-center transition duration-300"
+                      >
+                        <span className="bg-blue-600 text-white px-3 py-1 rounded-md font-medium shadow text-xs md:text-sm">
+                          Visiter le site ↗
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/************************************************ */}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
@@ -427,7 +506,7 @@ const HighwayCode = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : janvier 2025
+            dernière mise à jour : juin 2026
           </p>
         </AccordionItem>
       </Accordion>

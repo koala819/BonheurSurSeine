@@ -103,19 +103,31 @@ const sections = [
         href: '/guide-utile-gyroroue#entretien',
       },
       {
-        label: '⚡ La batterie : fonctionnement et autonomie',
+        label: '⚡ Batterie : fonctionnement, autonomie',
         href: '/guide-utile-gyroroue#batterie',
       },
       {
-        label: '🔋 Les cellules : choix et caractérisques',
+        label: '🔋 Batterie : tensions min des cellules',
         href: '/guide-utile-gyroroue#cells',
       },
       {
-        label: '🛞 Le pneu : choix, pression et entretien',
+        label: '🛞 Pneu : types de pneus',
         href: '/guide-utile-gyroroue#pneu',
       },
       {
-        label: '🛣️ Trouver son chemin : applis & cartes',
+        label: '🌀 Pneu : pression et entretien',
+        href: '/guide-utile-gyroroue#pneu_pression',
+      },
+      {
+        label: '🦿 Suspension : choix et conseils',
+        href: '/guide-utile-gyroroue#suspension',
+      },
+      {
+        label: '↕️ Suspension : réglages',
+        href: '/guide-utile-gyroroue#suspension_reglages',
+      },
+      {
+        label: '🛣️ Trouver son chemin : applis GPS & cartes',
         href: '/guide-utile-gyroroue#navi',
       },
       { label: '😉 Savoir en vrac', href: '/guide-utile-gyroroue#vrac' },

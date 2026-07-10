@@ -256,25 +256,30 @@ const Market = () => {
                 <strong className="text-brown-900 dark:text-brown-300">
                   aucune limite{' '}
                 </strong>
-                de taille, ni de poids ! La praticité n&apos;est plus un
-                argument, car ces modèles sont plutôt dédiés à la pratique
-                sportive : performance ou grande randonnée. Ces roues affichent
-                des{' '}
+                de taille, ni de poids ! Ces roues affichent des{' '}
                 <strong className="text-brown-900 dark:text-brown-300">
                   spécifications techniques de haute volée
                 </strong>{' '}
                 (voltage, autonomie, puissance, suspension, vitesses max) que
-                finalement peu de gens pourront exploiter totalement.
+                finalement peu de gens pourront totalement exploiter au
+                quotidien. <br />
+                D&apos;ailleurs, la praticité n&apos;est plus un argument
+                essentiel car ces modèles sont plutôt dédiés à la pratique
+                sportive :{' '}
+                <strong className="text-brown-900 dark:text-brown-300">
+                  grande randonnée, performance sur piste ou off-road
+                </strong>
+                .
               </li>
               <li className="">
                 On est sur les{' '}
                 <strong className="text-brown-900 dark:text-brown-300">
                   poids lourds{' '}
                 </strong>
-                de la micromobilité (40kg est un minimum). Avec seulement
-                quelques modèles au début, l&apos;offre s&apos;est étoffée au
-                fur et a mesure des améliorations techniques (suspension,
-                voltage).
+                de la micromobilité (40kg est souvent un minimum). Avec
+                seulement quelques modèles au début, l&apos;offre s&apos;est
+                étoffée au fur et a mesure des améliorations techniques
+                (suspension, tension).
               </li>
             </ul>
           </AccordionItem>

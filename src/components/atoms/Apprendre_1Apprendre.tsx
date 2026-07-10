@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 import apprendre from '@/public/1.apprendre/gyroroues_apprendre_202509.png'
 
-const Apprendre = () => {
+const Apprendre1 = () => {
   return (
     <section
       id="apprendre"
@@ -97,7 +97,7 @@ const Apprendre = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
-          <p className="text-sm italic text-gray-600 dark:text-gray-400 text-center">
+          <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
             Apprendre facilement la gyroroue (méthode simple - tutoriel)
           </p>
         </div>
@@ -274,4 +274,4 @@ const Apprendre = () => {
   )
 }
 
-export default Apprendre
+export default Apprendre1
