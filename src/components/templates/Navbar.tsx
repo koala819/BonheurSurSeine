@@ -61,7 +61,7 @@ export function Top() {
         {/* ----------------------------- */}
         {/*           Menu desktop        */}
         {/* ----------------------------- */}
-        <NavbarContent className="" justify="center">
+        <NavbarContent className="mr-1" justify="center">
           {/* Logo */}
           <NavbarBrand>
             <Link href="/" aria-current="page">
@@ -77,7 +77,10 @@ export function Top() {
         </NavbarContent>
         {/*--------------------------------------------*/}
         {/* Menus */}
-        <NavbarContent className="hidden md:flex gap-2" justify="center">
+        <NavbarContent
+          className="hidden md:flex gap-1 md:gap-1 lg:gap-3"
+          justify="center"
+        >
           <div className="relative group">
             <NavbarItem isActive={path.includes('/BonheurScore')}>
               <Link
@@ -406,7 +409,7 @@ export function Top() {
 
         {/* Actions droite */}
         <NavbarContent className="" justify="end">
-          <NavbarItem className="hidden md:inline-flex">
+          <NavbarItem className="hidden md:inline-flex ml-1">
             <Button
               title="Plan du site"
               variant="outline"
