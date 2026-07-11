@@ -364,9 +364,10 @@ const HighwayCode = () => {
               🪖 ET LE CASQUE&nbsp;?
             </h4>
             <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
-              En agglomération, sur voies vertes et pistes cyclables, le port du
-              casque (jet ou intégral) n&apos;est pas obligatoire&nbsp;: il est
-              cependant <strong>fortement recommandé</strong>.
+              En règle générale et selon le Code de la route, le port du casque
+              (jet ou intégral) n&apos;est pas obligatoire (en agglomération,
+              sur voies vertes et pistes cyclables)&nbsp;: il est cependant{' '}
+              <strong>fortement recommandé</strong>.
               <br />
               Le casque, comme les équipements rétroréﬂéchissants, n&apos;est
               obligatoire que sur les routes hors agglomération autorisées par
@@ -380,7 +381,39 @@ const HighwayCode = () => {
               </Link>
               ).
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
+            <div className="mt-2 mb-2 yellowBlockcasque">
+              <p className="text-sm text-gray-800 dark:text-gray-100">
+                ⚠️ <strong>Attention : </strong>depuis 2026, certaines communes
+                ou départements ont commencé à adopter des arrêtés locaux qui
+                rendent le port du casque obligatoire, même si ce n&apos;est pas
+                le cas au niveau national.
+              </p>
+              <p className="text-sm text-gray-800 dark:text-gray-100 mb-1">
+                Avant de circuler, il faut donc se renseigner sur les règles de
+                ta commune ou de ton département (pas simple 😕).
+              </p>
+              <div
+                className="inline-flex items-center gap-2 px-3 py-2
+                rounded-lg text-white text-sm font-medium
+               bg-yellow-600 hover:bg-yellow-800
+               dark:bg-yellow-700 dark:hover:bg-yellow-950
+               transition-colors"
+              >
+                <Link
+                  href="https://www.mobilityurban.fr/casque-obligatoire-trottinette-electrique-arretes-locaux.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pour t&apos;aider, consulte la liste{' '}
+                  {/*(non-exhautive){' '}*/}
+                  <span className=" text-sm underline">
+                    réalisée par Mobility Urban
+                  </span>{' '}
+                  ↗
+                </Link>
+              </div>
+            </div>
+            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mt-2 mb-2">
               <strong>Les protections </strong> sont importantes mais{' '}
               <strong>
                 ne rendent pas invulnérable&nbsp;: la prudence reste la
@@ -506,7 +539,7 @@ const HighwayCode = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : juin 2026
+            dernière mise à jour : juillet 2026
           </p>
         </AccordionItem>
       </Accordion>
