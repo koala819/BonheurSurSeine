@@ -22,11 +22,14 @@ export default function BoutiqueCapsule({ endDate }: { endDate: string }) {
 
   return (
     <div
-      className="rounded-2xl p-4 shadow-md flex flex-col items-center justify-center text-center space-y-2
+      className="rounded-2xl py-2 px-1 shadow-md flex flex-col items-center justify-center text-center
       bg-gradient-to-r from-indigo-200 to-purple-200 text-gray-900
-      dark:from-pink-500 dark:to-orange-400 dark:text-white"
+      dark:from-indigo-800 dark:to-purple-800 dark:text-white
+        border border-gray-200 dark:border-gray-600
+      hover:border-sky-700    dark:hover:border-sky-600
+      hover:-translate-y-[1px] "
     >
-      <h2 className="text-xl font-bold mt-0 mb-0">
+      <h2 className="text-xl font-bold mt-0 mb-2">
         <span className="text-5xl">🛍️</span> Boutique officielle éphémère
       </h2>
       {isFinished ? (
@@ -37,8 +40,7 @@ export default function BoutiqueCapsule({ endDate }: { endDate: string }) {
           </div>
           <a
             target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold px-4 py-2 rounded-lg shadow
+            className="font-semibold px-4 py-2 rounded-lg shadow mt-2
             text-white bg-black
             dark:bg-white dark:text-black"
           >
@@ -51,23 +53,23 @@ export default function BoutiqueCapsule({ endDate }: { endDate: string }) {
           <div className="text-lg font-mono bg-white/30 dark:bg-black/30 px-4 py-2 rounded-lg">
             ⏳ {days}j {hours}h {minutes}m {seconds}s restants
           </div>
-          <p className="text-base text-center">
+          <p className="text-center mb-2 mx-4 sm:mx-8 md:mx-12">
             Découvre une collection exclusive de produits{' '}
             <strong>Bonheur Sur Seine</strong>, disponible pour une durée
-            limitée.
-            <br /> Soutiens la chaîne avec style… et repars avec un produit
-            collector&nbsp;!
+            limitée&nbsp;!
           </p>
 
           <a
             href="https://bonheursurseine.myspreadshop.fr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold px-4 py-2 rounded-lg shadow
-            text-white bg-pink-600 hover:bg-pink-700 transition
-            dark:bg-white dark:text-pink-600 dark:hover:bg-gray-100"
+            className="inline-flex items-center gap-2
+            font-semibold px-4 py-2 rounded-lg shadow
+            text-white bg-pink-600 hover:bg-pink-800 transition
+            dark:bg-white dark:text-pink-600 dark:hover:bg-pink-200"
           >
-            Accéder à la boutique
+            <span>Accéder à la boutique</span>
+            <span className="text-4xl leading-none">🏬</span>
           </a>
         </>
       )}

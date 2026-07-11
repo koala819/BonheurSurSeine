@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import BoutiqueMEWfr from '@/src/components/atoms/CodePromo_1MEWfr'
-import GrillePromo from '@/src/components/atoms/CodePromo_2grillepartenaires'
+import Acces_MEWfr from '@/src/components/atoms/CodePromo_1MEWfr'
+//import Boutiq_Temp from '@/src/components/atoms/CodePromo_2boutiq_temp'
+import Grille_Part from '@/src/components/atoms/CodePromo_3grille_partenaires'
 
 import { createClient } from '@/prismicio'
 
@@ -24,7 +25,7 @@ export default async function Page() {
   )
 
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-4">
+    <section className="py-10 px-4 sm:px-6 lg:px-8">
       <h1 className="whitespace-break-spaces">
         Profite d&apos;Offres Exclusives&nbsp;!
       </h1>
@@ -45,17 +46,23 @@ export default async function Page() {
         &nbsp;😁
       </p>
 
-      {/* Capsule Boutique */}
-
-      <div className="md:mx-4">
-        <BoutiqueMEWfr />
+      {/* Capsule MyEwheel France */}
+      <div className="md:mx-4 my-4">
+        <Acces_MEWfr />
       </div>
+
+      {/* Capsule Vente Temporaire */}
+      {/*
+      <div className="md:mx-4 mb-12">
+        <Boutiq_Temp endDate="2026-12-31T23:59:59" />
+      </div>
+      */}
 
       {/* Grille de promos partenaires */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5">
         {sortedPromos.map((promo: any, id: number) => (
           <div key={id}>
-            <GrillePromo
+            <Grille_Part
               key={id}
               name={promo.data.name}
               logo={promo.data.logo.url}

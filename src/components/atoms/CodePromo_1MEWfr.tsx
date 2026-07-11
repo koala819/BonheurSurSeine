@@ -13,7 +13,7 @@ const MYEWFR = () => {
     <div
       className="rounded-2xl py-2 px-1 shadow-md flex flex-col items-center justify-center text-center
       bg-gradient-to-r from-green-100 to-sky-200 text-gray-900
-      dark:from-pink-500/90 dark:to-orange-400/90 dark:text-white
+      dark:from-green-800 dark:to-sky-800 dark:text-white
       border border-gray-200 dark:border-gray-600
      hover:border-sky-700    dark:hover:border-sky-600
        hover:-translate-y-[1px] "
@@ -40,7 +40,7 @@ const MYEWFR = () => {
           <Link
             href="https://myewheel.com/fr/about-us-fr/"
             target="_blank"
-            className="link-style font-bold hover:text-pink-600 dark:hover:text-pink-900"
+            className="link-style font-bold hover:text-yellow-600 dark:hover:text-yellow-400"
           >
             La boutique où je travaille et qui m&apos;offre les moyens de me
             consacrer à&nbsp;100% à la&nbsp;communauté&nbsp;!
