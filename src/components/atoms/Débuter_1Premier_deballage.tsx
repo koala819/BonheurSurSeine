@@ -525,7 +525,7 @@ const Begin_premier_deballage = () => {
             <aside className="flex-1">
               <p>
                 Difficile de s&apos;y retrouver tant les modèles et formats se
-                sont multipliés (cf.{' '}
+                sont multipliés (cf.
                 <Link
                   href="/guide-utile-gyroroue#dico"
                   className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
@@ -554,23 +554,22 @@ const Begin_premier_deballage = () => {
             </aside>
             {/* LOGO */}
             <aside className="flex-shrink-0">
-              <div
-                className="rounded-2xl
-                          bg-gray-100 dark:bg-gray-800
-                          p-2 shadow-sm"
-              >
-                <Image
-                  src={powerpads}
-                  alt="Assemblage d'une batterie lithium-ion"
-                  className="rounded-lg w-full object-cover shadow-sm
-                            min-w-[90px] max-w-[250px]"
-                  priority={false}
-                />
+              <div className="flex flex-col content-center mb-3">
+                <iframe
+                  className="w-full h-full rounded-lg"
+                  src="https://www.youtube.com/embed/uoPLZx42HCE?si=U6d6v-yionW-1ncB"
+                  title="Les powerpads - accessoires essentiels"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+
+                <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
+                  Quels powerpads choisir&nbsp;?
+                </p>
               </div>
             </aside>
           </div>
 
-          <p className="ml-4 mb-1">
+          <p className="ml-4 mb-2">
             🟢 <strong>Bien positionnés</strong>, les powerpads améliorent le
             confort et le contrôle. Par effet de levier, ils facilitent la
             transmission de puissance, rendant accélérations et freinages
@@ -592,14 +591,37 @@ const Begin_premier_deballage = () => {
             silhouette plus fine, un point apprécié par certains wheelers
             urbains.
           </p>
-          <p className="mb-0">
-            <strong>En résumé</strong>, inutile de se sentir obligé d&apos;en
-            installer, surtout quand on débute ou que la roue est légère.{' '}
-            <strong>
-              Les powerpads sont un outil au service d&apos;un usage, pas une
-              obligation&nbsp;!
-            </strong>
-          </p>
+          <div className="flex flex-col sm:flex-row items-center mb-1 gap-1">
+            {/* TEXTE */}
+            <aside className="flex-1 order-2 sm:order-1">
+              <p className="mb-0">
+                <strong>En résumé</strong>, inutile de se sentir obligé
+                d&apos;en installer, surtout quand on débute ou que la roue est
+                légère. <br />
+                <strong>
+                  Les powerpads sont un outil au service d&apos;un usage, pas
+                  une obligation&nbsp;!
+                </strong>
+              </p>
+            </aside>
+            {/* LOGO */}
+            <aside className="flex-shrink-0 order-1 sm:order-2">
+              <div
+                className="rounded-2xl
+                          bg-gray-100 dark:bg-gray-800
+                          p-1 shadow-sm"
+              >
+                <Image
+                  src={powerpads}
+                  alt="Assemblage d'une batterie lithium-ion"
+                  className="rounded-lg w-full object-cover shadow-sm
+                            min-w-[90px] max-w-[200px]"
+                  priority={false}
+                />
+              </div>
+            </aside>
+          </div>
+
           {/*---------------------------------------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
@@ -621,7 +643,7 @@ const Begin_premier_deballage = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : février 2026
+            dernière mise à jour : juillet 2026
           </p>
         </AccordionItem>
       </Accordion>
