@@ -53,7 +53,7 @@ const Page = () => {
       <div>
         <div
           className="mt-4 justify-center
-        bg-white dark:bg-gray-700
+        bg-white
           rounded-lg pt-2 pb-2
           border border-gray-200 dark:border-gray-600
           shadow-md hover:shadow-lg transition-shadow duration-300
@@ -68,7 +68,7 @@ const Page = () => {
             />
           </Link>
         </div>
-        <p className="text-xs md:text-sm italic text-gray-600 dark:text-gray-400 text-center mt-2">
+        <p className="text-xs md:text-sm italic text-gray-600 dark:text-gray-400 text-center mt-1">
           Infographie fonctionnement d&apos;une gyroroue.
           <br />
           Les 3 chaînes de perception, de commande et de puissance sont limitées
