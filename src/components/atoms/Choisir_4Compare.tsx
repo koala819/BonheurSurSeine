@@ -9,9 +9,6 @@ import blackLogo from '@/public/2.choisir/EUCFinder/EUCFinder_Logo_Oscuro-ok.jpg
 import EUCFinder from '@/public/2.choisir/EUCFinder/EUCFinder_aperçu.png'
 
 const Compare = () => {
-  const { theme } = useTheme()
-  const logo = theme === 'dark' ? blackLogo : whitelogo
-
   return (
     <section
       id="comparer"
@@ -124,12 +121,22 @@ const Compare = () => {
           <div className="flex-shrink-0">
             <Link href="https://www.eucfinder.com/fr" target="_blank">
               <div className="rounded-2xl bg-fuchsia-200/50 dark:bg-fuchsia-800/50 p-2 shadow-sm hover:shadow-md transition">
+                {/* Version Claire : visible par défaut, cachée en mode dark */}
                 <Image
-                  src={logo}
+                  src={whitelogo}
                   alt="EUC Finder Logo"
                   width={512}
                   height={512}
-                  className="rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
+                  className="block dark:hidden rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
+                />
+
+                {/* Version Sombre : cachée par défaut, visible en mode dark */}
+                <Image
+                  src={blackLogo}
+                  alt="EUC Finder Logo"
+                  width={512}
+                  height={512}
+                  className="hidden dark:block rounded-lg object-contain w-24 sm:w-28 md:w-32 h-auto"
                 />
               </div>
             </Link>

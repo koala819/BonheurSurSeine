@@ -35,7 +35,7 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
     setLoading(true)
 
     const res = await fetch(
-      `/api/ratingv2-comp/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
+      `/api/eucgame-comp/paginated?offset=${firstLoad ? 0 : offset}&limit=${LIMIT}`,
     )
     const json = await res.json()
 

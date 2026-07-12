@@ -198,7 +198,7 @@ export default function RatingStars2() {
           maxLength={20}
           value={pseudo}
           onChange={(e) => setPseudo(e.target.value)}
-          className="border rounded px-2 py-2 text-black dark:text-white"
+          className="border rounded px-2 py-2 text-black dark:text-white bg-slate-200 dark:bg-slate-800"
         />
 
         <textarea
@@ -207,7 +207,8 @@ export default function RatingStars2() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows={3}
-          className="border rounded px-2 py-2 text-black dark:text-white resize-none"
+          className="border rounded px-2 py-2 text-black dark:text-white bg-slate-200 dark:bg-slate-800
+          resize-none"
         />
       </div>
 

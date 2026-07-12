@@ -169,7 +169,7 @@ export default function RatingStars2() {
           maxLength={20}
           value={pseudo}
           onChange={(e) => setPseudo(e.target.value)}
-          className="border rounded px-2 py-2 text-black dark:text-white"
+          className="border rounded px-2 py-2 text-black dark:text-white bg-slate-200 dark:bg-slate-800"
         />
 
         <textarea
@@ -178,7 +178,7 @@ export default function RatingStars2() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows={5}
-          className="border rounded px-2 py-2 text-black dark:text-white resize-none"
+          className="border rounded px-2 py-2 text-black dark:text-white resize-none bg-slate-200 dark:bg-slate-800"
         />
       </div>
 
@@ -203,7 +203,7 @@ export default function RatingStars2() {
 
       {/* ------------------------------------------------------ */}
       {/* Historique */}
-      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 relative p-3 space-x-1 gap-3 bg-slate-400">
+      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 relative p-3 space-x-1 gap-3 bg-blue-100 dark:bg-slate-700">
         {/* Slider commentaires */}
         <div className="w-full space-y-0 px-4 mb-4">
           <Slider ref={sliderRef} {...sliderSettings}>
