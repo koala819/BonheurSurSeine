@@ -6,7 +6,8 @@ import Premier_deballage from '@/src/components/atoms/Débuter_1Premier_deballag
 import CommonSense from '@/src/components/atoms/Débuter_2Bonsens'
 import Assurance from '@/src/components/atoms/Débuter_3Assurance'
 import HighwayCode from '@/src/components/atoms/Débuter_4HighwayCode'
-import Associations from '@/src/components/atoms/Débuter_5Associations'
+import Maintenance from '@/src/components/atoms/Débuter_5Entretien'
+import Associations from '@/src/components/atoms/Débuter_6Associations'
 
 import HeroPhoto from '@/public/3.debuter/PhotoBSS - Bien Démarrer.jpg'
 
@@ -49,7 +50,10 @@ const Page = () => {
                 <p>
                   ➡️{' '}
                   <strong className="text-blue-800 dark:text-blue-300">
-                    5 thèmes <i>incontournables</i>
+                    6 thèmes{' '}
+                    <i>
+                      <u>incontournables</u>
+                    </i>
                   </strong>{' '}
                   à lire attentivement pour bien débuter et éviter les erreurs
                   des débutants.
@@ -84,6 +88,7 @@ const Page = () => {
       <CommonSense />
       <Assurance />
       <HighwayCode />
+      <Maintenance />
       <Associations />
       <div className="yellowBlock">
         <h3>

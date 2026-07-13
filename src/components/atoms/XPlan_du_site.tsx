@@ -80,11 +80,16 @@ const sections = [
     title: "L'essentiel pour bien démarrer",
     items: [
       { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
+      { label: '📱 Les applications', href: '/debuter-gyroroue#applis' },
       { label: '🦿 Les powerpads', href: '/debuter-gyroroue#powerpads' },
       { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },
       { label: "🪖 Comment s'équiper ?", href: '/debuter-gyroroue#equipement' },
       { label: "🛡️ L'assurance", href: '/debuter-gyroroue#assurance' },
       { label: '🚦 Le code de la route', href: '/debuter-gyroroue#code' },
+      {
+        label: '🛠️ Bien entretenir sa gyroroue',
+        href: '/debuter-gyroroue#entretien',
+      },
       {
         label: '🌍 Les groupes & associations',
         href: '/debuter-gyroroue#asso',
@@ -92,42 +97,42 @@ const sections = [
     ],
   },
   {
-    title: 'Guide Pratique',
+    title: 'Aller plus loin',
     items: [
+      {
+        label: "👁️ Comprendre sa roue en un coup d'oeil",
+        href: '/guide-utile-gyroroue#infocles',
+      },
       {
         label: "📖 Le p'tit Dico du Bonheur",
         href: '/guide-utile-gyroroue#dico',
       },
       {
-        label: '🛠️ Bien entretenir sa gyroroue',
-        href: '/guide-utile-gyroroue#entretien',
-      },
-      {
-        label: '⚡ Batterie : fonctionnement, autonomie',
+        label: '⚡ Batterie - fonctionnement, autonomie',
         href: '/guide-utile-gyroroue#batterie',
       },
       {
-        label: '🔋 Batterie : tensions min des cellules',
+        label: '🔋 Batterie - tensions min des cellules',
         href: '/guide-utile-gyroroue#cells',
       },
       {
-        label: '🛞 Pneu : types de pneus',
+        label: '🛞 Pneu - types de pneus',
         href: '/guide-utile-gyroroue#pneu',
       },
       {
-        label: '🌀 Pneu : pression et entretien',
+        label: '🌀 Pneu - pression et entretien',
         href: '/guide-utile-gyroroue#pneu_pression',
       },
       {
-        label: '🦿 Suspension : choix et conseils',
+        label: '🦿 Suspension - choix et conseils',
         href: '/guide-utile-gyroroue#suspension',
       },
       {
-        label: '↕️ Suspension : réglages',
+        label: '↕️ Suspension - réglages',
         href: '/guide-utile-gyroroue#suspension_reglages',
       },
       {
-        label: '🛣️ Trouver son chemin : applis GPS & cartes',
+        label: '🛣️ Trouver son chemin - applis GPS & cartes',
         href: '/guide-utile-gyroroue#navi',
       },
       { label: '😉 Savoir en vrac', href: '/guide-utile-gyroroue#vrac' },

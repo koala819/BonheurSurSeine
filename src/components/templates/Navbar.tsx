@@ -29,7 +29,7 @@ export function Top() {
     { name: 'Apprendre la roue', path: '/apprendre-gyroroue' },
     { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
     { name: "L'essentiel pour bien démarrer", path: '/debuter-gyroroue' },
-    { name: 'Guide pratique', path: '/guide-utile-gyroroue' },
+    { name: 'Aller plus loin', path: '/guide-utile-gyroroue' },
     { name: 'Merci', path: '/mille-merci' },
   ]
 
@@ -282,6 +282,14 @@ export function Top() {
                 </li>
                 <li>
                   <Link
+                    href="/debuter-gyroroue#entretien"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸L&apos;entretien
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/debuter-gyroroue#asso"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
@@ -299,7 +307,7 @@ export function Top() {
                 href="/guide-utile-gyroroue"
                 className="text-white hover:text-text-link whitespace-nowrap"
               >
-                Guide pratique
+                Aller plus loin
               </Link>
             </NavbarItem>
             {/* Sous-menu */}
@@ -311,14 +319,6 @@ export function Top() {
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
                     🔸Le p&apos;tit Dico du Bonheur
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/guide-utile-gyroroue#entretien"
-                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                  >
-                    🔸L&apos;entretien
                   </Link>
                 </li>
                 <li>

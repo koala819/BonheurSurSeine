@@ -183,7 +183,9 @@ const Begin_premier_deballage = () => {
             </li>
           </ul>
           {/*---------------------------------------------------------------------*/}
-          <h4 className="mt-4 mb-1">➡️ Les applications mobiles&nbsp;:</h4>
+          <h4 className="mt-4 mb-1 scroll-mt-24" id="applis">
+            ➡️ Les applications mobiles&nbsp;:
+          </h4>
           <p className="mb-0">
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.
@@ -525,7 +527,7 @@ const Begin_premier_deballage = () => {
             <aside className="flex-1">
               <p>
                 Difficile de s&apos;y retrouver tant les modèles et formats se
-                sont multipliés (cf.
+                sont multipliés (cf.{' '}
                 <Link
                   href="/guide-utile-gyroroue#dico"
                   className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
@@ -534,7 +536,6 @@ const Begin_premier_deballage = () => {
                 </Link>
                 ).
               </p>
-
               <p className="mb-0">
                 Et à force d&apos;en voir partout (vidéos, réseaux sociaux,
                 etc.), on pourrait penser à tort qu&apos;ils sont absolument
@@ -545,6 +546,7 @@ const Begin_premier_deballage = () => {
                 s&apos;est généralisé à mesure que les roues ont gagné en poids
                 et en performances.
               </p>
+
               <p className="mb-1">
                 La réponse courte est simple&nbsp;:{' '}
                 <strong>
@@ -552,16 +554,18 @@ const Begin_premier_deballage = () => {
                 </strong>
               </p>
             </aside>
-            {/* LOGO */}
-            <aside className="flex-shrink-0">
-              <div className="flex flex-col content-center mb-3">
-                <iframe
-                  className="w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/uoPLZx42HCE?si=U6d6v-yionW-1ncB"
-                  title="Les powerpads - accessoires essentiels"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                ></iframe>
 
+            {/* VIDÉO */}
+            <aside className="w-full sm:w-1/2 md:w-1/3 flex-shrink-0">
+              <div className="flex flex-col items-center w-full">
+                <div className="w-full aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/uoPLZx42HCE?si=U6d6v-yionW-1ncB"
+                    title="Les powerpads - accessoires essentiels"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe>
+                </div>
                 <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
                   Quels powerpads choisir&nbsp;?
                 </p>
