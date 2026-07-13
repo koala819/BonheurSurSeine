@@ -28,6 +28,10 @@ const Begin_premier_deballage = () => {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('deballage')
       }
+      if (hash === 'applis') {
+        setOpenKeys(['1']) // Ouvre l'accordéon
+        setScrollTarget('applis')
+      }
       if (hash === 'powerpads') {
         setOpenKeys(['1']) // Ouvre l'accordéon
         setScrollTarget('powerpads')

@@ -381,14 +381,33 @@ const Practical_Battery = () => {
             {/* TEXTE */}
             <aside className="flex-1">
               <p className="mb-2">
-                👉 Le modèle de cellule est donc un paramètre à considérer, mais
-                à replacer dans son contexte.
+                👉 <strong>En résumé</strong>, le modèle de cellule est un
+                paramètre à considérer, mais à replacer dans son contexte.
               </p>
               <p className="">
-                Et c&apos;est surtout la façon d&apos;utiliser la batterie qui
-                impactera les performances et leur durée de vie (éviter
-                décharges profondes, le stockage prolongé batterie pleine, les
-                températures extrêmes, etc.)
+                C&apos;est surtout la façon d&apos;utiliser la batterie qui
+                impactera les performances et leur durée de vie (
+                <Link
+                  className="link-style font-semibold"
+                  href="/debuter-gyroroue#entretien"
+                >
+                  éviter les décharges profondes
+                </Link>
+                ,{' '}
+                <Link
+                  className="link-style font-semibold"
+                  href="/debuter-gyroroue#entretien"
+                >
+                  le stockage prolongé batterie pleine
+                </Link>
+                ,{' '}
+                <Link
+                  className="link-style font-semibold"
+                  href="/debuter-gyroroue#entretien"
+                >
+                  les températures extrêmes
+                </Link>
+                , etc. )
               </p>
             </aside>
             {/* LOGO */}
