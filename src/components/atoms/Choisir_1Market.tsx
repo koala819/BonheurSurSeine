@@ -25,6 +25,8 @@ const Market = () => {
       <div className="">
         <Accordion
           isCompact
+          selectionMode="multiple"
+          defaultExpandedKeys={['1', '2', '3']}
           variant="splitted"
           itemClasses={{
             base: `group
