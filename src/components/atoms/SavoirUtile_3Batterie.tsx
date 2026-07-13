@@ -99,7 +99,7 @@ const Practical_Battery = () => {
                 Le pourcentage batterie est utile, rapide à lire, simple à
                 comprendre, mais…{' '}
               </p>
-              <div className="pinkBlock mb-2">
+              <div className="pinkBlock_batterie mb-2">
                 <b className="mb-0 mt-0">
                   ⚠️ On ne sollicite <u>pas</u>&thinsp;(accélération, freinage,
                   vitesse, etc.) sa roue de la même manière à 100%, 50%, ou 20%
