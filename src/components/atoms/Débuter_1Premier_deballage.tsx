@@ -183,7 +183,9 @@ const Begin_premier_deballage = () => {
             </li>
           </ul>
           {/*---------------------------------------------------------------------*/}
-          <h4 className="mt-4 mb-1">➡️ Les applications mobiles&nbsp;:</h4>
+          <h4 className="mt-4 mb-1 scroll-mt-24" id="applis">
+            ➡️ Les applications mobiles&nbsp;:
+          </h4>
           <p className="mb-0">
             La plupart des roues électriques sont prévues pour être connectées
             et configurées grâce à un smartphone connecté en Bluetooth.

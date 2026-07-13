@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
-import Maintenance from '@/src/components/atoms/SavoirUtile_2Entretien'
 import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
 import Pneu from '@/src/components/atoms/SavoirUtile_3Pneu'
 import Suspension from '@/src/components/atoms/SavoirUtile_3Suspension'
@@ -27,7 +26,7 @@ const Page = () => {
   return (
     <div className="py-10 px-2 sm:px-4 md:px-6 lg:px-8 space-y-8">
       {/*--------------TITRE---------------------------------*/}
-      <h1>Guide pratique</h1>
+      <h1>Aller plus loin</h1>
       <div className="space-y-1">
         <div className="mt-0 mb-0 flex flex-col md:flex-row items-center gap-x-2 gap-y-0">
           <aside className="md:w-1/2 space-y-1">
@@ -50,7 +49,7 @@ const Page = () => {
 
       {/*---------------Infographie--------------------------------*/}
 
-      <div>
+      <div className="scroll-mt-24" id="infocles">
         <div
           className="mt-4 justify-center
         bg-white
@@ -79,7 +78,6 @@ const Page = () => {
       {/*--------------BLOCS---------------------------------*/}
 
       <Dico />
-      <Maintenance />
       <Battery />
       <Pneu />
       <Suspension />
