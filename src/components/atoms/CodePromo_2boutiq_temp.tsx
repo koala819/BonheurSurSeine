@@ -50,13 +50,16 @@ export default function BoutiqueCapsule({ endDate }: { endDate: string }) {
       ) : (
         <>
           {/* Décompte animé */}
-          <div className="text-lg font-mono bg-white/30 dark:bg-black/30 px-4 py-2 rounded-lg">
+          <div
+            className="text-lg font-semibold font-mono text-yellow-300 dark:text-yellow-400
+           bg-black/40 dark:bg-black/30 px-3 py-2 rounded-lg"
+          >
             ⏳ {days}j {hours}h {minutes}m {seconds}s restants
           </div>
-          <p className="text-center mb-2 mx-4 sm:mx-8 md:mx-12">
+          <p className="text-center mb-2 mx-1 sm:mx-12 md:mx-16">
             Découvre une collection exclusive de produits{' '}
-            <strong>Bonheur Sur Seine</strong>, disponible pour une durée
-            limitée&nbsp;!
+            <strong>Bonheur&nbsp;Sur&nbsp;Seine</strong>,
+            disponible&nbsp;pour&nbsp;une&nbsp;durée&nbsp;limitée&nbsp;!
           </p>
 
           <a
