@@ -275,6 +275,11 @@ const Practical_Vrac = () => {
                 </ul>
               </div>
             </div>
+            <p className="mt-0 mb-4 text-left">
+              <strong>Rappel&nbsp;:</strong> pour être utilisée sur voie
+              publique, la roue doit être{' '}
+              <span className="underline">bridée à 25km/h</span>.
+            </p>
           </section>
           {/*--------------------------------------------------------*/}
           {/*                        BLOC 3                          */}
