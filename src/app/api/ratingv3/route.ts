@@ -29,7 +29,7 @@ const RATE_LIMIT_DELAY = 60_000
 // =====================================================
 
 const bannedWords = [
-  'con ',
+  'con',
   'connard',
   'idiot',
   'fdp',
@@ -37,28 +37,24 @@ const bannedWords = [
   'travelo',
   'pute',
   'salope',
-  'bite ',
+  'bite',
   'naz',
   'fuck',
   'youpin',
   'wizzas',
-  'connard ',
-  'idiot',
-  'pd ',
-  'PD ',
-  'fdp',
+  'pd',
+  'pede',
+  'PD',
   'bobo',
   'parisien',
   'juif',
   'shit',
   'abruti',
-  'salope ',
   'tamere',
   'triso',
   'pauv',
   'gogo',
   'debile',
-  'bite',
   'encul',
   'cul',
   'tarace',
@@ -83,22 +79,35 @@ function replaceLeetspeak(str: string): string {
     .replace(/@/g, 'a')
     .replace(/\$/g, 's')
 }
-
-function cleanText(str: string): string {
-  return replaceLeetspeak(removeAccents(str.toLowerCase())).replace(
-    /[^a-z0-9]/g,
-    '',
-  )
-}
+// ANCIENNE FONCTION
+//function cleanText(str: string): string {
+//  return replaceLeetspeak(removeAccents(str.toLowerCase())).replace(
+//    /[^a-z0-9]/g,
+//    '',
+//  )
+//}
 
 function containsBannedWord(str: string): string | null {
-  const cleaned = cleanText(str)
+  // ---- ANCIEN CODE ----
+  // const cleaned = cleanText(str)
+  // for (const word of bannedWords) {
+  //   const cleanedWord = cleanText(word)
+  //  if (cleaned.includes(cleanedWord)) {
+  //    return word
+  //  }
+  // }
 
-  for (const word of bannedWords) {
-    const cleanedWord = cleanText(word)
-
-    if (cleaned.includes(cleanedWord)) {
-      return word
+  // 1. On nettoie le texte mais on GARDE les espaces temporairement
+  const lowerStr = replaceLeetspeak(removeAccents(str.toLowerCase()))
+  // 2. On sépare le texte en un tableau de mots (en isolant via tout ce qui n'est pas alphanumérique)
+  const wordsInText = lowerStr.split(/[^a-z0-9]/).filter(Boolean)
+  for (const bannedWord of bannedWords) {
+    // On nettoie le mot banni en enlevant ses propres espaces superflus
+    const cleanedBannedWord = bannedWord.trim().toLowerCase()
+    if (!cleanedBannedWord) continue
+    // 3. On cherche une correspondance exacte d'un mot entier
+    if (wordsInText.includes(cleanedBannedWord)) {
+      return bannedWord
     }
   }
 
