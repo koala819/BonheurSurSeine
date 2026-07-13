@@ -116,50 +116,64 @@ const Pneu = () => {
           <p className="mt-2">
             Techniquement, il existe 2 grandes familles&nbsp;:
           </p>
-
-          <ul className="compactlist2 mb-0 space-y-3">
-            <li>
-              <b>Les pneus vélo</b>
-              <br />
-              Ils sont pour la plupart équipés de <b>chambre à air </b>(simple,
-              économique). <br />
-              Leur taille correspond au <b>diamètre extérieur du pneu</b> et à
-              la <b>largeur du pneu </b>(exprimé en pouce).
-              <div className="mt-1 ml-4 text-sm">
-                Exemple&nbsp;: <i>18&quot;x2.5&quot;</i>
-                <br />
-                &nbsp;&nbsp;- 18&quot; = diamètre total de la roue
-                <br />
-                &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+          {/*----------------- ARCHITECTURE ---------------------------*/}
+          <div className="ml-6 mr-4 mb-2 md:mb-4">
+            <div className="grid gap-2 md:gap-4 lg:grid-cols-2 mb-4">
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                flex flex-col h-full border-t-4 border-taupe-600"
+              >
+                <h6 className="font-semibold mb-1">🛞 Les pneus vélo</h6>
+                <p className="text-sm">
+                  Ils sont pour la plupart équipés de <b>chambre à air </b>
+                  (simple, économique). <br />
+                  Leur taille correspond au <b>diamètre extérieur du pneu</b> et
+                  à la <b>largeur du pneu </b>(exprimé en pouce).
+                </p>
+                <div className="mt-1 ml-4 text-sm">
+                  Exemple&nbsp;: <i>18&quot;x2.5&quot;</i>
+                  <br />
+                  &nbsp;&nbsp;- 18&quot; = diamètre total de la roue
+                  <br />
+                  &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+                </div>
               </div>
-            </li>
-
-            <li>
-              <b>Les pneus scooter</b>
-              <br />
-              Ils sont majoritairement
-              <b> tubeless </b>(plus résistants aux crevaisons, mais plus lourds
-              et montage/réparation plus techniques).
-              <br />
-              Leur taille correspond à la <b>largeur du pneu</b> et au{' '}
-              <b>diamètre de la jante</b>.
-              <div className="mt-1 ml-4 text-sm">
-                Exemple&nbsp;: <i>2.5&quot;-14&quot;</i>
-                <br />
-                &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
-                <br />
-                &nbsp;&nbsp;- 14&quot; = diamètre de la jante
-                <br />
-                Exemple&nbsp;: <i>80/90-14</i> (exprimé en pouce)
-                <br />
-                &nbsp;&nbsp;- 80 = largeur (mm)
-                <br />
-                &nbsp;&nbsp;- 90 = hauteur (en %) = 90% de 80 mm (≈ 72 mm)
-                <br />
-                &nbsp;&nbsp;- 14 = diamètre de la jante (pouces)
+              <div
+                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
+                shadow-md hover:shadow-lg transition-shadow
+                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                flex flex-col h-full border-t-4 border-taupe-600"
+              >
+                <h6 className="font-semibold mb-1">🛞 Les pneus scooter</h6>
+                <p className="text-sm">
+                  Ils sont majoritairement
+                  <b> tubeless </b>(plus résistants aux crevaisons, mais plus
+                  lourds et montage/réparation plus techniques).
+                  <br />
+                  Leur taille correspond à la <b>largeur du pneu</b> et au{' '}
+                  <b>diamètre de la jante</b>.
+                </p>
+                <div className="mt-1 ml-4 text-sm">
+                  Exemple&nbsp;: <i>2.5&quot;-14&quot;</i>
+                  <br />
+                  &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+                  <br />
+                  &nbsp;&nbsp;- 14&quot; = diamètre de la jante
+                  <br />
+                  Exemple&nbsp;: <i>80/90-14</i> (exprimé en pouce)
+                  <br />
+                  &nbsp;&nbsp;- 80 = largeur (mm)
+                  <br />
+                  &nbsp;&nbsp;- 90 = hauteur (en %) = 90% de 80 mm (≈ 72 mm)
+                  <br />
+                  &nbsp;&nbsp;- 14 = diamètre de la jante (pouces)
+                </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+
           <p className="mt-4 mb-0">
             Deux petites particularités dans le monde des gyroroues&nbsp;:
           </p>
