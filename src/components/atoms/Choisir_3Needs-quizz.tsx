@@ -53,7 +53,7 @@ const PROFILES = {
     title: '⚡ Trajet Intensif',
     subtitle: 'Taillé pour affronter la route',
     description:
-      "Tu parcoures chaque jour de grandes distances (parfois plus de 30 ou 40 km) là où il y a peu de pistes cyclables, ou parfois des axes dégradés. Il te faut une machine fiable, endurante, et  dotée d'une suspension rassurante pour t'insérer partout.",
+      "Tu parcoures chaque jour de grandes distances (parfois +40 km) là où il y a peu de pistes cyclables, ou parfois des axes dégradés. Il te faut une machine fiable, endurante, et dotée d'une suspension rassurante pour t'insérer partout.",
     wheels: [
       'Leaperkim Patton-S',
       'Nosfet Xeno',
@@ -62,10 +62,10 @@ const PROFILES = {
     ],
   },
   P7_loisir_suspendu: {
-    title: '🌲 Le Baroudeur',
-    subtitle: 'Franchissement, amorti et sorties en forêt (Offroad)',
+    title: '🌲 Le Voltigeur',
+    subtitle: 'Franchissements, amortis et sorties en forêt (Offroad)',
     description:
-      "Pour toi, la gyroroue est synonyme d'accrobatie, de terre et de sauts. Une bonne suspension à grand débattement est indispensable te permettre d'évoluer sur ce relief et survoler les obstacles.",
+      "Pour toi, la gyroroue est synonyme d'acrobaties, de terre et de sauts. Une bonne suspension à grand débattement est indispensable pour te permettre d'évoluer sur ce relief et survoler les obstacles.",
     wheels: [
       'Begode Extreme',
       'Kingsong S22 Pro',
@@ -74,17 +74,17 @@ const PROFILES = {
     ],
   },
   P8_loisir_vitesse: {
-    title: '🏎️ Le Routard',
-    subtitle: 'Stabilité à haute vitesse, rigidité et accélérations',
+    title: '🏎️ Le Pistard',
+    subtitle: 'Stabilité à haute vitesse et accélérations',
     description:
-      "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une tension élevée (High Voltage), des pads ergonomiques parfaitement ajustés et un châssis ultra-rigide.",
+      "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une roue performante et optimisée, un châssis ultra-rigide et de bons power-pads.",
     wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Nosfet Apex'],
   },
   P9_loisir_endurance: {
     title: '🗺️ Le Voyageur',
-    subtitle: 'Autonomie démesurée pour de longues heures de roadtrip',
+    subtitle: 'Autonomie pour de longues heures en roadtrip',
     description:
-      'Ton plaisir ultime est de partir rouler toute la journée sans jamais surveiller ta jauge de batterie. Tu privilégies une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
+      'Ton plaisir ultime est de partir rouler toute la journée sans surveiller ta jauge de batterie. Tu privilégies une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
     wheels: ['Leaperkim Sherman-L', 'Leaperkim Sherman-S'],
   },
 }
@@ -271,13 +271,12 @@ export const QuizBesoins = () => {
       setCurrentStep(0)
     }
   }
-
   const resetQuiz = () => {
     setAnswers({})
     setCurrentStep(1) // Relance directement à la question 1
   }
 
-  // Algorithme d'aiguillage d'experts exploitant l'ensemble des 9 variables
+  // Algorithme d'aiguillage d'experts
   const calculateResult = (): {
     key: keyof typeof PROFILES
     showWarning_debutant: boolean
@@ -294,129 +293,66 @@ export const QuizBesoins = () => {
     const q9 = answers[9] // Entretien (simple-bricoleur)
     const q10 = answers[10] // Budget (serré-moyen-premium)
 
-    const isBeginner = q1 === 'Q1_debutant_occasion'
     const heavyRider = q2 === 'Q2_gabarit_lourd'
     const showWarning_entretien = q9 === 'Q9_entretien_simple'
     const showWarning_debutant =
-      isBeginner && (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
+      q1 === 'Q1_debutant_occasion' &&
+      (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
 
-    // Un wheeler lourd nécessite davantage de stabilité, de couple et de confort.
     const adjustProfileForBody = (
       profile: keyof typeof PROFILES,
     ): keyof typeof PROFILES => {
       if (heavyRider) {
-        if (profile === 'P2_multimodal_court') {
-          return 'P3_multimodal_long'
-        }
-        if (profile === 'P4_occasionnel_court') {
-          return 'P5_commuter_regulier'
-        }
+        if (profile === 'P2_multimodal_court') return 'P3_multimodal_long'
+        if (profile === 'P4_occasionnel_court') return 'P5_commuter_regulier'
       }
       return profile
     }
 
-    /*-------------------------------------------------*/
-    /* 1) CAS PARTICULIER : APPRENTISSAGE              */
-    /* choix rationnel : apprendre sur roue occasion   */
+    // Variable stockant la clé finale avant de la retourner
+    let resultKey: keyof typeof PROFILES = 'P5_commuter_regulier'
+
     if (
-      isBeginner &&
+      q1 === 'Q1_debutant_occasion' &&
       q4 === 'Q4_distance_court' &&
       q10 !== 'Q10_budget_premium'
     ) {
-      return {
-        key: 'P1_debutant_occasion',
-        showWarning: false,
-      }
-    }
-
-    /*-------------------------------------------------*/
-    /* 2) USAGE LOISIR                                 */
-    if (q3 === 'Q3_loisir') {
+      resultKey = 'P1_debutant_occasion'
+    } else if (q3 === 'Q3_loisir') {
       if (q6 === 'Q6_offroad' || q7 === 'Q7_loisir_suspendu') {
-        /* refus suspension et refus maintenance =  message sensibilisation */
-        if (q8 === 'Q8_sans_suspension' || q9 === 'Q9_entretien_simple') {
-          return {
-            key: 'P7_loisir_suspendu',
-            showWarning_entretien,
-          }
-        }
-        return {
-          key: adjustProfileForBody('P7_loisir_suspendu'),
-          showWarning,
-        }
+        resultKey = adjustProfileForBody('P7_loisir_suspendu')
+      } else if (q7 === 'Q7_loisir_vitesse') {
+        resultKey = 'P8_loisir_vitesse'
+      } else if (q7 === 'Q7_loisir_endurance') {
+        resultKey = 'P9_loisir_endurance'
       }
-      if (q7 === 'Q7_loisir_vitesse') {
-        return {
-          key: 'P8_loisir_vitesse',
-          showWarning,
-        }
-      }
-      if (q7 === 'Q7_loisir_endurance') {
-        return {
-          key: 'P9_loisir_endurance',
-          showWarning,
-        }
-      }
-    }
-
-    /*-------------------------------------------------*/
-    /* 3) USAGE UTILITAIRE                             */
-    if (q3 === 'Q3_utilitaire') {
+    } else if (q3 === 'Q3_utilitaire') {
       if (q4 === 'Q4_distance_court') {
-        if (q5 === 'Q5_leger') {
-          return {
-            key: adjustProfileForBody('P2_multimodal_court'),
-            showWarning,
-          }
-        }
-        return {
-          key: 'P4_occasionnel_court',
-          showWarning,
-        }
-      }
-      if (q4 === 'Q4_distance_moyen') {
+        if (q5 === 'Q5_leger')
+          resultKey = adjustProfileForBody('P2_multimodal_court')
+        else resultKey = 'P4_occasionnel_court'
+      } else if (q4 === 'Q4_distance_moyen') {
+        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen')
+          resultKey = 'P3_multimodal_long'
+        else resultKey = 'P5_commuter_regulier'
+      } else if (q4 === 'Q4_distance_long') {
         if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
-          return {
-            key: 'P3_multimodal_long',
-            showWarning,
-          }
-        }
-        return {
-          key: 'P5_commuter_regulier',
-          showWarning,
-        }
-      }
-      if (q4 === 'Q4_distance_long') {
-        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
-          return {
-            key: 'P3_multimodal_long',
-            showWarning,
-          }
-        }
-        if (q8 === 'Q8_avec_suspension') {
-          if (refusesMaintenance) {
-            return {
-              key: adjustProfileForBody('P5_commuter_regulier'),
-              showWarning,
-            }
-          }
-          return {
-            key: adjustProfileForBody('P6_super_commuter'),
-            showWarning,
-          }
-        }
-        return {
-          key: 'P5_commuter_regulier',
-          showWarning,
+          resultKey = 'P3_multimodal_long'
+        } else if (q8 === 'Q8_avec_suspension') {
+          if (showWarning_entretien)
+            resultKey = adjustProfileForBody('P5_commuter_regulier')
+          else resultKey = adjustProfileForBody('P6_super_commuter')
+        } else {
+          resultKey = 'P5_commuter_regulier'
         }
       }
     }
 
-    /*-------------------------------------------------*/
-    /* 4) PAR DEFAUT                                   */
+    // Un seul return global pour satisfaire le typage TypeScript
     return {
-      key: 'P5_commuter_regulier',
-      showWarning,
+      key: resultKey,
+      showWarning_debutant,
+      showWarning_entretien,
     }
   }
 
@@ -424,7 +360,7 @@ export const QuizBesoins = () => {
   const resultData = result ? PROFILES[result.key] : null
 
   return (
-    <div className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-slate-50 dark:bg-gray-800/50 shadow-inner">
+    <div className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-slate-100 dark:bg-gray-800/50 shadow-inner">
       {/* Étape 0 : Accueil du test */}
       {currentStep === 0 && (
         <div className="text-center py-2">
@@ -433,7 +369,7 @@ export const QuizBesoins = () => {
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-4 max-w-md mx-auto">
             Réponds aux questions pour analyser tes contraintes, identifier tes
-            besoins, cibler ton usage et découvrir les gyroroues les plus
+            besoins, cibler ton usage et découvrir les modèles les plus
             recommandées.
           </p>
           <button
@@ -515,14 +451,18 @@ export const QuizBesoins = () => {
             <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mt-2">
               {resultData.title}
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 font-medium italic mt-0.5">
+            <p className="text-sm text-gray-800 dark:text-gray-200 font-medium italic mt-0.5">
               {resultData.subtitle}
             </p>
           </div>
+          {/* description */}
+          <p className="text-sm md:text-base text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-100 dark:border-gray-800 text-justify shadow-sm mb-2 leading-relaxed">
+            {resultData.description}
+          </p>
           {/* Encart WARNING */}
           {result?.showWarning_debutant && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-              💡 <strong>Le conseil du pro : </strong>Même si ton usage à moyen
+              💡 <strong>Tu débutes&nbsp;? </strong>Même si ton usage à moyen
               terme nécessite une roue performante et que tu disposes du budget,
               je recommande généralement de faire tes premières armes (quelques
               semaines d&apos;apprentissage) sur une roue d&apos;occasion moins
@@ -532,16 +472,12 @@ export const QuizBesoins = () => {
           )}
           {result?.showWarning_entretien && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-              💡 <strong>Le conseil du pro : </strong> Une roue nécessite un
-              minimum d&apos;entretien et de suivi, d&apos;autant plus si elle
-              est munie d&apos;une suspension et que tu souhaites pratiquer le
-              offroad ou faire du saut&nbsp;!
+              💡 <strong>Entretien&nbsp;: </strong> Une roue nécessite un
+              minimum d&apos;entretien et de suivi, d&apos;autant en usage
+              intenstif, si elle est munie d&apos;une suspension et que tu
+              souhaites pratiquer le offroad ou faire du saut&nbsp;!
             </div>
           )}
-          {/* description */}
-          <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-100 dark:border-gray-800 text-justify shadow-sm mb-4 leading-relaxed">
-            {resultData.description}
-          </p>
           {/* Modèles */}
           <div className="mb-2">
             <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mb-3">
