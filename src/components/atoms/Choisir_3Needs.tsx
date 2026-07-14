@@ -22,7 +22,7 @@ const QuestionItem = ({ children }: { children: any }) => {
         ${
           isSelected
             ? 'border-emerald-600 bg-emerald-50/50 dark:bg-emerald-900/20'
-            : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-800'
+            : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-800/50'
         }
       `}
     >

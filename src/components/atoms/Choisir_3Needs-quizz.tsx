@@ -1,5 +1,13 @@
 'use client'
 
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+} from '@heroui/react'
 import { useState } from 'react'
 
 // Définition des 9 profils cibles (conclusions)
@@ -121,7 +129,7 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    text: 'Tu recherches une roue principalement pour :',
+    text: 'Tu recherches principalement une roue pour ?',
     options: [
       {
         text: 'Des trajets occasionnels ou quotidiens (travail, obligations)',
@@ -138,33 +146,33 @@ const QUESTIONS = [
     text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
     options: [
       {
-        text: 'Occasionnellement ou pour de courtes distances (<10km AR)',
+        text: 'Occasionnellement ou pour de courtes distances (<10km)',
         profile: 'Q4_distance_court',
       },
       {
-        text: 'Régulièrement sur des distances moyennes (10-30km AR)',
+        text: 'Régulièrement sur des distances moyennes (10-30km)',
         profile: 'Q4_distance_moyen',
       },
       {
-        text: 'Quotidiennement sur de longues distances (>30km AR)',
+        text: 'Quotidiennement sur de longues distances (>30km)',
         profile: 'Q4_distance_long',
       },
     ],
   },
   {
     id: 5,
-    text: 'Quel est ton rapport aux escaliers et aux transports (manipulation à la main) ?',
+    text: 'Quel est ton rapport aux escaliers et aux transports ?',
     options: [
       {
-        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids jusqu'à 15kg)",
+        text: 'Intensif : très souvent le train/métro/bus ou des escaliers (poids max 15kg)',
         profile: 'Q5_leger',
       },
       {
-        text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
+        text: 'Modéré : quelques marches de temps en temps  (poids max 25kg)',
         profile: 'Q5_moyen',
       },
       {
-        text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant)",
+        text: 'Quasiment jamais (poids non limitant)',
         profile: 'Q5_lourd',
       },
     ],
@@ -174,7 +182,7 @@ const QUESTIONS = [
     text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Pistes cyclables lisses et petites rues apaisées de centre-ville',
+        text: 'Pistes cyclables et rues apaisées de centre-ville',
         profile: 'Q6_lisse',
       },
       {
@@ -192,11 +200,11 @@ const QUESTIONS = [
     text: "Quand tu penses à tes sorties loisir, qu'est-ce qui te fait vibrer ?",
     options: [
       {
-        text: 'Le franchissement, les sauts, jouer avec le relief et les bosses',
+        text: 'Franchissement, sauts, jouer avec le relief et les bosses',
         profile: 'Q7_loisir_suspendu',
       },
       {
-        text: "La vitesse, l'accélération franche et la précision de trajectoire sur route",
+        text: 'Vitesse, accélération franche et trajectoire acérée',
         profile: 'Q7_loisir_vitesse',
       },
       {
@@ -210,11 +218,11 @@ const QUESTIONS = [
     text: 'Quelle importance accordes-tu à la suspension ?',
     options: [
       {
-        text: 'Peu importante : je privilégie la simplicité mécanique, la compacité et le coût réduit',
+        text: 'Peu importante : je privilégie la simplicité, la compacité et le coût',
         profile: 'Q8_sans_suspension',
       },
       {
-        text: 'Très importante : pour préserver mes articulations, mon confort et ma sécurité',
+        text: 'Très importante : pour préserver mon confort et ma sécurité',
         profile: 'Q8_avec_suspension',
       },
     ],
@@ -224,11 +232,11 @@ const QUESTIONS = [
     text: 'Côté entretien et réglages :',
     options: [
       {
-        text: 'Zéro prise de tête : je veux un engin simple avec le moins de maintenance possible',
+        text: 'Je veux un engin simple avec le moins de maintenance possible',
         profile: 'Q9_entretien_simple',
       },
       {
-        text: 'Pas de problème : je peux gérer les réglages ou des réparations réguliers',
+        text: 'Je peux gérer les réglages ou des réparations réguliers',
         profile: 'Q9_entretien_bricoleur',
       },
     ],
@@ -256,7 +264,12 @@ const QUESTIONS = [
 export const QuizBesoins = () => {
   const [currentStep, setCurrentStep] = useState(0) // 0 = Accueil, 1-9 = Questions
   const [answers, setAnswers] = useState<Record<number, string>>({})
+  const [isModalOpen, setIsModalOpen] = useState(false) // Contrôle de la modale
 
+  const handleStart = () => {
+    setCurrentStep(1)
+    setIsModalOpen(true)
+  }
   const handleAnswer = (optionProfile: string) => {
     setAnswers((prev) => ({ ...prev, [currentStep]: optionProfile }))
     setCurrentStep((prev) => prev + 1)
@@ -266,14 +279,20 @@ export const QuizBesoins = () => {
       // Retour classique à la question précédente
       setCurrentStep((prev) => prev - 1)
     } else if (currentStep === 1) {
-      // Retour à l'accueil (étape 0) -> on nettoie impérativement les réponses
+      // Si on recule depuis la Q1, on ferme la modale et on reset
+      setIsModalOpen(false)
       setAnswers({})
       setCurrentStep(0)
     }
   }
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setAnswers({})
+    setCurrentStep(0)
+  }
   const resetQuiz = () => {
     setAnswers({})
-    setCurrentStep(1) // Relance directement à la question 1
+    setCurrentStep(1) // Relance à la question 1 sans fermer la modale
   }
 
   // Algorithme d'aiguillage d'experts
@@ -360,157 +379,194 @@ export const QuizBesoins = () => {
   const resultData = result ? PROFILES[result.key] : null
 
   return (
-    <div className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-slate-100 dark:bg-gray-800/50 shadow-inner">
-      {/* Étape 0 : Accueil du test */}
-      {currentStep === 0 && (
+    <>
+      {/* --- ÉCRAN D'ACCUEIL (Fixe sur la page) --- */}
+      <div className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-slate-100 dark:bg-gray-800/50 shadow-inner">
         <div className="text-center py-2">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white">
             <span className="text-4xl">🎯</span> Découvre ton profil&nbsp;!
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-4 max-w-md mx-auto">
+          <p className="text-sm text-gray-700 dark:text-gray-200 mt-1 mb-4 max-w-md mx-auto">
             Réponds aux questions pour analyser tes contraintes, identifier tes
             besoins, cibler ton usage et découvrir les modèles les plus
             recommandées.
           </p>
           <button
-            onClick={() => setCurrentStep(1)}
+            onClick={handleStart}
             className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium shadow-md transition-all active:scale-95"
           >
             Commencer le test
           </button>
         </div>
-      )}
+      </div>
 
-      {/* Étapes 1 à 9 : Questions */}
-      {currentStep >= 1 && currentStep <= QUESTIONS.length && (
-        <div>
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center gap-2">
-              {currentStep > 0 && (
-                <button
-                  onClick={handleBack}
-                  className="p-1 px-2.5 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded shadow-sm hover:shadow active:scale-95 transition-all"
-                  aria-label="Retour à la question précédente"
-                >
-                  ← Retour
-                </button>
-              )}
-              <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">
-                Question {currentStep} sur {QUESTIONS.length}
-              </span>
-            </div>
-            <div className="flex-1 max-w-[150px] bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
-              <div
-                className="bg-emerald-500 h-full transition-all duration-300"
-                style={{ width: `${(currentStep / QUESTIONS.length) * 100}%` }}
-              />
-            </div>
-          </div>
-          <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">
-            {QUESTIONS[currentStep - 1].text}
-          </h4>
-          <div className="space-y-2">
-            {QUESTIONS[currentStep - 1].options.map((option, idx) => {
-              // 1. On vérifie si cette option est celle actuellement stockée pour cette question
-              const isSelected = answers[currentStep] === option.profile
-
-              return (
-                <button
-                  key={idx}
-                  onClick={() => handleAnswer(option.profile)}
-                  // 2. On applique les classes CSS dynamiquement selon l'état de sélection
-                  className={`w-full text-left p-3 rounded-lg border transition-all duration-150 text-sm md:text-base font-medium ${
-                    isSelected
-                      ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
-                      : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
-                  }`}
-                >
-                  <div className="flex justify-between items-center">
-                    <span>{option.text}</span>
-                    {isSelected && (
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
-                        ✓
-                      </span>
-                    )}
-                  </div>
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Écran des Résultats */}
-      {currentStep > QUESTIONS.length && resultData && (
-        <div className="py-1 animate-fade-in">
-          {/* Profil */}
-          <div className="text-center mb-1">
-            <span className="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold px-3 py-1 rounded-full">
-              Ton Profil
-            </span>
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mt-2">
-              {resultData.title}
-            </h3>
-            <p className="text-sm text-gray-800 dark:text-gray-200 font-medium italic mt-0.5">
-              {resultData.subtitle}
-            </p>
-          </div>
-          {/* description */}
-          <p className="text-sm md:text-base text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-100 dark:border-gray-800 text-justify shadow-sm mb-2 leading-relaxed">
-            {resultData.description}
-          </p>
-          {/* Encart WARNING */}
-          {result?.showWarning_debutant && (
-            <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-              💡 <strong>Tu débutes&nbsp;? </strong>Même si ton usage à moyen
-              terme nécessite une roue performante et que tu disposes du budget,
-              je recommande généralement de faire tes premières armes (quelques
-              semaines d&apos;apprentissage) sur une roue d&apos;occasion moins
-              chère pour assimiler la technique sans craindre d&apos;abimer une
-              roue neuve&nbsp;!
-            </div>
-          )}
-          {result?.showWarning_entretien && (
-            <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-              💡 <strong>Entretien&nbsp;: </strong> Une roue nécessite un
-              minimum d&apos;entretien et de suivi, d&apos;autant en usage
-              intenstif, si elle est munie d&apos;une suspension et que tu
-              souhaites pratiquer le offroad ou faire du saut&nbsp;!
-            </div>
-          )}
-          {/* Modèles */}
-          <div className="mb-2">
-            <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mb-3">
-              🎯 Exemples de modèles adaptés :
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {resultData.wheels.map((wheel, index) => (
-                <div
-                  key={index}
-                  className="p-3 bg-emerald-100 dark:bg-emerald-800 dark:text-white text-center font-semibold rounded-lg shadow-sm hover:scale-[1.02] transition-transform text-sm md:text-base"
-                >
-                  {wheel}
+      {/* --- MODALE (Questions & Résultats) --- */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        size="2xl"
+        placement="center"
+        backdrop="opaque"
+        scrollBehavior="inside"
+        classNames={{
+          backdrop: 'bg-black/60 backdrop-blur-sm',
+          closeButton:
+            'right-3 left-auto top-1 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white',
+        }}
+      >
+        <ModalContent className="rounded-xl bg-slate-100 dark:bg-gray-800 p-1">
+          {/* HEADER DYNAMIQUE */}
+          <div className="mx-4 text-lg font-semibold mt-1 mb-1 border-b border-gray-200 dark:border-gray-700 pb-2">
+            {currentStep <= QUESTIONS.length ? (
+              <div className="flex flex-col w-full pr-6">
+                <span className="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-1">
+                  Question {currentStep} sur {QUESTIONS.length}
+                </span>
+                <div className="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden">
+                  <div
+                    className="bg-emerald-500 h-full transition-all duration-300"
+                    style={{
+                      width: `${(currentStep / QUESTIONS.length) * 100}%`,
+                    }}
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ) : (
+              <div className="text-center">
+                <a className="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold px-3 py-1 rounded-full ">
+                  Ton Profil
+                </a>
+              </div>
+            )}
           </div>
-          {/* Mention de mise à jour de la sélection */}
-          <p className="text-center text-xs text-gray-600 dark:text-gray-300 my-1">
-            Sélection mise à jour en juillet 2026 selon l&apos;état actuel du
-            marché.
-          </p>
-          {/* Refaire le test */}
-          <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-2 mt-0">
-            <button
-              onClick={resetQuiz}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg
-              text-sm font-medium shadow-md transition-all active:scale-95"
+
+          {/* CORPS DE LA MODALE */}
+          <ModalBody className="space-y-2 min-h-[20vh] max-h-[70vh] overflow-y-auto pt-0 px-4">
+            {/* ETAT : QUESTIONS */}
+            {currentStep >= 1 && currentStep <= QUESTIONS.length && (
+              <div className="animate-fade-in">
+                <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">
+                  {QUESTIONS[currentStep - 1].text}
+                </h4>
+                <div className="space-y-1">
+                  {QUESTIONS[currentStep - 1].options.map((option, idx) => {
+                    const isSelected = answers[currentStep] === option.profile
+
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => handleAnswer(option.profile)}
+                        className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-sm sm:text-base font-medium ${
+                          isSelected
+                            ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
+                            : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
+                        }`}
+                      >
+                        <div className="flex justify-between items-center">
+                          <span>{option.text}</span>
+                          {isSelected && (
+                            <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
+                              ✓
+                            </span>
+                          )}
+                        </div>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* ETAT : RÉSULTAT */}
+            {currentStep > QUESTIONS.length && resultData && (
+              <div className="animate-fade-in">
+                <div className="mb-1">
+                  <p className="text-center mb-2 text-xl md:text-2xl font-black text-gray-900 dark:text-white">
+                    {resultData.title}
+                  </p>
+                  <p className="text-sm text-gray-800 dark:text-gray-200 font-medium">
+                    {resultData.subtitle}
+                  </p>
+                </div>
+
+                <p className="text-sm md:text-base text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 p-2 rounded-lg border border-gray-100 dark:border-gray-700 text-justify mb-2 leading-relaxed">
+                  {resultData.description}
+                </p>
+                {/* Encart WARNING */}
+                {result?.showWarning_debutant && (
+                  <div className="mt-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs md:text-sm">
+                    💡 <strong>Tu débutes&nbsp;? </strong>Même si ton usage
+                    nécessite une roue performante et que tu as le budget, je
+                    recommande de faire tes premières armes sur une occasion
+                    moins chère.
+                  </div>
+                )}
+                {result?.showWarning_entretien && (
+                  <div className="mt-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs md:text-sm">
+                    💡 <strong>Entretien : </strong> Une roue nécessite un
+                    minimum d&apos;entretien, d&apos;autant plus si elle a une
+                    suspension pour faire du offroad&nbsp;!
+                  </div>
+                )}
+
+                {/* Modèles */}
+                <div className="mb-2">
+                  <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mt-3 mb-2">
+                    🎯 Exemples de modèles adaptés :
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mx-20 sm:mx-0">
+                    {resultData.wheels.map((wheel, index) => (
+                      <div
+                        key={index}
+                        className="p-2 bg-emerald-100 dark:bg-emerald-800/80 dark:text-white text-center font-semibold rounded-lg text-sm hover:scale-[1.02] transition-transform "
+                      >
+                        {wheel}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Mention de mise à jour de la sélection */}
+                <p className="text-center text-xs text-gray-600 dark:text-gray-300 my-1">
+                  Sélection mise à jour en juillet 2026 selon l&apos;état actuel
+                  du marché.
+                </p>
+              </div>
+            )}
+          </ModalBody>
+
+          {/* FOOTER DE LA MODALE */}
+          <ModalFooter className="border-t border-gray-200 dark:border-gray-700 flex justify-between items-center pt-3 pb-2">
+            {/* Bouton de gauche : Retour (pendant les questions) ou Refaire (aux résultats) */}
+            {currentStep <= QUESTIONS.length ? (
+              <Button
+                variant="light"
+                onPress={handleBack}
+                className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
+              >
+                ← Retour
+              </Button>
+            ) : (
+              <Button
+                variant="flat"
+                color="primary" // Ajuste la couleur selon ton thème NextUI (ex: success)
+                onPress={resetQuiz}
+                className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
+              >
+                🔄 Refaire le test
+              </Button>
+            )}
+
+            {/* Bouton de droite : Fermer */}
+            <Button
+              variant="solid"
+              onPress={handleCloseModal}
+              className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
             >
-              Refaire le test 🔄
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+              Fermer
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   )
 }
