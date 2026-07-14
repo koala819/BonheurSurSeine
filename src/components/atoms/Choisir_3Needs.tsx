@@ -1,14 +1,13 @@
 'use client'
 
-//import { Checkbox } from '@heroui/react'
 import { useState } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
+import { QuizBesoins } from '@/src/components/atoms/Choisir_3Needs-quizz'
 
-//import { color } from 'framer-motion'
+import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
 //style des Checkbox utilisés pour les 7 questions.
@@ -270,6 +269,9 @@ const Needs = () => {
           </QuestionItem>
         </div>
       </div>
+
+      {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
+      <QuizBesoins />
 
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
