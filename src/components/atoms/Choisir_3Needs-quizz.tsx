@@ -280,7 +280,8 @@ export const QuizBesoins = () => {
   // Algorithme d'aiguillage d'experts exploitant l'ensemble des 9 variables
   const calculateResult = (): {
     key: keyof typeof PROFILES
-    showWarning: boolean
+    showWarning_debutant: boolean
+    showWarning_entretien: boolean
   } => {
     const q1 = answers[1] // Niveau (débutant-pratiquant)
     const q2 = answers[2] // Gabarit (standart-lourd)
@@ -295,8 +296,9 @@ export const QuizBesoins = () => {
 
     const isBeginner = q1 === 'Q1_debutant_occasion'
     const heavyRider = q2 === 'Q2_gabarit_lourd'
-    const refusesMaintenance = q9 === 'Q9_entretien_simple'
-    const showWarning = isBeginner && q10 === 'Q10_budget_premium'
+    const showWarning_entretien = q9 === 'Q9_entretien_simple'
+    const showWarning_debutant =
+      isBeginner && (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
 
     // Un wheeler lourd nécessite davantage de stabilité, de couple et de confort.
     const adjustProfileForBody = (
@@ -313,13 +315,9 @@ export const QuizBesoins = () => {
       return profile
     }
 
-    /*
-   ======================================================
-   1) CAS PARTICULIER : PREMIÈRE ROUE
-   ======================================================
-   Le profil P1 correspond au choix rationnel :
-   apprendre sans peur d'abîmer une roue neuve.
-   */
+    /*-------------------------------------------------*/
+    /* 1) CAS PARTICULIER : APPRENTISSAGE              */
+    /* choix rationnel : apprendre sur roue occasion   */
     if (
       isBeginner &&
       q4 === 'Q4_distance_court' &&
@@ -331,31 +329,15 @@ export const QuizBesoins = () => {
       }
     }
 
-    /*
-   ======================================================
-   2) USAGE LOISIR
-   ======================================================
-   */
+    /*-------------------------------------------------*/
+    /* 2) USAGE LOISIR                                 */
     if (q3 === 'Q3_loisir') {
-      /*
-     Offroad / franchissement
-     */
       if (q6 === 'Q6_offroad' || q7 === 'Q7_loisir_suspendu') {
-        /*
-       Si l'utilisateur refuse la suspension,
-       on conserve l'idée d'usage mais on évite
-       de recommander une machine extrême.
-       */
-        if (q8 === 'Q8_sans_suspension') {
+        /* refus suspension et refus maintenance =  message sensibilisation */
+        if (q8 === 'Q8_sans_suspension' || q9 === 'Q9_entretien_simple') {
           return {
-            key: 'P4_occasionnel_court',
-            showWarning,
-          }
-        }
-        if (refusesMaintenance) {
-          return {
-            key: adjustProfileForBody('P5_commuter_regulier'),
-            showWarning,
+            key: 'P7_loisir_suspendu',
+            showWarning_entretien,
           }
         }
         return {
@@ -363,46 +345,23 @@ export const QuizBesoins = () => {
           showWarning,
         }
       }
-
-      /*
-     Recherche vitesse
-     */
       if (q7 === 'Q7_loisir_vitesse') {
         return {
           key: 'P8_loisir_vitesse',
           showWarning,
         }
       }
-
-      /*
-     Endurance / voyage
-     */
       if (q7 === 'Q7_loisir_endurance') {
         return {
           key: 'P9_loisir_endurance',
           showWarning,
         }
       }
-
-      return {
-        key: 'P8_loisir_vitesse',
-        showWarning,
-      }
     }
 
-    /*
-   ======================================================
-   3) USAGE UTILITAIRE
-   ======================================================
-   */
-
+    /*-------------------------------------------------*/
+    /* 3) USAGE UTILITAIRE                             */
     if (q3 === 'Q3_utilitaire') {
-      /*
-     --------------------------------------------------
-     COURT
-     --------------------------------------------------
-     */
-
       if (q4 === 'Q4_distance_court') {
         if (q5 === 'Q5_leger') {
           return {
@@ -410,62 +369,30 @@ export const QuizBesoins = () => {
             showWarning,
           }
         }
-
         return {
           key: 'P4_occasionnel_court',
           showWarning,
         }
       }
-
-      /*
-     --------------------------------------------------
-     MOYEN
-     --------------------------------------------------
-     */
-
       if (q4 === 'Q4_distance_moyen') {
-        /*
-       Portage régulier :
-       train, métro, escaliers, déplacements fréquents
-       */
         if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
           return {
             key: 'P3_multimodal_long',
             showWarning,
           }
         }
-
-        /*
-       Pas de contrainte physique :
-       commuter moderne
-       */
         return {
           key: 'P5_commuter_regulier',
           showWarning,
         }
       }
-
-      /*
-     --------------------------------------------------
-     LONG
-     --------------------------------------------------
-     */
-
       if (q4 === 'Q4_distance_long') {
-        /*
-       Même longue distance mais nécessité
-       de transporter la roue
-       */
-        if (q5 === 'Q5_leger' || q5 === 'Q4_moyen') {
+        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
           return {
             key: 'P3_multimodal_long',
             showWarning,
           }
         }
-
-        /*
-       Grande distance + confort indispensable
-       */
         if (q8 === 'Q8_avec_suspension') {
           if (refusesMaintenance) {
             return {
@@ -478,11 +405,6 @@ export const QuizBesoins = () => {
             showWarning,
           }
         }
-
-        /*
-       Long trajet sans suspension :
-       possible mais moins cohérent.
-       */
         return {
           key: 'P5_commuter_regulier',
           showWarning,
@@ -490,12 +412,8 @@ export const QuizBesoins = () => {
       }
     }
 
-    /*
-   ======================================================
-   4) FALLBACK
-   ======================================================
-   */
-
+    /*-------------------------------------------------*/
+    /* 4) PAR DEFAUT                                   */
     return {
       key: 'P5_commuter_regulier',
       showWarning,
@@ -601,15 +519,23 @@ export const QuizBesoins = () => {
               {resultData.subtitle}
             </p>
           </div>
-          {/* Encart Débutant Ambitieux */}
-          {result?.showWarning && (
+          {/* Encart WARNING */}
+          {result?.showWarning_debutant && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
               💡 <strong>Le conseil du pro : </strong>Même si ton usage à moyen
               terme nécessite une roue performante et que tu disposes du budget,
-              je recommande vivement de faire tes premières armes (quelques
+              je recommande généralement de faire tes premières armes (quelques
               semaines d&apos;apprentissage) sur une roue d&apos;occasion moins
-              chère pour assimiler la technique sans craindre les chutes
-              inévitables du début&nbsp;!
+              chère pour assimiler la technique sans craindre d&apos;abimer une
+              roue neuve&nbsp;!
+            </div>
+          )}
+          {result?.showWarning_entretien && (
+            <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
+              💡 <strong>Le conseil du pro : </strong> Une roue nécessite un
+              minimum d&apos;entretien et de suivi, d&apos;autant plus si elle
+              est munie d&apos;une suspension et que tu souhaites pratiquer le
+              offroad ou faire du saut&nbsp;!
             </div>
           )}
           {/* description */}
