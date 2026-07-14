@@ -237,7 +237,7 @@ const Needs = () => {
           </QuestionItem>
           <QuestionItem>
             Mon utilisation principale&nbsp;: pistes&nbsp;cyclables&nbsp;?
-            centre&#8209;ville&nbsp;? longs&nbsp;trajets&nbsp;?
+            centre&#8209;ville&nbsp;? agglomération&nbsp;?
             voies&nbsp;vertes&nbsp;? terrains&nbsp;offroad&nbsp;?
           </QuestionItem>
           <QuestionItem>

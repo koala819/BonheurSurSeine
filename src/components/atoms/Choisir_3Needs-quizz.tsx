@@ -6,9 +6,9 @@ import { useState } from 'react'
 const PROFILES = {
   debutant_occasion: {
     title: '🎓 Le Débutant Malin',
-    subtitle: "Roue d'apprentissage solide & opportunités d'occasion",
+    subtitle: "Roue d'apprentissage & d'occasion",
     description:
-      "Pour commencer sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela évitera le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
+      "Pour débuter sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela éviter le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
     wheels: [
       'Inmotion V8F / V8S / V10F (occasion)',
       'Kingsong KS-16S / 16X (occasion)',
@@ -16,15 +16,15 @@ const PROFILES = {
     ],
   },
   multimodal_court: {
-    title: '🚆 Le Multimodal Ultra-Court',
-    subtitle: 'Légèreté et compacité non négociables (Poids plume)',
+    title: '🚆 Le Multimodal Léger',
+    subtitle: 'Légèreté et compacité non négociables (poids plume)',
     description:
-      "Ta priorité absolue est de combiner la roue avec d'autres moyens de transport (train, métro, bus, coffre de voiture) ou de monter des escaliers sans se fatiguer. La suspension est donc volontairement exclue pour maintenir la roue sous la barre des 15kg et préserver sa compacité.",
+      "Ta priorité absolue est de combiner la roue avec d'autres moyens de transport (métro, bus, train, coffre de voiture) ou de monter des escaliers/escalators. La suspension est donc volontairement exclue pour préserver sa compacité et maintenir la roue sous la barre des 15kg.",
     wheels: ['Kingsong KS-14D', 'Inmotion V8S', 'Begode Mten4 / Mten5'],
   },
   multimodal_long: {
     title: '🚇 Le Multimodal Grande Distance',
-    subtitle: 'Le bon compromis autonomie / portage (Max 25 kg)',
+    subtitle: 'Le bon compromis compacité / autonomie (Max 25 kg)',
     description:
       "Tu dois régulièrement soulever ta roue mais tu parcoures parfois de plus longues distances. Tu acceptes un poids allant jusqu'à 25 kg en échange d'un meilleur confort ou d'une autonomie accrue. La suspension reste légère et optionnelle.",
     wheels: [
@@ -35,10 +35,10 @@ const PROFILES = {
     ],
   },
   occasionnel_court: {
-    title: '🚶 Le Trajet Occasionnel ou Court',
+    title: '🚶 Le Trajet Occasionnel et/ou Court',
     subtitle: "Fiabilité éprouvée et simplicité d'utilisation",
     description:
-      "Tu cherches une roue pour des petits déplacements quotidiens ou des balades dominicales sans chichi. Pas besoin d'un monstre de puissance ou de technologie, tu privilégies des modèles sûrs, faciles à prendre en main et très stables.",
+      "Tu cherches une roue pour des petits déplacements quotidiens ou de mini balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles simples, sûrs, faciles à prendre en main.",
     wheels: [
       'Inmotion V10F',
       'Kingsong KS-16S',
@@ -100,11 +100,11 @@ const QUESTIONS = [
     options: [
       {
         text: 'Grand débutant (je cherche à apprendre et faire mes premiers pas)',
-        profile: 'debutant_occasion',
+        profile: 'Q1_debutant_occasion',
       },
       {
         text: "Déjà initié ou pratiquant régulier (je veux évoluer ou m'équiper à long terme)",
-        profile: 'continuer',
+        profile: 'Q1_pratiquant',
       },
     ],
   },
@@ -114,11 +114,11 @@ const QUESTIONS = [
     options: [
       {
         text: 'Mes trajets obligatoires quotidiens (travail, obligations)',
-        profile: 'utilitaire',
+        profile: 'Q2_utilitaire',
       },
       {
         text: 'Mes loisirs, mes sorties du week-end et le plaisir de glisse',
-        profile: 'loisir',
+        profile: 'Q2_loisir',
       },
     ],
   },
@@ -128,15 +128,15 @@ const QUESTIONS = [
     options: [
       {
         text: 'Occasionnellement ou pour de courtes distances (< 10 km AR)',
-        profile: 'court',
+        profile: 'Q3_distance_court',
       },
       {
         text: 'Régulièrement sur des distances moyennes (10 à 30 km AR)',
-        profile: 'moyen',
+        profile: 'Q3_distance_moyen',
       },
       {
         text: 'Quotidiennement sur de longues distances (> 30 km AR)',
-        profile: 'long',
+        profile: 'Q3_distance_long',
       },
     ],
   },
@@ -146,15 +146,15 @@ const QUESTIONS = [
     options: [
       {
         text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids plume exigé < 15 kg)",
-        profile: 'multimodal_court',
+        profile: 'Q4_léger',
       },
       {
         text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
-        profile: 'multimodal_long',
+        profile: 'Q4_moyen',
       },
       {
         text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant)",
-        profile: 'lourd',
+        profile: 'Q4_lourd',
       },
     ],
   },
@@ -163,16 +163,16 @@ const QUESTIONS = [
     text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Pistes cyclables lisses et petites rues de centre-ville',
-        profile: 'lisse',
+        text: 'Pistes cyclables lisses et petites rues appaisées de centre-ville',
+        profile: 'Q5_lisse',
       },
       {
         text: "Chaussée partagée, routes d'agglomération",
-        profile: 'mixte',
+        profile: 'Q5_chaussée',
       },
       {
         text: 'Chemins de terre, forêts, sentiers accidentés',
-        profile: 'offroad',
+        profile: 'Q5_offroad',
       },
     ],
   },
@@ -182,15 +182,15 @@ const QUESTIONS = [
     options: [
       {
         text: 'Le franchissement, les sauts, jouer avec le relief et les bosses',
-        profile: 'loisir_suspendu',
+        profile: 'Q6_loisir_suspendu',
       },
       {
         text: "La vitesse, l'accélération franche et la précision de trajectoire sur route",
-        profile: 'loisir_vitesse',
+        profile: 'Q6_loisir_vitesse',
       },
       {
-        text: 'Enchaîner les kilomètres et voyager sans me soucier de la batterie',
-        profile: 'loisir_endurance',
+        text: 'Enchaîner les kilomètres autant la batterie le permettra',
+        profile: 'Q6_loisir_endurance',
       },
     ],
   },
@@ -200,11 +200,11 @@ const QUESTIONS = [
     options: [
       {
         text: 'Peu importante : je privilégie la simplicité mécanique, la compacité et le coût réduit',
-        profile: 'sans_suspension',
+        profile: 'Q7_sans_suspension',
       },
       {
         text: 'Très importante : pour préserver mes articulations, mon confort et ma sécurité',
-        profile: 'avec_suspension',
+        profile: 'Q7_avec_suspension',
       },
     ],
   },
@@ -214,11 +214,11 @@ const QUESTIONS = [
     options: [
       {
         text: 'Zéro prise de tête : je veux un engin simple qui demande le moins de maintenance possible',
-        profile: 'simple',
+        profile: 'Q8_entretien_simple',
       },
       {
         text: "Pas de problème : je peux gérer la pression d'un amortisseur ou les vérifications de base",
-        profile: 'bricoleur',
+        profile: 'Q8_entretien_bricoleur',
       },
     ],
   },
@@ -228,15 +228,15 @@ const QUESTIONS = [
     options: [
       {
         text: "Budget serré (moins de 1500 € ou marché de l'occasion)",
-        profile: 'budget_serré',
+        profile: 'Q9_budget_serré',
       },
       {
         text: 'Budget intermédiaire (1500 € à 2500 €)',
-        profile: 'budget_moyen',
+        profile: 'Q9_budget_moyen',
       },
       {
         text: 'Budget premium (plus de 2500 € pour le meilleur matériel)',
-        profile: 'budget_premium',
+        profile: 'Q9_budget_premium',
       },
     ],
   },
@@ -256,7 +256,7 @@ export const QuizBesoins = () => {
     setCurrentStep(1)
   }
 
-  // Algorithme d'aiguillage précis basé sur vos 9 conclusions d'experts
+  // Algorithme d'aiguillage d'experts exploitant l'ensemble des 9 variables
   const calculateResult = (): {
     key: keyof typeof PROFILES
     showWarning: boolean
@@ -266,38 +266,45 @@ export const QuizBesoins = () => {
     const q3 = answers[3] // Distance/Fréquence
     const q4 = answers[4] // Portage (Multimodal)
     const q5 = answers[5] // Terrain
-    const q6 = answers[6] // Sensations loisir (Question A)
-    const q7 = answers[7] // Suspension
-    const q8 = answers[8] // Entretien
+    const q6 = answers[6] // Sensations loisir
+    const q7 = answers[7] // Suspension (Impacte le confort & budget)
+    const q8 = answers[8] // Entretien (Impacte la complexité technique)
     const q9 = answers[9] // Budget
 
-    // RÈGLE SÉCURITÉ BUDGET < 1500€ : On oriente vers l'occasion ou le multimodal court
+    // RÈGLE SÉCURITÉ BUDGET SERRÉ < 1500€
     if (q9 === 'budget_serré') {
       if (q4 === 'multimodal_court')
         return { key: 'multimodal_court', showWarning: false }
-      if (q3 === 'court')
+      if (q3 === 'distance_court')
         return { key: 'occasionnel_court', showWarning: false }
       return { key: 'debutant_occasion', showWarning: false }
     }
 
-    // RÈGLE 1 : Le Débutant Malin (qui souhaite débuter prudemment avec un budget non-illimité)
-    if (q1 === 'debutant_occasion' && q9 !== 'budget_premium') {
+    // RÈGLE 1 : Le Débutant Malin
+    if (q1 === 'Q1_debutant_occasion' && q9 !== 'budget_premium') {
       return { key: 'debutant_occasion', showWarning: false }
     }
 
-    // Garder en mémoire s'il s'agit d'un débutant ambitieux (Gros budget mais première roue)
+    // Garder en mémoire s'il s'agit d'un débutant ambitieux
     const isAmbitiousBeginner =
-      q1 === 'debutant_occasion' && q9 === 'budget_premium'
+      q1 === 'Q1_debutant_occasion' && q9 === 'budget_premium'
 
-    // RÈGLE 2 : Multimodal Court (Légèreté absolue < 18kg)
+    // RÈGLE 2 : Multimodal Court (Légèreté absolue, pas de suspension par défaut)
     if (q4 === 'multimodal_court') {
       return { key: 'multimodal_court', showWarning: isAmbitiousBeginner }
     }
 
-    // RÈGLE 3 : Multimodal Long (Poids max 25kg / Diamètre confortable)
+    // RÈGLE 3 : Multimodal Long (Poids max 25kg)
     if (q4 === 'multimodal_long' && (q3 === 'moyen' || q3 === 'long')) {
       return { key: 'multimodal_long', showWarning: isAmbitiousBeginner }
     }
+
+    // RÈGLE D'EXCEPTION SANS SUSPENSION (Q7) :
+    // Si l'utilisateur veut du régulier ou long trajet urbain, mais refuse absolument la suspension (q7)
+    // ou refuse l'entretien d'une suspension (q8 === 'simple' sur un budget non premium) :
+    // On l'oriente vers le Multimodal Long (caractérisé par d'excellentes roues non-suspendues comme la KS-18XL ou V10F)
+    const refuseSuspension =
+      q7 === 'sans_suspension' || (q8 === 'simple' && q9 !== 'budget_premium')
 
     // RÈGLE 4 : Trajet occasionnel ou court
     if (q2 === 'utilitaire' && q3 === 'court') {
@@ -306,17 +313,28 @@ export const QuizBesoins = () => {
 
     // RÈGLE 5 : Trajet régulier (Vélotaf moyen)
     if (q2 === 'utilitaire' && q3 === 'moyen') {
+      if (refuseSuspension) {
+        return { key: 'multimodal_long', showWarning: isAmbitiousBeginner } // Rapatriement sur une grande non-suspendue confortable
+      }
       return { key: 'commuter_regulier', showWarning: isAmbitiousBeginner }
     }
 
     // RÈGLE 6 : Trajet long quotidien (Super-Commuter)
     if (q2 === 'utilitaire' && q3 === 'long') {
+      if (refuseSuspension) {
+        return { key: 'multimodal_long', showWarning: isAmbitiousBeginner }
+      }
       return { key: 'super_commuter', showWarning: isAmbitiousBeginner }
     }
 
     // LOGIQUE LOISIR (Profils 7, 8, 9)
     if (q2 === 'loisir') {
+      // Pour le tout-terrain (Loisir Suspendu), si l'utilisateur refuse absolument l'entretien d'une suspension (q8)
+      // mais veut rouler offroad, on le redirige vers le Routard Sportif ou Voyageur s'ils sont moins exigeants en entretien d'amortisseurs pneumatiques complexes
       if (q6 === 'loisir_suspendu' || q5 === 'offroad') {
+        if (q7 === 'sans_suspension') {
+          return { key: 'multimodal_long', showWarning: isAmbitiousBeginner } // Une roue passe-partout sans amortisseur
+        }
         return { key: 'loisir_suspendu', showWarning: isAmbitiousBeginner }
       }
       if (q6 === 'loisir_vitesse') {
