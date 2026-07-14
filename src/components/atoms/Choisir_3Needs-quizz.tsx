@@ -8,7 +8,7 @@ const PROFILES = {
     title: '🎓 Le Débutant Malin',
     subtitle: "Roue d'apprentissage solide & opportunités d'occasion",
     description:
-      "Pour commencer sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela vous évitera le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
+      "Pour commencer sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela évitera le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
     wheels: [
       'Inmotion V8F / V8S / V10F (occasion)',
       'Kingsong KS-16S / 16X (occasion)',
@@ -26,19 +26,19 @@ const PROFILES = {
     title: '🚇 Le Multimodal Grande Distance',
     subtitle: 'Le bon compromis autonomie / portage (Max 25 kg)',
     description:
-      "Vous devez régulièrement soulever votre roue mais vous parcourez de plus longues distances. Vous acceptez un poids allant jusqu'à 25 kg en échange d'un meilleure confort ou d'une autonomie accrue. La suspension reste légère et optionnelle.",
+      "Tu dois régulièrement soulever ta roue mais tu parcoures parfois de plus longues distances. Tu acceptes un poids allant jusqu'à 25 kg en échange d'un meilleur confort ou d'une autonomie accrue. La suspension reste légère et optionnelle.",
     wheels: [
       'Inmotion V10F',
       'Kingsong KS-18XL',
       'Kingsong S18 (suspendue légère)',
-      'Nosfet Aero (suspendue légère)',
+      'Nosfe Aero (suspendue légère)',
     ],
   },
   occasionnel_court: {
     title: '🚶 Le Trajet Occasionnel ou Court',
     subtitle: "Fiabilité éprouvée et simplicité d'utilisation",
     description:
-      "Vous cherchez une roue pour des petits déplacements quotidiens ou des balades dominicales sans chichi. Pas besoin d'un monstre de puissance ou de technologie, vous privilégiez des modèles sûrs, faciles à prendre en main et très stables.",
+      "Tu cherches une roue pour des petits déplacements quotidiens ou des balades dominicales sans chichi. Pas besoin d'un monstre de puissance ou de technologie, tu privilégies des modèles sûrs, faciles à prendre en main et très stables.",
     wheels: [
       'Inmotion V10F',
       'Kingsong KS-16S',
@@ -46,17 +46,17 @@ const PROFILES = {
     ],
   },
   commuter_regulier: {
-    title: '🚴 Le Trajet Régulier (Vélotaf quotidien)',
+    title: '🚴 Le Trajet Régulier (quotidien)',
     subtitle: 'Confort, sécurité et réactivité pour la ville',
     description:
-      'Vous utilisez votre gyroroue très régulièrement pour aller travailler ou vous déplacer sur moyenne distance. Une suspension moderne de taille moyenne est ici un excellent atout pour gommer les pavés, réduire la fatigue articulaire et rouler sereinement aux côtés des voitures.',
+      'Tu utilises ta gyroroue très régulièrement pour aller travailler ou te déplacer sur de moyennes distances. Une suspension moderne de taille moyenne est ici un excellent atout pour gommer les pavés, réduire la fatigue articulaire et rouler sereinement aux côtés des voitures.',
     wheels: ['Kingsong KS-S16 Pro', 'Begode Aeon', 'Begode Aero'],
   },
   super_commuter: {
     title: '⚡ Le Trajet Long Quotidien',
     subtitle: "Le 'Super-Commuter' taillé pour affronter la route",
     description:
-      "Vous parcourez de grandes distances chaque jour (parfois plus de 30 ou 40 km) sur des axes rapides ou dégradés. Il vous faut une machine extrêmement fiable, dotée d'une gestion thermique irréprochable, d'une excellente suspension et d'un couple moteur rassurant pour vous insérer partout.",
+      "Tu parcoures de grandes distances chaque jour (parfois plus de 30 ou 40 km) sur des axes rapides ou dégradés. Il te faut une machine extrêmement fiable, dotée d'une gestion thermique irréprochable, d'une excellente suspension et d'un couple moteur rassurant pour t'insérer partout.",
     wheels: [
       'Leaperkim Patton-S',
       'Begode Xeno',
@@ -68,7 +68,7 @@ const PROFILES = {
     title: '🌲 Le Baroudeur Tout-Terrain',
     subtitle: 'Franchissement, amorti et sorties en forêt (Offroad)',
     description:
-      "Pour vous, la gyroroue est synonyme d'aventure sauvage, de sentiers de terre et de sauts de racines. Une suspension de premier ordre à grand débattement est indispensable pour garantir un contrôle optimal dans le relief et survoler les obstacles.",
+      "Pour toi, la gyroroue est synonyme d'aventure sauvage, de sentiers de terre et de sauts de racines. Une suspension de premier ordre à grand débattement est indispensable pour garantir un contrôle optimal dans le relief et survoler les obstacles.",
     wheels: [
       'Begode Extreme',
       'Kingsong S22 Pro',
@@ -80,14 +80,14 @@ const PROFILES = {
     title: '🏎️ Le Routard Sportif',
     subtitle: 'Stabilité à haute vitesse, rigidité et accélérations',
     description:
-      "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il vous faut une tension élevée (High Voltage), des pads ergonomiques parfaitement ajustés et un châssis ultra-rigide.",
+      "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une tension élevée (High Voltage), des pads ergonomiques parfaitement ajustés et un châssis ultra-rigide.",
     wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Begode Apex'],
   },
   loisir_endurance: {
     title: '🗺️ Le Voyageur au Long Cours',
     subtitle: 'Autonomie démesurée pour de longues heures de roadtrip',
     description:
-      'Votre plaisir ultime est de partir rouler toute la journée sans jamais surveiller votre jauge de batterie. Vous privilégiez une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
+      'Ton plaisir ultime est de partir rouler toute la journée sans jamais surveiller ta jauge de batterie. Tu privilégies une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
     wheels: ['Leaperkim Sherman-L', 'Leaperkim Sherman S'],
   },
 }
@@ -96,7 +96,7 @@ const PROFILES = {
 const QUESTIONS = [
   {
     id: 1,
-    text: 'Quel est votre niveau actuel en gyroroue ?',
+    text: 'Quel est ton niveau actuel en gyroroue ?',
     options: [
       {
         text: 'Grand débutant (je cherche à apprendre et faire mes premiers pas)',
@@ -110,7 +110,7 @@ const QUESTIONS = [
   },
   {
     id: 2,
-    text: 'Je recherche une roue principalement pour :',
+    text: 'Tu recherches une roue principalement pour :',
     options: [
       {
         text: 'Mes trajets obligatoires quotidiens (travail, obligations)',
@@ -124,64 +124,64 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    text: 'À quelle fréquence et sur quelle distance allez-vous rouler ?',
+    text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
     options: [
       {
-        text: 'Occasionnellement ou pour de courtes distances (< 15 km)',
+        text: 'Occasionnellement ou pour de courtes distances (< 10 km AR)',
         profile: 'court',
       },
       {
-        text: 'Régulièrement sur des distances moyennes (15 à 30 km)',
+        text: 'Régulièrement sur des distances moyennes (10 à 30 km AR)',
         profile: 'moyen',
       },
       {
-        text: 'Quotidiennement sur de très longues distances (> 30 km)',
+        text: 'Quotidiennement sur de longues distances (> 30 km AR)',
         profile: 'long',
       },
     ],
   },
   {
     id: 4,
-    text: 'Quel est votre rapport aux escaliers et aux transports (manipulation à la main) ?',
+    text: 'Quel est ton rapport aux escaliers et aux transports (manipulation à la main) ?',
     options: [
       {
-        text: "Intensif : je prends souvent le train/métro, j'ai des escaliers obligatoires (poids plume exigé < 18 kg)",
+        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids plume exigé < 15 kg)",
         profile: 'multimodal_court',
       },
       {
-        text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25 kg)",
+        text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
         profile: 'multimodal_long',
       },
       {
-        text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant > 30 kg)",
+        text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant)",
         profile: 'lourd',
       },
     ],
   },
   {
     id: 5,
-    text: 'Sur quel type de terrain allez-vous majoritairement évoluer ?',
+    text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Pistes cyclables lisses et trottoirs de centre-ville',
+        text: 'Pistes cyclables lisses et petites rues de centre-ville',
         profile: 'lisse',
       },
       {
-        text: "Chaussée partagée, routes d'agglomération et pavés",
+        text: "Chaussée partagée, routes d'agglomération",
         profile: 'mixte',
       },
       {
-        text: 'Chemins de terre, forêts, sentiers accidentés ou de montagne',
+        text: 'Chemins de terre, forêts, sentiers accidentés',
         profile: 'offroad',
       },
     ],
   },
   {
     id: 6,
-    text: "Quand vous pensez à vos sorties loisir / plaisir, qu'est-ce qui vous fait vibrer ? (Question A)",
+    text: "Quand tu penses à tes sorties loisir, qu'est-ce qui te fait vibrer ?",
     options: [
       {
-        text: 'Le franchissement, le confort absolu, jouer avec le relief et les bosses',
+        text: 'Le franchissement, les sauts, jouer avec le relief et les bosses',
         profile: 'loisir_suspendu',
       },
       {
@@ -196,7 +196,7 @@ const QUESTIONS = [
   },
   {
     id: 7,
-    text: 'Quelle importance accordez-vous à la suspension ?',
+    text: 'Quelle importance accordes-tu à la suspension ?',
     options: [
       {
         text: 'Peu importante : je privilégie la simplicité mécanique, la compacité et le coût réduit',
@@ -224,7 +224,7 @@ const QUESTIONS = [
   },
   {
     id: 9,
-    text: 'Quel est votre budget maximal ?',
+    text: 'Quel est ton budget maximal ?',
     options: [
       {
         text: "Budget serré (moins de 1500 € ou marché de l'occasion)",
@@ -343,7 +343,7 @@ export const QuizBesoins = () => {
             <span className="text-4xl">🎯</span> Découvre ton profil&nbsp;!
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-4 max-w-md mx-auto">
-            Répond aux questions pour analyser tes contraintes, identifier tes
+            Réponds aux questions pour analyser tes contraintes, identifier tes
             besoins, cibler ton usage et découvrir les gyroroues les plus
             recommandées.
           </p>
@@ -407,12 +407,12 @@ export const QuizBesoins = () => {
           {/* Encart Débutant Ambitieux : Conseil de sécurité bienveillant */}
           {result?.showWarning && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-              💡 <strong>Le conseil du pro :</strong> Même si ton objectif à
-              long terme nécessitent une roue performante et que tu disposes du
-              budget, je recommande vivement de faire tes premières armes
-              (quelques semaines d&apos;apprentissage) sur une roue
-              d&apos;occasion moins chère pour assimiler la technique sans
-              craindre les chutes inévitables du début !
+              💡 <strong>Le conseil du pro :</strong> Même si ton usage à moyen
+              terme nécessite une roue performante et que tu disposes du budget,
+              je recommande vivement de faire tes premières armes (quelques
+              semaines d&apos;apprentissage) sur une roue d&apos;occasion moins
+              chère pour assimiler la technique sans craindre les chutes
+              inévitables du début&nbsp;!
             </div>
           )}
 
@@ -422,7 +422,7 @@ export const QuizBesoins = () => {
 
           <div className="mb-2">
             <h4 className="text-sm font-bold tracking-wide uppercase text-gray-500 dark:text-gray-400 text-center mb-3">
-              🛞 Exemples de modèles adaptés :
+              🎯 Exemples de modèles adaptés :
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {resultData.wheels.map((wheel, index) => (
@@ -436,7 +436,13 @@ export const QuizBesoins = () => {
             </div>
           </div>
 
-          <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-2">
+          {/* Mention de mise à jour de la sélection */}
+          <p className="text-center text-[10px] text-gray-400 dark:text-gray-500 mt-4 italic">
+            Sélection mise à jour en juillet 2026 selon l&apos;état actuel du
+            marché.
+          </p>
+
+          <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-2 mt-2">
             <button
               onClick={resetQuiz}
               className="text-xs text-gray-500 dark:text-gray-400 underline hover:text-emerald-600 transition-colors"
