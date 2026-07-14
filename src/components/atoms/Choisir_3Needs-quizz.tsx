@@ -20,46 +20,42 @@ const PROFILES = {
     subtitle: 'Légèreté et compacité non négociables (poids plume)',
     description:
       "Ta priorité absolue est de combiner la roue avec d'autres moyens de transport (métro, bus, train, coffre de voiture) ou de monter des escaliers/escalators. La suspension est donc volontairement exclue pour préserver sa compacité et maintenir la roue sous la barre des 15kg.",
-    wheels: ['Kingsong KS-14D', 'Inmotion V8S', 'Begode Mten4 / Mten5'],
+    wheels: ['Begode Mten4', 'Kingsong 14D', 'Inmotion V8S', 'Kingsong 16S'],
   },
   P3_multimodal_long: {
-    title: '🚇 Le Multimodal Grande Distance',
-    subtitle: 'Le bon compromis compacité / autonomie (Max 25 kg)',
+    title: '🚇 Le Multimodal Confort',
+    subtitle: 'Compromis compacité / confort / autonomie (max 25 kg)',
     description:
       "Tu dois régulièrement soulever ta roue mais tu parcoures parfois de plus longues distances. Tu acceptes un poids allant jusqu'à 25 kg en échange d'un meilleur confort ou d'une autonomie accrue. La suspension reste légère et optionnelle.",
     wheels: [
       'Inmotion V10F',
-      'Kingsong KS-18XL',
+      'Kingsong 18XL',
       'Kingsong S18 (suspendue légère)',
-      'Nosfe Aero (suspendue légère)',
+      'Nosfet Aero (suspendue légère)',
     ],
   },
   P4_occasionnel_court: {
     title: '🚶 Le Trajet Occasionnel et/ou Court',
     subtitle: "Fiabilité éprouvée et simplicité d'utilisation",
     description:
-      "Tu cherches une roue pour des petits déplacements quotidiens ou de mini balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles simples, sûrs, faciles à prendre en main.",
-    wheels: [
-      'Inmotion V10F',
-      'Kingsong KS-16S',
-      'Kingsong S18 (Pour le confort)',
-    ],
+      "Tu cherches une roue pour des petits déplacements occasionnels ou de mini balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles simples, sûrs, faciles à prendre en main.",
+    wheels: ['Inmotion V10F', 'Kingsong 16S', 'Kingsong S18 (Pour le confort)'],
   },
   P5_commuter_regulier: {
     title: '🚴 Le Trajet Régulier (quotidien)',
-    subtitle: 'Confort, sécurité et réactivité pour la ville',
+    subtitle: 'Confort et réactivité pour la ville',
     description:
       'Tu utilises ta gyroroue très régulièrement pour aller travailler ou te déplacer sur de moyennes distances. Une suspension moderne de taille moyenne est ici un excellent atout pour gommer les pavés, réduire la fatigue articulaire et rouler sereinement aux côtés des voitures.',
-    wheels: ['Kingsong KS-S16 Pro', 'Begode Aeon', 'Begode Aero'],
+    wheels: ['Nosfet Aero', 'Nosfet Aeon', 'Kingsong S16 Pro'],
   },
   P6_super_commuter: {
     title: '⚡ Le Trajet Long Quotidien',
-    subtitle: "Le 'Super-Commuter' taillé pour affronter la route",
+    subtitle: 'Taillé pour affronter la route',
     description:
       "Tu parcoures de grandes distances chaque jour (parfois plus de 30 ou 40 km) sur des axes rapides ou dégradés. Il te faut une machine extrêmement fiable, dotée d'une gestion thermique irréprochable, d'une excellente suspension et d'un couple moteur rassurant pour t'insérer partout.",
     wheels: [
       'Leaperkim Patton-S',
-      'Begode Xeno',
+      'Nosfet Xeno',
       'Leaperkim Lynx-S',
       'Kingsong S19',
     ],
@@ -73,7 +69,7 @@ const PROFILES = {
       'Begode Extreme',
       'Kingsong S22 Pro',
       'Leaperkim Lynx-S',
-      'Begode Apex',
+      'Nosfet Apex',
     ],
   },
   P8_loisir_vitesse: {
@@ -81,14 +77,14 @@ const PROFILES = {
     subtitle: 'Stabilité à haute vitesse, rigidité et accélérations',
     description:
       "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une tension élevée (High Voltage), des pads ergonomiques parfaitement ajustés et un châssis ultra-rigide.",
-    wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Begode Apex'],
+    wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Nosfet Apex'],
   },
   P9_loisir_endurance: {
     title: '🗺️ Le Voyageur au Long Cours',
     subtitle: 'Autonomie démesurée pour de longues heures de roadtrip',
     description:
       'Ton plaisir ultime est de partir rouler toute la journée sans jamais surveiller ta jauge de batterie. Tu privilégies une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
-    wheels: ['Leaperkim Sherman-L', 'Leaperkim Sherman S'],
+    wheels: ['Leaperkim Sherman-L', 'Leaperkim Sherman-S'],
   },
 }
 
@@ -103,7 +99,7 @@ const QUESTIONS = [
         profile: 'Q1_debutant_occasion',
       },
       {
-        text: "Déjà initié ou pratiquant regulier (je veux évoluer ou m'équiper à long terme)",
+        text: "Déjà initié ou pratiquant régulier (je veux évoluer ou m'équiper à long terme)",
         profile: 'Q1_pratiquant',
       },
     ],
@@ -251,13 +247,19 @@ export const QuizBesoins = () => {
     setCurrentStep((prev) => prev + 1)
   }
   const handleBack = () => {
-    if (currentStep > 0) {
+    if (currentStep > 1) {
+      // Retour classique à la question précédente
       setCurrentStep((prev) => prev - 1)
+    } else if (currentStep === 1) {
+      // Retour à l'accueil (étape 0) -> on nettoie impérativement les réponses
+      setAnswers({})
+      setCurrentStep(0)
     }
   }
+
   const resetQuiz = () => {
     setAnswers({})
-    setCurrentStep(1)
+    setCurrentStep(1) // Relance directement à la question 1
   }
 
   // Algorithme d'aiguillage d'experts exploitant l'ensemble des 9 variables
@@ -307,9 +309,6 @@ export const QuizBesoins = () => {
     }
 
     // RÈGLE D'EXCEPTION SANS SUSPENSION (Q7) :
-    // Si l'utilisateur veut du régulier ou long trajet urbain, mais refuse absolument la suspension (q7)
-    // ou refuse l'entretien d'une suspension (q8 === 'simple' sur un budget non premium) :
-    // On l'oriente vers le Multimodal Long (caractérisé par d'excellentes roues non-suspendues comme la KS-18XL ou V10F)
     const refuseSuspension =
       q7 === 'Q7_sans_suspension' ||
       (q8 === 'Q8_entretien_simple' && q9 !== 'Q9_budget_premium')
@@ -322,7 +321,7 @@ export const QuizBesoins = () => {
     // RÈGLE 5 : Trajet régulier (Vélotaf moyen)
     if (q2 === 'Q2_utilitaire' && q3 === 'Q3_distance_moyen') {
       if (refuseSuspension) {
-        return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner } // Rapatriement sur une grande non-suspendue confortable
+        return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner }
       }
       return { key: 'P5_commuter_regulier', showWarning: isAmbitiousBeginner }
     }
@@ -337,11 +336,9 @@ export const QuizBesoins = () => {
 
     // LOGIQUE LOISIR (Profils 7, 8, 9)
     if (q2 === 'Q2_loisir') {
-      // Pour le tout-terrain (Loisir Suspendu), si l'utilisateur refuse absolument l'entretien d'une suspension (q8)
-      // mais veut rouler offroad, on le redirige vers le Routard Sportif ou Voyageur s'ils sont moins exigeants en entretien d'amortisseurs pneumatiques complexes
       if (q6 === 'Q6_loisir_suspendu' || q5 === 'Q5_offroad') {
         if (q7 === 'Q7_sans_suspension') {
-          return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner } // Une roue passe-partout sans amortisseur
+          return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner }
         }
         return { key: 'P7_loisir_suspendu', showWarning: isAmbitiousBeginner }
       }
@@ -411,15 +408,32 @@ export const QuizBesoins = () => {
             {QUESTIONS[currentStep - 1].text}
           </h4>
           <div className="space-y-2">
-            {QUESTIONS[currentStep - 1].options.map((option, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleAnswer(option.profile)}
-                className="w-full text-left p-3.5 rounded-lg border border-gray-200 dark:border-gray-600 hover:border-emerald-500 dark:hover:border-emerald-500 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20 transition-all duration-150 text-sm md:text-base font-medium"
-              >
-                {option.text}
-              </button>
-            ))}
+            {QUESTIONS[currentStep - 1].options.map((option, idx) => {
+              // 1. On vérifie si cette option est celle actuellement stockée pour cette question
+              const isSelected = answers[currentStep] === option.profile
+
+              return (
+                <button
+                  key={idx}
+                  onClick={() => handleAnswer(option.profile)}
+                  // 2. On applique les classes CSS dynamiquement selon l'état de sélection
+                  className={`w-full text-left p-3 rounded-lg border transition-all duration-150 text-sm md:text-base font-medium ${
+                    isSelected
+                      ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
+                      : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
+                  }`}
+                >
+                  <div className="flex justify-between items-center">
+                    <span>{option.text}</span>
+                    {isSelected && (
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
+                        ✓
+                      </span>
+                    )}
+                  </div>
+                </button>
+              )
+            })}
           </div>
         </div>
       )}
