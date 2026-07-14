@@ -276,8 +276,8 @@ export const QuizBesoins = () => {
     const q9 = answers[9] // Budget (serré-moyen-premium)
 
     // RÈGLE SÉCURITÉ BUDGET SERRÉ < 1500€
-    if (q9 === 'Q9_budget_serré') {
-      if (q4 === 'Q4_léger')
+    if (q9 === 'Q9_budget_serre') {
+      if (q4 === 'Q4_leger')
         return { key: 'P2_multimodal_court', showWarning: false }
       if (q3 === 'Q3_distance_court')
         return { key: 'P4_occasionnel_court', showWarning: false }
@@ -294,7 +294,7 @@ export const QuizBesoins = () => {
       q1 === 'Q1_debutant_occasion' && q9 === 'Q9_budget_premium'
 
     // RÈGLE 2 : Multimodal Court (Légèreté absolue, pas de suspension par défaut)
-    if (q4 === 'Q4_léger') {
+    if (q4 === 'Q4_leger') {
       return { key: 'P2_multimodal_court', showWarning: isAmbitiousBeginner }
     }
 
@@ -315,7 +315,7 @@ export const QuizBesoins = () => {
       (q8 === 'Q8_entretien_simple' && q9 !== 'Q9_budget_premium')
 
     // RÈGLE 4 : Trajet occasionnel ou court
-    if (q2 === 'utilitaire' && q3 === 'court') {
+    if (q2 === 'Q2_utilitaire' && q3 === 'Q3_distance_court') {
       return { key: 'P4_occasionnel_court', showWarning: isAmbitiousBeginner }
     }
 
