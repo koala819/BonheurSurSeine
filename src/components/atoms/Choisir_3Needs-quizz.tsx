@@ -46,14 +46,14 @@ const PROFILES = {
     title: '🚴 Trajet Quotidien',
     subtitle: 'Confort et réactivité pour la ville',
     description:
-      'Tu utilises ta gyroroue très régulièrement pour aller travailler ou te déplacer sur de moyennes distances. Une suspension moderne de taille moyenne est ici un excellent atout pour gommer les pavés, réduire la fatigue articulaire et rouler sereinement aux côtés des voitures.',
+      'Tu utilises ta roue régulièrement pour aller travailler ou te déplacer sur de moyennes distances. La suspension est ici un atout pour gommer les pavés, réduire la fatigue et rouler sereinement aux côtés des autres usagers.',
     wheels: ['Nosfet Aero', 'Nosfet Aeon', 'Kingsong S16 Pro'],
   },
   P6_super_commuter: {
     title: '⚡ Trajet Intensif',
     subtitle: 'Taillé pour affronter la route',
     description:
-      "Tu parcoures de grandes distances chaque jour (parfois plus de 30 ou 40 km) sur des axes rapides ou dégradés. Il te faut une machine extrêmement fiable, dotée d'une gestion thermique irréprochable, d'une excellente suspension et d'un couple moteur rassurant pour t'insérer partout.",
+      "Tu parcoures chaque jour de grandes distances (parfois plus de 30 ou 40 km) là où il y a peu de pistes cyclables, ou parfois des axes dégradés. Il te faut une machine fiable, endurante, et  dotée d'une suspension rassurante pour t'insérer partout.",
     wheels: [
       'Leaperkim Patton-S',
       'Nosfet Xeno',
@@ -65,7 +65,7 @@ const PROFILES = {
     title: '🌲 Le Baroudeur',
     subtitle: 'Franchissement, amorti et sorties en forêt (Offroad)',
     description:
-      "Pour toi, la gyroroue est synonyme d'aventure sauvage, de sentiers de terre et de sauts de racines. Une suspension de premier ordre à grand débattement est indispensable pour garantir un contrôle optimal dans le relief et survoler les obstacles.",
+      "Pour toi, la gyroroue est synonyme d'accrobatie, de terre et de sauts. Une bonne suspension à grand débattement est indispensable te permettre d'évoluer sur ce relief et survoler les obstacles.",
     wheels: [
       'Begode Extreme',
       'Kingsong S22 Pro',
@@ -107,133 +107,147 @@ const QUESTIONS = [
   },
   {
     id: 2,
-    text: 'Tu recherches une roue principalement pour :',
+    text: 'Quel est ton gabarit approximatif (tout équipé) ?',
     options: [
       {
-        text: 'Des trajets occasionnels ou quotidiens (travail, obligations)',
-        profile: 'Q2_utilitaire',
+        text: 'Moins de 90 kg',
+        profile: 'Q2_gabarit_standard',
       },
       {
-        text: 'Mes loisirs, mes sorties du week-end et le plaisir de glisse',
-        profile: 'Q2_loisir',
+        text: '90 kg ou plus',
+        profile: 'Q2_gabarit_lourd',
       },
     ],
   },
   {
     id: 3,
-    text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
+    text: 'Tu recherches une roue principalement pour :',
     options: [
       {
-        text: 'Occasionnellement ou pour de courtes distances (<10km AR)',
-        profile: 'Q3_distance_court',
+        text: 'Des trajets occasionnels ou quotidiens (travail, obligations)',
+        profile: 'Q3_utilitaire',
       },
       {
-        text: 'Régulièrement sur des distances moyennes (10-30km AR)',
-        profile: 'Q3_distance_moyen',
-      },
-      {
-        text: 'Quotidiennement sur de longues distances (>30km AR)',
-        profile: 'Q3_distance_long',
+        text: 'Mes loisirs, mes sorties du week-end et le plaisir de glisse',
+        profile: 'Q3_loisir',
       },
     ],
   },
   {
     id: 4,
-    text: 'Quel est ton rapport aux escaliers et aux transports (manipulation à la main) ?',
+    text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
     options: [
       {
-        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids jusqu'à 15kg)",
-        profile: 'Q4_leger',
+        text: 'Occasionnellement ou pour de courtes distances (<10km AR)',
+        profile: 'Q4_distance_court',
       },
       {
-        text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
-        profile: 'Q4_moyen',
+        text: 'Régulièrement sur des distances moyennes (10-30km AR)',
+        profile: 'Q4_distance_moyen',
       },
       {
-        text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant)",
-        profile: 'Q4_lourd',
+        text: 'Quotidiennement sur de longues distances (>30km AR)',
+        profile: 'Q4_distance_long',
       },
     ],
   },
   {
     id: 5,
-    text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
+    text: 'Quel est ton rapport aux escaliers et aux transports (manipulation à la main) ?',
     options: [
       {
-        text: 'Pistes cyclables lisses et petites rues apaisées de centre-ville',
-        profile: 'Q5_lisse',
+        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids jusqu'à 15kg)",
+        profile: 'Q5_leger',
       },
       {
-        text: "Chaussée partagée, routes d'agglomération",
-        profile: 'Q5_chaussee',
+        text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
+        profile: 'Q5_moyen',
       },
       {
-        text: 'Chemins de terre, forêts, sentiers accidentés',
-        profile: 'Q5_offroad',
+        text: "Quasiment jamais : je roule de mon point de départ à mon point d'arrivée (poids non limitant)",
+        profile: 'Q5_lourd',
       },
     ],
   },
   {
     id: 6,
-    text: "Quand tu penses à tes sorties loisir, qu'est-ce qui te fait vibrer ?",
+    text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Le franchissement, les sauts, jouer avec le relief et les bosses',
-        profile: 'Q6_loisir_suspendu',
+        text: 'Pistes cyclables lisses et petites rues apaisées de centre-ville',
+        profile: 'Q6_lisse',
       },
       {
-        text: "La vitesse, l'accélération franche et la précision de trajectoire sur route",
-        profile: 'Q6_loisir_vitesse',
+        text: "Chaussée partagée, routes d'agglomération",
+        profile: 'Q6_chaussee',
       },
       {
-        text: 'Enchaîner les kilomètres autant que la batterie le permettra',
-        profile: 'Q6_loisir_endurance',
+        text: 'Chemins de terre, forêts, sentiers accidentés',
+        profile: 'Q6_offroad',
       },
     ],
   },
   {
     id: 7,
-    text: 'Quelle importance accordes-tu à la suspension ?',
+    text: "Quand tu penses à tes sorties loisir, qu'est-ce qui te fait vibrer ?",
     options: [
       {
-        text: 'Peu importante : je privilégie la simplicité mécanique, la compacité et le coût réduit',
-        profile: 'Q7_sans_suspension',
+        text: 'Le franchissement, les sauts, jouer avec le relief et les bosses',
+        profile: 'Q7_loisir_suspendu',
       },
       {
-        text: 'Très importante : pour préserver mes articulations, mon confort et ma sécurité',
-        profile: 'Q7_avec_suspension',
+        text: "La vitesse, l'accélération franche et la précision de trajectoire sur route",
+        profile: 'Q7_loisir_vitesse',
+      },
+      {
+        text: 'Enchaîner les kilomètres autant que la batterie le permettra',
+        profile: 'Q7_loisir_endurance',
       },
     ],
   },
   {
     id: 8,
-    text: 'Côté entretien et réglages :',
+    text: 'Quelle importance accordes-tu à la suspension ?',
     options: [
       {
-        text: 'Zéro prise de tête : je veux un engin simple avec le moins de maintenance possible',
-        profile: 'Q8_entretien_simple',
+        text: 'Peu importante : je privilégie la simplicité mécanique, la compacité et le coût réduit',
+        profile: 'Q8_sans_suspension',
       },
       {
-        text: 'Pas de problème : je peux gérer les réglages ou des réparations réguliers',
-        profile: 'Q8_entretien_bricoleur',
+        text: 'Très importante : pour préserver mes articulations, mon confort et ma sécurité',
+        profile: 'Q8_avec_suspension',
       },
     ],
   },
   {
     id: 9,
+    text: 'Côté entretien et réglages :',
+    options: [
+      {
+        text: 'Zéro prise de tête : je veux un engin simple avec le moins de maintenance possible',
+        profile: 'Q9_entretien_simple',
+      },
+      {
+        text: 'Pas de problème : je peux gérer les réglages ou des réparations réguliers',
+        profile: 'Q9_entretien_bricoleur',
+      },
+    ],
+  },
+  {
+    id: 10,
     text: 'Quel est ton budget maximal ?',
     options: [
       {
         text: 'Budget serré (moins de 1 500€)',
-        profile: 'Q9_budget_serre',
+        profile: 'Q10_budget_serre',
       },
       {
         text: 'Budget intermédiaire (1 500€ à 2 500€)',
-        profile: 'Q9_budget_moyen',
+        profile: 'Q10_budget_moyen',
       },
       {
         text: 'Budget premium (2 500€ et plus)',
-        profile: 'Q9_budget_premium',
+        profile: 'Q10_budget_premium',
       },
     ],
   },
@@ -269,113 +283,219 @@ export const QuizBesoins = () => {
     showWarning: boolean
   } => {
     const q1 = answers[1] // Niveau (débutant-pratiquant)
-    const q2 = answers[2] // Objectif (utilitaire-loisir)
-    const q3 = answers[3] // Distance (court-moyen-long)
-    const q4 = answers[4] // Contrainte Poids (leger-moyen-lourd)
-    const q5 = answers[5] // Chaussée (lisse-route-offroad)
-    const q6 = answers[6] // Loisir (saut-vitesse-endurance)
-    const q7 = answers[7] // Suspension (oui-non)
-    const q8 = answers[8] // Entretien (simple-bricoleur)
-    const q9 = answers[9] // Budget (serré-moyen-premium)
+    const q2 = answers[2] // Gabarit (standart-lourd)
+    const q3 = answers[3] // Objectif (utilitaire-loisir)
+    const q4 = answers[4] // Distance (court-moyen-long)
+    const q5 = answers[5] // Contrainte Poids (leger-moyen-lourd)
+    const q6 = answers[6] // Terrain (lisse-route-offroad)
+    const q7 = answers[7] // Loisir (saut-vitesse-endurance)
+    const q8 = answers[8] // Suspension (oui-non)
+    const q9 = answers[9] // Entretien (simple-bricoleur)
+    const q10 = answers[10] // Budget (serré-moyen-premium)
 
-    const showWarning =
-      q1 === 'Q1_debutant_occasion' && q9 === 'Q9_budget_premium'
+    const isBeginner = q1 === 'Q1_debutant_occasion'
+    const heavyRider = q2 === 'Q2_gabarit_lourd'
+    const refusesMaintenance = q9 === 'Q9_entretien_simple'
+    const showWarning = isBeginner && q10 === 'Q10_budget_premium'
 
-    /*======================================================
-     1) PROFILS LOISIR
-     ======================================================*/
-    if (q2 === 'Q2_loisir') {
-      if (q5 === 'Q5_offroad' || q6 === 'Q6_loisir_suspendu') {
-        if (q7 === 'Q7_sans_suspension') {
+    // Un wheeler lourd nécessite davantage de stabilité, de couple et de confort.
+    const adjustProfileForBody = (
+      profile: keyof typeof PROFILES,
+    ): keyof typeof PROFILES => {
+      if (heavyRider) {
+        if (profile === 'P2_multimodal_court') {
+          return 'P3_multimodal_long'
+        }
+        if (profile === 'P4_occasionnel_court') {
+          return 'P5_commuter_regulier'
+        }
+      }
+      return profile
+    }
+
+    /*
+   ======================================================
+   1) CAS PARTICULIER : PREMIÈRE ROUE
+   ======================================================
+   Le profil P1 correspond au choix rationnel :
+   apprendre sans peur d'abîmer une roue neuve.
+   */
+    if (
+      isBeginner &&
+      q4 === 'Q4_distance_court' &&
+      q10 !== 'Q10_budget_premium'
+    ) {
+      return {
+        key: 'P1_debutant_occasion',
+        showWarning: false,
+      }
+    }
+
+    /*
+   ======================================================
+   2) USAGE LOISIR
+   ======================================================
+   */
+    if (q3 === 'Q3_loisir') {
+      /*
+     Offroad / franchissement
+     */
+      if (q6 === 'Q6_offroad' || q7 === 'Q7_loisir_suspendu') {
+        /*
+       Si l'utilisateur refuse la suspension,
+       on conserve l'idée d'usage mais on évite
+       de recommander une machine extrême.
+       */
+        if (q8 === 'Q8_sans_suspension') {
           return {
-            key: 'P8_loisir_vitesse',
+            key: 'P4_occasionnel_court',
+            showWarning,
+          }
+        }
+        if (refusesMaintenance) {
+          return {
+            key: adjustProfileForBody('P5_commuter_regulier'),
             showWarning,
           }
         }
         return {
-          key: 'P7_loisir_suspendu',
+          key: adjustProfileForBody('P7_loisir_suspendu'),
           showWarning,
         }
       }
-      if (q6 === 'Q6_loisir_vitesse') {
-        if (q8 === 'Q8_entretien_simple') {
-          return {
-            key: 'P5_commuter_regulier',
-            showWarning,
-          }
-        }
+
+      /*
+     Recherche vitesse
+     */
+      if (q7 === 'Q7_loisir_vitesse') {
         return {
           key: 'P8_loisir_vitesse',
           showWarning,
         }
       }
-      if (q6 === 'Q6_loisir_endurance') {
+
+      /*
+     Endurance / voyage
+     */
+      if (q7 === 'Q7_loisir_endurance') {
         return {
           key: 'P9_loisir_endurance',
           showWarning,
         }
       }
+
       return {
         key: 'P8_loisir_vitesse',
         showWarning,
       }
     }
-    /*======================================================
-     2) PROFILS UTILITAIRES
-     ======================================================*/
-    if (q2 === 'Q2_utilitaire') {
-      if (q3 === 'Q3_distance_court') {
-        if (q4 === 'Q4_leger') {
+
+    /*
+   ======================================================
+   3) USAGE UTILITAIRE
+   ======================================================
+   */
+
+    if (q3 === 'Q3_utilitaire') {
+      /*
+     --------------------------------------------------
+     COURT
+     --------------------------------------------------
+     */
+
+      if (q4 === 'Q4_distance_court') {
+        if (q5 === 'Q5_leger') {
           return {
-            key: 'P2_multimodal_court',
+            key: adjustProfileForBody('P2_multimodal_court'),
             showWarning,
           }
         }
+
         return {
           key: 'P4_occasionnel_court',
           showWarning,
         }
       }
-      if (q3 === 'Q3_distance_moyen') {
-        if (q4 === 'Q4_moyen') {
+
+      /*
+     --------------------------------------------------
+     MOYEN
+     --------------------------------------------------
+     */
+
+      if (q4 === 'Q4_distance_moyen') {
+        /*
+       Portage régulier :
+       train, métro, escaliers, déplacements fréquents
+       */
+        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
           return {
             key: 'P3_multimodal_long',
             showWarning,
           }
         }
-        if (q7 === 'Q7_avec_suspension') {
-          return {
-            key: 'P5_commuter_regulier',
-            showWarning,
-          }
-        }
+
+        /*
+       Pas de contrainte physique :
+       commuter moderne
+       */
         return {
-          key: 'P4_occasionnel_court',
+          key: 'P5_commuter_regulier',
           showWarning,
         }
       }
-      if (q3 === 'Q3_distance_long') {
-        if (q4 === 'Q4_leger') {
+
+      /*
+     --------------------------------------------------
+     LONG
+     --------------------------------------------------
+     */
+
+      if (q4 === 'Q4_distance_long') {
+        /*
+       Même longue distance mais nécessité
+       de transporter la roue
+       */
+        if (q5 === 'Q5_leger' || q5 === 'Q4_moyen') {
           return {
             key: 'P3_multimodal_long',
             showWarning,
           }
         }
-        if (q7 === 'Q7_avec_suspension') {
+
+        /*
+       Grande distance + confort indispensable
+       */
+        if (q8 === 'Q8_avec_suspension') {
+          if (refusesMaintenance) {
+            return {
+              key: adjustProfileForBody('P5_commuter_regulier'),
+              showWarning,
+            }
+          }
           return {
-            key: 'P6_super_commuter',
+            key: adjustProfileForBody('P6_super_commuter'),
             showWarning,
           }
         }
+
+        /*
+       Long trajet sans suspension :
+       possible mais moins cohérent.
+       */
         return {
-          key: 'P3_multimodal_long',
+          key: 'P5_commuter_regulier',
           showWarning,
         }
       }
     }
-    /*======================================================
-     3) CAS DE SECOURS
-     ======================================================*/
+
+    /*
+   ======================================================
+   4) FALLBACK
+   ======================================================
+   */
+
     return {
       key: 'P5_commuter_regulier',
       showWarning,
