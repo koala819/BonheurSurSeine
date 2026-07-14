@@ -127,15 +127,15 @@ const QUESTIONS = [
     text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
     options: [
       {
-        text: 'Occasionnellement ou pour de courtes distances (< 10 km AR)',
+        text: 'Occasionnellement ou pour de courtes distances (<10km AR)',
         profile: 'Q3_distance_court',
       },
       {
-        text: 'Régulièrement sur des distances moyennes (10 à 30 km AR)',
+        text: 'Régulièrement sur des distances moyennes (10-30km AR)',
         profile: 'Q3_distance_moyen',
       },
       {
-        text: 'Quotidiennement sur de longues distances (> 30 km AR)',
+        text: 'Quotidiennement sur de longues distances (>30km AR)',
         profile: 'Q3_distance_long',
       },
     ],
@@ -145,7 +145,7 @@ const QUESTIONS = [
     text: 'Quel est ton rapport aux escaliers et aux transports (manipulation à la main) ?',
     options: [
       {
-        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids plume exigé < 15 kg)",
+        text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids jusqu'à 15kg)",
         profile: 'Q4_leger',
       },
       {
@@ -210,14 +210,14 @@ const QUESTIONS = [
   },
   {
     id: 8,
-    text: 'Côté entretien et réglages mécaniques :',
+    text: 'Côté entretien et réglages :',
     options: [
       {
-        text: 'Zéro prise de tête : je veux un engin simple qui demande le moins de maintenance possible',
+        text: 'Zéro prise de tête : je veux un engin simple avec le moins de maintenance possible',
         profile: 'Q8_entretien_simple',
       },
       {
-        text: "Pas de problème : je peux gérer la pression d'un amortisseur ou les vérifications de base",
+        text: 'Pas de problème : je peux gérer les réglages ou des réparations réguliers',
         profile: 'Q8_entretien_bricoleur',
       },
     ],
@@ -227,15 +227,15 @@ const QUESTIONS = [
     text: 'Quel est ton budget maximal ?',
     options: [
       {
-        text: "Budget serré (moins de 1500 € ou marché de l'occasion)",
+        text: 'Budget serré (moins de 1 500€)',
         profile: 'Q9_budget_serre',
       },
       {
-        text: 'Budget intermédiaire (1500 € à 2500 €)',
+        text: 'Budget intermédiaire (1 500€ à 2 500€)',
         profile: 'Q9_budget_moyen',
       },
       {
-        text: 'Budget premium (plus de 2500 € pour le meilleur matériel)',
+        text: 'Budget premium (2 500€ et plus)',
         profile: 'Q9_budget_premium',
       },
     ],
@@ -250,7 +250,11 @@ export const QuizBesoins = () => {
     setAnswers((prev) => ({ ...prev, [currentStep]: optionProfile }))
     setCurrentStep((prev) => prev + 1)
   }
-
+  const handleBack = () => {
+    if (currentStep > 0) {
+      setCurrentStep((prev) => prev - 1)
+    }
+  }
   const resetQuiz = () => {
     setAnswers({})
     setCurrentStep(1)
@@ -382,21 +386,30 @@ export const QuizBesoins = () => {
       {currentStep >= 1 && currentStep <= QUESTIONS.length && (
         <div>
           <div className="flex justify-between items-center mb-4">
-            <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">
-              Question {currentStep} sur {QUESTIONS.length}
-            </span>
-            <div className="w-1/2 bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+            <div className="flex items-center gap-2">
+              {currentStep > 0 && (
+                <button
+                  onClick={handleBack}
+                  className="p-1 px-2.5 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded shadow-sm hover:shadow active:scale-95 transition-all"
+                  aria-label="Retour à la question précédente"
+                >
+                  ← Retour
+                </button>
+              )}
+              <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">
+                Question {currentStep} sur {QUESTIONS.length}
+              </span>
+            </div>
+            <div className="flex-1 max-w-[150px] bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
               <div
                 className="bg-emerald-500 h-full transition-all duration-300"
                 style={{ width: `${(currentStep / QUESTIONS.length) * 100}%` }}
               />
             </div>
           </div>
-
           <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-100 mb-4">
             {QUESTIONS[currentStep - 1].text}
           </h4>
-
           <div className="space-y-2">
             {QUESTIONS[currentStep - 1].options.map((option, idx) => (
               <button
@@ -413,7 +426,8 @@ export const QuizBesoins = () => {
 
       {/* Écran des Résultats */}
       {currentStep > QUESTIONS.length && resultData && (
-        <div className="py-2 animate-fade-in">
+        <div className="py-1 animate-fade-in">
+          {/* Profil */}
           <div className="text-center mb-1">
             <span className="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold px-3 py-1 rounded-full">
               Ton Profil
@@ -421,11 +435,10 @@ export const QuizBesoins = () => {
             <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mt-2">
               {resultData.title}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium italic mt-0.5">
+            <p className="text-sm text-gray-600 dark:text-gray-400 font-medium italic mt-0.5">
               {resultData.subtitle}
             </p>
           </div>
-
           {/* Encart Débutant Ambitieux */}
           {result?.showWarning && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
@@ -437,37 +450,37 @@ export const QuizBesoins = () => {
               inévitables du début&nbsp;!
             </div>
           )}
-
-          <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700/60 p-4 rounded-lg border border-gray-100 dark:border-gray-800 text-justify shadow-sm mb-6 leading-relaxed">
+          {/* description */}
+          <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-700 p-3 rounded-lg border border-gray-100 dark:border-gray-800 text-justify shadow-sm mb-4 leading-relaxed">
             {resultData.description}
           </p>
-
+          {/* Modèles */}
           <div className="mb-2">
-            <h4 className="text-sm font-bold tracking-wide uppercase text-gray-500 dark:text-gray-400 text-center mb-3">
+            <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mb-3">
               🎯 Exemples de modèles adaptés :
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {resultData.wheels.map((wheel, index) => (
                 <div
                   key={index}
-                  className="p-3 bg-emerald-600 text-white text-center font-bold rounded-lg shadow-sm hover:scale-[1.02] transition-transform text-sm md:text-base"
+                  className="p-3 bg-emerald-100 dark:bg-emerald-800 dark:text-white text-center font-semibold rounded-lg shadow-sm hover:scale-[1.02] transition-transform text-sm md:text-base"
                 >
                   {wheel}
                 </div>
               ))}
             </div>
           </div>
-
           {/* Mention de mise à jour de la sélection */}
-          <p className="text-center text-[10px] text-gray-400 dark:text-gray-500 mt-4 italic">
+          <p className="text-center text-xs text-gray-600 dark:text-gray-300 my-1">
             Sélection mise à jour en juillet 2026 selon l&apos;état actuel du
             marché.
           </p>
-
-          <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-2 mt-2">
+          {/* Refaire le test */}
+          <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-2 mt-0">
             <button
               onClick={resetQuiz}
-              className="text-xs text-gray-500 dark:text-gray-400 underline hover:text-emerald-600 transition-colors"
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg
+              text-sm font-medium shadow-md transition-all active:scale-95"
             >
               Refaire le test 🔄
             </button>
