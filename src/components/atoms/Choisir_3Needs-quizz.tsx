@@ -8,7 +8,7 @@ const PROFILES = {
     title: '🎓 Le Débutant Malin',
     subtitle: "Roue d'apprentissage & d'occasion",
     description:
-      "Pour débuter sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela éviter le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
+      "Pour débuter sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela évite le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres très faciles à revendre une fois que tu auras progressé.",
     wheels: [
       'Inmotion V8F / V8S / V10F (occasion)',
       'Kingsong KS-16S / 16X (occasion)',
@@ -99,11 +99,11 @@ const QUESTIONS = [
     text: 'Quel est ton niveau actuel en gyroroue ?',
     options: [
       {
-        text: 'Grand débutant (je cherche à apprendre et faire mes premiers pas)',
+        text: 'Débutant (je cherche à apprendre et faire mes premiers pas)',
         profile: 'Q1_debutant_occasion',
       },
       {
-        text: "Déjà initié ou pratiquant régulier (je veux évoluer ou m'équiper à long terme)",
+        text: "Déjà initié ou pratiquant regulier (je veux évoluer ou m'équiper à long terme)",
         profile: 'Q1_pratiquant',
       },
     ],
@@ -146,7 +146,7 @@ const QUESTIONS = [
     options: [
       {
         text: "Intensif : je prends souvent le train/métro/bus, j'ai des escaliers obligatoires (poids plume exigé < 15 kg)",
-        profile: 'Q4_léger',
+        profile: 'Q4_leger',
       },
       {
         text: "Modéré : quelques marches de temps en temps ou un coffre de voiture (poids toléré jusqu'à 25kg)",
@@ -163,12 +163,12 @@ const QUESTIONS = [
     text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Pistes cyclables lisses et petites rues appaisées de centre-ville',
+        text: 'Pistes cyclables lisses et petites rues apaisées de centre-ville',
         profile: 'Q5_lisse',
       },
       {
         text: "Chaussée partagée, routes d'agglomération",
-        profile: 'Q5_chaussée',
+        profile: 'Q5_chaussee',
       },
       {
         text: 'Chemins de terre, forêts, sentiers accidentés',
@@ -189,7 +189,7 @@ const QUESTIONS = [
         profile: 'Q6_loisir_vitesse',
       },
       {
-        text: 'Enchaîner les kilomètres autant la batterie le permettra',
+        text: 'Enchaîner les kilomètres autant que la batterie le permettra',
         profile: 'Q6_loisir_endurance',
       },
     ],
@@ -228,7 +228,7 @@ const QUESTIONS = [
     options: [
       {
         text: "Budget serré (moins de 1500 € ou marché de l'occasion)",
-        profile: 'Q9_budget_serré',
+        profile: 'Q9_budget_serre',
       },
       {
         text: 'Budget intermédiaire (1500 € à 2500 €)',
@@ -261,15 +261,15 @@ export const QuizBesoins = () => {
     key: keyof typeof PROFILES
     showWarning: boolean
   } => {
-    const q1 = answers[1] // Niveau
-    const q2 = answers[2] // Objectif (Utilitaire vs Loisir)
-    const q3 = answers[3] // Distance/Fréquence
-    const q4 = answers[4] // Portage (Multimodal)
-    const q5 = answers[5] // Terrain
-    const q6 = answers[6] // Sensations loisir
-    const q7 = answers[7] // Suspension (Impacte le confort & budget)
-    const q8 = answers[8] // Entretien (Impacte la complexité technique)
-    const q9 = answers[9] // Budget
+    const q1 = answers[1] // Niveau (débutant-pratiquant)
+    const q2 = answers[2] // Objectif (utilitaire-loisir)
+    const q3 = answers[3] // Distance (court-moyen-long)
+    const q4 = answers[4] // Contrainte Poids (leger-moyen-lourd)
+    const q5 = answers[5] // Chaussée (lisse-route-offroad)
+    const q6 = answers[6] // Loisir (saut-vitesse-endurance)
+    const q7 = answers[7] // Suspension (oui-non)
+    const q8 = answers[8] // Entretien (simple-bricoleur)
+    const q9 = answers[9] // Budget (serré-moyen-premium)
 
     // RÈGLE SÉCURITÉ BUDGET SERRÉ < 1500€
     if (q9 === 'Q9_budget_serré') {
@@ -426,7 +426,7 @@ export const QuizBesoins = () => {
             </p>
           </div>
 
-          {/* Encart Débutant Ambitieux : Conseil de sécurité bienveillant */}
+          {/* Encart Débutant Ambitieux */}
           {result?.showWarning && (
             <div className="mb-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
               💡 <strong>Le conseil du pro :</strong> Même si ton usage à moyen
