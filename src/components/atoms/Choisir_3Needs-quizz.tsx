@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 // Définition des 9 profils cibles (conclusions)
 const PROFILES = {
-  debutant_occasion: {
+  P1_debutant_occasion: {
     title: '🎓 Le Débutant Malin',
     subtitle: "Roue d'apprentissage & d'occasion",
     description:
@@ -15,14 +15,14 @@ const PROFILES = {
       'Kingsong KS-18L / 18XL (occasion)',
     ],
   },
-  multimodal_court: {
+  P2_multimodal_court: {
     title: '🚆 Le Multimodal Léger',
     subtitle: 'Légèreté et compacité non négociables (poids plume)',
     description:
       "Ta priorité absolue est de combiner la roue avec d'autres moyens de transport (métro, bus, train, coffre de voiture) ou de monter des escaliers/escalators. La suspension est donc volontairement exclue pour préserver sa compacité et maintenir la roue sous la barre des 15kg.",
     wheels: ['Kingsong KS-14D', 'Inmotion V8S', 'Begode Mten4 / Mten5'],
   },
-  multimodal_long: {
+  P3_multimodal_long: {
     title: '🚇 Le Multimodal Grande Distance',
     subtitle: 'Le bon compromis compacité / autonomie (Max 25 kg)',
     description:
@@ -34,7 +34,7 @@ const PROFILES = {
       'Nosfe Aero (suspendue légère)',
     ],
   },
-  occasionnel_court: {
+  P4_occasionnel_court: {
     title: '🚶 Le Trajet Occasionnel et/ou Court',
     subtitle: "Fiabilité éprouvée et simplicité d'utilisation",
     description:
@@ -45,14 +45,14 @@ const PROFILES = {
       'Kingsong S18 (Pour le confort)',
     ],
   },
-  commuter_regulier: {
+  P5_commuter_regulier: {
     title: '🚴 Le Trajet Régulier (quotidien)',
     subtitle: 'Confort, sécurité et réactivité pour la ville',
     description:
       'Tu utilises ta gyroroue très régulièrement pour aller travailler ou te déplacer sur de moyennes distances. Une suspension moderne de taille moyenne est ici un excellent atout pour gommer les pavés, réduire la fatigue articulaire et rouler sereinement aux côtés des voitures.',
     wheels: ['Kingsong KS-S16 Pro', 'Begode Aeon', 'Begode Aero'],
   },
-  super_commuter: {
+  P6_super_commuter: {
     title: '⚡ Le Trajet Long Quotidien',
     subtitle: "Le 'Super-Commuter' taillé pour affronter la route",
     description:
@@ -64,7 +64,7 @@ const PROFILES = {
       'Kingsong S19',
     ],
   },
-  loisir_suspendu: {
+  P7_loisir_suspendu: {
     title: '🌲 Le Baroudeur Tout-Terrain',
     subtitle: 'Franchissement, amorti et sorties en forêt (Offroad)',
     description:
@@ -76,14 +76,14 @@ const PROFILES = {
       'Begode Apex',
     ],
   },
-  loisir_vitesse: {
+  P8_loisir_vitesse: {
     title: '🏎️ Le Routard Sportif',
     subtitle: 'Stabilité à haute vitesse, rigidité et accélérations',
     description:
       "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une tension élevée (High Voltage), des pads ergonomiques parfaitement ajustés et un châssis ultra-rigide.",
     wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Begode Apex'],
   },
-  loisir_endurance: {
+  P9_loisir_endurance: {
     title: '🗺️ Le Voyageur au Long Cours',
     subtitle: 'Autonomie démesurée pour de longues heures de roadtrip',
     description:
@@ -272,31 +272,34 @@ export const QuizBesoins = () => {
     const q9 = answers[9] // Budget
 
     // RÈGLE SÉCURITÉ BUDGET SERRÉ < 1500€
-    if (q9 === 'budget_serré') {
-      if (q4 === 'multimodal_court')
-        return { key: 'multimodal_court', showWarning: false }
-      if (q3 === 'distance_court')
-        return { key: 'occasionnel_court', showWarning: false }
-      return { key: 'debutant_occasion', showWarning: false }
+    if (q9 === 'Q9_budget_serré') {
+      if (q4 === 'Q4_léger')
+        return { key: 'P2_multimodal_court', showWarning: false }
+      if (q3 === 'Q3_distance_court')
+        return { key: 'P4_occasionnel_court', showWarning: false }
+      return { key: 'P1_debutant_occasion', showWarning: false }
     }
 
     // RÈGLE 1 : Le Débutant Malin
-    if (q1 === 'Q1_debutant_occasion' && q9 !== 'budget_premium') {
-      return { key: 'debutant_occasion', showWarning: false }
+    if (q1 === 'Q1_debutant_occasion' && q9 !== 'Q9_budget_premium') {
+      return { key: 'P1_debutant_occasion', showWarning: false }
     }
 
     // Garder en mémoire s'il s'agit d'un débutant ambitieux
     const isAmbitiousBeginner =
-      q1 === 'Q1_debutant_occasion' && q9 === 'budget_premium'
+      q1 === 'Q1_debutant_occasion' && q9 === 'Q9_budget_premium'
 
     // RÈGLE 2 : Multimodal Court (Légèreté absolue, pas de suspension par défaut)
-    if (q4 === 'multimodal_court') {
-      return { key: 'multimodal_court', showWarning: isAmbitiousBeginner }
+    if (q4 === 'Q4_léger') {
+      return { key: 'P2_multimodal_court', showWarning: isAmbitiousBeginner }
     }
 
     // RÈGLE 3 : Multimodal Long (Poids max 25kg)
-    if (q4 === 'multimodal_long' && (q3 === 'moyen' || q3 === 'long')) {
-      return { key: 'multimodal_long', showWarning: isAmbitiousBeginner }
+    if (
+      q4 === 'Q4_lourd' &&
+      (q3 === 'Q3_distance_moyen' || q3 === 'Q3_distance_long')
+    ) {
+      return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner }
     }
 
     // RÈGLE D'EXCEPTION SANS SUSPENSION (Q7) :
@@ -304,49 +307,50 @@ export const QuizBesoins = () => {
     // ou refuse l'entretien d'une suspension (q8 === 'simple' sur un budget non premium) :
     // On l'oriente vers le Multimodal Long (caractérisé par d'excellentes roues non-suspendues comme la KS-18XL ou V10F)
     const refuseSuspension =
-      q7 === 'sans_suspension' || (q8 === 'simple' && q9 !== 'budget_premium')
+      q7 === 'Q7_sans_suspension' ||
+      (q8 === 'Q8_entretien_simple' && q9 !== 'Q9_budget_premium')
 
     // RÈGLE 4 : Trajet occasionnel ou court
     if (q2 === 'utilitaire' && q3 === 'court') {
-      return { key: 'occasionnel_court', showWarning: isAmbitiousBeginner }
+      return { key: 'P4_occasionnel_court', showWarning: isAmbitiousBeginner }
     }
 
     // RÈGLE 5 : Trajet régulier (Vélotaf moyen)
-    if (q2 === 'utilitaire' && q3 === 'moyen') {
+    if (q2 === 'Q2_utilitaire' && q3 === 'Q3_distance_moyen') {
       if (refuseSuspension) {
-        return { key: 'multimodal_long', showWarning: isAmbitiousBeginner } // Rapatriement sur une grande non-suspendue confortable
+        return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner } // Rapatriement sur une grande non-suspendue confortable
       }
-      return { key: 'commuter_regulier', showWarning: isAmbitiousBeginner }
+      return { key: 'P5_commuter_regulier', showWarning: isAmbitiousBeginner }
     }
 
     // RÈGLE 6 : Trajet long quotidien (Super-Commuter)
-    if (q2 === 'utilitaire' && q3 === 'long') {
+    if (q2 === 'Q2_utilitaire' && q3 === 'Q3_distance_long') {
       if (refuseSuspension) {
-        return { key: 'multimodal_long', showWarning: isAmbitiousBeginner }
+        return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner }
       }
-      return { key: 'super_commuter', showWarning: isAmbitiousBeginner }
+      return { key: 'P6_super_commuter', showWarning: isAmbitiousBeginner }
     }
 
     // LOGIQUE LOISIR (Profils 7, 8, 9)
-    if (q2 === 'loisir') {
+    if (q2 === 'Q2_loisir') {
       // Pour le tout-terrain (Loisir Suspendu), si l'utilisateur refuse absolument l'entretien d'une suspension (q8)
       // mais veut rouler offroad, on le redirige vers le Routard Sportif ou Voyageur s'ils sont moins exigeants en entretien d'amortisseurs pneumatiques complexes
-      if (q6 === 'loisir_suspendu' || q5 === 'offroad') {
-        if (q7 === 'sans_suspension') {
-          return { key: 'multimodal_long', showWarning: isAmbitiousBeginner } // Une roue passe-partout sans amortisseur
+      if (q6 === 'Q6_loisir_suspendu' || q5 === 'Q5_offroad') {
+        if (q7 === 'Q7_sans_suspension') {
+          return { key: 'P3_multimodal_long', showWarning: isAmbitiousBeginner } // Une roue passe-partout sans amortisseur
         }
-        return { key: 'loisir_suspendu', showWarning: isAmbitiousBeginner }
+        return { key: 'P7_loisir_suspendu', showWarning: isAmbitiousBeginner }
       }
-      if (q6 === 'loisir_vitesse') {
-        return { key: 'loisir_vitesse', showWarning: isAmbitiousBeginner }
+      if (q6 === 'Q6_loisir_vitesse') {
+        return { key: 'P8_loisir_vitesse', showWarning: isAmbitiousBeginner }
       }
-      if (q6 === 'loisir_endurance') {
-        return { key: 'loisir_endurance', showWarning: isAmbitiousBeginner }
+      if (q6 === 'Q6_loisir_endurance') {
+        return { key: 'P9_loisir_endurance', showWarning: isAmbitiousBeginner }
       }
     }
 
     // Chute par défaut (si aucune règle stricte n'est validée)
-    return { key: 'commuter_regulier', showWarning: isAmbitiousBeginner }
+    return { key: 'P5_commuter_regulier', showWarning: isAmbitiousBeginner }
   }
 
   const result = currentStep > QUESTIONS.length ? calculateResult() : null
