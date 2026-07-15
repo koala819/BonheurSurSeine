@@ -6,7 +6,7 @@ import {
   ModalBody,
   ModalContent,
   ModalFooter,
-  ModalHeader,
+  /*ModalHeader,*/
 } from '@heroui/react'
 import { useState } from 'react'
 
@@ -97,18 +97,18 @@ const PROFILES = {
   },
 }
 
-// Les 9 questions croisant usages, contraintes physiques et budget
+// Les questions croisant usages, contraintes physiques et budget
 const QUESTIONS = [
   {
     id: 1,
-    text: 'Quel est ton niveau actuel en gyroroue ?',
+    text: 'Quel est ton niveau actuel ?',
     options: [
       {
         text: 'Débutant (je cherche à apprendre et faire mes premiers pas)',
         profile: 'Q1_debutant_occasion',
       },
       {
-        text: 'Déjà wheeler régulier ou occasionnel',
+        text: 'Déjà wheeler, régulier ou occasionnel',
         profile: 'Q1_pratiquant',
       },
     ],
@@ -165,15 +165,15 @@ const QUESTIONS = [
     options: [
       {
         text: 'Intensif : très souvent le train/métro/bus ou des escaliers (poids max 15kg)',
-        profile: 'Q5_leger',
+        profile: 'Q5_max15kg',
       },
       {
         text: 'Modéré : quelques marches de temps en temps  (poids max 25kg)',
-        profile: 'Q5_moyen',
+        profile: 'Q5_max25kg',
       },
       {
         text: 'Quasiment jamais (poids non limitant)',
-        profile: 'Q5_lourd',
+        profile: 'Q5_poidsnolimit',
       },
     ],
   },
@@ -300,78 +300,149 @@ export const QuizBesoins = () => {
     key: keyof typeof PROFILES
     showWarning_debutant: boolean
     showWarning_entretien: boolean
+    showWarning_suspension: boolean
   } => {
     const q1 = answers[1] // Niveau (débutant-pratiquant)
-    const q2 = answers[2] // Gabarit (standart-lourd)
+    const q2 = answers[2] // Gabarit (standard-lourd)
     const q3 = answers[3] // Objectif (utilitaire-loisir)
     const q4 = answers[4] // Distance (court-moyen-long)
-    const q5 = answers[5] // Contrainte Poids (leger-moyen-lourd)
+    const q5 = answers[5] // Contrainte poids (15kg-25kg-sans limite)
     const q6 = answers[6] // Terrain (lisse-route-offroad)
     const q7 = answers[7] // Loisir (saut-vitesse-endurance)
     const q8 = answers[8] // Suspension (oui-non)
     const q9 = answers[9] // Entretien (simple-bricoleur)
     const q10 = answers[10] // Budget (serré-moyen-premium)
 
-    const heavyRider = q2 === 'Q2_gabarit_lourd'
-    const showWarning_entretien = q9 === 'Q9_entretien_simple'
-    const showWarning_debutant =
-      q1 === 'Q1_debutant_occasion' &&
-      (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
-
-    const adjustProfileForBody = (
-      profile: keyof typeof PROFILES,
-    ): keyof typeof PROFILES => {
-      if (heavyRider) {
-        if (profile === 'P2_multimodal_court') return 'P3_multimodal_long'
-        if (profile === 'P4_occasionnel_court') return 'P5_commuter_regulier'
-      }
-      return profile
-    }
-
-    // Variable stockant la clé finale avant de la retourner
     let resultKey: keyof typeof PROFILES = 'P5_commuter_regulier'
 
-    if (
-      q1 === 'Q1_debutant_occasion' &&
-      q4 === 'Q4_distance_court' &&
-      q10 !== 'Q10_budget_premium'
-    ) {
+    // ======================================
+    // 1 - DEBUTANT
+    // ======================================
+    if (q1 === 'Q1_debutant_occasion') {
       resultKey = 'P1_debutant_occasion'
-    } else if (q3 === 'Q3_loisir') {
-      if (q6 === 'Q6_offroad' || q7 === 'Q7_loisir_suspendu') {
-        resultKey = adjustProfileForBody('P7_loisir_suspendu')
-      } else if (q7 === 'Q7_loisir_vitesse') {
+    }
+
+    // ======================================
+    // 2 - LOISIR
+    // ======================================
+    else if (q3 === 'Q3_loisir') {
+      // Offroad / franchissement / saut
+      if (q7 === 'Q7_loisir_suspendu' || q6 === 'Q6_offroad') {
+        resultKey = 'P7_loisir_suspendu'
+      }
+      // Vitesse
+      else if (q7 === 'Q7_loisir_vitesse') {
         resultKey = 'P8_loisir_vitesse'
-      } else if (q7 === 'Q7_loisir_endurance') {
+      }
+      // Endurance
+      else if (q7 === 'Q7_loisir_endurance') {
         resultKey = 'P9_loisir_endurance'
       }
-    } else if (q3 === 'Q3_utilitaire') {
-      if (q4 === 'Q4_distance_court') {
-        if (q5 === 'Q5_leger')
-          resultKey = adjustProfileForBody('P2_multimodal_court')
-        else resultKey = 'P4_occasionnel_court'
-      } else if (q4 === 'Q4_distance_moyen') {
-        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen')
+    }
+
+    // ======================================
+    // 3 - UTILITAIRE
+    // ======================================
+    else if (q3 === 'Q3_utilitaire') {
+      // ==================================
+      // PORTAGE INTENSIF
+      // MAX 15 KG
+      // ==================================
+      if (q5 === 'Q5_max15kg') {
+        // Gros gabarit :
+        // une roue trop légère devient limitée
+        if (q2 === 'Q2_gabarit_lourd') {
           resultKey = 'P3_multimodal_long'
-        else resultKey = 'P5_commuter_regulier'
-      } else if (q4 === 'Q4_distance_long') {
-        if (q5 === 'Q5_leger' || q5 === 'Q5_moyen') {
-          resultKey = 'P3_multimodal_long'
-        } else if (q8 === 'Q8_avec_suspension') {
-          if (showWarning_entretien)
-            resultKey = adjustProfileForBody('P5_commuter_regulier')
-          else resultKey = adjustProfileForBody('P6_super_commuter')
         } else {
-          resultKey = 'P5_commuter_regulier'
+          resultKey = 'P2_multimodal_court'
+        }
+      }
+
+      // ==================================
+      // PORTAGE OCCASIONNEL
+      // MAX 25 KG
+      // ==================================
+      else if (q5 === 'Q5_max25kg') {
+        // Courte distance + terrain facile
+        // priorité à la compacité
+        if (q4 === 'Q4_distance_court' && q6 === 'Q6_lisse') {
+          resultKey = 'P3_multimodal_long'
+        }
+        // Terrain dégradé :
+        // le confort devient prioritaire
+        else if (q6 === 'Q6_chaussee' || q6 === 'Q6_offroad') {
+          if (q8 === 'Q8_avec_suspension') {
+            resultKey = 'P5_commuter_regulier'
+          } else {
+            resultKey = 'P3_multimodal_long'
+          }
+        } else {
+          resultKey = 'P3_multimodal_long'
+        }
+      }
+
+      // ==================================
+      // PAS DE CONTRAINTE DE POIDS
+      // ==================================
+      else if (q5 === 'Q5_poidsnolimit') {
+        // ------------------------------
+        // COURTES DISTANCES
+        // ------------------------------
+        if (q4 === 'Q4_distance_court') {
+          if (q6 === 'Q6_lisse') {
+            if (q8 === 'Q8_avec_suspension') {
+              resultKey = 'P5_commuter_regulier'
+            } else {
+              resultKey = 'P4_occasionnel_court'
+            }
+          } else {
+            resultKey = 'P5_commuter_regulier'
+          }
+        }
+        // ------------------------------
+        // DISTANCES MOYENNES
+        // ------------------------------
+        else if (q4 === 'Q4_distance_moyen') {
+          if (q6 === 'Q6_lisse') {
+            resultKey = 'P5_commuter_regulier'
+          } else if (q8 === 'Q8_avec_suspension') {
+            resultKey = 'P6_super_commuter'
+          } else {
+            resultKey = 'P5_commuter_regulier'
+          }
+        }
+        // ------------------------------
+        // LONGUES DISTANCES
+        // ------------------------------
+        else if (q4 === 'Q4_distance_long') {
+          if (q8 === 'Q8_avec_suspension') {
+            resultKey = 'P6_super_commuter'
+          } else {
+            resultKey = 'P5_commuter_regulier'
+          }
         }
       }
     }
 
-    // Un seul return global pour satisfaire le typage TypeScript
+    // ======================================
+    // WARNING ENTRETIEN
+    // APRÈS DÉTERMINATION DU PROFIL
+    // ======================================
+    const showWarning_debutant =
+      q1 === 'Q1_debutant_occasion' &&
+      (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
+    const showWarning_suspension =
+      q8 === 'Q8_sans_suspension' &&
+      (resultKey === 'P6_super_commuter' || resultKey === 'P7_loisir_suspendu')
+    const showWarning_entretien =
+      q9 === 'Q9_entretien_simple' &&
+      (resultKey === 'P6_super_commuter' || resultKey === 'P7_loisir_suspendu')
+
     return {
       key: resultKey,
       showWarning_debutant,
       showWarning_entretien,
+      showWarning_suspension,
     }
   }
 
@@ -495,17 +566,28 @@ export const QuizBesoins = () => {
                 {/* Encart WARNING */}
                 {result?.showWarning_debutant && (
                   <div className="mt-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs md:text-sm">
-                    💡 <strong>Tu débutes&nbsp;? </strong>Même si ton usage
-                    nécessite une roue performante et que tu as le budget, je
-                    recommande de faire tes premières armes sur une occasion
-                    moins chère.
+                    💡 <strong>Débutant : </strong>
+                    Même si ton usage et ton budget permettent d&apos;envisager
+                    une roue performante, je recommande de faire tes premières
+                    armes sur une roue d&apos;occasion moins chère. Tu
+                    apprendras plus sereinement et tu limiteras le risque
+                    d&apos;abîmer une roue neuve.
                   </div>
                 )}
                 {result?.showWarning_entretien && (
                   <div className="mt-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs md:text-sm">
-                    💡 <strong>Entretien : </strong> Une roue nécessite un
-                    minimum d&apos;entretien, d&apos;autant plus si elle a une
-                    suspension pour faire du offroad&nbsp;!
+                    💡 <strong>Entretien : </strong>
+                    Les roues performantes demandent davantage de suivi. Une
+                    suspension ou un usage intensif impliquent un minimum de
+                    contrôles et d&apos;entretien réguliers.
+                  </div>
+                )}
+                {result?.showWarning_suspension && (
+                  <div className="mt-2 p-2 rounded-lg bg-amber-50 dark:bg-amber-950/20 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs md:text-sm">
+                    💡 <strong>Suspension : </strong>
+                    Ton usage correspond à des situations où une suspension
+                    apporte un vrai gain de confort, de contrôle et de sécurité,
+                    notamment sur longues distances ou terrains dégradés.
                   </div>
                 )}
 
