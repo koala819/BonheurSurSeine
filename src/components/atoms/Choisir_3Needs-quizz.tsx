@@ -10,11 +10,13 @@ import {
 } from '@heroui/react'
 import { useState } from 'react'
 
-// Définition des 9 profils cibles (conclusions)
+//import { FaDAndDBeyond } from 'react-icons/fa'
+
+// Définition des 13 profils cibles (conclusions)
 const PROFILES = {
   P1_debutant_occasion: {
     title: '🎓 Le Débutant Malin',
-    subtitle: "Roue d'apprentissage & d'occasion",
+    subtitle: "Roue d'apprentissage et d'occasion",
     description:
       "Pour débuter sans stress, le choix le plus pragmatique est une roue d'occasion, pas trop lourde et réputée robuste. Cela évite le déchirement d'abîmer une machine neuve lors de l'apprentissage. Privilégie des valeurs sûres faciles à revendre une fois que tu auras progressé.",
     wheels: [
@@ -23,77 +25,96 @@ const PROFILES = {
       'Kingsong KS-18L / 18XL (occasion)',
     ],
   },
-  P2_multimodal_court: {
-    title: '🚆 Le Multimodal Léger',
-    subtitle: 'Légèreté et compacité non négociables (poids plume)',
+  P2_1_multimodal_ultraleger: {
+    title: '🚆 Multimodalité Ultralégère',
+    subtitle: 'Légèreté, compacité et discrétion non négociable',
     description:
-      "Ta priorité absolue est de combiner la roue avec d'autres moyens de transport (métro, bus, train, coffre de voiture) ou de monter des escaliers/escalators. La suspension est donc volontairement exclue pour préserver sa compacité et maintenir la roue sous la barre des 15kg.",
-    wheels: ['Begode Mten4', 'Kingsong 14D', 'Inmotion V8S', 'Kingsong 16S'],
+      'Ta priorité absolue est la légèreté et la praticité afin de discrètement combiner la roue avec le métro, le bus, le train et des escaliers. La suspension est volontairement exclue afin de préserver la compacité et le poids.',
+    wheels: ['Begode Mten4', 'Kingsong 14D', 'Inmotion V8S'],
   },
-  P3_multimodal_long: {
-    title: '🚇 Le Multimodal XXL',
-    subtitle: 'Compromis compacité / confort / autonomie (max 25 kg)',
+  P2_2_multimodal_classique: {
+    title: '🚇 Multimodalité Classique',
+    subtitle: 'Compromis compacité / autonomie (max 25 kg)',
     description:
-      "Tu dois régulièrement soulever ta roue mais tu parcoures parfois de plus longues distances. Tu acceptes un poids allant jusqu'à 25 kg en échange d'un meilleur confort ou d'une autonomie accrue. La suspension reste légère et optionnelle.",
+      "Tu dois régulièrement soulever ta roue mais tu parcours parfois de plus longues distances. Tu acceptes un poids allant jusqu'à environ 25 kg en échange d'une autonomie accrue.",
+    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18XL'],
+  },
+  P2_3_multimodal_suspendue: {
+    title: '🚉 Multimodalité Suspendue',
+    subtitle: 'Compacité et confort',
+    description:
+      "Tu dois régulièrement soulever ta roue mais tu souhaites bénéficier d'un meilleur confort. La suspension reste légère et la machine conserve un gabarit raisonnable.",
+    wheels: ['Inmotion V9', 'Kingsong S18', 'Nosfet Aero'],
+  },
+  P3_occasionnel_court: {
+    title: '🚶 L’Occasionnel',
+    subtitle: 'Simplicité et fiabilité sans complication',
+    description:
+      "Tu cherches une roue simple pour des déplacements occasionnels ou de petites balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles sûrs et faciles à prendre en main.",
+    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18XL'],
+  },
+  P4_commuter_regulier: {
+    title: '🚴 Le Commuter Régulier',
+    subtitle: 'Confort et polyvalence au quotidien',
+    description:
+      'Tu utilises ta roue régulièrement pour aller travailler ou te déplacer sur de moyennes distances. La suspension devient ici un véritable atout pour amortir les chocs, réduire la fatigue et rouler sereinement aux côtés des autres usagers.',
     wheels: [
-      'Inmotion V10F',
-      'Kingsong 18XL',
-      'Inmotion V9 (suspendue légère)',
-      'Kingsong S18 (suspendue légère)',
-      'Nosfet Aero (suspendue légère)',
+      'Kingsong S16 Pro',
+      'Nosfet Aero',
+      'Nosfet Aeon',
+      'Begode Falcon Pro',
+      'Inmotion V12S',
+      'Begode F16',
     ],
   },
-  P4_occasionnel_court: {
-    title: '🚶 Trajet Occasionnel',
-    subtitle: "Fiabilité éprouvée et simplicité d'utilisation",
+  P5_super_commuter: {
+    title: '⚡ Le Super Commuter',
+    subtitle: 'Endurance et sécurité sur route',
     description:
-      "Tu cherches une roue pour des petits déplacements occasionnels ou de mini balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles simples, sûrs, faciles à prendre en main.",
-    wheels: ['Inmotion V10F', 'Kingsong 16S', 'Inmotion V9 (suspendue légère)'],
+      'Tu parcours quotidiennement de grandes distances (parfois +40 km), souvent sur des axes routiers dégradés ou là où les pistes cyclables sont inexistantes. Il te faut une machine robuste, confortable et  rassurante pour affronter la route avec confiance.',
+    wheels: ['Leaperkim Patton-S', 'Nosfet Xeno', 'Kingsong S19'],
   },
-  P5_commuter_regulier: {
-    title: '🚴 Trajet Quotidien',
-    subtitle: 'Confort et réactivité pour la ville',
+  P6_super_commuter_xxl: {
+    title: '🚀 Le Super Commuter XXL',
+    subtitle: 'Longues distances à rythme soutenu',
     description:
-      'Tu utilises ta roue régulièrement pour aller travailler ou te déplacer sur de moyennes distances. La suspension est ici un atout pour gommer les pavés, réduire la fatigue et rouler sereinement aux côtés des autres usagers.',
-    wheels: ['Nosfet Aero', 'Nosfet Aeon', 'Kingsong S16 Pro'],
+      "Tu effectues de longs trajets quotidiens à un rythme soutenu. Tu as besoin d'une machine fiable, stable, dotée d'un grand diamètre de roue, d'une excellente autonomie et capable d'affronter sereinement la route sur la durée.",
+    wheels: ['Leaperkim Lynx-S', 'Begode F18'],
   },
-  P6_super_commuter: {
-    title: '⚡ Trajet Intensif',
-    subtitle: 'Taillé pour affronter la route',
-    description:
-      "Tu parcoures chaque jour de grandes distances (parfois +40 km) là où il y a peu de pistes cyclables, ou parfois des axes dégradés. Il te faut une machine fiable, endurante, et dotée d'une suspension rassurante pour t'insérer partout.",
-    wheels: [
-      'Leaperkim Patton-S',
-      'Nosfet Xeno',
-      'Leaperkim Lynx-S',
-      'Kingsong S19',
-    ],
-  },
-  P7_loisir_suspendu: {
+  P7_voltigeur: {
     title: '🌲 Le Voltigeur',
-    subtitle: 'Franchissements, amortis et sorties en forêt (Offroad)',
+    subtitle: 'Off-road, bosses et franchissements',
     description:
-      "Pour toi, la gyroroue est synonyme d'acrobaties, de terre et de sauts. Une bonne suspension à grand débattement est indispensable pour te permettre d'évoluer sur ce relief et survoler les obstacles.",
-    wheels: [
-      'Begode Extreme',
-      'Kingsong S22 Pro',
-      'Leaperkim Lynx-S',
-      'Nosfet Apex',
-    ],
+      "Pour toi, la gyroroue est synonyme d'acrobaties, de hors-piste, de bosses et de sauts. Une excellente suspension est indispensable pour absorber les chocs et survoler les obstacle sur les terrains les plus accidentés.",
+    wheels: ['Kingsong S22', 'Nosfet Apex', 'Begode Extreme'],
   },
-  P8_loisir_vitesse: {
+  P8_pistard: {
     title: '🏎️ Le Pistard',
-    subtitle: 'Stabilité à haute vitesse et accélérations',
+    subtitle: 'Performance et précision sur asphalte',
     description:
-      "Tu recherches l'adrénaline sur l'asphalte, la réactivité des accélérations et une tenue impériale à vitesse élevée. Il te faut une roue performante et optimisée, un châssis ultra-rigide et de bons power-pads.",
-    wheels: ['Begode Blitz / Race', 'Inmotion P6', 'Nosfet Apex'],
+      "Tu recherches l'adrénaline, les accélérations franches et une tenue impériale à haute vitesse. Tu privilégies les machines les plus performantes du marché.",
+    wheels: ['Begode Blitz', 'Begode Race', 'Inmotion P6', 'Nosfet Apex'],
   },
-  P9_loisir_endurance: {
+  P9_1_voyageur: {
     title: '🗺️ Le Voyageur',
-    subtitle: 'Autonomie pour de longues heures en roadtrip',
+    subtitle: 'Longues randonnées',
     description:
-      'Ton plaisir ultime est de partir rouler toute la journée sans surveiller ta jauge de batterie. Tu privilégies une capacité en Wh gigantesque et une stabilité rassurante, quitte à accepter une roue lourde qui ne quitte presque jamais le sol.',
-    wheels: ['Leaperkim Sherman-L', 'Leaperkim Sherman-S'],
+      'Ton plaisir est de partir en randonnée en toute liberté. Tu privilégies une excellente autonomie et un confort premium pour enchaîner les kilomètres sans fatigue.',
+    wheels: ['Nosfet Xeno', 'Leaperkim Lynx-S'],
+  },
+  P9_2_grand_voyageur: {
+    title: '🌍 Le Grand Voyageur',
+    subtitle: 'Roadtrips et autonomie sans compromis',
+    description:
+      "Tu veux parcourir des distances exceptionnelles sans te soucier de la recharge. La capacité batterie et la stabilité routière passent avant toute considération de poids ou d'encombrement.",
+    wheels: ['Leaperkim Sherman-L', 'Begode F22', 'Leaperkim Oryx'],
+  },
+  P10_indecis: {
+    title: '🤔 L’Indécis',
+    subtitle: 'Mes coups de cœurs pour ne plus douter…',
+    description:
+      "Tu découvres encore la gyroroue et tu ne sais pas précisément quel sera ton usage principal. Plutôt que de choisir une machine trop spécialisée, privilégie une roue capable de t'accompagner dans tes premiers trajets, tes balades et dans la découverte du bonheur d'aller rouler.",
+    wheels: ['Kingsong 16S Pro', 'Nosfet Aero', 'Nosfet Xeno'],
   },
 }
 
@@ -101,79 +122,87 @@ const PROFILES = {
 const QUESTIONS = [
   {
     id: 1,
-    text: 'Quel est ton niveau actuel ?',
+    text: 'Quel est ton niveau actuel en gyroroue ?',
     options: [
       {
-        text: 'Débutant (je cherche à apprendre et faire mes premiers pas)',
-        profile: 'Q1_debutant_occasion',
+        text: 'Débutant : je veux apprendre et faire mes premiers pas',
+        value: 'Q1_debutant',
       },
       {
-        text: 'Déjà wheeler, régulier ou occasionnel',
-        profile: 'Q1_pratiquant',
+        text: 'Déjà wheeler : je pratique de manière régulière ou occasionnelle',
+        value: 'Q1_pratiquant',
       },
     ],
   },
   {
     id: 2,
-    text: 'Quel est ton gabarit approximatif (tout équipé) ?',
+    text: 'Quel est ton gabarit approximatif (une fois tout équipé) ?',
     options: [
       {
-        text: 'Moins de 90 kg',
-        profile: 'Q2_gabarit_standard',
+        text: 'Moins de 90 kg (gabarit standard à léger)',
+        value: 'Q2_gabarit_standard',
       },
       {
-        text: '90 kg ou plus',
-        profile: 'Q2_gabarit_lourd',
+        text: '90 kg ou plus (gabarit lourd)',
+        value: 'Q2_gabarit_lourd',
       },
     ],
   },
   {
     id: 3,
-    text: 'Tu recherches principalement une roue pour ?',
+    text: 'Tu recherches principalement une roue pour quel type d’usage ?',
     options: [
       {
-        text: 'Des trajets occasionnels ou quotidiens (travail, obligations)',
-        profile: 'Q3_utilitaire',
+        text: 'Trajets utilitaires (travail, courses, déplacements quotidiens)',
+        value: 'Q3_utilitaire',
       },
       {
-        text: 'Mes loisirs, mes sorties du week-end et le plaisir de glisse',
-        profile: 'Q3_loisir',
+        text: 'Sorties loisirs (balades du week-end, tout-terrain, sensations de glisse)',
+        value: 'Q3_loisir',
+      },
+      {
+        text: 'Un peu des deux : je cherche une roue pour tout faire',
+        value: 'Q3_polyvalent',
       },
     ],
   },
   {
     id: 4,
-    text: 'À quelle fréquence et sur quelle distance vas-tu rouler ?',
+    text: 'Quelle distance penses-tu parcourir lors de tes trajets habituels ?',
     options: [
       {
-        text: 'Occasionnellement ou pour de courtes distances (<10km)',
-        profile: 'Q4_distance_court',
+        text: 'Petits trajets ou très courtes balades (moins de 10 km)',
+        value: 'Q4_distance_courte',
       },
       {
-        text: 'Régulièrement sur des distances moyennes (10-30km)',
-        profile: 'Q4_distance_moyen',
+        text: 'Trajets réguliers de moyenne distance (10 à 30 km)',
+        value: 'Q4_distance_moyenne',
       },
       {
-        text: 'Quotidiennement sur de longues distances (>30km)',
-        profile: 'Q4_distance_long',
+        text: 'Longues distances régulières (30 à 60 km)',
+        value: 'Q4_distance_longue',
+      },
+      {
+        text: 'Très longues distances (plus de 60 km)',
+        value: 'Q4_distance_tres_longue',
       },
     ],
   },
   {
     id: 5,
-    text: 'Quel est ton rapport aux escaliers et aux transports ?',
+    text: 'Quel sera ton rapport aux escaliers et aux transports en commun ?',
     options: [
       {
-        text: 'Intensif : très souvent le train/métro/bus ou des escaliers (poids max 15kg)',
-        profile: 'Q5_max15kg',
+        text: 'Intensif : je dois porter la roue très souvent (métro, bus, escaliers). Poids max 15kg.',
+        value: 'Q5_portage_intensif',
       },
       {
-        text: 'Modéré : quelques marches de temps en temps  (poids max 25kg)',
-        profile: 'Q5_max25kg',
+        text: 'Modéré : quelques marches à l’occasion. Poids max 25kg.',
+        value: 'Q5_portage_modere',
       },
       {
-        text: 'Quasiment jamais (poids non limitant)',
-        profile: 'Q5_poidsnolimit',
+        text: 'Quasiment jamais : je roule directement de mon point A au point B. Poids non limitant.',
+        value: 'Q5_portage_rare',
       },
     ],
   },
@@ -182,34 +211,38 @@ const QUESTIONS = [
     text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Pistes cyclables et rues apaisées de centre-ville',
-        profile: 'Q6_lisse',
+        text: 'Asphalte propre : pistes cyclables, chemins lisses et rues apaisées de centre-ville',
+        value: 'Q6_terrain_lisse',
       },
       {
-        text: "Chaussée partagée, routes d'agglomération",
-        profile: 'Q6_chaussee',
+        text: 'Urbain varié : routes d’agglomération, chaussée dégradés et pavés',
+        value: 'Q6_terrain_chaussee',
       },
       {
-        text: 'Chemins de terre, forêts, sentiers accidentés',
-        profile: 'Q6_offroad',
+        text: 'Tout-terrain : forêts, sentiers et reliefs accidentés',
+        value: 'Q6_terrain_offroad',
       },
     ],
   },
   {
     id: 7,
-    text: "Quand tu penses à tes sorties loisir, qu'est-ce qui te fait vibrer ?",
+    text: 'Si tu penses à tes sorties ou à ton style de conduite idéal, qu’est-ce qui te fait vibrer ?',
     options: [
       {
-        text: 'Franchissement, sauts, jouer avec le relief et les bosses',
-        profile: 'Q7_loisir_suspendu',
+        text: 'Offroad : franchissement, hors-piste, jouer avec le relief et les bosses',
+        value: 'Q7_style_offroad',
       },
       {
-        text: 'Vitesse, accélération franche et trajectoire acérée',
-        profile: 'Q7_loisir_vitesse',
+        text: 'Vitesse : accélérations franches sur l’asphalte et trajectoire acérée',
+        value: 'Q7_style_vitesse',
       },
       {
-        text: 'Enchaîner les kilomètres autant que la batterie le permettra',
-        profile: 'Q7_loisir_endurance',
+        text: 'Endurance : enchaîner les kilomètres et rouler autant que la batterie le permettra',
+        value: 'Q7_style_endurance',
+      },
+      {
+        text: 'Découverte : je veux surtout explorer et voir ce que la gyroroue me réserve',
+        value: 'Q7_style_decouverte',
       },
     ],
   },
@@ -218,68 +251,69 @@ const QUESTIONS = [
     text: 'Quelle importance accordes-tu à la suspension ?',
     options: [
       {
-        text: 'Peu importante : je privilégie la simplicité, la compacité et le coût',
-        profile: 'Q8_sans_suspension',
+        text: 'Secondaire : je privilégie la simplicité mécanique, la compacité et un coût réduit',
+        value: 'Q8_suspension_sans',
       },
       {
-        text: 'Très importante : pour préserver mon confort et ma sécurité',
-        profile: 'Q8_avec_suspension',
+        text: 'Prioritaire : indispensable pour mon confort face aux pièges de la route',
+        value: 'Q8_suspension_avec',
       },
     ],
   },
   {
     id: 9,
-    text: 'Côté entretien et réglages :',
+    text: 'Quel est ton budget maximal pour cet achat ?',
     options: [
       {
-        text: 'Je veux un engin simple avec le moins de maintenance possible',
-        profile: 'Q9_entretien_simple',
+        text: 'Budget serré : moins de 1 500 € (cible l’occasion ou l’entrée de gamme)',
+        value: 'Q9_budget_serre',
       },
       {
-        text: 'Je peux gérer les réglages ou des réparations réguliers',
-        profile: 'Q9_entretien_bricoleur',
-      },
-    ],
-  },
-  {
-    id: 10,
-    text: 'Quel est ton budget maximal ?',
-    options: [
-      {
-        text: 'Budget serré (moins de 1 500€)',
-        profile: 'Q10_budget_serre',
+        text: 'Budget intermédiaire : 1 500 € à 2 500 € (le cœur du marché équilibré)',
+        value: 'Q9_budget_moyen',
       },
       {
-        text: 'Budget intermédiaire (1 500€ à 2 500€)',
-        profile: 'Q10_budget_moyen',
-      },
-      {
-        text: 'Budget premium (2 500€ et plus)',
-        profile: 'Q10_budget_premium',
+        text: 'Budget premium / No Limit : 2 500 € et plus (le haut de gamme performant)',
+        value: 'Q9_budget_premium',
       },
     ],
   },
 ]
 
 export const QuizBesoins = () => {
-  const [currentStep, setCurrentStep] = useState(0) // 0 = Accueil, 1-9 = Questions
+  const [currentStep, setCurrentStep] = useState(0)
+  // 0 = Accueil, 1-6 = Questions dynamiques, >6 = Résultat
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [isModalOpen, setIsModalOpen] = useState(false) // Contrôle de la modale
-
   const handleStart = () => {
     setCurrentStep(1)
     setIsModalOpen(true)
   }
-  const handleAnswer = (optionProfile: string) => {
-    setAnswers((prev) => ({ ...prev, [currentStep]: optionProfile }))
-    setCurrentStep((prev) => prev + 1)
+  const getNextStep = (value: string): number | 'RESULT' => {
+    // On passe simplement à la question suivante jusqu'à la fin
+    if (currentStep < QUESTIONS.length) {
+      return currentStep + 1
+    }
+    return 'RESULT'
+  }
+  const handleAnswer = (value: string) => {
+    setAnswers((prev) => ({
+      ...prev,
+      [currentStep]: value,
+    }))
+
+    const nextStep = getNextStep(value)
+
+    if (nextStep === 'RESULT') {
+      setCurrentStep(QUESTIONS.length + 1)
+    } else {
+      setCurrentStep(nextStep)
+    }
   }
   const handleBack = () => {
     if (currentStep > 1) {
-      // Retour classique à la question précédente
       setCurrentStep((prev) => prev - 1)
     } else if (currentStep === 1) {
-      // Si on recule depuis la Q1, on ferme la modale et on reset
       setIsModalOpen(false)
       setAnswers({})
       setCurrentStep(0)
@@ -292,160 +326,88 @@ export const QuizBesoins = () => {
   }
   const resetQuiz = () => {
     setAnswers({})
-    setCurrentStep(1) // Relance à la question 1 sans fermer la modale
+    setCurrentStep(1)
   }
 
-  // Algorithme d'aiguillage d'experts
   const calculateResult = (): {
     key: keyof typeof PROFILES
     showWarning_debutant: boolean
     showWarning_entretien: boolean
     showWarning_suspension: boolean
   } => {
-    const q1 = answers[1] // Niveau (débutant-pratiquant)
-    const q2 = answers[2] // Gabarit (standard-lourd)
-    const q3 = answers[3] // Objectif (utilitaire-loisir)
-    const q4 = answers[4] // Distance (court-moyen-long)
-    const q5 = answers[5] // Contrainte poids (15kg-25kg-sans limite)
-    const q6 = answers[6] // Terrain (lisse-route-offroad)
-    const q7 = answers[7] // Loisir (saut-vitesse-endurance)
-    const q8 = answers[8] // Suspension (oui-non)
-    const q9 = answers[9] // Entretien (simple-bricoleur)
-    const q10 = answers[10] // Budget (serré-moyen-premium)
+    const q1 = answers[1]
+    const q2 = answers[2]
+    const q3 = answers[3]
+    const q4 = answers[4]
+    const q5 = answers[5]
+    const q6 = answers[6]
+    const q7 = answers[7]
+    const q8 = answers[8] // La question budget
 
-    let resultKey: keyof typeof PROFILES = 'P5_commuter_regulier'
+    let resultKey: keyof typeof PROFILES = 'P10_indecis'
 
-    // ======================================
-    // 1 - DEBUTANT
-    // ======================================
-    if (q1 === 'Q1_debutant_occasion') {
+    // 1. CALCUL DU PROFIL CIBLE (indépendant du niveau/budget)
+    if (q2 === 'polyvalent' || q7 === 'compromis' || q7 === 'exploration') {
+      resultKey = 'P10_indecis'
+    } else if (q2 === 'utilitaire') {
+      if (q3 === 'portage_frequent') {
+        resultKey = 'P2_1_multimodal_ultraleger'
+      } else if (q3 === 'portage_moderate') {
+        resultKey =
+          q7 === 'specialisee'
+            ? 'P2_3_multimodal_suspendue'
+            : 'P2_2_multimodal_classique'
+      } else if (q3 === 'portage_rare') {
+        if (q4 === 'distance_courte') resultKey = 'P3_occasionnel_court'
+        else if (q4 === 'distance_moyenne') resultKey = 'P4_commuter_regulier'
+        else if (q4 === 'distance_longue') resultKey = 'P5_super_commuter'
+        else if (q4 === 'distance_tres_longue')
+          resultKey = 'P6_super_commuter_xxl'
+      }
+    } else if (q2 === 'loisir') {
+      if (q5 === 'offroad') {
+        resultKey = 'P7_voltigeur'
+      } else if (q5 === 'vitesse') {
+        resultKey = 'P8_pistard'
+      } else if (q5 === 'endurance') {
+        resultKey =
+          q6 === 'autonomie_max' ? 'P9_2_grand_voyageur' : 'P9_1_voyageur'
+      } else {
+        resultKey = 'P10_indecis'
+      }
+    }
+
+    // 2. RÈGLE OVERRIDE : Débutant + Petit budget
+    // Si c'est un débutant avec un petit budget, on force le profil P1
+    if (q1 === 'debutant' && q8 === 'petit') {
       resultKey = 'P1_debutant_occasion'
     }
 
-    // ======================================
-    // 2 - LOISIR
-    // ======================================
-    else if (q3 === 'Q3_loisir') {
-      // Offroad / franchissement / saut
-      if (q7 === 'Q7_loisir_suspendu' || q6 === 'Q6_offroad') {
-        resultKey = 'P7_loisir_suspendu'
-      }
-      // Vitesse
-      else if (q7 === 'Q7_loisir_vitesse') {
-        resultKey = 'P8_loisir_vitesse'
-      }
-      // Endurance
-      else if (q7 === 'Q7_loisir_endurance') {
-        resultKey = 'P9_loisir_endurance'
-      }
-    }
-
-    // ======================================
-    // 3 - UTILITAIRE
-    // ======================================
-    else if (q3 === 'Q3_utilitaire') {
-      // ==================================
-      // PORTAGE INTENSIF
-      // MAX 15 KG
-      // ==================================
-      if (q5 === 'Q5_max15kg') {
-        // Gros gabarit :
-        // une roue trop légère devient limitée
-        if (q2 === 'Q2_gabarit_lourd') {
-          resultKey = 'P3_multimodal_long'
-        } else {
-          resultKey = 'P2_multimodal_court'
-        }
-      }
-
-      // ==================================
-      // PORTAGE OCCASIONNEL
-      // MAX 25 KG
-      // ==================================
-      else if (q5 === 'Q5_max25kg') {
-        // Courte distance + terrain facile
-        // priorité à la compacité
-        if (q4 === 'Q4_distance_court' && q6 === 'Q6_lisse') {
-          resultKey = 'P3_multimodal_long'
-        }
-        // Terrain dégradé :
-        // le confort devient prioritaire
-        else if (q6 === 'Q6_chaussee' || q6 === 'Q6_offroad') {
-          if (q8 === 'Q8_avec_suspension') {
-            resultKey = 'P5_commuter_regulier'
-          } else {
-            resultKey = 'P3_multimodal_long'
-          }
-        } else {
-          resultKey = 'P3_multimodal_long'
-        }
-      }
-
-      // ==================================
-      // PAS DE CONTRAINTE DE POIDS
-      // ==================================
-      else if (q5 === 'Q5_poidsnolimit') {
-        // ------------------------------
-        // COURTES DISTANCES
-        // ------------------------------
-        if (q4 === 'Q4_distance_court') {
-          if (q6 === 'Q6_lisse') {
-            if (q8 === 'Q8_avec_suspension') {
-              resultKey = 'P5_commuter_regulier'
-            } else {
-              resultKey = 'P4_occasionnel_court'
-            }
-          } else {
-            resultKey = 'P5_commuter_regulier'
-          }
-        }
-        // ------------------------------
-        // DISTANCES MOYENNES
-        // ------------------------------
-        else if (q4 === 'Q4_distance_moyen') {
-          if (q6 === 'Q6_lisse') {
-            resultKey = 'P5_commuter_regulier'
-          } else if (q8 === 'Q8_avec_suspension') {
-            resultKey = 'P6_super_commuter'
-          } else {
-            resultKey = 'P5_commuter_regulier'
-          }
-        }
-        // ------------------------------
-        // LONGUES DISTANCES
-        // ------------------------------
-        else if (q4 === 'Q4_distance_long') {
-          if (q8 === 'Q8_avec_suspension') {
-            resultKey = 'P6_super_commuter'
-          } else {
-            resultKey = 'P5_commuter_regulier'
-          }
-        }
-      }
-    }
-
-    // ======================================
-    // WARNING ENTRETIEN
-    // APRÈS DÉTERMINATION DU PROFIL
-    // ======================================
-    const showWarning_debutant =
-      q1 === 'Q1_debutant_occasion' &&
-      (q10 === 'Q10_budget_premium' || q10 === 'Q10_budget_moyen')
-    const showWarning_suspension =
-      q8 === 'Q8_sans_suspension' &&
-      (resultKey === 'P6_super_commuter' || resultKey === 'P7_loisir_suspendu')
-    const showWarning_entretien =
-      q9 === 'Q9_entretien_simple' &&
-      (resultKey === 'P6_super_commuter' || resultKey === 'P7_loisir_suspendu')
-
+    // 3. RETOUR DES DONNÉES ET DES WARNINGS
     return {
       key: resultKey,
-      showWarning_debutant,
-      showWarning_entretien,
-      showWarning_suspension,
+      // On affiche le warning UNIQUEMENT si le test a calculé un autre profil que P1 pour un débutant
+      showWarning_debutant:
+        q1 === 'debutant' && resultKey !== 'P1_debutant_occasion',
+      showWarning_entretien: [
+        'P5_super_commuter',
+        'P6_super_commuter_xxl',
+        'P7_voltigeur',
+        'P8_pistard',
+        'P9_1_voyageur',
+        'P9_2_grand_voyageur',
+      ].includes(resultKey),
+      showWarning_suspension: [
+        'P2_3_multimodal_suspendue',
+        'P4_commuter_regulier',
+        'P5_super_commuter',
+        'P6_super_commuter_xxl',
+        'P7_voltigeur',
+        'P9_1_voyageur',
+        'P9_2_grand_voyageur',
+      ].includes(resultKey),
     }
   }
-
   const result = currentStep > QUESTIONS.length ? calculateResult() : null
   const resultData = result ? PROFILES[result.key] : null
 
@@ -521,12 +483,12 @@ export const QuizBesoins = () => {
                 </h4>
                 <div className="space-y-1">
                   {QUESTIONS[currentStep - 1].options.map((option, idx) => {
-                    const isSelected = answers[currentStep] === option.profile
+                    const isSelected = answers[currentStep] === option.value
 
                     return (
                       <button
                         key={idx}
-                        onClick={() => handleAnswer(option.profile)}
+                        onClick={() => handleAnswer(option.value)}
                         className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-sm sm:text-base font-medium ${
                           isSelected
                             ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
@@ -560,7 +522,7 @@ export const QuizBesoins = () => {
                   </p>
                 </div>
 
-                <p className="text-sm md:text-base text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 p-2 rounded-lg border border-gray-100 dark:border-gray-700 text-justify mb-2 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-700 p-2 rounded-lg border border-gray-100 dark:border-gray-700 mb-2 leading-relaxed">
                   {resultData.description}
                 </p>
                 {/* Encart WARNING */}
@@ -618,7 +580,7 @@ export const QuizBesoins = () => {
 
           {/* FOOTER DE LA MODALE */}
           <ModalFooter className="border-t border-gray-200 dark:border-gray-700 flex justify-between items-center pt-3 pb-2">
-            {/* Bouton de gauche : Retour (pendant les questions) ou Refaire (aux résultats) */}
+            {/* Bouton : Retour (pendant les questions) ou Refaire (aux résultats) */}
             {currentStep <= QUESTIONS.length ? (
               <Button
                 variant="light"
@@ -637,7 +599,6 @@ export const QuizBesoins = () => {
                 🔄 Refaire le test
               </Button>
             )}
-
             {/* Bouton de droite : Fermer */}
             <Button
               variant="solid"
