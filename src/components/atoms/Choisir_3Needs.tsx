@@ -5,9 +5,9 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-//import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs-quizz modal'
-import { QuizBesoins_beta } from '@/src/components/atoms/Choisir_3Needs-quizz vbeta'
+import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs-quizz modal'
 
+//import { QuizBesoins_beta } from '@/src/components/atoms/Choisir_3Needs-quizz vbeta'
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
@@ -273,7 +273,7 @@ const Needs = () => {
 
       {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
 
-      <QuizBesoins_beta />
+      <QuizBesoins_modal />
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
       {/*----------------------------------------------*/}
