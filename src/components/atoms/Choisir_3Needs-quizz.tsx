@@ -122,7 +122,7 @@ const PROFILES = {
 const QUESTIONS = [
   {
     id: 1,
-    text: 'Quel est ton niveau actuel en gyroroue ?',
+    text: 'Quel est ton niveau actuel ?',
     options: [
       {
         text: 'Débutant : je veux apprendre et faire mes premiers pas',
@@ -136,14 +136,14 @@ const QUESTIONS = [
   },
   {
     id: 2,
-    text: 'Quel est ton gabarit approximatif (une fois tout équipé) ?',
+    text: 'Quel est ton gabarit approximatif (une fois équipé) ?',
     options: [
       {
-        text: 'Moins de 90 kg (gabarit standard à léger)',
+        text: 'Moins de 90kg (gabarit standard à léger)',
         value: 'Q2_gabarit_standard',
       },
       {
-        text: '90 kg ou plus (gabarit lourd)',
+        text: '90kg ou plus (gabarit lourd)',
         value: 'Q2_gabarit_lourd',
       },
     ],
@@ -171,19 +171,19 @@ const QUESTIONS = [
     text: 'Quelle distance penses-tu parcourir lors de tes trajets habituels ?',
     options: [
       {
-        text: 'Petits trajets ou très courtes balades (moins de 10 km)',
+        text: 'Petits trajets ou très courtes balades (-10km)',
         value: 'Q4_distance_courte',
       },
       {
-        text: 'Trajets réguliers de moyenne distance (10 à 30 km)',
+        text: 'Trajets réguliers de moyenne distance (10-30km)',
         value: 'Q4_distance_moyenne',
       },
       {
-        text: 'Longues distances régulières (30 à 60 km)',
+        text: 'Longues distances régulières (30-60km)',
         value: 'Q4_distance_longue',
       },
       {
-        text: 'Très longues distances (plus de 60 km)',
+        text: 'Très longues distances (+60km)',
         value: 'Q4_distance_tres_longue',
       },
     ],
@@ -193,15 +193,15 @@ const QUESTIONS = [
     text: 'Quel sera ton rapport aux escaliers et aux transports en commun ?',
     options: [
       {
-        text: 'Intensif : je dois porter la roue très souvent (métro, bus, escaliers). Poids max 15kg.',
+        text: 'Intensif (escaliers, bus, etc.), je dois porter la roue (max 15kg)',
         value: 'Q5_portage_intensif',
       },
       {
-        text: 'Modéré : quelques marches à l’occasion. Poids max 25kg.',
+        text: 'Modéré, il y a quelques marches à l’occasion (max 25kg)',
         value: 'Q5_portage_modere',
       },
       {
-        text: 'Quasiment jamais : je roule directement de mon point A au point B. Poids non limitant.',
+        text: 'Quasiment jamais (poids non limitant)',
         value: 'Q5_portage_rare',
       },
     ],
@@ -211,11 +211,11 @@ const QUESTIONS = [
     text: 'Sur quel type de terrain vas-tu majoritairement évoluer ?',
     options: [
       {
-        text: 'Asphalte propre : pistes cyclables, chemins lisses et rues apaisées de centre-ville',
+        text: 'Propre : pistes cyclables, chemins lisses et rues apaisées',
         value: 'Q6_terrain_lisse',
       },
       {
-        text: 'Urbain varié : routes d’agglomération, chaussée dégradés et pavés',
+        text: 'Varié : routes d’agglomération, chaussée dégradés et pavés',
         value: 'Q6_terrain_chaussee',
       },
       {
@@ -226,7 +226,7 @@ const QUESTIONS = [
   },
   {
     id: 7,
-    text: 'Si tu penses à tes sorties ou à ton style de conduite idéal, qu’est-ce qui te fait vibrer ?',
+    text: 'Si tu penses à tes sorties loisirs, qu’est-ce qui te fait vibrer ?',
     options: [
       {
         text: 'Offroad : franchissement, hors-piste, jouer avec le relief et les bosses',
@@ -237,11 +237,11 @@ const QUESTIONS = [
         value: 'Q7_style_vitesse',
       },
       {
-        text: 'Endurance : enchaîner les kilomètres et rouler autant que la batterie le permettra',
+        text: 'Endurance : enchaîner les kilomètres autant que la batterie le permet',
         value: 'Q7_style_endurance',
       },
       {
-        text: 'Découverte : je veux surtout explorer et voir ce que la gyroroue me réserve',
+        text: 'Découverte : je veux surtout voir ce que la gyroroue me réserve',
         value: 'Q7_style_decouverte',
       },
     ],
@@ -251,7 +251,7 @@ const QUESTIONS = [
     text: 'Quelle importance accordes-tu à la suspension ?',
     options: [
       {
-        text: 'Secondaire : je privilégie la simplicité mécanique, la compacité et un coût réduit',
+        text: 'Secondaire : je privilégie la simplicité, la compacité et un coût réduit',
         value: 'Q8_suspension_sans',
       },
       {
@@ -265,16 +265,34 @@ const QUESTIONS = [
     text: 'Quel est ton budget maximal pour cet achat ?',
     options: [
       {
-        text: 'Budget serré : moins de 1 500 € (cible l’occasion ou l’entrée de gamme)',
+        text: 'Serré : cible l’occasion ou l’entrée de gamme (-1500€) ',
         value: 'Q9_budget_serre',
       },
       {
-        text: 'Budget intermédiaire : 1 500 € à 2 500 € (le cœur du marché équilibré)',
+        text: 'Intermédiaire : le cœur du marché (1500-3000€)',
         value: 'Q9_budget_moyen',
       },
       {
-        text: 'Budget premium / No Limit : 2 500 € et plus (le haut de gamme performant)',
+        text: 'Premium / No Limit : orienté performance (+3000€)',
         value: 'Q9_budget_premium',
+      },
+    ],
+  },
+  {
+    id: 10,
+    text: 'En cas de compromis, quelle est ta priorité absolue ?',
+    options: [
+      {
+        text: 'Le prix avant tout : je ne peux pas dépasser mon budget',
+        value: 'Q10_priorite_budget',
+      },
+      {
+        text: "La logistique : le poids et l'encombrement sont mes limites physiques",
+        value: 'Q10_priorite_poids',
+      },
+      {
+        text: "L'usage : je veux la machine idéale pour mes trajets/sensations",
+        value: 'Q10_priorite_usage',
       },
     ],
   },
@@ -282,7 +300,7 @@ const QUESTIONS = [
 
 export const QuizBesoins = () => {
   const [currentStep, setCurrentStep] = useState(0)
-  // 0 = Accueil, 1-6 = Questions dynamiques, >6 = Résultat
+  // 0 = Accueil, 1-10 = Questions dynamiques, >10 = Résultat
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [isModalOpen, setIsModalOpen] = useState(false) // Contrôle de la modale
   const handleStart = () => {
@@ -290,7 +308,6 @@ export const QuizBesoins = () => {
     setIsModalOpen(true)
   }
   const getNextStep = (value: string): number | 'RESULT' => {
-    // On passe simplement à la question suivante jusqu'à la fin
     if (currentStep < QUESTIONS.length) {
       return currentStep + 1
     }
@@ -342,53 +359,91 @@ export const QuizBesoins = () => {
     const q5 = answers[5]
     const q6 = answers[6]
     const q7 = answers[7]
-    const q8 = answers[8] // La question budget
-
+    const q8 = answers[8]
+    const q9 = answers[9]
+    const q10 = answers[10]
     let resultKey: keyof typeof PROFILES = 'P10_indecis'
-
-    // 1. CALCUL DU PROFIL CIBLE (indépendant du niveau/budget)
-    if (q2 === 'polyvalent' || q7 === 'compromis' || q7 === 'exploration') {
-      resultKey = 'P10_indecis'
-    } else if (q2 === 'utilitaire') {
-      if (q3 === 'portage_frequent') {
+    // ==========================================
+    // FILTRE ENTONNOIR 1 : LE BUDGET EST ROI
+    // ==========================================
+    if (q10 === 'Q10_priorite_budget') {
+      if (q9 === 'Q9_budget_serre' && q5 !== 'Q5_portage_intensif') {
+        resultKey = 'P1_debutant_occasion'
+      } else if (q5 === 'Q5_portage_intensif') {
         resultKey = 'P2_1_multimodal_ultraleger'
-      } else if (q3 === 'portage_moderate') {
+      } else if (q5 === 'Q5_portage_modere') {
         resultKey =
-          q7 === 'specialisee'
+          q8 === 'Q8_suspension_avec'
             ? 'P2_3_multimodal_suspendue'
             : 'P2_2_multimodal_classique'
-      } else if (q3 === 'portage_rare') {
-        if (q4 === 'distance_courte') resultKey = 'P3_occasionnel_court'
-        else if (q4 === 'distance_moyenne') resultKey = 'P4_commuter_regulier'
-        else if (q4 === 'distance_longue') resultKey = 'P5_super_commuter'
-        else if (q4 === 'distance_tres_longue')
-          resultKey = 'P6_super_commuter_xxl'
-      }
-    } else if (q2 === 'loisir') {
-      if (q5 === 'offroad') {
-        resultKey = 'P7_voltigeur'
-      } else if (q5 === 'vitesse') {
-        resultKey = 'P8_pistard'
-      } else if (q5 === 'endurance') {
-        resultKey =
-          q6 === 'autonomie_max' ? 'P9_2_grand_voyageur' : 'P9_1_voyageur'
-      } else {
-        resultKey = 'P10_indecis'
       }
     }
-
-    // 2. RÈGLE OVERRIDE : Débutant + Petit budget
-    // Si c'est un débutant avec un petit budget, on force le profil P1
-    if (q1 === 'debutant' && q8 === 'petit') {
+    // ==========================================
+    // FILTRE ENTONNOIR 2 : LE POIDS EST ROI
+    // ==========================================
+    if (
+      resultKey === 'P10_indecis' &&
+      (q10 === 'Q10_priorite_poids' || q5 === 'Q5_portage_intensif')
+    ) {
+      if (q5 === 'Q5_portage_intensif') {
+        resultKey = 'P2_1_multimodal_ultraleger'
+      } else if (q5 === 'Q5_portage_modere') {
+        resultKey =
+          q8 === 'Q8_suspension_avec'
+            ? 'P2_3_multimodal_suspendue'
+            : 'P2_2_multimodal_classique'
+      }
+    }
+    // ==========================================
+    // FILTRE ENTONNOIR 3 : L'USAGE/PLAISIR EST ROI (Tronc commun)
+    // ==========================================
+    if (resultKey === 'P10_indecis') {
+      // --- BRANCHE A : USAGE UTILITAIRE ---
+      if (q3 === 'Q3_utilitaire') {
+        if (q4 === 'Q4_distance_courte' || q4 === 'Q4_distance_moyenne') {
+          resultKey = 'P4_commuter_regulier'
+        } else if (
+          q4 === 'Q4_distance_longue' ||
+          q4 === 'Q4_distance_tres_longue'
+        ) {
+          resultKey =
+            q2 === 'Q2_gabarit_lourd'
+              ? 'P6_super_commuter_xxl'
+              : 'P5_super_commuter'
+        }
+      }
+      // --- BRANCHE B : USAGE LOISIR ---
+      else if (q3 === 'Q3_loisir') {
+        if (q4 === 'Q4_distance_courte') {
+          resultKey = 'P3_occasionnel_court'
+        } else if (q7 === 'Q7_style_offroad' || q6 === 'Q6_terrain_offroad') {
+          resultKey = 'P7_voltigeur'
+        } else if (q7 === 'Q7_style_vitesse') {
+          resultKey = 'P8_pistard'
+        } else if (q7 === 'Q7_style_endurance') {
+          resultKey =
+            q4 === 'Q4_distance_tres_longue'
+              ? 'P9_2_grand_voyageur'
+              : 'P9_1_voyageur'
+        }
+      }
+      // --- BRANCHE C : USAGE POLYVALENT OU STYLE DÉCOUVERTE ---
+      else if (q3 === 'Q3_polyvalent' || q7 === 'Q7_style_decouverte') {
+        if (q4 === 'Q4_distance_longue' || q4 === 'Q4_distance_tres_longue') {
+          resultKey = 'P5_super_commuter'
+        } else {
+          resultKey = 'P10_indecis'
+        }
+      }
+    }
+    // --- CHUTE DE SÉCURITÉ ---
+    if (resultKey === 'P10_indecis' && q9 === 'Q9_budget_serre') {
       resultKey = 'P1_debutant_occasion'
     }
-
-    // 3. RETOUR DES DONNÉES ET DES WARNINGS
     return {
       key: resultKey,
-      // On affiche le warning UNIQUEMENT si le test a calculé un autre profil que P1 pour un débutant
       showWarning_debutant:
-        q1 === 'debutant' && resultKey !== 'P1_debutant_occasion',
+        q1 === 'Q1_debutant' && resultKey !== 'P1_debutant_occasion',
       showWarning_entretien: [
         'P5_super_commuter',
         'P6_super_commuter_xxl',
@@ -433,7 +488,135 @@ export const QuizBesoins = () => {
         </div>
       </div>
 
-      {/* --- MODALE (Questions & Résultats) --- */}
+      {/* --- CONFIGURATEUR VISUEL (BETA) --- */}
+      <div className="mb-8 grid grid-cols-1 xl:grid-cols-3 gap-6 text-sm">
+        {/* QUESTIONS */}
+        <div className="xl:col-span-2 text-xs">
+          <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-800 p-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 text-xs">
+              {QUESTIONS.map((question) => (
+                <div
+                  key={question.id}
+                  className="text-xs rounded-lg border border-gray-200 dark:border-gray-700 p-2 bg-white dark:bg-gray-900"
+                >
+                  <h4 className="font-semibold text-xs text-gray-900 dark:text-white mb-3">
+                    {question.id}. {question.text}
+                  </h4>
+                  <div className="space-y-1 text-xs">
+                    {question.options.map((option, index) => {
+                      const isSelected = answers[question.id] === option.value
+                      return (
+                        <button
+                          key={index}
+                          onClick={() =>
+                            setAnswers((prev) => ({
+                              ...prev,
+                              [question.id]: option.value,
+                            }))
+                          }
+                          className={`w-full text-left p-1 rounded-lg border-0.5 text-xs transition-all ${
+                            isSelected
+                              ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-1 ring-emerald-500'
+                              : 'border-gray-600 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-emerald-40 ring-1'
+                          }`}
+                        >
+                          <div className="flex justify-between items-center text-xs">
+                            <span className="text-xs">{option.text}</span>
+                            {isSelected && (
+                              <span className="font-bold text-emerald-600 text-xs">
+                                ✓
+                              </span>
+                            )}
+                          </div>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* RESULTAT EN DIRECT A DROITE DE LA GRILLE */}
+        <div className="xl:col-span-1">
+          <div className="sticky top-24 rounded-xl border border-emerald-500/30 bg-white dark:bg-gray-800 p-4 shadow-md">
+            {Object.keys(answers).length < QUESTIONS.length ? (
+              <div className="text-center py-8">
+                <div className="text-5xl mb-3">🎯</div>
+
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  Profil en cours d&apos;analyse
+                </p>
+
+                <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                  Réponds aux {QUESTIONS.length} questions pour afficher une
+                  recommandation complète.
+                </p>
+
+                <div className="mt-4 text-xs text-gray-500">
+                  {Object.keys(answers).length} / {QUESTIONS.length} réponses
+                </div>
+              </div>
+            ) : (
+              (() => {
+                const liveResult = calculateResult()
+                const liveData = PROFILES[liveResult.key]
+
+                return (
+                  <>
+                    <div className="text-center mb-4">
+                      <h3 className="text-xl font-black text-gray-900 dark:text-white">
+                        {liveData.title}
+                      </h3>
+                      <p className="text-sm font-medium text-gray-600 dark:text-gray-300 mt-1">
+                        {liveData.subtitle}
+                      </p>
+                    </div>
+                    <div className="text-sm text-gray-800 dark:text-gray-100 leading-relaxed mb-4">
+                      {liveData.description}
+                    </div>
+                    <div className="space-y-2">
+                      {liveData.wheels.map((wheel, index) => (
+                        <div
+                          key={index}
+                          className="p-2 rounded-lg text-center font-medium bg-emerald-100 dark:bg-emerald-900/40"
+                        >
+                          {wheel}
+                        </div>
+                      ))}
+                    </div>
+                    {(liveResult.showWarning_debutant ||
+                      liveResult.showWarning_entretien ||
+                      liveResult.showWarning_suspension) && (
+                      <div className="mt-4 space-y-2">
+                        {liveResult.showWarning_debutant && (
+                          <div className="p-2 rounded-lg text-xs bg-amber-50 border border-amber-300 dark:text-amber-900">
+                            💡 Débutant : une occasion reste souvent plus
+                            pertinente pour apprendre.
+                          </div>
+                        )}
+                        {liveResult.showWarning_entretien && (
+                          <div className="p-2 rounded-lg text-xs bg-amber-50 border border-amber-300 dark:text-amber-900">
+                            💡 Ce profil implique davantage d&apos;entretien.
+                          </div>
+                        )}
+                        {liveResult.showWarning_suspension && (
+                          <div className="p-2 rounded-lg text-xs bg-amber-50 border border-amber-300 dark:text-amber-900">
+                            💡 Une suspension semble particulièrement adaptée à
+                            ton usage.
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </>
+                )
+              })()
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* --- MODALE (Questions & Résultats un par un) --- */}
       <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
@@ -466,15 +649,15 @@ export const QuizBesoins = () => {
               </div>
             ) : (
               <div className="text-center">
-                <a className="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold px-3 py-1 rounded-full ">
+                <span className="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 font-bold px-3 py-1 rounded-full ">
                   Ton Profil
-                </a>
+                </span>
               </div>
             )}
           </div>
 
           {/* CORPS DE LA MODALE */}
-          <ModalBody className="space-y-2 min-h-[20vh] max-h-[70vh] overflow-y-auto pt-0 px-4">
+          <ModalBody className="space-y-2 min-h-[23vh] max-h-[70vh] overflow-y-auto pt-0 px-4">
             {/* ETAT : QUESTIONS */}
             {currentStep >= 1 && currentStep <= QUESTIONS.length && (
               <div className="animate-fade-in">
@@ -489,14 +672,16 @@ export const QuizBesoins = () => {
                       <button
                         key={idx}
                         onClick={() => handleAnswer(option.value)}
-                        className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-sm sm:text-base font-medium ${
+                        className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-xs sm:text-sm font-base ${
                           isSelected
                             ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
                             : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
                         }`}
                       >
                         <div className="flex justify-between items-center">
-                          <span>{option.text}</span>
+                          <span className="text-xs sm:text-sm">
+                            {option.text}
+                          </span>
                           {isSelected && (
                             <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
                               ✓
@@ -517,7 +702,7 @@ export const QuizBesoins = () => {
                   <p className="text-center mb-2 text-xl md:text-2xl font-black text-gray-900 dark:text-white">
                     {resultData.title}
                   </p>
-                  <p className="text-sm text-gray-800 dark:text-gray-200 font-medium">
+                  <p className="text-sm text-gray-800 dark:text-gray-200 font-medium text-center">
                     {resultData.subtitle}
                   </p>
                 </div>
@@ -558,7 +743,7 @@ export const QuizBesoins = () => {
                   <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mt-3 mb-2">
                     🎯 Exemples de modèles adaptés :
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mx-20 sm:mx-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mx-4 sm:mx-0">
                     {resultData.wheels.map((wheel, index) => (
                       <div
                         key={index}
@@ -570,7 +755,7 @@ export const QuizBesoins = () => {
                   </div>
                 </div>
                 {/* Mention de mise à jour de la sélection */}
-                <p className="text-center text-xs text-gray-600 dark:text-gray-300 my-1">
+                <p className="text-center text-xs text-gray-500 dark:text-gray-300 my-1">
                   Sélection mise à jour en juillet 2026 selon l&apos;état actuel
                   du marché.
                 </p>
@@ -583,27 +768,29 @@ export const QuizBesoins = () => {
             {/* Bouton : Retour (pendant les questions) ou Refaire (aux résultats) */}
             {currentStep <= QUESTIONS.length ? (
               <Button
-                variant="light"
+                variant="flat"
                 onPress={handleBack}
-                className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
+                className="rounded-xl bg-white  dark:bg-gray-700 text-gray-800 dark:text-white font-medium
+                hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
               >
                 ← Retour
               </Button>
             ) : (
               <Button
-                variant="flat"
-                color="primary" // Ajuste la couleur selon ton thème NextUI (ex: success)
+                variant="light"
                 onPress={resetQuiz}
-                className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
+                className="rounded-xl bg-white  dark:bg-gray-700 text-gray-800 dark:text-white font-medium
+                hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
               >
                 🔄 Refaire le test
               </Button>
             )}
             {/* Bouton de droite : Fermer */}
             <Button
-              variant="solid"
+              variant="light"
               onPress={handleCloseModal}
-              className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium"
+              className="rounded-xl bg-white  dark:bg-gray-700 text-gray-800 dark:text-white font-medium
+                hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
             >
               Fermer
             </Button>
