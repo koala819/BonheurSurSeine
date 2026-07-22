@@ -123,3 +123,5 @@ export const PROFILES: Record<string, ProfileData> = {
     wheels: ['Kingsong 16S Pro', 'Nosfet Aero', 'Nosfet Xeno'],
   },
 }
+
+export type ProfileKey = keyof typeof PROFILES
