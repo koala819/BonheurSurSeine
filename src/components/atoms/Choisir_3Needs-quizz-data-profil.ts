@@ -29,11 +29,11 @@ export const PROFILES: Record<string, ProfileData> = {
   },
   P2_2_multimodal_classique: {
     id: 'P2_2_multimodal_classique',
-    title: '🚇 Multimodalité Classique',
+    title: '🚇 Multimodalité',
     subtitle: 'Compromis compacité / autonomie (max 25 kg)',
     description:
-      "Tu dois régulièrement soulever ta roue mais tu parcours parfois de plus longues distances. Tu acceptes un poids allant jusqu'à environ 25 kg en échange d'une autonomie accrue.",
-    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18XL'],
+      'Tu dois régulièrement soulever ta roue mais tu parcours parfois de plus longues distances. La suspension est volontairement exclue afin de préserver le poids.',
+    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18L'],
   },
   P2_3_multimodal_suspendue: {
     id: 'P2_3_multimodal_suspendue',
@@ -53,7 +53,7 @@ export const PROFILES: Record<string, ProfileData> = {
   },
   P4_commuter_regulier: {
     id: 'P4_commuter_regulier',
-    title: '🚴 Le Commuter Régulier',
+    title: '🚴 Le Régulier',
     subtitle: 'Confort et polyvalence au quotidien',
     description:
       'Tu utilises ta roue régulièrement pour aller travailler ou te déplacer sur de moyennes distances. La suspension devient ici un véritable atout pour amortir les chocs, réduire la fatigue et rouler sereinement aux côtés des autres usagers.',
@@ -68,7 +68,7 @@ export const PROFILES: Record<string, ProfileData> = {
   },
   P5_super_commuter: {
     id: 'P5_super_commuter',
-    title: '⚡ Le Super Commuter',
+    title: '⚡ Le Commuter',
     subtitle: 'Endurance et sécurité sur route',
     description:
       'Tu parcours quotidiennement de grandes distances (parfois +40 km), souvent sur des axes routiers dégradés ou là où les pistes cyclables sont inexistantes. Il te faut une machine robuste, confortable et rassurante pour affronter la route avec confiance.',
@@ -76,7 +76,7 @@ export const PROFILES: Record<string, ProfileData> = {
   },
   P6_super_commuter_xxl: {
     id: 'P6_super_commuter_xxl',
-    title: '🚀 Le Super Commuter XXL',
+    title: '🚀 Le Super Commuter',
     subtitle: 'Longues distances à rythme soutenu',
     description:
       "Tu effectues de longs trajets quotidiens à un rythme soutenu. Tu as besoin d'une machine fiable, stable, dotée d'un grand diamètre de roue, d'une excellente autonomie et capable d'affronter sereinement la route sur la durée.",
@@ -121,6 +121,14 @@ export const PROFILES: Record<string, ProfileData> = {
     description:
       "Tu découvres encore la gyroroue et tu ne sais pas précisément quel sera ton usage principal. Plutôt que de choisir une machine trop spécialisée, privilégie une roue capable de t'accompagner dans tes premiers trajets, tes balades et dans la découverte du bonheur d'aller rouler.",
     wheels: ['Kingsong 16S Pro', 'Nosfet Aero', 'Nosfet Xeno'],
+  },
+  P11_mouton_5_pattes: {
+    id: 'P11_mouton_5_pattes',
+    title: '🦄 Le Mouton à 5 pattes',
+    subtitle: 'Compromis indispensable face aux limites physiques…',
+    description:
+      "Tu recherches une roue ultra-légère mais avec une autonomie géante ? Une machine de course au prix d'une entrée de gamme ? Cela n'existe pas (encore). Il te faut impérativement revoir tes attentes, ton budget ou tes contraintes.",
+    wheels: ['🦄', '🤡', '😂'],
   },
 }
 
