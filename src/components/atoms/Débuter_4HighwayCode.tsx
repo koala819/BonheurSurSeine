@@ -255,6 +255,14 @@ const HighwayCode = () => {
                   >
                     §6.15 du R311-1
                   </Link>
+                  et{' '}
+                  <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039276031"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    R321-4-2
+                  </Link>
                   ).
                 </li>
                 <li className="text-sm">

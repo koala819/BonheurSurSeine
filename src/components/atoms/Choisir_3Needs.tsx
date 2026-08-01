@@ -1,14 +1,14 @@
 'use client'
 
-//import { Checkbox } from '@heroui/react'
 import { useState } from 'react'
 
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
+//import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs-quizz modal'
+//import { QuizBesoins_beta } from '@/src/components/atoms/Choisir_3Needs-quizz vbeta'
 
-//import { color } from 'framer-motion'
+import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
 //style des Checkbox utilisés pour les 7 questions.
@@ -23,7 +23,7 @@ const QuestionItem = ({ children }: { children: any }) => {
         ${
           isSelected
             ? 'border-emerald-600 bg-emerald-50/50 dark:bg-emerald-900/20'
-            : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-800'
+            : 'border-transparent hover:bg-gray-100 dark:hover:bg-gray-800/50'
         }
       `}
     >
@@ -238,7 +238,7 @@ const Needs = () => {
           </QuestionItem>
           <QuestionItem>
             Mon utilisation principale&nbsp;: pistes&nbsp;cyclables&nbsp;?
-            centre&#8209;ville&nbsp;? longs&nbsp;trajets&nbsp;?
+            centre&#8209;ville&nbsp;? agglomération&nbsp;?
             voies&nbsp;vertes&nbsp;? terrains&nbsp;offroad&nbsp;?
           </QuestionItem>
           <QuestionItem>
@@ -270,6 +270,9 @@ const Needs = () => {
           </QuestionItem>
         </div>
       </div>
+
+      {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
+
 
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}

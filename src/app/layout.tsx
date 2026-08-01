@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <Providers>
           <div className="min-h-screen min-w-screen flex flex-col">
-            <div className="sticky top-0 z-[100]">
+            <div className="sticky top-0 z-[050]">
               <ClientNavbar />
             </div>
 
