@@ -91,6 +91,15 @@ const HighwayCode = () => {
               className="link-style"
             >
               §6.15 du R311-1
+            </Link>{' '}
+            faisant référence au paragraphe 71 (page 9) de l&apos;article 3 du{' '}
+            <Link
+              href="/3.debuter/CELEX_32013R0168_FR_TXT.pdf"
+              target="_blank"
+              className="link-style"
+            >
+              Règlement UE n°168/2013 du Parlement européen et du Conseil du 15
+              janvier 2013
             </Link>
             ).
           </p>
@@ -254,6 +263,14 @@ const HighwayCode = () => {
                     className="link-style"
                   >
                     §6.15 du R311-1
+                  </Link>
+                  ,{' '}
+                  <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266055"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    R317-23-1
                   </Link>{' '}
                   et{' '}
                   <Link
@@ -266,7 +283,7 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Sonnette obligatoire (klaxon électrique non valable,{' '}
+                  Sonnette obligatoire, klaxon électrique non valable (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
                     target="_blank"
@@ -366,6 +383,22 @@ const HighwayCode = () => {
               </ul>
             </div>
           </div>
+          <div className="flex flex-col items-center my-4">
+            <div className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 aspect-video rounded-xl shadow-md overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/UiMPp-GQyzI?si=SlJQ7dMPMuroWc3j"
+                title="Tout savoir sur le décret EDPM - Bonheur sur Seine"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
+              Ma vidéo complète lors de la sortie du décret en 2019…
+            </p>
+          </div>
+
           {/*-------------------------------------------*/}
           <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
             <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
