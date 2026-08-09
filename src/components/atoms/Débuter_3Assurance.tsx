@@ -168,27 +168,38 @@ const Assurance = () => {
             <li className="">
               En France, la carte verte (i.e. attestation d&apos;assurance) et
               la vignette verte (i.e. papillon vert) ont été officiellement
-              supprimées le 1er avril 2024 (
+              supprimées le 1er avril 2024{' '}
               <Link
                 href="https://www.service-public.fr/particuliers/actualites/A17230"
                 target="_blank"
                 className="link-style"
               >
                 <i>pour les véhicules immatriculés</i>
+              </Link>{' '}
+              (les forces de l&apos;ordre utilisent le{' '}
+              <Link
+                href="https://www.fva-assurance.fr/"
+                target="_blank"
+                className="link-style"
+              >
+                fichier des véhicules assurés
               </Link>
-              ).
+              ). Les EDPM (trottinettes, gyroroues) n&apos;étant pas
+              immatriculés, ils n&apos;y sont pas enregistrés.
               <br />
-              Les EDPM (trottinettes, gyroroues) n&apos;ayant pas de plaque
-              d&apos;immatriculation, ils n&apos;y sont pas enregistrés&nbsp;:
-              la vignette{' '}
+              La{' '}
+              <strong className="text-rose-600 dark:text-rose-500">
+                carte verte est nécessaire
+              </strong>{' '}
+              (
               <Link
                 href="https://www.service-public.fr/particuliers/vosdroits/F1362"
                 target="_blank"
                 className="link-style"
               >
-                doit être affichée
-              </Link>{' '}
-              sur le véhicule (
+                imprimée sur papier blanc
+              </Link>
+              )&nbsp;: la vignette doit être apposée sur le véhicule (
               <Link
                 href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006812169"
                 target="_blank"
@@ -204,9 +215,9 @@ const Assurance = () => {
               >
                 R211-21-5
               </Link>
-              ), et il faut{' '}
+              ) et il faut{' '}
               <strong className="text-rose-600 dark:text-rose-500">
-                avoir sur soi l&apos;attestation d&apos;assurance
+                avoir l&apos;attestation d&apos;assurance sur soi
               </strong>{' '}
               (
               <Link

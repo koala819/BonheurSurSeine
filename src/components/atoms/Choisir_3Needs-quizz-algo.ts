@@ -7,6 +7,11 @@ export interface QuizResult {
   showWarning_suspension: boolean
 }
 
+/**
+ * Algorithme de recommandation de gyroroue par Arbre de Décision.
+ * Entonnoir principal : Q10 (Arbitrage des priorités).
+ * Traitement préalable des incompatibilités physiques/économiques (Profil P11).
+ */
 export const calculateResult = (
   answers: Record<number, string>,
 ): QuizResult => {
@@ -24,51 +29,51 @@ export const calculateResult = (
   let resultKey: ProfileKey = 'P10_indecis'
 
   // =========================================================================
-  // NIVEAU 0 : DÉTECTION DES INCOMPATIBILITÉS MAJEURES (P11)
-  // Pièges d'incohérence physique et économique sans compromis possible
+  // NIVEAU 0 : FILTRE D'INCOMPATIBILITÉ TECHNIQUE OU ÉCONOMIQUE (P11)
+  // Détection des cas physiquement impossibles ou des exigences contradictoires
   // =========================================================================
 
   // 1. Portage intensif (<15kg) + Très longue distance (+60km) + Gabarit lourd (>=90kg)
-  const isImpossibleWeightDistanceGabarit =
+  const isPhysicalImpossibility =
     q5 === 'Q5_portage_intensif' &&
     q4 === 'Q4_distance_tres_longue' &&
     q2 === 'Q2_gabarit_lourd'
 
-  // 2. Portage intensif (<15kg) + Style Offroad/Vitesse (roues de +30kg requises)
-  const isImpossibleWeightPerformance =
+  // 2. Portage intensif (<15kg) + Pratique extrême (Offroad ou Vitesse demandant des machines de +30kg)
+  const isPerformanceWeightConflict =
     q5 === 'Q5_portage_intensif' &&
     (q7 === 'Q7_style_offroad' || q7 === 'Q7_style_vitesse')
 
-  // 3. Petit budget (-1500€) + Priorité Usage + Vitesse/Offroad/Très longue distance
-  const isImpossibleBudgetUsage =
+  // 3. Petit budget (-1500€) + Priorité Usage (Refus de compromis) + Pratique haut de gamme neuve (+60km, Vitesse, Offroad)
+  const isBudgetUsageConflict =
     q9 === 'Q9_budget_serre' &&
     q10 === 'Q10_priorite_usage' &&
     (q4 === 'Q4_distance_tres_longue' ||
       q7 === 'Q7_style_vitesse' ||
       q7 === 'Q7_style_offroad')
 
-  // 4. Portage intensif (<15kg) + Budget serré (-1500€) + Longue distance/Très longue distance
-  const isTripleConstraintImpossible =
+  // 4. Incompatibilité globale : Portage intensif + Petit budget + Longues distances régulières
+  const isTripleContradiction =
     q5 === 'Q5_portage_intensif' &&
     q9 === 'Q9_budget_serre' &&
     (q4 === 'Q4_distance_longue' || q4 === 'Q4_distance_tres_longue')
 
   if (
-    isImpossibleWeightDistanceGabarit ||
-    isImpossibleWeightPerformance ||
-    isImpossibleBudgetUsage ||
-    isTripleConstraintImpossible
+    isPhysicalImpossibility ||
+    isPerformanceWeightConflict ||
+    isBudgetUsageConflict ||
+    isTripleContradiction
   ) {
     resultKey = 'P11_mouton_5_pattes'
   }
 
   // =========================================================================
-  // ARBRE 1 : LA LOGIQUE FINANCIÈRE (Q10_priorite_budget)
-  // Arbitrage : Le budget borne le terrain des possibles.
+  // ARBRE 1 : LOGIQUE FINANCIÈRE (Q10_priorite_budget)
+  // Objectif : Maximiser le besoin en imposant un plafond strict sur le prix
   // =========================================================================
   else if (q10 === 'Q10_priorite_budget') {
     if (q9 === 'Q9_budget_serre') {
-      // Budget -1500€
+      // Budget -1500€ (Cible occasion ou entrée de gamme)
       if (q1 === 'Q1_debutant') {
         resultKey =
           q5 === 'Q5_portage_intensif'
@@ -100,6 +105,7 @@ export const calculateResult = (
         else if (q4 === 'Q4_distance_longue') resultKey = 'P5_super_commuter'
         else resultKey = 'P6_super_commuter_xxl'
       } else {
+        // Polyvalent
         if (q8 === 'Q8_suspension_avec' && q5 === 'Q5_portage_modere')
           resultKey = 'P2_3_multimodal_suspendue'
         else if (q4 === 'Q4_distance_moyenne')
@@ -112,7 +118,7 @@ export const calculateResult = (
         else resultKey = 'P10_indecis'
       }
     } else if (q9 === 'Q9_budget_moyen') {
-      // Budget 1500€ - 3000€
+      // Budget 1500€ - 3000€ (Cœur de marché)
       if (q5 === 'Q5_portage_intensif') {
         resultKey = 'P2_1_multimodal_ultraleger'
       } else if (q1 === 'Q1_debutant' && q7 === 'Q7_style_decouverte') {
@@ -188,8 +194,8 @@ export const calculateResult = (
   }
 
   // =========================================================================
-  // ARBRE 2 : LA LOGIQUE LOGISTIQUE / POIDS (Q10_priorite_poids)
-  // Arbitrage : La compacité et le poids limitent l'emprunt de batterie.
+  // ARBRE 2 : LOGIQUE LOGISTIQUE / POIDS (Q10_priorite_poids)
+  // Objectif : Minimiser le poids et l'encombrement face aux contraintes de portage
   // =========================================================================
   else if (q10 === 'Q10_priorite_poids') {
     if (q5 === 'Q5_portage_intensif') {
@@ -212,7 +218,7 @@ export const calculateResult = (
         resultKey = 'P2_2_multimodal_classique'
       }
     } else {
-      // Portage rare
+      // Portage rare (Maniabilité et compacité recherchées)
       if (q1 === 'Q1_debutant' && q9 === 'Q9_budget_serre') {
         resultKey = 'P1_debutant_occasion'
       } else if (q3 === 'Q3_utilitaire') {
@@ -247,8 +253,8 @@ export const calculateResult = (
   }
 
   // =========================================================================
-  // ARBRE 3 : LA LOGIQUE USAGE / PERFORMANCE (Q10_priorite_usage)
-  // Arbitrage : L'expérience prime. Le poids et le prix s'effacent.
+  // ARBRE 3 : LOGIQUE USAGE / PERFORMANCE (Q10_priorite_usage)
+  // Objectif : Recommander la machine idéale selon le besoin applicatif pur
   // =========================================================================
   else {
     if (q3 === 'Q3_loisir') {
@@ -293,6 +299,7 @@ export const calculateResult = (
         else resultKey = 'P3_occasionnel_court'
       }
     } else {
+      // Polyvalent
       if (q6 === 'Q6_terrain_offroad') {
         resultKey = 'P7_voltigeur'
       } else if (q4 === 'Q4_distance_tres_longue') {
@@ -318,10 +325,12 @@ export const calculateResult = (
   }
 
   // =========================================================================
-  // CALCUL DES AVERTISSEMENTS
+  // CALCUL DES AVERTISSEMENTS POUR L'INTERFACE UTILISATEUR
   // =========================================================================
   return {
     key: resultKey,
+
+    // Avertissement si un débutant est orienté vers une machine puissante/lourde
     showWarning_debutant:
       q1 === 'Q1_debutant' &&
       ![
@@ -332,6 +341,7 @@ export const calculateResult = (
         'P11_mouton_5_pattes',
       ].includes(resultKey),
 
+    // Avertissement sur la complexité d'entretien des modèles hautes performances
     showWarning_entretien: [
       'P5_super_commuter',
       'P6_super_commuter_xxl',
@@ -341,6 +351,7 @@ export const calculateResult = (
       'P9_2_grand_voyageur',
     ].includes(resultKey),
 
+    // Avertissement sur la prise de poids/coût liée aux suspensions
     showWarning_suspension: [
       'P2_3_multimodal_suspendue',
       'P4_commuter_regulier',

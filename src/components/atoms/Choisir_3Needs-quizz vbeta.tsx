@@ -13,11 +13,11 @@ export const QuizBesoins_beta = () => {
   return (
     <>
       {/* --- CONFIGURATEUR VISUEL (BETA) --- */}
-      <div className="mb-8 grid grid-cols-1 xl:grid-cols-3 gap-6 text-sm">
+      <div className="mb-0 grid grid-cols-1 gap-6 text-sm">
         {/* QUESTIONS */}
-        <div className="xl:col-span-2 text-xs">
+        <div className="text-xs">
           <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-800 p-2">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 text-xs">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-1 text-xs">
               {QUESTIONS.map((question) => (
                 <div
                   key={question.id}
@@ -61,10 +61,11 @@ export const QuizBesoins_beta = () => {
             </div>
           </div>
         </div>
-
+      </div>
+      <div className="mt-1 mb-8 grid grid-cols-1 gap-6 text-sm">
         {/* RÉSULTAT EN DIRECT À DROITE DE LA GRILLE */}
         <div className="xl:col-span-1">
-          <div className="sticky top-24 rounded-xl border border-emerald-500/30 bg-white dark:bg-gray-800 p-4 shadow-md">
+          <div className="sticky top-24 rounded-xl border border-gray-200 dark:border-gray-700 bg-slate-50 dark:bg-gray-800 p-2 shadow-md">
             {Object.keys(answers).length < QUESTIONS.length ? (
               <div className="text-center py-8">
                 <div className="text-5xl mb-3">🎯</div>

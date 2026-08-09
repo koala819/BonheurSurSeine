@@ -220,7 +220,7 @@ export function Top() {
                     href="/choisir-gyroroue#besoins"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
-                    🔸Ses besoins
+                    🔸Identifier tes besoins
                   </Link>
                 </li>
                 <li>
