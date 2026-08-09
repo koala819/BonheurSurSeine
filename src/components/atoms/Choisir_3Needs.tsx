@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 //import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs-quizz modal'
 //import { QuizBesoins_beta } from '@/src/components/atoms/Choisir_3Needs-quizz vbeta'
-
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
@@ -69,7 +68,7 @@ const Needs = () => {
       id="besoins"
       className="scroll-mt-24 my-8 bg-white dark:bg-gray-700 shadow-md rounded-lg p-2 md:p-4 lg:p-6"
     >
-      <h2 className="ml-2 md:ml-0">Bien identifier ses besoins</h2>
+      <h2 className="ml-2 md:ml-0">Bien identifier tes besoins</h2>
       {/*----------------------------------------------*/}
       {/*--               BLOC ET IMAGE              --*/}
       {/*----------------------------------------------*/}
@@ -271,9 +270,9 @@ const Needs = () => {
         </div>
       </div>
 
-      {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
-
-
+      {/*-- APPEL DU COMPOSANT INTERACTIF --
+      <QuizBesoins_modal />
+      <QuizBesoins_beta />*/}
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
       {/*----------------------------------------------*/}
