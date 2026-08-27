@@ -35,8 +35,8 @@ export const PROFILES: Record<string, ProfileData> = {
       'Tu dois régulièrement soulever ta roue mais tu parcours parfois de plus longues distances. La suspension est volontairement exclue afin de préserver le poids.',
     wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18L'],
   },
-  P2_3_multimodal_suspendue: {
-    id: 'P2_3_multimodal_suspendue',
+  P2_3_multimodale_suspendu: {
+    id: 'P2_3_multimodale_suspendu',
     title: '🚉 Multimodalité Suspendue',
     subtitle: 'Compacité et confort',
     description:

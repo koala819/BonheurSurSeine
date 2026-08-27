@@ -173,11 +173,11 @@ export const QUESTIONS: Question[] = [
     text: 'En cas de compromis, quelle est ta priorité absolue ?',
     options: [
       {
-        text: 'Le prix avant tout : je ne peux pas dépasser mon budget',
+        text: 'Le prix : je ne veux surtout pas dépasser mon budget',
         value: 'Q10_priorite_budget',
       },
       {
-        text: "Le poids et l'encombrement sont mes limites prioritaires",
+        text: "Le poids : avec l'encombrement, c'est une limite prioritaire",
         value: 'Q10_priorite_poids',
       },
       {

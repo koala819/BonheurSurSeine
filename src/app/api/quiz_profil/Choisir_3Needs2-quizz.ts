@@ -31,23 +31,32 @@ function loadRulesFromCSV(): Record<string, QuizResult> {
   const lines = fileContent.split(/\r?\n/)
   const rulesMap: Record<string, QuizResult> = {}
 
+  if (lines.length <= 1) return {}
+
+  // Détection automatique du séparateur (virgule ou point-virgule)
+  const separator = lines[0].includes(';') ? ';' : ','
+
   for (let i = 1; i < lines.length; i++) {
     const line = lines[i].trim()
     if (!line) continue
 
-    // Nettoyage de chaque cellule (retrait des guillemets et espaces)
-    const col = line.split(';').map((cell) => cell.trim().replace(/^"|"$/g, ''))
+    const col = line
+      .split(separator)
+      .map((cell) => cell.trim().replace(/^"|"$/g, ''))
 
     if (col.length < 15) continue
 
     // Clef formée par les réponses Q1 à Q10 (colonnes 1 à 10)
     const key = col.slice(1, 11).join('|')
 
+    // Extraction des 3 colonnes d'avertissements (index 11, 12, 13)
+    const warnings = [col[11], col[12], col[13]].map((w) => w.toLowerCase())
+
     rulesMap[key] = {
-      key: col[14] as ProfileKey,
-      showWarning_debutant: col[11] === 'TRUE' || col[11] === '1',
-      showWarning_entretien: col[12] === 'TRUE' || col[12] === '1',
-      showWarning_suspension: col[13] === 'TRUE' || col[13] === '1',
+      key: col[14] as ProfileKey, // Colonne PROFIL (index 14)
+      showWarning_debutant: warnings.includes('debutant'),
+      showWarning_suspension: warnings.includes('suspension'),
+      showWarning_entretien: warnings.includes('entretien'),
     }
   }
 

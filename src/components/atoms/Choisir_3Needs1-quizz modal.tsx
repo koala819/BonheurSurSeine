@@ -288,15 +288,26 @@ export const QuizBesoins_modal = () => {
                 ← Retour
               </Button>
             ) : (
-              <Button
-                variant="light"
-                onPress={resetQuiz}
-                isDisabled={isLoading}
-                className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium
+              <div className="flex items-center gap-x-2">
+                <Button
+                  variant="light"
+                  onPress={handleBack}
+                  isDisabled={isLoading}
+                  className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium
                 hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
-              >
-                🔄 Refaire le test
-              </Button>
+                >
+                  ←
+                </Button>
+                <Button
+                  variant="light"
+                  onPress={resetQuiz}
+                  isDisabled={isLoading}
+                  className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium
+                hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
+                >
+                  🔄 Refaire le test
+                </Button>
+              </div>
             )}
             {/* Bouton de droite : Fermer */}
             <Button
