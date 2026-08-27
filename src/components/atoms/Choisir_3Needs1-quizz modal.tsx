@@ -6,19 +6,25 @@ import {
   ModalBody,
   ModalContent,
   ModalFooter,
-  /*ModalHeader,*/
+  Spinner,
 } from '@heroui/react'
 import { useState } from 'react'
 
-import { calculateResult } from './Choisir_3Needs-quizz-algo'
-import { PROFILES } from './Choisir_3Needs-quizz-data-profil'
-import { QUESTIONS } from './Choisir_3Needs-quizz-data-questions'
+import { PROFILES } from './Choisir_3Needs1-quizz-data-profil'
+import { QUESTIONS } from './Choisir_3Needs1-quizz-data-questions'
+
+import {
+  type QuizResult,
+  calculateResultAction,
+} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quizz'
 
 export const QuizBesoins_modal = () => {
   const [currentStep, setCurrentStep] = useState(0)
   // 0 = Accueil, 1-10 = Questions dynamiques dans la modale, >10 = Résultat
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [result, setResult] = useState<QuizResult | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleStart = () => {
     setCurrentStep(1)
@@ -32,51 +38,68 @@ export const QuizBesoins_modal = () => {
     return 'RESULT'
   }
 
-  const handleAnswer = (value: string) => {
-    setAnswers((prev) => ({
-      ...prev,
+  const handleAnswer = async (value: string) => {
+    const updatedAnswers = {
+      ...answers,
       [currentStep]: value,
-    }))
+    }
+    setAnswers(updatedAnswers)
+
     const nextStep = getNextStep()
     if (nextStep === 'RESULT') {
-      setCurrentStep(QUESTIONS.length + 1)
+      setIsLoading(true)
+      try {
+        const res = await calculateResultAction(updatedAnswers)
+        setResult(res)
+        setCurrentStep(QUESTIONS.length + 1)
+      } catch (error) {
+        console.error('Erreur lors du calcul du profil :', error)
+      } finally {
+        setIsLoading(false)
+      }
     } else {
       setCurrentStep(nextStep)
     }
   }
+
   const handleBack = () => {
     if (currentStep > 1) {
       setCurrentStep((prev) => prev - 1)
     } else if (currentStep === 1) {
       setIsModalOpen(false)
       setAnswers({})
+      setResult(null)
       setCurrentStep(0)
     }
   }
+
   const handleCloseModal = () => {
     setIsModalOpen(false)
     setAnswers({})
+    setResult(null)
     setCurrentStep(0)
   }
+
   const resetQuiz = () => {
     setAnswers({})
+    setResult(null)
     setCurrentStep(1)
   }
 
-  // Calcul du résultat pour la modale
-  const result =
-    currentStep > QUESTIONS.length ? calculateResult(answers) : null
   const resultData = result ? PROFILES[result.key] : null
 
   return (
     <>
       {/* --- ÉCRAN D'ACCUEIL (Fixe sur la page) --- */}
-      <div className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-slate-100 dark:bg-gray-800/50 shadow-inner">
+      <div
+        className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-emerald-100 shadow-inner
+         dark:bg-emerald-800 dark:border-emerald-600"
+      >
         <div className="text-center py-2">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+          <h3 className="text-xl font-bold ">
             <span className="text-4xl">🎯</span> Découvre ton profil&nbsp;!
           </h3>
-          <p className="text-sm text-gray-700 dark:text-gray-200 mt-1 mb-4 max-w-md mx-auto">
+          <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 mb-4 max-w-md mx-auto">
             Réponds aux questions pour analyser tes contraintes, identifier tes
             besoins, cibler ton usage et découvrir les modèles les plus
             recommandés.
@@ -132,45 +155,57 @@ export const QuizBesoins_modal = () => {
 
           {/* CORPS DE LA MODALE */}
           <ModalBody className="space-y-2 min-h-[23vh] max-h-[70vh] overflow-y-auto pt-0 px-4">
-            {/* ÉTAT : QUESTIONS PAS À PAS */}
-            {currentStep >= 1 && currentStep <= QUESTIONS.length && (
-              <div className="animate-fade-in">
-                <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">
-                  {QUESTIONS[currentStep - 1].text}
-                </h4>
-                <div className="space-y-1">
-                  {QUESTIONS[currentStep - 1].options.map((option, idx) => {
-                    const isSelected = answers[currentStep] === option.value
-
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => handleAnswer(option.value)}
-                        className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-xs sm:text-sm font-base ${
-                          isSelected
-                            ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
-                            : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
-                        }`}
-                      >
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs sm:text-sm">
-                            {option.text}
-                          </span>
-                          {isSelected && (
-                            <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
-                              ✓
-                            </span>
-                          )}
-                        </div>
-                      </button>
-                    )
-                  })}
-                </div>
+            {/* ÉTAT : CHARGEMENT DU RÉSULTAT */}
+            {isLoading && (
+              <div className="flex flex-col items-center justify-center py-12 space-y-3">
+                <Spinner color="success" size="lg" />
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Analyse de tes réponses en cours...
+                </p>
               </div>
             )}
 
+            {/* ÉTAT : QUESTIONS PAS À PAS */}
+            {!isLoading &&
+              currentStep >= 1 &&
+              currentStep <= QUESTIONS.length && (
+                <div className="animate-fade-in">
+                  <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">
+                    {QUESTIONS[currentStep - 1].text}
+                  </h4>
+                  <div className="space-y-1">
+                    {QUESTIONS[currentStep - 1].options.map((option, idx) => {
+                      const isSelected = answers[currentStep] === option.value
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleAnswer(option.value)}
+                          className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-xs sm:text-sm font-base ${
+                            isSelected
+                              ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/20'
+                              : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-emerald-50/30 dark:hover:bg-emerald-950/20'
+                          }`}
+                        >
+                          <div className="flex justify-between items-center">
+                            <span className="text-xs sm:text-sm">
+                              {option.text}
+                            </span>
+                            {isSelected && (
+                              <span className="text-emerald-600 dark:text-emerald-400 font-bold ml-2">
+                                ✓
+                              </span>
+                            )}
+                          </div>
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
             {/* ÉTAT : RÉSULTAT FINAL DANS LA MODALE */}
-            {currentStep > QUESTIONS.length && resultData && (
+            {!isLoading && currentStep > QUESTIONS.length && resultData && (
               <div className="animate-fade-in">
                 <div className="mb-1">
                   <p className="text-center mb-2 text-xl md:text-2xl font-black text-gray-900 dark:text-white">
@@ -229,6 +264,7 @@ export const QuizBesoins_modal = () => {
                     ))}
                   </div>
                 </div>
+
                 {/* Mention de mise à jour de la sélection */}
                 <p className="text-center text-xs text-gray-500 dark:text-gray-300 my-1">
                   Sélection mise à jour en juillet 2026 selon l&apos;état actuel
@@ -245,6 +281,7 @@ export const QuizBesoins_modal = () => {
               <Button
                 variant="light"
                 onPress={handleBack}
+                isDisabled={isLoading}
                 className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium
                 hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
               >
@@ -254,6 +291,7 @@ export const QuizBesoins_modal = () => {
               <Button
                 variant="light"
                 onPress={resetQuiz}
+                isDisabled={isLoading}
                 className="rounded-xl bg-white dark:bg-gray-700 text-gray-800 dark:text-white font-medium
                 hover:bg-slate-200 dark:hover:bg-slate-600 transition-transform"
               >

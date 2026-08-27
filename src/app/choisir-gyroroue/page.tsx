@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 
 import Choice from '@/src/components/atoms/Choisir_0Choice'
 import Market from '@/src/components/atoms/Choisir_1Market'
-//import Brands from '@/src/components/atoms/Choisir_2Brands'
 import Marques from '@/src/components/atoms/Choisir_2Marques'
-import Needs from '@/src/components/atoms/Choisir_3Needs'
+import Needs from '@/src/components/atoms/Choisir_3Needs0'
 import Compare from '@/src/components/atoms/Choisir_4Compare'
 
 export const metadata: Metadata = {

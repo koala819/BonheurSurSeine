@@ -20,7 +20,7 @@ export const QUESTIONS: Question[] = [
       },
       {
         text: 'Déjà wheeler : je pratique de manière régulière ou occasionnelle',
-        value: 'Q1_pratiquant',
+        value: 'Q1_wheeler',
       },
     ],
   },
@@ -52,7 +52,7 @@ export const QUESTIONS: Question[] = [
       },
       {
         text: 'Un peu des deux : je cherche une roue pour tout faire',
-        value: 'Q3_polyvalent',
+        value: 'Q3_tout',
       },
     ],
   },
@@ -62,19 +62,19 @@ export const QUESTIONS: Question[] = [
     options: [
       {
         text: 'Petits trajets ou très courtes balades (-10km)',
-        value: 'Q4_distance_courte',
+        value: 'Q4_distance1_courte',
       },
       {
         text: 'Trajets réguliers de moyenne distance (10-30km)',
-        value: 'Q4_distance_moyenne',
+        value: 'Q4_distance2_moyenne',
       },
       {
         text: 'Longues distances régulières (30-60km)',
-        value: 'Q4_distance_longue',
+        value: 'Q4_distance3_longue',
       },
       {
         text: 'Très longues distances (+60km)',
-        value: 'Q4_distance_tres_longue',
+        value: 'Q4_distance4_tres_longue',
       },
     ],
   },
@@ -102,15 +102,15 @@ export const QUESTIONS: Question[] = [
     options: [
       {
         text: 'Propre : pistes cyclables, chemins lisses et rues apaisées',
-        value: 'Q6_terrain_lisse',
+        value: 'Q6_terrain1_lisse',
       },
       {
         text: 'Varié : routes d’agglomération, chaussée dégradés et pavés',
-        value: 'Q6_terrain_chaussee',
+        value: 'Q6_terrain2_chaussee',
       },
       {
         text: 'Tout-terrain : forêts, sentiers et reliefs accidentés',
-        value: 'Q6_terrain_offroad',
+        value: 'Q6_terrain3_offroad',
       },
     ],
   },
@@ -156,15 +156,15 @@ export const QUESTIONS: Question[] = [
     options: [
       {
         text: 'Serré : cible l’occasion ou l’entrée de gamme (-1500€)',
-        value: 'Q9_budget_serre',
+        value: 'Q9_budget1_serre',
       },
       {
         text: 'Intermédiaire : le cœur du marché (1500-3000€)',
-        value: 'Q9_budget_moyen',
+        value: 'Q9_budget2_moyen',
       },
       {
         text: 'Premium / No Limit : orienté performance (+3000€)',
-        value: 'Q9_budget_premium',
+        value: 'Q9_budget3_premium',
       },
     ],
   },
@@ -177,7 +177,7 @@ export const QUESTIONS: Question[] = [
         value: 'Q10_priorite_budget',
       },
       {
-        text: "La logistique : le poids et l'encombrement sont mes limites physiques",
+        text: "Le poids et l'encombrement sont mes limites prioritaires",
         value: 'Q10_priorite_poids',
       },
       {
