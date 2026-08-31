@@ -10,15 +10,17 @@ import {
 } from '@heroui/react'
 import { useState } from 'react'
 
-import { PROFILES } from './Choisir_3Needs1-quizz-data-profil'
-import { QUESTIONS } from './Choisir_3Needs1-quizz-data-questions'
+import { PROFILES } from './Choisir_3Needs1-quiz-list-profils'
+import { QUESTIONS } from './Choisir_3Needs1-quiz-list-questions'
 
 import {
   type QuizResult,
   calculateResultAction,
-} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quizz'
+} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quiz'
 
-export const QuizBesoins_modal = () => {
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
+export const Quiz_Ecran = () => {
   const [currentStep, setCurrentStep] = useState(0)
   // 0 = Accueil, 1-10 = Questions dynamiques dans la modale, >10 = Résultat
   const [answers, setAnswers] = useState<Record<number, string>>({})
@@ -49,7 +51,11 @@ export const QuizBesoins_modal = () => {
     if (nextStep === 'RESULT') {
       setIsLoading(true)
       try {
-        const res = await calculateResultAction(updatedAnswers)
+        // Exécution en parallèle : calcul serveur + délai minimum de 1500 ms
+        const [res] = await Promise.all([
+          calculateResultAction(updatedAnswers),
+          delay(1500),
+        ])
         setResult(res)
         setCurrentStep(QUESTIONS.length + 1)
       } catch (error) {
@@ -160,7 +166,7 @@ export const QuizBesoins_modal = () => {
               <div className="flex flex-col items-center justify-center py-12 space-y-3">
                 <Spinner color="success" size="lg" />
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Analyse de tes réponses en cours...
+                  ⏳ Analyse de tes réponses en cours...
                 </p>
               </div>
             )}
@@ -174,12 +180,12 @@ export const QuizBesoins_modal = () => {
                     {QUESTIONS[currentStep - 1].text}
                   </h4>
                   <div className="space-y-1">
-                    {QUESTIONS[currentStep - 1].options.map((option, idx) => {
+                    {QUESTIONS[currentStep - 1].options.map((option) => {
                       const isSelected = answers[currentStep] === option.value
 
                       return (
                         <button
-                          key={idx}
+                          key={option.value}
                           onClick={() => handleAnswer(option.value)}
                           className={`w-full text-left p-1.5 rounded-lg border transition-all duration-150 text-xs sm:text-sm font-base ${
                             isSelected
@@ -276,7 +282,7 @@ export const QuizBesoins_modal = () => {
 
           {/* FOOTER DE LA MODALE */}
           <ModalFooter className="border-t border-gray-200 dark:border-gray-700 flex justify-between items-center pt-3 pb-2">
-            {/* Bouton : Retour (pendant les questions) ou Refaire (aux résultats) */}
+            {/* Bouton : Retour (pendant les questions) + Refaire (aux résultats) */}
             {currentStep <= QUESTIONS.length ? (
               <Button
                 variant="light"

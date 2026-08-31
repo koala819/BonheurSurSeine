@@ -1,6 +1,6 @@
 'use server'
 
-import { ProfileKey } from '@/src/components/atoms/Choisir_3Needs1-quizz-data-profil'
+import { ProfileKey } from '@/src/components/atoms/Choisir_3Needs1-quiz-list-profils'
 
 import fs from 'fs'
 import path from 'path'
@@ -16,14 +16,16 @@ let rulesCache: Record<string, QuizResult> | null = null
 
 function loadRulesFromCSV(): Record<string, QuizResult> {
   if (rulesCache) return rulesCache
-
+  //=> Le fichier CSV est un "Enregistrer Sous" fait sous Excel :
+  //   selectionnez CSV UTF8 (délimité par des virgules)
+  //   sur une version française, ce sera des ";"
   const filePath = path.join(
     process.cwd(),
     'src',
     'app',
     'api',
     'quiz_profil',
-    'Choisir_3Needs2-QUIZZ_RECO_v2026-08-29.csv',
+    'Choisir_3Needs2-quiz-recommandations_v2026-08-29_CSVUTF8.csv',
   )
 
   const fileContent = fs.readFileSync(filePath, 'utf-8')

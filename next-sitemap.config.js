@@ -12,8 +12,8 @@ module.exports = {
     if (url === '/') {
       priority = 1.0
     }
-    // Pages /mentions et /Merci
-    else if (url === '/mentions' || url === '/Merci') {
+    // Pages /mentions et /mille-merci
+    else if (url === '/mentions' || url === '/mille-merci') {
       priority = 0.5
     }
 

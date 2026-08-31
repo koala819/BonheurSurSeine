@@ -119,13 +119,13 @@ export const PROFILES: Record<string, ProfileData> = {
     title: '🤔 L’Indécis',
     subtitle: 'Mes coups de cœurs pour ne plus douter…',
     description:
-      "Tu découvres encore la gyroroue et tu ne sais pas précisément quel sera ton usage principal. Plutôt que de choisir une machine trop spécialisée, privilégie une roue capable de t'accompagner dans tes premiers trajets, tes balades et dans la découverte du bonheur d'aller rouler.",
+      "Tu découvres la gyroroue ou tu ne sais pas précisément quel sera ton usage principal. Plutôt que de choisir une machine trop spécialisée inadaptée, privilégie une roue capable de s'adapter à la plupart des usages et découvre le bonheur d'aller rouler.",
     wheels: ['Kingsong 16S Pro', 'Nosfet Aero', 'Nosfet Xeno'],
   },
   P0_reveur: {
     id: 'P0_reveur',
     title: '💭 Le Doux Rêveur',
-    subtitle: "On en rêve tous mais cette roue n'existe pas… ",
+    subtitle: "Même en rêve, cette roue n'existe pas…",
     description:
       "Tu recherches une roue ultra-légère mais avec une autonomie géante ? Une machine de course au prix d'une entrée de gamme ? Cela n'existe pas (encore). Il faut impérativement revoir tes attentes, ton budget ou tes contraintes.",
     wheels: ['🦄 Licorne', '🤡 Mouton à 5 pattes', '😂'],

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs1-quizz modal'
+import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
 
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
@@ -271,7 +271,7 @@ const Needs = () => {
       </div>
 
       {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
-      <QuizBesoins_modal />
+      <Quiz_Ecran />
 
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
