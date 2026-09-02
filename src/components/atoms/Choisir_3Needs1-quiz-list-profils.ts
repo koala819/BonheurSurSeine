@@ -38,17 +38,17 @@ export const PROFILES: Record<string, ProfileData> = {
   P2_2_agile: {
     id: 'P2_2_agile',
     title: "⚙️ L'Agile",
-    subtitle: 'Compromis compacité et autonomie (max 25 kg)',
+    subtitle: 'Compromis compacité et autonomie (max 25kg)',
     description:
-      "Tu fais tes trajets avec ta roue, mais tu souhaites conserver une roue compacte et discrète. Il te faut une roue très agile. Même si tu dois régulièrement soulever ta roue, tu acceptes un poids allant jusqu'à 25 kg en échange d'une autonomie accrue.",
-    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18L'],
+      "Tu fais tes trajets avec ta roue, mais tu souhaites conserver une roue compacte et discrète. Il te faut une roue très agile. Même si tu dois régulièrement soulever ta roue, tu acceptes un poids allant jusqu'à 25kg en échange d'une autonomie accrued.",
+    wheels: ['Kingsong 16S Pro', 'Inmotion V10F', 'Kingsong 18XL'],
   },
   P2_3_citadin_exigeant: {
     id: 'P2_3_citadin_exigeant',
     title: '🏙️ Le Citadin Exigeant',
     subtitle: 'Compacité et confort',
     description:
-      "Tu dois régulièrement soulever ta roue mais tu souhaites bénéficier d'un meilleur confort. La suspension reste légère et la machine conserve un gabarit raisonnable.",
+      "Tu dois régulièrement soulever ta roue, mais tu souhaites bénéficier d'un meilleur confort. La suspension reste légère et la machine conserve un gabarit raisonnable.",
     wheels: ['Inmotion V9', 'Kingsong S18', 'Nosfet Aero'],
   },
   P2_4_regulier: {
@@ -57,7 +57,12 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Confort et polyvalence au quotidien',
     description:
       'Tu utilises ta roue régulièrement pour aller travailler ou te déplacer sur de moyennes distances. La suspension devient ici un véritable atout pour amortir les chocs, réduire la fatigue et rouler sereinement aux côtés des autres usagers.',
-    wheels: ['Kingsong S16 Pro', 'Nosfet Aeon', 'Inmotion V12S', 'Begode F16'],
+    wheels: [
+      'Kingsong S16 Pro',
+      'Nosfet Aeon',
+      'Inmotion V12S',
+      'Kingsong F16',
+    ],
   },
   P2_5_commuter: {
     id: 'P2_5_commuter',
@@ -73,7 +78,7 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Longues distances à rythme soutenu',
     description:
       "Tu effectues de longs trajets quotidiens à un rythme soutenu. Tu as besoin d'une machine fiable, stable, dotée d'un grand diamètre de roue, d'une excellente autonomie et capable d'affronter sereinement la route sur la durée.",
-    wheels: ['Leaperkim Lynx-S', 'Begode F18'],
+    wheels: ['Leaperkim Lynx-S', 'Kingsong F18'],
   },
   P3_indecis: {
     id: 'P3_indecis',
@@ -89,7 +94,7 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Simplicité et fiabilité sans complication',
     description:
       "Tu cherches une roue simple pour des déplacements occasionnels ou de petites balades dominicales sans chichi. Pas besoin d'un monstre de puissance : tu privilégies des modèles sûrs et faciles à prendre en main.",
-    wheels: ['Kingsong 16S', 'Inmotion V10F', 'Kingsong 18XL'],
+    wheels: ['Kingsong 16X', 'Inmotion V10F', 'Kingsong 18XL'],
   },
   P4_1_voltigeur: {
     id: 'P4_1_voltigeur',
