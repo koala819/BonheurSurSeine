@@ -17,7 +17,7 @@ const sections = [
   {
     title: 'BonheurScore',
     items: [
-      { label: '📢 À propos du BonheurScore', href: '/BonheurScore' },
+      { label: "⭐ C'est quoi le BonheurScore ?", href: '/BonheurScore' },
       {
         label: '📅 Mes Tests et mes Reviews',
         href: '/BonheurScore#liste-tests',
@@ -27,8 +27,8 @@ const sections = [
   {
     title: 'Profiter des Codes Promo',
     items: [
-      { label: '🛒 Mes Partenaires', href: '/codes-promo' },
-      { label: '💶 Offres Exclusives', href: '/codes-promo' },
+      { label: '🛒 Boutiques & Partenaires', href: '/codes-promo' },
+      { label: '🏷️ Codes promo & Réductions', href: '/codes-promo' },
     ],
   },
   {
@@ -70,8 +70,12 @@ const sections = [
         href: '/choisir-gyroroue#besoins',
       },
       {
-        label: '🎯 8 questions à se poser',
+        label: '❓ 8 questions à se poser',
         href: '/choisir-gyroroue#8questions',
+      },
+      {
+        label: '🎯 Quiz : découvre ton profil',
+        href: '/choisir-gyroroue#quiz_profil',
       },
       { label: '🪄 Comparer les modèles', href: '/choisir-gyroroue#comparer' },
     ],
@@ -82,7 +86,7 @@ const sections = [
       { label: '📦 Le premier déballage', href: '/debuter-gyroroue#deballage' },
       { label: '📱 Les applications', href: '/debuter-gyroroue#applis' },
       { label: '🦿 Les powerpads', href: '/debuter-gyroroue#powerpads' },
-      { label: '😊 Le bon sens', href: '/debuter-gyroroue#bonsens' },
+      { label: '🧠 Le bon sens du wheeler', href: '/debuter-gyroroue#bonsens' },
       { label: "🪖 Comment s'équiper ?", href: '/debuter-gyroroue#equipement' },
       { label: "🛡️ L'assurance", href: '/debuter-gyroroue#assurance' },
       { label: '🚦 Le code de la route', href: '/debuter-gyroroue#code' },
@@ -148,10 +152,12 @@ const sections = [
       {
         label: '💲 Me soutenir (Tipeee, Patreon, etc.)',
         href: 'https://fr.tipeee.com/bonheur-sur-seine',
+        isExternal: true,
       },
       {
         label: '🌐 Rejoindre la communauté Discord',
         href: 'https://discord.com/invite/Jhgw7C96Jf',
+        isExternal: true,
       },
       { label: '🙂 Les copains', href: '/mille-merci#copains' },
     ],
@@ -160,7 +166,10 @@ const sections = [
     title: 'Informations légales',
     items: [
       { label: '⚖️ Mentions légales', href: '/mentions' },
-      { label: '#️⃣ Sitemap XML (pour moteurs)', href: '/sitemap.xml' },
+      {
+        label: '#️⃣ Plan du site XML (Sitemap)',
+        href: '/sitemap.xml',
+      },
     ],
   },
 ]
@@ -193,7 +202,7 @@ export default function Page() {
           type="search"
           name="query"
           placeholder="🔍 Rechercher sur tout le site via Google..."
-          className="w-full border rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-green-300"
+          className="w-full border rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-green-300 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
         />
       </form>
 
@@ -201,10 +210,12 @@ export default function Page() {
       <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {sections.map((section) => (
           <div key={section.title} className="space-y-2 sm:mb-5">
-            <h2 className="text-2xl font-semibold mb-1">{section.title}</h2>
-            <ul className="ml-3 list-disc list-inside space-y-1">
+            <h2 className="text-2xl font-semibold mb-1 border-b pb-1 border-gray-300 dark:border-gray-700">
+              {section.title}
+            </h2>
+            <ul className="ml-3 list-disc list-inside space-y-0.5">
               {section.items.map((it) => (
-                <p key={it.label}>
+                <p key={it.label} className="text-base">
                   <Link
                     href={it.href}
                     target="_blank"
@@ -220,9 +231,9 @@ export default function Page() {
       </section>
 
       {/* 🧑‍💻 À propos */}
-      <section className="max-w-6xl mx-auto bg-green-50 border border-green-100 rounded-2xl p-6 md:p-8 shadow-sm dark:bg-green-950 dark:border-green-800 ">
+      <section className="max-w-6xl mx-auto bg-green-50 border border-green-100 rounded-2xl p-6 md:p-8 shadow-sm dark:bg-green-950/40 dark:border-green-800">
         <h2 className="text-2xl font-semibold mb-2">🧑‍💻 À propos</h2>
-        <p className="text-sm text-justify leading-relaxed">
+        <p className="text-sm text-justify">
           <strong>Bonheur Sur Seine</strong> est un site indépendant dédié à la
           gyroroue et à la mobilité électrique. Tu y trouveras guides, tests,
           retours d’expérience et conseils pratiques pour bien choisir,

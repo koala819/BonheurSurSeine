@@ -218,7 +218,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div id="8questions" className="scroll-mt-56 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
-          <span className="text-2xl">🎯 </span>
+          <span className="text-2xl">❓ </span>
           <strong className="underline font-bold text-lg">
             8 questions essentielles
           </strong>{' '}
@@ -271,8 +271,9 @@ const Needs = () => {
       </div>
 
       {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
-      <Quiz_Ecran />
-
+      <div id="quiz_profil" className="scroll-mt-56">
+        <Quiz_Ecran />
+      </div>
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
       {/*----------------------------------------------*/}
