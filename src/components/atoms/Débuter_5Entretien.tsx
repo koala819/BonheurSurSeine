@@ -94,9 +94,12 @@ const Maintenance = () => {
             être <span className="underline">bridée à 25km/h</span>.
           </p>
           <div className="brownBlockentretien mb-1">
-            <b>
-              🔎 Conserve ton véhicule en bon état&nbsp;! C&apos;est ta sécurité
-              qui en dépend…
+            <b className="flex items-start">
+              <span className="mr-2">🔎</span>
+              <span className="text-left">
+                Conserve ton véhicule en bon état&nbsp;! <br />
+                C&apos;est ta sécurité qui en dépend…
+              </span>
             </b>
           </div>
           {/*------------------------------------*/}
@@ -141,22 +144,52 @@ const Maintenance = () => {
             </li>
           </ul>
           {/*------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ Prends soin de la batterie</h4>
+          <h4 className="mt-4 mb-2">
+            ➡️ Préserve la durée de vie de la batterie
+          </h4>
           <ul className="compactlist2 mb-2">
             <li className="text-left">
-              Évite de l&apos;exposer à des températures extrêmes (froid ou
+              Évite de l&apos;exposer aux températures extrêmes (froid ou
               chaud).
             </li>
+            <li className="text-left">Évite les décharges profondes.</li>
             <li className="text-left">
-              Ne laisse jamais la batterie se décharger complètement (stocker
-              entre 30%-70% en cas d&apos;immobilisation prolongée).
+              Après une utilisation intensive, patiente quelques dizaines de
+              minutes avant de recharger.
             </li>
             <li className="text-left">
-              Évite de recharger immédiatement à chaud, et ne laisse pas la
-              charge sans surveillance.
+              Pour une immobilisation prolongée, évite de laisser la batterie à
+              100% (plutôt environ entre 30-70%).
             </li>
           </ul>
-          <div className="mt-2 mb-6 flex justify-center">
+          {/*------------------------------------*/}
+          <h4 className="mt-4 mb-2">⚠️ Recharge la batterie en sécurité</h4>
+          <ul className="compactlist2 mb-2">
+            <li className="text-left">
+              Utilise uniquement le chargeur recommandé ou compatible avec ta
+              roue (prise, tension et ampérage).
+            </li>
+            <li className="text-left">
+              Débranche le chargeur une fois la charge terminée, et ne laisse
+              pas la roue en charge sans surveillance.
+            </li>
+            <li className="text-left">
+              Recharge dans un endroit dégagé, stable et à l&apos;écart de
+              matériaux inflammables.
+            </li>
+            <li className="text-left">
+              Batterie chaude ou gonflée&nbsp;? Choc important ou odeur
+              inhabituelle&nbsp;?{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                Ne recharge pas&nbsp;!
+              </strong>
+              <br />
+              Fais-la contrôler par un professionnel qualifié plutôt que de
+              tenter quoi que ce soit.
+            </li>
+          </ul>
+          {/*------------------------------------*/}
+          <div className="mt-6 mb-3 flex justify-center">
             <Image
               src={Tableaux_tensions}
               alt="Principaux risques des batteries"
@@ -166,18 +199,32 @@ const Maintenance = () => {
             />
           </div>
           {/*------------------------------------*/}
+          <p className="mt-1 mb-4 text-left">
+            🔎 Pour aller plus loin&nbsp;:{' '}
+            <a
+              href="https://www.assurance-prevention.fr/usages-dangers-batteries-lithium-ion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Usages et dangers des batteries lithium-ion
+            </a>
+            .
+          </p>
+          {/*------------------------------------*/}
           <div className="mt-4 brownBlockentretien">
             <b className="mb-2">
               💦 L&apos;eau s&apos;infiltre facilement partout.
               <br />
             </b>
-            <p>
-              L&apos;électronique et les batteries n&apos;aiment pas ça&nbsp;!
-              <br />
-              ⚠️ Les conséquences peuvent être{' '}
-              <strong>immédiates ou à plus long terme </strong>(rouille,
-              surchauffe, court-circuit et risque d&apos;incendie).
-            </p>
+            <b className="flex items-start">
+              <span className="mr-2">⚠️</span>
+              <span className="text-left">
+                Les conséquences peuvent être{' '}
+                <strong>immédiates ou à plus long terme </strong>(rouille,
+                surchauffe, court-circuit et risque d&apos;incendie).
+              </span>
+            </b>
           </div>
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
