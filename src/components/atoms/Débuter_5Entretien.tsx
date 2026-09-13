@@ -237,7 +237,7 @@ const Maintenance = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : mars 2025
+            dernière mise à jour : septembre 2026
           </p>
         </AccordionItem>
       </Accordion>

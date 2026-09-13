@@ -213,7 +213,7 @@ export default function Page() {
             <h2 className="text-2xl font-semibold mb-1 border-b pb-1 border-gray-300 dark:border-gray-700">
               {section.title}
             </h2>
-            <ul className="ml-3 list-disc list-inside space-y-0.5">
+            <ul className="ml-3 list-disc list-inside -space-y-0.5">
               {section.items.map((it) => (
                 <p key={it.label} className="text-base">
                   <Link
