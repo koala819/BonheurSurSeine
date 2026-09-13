@@ -147,6 +147,13 @@ const Maintenance = () => {
           <h4 className="mt-4 mb-2">
             ➡️ Préserve la durée de vie de la batterie
           </h4>
+          <p className="mb-2">
+            À ce jour, les fabricants utilisent des batteries basées sur la{' '}
+            <strong className="text-amber-900 dark:text-brown-200">
+              technologie lithium-ion, performante mais sensible
+            </strong>{' '}
+            à certaines conditions d&apos;utilisation.
+          </p>
           <ul className="compactlist2 mb-2">
             <li className="text-left">
               Évite de l&apos;exposer aux températures extrêmes (froid ou
@@ -189,16 +196,6 @@ const Maintenance = () => {
             </li>
           </ul>
           {/*------------------------------------*/}
-          <div className="mt-6 mb-3 flex justify-center">
-            <Image
-              src={Tableaux_tensions}
-              alt="Principaux risques des batteries"
-              width={768}
-              height={432}
-              className="rounded-lg cursor-pointer"
-            />
-          </div>
-          {/*------------------------------------*/}
           <p className="mt-1 mb-4 text-left">
             🔎 Pour aller plus loin&nbsp;:{' '}
             <a
@@ -211,6 +208,16 @@ const Maintenance = () => {
             </a>
             .
           </p>
+          {/*------------------------------------*/}
+          <div className="mt-6 mb-3 flex justify-center">
+            <Image
+              src={Tableaux_tensions}
+              alt="Principaux risques des batteries"
+              width={768}
+              height={432}
+              className="rounded-lg cursor-pointer"
+            />
+          </div>
           {/*------------------------------------*/}
           <div className="mt-4 brownBlockentretien">
             <b className="mb-2">

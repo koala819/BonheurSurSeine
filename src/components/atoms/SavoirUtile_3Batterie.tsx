@@ -91,11 +91,18 @@ const Practical_Battery = () => {
           }}
         >
           {/*---------------------------------------*/}
-
           <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
             {/* TEXTE */}
             <aside className="flex-1">
               <p className="mb-2">
+                En gyroroue, il est <strong>vital</strong>,{' '}
+                <u>pour rouler en sécurité</u>,{' '}
+                <strong>
+                  de veiller à ce que la batterie ait, à tout moment,
+                  suffisamment d&apos;énergie
+                </strong>{' '}
+                pour répondre à la demande du moteur.
+                <br />
                 Le pourcentage batterie est utile, rapide à lire, simple à
                 comprendre, mais…{' '}
               </p>
@@ -107,13 +114,6 @@ const Practical_Battery = () => {
                 </b>
               </div>
               <p className="mb-2 text-left">
-                Il est <strong>vital</strong>, <u>pour rouler en sécurité</u>,{' '}
-                <strong>
-                  de veiller à ce que la batterie ait, à tout moment,
-                  suffisamment d&apos;énergie
-                </strong>{' '}
-                pour répondre à la demande du moteur.
-                <br />
                 Si le moteur demande plus d&apos;énergie que ne peut en fournir
                 la batterie, la roue sera sans énergie&nbsp;et… ce sera la
                 chute&nbsp;!
@@ -136,9 +136,7 @@ const Practical_Battery = () => {
               </div>
             </aside>
           </div>
-
           {/*---------------------------------------*/}
-
           <p className="mb-2 text-left">
             Fais donc{' '}
             <Link
@@ -148,14 +146,16 @@ const Practical_Battery = () => {
               <i>preuve de bon sens</i>
             </Link>
             &nbsp;: ne va pas au-delà des limites de la roue (de son moteur
-            et/ou de sa batterie). Respecte le tilt-back et ne désactive jamais
-            les <i>&ldquo;bips&rdquo;</i>.
+            et/ou de sa batterie).
+            <br />
+            Respecte le tilt-back et ne désactive jamais les{' '}
+            <i>&ldquo;bips&rdquo;</i>.
             <br />
             Pour cela, l&apos;indicateur le plus utilisé est le P.W.M. (pour en
-            savoir plus sur les cellules et le PWM, consulte{' '}
+            savoir plus sur le PWM, consulte{' '}
             <Link
               href="/guide-utile-gyroroue#dico"
-              className="link-style font-bold text-black dark:text-white"
+              className="link-style font-semibold text-black dark:text-white"
             >
               Le P&apos;tit Dico du Bonheur
             </Link>
@@ -171,23 +171,33 @@ const Practical_Battery = () => {
               Ce qu&apos;il faut savoir&nbsp;:
             </p>
             <p>
-              🔸 Les batteries des gyroroues sont à ce jour composées de
-              cellules lithium-ion.
-              <br />
-              🔸 La batterie a une tension max (exemple&nbsp;: 84.0v, 100.8v,
-              126v, 151.2v…) et une tension min de fonctionnement. Sortir de
-              cette plage risque d&apos;abîmer les cellules.
-              <br />
-              🔸 Le BMS (Battery Management System) gère les cellules de la
-              batterie (cf.{' '}
+              🔸 Les batteries des gyroroues sont à ce jour{' '}
+              <strong>composées de cellules </strong> lithium-ion (pour en
+              savoir plus sur les cellules, consulte{' '}
               <Link
                 href="/guide-utile-gyroroue#dico"
-                className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
+                className="link-style font-semibold text-black dark:text-white"
               >
                 Le P&apos;tit Dico du Bonheur
               </Link>
-              ), et mesure en temps réel la tension (celle-ci diminue au fur et
-              à mesure de l&apos;utilisation).
+              ).
+              <br />
+              🔸 La batterie a une tension min et une tension max de
+              fonctionnement (exples&nbsp;: 84.0v, 100.8v, 126v, 151.2v…).
+              Sortir de cette <strong>plage de fonctionnement </strong> risque
+              d&apos;abîmer les cellules (cf. la partie{' '}
+              <Link
+                className="link-style font-semibold text-black dark:text-white"
+                href="/debuter-gyroroue#entretien"
+              >
+                Entretien
+              </Link>
+              ).
+              <br />
+              🔸 Le <strong>BMS</strong> (
+              <strong>Battery Management System</strong>) gère les cellules et
+              mesure en temps réel la tension (qui diminue au fur et à mesure de
+              l&apos;utilisation).
               <br />
               🔸 C&apos;est un calcul qui convertit cette tension instantanée en
               un pourcentage approximatif (de 100% à 0%). <br />
@@ -219,8 +229,10 @@ const Practical_Battery = () => {
               </p>
               <p className="text-left mt-2 ml-2">
                 Il faut aussi garder à l&apos;esprit que{' '}
-                <strong>la tension ne diminue pas de manière linéaire</strong>{' '}
-                avec le kilométrage parcouru&nbsp;!
+                <strong>
+                  la tension, elle non plus, ne diminue pas de manière linéaire
+                </strong>{' '}
+                avec la distance parcouru&nbsp;!
               </p>
             </aside>
             <aside className="w-4/5 md:w-2/5 text-center text-xs mb-0">
@@ -240,8 +252,9 @@ const Practical_Battery = () => {
           </div>
           <p className="text-left mt-4 mb-2">
             Je t&apos;explique dans cette vidéo l&apos;architecture d&apos;un
-            pack batterie, la différence entre pourcentage et tension, et
-            comment nos roues gèrent leur énergie pour assurer notre sécurité.
+            pack batterie composées de cellules lithium-ion, la différence entre
+            pourcentage et tension, et comment nos roues gèrent leur énergie
+            pour assurer notre sécurité.
           </p>
           <div className="flex flex-col items-center mb-6">
             <div className="w-full sm:w-4/5 md:w-3/4 lg:w-5/6 aspect-video rounded-xl shadow-md overflow-hidden">
@@ -258,6 +271,9 @@ const Practical_Battery = () => {
             </p>
           </div>
           {/*---------------------------------------*/}
+          {/*----------- Tension minimale ----------*/}
+          {/*---------------------------------------*/}
+          <h4 className="mt-4 mb-2">➡️ Autonomie et tension minimale</h4>
           <div className="blueBlock_batterie mb-4">
             <b className="mb-0 mt-0">
               Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
@@ -273,9 +289,6 @@ const Practical_Battery = () => {
             </p>
           </div>
           {/*---------------------------------------*/}
-          {/*----------- Tension minimale ----------*/}
-          {/*---------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ Tension minimale</h4>
           <p className="text-left">
             Certains préfèrent{' '}
             <strong>surveiller directement la tension </strong>pour connaitre
@@ -427,7 +440,6 @@ const Practical_Battery = () => {
               </div>
             </aside>
           </div>
-
           {/*---------------------------------------*/}
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}

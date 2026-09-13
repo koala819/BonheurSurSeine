@@ -112,63 +112,110 @@ const Pneu = () => {
           </p>
           {/*---------------------------------------------------------------*/}
           {/*------------------TYPES----------------------------------------*/}
+
           <h4 className="mt-6 mb-2">➡️ Les types de pneus&nbsp;?</h4>
           <p className="mt-2">
-            Techniquement, il existe 2 grandes familles&nbsp;:
+            Techniquement, il existe 2 grandes familles de pneus et plusieurs
+            façons de lire leur taille&nbsp;:
           </p>
-          {/*----------------- ARCHITECTURE ---------------------------*/}
+          {/* Les 2 blocs en grid */}
           <div className="ml-6 mr-4 mb-2 md:mb-4">
             <div className="grid gap-2 md:gap-4 lg:grid-cols-2 mb-4">
+              {/* CONCEPTION TUBETYPE (LOGIQUE VÉLO) */}
               <div
-                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
-                shadow-md hover:shadow-lg transition-shadow
-                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-taupe-600"
+                className="bg-taupe-50 dark:bg-taupe-900 px-3 py-3 rounded-xl
+                             shadow-md hover:shadow-lg transition-shadow
+                           dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                             flex flex-col h-full border-t-4 border-taupe-600"
               >
-                <h6 className="font-semibold mb-1">🛞 Les pneus vélo</h6>
-                <p className="text-sm">
-                  Ils sont pour la plupart équipés de <b>chambre à air </b>
-                  (simple, économique). <br />
-                  Leur taille correspond au <b>diamètre extérieur du pneu</b> et
-                  à la <b>largeur du pneu </b>(exprimé en pouce).
-                </p>
-                <div className="mt-1 ml-4 text-sm">
-                  Exemple&nbsp;: <i>18&quot;x2.5&quot;</i>
-                  <br />
-                  &nbsp;&nbsp;- 18&quot; = diamètre total de la roue
-                  <br />
-                  &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
+                <div className="flex items-center justify-between mb-2">
+                  <h5 className="font-semibold flex items-center gap-1">
+                    🛞 Standard Tubetype
+                  </h5>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    avec chambre à air
+                  </span>
+                </div>
+                <div>
+                  <p className="text-sm flex-grow">
+                    Pneus équipés d&apos;une <b>chambre à air</b>&nbsp;:
+                    simples, légers et économiques.
+                    <br />
+                    On les trouve généralement sur les vélos.
+                    <br />
+                    Leur taille (exprimée en pouces) correspond au{' '}
+                    <b>diamètre extérieur du pneu</b> gonflé et à la{' '}
+                    <b>largeur du pneu</b>.
+                  </p>
+                  <div className="mt-2 text-sm bg-black/5 dark:bg-white/5 p-2 rounded-lg">
+                    <span className="font-mono text-xs uppercase tracking-wider block text-taupe-600 dark:text-taupe-400 mb-0.5">
+                      Notation type Vélo&nbsp;:
+                    </span>
+                    <i className="font-semibold text-neutral-800 dark:text-neutral-300">
+                      18&quot;x2.5&quot;
+                    </i>
+                    <div className="mt-1 pl-2 text-xs border-l-2 border-taupe-400 text-neutral-800 dark:text-neutral-300">
+                      • <b>18&quot;</b> : diamètre extérieur total de la roue
+                      <br />• <b>2.5&quot;</b> : largeur du pneu
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              {/* CONCEPTION TUBELESS (LOGIQUE SCOOTER / MOTO) */}
               <div
-                className="bg-taupe-50 dark:bg-taupe-900 px-2 py-2 rounded-xl
-                shadow-md hover:shadow-lg transition-shadow
-                dark:shadow-neutral-900 dark:hover:shadow-neutral-950
-                flex flex-col h-full border-t-4 border-taupe-600"
+                className="bg-taupe-50 dark:bg-taupe-900 px-3 py-3 rounded-xl
+                             shadow-md hover:shadow-lg transition-shadow
+                           dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+                             flex flex-col h-full border-t-4 border-taupe-600"
               >
-                <h6 className="font-semibold mb-1">🛞 Les pneus scooter</h6>
-                <p className="text-sm">
-                  Ils sont majoritairement
-                  <b> tubeless </b>(plus résistants aux crevaisons, mais plus
-                  lourds et montage/réparation plus techniques).
+                <div className="flex items-center justify-between mb-2">
+                  <h5 className="font-semibold flex items-center gap-1">
+                    🛞 Standard Tubeless
+                  </h5>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    Sans chambre à air
+                  </span>
+                </div>
+                <p className="text-sm flex-grow">
+                  Pneus étanches <b>sans chambre à air</b>&nbsp;: plus
+                  résistants aux crevaisons mais plus lourds et au montage plus
+                  technique.
+                  <br /> On les trouve généralement sur les scooters.
                   <br />
                   Leur taille correspond à la <b>largeur du pneu</b> et au{' '}
                   <b>diamètre de la jante</b>.
                 </p>
-                <div className="mt-1 ml-4 text-sm">
-                  Exemple&nbsp;: <i>2.5&quot;-14&quot;</i>
-                  <br />
-                  &nbsp;&nbsp;- 2.5&quot; = largeur du pneu
-                  <br />
-                  &nbsp;&nbsp;- 14&quot; = diamètre de la jante
-                  <br />
-                  Exemple&nbsp;: <i>80/90-14</i> (exprimé en pouce)
-                  <br />
-                  &nbsp;&nbsp;- 80 = largeur (mm)
-                  <br />
-                  &nbsp;&nbsp;- 90 = hauteur (en %) = 90% de 80 mm (≈ 72 mm)
-                  <br />
-                  &nbsp;&nbsp;- 14 = diamètre de la jante (pouces)
+                <div className="mt-2 text-sm bg-black/5 dark:bg-white/5 p-2 rounded-lg space-y-2">
+                  <div>
+                    <span className="font-mono text-xs uppercase tracking-wider block text-taupe-600 dark:text-taupe-400 mb-0.5">
+                      Notation type Scooter&nbsp;:
+                    </span>
+                    <i className="font-semibold text-neutral-800 dark:text-neutral-300">
+                      2.5&quot;-14&quot;
+                    </i>
+                    <span className=" text-xs text-neutral-800 dark:text-neutral-300 mb-0.5">
+                      &nbsp;(en pouces)
+                    </span>
+                    <div className="mt-1 pl-2 text-xs border-l-2 border-taupe-400 text-neutral-800 dark:text-neutral-300">
+                      • <b>2.5&quot;</b> : largeur du pneu
+                      <br />• <b>14&quot;</b> : diamètre de la jante
+                    </div>
+                  </div>
+                  <div className="border-t border-black/10 dark:border-white/10 pt-1">
+                    <i className="font-semibold text-neutral-800 dark:text-neutral-300">
+                      80/90-14
+                    </i>{' '}
+                    <span className=" text-xs text-neutral-800 dark:text-neutral-300 mb-0.5">
+                      &nbsp;(en millimètres)
+                    </span>
+                    <div className="mt-1 pl-2 text-xs border-l-2 border-taupe-400 text-neutral-800 dark:text-neutral-300">
+                      • <b>80</b> : largeur du pneu (mm)
+                      <br />• <b>90</b> : hauteur du flanc (en %) = 90% de 80
+                      (≈72mm)
+                      <br />• <b>14</b> : diamètre de la jante (pouces)
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
