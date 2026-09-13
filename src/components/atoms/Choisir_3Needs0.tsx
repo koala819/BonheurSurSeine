@@ -5,8 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-//import { QuizBesoins_modal } from '@/src/components/atoms/Choisir_3Needs-quizz modal'
-//import { QuizBesoins_beta } from '@/src/components/atoms/Choisir_3Needs-quizz vbeta'
+//import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
@@ -218,7 +217,7 @@ const Needs = () => {
       {/*----------------------------------------------*/}
       <div id="8questions" className="scroll-mt-56 mt-4 mb-4 space-y-0">
         <p className="mt-0 mb-0 font-semibold">
-          <span className="text-2xl">🎯 </span>
+          <span className="text-2xl">❓ </span>
           <strong className="underline font-bold text-lg">
             8 questions essentielles
           </strong>{' '}
@@ -270,9 +269,10 @@ const Needs = () => {
         </div>
       </div>
 
-      {/*-- APPEL DU COMPOSANT INTERACTIF --
-      <QuizBesoins_modal />
-      <QuizBesoins_beta />*/}
+      {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
+      <div id="quiz_profil" className="scroll-mt-56">
+        {/*<Quiz_Ecran />*/}
+      </div>
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
       {/*----------------------------------------------*/}

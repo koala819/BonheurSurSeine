@@ -41,11 +41,11 @@ const nextConfig = {
       //  destination: '/codes-promo',
       //  permanent: true,
       //},
-      {
-        source: '/choix',
-        destination: '/choisir-gyroroue',
-        permanent: true,
-      },
+      //{
+      //  source: '/choix',
+      //  destination: '/choisir-gyroroue',
+      //  permanent: true,
+      //},
       //{
       //  source: '/Choisir',
       //  destination: '/choisir-gyroroue',
@@ -56,11 +56,11 @@ const nextConfig = {
       //  destination: '/debuter-gyroroue',
       //  permanent: true,
       //},
-      {
-        source: '/Debuter',
-        destination: '/debuter-gyroroue',
-        permanent: true,
-      },
+      //{
+      //  source: '/Debuter',
+      //  destination: '/debuter-gyroroue',
+      //  permanent: true,
+      //},
       //{
       //  source: '/Savoir_Utile',
       //  destination: '/guide-utile-gyroroue',
@@ -76,11 +76,11 @@ const nextConfig = {
       //  destination: '/mille-merci',
       //  permanent: true,
       //},
-      {
-        source: '/contact',
-        destination: '/mille-merci',
-        permanent: true,
-      },
+      //{
+      //  source: '/contact',
+      //  destination: '/mille-merci',
+      //  permanent: true,
+      //},
       //{
       //  source: '/mention',
       //  destination: '/mentions',

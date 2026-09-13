@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${process.env.CLIENT_URL}/`,
       lastModified: new Date(),
-      priority: 0.7,
+      priority: 1.0,
     },
     {
       url: `${process.env.CLIENT_URL}/BonheurScore`,
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${process.env.CLIENT_URL}/code-promo`,
       lastModified: new Date(),
-      priority: 0.7,
+      priority: 1.0,
     },
     {
       url: `${process.env.CLIENT_URL}/apprendre-gyroroue`,
