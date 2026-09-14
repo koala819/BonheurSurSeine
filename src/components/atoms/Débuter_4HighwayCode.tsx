@@ -373,11 +373,19 @@ const HighwayCode = () => {
                   Porter un vêtement ou équipement rétro-réﬂéchissant lorsque la
                   visibilité est insuffisante (
                   <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000050678293"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    IV. R412-43-3
+                  </Link>{' '}
+                  et{' '}
+                  <Link
                     href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000042089061"
                     target="_blank"
                     className="link-style"
                   >
-                    IV. R412-43-1 et arrêté du 24 juin 2020
+                    arrêté du 24 juin 2020
                   </Link>
                   ).
                 </li>
