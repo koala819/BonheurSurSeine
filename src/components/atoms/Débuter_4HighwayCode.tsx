@@ -373,11 +373,19 @@ const HighwayCode = () => {
                   Porter un vêtement ou équipement rétro-réﬂéchissant lorsque la
                   visibilité est insuffisante (
                   <Link
+                    href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000050678293"
+                    target="_blank"
+                    className="link-style"
+                  >
+                    IV. R412-43-3
+                  </Link>{' '}
+                  et{' '}
+                  <Link
                     href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000042089061"
                     target="_blank"
                     className="link-style"
                   >
-                    IV. R412-43-1 et arrêté du 24 juin 2020
+                    arrêté du 24 juin 2020
                   </Link>
                   ).
                 </li>
@@ -433,27 +441,40 @@ const HighwayCode = () => {
                 le cas au niveau national.
               </p>
               <p className="text-sm text-gray-800 dark:text-gray-100 mb-1">
-                Avant de circuler, il faut donc se renseigner sur les règles de
-                ta commune ou de ton département (pas simple 😕).
+                Avant de circuler, il faut donc se renseigner et se tenir
+                informer sur les règles de <strong>ta commune </strong>
+                ou de <strong>ton département</strong> (pas forcément simple
+                😕).
               </p>
-              <div
-                className="inline-flex items-center gap-2 px-3 py-2
-                rounded-lg text-white text-sm font-medium
-               bg-yellow-600 hover:bg-yellow-800
-               dark:bg-yellow-700 dark:hover:bg-yellow-950
-               transition-colors"
-              >
+              <p className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-1">
+                Pour t&apos;aider, consulte :
+              </p>
+              <div className="flex flex-wrap gap-1">
+                {/* Bouton 1 : La liste */}
                 <Link
                   href="https://www.mobilityurban.fr/casque-obligatoire-trottinette-electrique-arretes-locaux.html"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex w-fit items-center gap-2 px-3 py-2
+        rounded-lg text-white text-sm font-medium
+        bg-yellow-600 hover:bg-yellow-800
+        dark:bg-yellow-700 dark:hover:bg-yellow-950
+        transition-colors"
                 >
-                  Pour t&apos;aider, consulte la liste{' '}
-                  {/*(non-exhautive){' '}*/}
-                  <span className=" text-sm underline">
-                    réalisée par Mobility Urban
-                  </span>{' '}
-                  ↗
+                  📄 La liste de Mobility Urban ↗
+                </Link>
+                {/* Bouton 2 : La carte */}
+                <Link
+                  href="https://wheelerssarthois.github.io/Groupes-EDPM/carte-arretes.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center gap-2 px-3 py-2
+        rounded-lg text-white text-sm font-medium
+        bg-yellow-600 hover:bg-yellow-800
+        dark:bg-yellow-700 dark:hover:bg-yellow-950
+        transition-colors"
+                >
+                  🗺️ La carte des Wheelers Sarthois ↗
                 </Link>
               </div>
             </div>
