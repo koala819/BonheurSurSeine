@@ -5,8 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
-
+//import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
@@ -272,7 +271,7 @@ const Needs = () => {
 
       {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
       <div id="quiz_profil" className="scroll-mt-56">
-        <Quiz_Ecran />
+        {/*<Quiz_Ecran />*/}
       </div>
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}

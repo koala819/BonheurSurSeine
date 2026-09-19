@@ -204,10 +204,20 @@ const Maintenance = () => {
               rel="noopener noreferrer"
               className="underline"
             >
-              Usages et dangers des batteries lithium-ion
+              Les usages des batteries lithium-ion
+            </a>{' '}
+            et{' '}
+            <a
+              href="https://www.assurance-prevention.fr/risques-incendie-batterie-lithium-ion/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Les risques des batteries lithium-ion
             </a>
             .
           </p>
+
           {/*------------------------------------*/}
           <div className="mt-6 mb-3 flex justify-center">
             <Image
