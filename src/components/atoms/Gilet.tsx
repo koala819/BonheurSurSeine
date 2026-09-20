@@ -17,7 +17,7 @@ export default function Page() {
         Ouvrir le formulaire Google Forms
       </Link>*/}
       {/* Conteneur de l'iframe */}
-      <div className="w-full overflow-hidden rounded-lg border border-gray-200 shadow-sm bg-white h-[600px] sm:h-[800px]">
+      <div className="w-full overflow-hidden rounded-lg border border-gray-200 shadow-sm bg-white h-[1300px] sm:h-[1300px]">
         <iframe
           // Note : Remplacez cette URL par votre lien d'intégration réel si le lien raccourci bloque
           src="https://forms.gle/SKgYRJdYo1Tr8mje8"
