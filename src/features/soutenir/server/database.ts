@@ -52,12 +52,37 @@ export function hasConfiguredSoutenirDatabase() {
   return Boolean(process.env.BSS_SOUTENIR_DATABASE_URL?.trim())
 }
 
+async function traceInitializationStep<T>(
+  step: string,
+  operation: () => Promise<T>,
+): Promise<T> {
+  try {
+    return await operation()
+  } catch (error) {
+    // Nom d'étape uniquement : ne jamais journaliser l'URL ni le jeton Turso.
+    process.stderr.write(`BSS-SOUTENIR database initialization: ${step}\n`)
+    throw error
+  }
+}
+
 async function initializeSchema() {
   const database = getSoutenirDatabase()
 
-  await database.execute('PRAGMA foreign_keys = ON')
+  if (
+    process.env.VERCEL === '1' &&
+    process.env.VERCEL_ENV === 'preview' &&
+    process.env.VERCEL_GIT_COMMIT_REF === 'dev'
+  ) {
+    await traceInitializationStep('connectivity-select', () =>
+      database.execute('SELECT 1'),
+    )
+  }
 
-  await database.batch(
+  await traceInitializationStep('foreign-keys-pragma', () =>
+    database.execute('PRAGMA foreign_keys = ON'),
+  )
+
+  const tableCreation = database.batch(
     [
       `CREATE TABLE IF NOT EXISTS bss_soutenir_contributors (
         id TEXT PRIMARY KEY,
@@ -190,6 +215,7 @@ async function initializeSchema() {
     ],
     'write',
   )
+  await traceInitializationStep('create-tables-batch', () => tableCreation)
 
   const contributorColumns = await database.execute(
     'PRAGMA table_info(bss_soutenir_contributors)',
