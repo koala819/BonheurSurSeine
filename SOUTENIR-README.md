@@ -57,11 +57,17 @@ La base contributeurs est dédiée au module et locale par défaut. Elle n'utili
 
 Le fichier `src/features/soutenir/data/soutenir-local.db` est créé automatiquement. Il est exclu de Git par le `.gitignore` du module, y compris ses fichiers annexes, et ne doit jamais être commité.
 
-## Base dédiée pour une future préversion
+## Base dédiée pour la préversion
 
 Les variables `BSS_SOUTENIR_DATABASE_URL` et `BSS_SOUTENIR_DATABASE_AUTH_TOKEN` désignent une base libSQL propre au module. Elles ne remplacent pas les variables `TURSO_DATABASE_URL` et `TURSO_AUTH_TOKEN` du site historique. Sur Vercel, le module refuse d'utiliser le fichier SQLite local si l'URL de sa base dédiée manque.
 
-Quand `BSS_SOUTENIR_DATABASE_URL` est configurée, les contributions, sessions et liens vidéo du module utilisent cette base. Les vidéos du fichier local `videos.local.json` ne sont pas importées automatiquement. Les deux variables sont préparées pour la branche `dev` en Preview uniquement ; cette configuration seule ne publie pas le code et ne rend pas encore l'ensemble du parcours utilisable sur Vercel. L'administration peut être ouverte sur cette préversion seulement si toutes les conditions ci-dessous sont réunies ; elle reste fermée par défaut en ligne.
+Quand `BSS_SOUTENIR_DATABASE_URL` est configurée, les contributions, sessions et liens vidéo du module utilisent cette base. Les vidéos du fichier local `videos.local.json` ne sont pas importées automatiquement. La branche `dev` est publiée en Preview avec les deux variables de la base dédiée, mais le parcours de paiement en ligne reste fermé tant que la préparation Stripe test n'est pas terminée. L'administration peut être ouverte sur cette préversion seulement si toutes les conditions ci-dessous sont réunies ; elle reste fermée par défaut en ligne.
+
+### Ouverture graduelle de Stripe test en Preview
+
+Le paiement test fonctionne déjà en local sans nouveau drapeau. Sur Vercel, la clé Stripe de test seule ne suffit pas à ouvrir le parcours : le serveur exige `VERCEL=1`, `VERCEL_ENV=preview`, la branche `dev`, `BSS_SOUTENIR_APP_URL`, les deux variables de la base dédiée, `BSS_SOUTENIR_STRIPE_WEBHOOK_SECRET` et `BSS_SOUTENIR_ENABLE_PREVIEW_CHECKOUT=1`. Les clés `sk_live_` et `rk_live_` restent refusées.
+
+Configurer d'abord une destination webhook Stripe en mode test pour l'URL Preview `dev`, puis placer **son propre** secret de signature dans `BSS_SOUTENIR_STRIPE_WEBHOOK_SECRET` : celui donné par `stripe listen` pour le poste local n'est pas le secret de cette destination en ligne. Si la Preview est protégée par Vercel Authentication, Stripe devra disposer d'un accès webhook spécifique sans rendre tout l'aperçu public. Ajouter les secrets Stripe au projet Vercel pour **Preview `dev` seulement** et redéployer. N'ajouter `BSS_SOUTENIR_ENABLE_PREVIEW_CHECKOUT=1` qu'après avoir vérifié la destination et la base ; redéployer encore une fois pour l'ouverture. Ne jamais ajouter ces variables à Production.
 
 ### Verrouillage de l'administration en Preview
 
@@ -89,7 +95,7 @@ Dans son espace, un contributeur actif peut saisir librement un pseudo et cocher
 
 Cette vue lit la base locale alimentée par Checkout et les webhooks ; elle **n'est pas une copie du tableau de bord Stripe**. Elle n'importe ni les clients Stripe créés ailleurs, ni les factures de renouvellement, ni les coordonnées ou moyens de paiement. Le montant d'un soutien mensuel représente le tarif choisi, pas un total encaissé. Aucun compte Patreon ou Tipeee n'est importé. Une synchronisation Stripe en lecture seule et un stockage durable adaptés à la production seront à concevoir séparément si ces détails sont nécessaires.
 
-**Limite importante :** une vidéo YouTube non répertoriée reste accessible à toute personne qui obtient son URL. La protection de la page ne contrôle pas l'accès directement sur YouTube. La base distante permet désormais de conserver les liens, mais le parcours Preview n'a pas encore été testé ni publié.
+**Limite importante :** une vidéo YouTube non répertoriée reste accessible à toute personne qui obtient son URL. La protection de la page ne contrôle pas l'accès directement sur YouTube. La base distante permet désormais de conserver les liens, mais le parcours Preview n'a pas encore été testé de bout en bout.
 
 ## Envoi des liens de connexion
 

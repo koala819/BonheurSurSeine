@@ -1,6 +1,8 @@
 // BSS-SOUTENIR — Module plateforme de soutien
 import type { ContributionMode } from '@/src/features/soutenir/types/contribution'
 
+import { isStripeTestEnvironmentAllowed } from './stripe-preview-policy'
+
 import 'server-only'
 
 type CreateStripeCheckoutSessionInput = {
@@ -28,6 +30,29 @@ export class StripeConfigurationError extends Error {}
 export class StripeRequestError extends Error {}
 
 export function getStripeTestSecretKey() {
+  if (
+    !isStripeTestEnvironmentAllowed({
+      appUrlConfigured: Boolean(process.env.BSS_SOUTENIR_APP_URL?.trim()),
+      branch: process.env.VERCEL_GIT_COMMIT_REF,
+      databaseTokenConfigured: Boolean(
+        process.env.BSS_SOUTENIR_DATABASE_AUTH_TOKEN?.trim(),
+      ),
+      databaseUrlConfigured: Boolean(
+        process.env.BSS_SOUTENIR_DATABASE_URL?.trim(),
+      ),
+      previewCheckoutEnabled: process.env.BSS_SOUTENIR_ENABLE_PREVIEW_CHECKOUT,
+      vercel: process.env.VERCEL,
+      vercelEnvironment: process.env.VERCEL_ENV,
+      webhookSecretConfigured: Boolean(
+        process.env.BSS_SOUTENIR_STRIPE_WEBHOOK_SECRET?.trim(),
+      ),
+    })
+  ) {
+    throw new StripeConfigurationError(
+      'Stripe test n’est pas encore activé pour cette préversion.',
+    )
+  }
+
   const secretKey = process.env.BSS_SOUTENIR_STRIPE_SECRET_KEY?.trim()
 
   if (!secretKey) {
