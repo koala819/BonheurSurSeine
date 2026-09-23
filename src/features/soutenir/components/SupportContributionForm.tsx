@@ -19,7 +19,11 @@ const amounts: Array<{ label: string; value: ContributionAmount }> = [
   { label: 'Montant libre', value: 'custom' },
 ]
 
-export function SupportContributionForm() {
+export function SupportContributionForm({
+  checkoutEnabled,
+}: {
+  checkoutEnabled: boolean
+}) {
   const [mode, setMode] = useState<ContributionMode>('once')
   const [amount, setAmount] = useState<ContributionAmount>('10')
   const [customAmount, setCustomAmount] = useState('')
@@ -30,6 +34,7 @@ export function SupportContributionForm() {
   const customAmountIsValid = Number(customAmount) >= 1
   const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   const canContinue =
+    checkoutEnabled &&
     (amount !== 'custom' || customAmountIsValid) &&
     emailIsValid &&
     !isSubmitting
@@ -271,7 +276,9 @@ export function SupportContributionForm() {
           </p>
         ) : null}
         <p className="mt-3 text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-          Stripe fonctionne en mode test : aucun paiement réel ne sera effectué.
+          {checkoutEnabled
+            ? 'Stripe est en mode test : aucun paiement réel ne sera effectué.'
+            : 'Les paiements test ne sont pas encore activés sur cet environnement.'}
         </p>
       </div>
     </form>

@@ -4,6 +4,10 @@ import Link from 'next/link'
 
 import { SoutenirPageShell } from '@/src/features/soutenir/components/SoutenirPageShell'
 import { SupportContributionForm } from '@/src/features/soutenir/components/SupportContributionForm'
+import {
+  StripeConfigurationError,
+  getStripeTestSecretKey,
+} from '@/src/features/soutenir/server/stripe'
 
 export const metadata: Metadata = {
   title: 'Soutenir Bonheur sur Seine',
@@ -19,6 +23,16 @@ export default async function SoutenirPage({
   searchParams,
 }: SoutenirPageProps) {
   const { annule } = await searchParams
+  let checkoutEnabled = false
+
+  try {
+    getStripeTestSecretKey()
+    checkoutEnabled = true
+  } catch (error) {
+    if (!(error instanceof StripeConfigurationError)) {
+      throw error
+    }
+  }
 
   return (
     <SoutenirPageShell
@@ -35,7 +49,7 @@ export default async function SoutenirPage({
         </p>
       ) : null}
 
-      <SupportContributionForm />
+      <SupportContributionForm checkoutEnabled={checkoutEnabled} />
 
       <p className="mt-7 text-center text-sm text-slate-600 dark:text-slate-300">
         Tu as déjà contribué ?{' '}
