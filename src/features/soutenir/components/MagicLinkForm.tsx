@@ -1,16 +1,52 @@
 'use client'
 
 // BSS-SOUTENIR — Module plateforme de soutien
-import { Mail, Send } from 'lucide-react'
+import { ArrowRight, Loader2, Mail, Send } from 'lucide-react'
 import { useState } from 'react'
+
+import type { RequestMagicLinkResponse } from '@/src/features/soutenir/types/contribution'
 
 export function MagicLinkForm() {
   const [email, setEmail] = useState('')
-  const [isSimulated, setIsSimulated] = useState(false)
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState('')
+  const [previewUrl, setPreviewUrl] = useState('')
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setIsSimulated(true)
+    setError('')
+    setMessage('')
+    setPreviewUrl('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/soutenir/auth/request-link', {
+        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/json' },
+        method: 'POST',
+      })
+      const payload = (await response.json()) as
+        | RequestMagicLinkResponse
+        | { error: string }
+
+      if (!response.ok || !('message' in payload)) {
+        throw new Error(
+          'error' in payload ? payload.error : 'Une erreur est survenue.',
+        )
+      }
+
+      setMessage(payload.message)
+      setPreviewUrl(payload.previewUrl ?? '')
+    } catch (requestError) {
+      setError(
+        requestError instanceof Error
+          ? requestError.message
+          : 'Impossible de créer le lien de connexion.',
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -33,7 +69,9 @@ export function MagicLinkForm() {
             id="supporter-email"
             onChange={(event) => {
               setEmail(event.target.value)
-              setIsSimulated(false)
+              setError('')
+              setMessage('')
+              setPreviewUrl('')
             }}
             placeholder="toi@exemple.fr"
             required
@@ -44,25 +82,49 @@ export function MagicLinkForm() {
       </label>
 
       <button
-        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-600 px-5 py-3.5 font-bold text-white shadow-lg shadow-cyan-700/20 transition hover:bg-cyan-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:bg-cyan-400 dark:text-slate-950 dark:hover:bg-cyan-300"
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-600 px-5 py-3.5 font-bold text-white shadow-lg shadow-cyan-700/20 transition hover:bg-cyan-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-cyan-400 dark:text-slate-950 dark:hover:bg-cyan-300"
+        disabled={isSubmitting}
         type="submit"
       >
-        <Send aria-hidden="true" className="h-5 w-5" />
-        Recevoir mon lien de connexion
+        {isSubmitting ? (
+          <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
+        ) : (
+          <Send aria-hidden="true" className="h-5 w-5" />
+        )}
+        {isSubmitting ? 'Création du lien…' : 'Recevoir mon lien de connexion'}
       </button>
 
       <p className="mt-3 text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-        Prototype : aucun e-mail n&apos;est réellement envoyé.
+        Le lien personnel est valable 15 minutes. En local, sans SMTP configuré,
+        il s’affiche directement ici.
       </p>
 
-      {isSimulated ? (
+      {error ? (
+        <div
+          aria-live="polite"
+          className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-6 text-red-900 dark:border-red-800 dark:bg-red-950/50 dark:text-red-100"
+          role="alert"
+        >
+          {error}
+        </div>
+      ) : null}
+
+      {message ? (
         <div
           aria-live="polite"
           className="mt-5 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm leading-6 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-100"
           role="status"
         >
-          Simulation réussie : à terme, un lien de connexion serait envoyé à{' '}
-          <strong>{email}</strong>.
+          <p>{message}</p>
+          {previewUrl ? (
+            <a
+              className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-emerald-700 px-4 py-3 font-bold text-white transition hover:bg-emerald-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 dark:bg-emerald-300 dark:text-emerald-950 dark:hover:bg-emerald-200"
+              href={previewUrl}
+            >
+              Ouvrir mon lien magique local
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+          ) : null}
         </div>
       ) : null}
     </form>

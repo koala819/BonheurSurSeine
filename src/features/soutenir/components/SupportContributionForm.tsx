@@ -1,12 +1,15 @@
 'use client'
 
 // BSS-SOUTENIR — Module plateforme de soutien
-import { CalendarHeart, HandHeart, Heart } from 'lucide-react'
+import { CalendarHeart, HandHeart, Heart, Loader2, Mail } from 'lucide-react'
 import { useState } from 'react'
 
-import { useRouter } from 'next/navigation'
+import type {
+  CheckoutErrorResponse,
+  ContributionMode,
+  CreateCheckoutResponse,
+} from '@/src/features/soutenir/types/contribution'
 
-type ContributionMode = 'once' | 'monthly'
 type ContributionAmount = '5' | '10' | '20' | 'custom'
 
 const amounts: Array<{ label: string; value: ContributionAmount }> = [
@@ -17,24 +20,68 @@ const amounts: Array<{ label: string; value: ContributionAmount }> = [
 ]
 
 export function SupportContributionForm() {
-  const router = useRouter()
   const [mode, setMode] = useState<ContributionMode>('once')
   const [amount, setAmount] = useState<ContributionAmount>('10')
   const [customAmount, setCustomAmount] = useState('')
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const customAmountIsValid = Number(customAmount) >= 1
-  const canContinue = amount !== 'custom' || customAmountIsValid
+  const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  const canContinue =
+    (amount !== 'custom' || customAmountIsValid) &&
+    emailIsValid &&
+    !isSubmitting
 
-  const selectedAmount =
+  const amountInEuros =
     amount === 'custom' && customAmountIsValid
-      ? `${customAmount} €`
-      : `${amount} €`
+      ? Number(customAmount)
+      : Number(amount)
+  const selectedAmount =
+    amount === 'custom' && !customAmountIsValid
+      ? 'Montant à préciser'
+      : `${amountInEuros} €`
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    if (canContinue) {
-      router.push('/soutenir/merci')
+    if (!canContinue) {
+      return
+    }
+
+    setError('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/soutenir/checkout', {
+        body: JSON.stringify({
+          amountCents: Math.round(amountInEuros * 100),
+          email,
+          mode,
+        }),
+        headers: { 'Content-Type': 'application/json' },
+        method: 'POST',
+      })
+
+      const data = (await response.json()) as
+        | CreateCheckoutResponse
+        | CheckoutErrorResponse
+
+      if (!response.ok || !('checkoutUrl' in data)) {
+        throw new Error(
+          'error' in data ? data.error : 'Une erreur est survenue.',
+        )
+      }
+
+      window.location.assign(data.checkoutUrl)
+    } catch (submissionError) {
+      setError(
+        submissionError instanceof Error
+          ? submissionError.message
+          : 'Impossible d’ouvrir Stripe Checkout.',
+      )
+      setIsSubmitting(false)
     }
   }
 
@@ -167,6 +214,35 @@ export function SupportContributionForm() {
         ) : null}
       </fieldset>
 
+      <label className="mt-7 block" htmlFor="contribution-email">
+        <span className="mb-2 block text-base font-bold text-slate-900 dark:text-white">
+          Ton adresse e-mail
+        </span>
+        <span className="relative block">
+          <Mail
+            aria-hidden="true"
+            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+          />
+          <input
+            autoComplete="email"
+            className="w-full rounded-xl border border-slate-300 bg-white py-3 pl-12 pr-4 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-600/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+            id="contribution-email"
+            onChange={(event) => {
+              setEmail(event.target.value)
+              setError('')
+            }}
+            placeholder="toi@exemple.fr"
+            required
+            type="email"
+            value={email}
+          />
+        </span>
+        <span className="mt-2 block text-xs leading-5 text-slate-500 dark:text-slate-400">
+          Elle est enregistrée localement et préremplie sur la page Stripe de
+          test.
+        </span>
+      </label>
+
       <div className="mt-8 border-t border-slate-200 pt-6 dark:border-slate-700">
         <p className="mb-3 text-center text-sm text-slate-500 dark:text-slate-400">
           {mode === 'once' ? 'Soutien ponctuel' : 'Soutien mensuel'} ·{' '}
@@ -178,11 +254,24 @@ export function SupportContributionForm() {
           disabled={!canContinue}
           type="submit"
         >
-          <Heart aria-hidden="true" className="h-5 w-5" />
-          Contribuer
+          {isSubmitting ? (
+            <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
+          ) : (
+            <Heart aria-hidden="true" className="h-5 w-5" />
+          )}
+          {isSubmitting ? 'Ouverture de Stripe…' : 'Contribuer'}
         </button>
+        {error ? (
+          <p
+            aria-live="polite"
+            className="mt-3 rounded-lg bg-red-50 p-3 text-center text-sm text-red-700 dark:bg-red-950/40 dark:text-red-200"
+            role="alert"
+          >
+            {error}
+          </p>
+        ) : null}
         <p className="mt-3 text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-          Démonstration uniquement : aucun paiement ne sera effectué.
+          Stripe fonctionne en mode test : aucun paiement réel ne sera effectué.
         </p>
       </div>
     </form>

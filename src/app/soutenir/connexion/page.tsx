@@ -2,24 +2,80 @@
 import { ArrowLeft } from 'lucide-react'
 
 import type { Metadata } from 'next'
+import { cookies, headers } from 'next/headers'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 import { MagicLinkForm } from '@/src/features/soutenir/components/MagicLinkForm'
 import { SoutenirPageShell } from '@/src/features/soutenir/components/SoutenirPageShell'
 
+import {
+  SOUTENIR_SESSION_COOKIE,
+  getAuthenticatedContributorSession,
+} from '@/src/features/soutenir/server/auth'
+import {
+  VIDEO_ADMIN_COOKIE,
+  getVideoAdminOriginForHost,
+  hasVideoAdminSession,
+} from '@/src/features/soutenir/server/video-admin'
+
 export const metadata: Metadata = {
   title: 'Connexion contributeur | Bonheur sur Seine',
-  description:
-    "Prototype de connexion par lien magique à l'espace contributeurs.",
+  description: "Connexion par lien magique à l'espace contributeurs.",
 }
 
-export default function SoutenirConnexionPage() {
+type SoutenirConnexionPageProps = {
+  searchParams: Promise<{ deconnexion?: string; erreur?: string }>
+}
+
+export default async function SoutenirConnexionPage({
+  searchParams,
+}: SoutenirConnexionPageProps) {
+  const cookieStore = await cookies()
+  const host = (await headers()).get('host')
+  const adminOrigin = getVideoAdminOriginForHost(host)
+  const isAdmin = adminOrigin
+    ? await hasVideoAdminSession(cookieStore.get(VIDEO_ADMIN_COOKIE)?.value)
+    : false
+
+  if (isAdmin) {
+    redirect('/soutenir/contributeurs')
+  }
+
+  const session = await getAuthenticatedContributorSession(
+    cookieStore.get(SOUTENIR_SESSION_COOKIE)?.value,
+  )
+
+  if (session) {
+    redirect('/soutenir/contributeurs')
+  }
+
+  const { deconnexion, erreur } = await searchParams
+
   return (
     <SoutenirPageShell
-      description="Indique l’adresse utilisée pour ta contribution. À terme, tu recevras un lien personnel et sécurisé."
+      description="Indique ton adresse e-mail pour recevoir un lien personnel à usage unique."
       eyebrow="Connexion par lien magique"
       title="Retrouver mon espace contributeur"
     >
+      {erreur === 'lien' ? (
+        <p
+          className="mx-auto mb-5 max-w-xl rounded-xl border border-red-200 bg-red-50 p-4 text-center text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-100"
+          role="alert"
+        >
+          Ce lien est invalide, expiré ou déjà utilisé. Demande un nouveau lien.
+        </p>
+      ) : null}
+
+      {deconnexion === '1' ? (
+        <p
+          className="mx-auto mb-5 max-w-xl rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center text-sm text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-100"
+          role="status"
+        >
+          Tu es maintenant déconnecté.
+        </p>
+      ) : null}
+
       <MagicLinkForm />
 
       <p className="mt-7 text-center">
