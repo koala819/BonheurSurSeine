@@ -32,7 +32,7 @@ export function getStripeTestSecretKey() {
 
   if (!secretKey) {
     throw new StripeConfigurationError(
-      'Stripe test n’est pas encore configuré dans .env.local.',
+      'Stripe test n’est pas encore configuré pour cet environnement.',
     )
   }
 
