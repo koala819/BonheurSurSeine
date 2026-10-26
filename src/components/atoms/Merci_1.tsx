@@ -74,20 +74,77 @@ export default function Contact({
   }
 
   return (
-    <section className="py-1 px-4 sm:px-6 lg:px-8 space-y-8">
+    <section className="py-10 px-2 sm:px-4 md:px-6 lg:px-8 space-y-8">
+      <h1 className="">Soutenir Bonheur sur Seine</h1>
+
+      {/* Contenu en 2 colonnes */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_minmax(400px,1fr)] gap-2 items-center">
+        {/* Colonne de gauche */}
+        <div className="space-y-2 text-justify text-gray-800 dark:text-gray-200 leading-relaxed">
+          <p className="">
+            Le site Bonheur sur Seine ne contient{' '}
+            <strong>aucune publicité</strong> et ne collecte{' '}
+            <strong>aucune donnée personnelle </strong> afin de garantir une
+            navigation fluide et sans distraction. <br />
+            Son contenu, rédigé manuellement au fil des années, a été{' '}
+            <strong>pensé d&apos;intérêt général</strong> afin de partager notre
+            passion au plus grand nombre de la manière la plus simple possible.
+          </p>
+
+          <div className="blueBlock p-6 rounded-2xl shadow text-center space-y-1">
+            <p>
+              ➡️ Le contenu de Bonheur sur Seine{' '}
+              <strong className="text-blue-800 dark:text-blue-300">
+                est accessible gratuitement
+              </strong>{' '}
+              à toutes et à tous. Si tu souhaites{' '}
+              <strong>soutenir ce travail indépendant</strong>, tu peux
+              contribuer simplement, à ton rythme.
+            </p>
+          </div>
+        </div>
+
+        {/* Colonne de droite */}
+        <div className="relative max-w-3xl mx-auto order-first md:order-last">
+          <Image
+            src={bonheurSurSeine}
+            alt="Raphael"
+            className="w-[80%] h-auto mx-auto rounded-2xl object-cover object-center shadow-lg"
+            priority
+            placeholder="blur"
+          />
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-cyan-800/80 text-white px-2 py-2 rounded-xl shadow-md max-w-lg text-center min-w-56 text-xs sm:text-sm font-bold">
+            <p className="text-center mt-0 mb-0 scroll-mt-24">
+              ▶️&nbsp;
+              <i>
+                <Link
+                  href="https://fr.tipeee.com/bonheur-sur-seine"
+                  target="_blank"
+                  className="link-style hover:text-blue-200"
+                >
+                  Ne clique pas ici
+                </Link>
+              </i>
+              &nbsp;◀️
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* IMAGE ET Ne clique pas ici
       <section className="flex flex-col lg:flex-row my-2 lg:my-6">
         <aside className="w-full flex justify-center mb-0 lg:mb-0">
           <picture className="flex flex-col items-center px-4 w-full">
             <Image
               src={bonheurSurSeine}
               alt="Raphael"
-              className="w-[70%] h-auto object-cover object-center rounded-2xl mb-0"
+              className="w-[50%] h-auto object-cover object-center rounded-2xl mb-0"
               priority
               width={500}
               height={500}
               placeholder="blur"
             />
-            <p className="mt-0 mb-0 scroll-mt-24" id="tonavis">
+            <p className="mt-0 mb-0">
               ▶️&nbsp;
               <i>
                 <Link
@@ -102,7 +159,7 @@ export default function Contact({
             </p>
           </picture>
         </aside>
-      </section>
+      </section>*/}
 
       {/*<div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
         {!hideForm ? (
@@ -200,8 +257,16 @@ export default function Contact({
         )}
       </div>*/}
 
+      {/* APPEL AU SOUTIEN*/}
+      <div className="scroll-mt-36" id="soutien">
+        <Quote_financement />
+      </div>
+
       {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
-      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+      <div
+        className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl scroll-mt-36"
+        id="tonavis"
+      >
         <RatingStars2 />
       </div>
       {/*
@@ -210,11 +275,8 @@ export default function Contact({
       </div>
       */}
 
-      {/* APPEL AU SOUTIEN*/}
-      <Quote_financement />
-
       {/* ZONE Remerciements */}
-      <section id="copains" className="space-y-2 my-4 scroll-mt-48">
+      <section id="copains" className="space-y-2 my-4 scroll-mt-36">
         <h2>Remerciements</h2>
         <p className="text-sm">
           <b>Bonheur sur Seine</b>, ce sont des vidéos
