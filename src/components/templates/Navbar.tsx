@@ -30,7 +30,7 @@ export function Top() {
     { name: 'Choisir sa roue', path: '/choisir-gyroroue' },
     { name: "L'essentiel pour bien démarrer", path: '/debuter-gyroroue' },
     { name: 'Aller plus loin', path: '/guide-utile-gyroroue' },
-    { name: 'Merci', path: '/mille-merci' },
+    { name: 'Soutenir', path: '/mille-merci' },
   ]
 
   /* --------------------------------------------- */
@@ -220,7 +220,7 @@ export function Top() {
                     href="/choisir-gyroroue#besoins"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
-                    🔸Identifier tes besoins
+                    🔸Identifier tes usages
                   </Link>
                 </li>
                 <li>
@@ -372,7 +372,7 @@ export function Top() {
                 href="/mille-merci"
                 className="text-white hover:text-text-link whitespace-nowrap"
               >
-                Merci
+                Soutenir
               </Link>
             </NavbarItem>
             {/* Sous-menu */}
@@ -380,18 +380,18 @@ export function Top() {
               <ul className="italic flex flex-col p-1 text-sm text-gray-800 dark:text-gray-100">
                 <li>
                   <Link
-                    href="/mille-merci#tonavis"
-                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
-                  >
-                    🔸Donner ton avis
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/mille-merci#soutien"
                     className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
                   >
                     🔸Soutenir mon travail
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/mille-merci#tonavis"
+                    className="text-inherit text-sm hover:text-black dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded w-full"
+                  >
+                    🔸Donner ton avis
                   </Link>
                 </li>
                 <li>

@@ -143,27 +143,27 @@ const sections = [
     ],
   },
   {
-    title: 'Remerciements',
+    title: 'Soutenir',
     items: [
       {
         label: '💬 Donner ton avis',
         href: '/mille-merci#tonavis',
       },
       {
-        label: '💲 Me soutenir (Tipeee, Patreon, etc.)',
+        label: '💲 Financement (Tipeee, Patreon, etc.)',
         href: 'https://fr.tipeee.com/bonheur-sur-seine',
         isExternal: true,
       },
       {
-        label: '🌐 Rejoindre la communauté Discord',
+        label: '🌐 Rejoindre le Discord',
         href: 'https://discord.com/invite/Jhgw7C96Jf',
         isExternal: true,
       },
-      { label: '🙂 Les copains', href: '/mille-merci#copains' },
+      { label: '🙏 Remerciements', href: '/mille-merci#copains' },
     ],
   },
   {
-    title: 'Informations légales',
+    title: 'Autres informations',
     items: [
       { label: '⚖️ Mentions légales', href: '/mentions' },
       {

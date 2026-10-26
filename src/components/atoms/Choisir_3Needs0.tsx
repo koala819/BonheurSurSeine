@@ -5,7 +5,8 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-//import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
+import { Quiz_Ecran } from '@/src/components/atoms/Choisir_3Needs1-quiz-ecran'
+
 import Image_bon_sens from '@/public/2.choisir/Image_choisir_identifier_besoins(light)2.jpg'
 
 //-----------------------------------------------
@@ -67,7 +68,7 @@ const Needs = () => {
       id="besoins"
       className="scroll-mt-24 my-8 bg-white dark:bg-gray-700 shadow-md rounded-lg p-2 md:p-4 lg:p-6"
     >
-      <h2 className="ml-2 md:ml-0">Bien identifier tes besoins</h2>
+      <h2 className="ml-2 md:ml-0">Bien identifier tes usages</h2>
       {/*----------------------------------------------*/}
       {/*--               BLOC ET IMAGE              --*/}
       {/*----------------------------------------------*/}
@@ -271,7 +272,7 @@ const Needs = () => {
 
       {/*-- APPEL DU COMPOSANT INTERACTIF --*/}
       <div id="quiz_profil" className="scroll-mt-56">
-        {/*<Quiz_Ecran />*/}
+        <Quiz_Ecran />
       </div>
       {/*----------------------------------------------*/}
       {/*--                  BLOCS                   --*/}
