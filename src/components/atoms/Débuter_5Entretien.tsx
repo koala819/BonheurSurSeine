@@ -82,12 +82,13 @@ const Maintenance = () => {
             <strong className="text-amber-900 dark:text-brown-200">
               Comme tout véhicule
             </strong>
-            , les roues électriques ont besoin d&apos;un
+            , la gyroroue demande un minimum d&apos;attention et un{' '}
             <strong className="text-amber-900 dark:text-brown-200">
               {' '}
               entretien régulier
             </strong>{' '}
-            pour garantir leur durabilité et leur bon fonctionnement.
+            pour garantir sa durabilité, son bon fonctionnement… et aussi ta
+            sécurité !
           </p>
           <p className="mt-1 mb-4 text-left">
             Rappel&nbsp;: pour être utilisée sur voie publique, la roue doit
@@ -97,84 +98,75 @@ const Maintenance = () => {
             <b className="flex items-start">
               <span className="mr-2">🔎</span>
               <span className="text-left">
-                Conserve ton véhicule en bon état&nbsp;! <br />
+                Prends soin de ta roue&nbsp;! Garde-la en bon état&nbsp;!
+                <br />
                 C&apos;est ta sécurité qui en dépend…
               </span>
             </b>
           </div>
+
           {/*------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ À retenir</h4>
+          <h4 className="mt-4 mb-2"> ➡️ Les bons réflexes</h4>
           <ul className="compactlist2 mb-6">
             <li className="text-left">
-              Il est important de{' '}
               <strong className="text-amber-900 dark:text-brown-200">
-                vérifier
+                Avant chaque trajet&nbsp;:
               </strong>{' '}
-              son engin avant chaque trajet.
-            </li>
-            <li className="text-left">
-              Révise le{' '}
-              <strong className="text-amber-900 dark:text-brown-200">
-                régulièrement
-              </strong>
-              . Sois attentif à tout bruit suspect.
+              assure-toi rapidement de son bon état général, sois attentif à
+              tout bruit suspect, et vérifie l&apos;usure et la pression du
+              pneu.
             </li>
             <li className="text-left">
               <strong className="text-amber-900 dark:text-brown-200">
-                Chaque élément
+                Des contrôles réguliers&nbsp;:
               </strong>{' '}
-              est{' '}
-              <strong className="text-amber-900 dark:text-brown-200">
-                essentiel
-              </strong>
-              &nbsp;: usure du pneu, pédales, éclairages, électronique,
-              suspension, état et charge de la batterie, poussières,
-              visseries...
-            </li>
-            <li className="text-left">
-              Vérifie attentivement la coque&nbsp;: identifie tout risque
-              d&apos;infiltration ou toute trace d&apos;humidité.
-            </li>
-            <li className="text-left">
-              Vérifie régulièrement la{' '}
-              <strong className="text-amber-900 dark:text-brown-200">
-                pression du pneu
-              </strong>
-              .
+              Chaque élément est essentiel. Inspecte la visserie, les pédales,
+              l&apos;éclairage, la suspension (poussières, usure), la charge de
+              la batterie, et le bon état de la coque (pour contrer tout risque
+              d&apos;infiltration).
             </li>
           </ul>
+
           {/*------------------------------------*/}
           <h4 className="mt-4 mb-2">
-            ➡️ Préserve la durée de vie de la batterie
+            🪫 Préserver la durée de vie de la batterie
           </h4>
-          <p className="mb-2">
+          <p className="mb-0">
             À ce jour, les fabricants utilisent des batteries basées sur la{' '}
             <strong className="text-amber-900 dark:text-brown-200">
               technologie lithium-ion, performante mais sensible
             </strong>{' '}
-            à certaines conditions d&apos;utilisation.
+            à certaines conditions d&apos;utilisation. <br />
+            Quelques règles d&apos;or&nbsp;:
           </p>
-          <ul className="compactlist2 mb-2">
+          <ul className="compactlist2 mb-4">
             <li className="text-left">
-              Évite de l&apos;exposer aux températures extrêmes (froid ou
-              chaud).
-            </li>
-            <li className="text-left">Évite les décharges profondes.</li>
-            <li className="text-left">
-              Après une utilisation intensive, patiente quelques dizaines de
-              minutes avant de recharger.
+              Évite les températures extrêmes (froid intense ou plein soleil
+              prolongé).
             </li>
             <li className="text-left">
-              Pour une immobilisation prolongée, évite de laisser la batterie à
-              100% (plutôt environ entre 30-70%).
+              Évite au maximum les décharges profondes (tomber à 0%).
+            </li>
+            <li className="text-left">
+              Après un roulage intense, patiente quelques dizaines de minutes
+              avant de brancher la roue pour laisser la batterie refroidir.
+            </li>
+            <li className="text-left">
+              En cas de non-utilisation prolongée, stocke-la idéalement entre
+              30% et 70% de charge.
             </li>
           </ul>
+
           {/*------------------------------------*/}
-          <h4 className="mt-4 mb-2">⚠️ Recharge la batterie en sécurité</h4>
-          <ul className="compactlist2 mb-2">
+          <h4 className="mt-4 mb-2">⚠️ Recharger en toute sécurité</h4>
+          <ul className="compactlist2 mb-4">
             <li className="text-left">
-              Utilise uniquement le chargeur recommandé ou compatible avec ta
-              roue (prise, tension et ampérage).
+              Utilise{' '}
+              <strong className="text-amber-900 dark:text-brown-200">
+                uniquement
+              </strong>{' '}
+              le chargeur d&apos;origine ou un modèle compatible avec ta roue
+              (prise, tension et ampérage).
             </li>
             <li className="text-left">
               Débranche le chargeur une fois la charge terminée, et ne laisse
@@ -185,17 +177,15 @@ const Maintenance = () => {
               matériaux inflammables.
             </li>
             <li className="text-left">
-              Batterie chaude ou gonflée&nbsp;? Choc important ou odeur
-              inhabituelle&nbsp;?{' '}
               <strong className="text-amber-900 dark:text-brown-200">
-                Ne recharge pas&nbsp;!
-              </strong>
-              <br />
-              Fais-la contrôler par un professionnel qualifié plutôt que de
-              tenter quoi que ce soit.
+                Batterie chaude ou gonflée&nbsp;? Choc important ou odeur
+                suspecte&nbsp;?
+              </strong>{' '}
+              Ne la branche surtout pas ! <br /> Et confie-la à un professionnel
+              qualifié plutôt que de tenter quoi que ce soit.
             </li>
           </ul>
-          {/*------------------------------------*/}
+
           <p className="mt-1 mb-4 text-left">
             🔎 Pour aller plus loin&nbsp;:{' '}
             <a
@@ -213,7 +203,7 @@ const Maintenance = () => {
               rel="noopener noreferrer"
               className="underline"
             >
-              Les risques des batteries lithium-ion
+              Les risques associés
             </a>
             .
           </p>
@@ -228,6 +218,7 @@ const Maintenance = () => {
               className="rounded-lg cursor-pointer"
             />
           </div>
+
           {/*------------------------------------*/}
           <div className="mt-4 brownBlockentretien">
             <b className="mb-2">
@@ -237,12 +228,15 @@ const Maintenance = () => {
             <b className="flex items-start">
               <span className="mr-2">⚠️</span>
               <span className="text-left">
-                Les conséquences peuvent être{' '}
-                <strong>immédiates ou à plus long terme </strong>(rouille,
-                surchauffe, court-circuit et risque d&apos;incendie).
+                Les conséquences peuvent être immédiates ou à plus long terme{' '}
+                <strong>
+                  (rouille, surchauffe, court-circuit et risque d&apos;incendie)
+                </strong>
+                .
               </span>
             </b>
           </div>
+
           <p className="text-gray-500 dark:text-gray-300 mt-4 text-xs">
             rédigé par{' '}
             <Link
