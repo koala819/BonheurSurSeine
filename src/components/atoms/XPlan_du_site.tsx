@@ -181,7 +181,7 @@ export default function Page() {
 
       <header className="max-w-6xl mx-auto text-center">
         <p className="text-sm text-gray-500 mt-1">
-          Navigation & accès rapides à toutes les rubriques du site
+          Navigation, recherche & accès rapides à toutes les rubriques du site
         </p>
       </header>
 

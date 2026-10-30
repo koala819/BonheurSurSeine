@@ -129,7 +129,7 @@ export default async function Page() {
       {/*            English content                   */}
       {/*----------------------------------------------*/}
       <section lang="English">
-        <div className="bg-white dark:bg-cyan-900 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
+        <div className="bg-white dark:bg-cyan-900/40 border border-gray-100 dark:border-cyan-800 p-4 rounded-2xl shadow-lg text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
           {/* Title */}
           <h2 className="text-center text-medium md:text-lg lg:text-xl font-bold leading-relaxed">
             <strong>Electric Unicycle Reviews</strong> - EUC Tests and
@@ -163,7 +163,7 @@ export default async function Page() {
       {/*               bloc de fin de page            */}
       {/*----------------------------------------------*/}
       <div
-        className="bg-white dark:bg-cyan-800 p-6 rounded-lg shadow-md text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl"
+        className="bg-white dark:bg-cyan-900/40 border border-gray-100 dark:border-cyan-800 p-4 rounded-2xl shadow-lg text-center max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl"
         id="projet"
       >
         <h4 className="text-center font-medium mb-0">

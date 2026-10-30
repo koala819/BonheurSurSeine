@@ -1,5 +1,7 @@
 'use server'
 
+import { headers } from 'next/headers'
+
 import { ProfileKey } from '@/src/components/atoms/Choisir_3Needs1-quiz-list-profils'
 
 import fs from 'fs'
@@ -13,6 +15,12 @@ export interface QuizResult {
 }
 
 let rulesCache: Record<string, QuizResult> | null = null
+
+// Remplacer la variable simple par un Map pour stocker les temps par IP
+// Délai minimum entre deux appels successifs à la fonction serveur
+
+const callTimes = new Map<string, number>()
+const MIN_CALL_INTERVAL = 2001
 
 function loadRulesFromCSV(): Record<string, QuizResult> {
   if (rulesCache) return rulesCache
@@ -69,6 +77,27 @@ function loadRulesFromCSV(): Record<string, QuizResult> {
 export async function calculateResultAction(
   answers: Record<number, string>,
 ): Promise<QuizResult> {
+  // 1. Récupérer l'adresse IP de l'utilisateur
+  const headersList = await headers()
+  const forwardedFor = headersList.get('x-forwarded-for')
+  const ip = forwardedFor?.split(',')[0].trim() || 'ip-inconnue'
+
+  const now = Date.now()
+  const lastUserCallTime = callTimes.get(ip) || 0
+
+  // 2. Vérifier le délai uniquement pour cet utilisateur
+  if (now - lastUserCallTime < MIN_CALL_INTERVAL) {
+    throw new Error('Trop de requêtes successives')
+  }
+
+  // 3. Enregistrer l'appel
+  callTimes.set(ip, now)
+
+  // 4. Nettoyage simple du cache
+  if (callTimes.size > 500) {
+    callTimes.clear()
+  }
+
   const rules = loadRulesFromCSV()
 
   const key = Array.from({ length: 10 }, (_, i) => answers[i + 1] || '').join(

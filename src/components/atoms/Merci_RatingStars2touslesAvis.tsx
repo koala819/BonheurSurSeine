@@ -73,7 +73,7 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
         closeButton: 'right-3 left-auto top-1',
       }}
     >
-      <ModalContent className="rounded-xl bg-white p-1">
+      <ModalContent className="rounded-xl bg-white dark:bg-cyan-900/80 border border-gray-100 dark:border-cyan-800 p-1">
         <ModalHeader className="text-lg font-semibold mt-1 -ml-3 mb-1">
           Avis des utilisateurs
         </ModalHeader>
@@ -120,7 +120,7 @@ export default function ModalAvis({ isOpen, onClose }: Props) {
           <Button
             variant="ghost"
             onPress={onClose}
-            className="rounded-xl bg-slate-50"
+            className="rounded-xl bg-slate-50 dark:text-cyan-950"
           >
             Fermer
           </Button>

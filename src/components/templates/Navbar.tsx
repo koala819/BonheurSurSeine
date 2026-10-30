@@ -482,14 +482,31 @@ export function Top() {
                 🔵&nbsp;&nbsp;{item.name}
               </Link>
             ))}
-            <p className="text-right font-medium">
+            <div className="flex items-center justify-end gap-2 font-medium">
               <Link
                 href="/plan-du-site"
+                onClick={() => setIsMenuOpen(false)}
                 className="tracking-widest hover:cursor-pointer hover:underline text-xs xl:text-base text-white"
               >
-                Plan du Site
+                Rechercher
               </Link>
-            </p>
+              <Button
+                title="Plan du site"
+                variant="outline"
+                size="icon"
+                className="dark:bg-cyan-800 p-0.5 h-6 w-6"
+              >
+                <Link href="/plan-du-site" onClick={() => setIsMenuOpen(false)}>
+                  <Image
+                    src={PlanSite}
+                    alt="Plan du Site"
+                    className="object-fill dark:invert"
+                    width={16}
+                    height={16}
+                  />
+                </Link>
+              </Button>
+            </div>
           </div>
         )}
       </div>
