@@ -98,7 +98,7 @@ export const Quiz_Ecran = () => {
     <>
       {/* --- ÉCRAN D'ACCUEIL (Fixe sur la page) --- */}
       <div
-        className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-emerald-100 shadow-inner
+        className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-emerald-100 shadow-inner mx-2 md:mx-4 lg:mx-8
          dark:bg-emerald-800 dark:border-emerald-600"
       >
         <div className="text-center py-2">
