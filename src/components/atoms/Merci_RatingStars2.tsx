@@ -5,9 +5,7 @@ import Slider from 'react-slick'
 
 import ModalAvis from '@/src/components/atoms/Merci_RatingStars2touslesAvis'
 
-//import confetti from 'canvas-confetti'
 import 'slick-carousel/slick/slick-theme.css'
-// Import CSS slick-carousel
 import 'slick-carousel/slick/slick.css'
 
 type CommentItem = {
@@ -51,11 +49,7 @@ export default function RatingStars2() {
   async function fetchData() {
     try {
       const response = await fetch('/api/ratingv3')
-
-      if (!response.ok) {
-        throw new Error('Erreur chargement')
-      }
-
+      if (!response.ok) throw new Error('Erreur chargement')
       const data: Stats = await response.json()
 
       setAverage(Number(data.average || 0))
@@ -73,14 +67,8 @@ export default function RatingStars2() {
 
   async function sendRating(rating: number) {
     const now = Date.now()
-    if (loading) {
-      return
-    }
-    if (!pseudo.trim()) {
-      setFeedback('✏️ Entre un pseudo et un commentaire')
-      return
-    }
-    if (!comment.trim()) {
+    if (loading) return
+    if (!pseudo.trim() || !comment.trim()) {
       setFeedback('✏️ Entre un pseudo et un commentaire')
       return
     }
@@ -97,45 +85,30 @@ export default function RatingStars2() {
     try {
       const response = await fetch('/api/ratingv3', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          rating,
-          pseudo,
-          comment,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rating, pseudo, comment }),
       })
 
       const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Erreur')
-      }
+      if (!response.ok) throw new Error(data.error || 'Erreur')
 
       if (data.approved) {
-        const newComment: CommentItem = {
-          rating,
-          pseudo,
-          comment,
-        }
-
-        setComments((prev) => [newComment, ...prev.slice(0, 9)])
-
+        setComments((prev) => [
+          { rating, pseudo, comment },
+          ...prev.slice(0, 9),
+        ])
         sliderRef.current?.slickGoTo(0)
       }
 
       setPseudo('')
       setComment('')
-
       setFeedback(
         data.approved
           ? '✅ Merci pour ton avis !'
           : '✅ Commentaire bien reçu !',
       )
-
       fetchData()
-    } catch (err) {
+    } catch {
       setFeedback('❌ Une erreur est survenue')
     } finally {
       setLoading(false)
@@ -145,12 +118,7 @@ export default function RatingStars2() {
   const starStats = [5, 4, 3, 2, 1].map((star) => {
     const total = countsByRating[star] || 0
     const percent = count > 0 ? Math.round((total / count) * 100) : 0
-
-    return {
-      star,
-      total,
-      percent,
-    }
+    return { star, total, percent }
   })
 
   // Configuration react-slick pour commentaires
@@ -164,26 +132,31 @@ export default function RatingStars2() {
     autoplaySpeed: 4000,
     arrows: false,
     pauseOnHover: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="text-lg text-center font-bold text-black dark:text-white">
-        Tu as apprécié mon site ?<span className="font-normal"> Dis-le 🙂</span>
-      </div>
-
+    <div className="flex flex-col items-center w-full max-w-2xl mx-auto">
+      {/* --- En-tête & Note interactive --- */}
+      <h3 className="text-xl font-bold text-slate-900 dark:text-white m-0">
+        Tu as apprécié mon site ?{' '}
+        <span className="font-normal text-slate-600 dark:text-slate-300">
+          Dis-le 🙂
+        </span>
+      </h3>
       {/* ------------------------------------------------------ */}
       {/* Étoiles cliquables */}
-      <div className="text-center items-center space-x-1 font-semibold cursor-pointer">
+      <div className="flex justify-center space-x-1 cursor-pointer">
         {[1, 2, 3, 4, 5].map((val) => (
           <span
             key={val}
             onMouseEnter={() => setHovered(val)}
             onMouseLeave={() => setHovered(0)}
             onClick={() => sendRating(val)}
-            className={`text-3xl transition ${
-              val <= (hovered || selected) ? 'text-orange-500' : 'text-gray-400'
+            className={`text-4xl transition-transform hover:scale-110 ${
+              val <= (hovered || selected)
+                ? 'text-amber-500'
+                : 'text-slate-300 dark:text-slate-500'
             }`}
           >
             ★
@@ -191,14 +164,29 @@ export default function RatingStars2() {
         ))}
       </div>
 
-      <div className="flex flex-col gap-2 w-full max-w-md text-sm mt-2">
+      {/* Note globale & Nombre d'avis */}
+      <div className="text-sm text-slate-600 dark:text-slate-400">
+        <span className="text-amber-500 font-bold text-base">
+          {average.toFixed(2)} ★
+        </span>{' '}
+        sur{' '}
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="text-cyan-600 dark:text-cyan-400 underline hover:no-underline font-medium focus:outline-none"
+        >
+          {count} avis
+        </button>
+      </div>
+
+      {/* --- Formulaire de saisie modernisé --- */}
+      <div className="flex flex-col gap-y-1 w-4/5 m-1">
         <input
           type="text"
-          placeholder="Ton prénom"
+          placeholder="Ton prénom/pseudo (20 caractères max)"
           maxLength={20}
           value={pseudo}
           onChange={(e) => setPseudo(e.target.value)}
-          className="border rounded px-2 py-2 text-black dark:text-white bg-slate-200 dark:bg-slate-800"
+          className="w-full rounded-lg px-4 py-2.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 border border-transparent focus:border-cyan-500 focus:outline-none transition-colors"
         />
 
         <textarea
@@ -207,75 +195,73 @@ export default function RatingStars2() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows={3}
-          className="border rounded px-2 py-2 text-black dark:text-white bg-slate-200 dark:bg-slate-800
-          resize-none"
+          className="w-full rounded-lg px-4 py-2.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 border border-transparent focus:border-cyan-500 focus:outline-none transition-colors resize-none"
         />
+
+        {feedback && (
+          <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400 text-center">
+            {feedback}
+          </p>
+        )}
       </div>
 
-      {/* Feedback doux */}
-      {feedback && (
-        <div className="text-sm mt-2 text-emerald-600 dark:text-emerald-400">
-          {feedback}
-        </div>
-      )}
-
-      {/* ------------------------------------------------------ */}
-      {/* Moyenne */}
-      <div className="text-center mt-4">
-        <span className="text-yellow-500 font-bold text-base">
-          {average.toFixed(2)}⭐
-        </span>{' '}
-        (
-        <span
-          onClick={() => setIsModalOpen(true)}
-          className="text-gray-500 dark:text-white font-normal text-base cursor-pointer underline hover:no-underline"
-          title="Voir tous les avis"
-          role="button"
-          tabIndex={0}
-        >
-          {count} avis
-        </span>
-        )
-      </div>
-
-      <div className="items-center flex flex-col md:flex-row w-full max-w-3xl rounded-lg border-2 border-cyan-500 bg-slate-50 dark:bg-slate-950 relative p-2 gap-2">
-        <div className="w-full md:w-1/2 max-w-md space-y-1 p-1">
+      {/* --- Statistiques & Carrousel d'avis --- */}
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-3 rounded-lg">
+        {/* Barres de répartition (prend toute la hauteur de la grille et centre son contenu) */}
+        <div className="flex flex-col justify-center space-y-1 px-2 h-full">
           {starStats.map((s) => (
-            <div key={s.star} className="flex items-center text-sm font-mono">
-              <span className="w-8">{s.star}★</span>
-
-              <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded h-3 overflow-hidden">
+            <div
+              key={s.star}
+              className="flex items-center text-xs font-mono text-slate-700 dark:text-slate-300"
+            >
+              <span className="w-6">{s.star}★</span>
+              <div className="flex-1 bg-slate-200 dark:bg-slate-600 rounded-full h-2.5 mx-2 overflow-hidden">
                 <div
-                  className="bg-orange-400 h-3 transition-all"
+                  className="bg-amber-500 h-full rounded-full transition-all duration-500"
                   style={{ width: `${s.percent}%` }}
                 />
               </div>
-
-              <span className="w-8 text-right">{s.total}</span>
+              <span className="w-6 text-right">{s.total}</span>
             </div>
           ))}
         </div>
 
-        <div className="w-full md:w-1/2 max-w-md">
-          {comments.length > 0 && (
-            <Slider ref={sliderRef} {...sliderSettings}>
-              {comments.map((c, i) => (
-                <div key={i}>
-                  <div className="text-center bg-slate-200 dark:bg-gray-800 rounded-lg p-3 min-h-[120px] flex flex-col justify-center">
-                    <div className="font-semibold">{c.pseudo}</div>
-
-                    <div className="text-orange-400 text-xl">
-                      {'★'.repeat(c.rating)}
-                      {'☆'.repeat(5 - c.rating)}
-                    </div>
-
-                    <div className="text-sm italic text-gray-700 dark:text-gray-300 break-words">
-                      “{c.comment}”
+        {/* Carrousel des avis (prend toute la hauteur de la grille et centre son contenu) */}
+        <div className="flex flex-col justify-center h-full">
+          {comments.length > 0 ? (
+            <div className="w-full">
+              <Slider ref={sliderRef} {...sliderSettings}>
+                {comments.map((c, i) => (
+                  <div key={i} className="outline-none">
+                    <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/60 rounded-xl p-3 shadow-sm flex flex-col justify-between min-h-[110px]">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="font-semibold text-sm text-slate-900 dark:text-slate-100">
+                          {c.pseudo}
+                        </span>
+                        {/* Ancien code */}
+                        {/*<div className="text-orange-400 text-xl">
+                          {'★'.repeat(c.rating)}
+                          {'☆'.repeat(5 - c.rating)}
+                        </div>*/}
+                        <div className="text-amber-500 text-sm">
+                          {'★'.repeat(c.rating)}
+                          <span className="text-slate-300 dark:text-slate-600">
+                            {'★'.repeat(5 - c.rating)}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-sm italic text-slate-600 dark:text-slate-300 line-clamp-4 break-words">
+                        “{c.comment}”
+                      </p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </div>
+          ) : (
+            <div className="w-full text-center text-xs text-slate-400 italic py-6">
+              Aucun avis pour le moment. Sois le premier !
+            </div>
           )}
         </div>
       </div>

@@ -13,10 +13,14 @@ import { useState } from 'react'
 import { PROFILES } from './Choisir_3Needs1-quiz-list-profils'
 import { QUESTIONS } from './Choisir_3Needs1-quiz-list-questions'
 
+// Import API de la fonction de calcul du résultat depuis le fichier
 import {
   type QuizResult,
   calculateResultAction,
-} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quiz'
+} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quiz-vip'
+
+// ancienne fonction (sans verif IP)
+//} from '@/src/app/api/quiz_profil/Choisir_3Needs2-quiz-v1'
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -98,7 +102,7 @@ export const Quiz_Ecran = () => {
     <>
       {/* --- ÉCRAN D'ACCUEIL (Fixe sur la page) --- */}
       <div
-        className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-emerald-100 shadow-inner
+        className="scroll-mt-56 mb-6 py-3 px-6 border border-emerald-500/30 rounded-xl bg-emerald-100 shadow-inner max-w-lg mx-auto
          dark:bg-emerald-800 dark:border-emerald-600"
       >
         <div className="text-center py-2">
@@ -257,7 +261,7 @@ export const Quiz_Ecran = () => {
                 {/* Modèles */}
                 <div className="mb-2">
                   <h4 className="text-sm font-bold tracking-wide uppercase text-gray-700 dark:text-gray-300 text-center mt-3 mb-2">
-                    🎯 Exemples de modèles adaptés :
+                    🎯 Exemples de modèles adaptés&nbsp;:
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mx-4 sm:mx-0">
                     {resultData.wheels.map((wheel, index) => (
@@ -273,8 +277,7 @@ export const Quiz_Ecran = () => {
 
                 {/* Mention de mise à jour de la sélection */}
                 <p className="text-center text-xs text-gray-500 dark:text-gray-300 my-1">
-                  Sélection mise à jour en juillet 2026 selon l&apos;état actuel
-                  du marché.
+                  Sélection mise à jour en octobre 2026
                 </p>
               </div>
             )}

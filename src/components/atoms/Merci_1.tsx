@@ -12,7 +12,6 @@ import Link from 'next/link'
 import { ContactFriends } from '@/src/types/models'
 
 import Quote_financement from '@/src/components/atoms/Accueil_block_CTA'
-//import RatingStars1 from '@/src/components/atoms/Merci_RatingStars1'
 import RatingStars2 from '@/src/components/atoms/Merci_RatingStars2'
 
 import undefindAvatar from '@/public/5.merci/People.png'
@@ -264,16 +263,16 @@ export default function Contact({
 
       {/* AJOUT D'UNE NOTATION DU VISITEUR*/}
       <div
-        className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600 max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl scroll-mt-36"
+        className="bg-white dark:bg-cyan-900/40 p-4 rounded-lg max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl scroll-mt-36
+        border border-gray-100 dark:border-cyan-800
+        shadow-md hover:shadow-lg transition-shadow duration-300
+      shadow-gray-400 hover:shadow-gray-400
+      dark:shadow-neutral-900 dark:hover:shadow-neutral-950
+      hover:border-sky-700    dark:hover:border-sky-600"
         id="tonavis"
       >
         <RatingStars2 />
       </div>
-      {/*
-      <div className="bg-white dark:bg-cyan-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow dark:shadow-slate-600  max-w-lg mx-auto md:max-w-2xl lg:max-w-4xl">
-        <RatingStars1 />
-      </div>
-      */}
 
       {/* ZONE Remerciements */}
       <section id="copains" className="space-y-2 my-4 scroll-mt-36">

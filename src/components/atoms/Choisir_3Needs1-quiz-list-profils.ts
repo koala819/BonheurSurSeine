@@ -126,7 +126,7 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Roadtrips et autonomie sans compromis',
     description:
       "Tu veux parcourir des distances exceptionnelles sans te soucier de la recharge. La capacité batterie et la stabilité routière passent avant toute considération de poids ou d'encombrement.",
-    wheels: ['Leaperkim Sherman-L', 'Kingsong F22', 'Leaperkim Oryx'],
+    wheels: ['Leaperkim Sherman-P', 'Kingsong F22', 'Leaperkim Oryx'],
   },
 }
 
