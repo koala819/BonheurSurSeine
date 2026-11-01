@@ -273,7 +273,9 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           {/*----------- Tension minimale ----------*/}
           {/*---------------------------------------*/}
-          <h4 className="mt-4 mb-2">➡️ Autonomie et tension minimale</h4>
+          <h4 className="mt-4 mb-2 scroll-mt-24" id="cells">
+            ➡️ Autonomie et tension minimale
+          </h4>
           <div className="blueBlock_batterie mb-4">
             <b className="mb-0 mt-0">
               Avec un moteur électrique, l&apos;autonomie réelle n&apos;est pas
@@ -316,9 +318,7 @@ const Practical_Battery = () => {
           {/*---------------------------------------*/}
           {/*----------- type de cellule -----------*/}
           {/*---------------------------------------*/}
-          <h4 className="mt-6 mb-2 scroll-mt-24" id="cells">
-            ➡️ Et le type de cellule&nbsp;?
-          </h4>
+          <h4 className="mt-6 mb-2">➡️ Et le type de cellule&nbsp;?</h4>
           <div className="flex flex-col sm:flex-row items-center mb-2 gap-1">
             {/* TEXTE */}
             <aside className="flex-1">
