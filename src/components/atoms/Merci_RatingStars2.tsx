@@ -206,16 +206,16 @@ export default function RatingStars2() {
       </div>
 
       {/* --- Statistiques & Carrousel d'avis --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full gap-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-2 rounded-lg">
-        {/* Barres de répartition */}
-        <div className="flex flex-col justify-center space-y-1 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-4 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-3 rounded-lg">
+        {/* Barres de répartition (prend toute la hauteur de la grille et centre son contenu) */}
+        <div className="flex flex-col justify-center space-y-1 px-2 h-full">
           {starStats.map((s) => (
             <div
               key={s.star}
               className="flex items-center text-xs font-mono text-slate-700 dark:text-slate-300"
             >
               <span className="w-6">{s.star}★</span>
-              <div className="flex-1 bg-slate-200 dark:bg-slate-800 rounded-full h-2.5 mx-2 overflow-hidden">
+              <div className="flex-1 bg-slate-200 dark:bg-slate-600 rounded-full h-2.5 mx-2 overflow-hidden">
                 <div
                   className="bg-amber-500 h-full rounded-full transition-all duration-500"
                   style={{ width: `${s.percent}%` }}
@@ -226,14 +226,14 @@ export default function RatingStars2() {
           ))}
         </div>
 
-        {/* Carrousel des avis */}
-        <div className="flex items-center">
+        {/* Carrousel des avis (prend toute la hauteur de la grille et centre son contenu) */}
+        <div className="flex flex-col justify-center h-full">
           {comments.length > 0 ? (
             <div className="w-full">
               <Slider ref={sliderRef} {...sliderSettings}>
                 {comments.map((c, i) => (
                   <div key={i} className="outline-none">
-                    <div className="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-700/60 rounded-xl p-3 shadow-sm flex flex-col justify-between min-h-[110px]">
+                    <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-700/60 rounded-xl p-3 shadow-sm flex flex-col justify-between min-h-[110px]">
                       <div className="flex justify-between items-center mb-1">
                         <span className="font-semibold text-sm text-slate-900 dark:text-slate-100">
                           {c.pseudo}
