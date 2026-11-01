@@ -165,7 +165,7 @@ export default function RatingStars2() {
       <div className="flex flex-col gap-1 w-full max-w-md text-sm mb-1">
         <input
           type="text"
-          placeholder="Ton prénom"
+          placeholder="Ton prénom/pseudo (20 caractères max)"
           maxLength={20}
           value={pseudo}
           onChange={(e) => setPseudo(e.target.value)}
