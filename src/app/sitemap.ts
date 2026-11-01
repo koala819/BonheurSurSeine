@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${process.env.CLIENT_URL}/code-promo`,
+      url: `${process.env.CLIENT_URL}/codes-promo`,
       lastModified: new Date(),
       priority: 1.0,
     },
