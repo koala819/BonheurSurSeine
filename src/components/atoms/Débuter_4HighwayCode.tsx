@@ -84,7 +84,7 @@ const HighwayCode = () => {
             Depuis le 23 octobre 2019, les gyroroues sont officiellement
             reconnues dans le Code de la Route, classées dans la catégorie{' '}
             <strong>Engins de Déplacement Personnel à Moteur </strong>(EDPM) qui
-            inclut également les trotinettes&nbsp;:{' '}
+            inclut également les trottinettes&nbsp;:{' '}
             <Link
               href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039478722/"
               target="_blank"

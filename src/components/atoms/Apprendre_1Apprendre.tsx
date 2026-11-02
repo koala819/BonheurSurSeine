@@ -212,9 +212,9 @@ const Apprendre1 = () => {
           maîtrise)
           <br />
           🔸 <b>S&apos;entêter </b>pendant des heures (n&apos;insiste pas,
-          laisse le temps à ton corps d&apos;assimiler les sensations, fait une
-          pause sinon tu t&apos;épuiseras au risque de te faire mal, et
-          ré-essaye plutôt le lendemain après une bonne nuit de repos)
+          laisse le temps à ton corps d&apos;assimiler les sensations, fais une
+          pause sinon tu t&apos;épuiseras au risque de te faire mal, et réessaye
+          plutôt le lendemain après une bonne nuit de repos)
         </p>
       </div>
 

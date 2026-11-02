@@ -9,9 +9,9 @@ import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title:
-    "Bonheur Sur Seine - Mobilité urbaine : Tests, Conseils d'achat, et Reviews de gyroroue",
+    "BonheurScore | Tests de gyroroues (vidéos, conseils d'achat, et reviews de mobilité urbaine)",
   description:
-    'Gyroroue / Monoroue / Roue électrique : tests produits, évaluations détaillées, avis, comparatifs des marques et des modèles, photos et vidéos YouTube pour faire son choix avec le BonheurScore.',
+    'Consultez mes tests et mes avis des différents modèles de gyroroues, monoroues, roues électriques : évaluations détaillées, avis, comparatifs des marques et des modèles, photos et vidéos YouTube pour faire son choix. Comparez les marques et les modèles, et trouvez celui adapté à votre usage grâce au BonheurScore.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/BonheurScore`,
   },

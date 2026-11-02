@@ -74,7 +74,7 @@ export default function Contact({
 
   return (
     <section className="py-10 px-2 sm:px-4 md:px-6 lg:px-8 space-y-8">
-      <h1 className="">Soutenir Bonheur sur Seine</h1>
+      <h1 className="whitespace-break-spaces">Soutenir Bonheur sur Seine</h1>
 
       {/* Contenu en 2 colonnes */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_minmax(400px,1fr)] gap-2 items-center">

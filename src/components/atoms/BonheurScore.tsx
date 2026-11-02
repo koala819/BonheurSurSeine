@@ -442,7 +442,7 @@ export function BonheurScore({
                       hover:text-indigo-500
                       dark:hover:text-cyan-500"
                     >
-                      Review&nbsp;Youtube
+                      Review&nbsp;YouTube
                     </Link>
                     ◀️
                   </p>
