@@ -12,7 +12,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroues',
   description:
-    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Le monde des monoroues / roues électriques avec BonheurSurSeine, expert à Paris : tests, reviews, essais, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique (Electric unicycle reviews, EUC comparison, real-world tests and buying guides).",
+    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Découvrez le monde des monoroues, roues électriques avec Bonheur Sur Seine, expert à Paris : tests, reviews, essais, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique (Electric unicycle reviews, EUC comparison, real-world tests and buying guides).",
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },
@@ -109,7 +109,7 @@ export default async function Page() {
         </p>
         <p className="mt-3">
           💡{' '}
-          <strong>A la recherche d&apos;un thème en particulier&nbsp;?</strong>
+          <strong>À la recherche d&apos;un thème en particulier&nbsp;?</strong>
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consulte{' '}
           <Link
@@ -171,12 +171,10 @@ export default async function Page() {
         </h4>
         <p className="mt-2 text-xs sm:text-small">
           Ce site web est dédié à la{' '}
-          <strong className="text-cyan-700 dark:text-cyan-200">
-            roue électrique
-          </strong>
+          <strong className="text-cyan-700 dark:text-cyan-200">gyroroue</strong>
           , aussi appelée{' '}
           <strong className="text-cyan-700 dark:text-cyan-200">
-            gyroroue, monoroue
+            monoroue, roue électrique
           </strong>
           , ou{' '}
           <strong className="text-cyan-700 dark:text-cyan-200">

@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales Bonheur Sur Seine - Transparence et Confiance',
+  title: 'Mentions légales | Bonheur sur Seine',
   description:
-    "BonheurSurSeine.com : informations sur l'entreprise, politique de confidentialité, et gestion des cookies.",
+    'Consultez les informations légales, les conditions d’utilisation, les informations sur la chaîne YouTube, la politique de confidentialité du site Bonheur sur Seine, et la gestion des cookies - Transparence et Confiance.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/mentions`,
   },
@@ -126,7 +126,7 @@ export default function Page() {
         L&apos;éditeur est propriétaire des droits de propriété intellectuelle
         ou détient les droits d&apos;usage sur tous les éléments accessibles sur
         le site, notamment les textes, graphismes, logo. Les photos qui sont
-        publiées restent la propriété de leurs ayant droit respectifs.
+        publiées restent la propriété de leurs ayants droit respectifs.
       </p>
       <ul className="list">
         <li>
@@ -152,7 +152,7 @@ export default function Page() {
           Il est rappelé à l&apos;utilisateur qu&apos;il est tenu de respecter
           les lois en vigueur dans son pays, et que la modification d&apos;un
           engin de transport doit se faire en connaissance de cause, après avoir
-          envisagé les conséquences possibles en termes de non respect des
+          envisagé les conséquences possibles en termes de non-respect des
           réglementations ou en termes de garantie commerciale.
         </p>
         <li>
@@ -217,7 +217,7 @@ export default function Page() {
         <p>
           Vous ne pouvez pas accéder au contenu du site <i>Bonheur sur Seine</i>{' '}
           ni l&apos;utiliser à d&apos;autres fins que celles pour lesquelles
-          elles sont mises votre disposition. Le site web et/ou la marque{' '}
+          elles sont mises à votre disposition. Le site web et/ou la marque{' '}
           <i>Bonheur sur Seine</i> ne peuvent être utilisés dans le cadre
           d&apos;activités commerciales, à l&apos;exception de celles que nous
           soutenons ou approuvons explicitement.

@@ -92,9 +92,9 @@ const Market = () => {
           >
             <ul className="list-disc pl-4 space-y-1 mb-4 ml-4">
               <li className="">
-                De part leur{' '}
+                De par leur{' '}
                 <strong className="text-brown-900 dark:text-brown-300">
-                  petite taille{' '}
+                  petite taille
                 </strong>
                 , ces roues sont souvent proposées en entrée de gamme. Mais ce
                 sont elles{' '}
@@ -119,7 +119,7 @@ const Market = () => {
                 <strong className="text-brown-900 dark:text-brown-300">
                   pistes cyclables
                 </strong>{' '}
-                sont leur terrain de jeux favori. Elles sont parfaites pour{' '}
+                sont leur terrain de jeu favoris. Elles sont parfaites pour{' '}
                 <strong className="text-brown-900 dark:text-brown-300">
                   rester discret{' '}
                 </strong>

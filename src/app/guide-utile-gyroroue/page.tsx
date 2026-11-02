@@ -14,9 +14,9 @@ import EUC_idées_clés from '@/public/4.guide/BSS - 3 idées clés sur la roue 
 
 export const metadata: Metadata = {
   title:
-    'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues / monoroues / roues électriques',
+    'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues, monoroues électriques',
   description:
-    'Entretien,réglages, batterie, pneus, suspension, conseils, guide pratique pour aller plus loin, trucs et astuces pour mieux comprendre la roue électrique. Devenez expert et roulez en toute confiance !',
+    'Comprenez le fonctionnement de votre monoroue électrique et découvrez des conseils pratiques sur les réglages, la batterie, les pneus, la suspension et l’entretien. Devenez expert et roulez en toute confiance !',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
   },

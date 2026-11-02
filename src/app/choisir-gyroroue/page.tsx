@@ -8,9 +8,9 @@ import Compare from '@/src/components/atoms/Choisir_4Compare'
 
 export const metadata: Metadata = {
   title:
-    "Comment bien choisir sa gyroroue ? Guide d'achat, comparaisons et conseils pour acheter sa gyroroue",
+    'Quelle gyroroue choisir ? Guide d’achat, comparatif et conseils pour acheter sa gyroroue',
   description:
-    "Quel modèle choisir ? Comparatifs des meilleures gyroroues : marques, guide d'achat, conseils pour acheter sa roue électrique idéale sans se tromper.",
+    'Quel modèle choisir ? Comparez les usages, les marques et les critères importants pour choisir une gyroroue adaptée à votre budget et à votre façon de rouler.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/choisir-gyroroue`,
   },

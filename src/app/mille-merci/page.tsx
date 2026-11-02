@@ -6,9 +6,9 @@ import Contact from '@/src/components/atoms/Merci_1'
 import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
-  title: 'Soutenir Bonheur Sur Seine – Vidéaste et Spécialiste Gyroroue',
+  title: 'Soutenir Bonheur Sur Seine',
   description:
-    'Le contenu de Bonheur sur Seine est accessible gratuitement à toutes et à tous. Si tu souhaites soutenir ce travail indépendant sur sur les gyroroues, monoroues, roues électriques, tu peux contribuer simplement, à ton rythme.',
+    'Les tests et vidéos de Bonheur sur Seine sont gratuits et accessibles à toutes et à tous. Découvrez comment soutenir ce travail indépendant sur les gyroroues, monoroues, roues électriques.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/mille-merci`,
   },
