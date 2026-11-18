@@ -1,16 +1,12 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 
+import Infographies from '@/src/components/atoms/SavoirUtile_0Infographies'
 import Dico from '@/src/components/atoms/SavoirUtile_1Dico'
 import Battery from '@/src/components/atoms/SavoirUtile_3Batterie'
 import Pneu from '@/src/components/atoms/SavoirUtile_3Pneu'
 import Suspension from '@/src/components/atoms/SavoirUtile_3Suspension'
 import Navi from '@/src/components/atoms/SavoirUtile_4Navi'
 import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
-
-//import Info from '@/src/components/atoms/SavoirUtile_6Infos'
-import EUC_idées_clés from '@/public/4.guide/BSS - 3 idées clés sur la roue v2.png'
 
 export const metadata: Metadata = {
   title:
@@ -48,35 +44,9 @@ const Page = () => {
       </div>
 
       {/*---------------Infographie--------------------------------*/}
-
-      <div className="scroll-mt-24" id="infocles">
-        <div
-          className="mt-4 justify-center
-        bg-white
-          rounded-lg pt-2 pb-2
-          border border-gray-200 dark:border-gray-600
-          shadow-md hover:shadow-lg transition-shadow duration-300
-        shadow-gray-400 hover:shadow-gray-400
-        dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
-        >
-          <Link href={EUC_idées_clés.src} passHref target="_blank">
-            <Image
-              src={EUC_idées_clés}
-              alt="3 idées clés sur la gyroroue"
-              className="rounded-lg cursor-pointer"
-            />
-          </Link>
-        </div>
-        <p className="text-xs md:text-sm italic text-gray-600 dark:text-gray-400 text-center mt-1">
-          Infographie fonctionnement d&apos;une gyroroue.
-          <br />
-          Les 3 chaînes de perception, de commande et de puissance sont limitées
-          par leur maillon le plus faible.
-        </p>
-      </div>
+      <Infographies />
 
       {/*--------------BLOCS---------------------------------*/}
-
       <Dico />
       <Battery />
       <Pneu />
