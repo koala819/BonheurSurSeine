@@ -12,9 +12,10 @@ import Associations from '@/src/components/atoms/Débuter_6Associations'
 import HeroPhoto from '@/public/3.debuter/PhotoBSS - Bien Démarrer.jpg'
 
 export const metadata: Metadata = {
-  title: 'Débuter en gyroroue : conseils pratiques et fondamentaux à connaître',
+  title:
+    'Gyroroue - L’essentiel pour débuter en monoroue électrique (conseils pratiques et fondamentaux à connaître)',
   description:
-    "Les bases pour débuter en gyroroue, monoroue, roue électrique : conseils indispensables, sécurité, assurances, code de la route, entretien, informations essentielles avant d'aller rouler et plus encore. Débutez et progressez en toute confiance.",
+    "Les bases pour débuter en gyroroue, monoroue, roue électrique : prise en main, conseils indispensables, sécurité, assurances, code de la route, entretien, informations essentielles avant d'aller rouler et plus encore. Débutez et progressez en toute confiance. ",
   alternates: {
     canonical: `${process.env.CLIENT_URL}/debuter-gyroroue`,
   },

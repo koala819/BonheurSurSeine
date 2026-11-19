@@ -7,10 +7,9 @@ import Needs from '@/src/components/atoms/Choisir_3Needs0'
 import Compare from '@/src/components/atoms/Choisir_4Compare'
 
 export const metadata: Metadata = {
-  title:
-    'Quelle gyroroue choisir ? Guide d’achat et conseils pour bien acheter sa monoroue électrique',
+  title: 'Gyroroue – Choisir sa monoroue électrique',
   description:
-    'Quel modèle choisir ? Comparez les usages, les marques et les critères importants pour choisir une gyroroue adaptée à votre budget et à votre façon de rouler.',
+    'Quel modèle choisir ? Découvrez ce guide d’achat pour faire le bon choix. Comparez les usages, les marques et les critères importants pour choisir une gyroroue adaptée à votre budget et à votre façon de rouler. Découvrez les modèles de gyroroues, monoroues et roues électriques, leurs caractéristiques, leurs avantages et inconvénients, ainsi que des conseils pour faire le bon choix.',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/choisir-gyroroue`,
   },

@@ -10,9 +10,9 @@ import Vrac from '@/src/components/atoms/SavoirUtile_5Vrac'
 
 export const metadata: Metadata = {
   title:
-    'Tout Savoir sur la gyroroue : Fonctionnement, Guide et Infos Pratiques sur les gyroroues, monoroues électriques',
+    'Gyroroue – Comment fonctionne la monoroue électrique (tout savoir sur la gyroroue)',
   description:
-    'Comprenez le fonctionnement de votre monoroue électrique et découvrez des conseils pratiques sur les réglages, la batterie, les pneus, la suspension et l’entretien. Devenez expert et roulez en toute confiance !',
+    'Guide et Infos Pratiques. Comprenez le fonctionnement de votre monoroue électrique et découvrez des conseils pratiques sur les réglages, la batterie, les pneus, la suspension et l’entretien. Devenez expert et roulez en toute confiance ! ',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/guide-utile-gyroroue`,
   },

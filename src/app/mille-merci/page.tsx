@@ -8,7 +8,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Soutenir Bonheur Sur Seine',
   description:
-    'Les tests et vidéos de Bonheur sur Seine sont gratuits et accessibles à toutes et à tous. Découvrez comment soutenir ce travail indépendant sur les gyroroues, monoroues, roues électriques.',
+    'Découvrez comment soutenir ce travail indépendant sur les gyroroues, monoroues, roues électriques. Exprimez-vous. Donnez votre avis sur le site et participez à l’aventure. Les tests et vidéos de Bonheur sur Seine sont gratuits et accessibles à toutes et à tous. ',
   alternates: {
     canonical: `${process.env.CLIENT_URL}/mille-merci`,
   },

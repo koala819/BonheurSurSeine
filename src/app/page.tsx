@@ -12,7 +12,7 @@ import { createClient } from '@/prismicio'
 export const metadata: Metadata = {
   title: 'Bonheur Sur Seine - Vidéaste et Spécialiste Gyroroues',
   description:
-    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Découvrez le monde des monoroues, roues électriques avec Bonheur Sur Seine, expert à Paris : tests, reviews, essais, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique (Electric unicycle reviews, EUC comparison, real-world tests and buying guides).",
+    "Qu'est-ce qu'une gyroroue ? Comment apprendre la gyroroue ? Comment fonctionne la monoroue ? Découvrez le monde de la micromobilité, des monoroues, roues électriques avec Bonheur Sur Seine, expert à Paris : tests, reviews, essais, conseils, guide d'achat, actus, infos, expertise technique et réglementaire, vidéos Youtube et dernières nouveautés pour tout savoir sur la mobilité électrique (Electric unicycle reviews, EUC comparison, real-world tests and buying guides).",
   alternates: {
     canonical: `${process.env.CLIENT_URL}`,
   },
