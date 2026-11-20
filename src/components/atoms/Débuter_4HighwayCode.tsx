@@ -395,7 +395,7 @@ const HighwayCode = () => {
           {/*-------------------------------------------*/}
 
           <div className="flex flex-col items-center my-4">
-            <div className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 aspect-video rounded-xl shadow-md overflow-hidden">
+            <div className="w-full sm:w-4/5 md:w-2/3 lg:w-3/5 aspect-video rounded-xl shadow-md overflow-hidden">
               <iframe
                 className="w-full h-full"
                 width="560"
@@ -412,7 +412,7 @@ const HighwayCode = () => {
 
           {/*-------------------------------------------*/}
           <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
-            <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
+            <h4 className="font-semibold mb-2 text-gray-900 dark:text-gray-200">
               🪖 ET LE CASQUE&nbsp;?
             </h4>
             <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mb-2">
@@ -421,8 +421,8 @@ const HighwayCode = () => {
               sur voies vertes et pistes cyclables)&nbsp;: il est cependant{' '}
               <strong>fortement recommandé</strong>.
               <br />
-              Le casque, comme les équipements rétroréﬂéchissants, n&apos;est
-              obligatoire que sur les routes hors agglomération autorisées par
+              Le casque et les équipements rétroréﬂéchissants ne sont
+              obligatoires que sur les routes hors agglomération autorisées par
               dérogation (
               <Link
                 href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783"
@@ -433,52 +433,11 @@ const HighwayCode = () => {
               </Link>
               ).
             </p>
-            <div className="mt-2 mb-2 yellowBlockcasque">
-              <p className="text-sm text-gray-800 dark:text-gray-100">
-                ⚠️ <strong>Attention : </strong>depuis 2026, certaines communes
-                ou départements ont commencé à adopter des arrêtés locaux qui
-                rendent le port du casque obligatoire, même si ce n&apos;est pas
-                le cas au niveau national.
-              </p>
-              <p className="text-sm text-gray-800 dark:text-gray-100 mb-1">
-                Avant de circuler, il faut donc se renseigner et se tenir
-                informer sur les règles de <strong>ta commune </strong>
-                ou de <strong>ton département</strong> (pas forcément simple
-                😕).
-              </p>
-              <p className="text-sm font-medium text-gray-800 dark:text-gray-100 mb-1">
-                Pour t&apos;aider, consulte :
-              </p>
-              <div className="flex flex-wrap gap-1">
-                {/* Bouton 1 : La liste */}
-                <Link
-                  href="https://www.mobilityurban.fr/casque-obligatoire-trottinette-electrique-arretes-locaux.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex w-fit items-center gap-2 px-3 py-2
-        rounded-lg text-white text-sm font-medium
-        bg-yellow-600 hover:bg-yellow-800
-        dark:bg-yellow-700 dark:hover:bg-yellow-950
-        transition-colors"
-                >
-                  📄 La liste de Mobility Urban ↗
-                </Link>
-                {/* Bouton 2 : La carte */}
-                <Link
-                  href="https://wheelerssarthois.github.io/Groupes-EDPM/carte-arretes.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex w-fit items-center gap-2 px-3 py-2
-        rounded-lg text-white text-sm font-medium
-        bg-yellow-600 hover:bg-yellow-800
-        dark:bg-yellow-700 dark:hover:bg-yellow-950
-        transition-colors"
-                >
-                  🗺️ La carte des Wheelers Sarthois ↗
-                </Link>
-              </div>
-            </div>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100 mt-2 mb-2">
+          </div>
+
+          {/*-------------------------------------------*/}
+          <div className="my-4">
+            <p className="space-y-2 text-gray-800 dark:text-gray-100 mt-2 mb-2">
               <strong>Les protections </strong> sont importantes mais{' '}
               <strong>
                 ne rendent pas invulnérable&nbsp;: la prudence reste la
@@ -486,7 +445,7 @@ const HighwayCode = () => {
               </strong>
               , bien plus efficace que n&apos;importe quel équipement.
             </p>
-            <p className="space-y-2 text-sm flex-1 text-gray-800 dark:text-gray-100">
+            <p className="space-y-2 text-gray-800 dark:text-gray-100">
               💡 Rappelons aussi que le port des protections (nombre, type,
               etc.) est un <u>choix personnel</u> également{' '}
               <u>lié à l&apos;usage</u>. <br />
@@ -496,6 +455,76 @@ const HighwayCode = () => {
               yeux.
             </p>
           </div>
+
+          {/*-------------------------------------------*/}
+          {/*ENCADREMENT JAUNE SUR CASQUE ET GILET JAUNE*/}
+          <div className="yellowBlockcasque">
+            <h4 className="font-semibold mb-1 text-gray-900 dark:text-gray-200">
+              ⚠️ Attention&nbsp;:
+            </h4>
+            <p className="text-gray-800 dark:text-gray-100">
+              Depuis 2026, les ports du casque et du gilet jaune (équipement
+              rétroréfléchissant de jour comme de nuit) sont{' '}
+              <span className="font-bold underline text-yellow-700 dark:text-yellow-500">
+                obligatoires dans certains départements
+              </span>{' '}
+              ou certaines communes (par arrêté préfectoral ou municipal), même
+              si ce n&apos;est pas le cas au niveau national.
+            </p>
+            <p className="text-gray-800 dark:text-gray-100 mt-2 mb-1">
+              Avant de circuler, il faut donc te renseigner sur les règles de{' '}
+              <strong>ta commune </strong>
+              ou de <strong>ton département </strong>(pas forcément simple 😕).
+              <br />
+              🪖+🦺 Pour t&apos;aider, consulte :
+            </p>
+            <div className="flex flex-wrap gap-1">
+              {/* Bouton 1 : La liste */}
+              <Link
+                href="https://www.mobilityurban.fr/casque-obligatoire-trottinette-electrique-arretes-locaux.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-fit items-center gap-2 px-3 py-2
+                             rounded-lg text-white font-medium
+                           bg-yellow-600 hover:bg-yellow-800
+                           dark:bg-yellow-700 dark:hover:bg-yellow-950
+                             transition-colors"
+              >
+                📄 La liste de Mobility Urban ↗
+              </Link>
+              {/* Bouton 2 : La carte */}
+              <Link
+                href="https://wheelerssarthois.github.io/Groupes-EDPM/carte-arretes.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-fit items-center gap-2 px-3 py-2
+                             rounded-lg text-white font-medium
+                           bg-yellow-600 hover:bg-yellow-800
+                           dark:bg-yellow-700 dark:hover:bg-yellow-950
+                             transition-colors"
+              >
+                🗺️ La carte des Wheelers Sarthois ↗
+              </Link>
+            </div>
+            {/* LA VIDEO COMPLETE */}
+            <div className="flex flex-col items-center mt-3">
+              <div className="w-full sm:w-4/5 md:w-2/3 lg:w-3/5 aspect-video rounded-xl shadow-md overflow-hidden">
+                <iframe
+                  className="w-full h-full"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/E7DP-DhNfts?si=zua9t8Oe9QoupBVP"
+                  title="Port du casque et gilet jaune pour les EDPM - Bonheur sur Seine"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
+              <p className="text-xs sm:text-sm italic text-gray-600 dark:text-gray-400 text-center">
+                Ma vidéo sur le port du casque et le gilet jaune…
+              </p>
+            </div>
+          </div>
+
+          {/************************************************ */}
           <p className="mt-6 mb-8">
             Ces dispositions peuvent paraître contraignantes, mais elles sont{' '}
             <b>
