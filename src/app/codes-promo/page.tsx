@@ -9,7 +9,7 @@ import { createClient } from '@/prismicio'
 
 export const metadata: Metadata = {
   title:
-    'Codes Promo Bonheur Sur Seine : Offres Partenaires et Réductions Exclusives',
+    'Gyroroue – Codes Promo Bonheur Sur Seine (Offres Partenaires et Réductions Exclusives)',
   description:
     'Retrouvez les codes promo, les offres et les promotions exclusives des partenaires de Bonheur Sur Seine pour acheter une gyroroue ou des accessoires de monoroue électrique.',
   alternates: {

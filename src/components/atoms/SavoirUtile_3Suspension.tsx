@@ -753,105 +753,154 @@ const Suspension = () => {
           </div>
 
           {/*--------------- Trouver le bon réglage -------------------*/}
-          <h5 className="mt-4 font-semibold">🔹 Trouver le bon réglage</h5>
-          <div className="ml-6 mr-4 mb-2 md:mb-4">
-            <p>
-              L&apos;objectif est simple&nbsp;:{' '}
-              <strong className="text-olive-600 dark:text-olive-300">
-                permettre à l&apos;ensemble de la suspension de travailler
-              </strong>
-              . Comme pour la pression du pneu, plusieurs essais sont souvent
-              nécessaires pour{' '}
-              <strong className="text-olive-600 dark:text-olive-300">
-                trouver le réglage
-              </strong>{' '}
-              qui convient.
-            </p>
-            <p className="mb-0">
-              Tes choix et{' '}
-              <strong className="text-olive-600 dark:text-olive-300">
-                tes réglages dépendront avant tout de ton usage
-              </strong>
-              , de ton poids, et des sensations que tu recherches (le meilleur
-              réglage n&apos;est pas celui d&apos;un autre wheeler sur YouTube).
-            </p>
-            <div className="grid gap-2 md:gap-4 md:grid-cols-2 mt-2">
-              <div
-                className="bg-red-50 dark:bg-red-900/50 px-3 py-2 rounded-xl
-              border border-red-200 dark:border-red-800
-              shadow-sm hover:shadow-md
-            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
-              >
-                <p className="font-semibold mb-1">🔴 Suspension trop souple</p>
-                <p className="text-sm">
-                  Symptômes&nbsp;: pompage excessif, talonnage fréquent…
-                </p>
-                <p className="text-sm">Ajustements possibles&nbsp;:</p>
-                <ul className="[&>li]:text-sm">
-                  <li>
-                    ↗️ la <strong>précontrainte </strong>(moins
-                    d&apos;enfoncement)
-                  </li>
-                  <li>
-                    ↗️ la <strong>compression </strong>(suspension plus ferme)
-                  </li>
-                  <li>
-                    ↘️ légèrement le <strong>rebond</strong> (si effet
-                    “pompage”)
-                  </li>
-                </ul>
+          <h5 className="mt-6 font-semibold flex items-center gap-2">
+            <span>🔹</span> Trouver le bon réglage
+          </h5>
+
+          <div className="ml-6 mr-4 mb-4 space-y-4">
+            <div className="text-base space-y-2">
+              <p>
+                L&apos;objectif est simple&nbsp;:{' '}
+                <strong className="text-olive-600 dark:text-olive-300">
+                  permettre à l&apos;ensemble de la suspension de travailler
+                </strong>
+                . Comme pour la pression du pneu, plusieurs essais sont souvent
+                nécessaires pour{' '}
+                <strong className="text-olive-600 dark:text-olive-300">
+                  trouver le réglage
+                </strong>{' '}
+                qui convient.
+              </p>
+              <p>
+                Tes choix et{' '}
+                <strong className="text-olive-600 dark:text-olive-300">
+                  tes réglages dépendront avant tout de ton usage
+                </strong>
+                , de ton poids, et des sensations que tu recherches (le meilleur
+                réglage n&apos;est pas celui d&apos;un autre wheeler sur
+                YouTube).
+              </p>
+            </div>
+
+            {/* Grille comparative visuelle (Trop souple vs Trop dure) */}
+            <div className="grid gap-4 md:grid-cols-2">
+              {/* Carte : Suspension trop souple */}
+              <div className="bg-red-50/80 dark:bg-red-950/40 p-4 rounded-2xl border border-red-200 dark:border-red-800/80 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-red-700 dark:text-red-400 flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
+                      Suspension trop souple
+                    </span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 dark:bg-red-900/60 text-red-700 dark:text-red-300 font-medium">
+                      Manque de fermeté
+                    </span>
+                  </div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-3 italic">
+                    Symptômes : pompage excessif, talonnage fréquent…
+                  </p>
+                  <div className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                    Ajustements à effectuer :
+                  </div>
+                  <ul className="space-y-1.5 text-sm items-center gap-2 bg-white/60 dark:bg-neutral-900/40 px-2.5 py-1 rounded-lg border border-red-100 dark:border-red-900/30">
+                    <li className="text-base">
+                      ↗️ la <strong>précontrainte</strong>{' '}
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                        (pour moins d&apos;enfoncement)
+                      </span>
+                    </li>
+                    <li className="text-base">
+                      ↗️ la <strong>compression</strong>{' '}
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                        (pour plus de fermeté)
+                      </span>
+                    </li>
+                    <li className="text-base">
+                      ↘️ légèrement le <strong>rebond</strong>{' '}
+                      <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                        (si effet “pompage”)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div
-                className="bg-orange-50 dark:bg-orange-900/60 px-3 py-2 rounded-xl
-              border border-orange-200 dark:border-orange-800
-              shadow-sm hover:shadow-md
-            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
-              >
-                <p className="font-semibold">🟠 Suspension trop dure</p>
-                <p className="text-sm">
-                  Symptômes&nbsp;: perte de confort, absorbe mal les chocs…
-                </p>
-                <p className="text-sm">Ajustements possibles&nbsp;:</p>
-                <ul className="[&>li]:text-sm">
-                  <li>
-                    ↘️ la <strong>précontrainte</strong> (plus de sag)
-                  </li>
-                  <li>
-                    ↘️ la <strong>compression</strong> (meilleure sensibilité)
-                  </li>
-                  <li>
-                    ↗️ légèrement le <strong>rebond</strong> (retour plus libre)
-                  </li>
-                </ul>
+
+              {/* Carte : Suspension trop dure */}
+              <div className="bg-orange-50/80 dark:bg-orange-950/40 p-4 rounded-2xl border border-orange-200 dark:border-orange-800/80 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-orange-700 dark:text-orange-400 flex items-center gap-2">
+                      <span className="w-3 h-3 rounded-full bg-orange-500"></span>
+                      Suspension trop dure
+                    </span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-orange-100 dark:bg-orange-900/60 text-orange-700 dark:text-orange-300 font-medium">
+                      Manque de souplesse
+                    </span>
+                  </div>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-3 italic">
+                    Symptômes : perte de confort, absorbe mal les chocs…
+                  </p>
+                  <div className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 mb-1">
+                    Ajustements à effectuer :
+                  </div>
+                  <ul className="space-y-1.5 text-sm items-center gap-2 bg-white/60 dark:bg-neutral-900/40 px-2.5 py-1 rounded-lg border border-orange-100 dark:border-orange-900/30">
+                    <li className="text-base">
+                      <span>
+                        ↘️ la <strong>précontrainte</strong>{' '}
+                        <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                          (plus de sag)
+                        </span>
+                      </span>
+                    </li>
+                    <li className="text-base">
+                      <span>
+                        ↘️ la <strong>compression</strong>{' '}
+                        <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                          (meilleure sensibilité)
+                        </span>
+                      </span>
+                    </li>
+                    <li className="text-base">
+                      <span>
+                        ↗️ légèrement le <strong>rebond</strong>{' '}
+                        <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                          (retour plus libre)
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div
-              className="bg-green-50 dark:bg-green-900/50 px-3 py-2 rounded-xl
-            border border-green-200 dark:border-green-800 mt-2 md:mt-4
-            shadow-sm hover:shadow-md
-            dark:shadow-neutral-900 dark:hover:shadow-neutral-950"
-            >
-              <p className="font-semibold">🟢 Bon réglage</p>
-              <p className="text-sm mb-0">
-                La roue reste confortable et prévisible, quelles que soient les
-                irrégularités rencontrées.
-              </p>
-              <p className="text-sm mb-0">
-                La suspension utilise une partie significative de son
-                débattement sans talonner (cf.{' '}
-                <Link
-                  href="/guide-utile-gyroroue#dico"
-                  className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
-                >
-                  Le P&apos;tit Dico du Bonheur
-                </Link>
-                ) trop fréquemment. Un talonnage <u>occasionnel</u>
-                &nbsp;n&apos;est pas problématique. En revanche s&apos;il est
-                trop fréquent, cela indique un réglage inadapté.
-              </p>
+
+            {/* Encadré de validation : Le bon réglage */}
+            <div className="bg-green-50/80 dark:bg-green-950/40 p-4 rounded-2xl border border-green-200 dark:border-green-800/80 shadow-sm">
+              <div className="flex items-center gap-2 font-bold text-green-700 dark:text-green-400 mb-2">
+                <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                <span>Le bon réglage</span>
+              </div>
+              <div className="text-sm space-y-2 text-neutral-700 dark:text-neutral-300">
+                <p>
+                  La roue reste confortable et prévisible, quelles que soient
+                  les irrégularités rencontrées.
+                </p>
+                <p>
+                  La suspension utilise une partie significative de son
+                  débattement sans talonner (cf.{' '}
+                  <Link
+                    href="/guide-utile-gyroroue#dico"
+                    className="link-style hover:text-cyan-700 dark:hover:text-cyan-200 underline font-medium"
+                  >
+                    Le P&apos;tit Dico du Bonheur
+                  </Link>
+                  ) trop fréquemment. Un talonnage{' '}
+                  <span className="underline">occasionnel</span>&nbsp;n&apos;est
+                  pas problématique. En revanche s&apos;il est trop fréquent,
+                  cela indique un réglage inadapté.
+                </p>
+              </div>
             </div>
           </div>
-
           {/*--------------------------------------------------------------*/}
           {/*--------------------------------------------------------------*/}
           <div className="BlockSuspension">

@@ -70,7 +70,12 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Endurance et sécurité sur route',
     description:
       'Tu parcours quotidiennement de grandes distances (parfois +40 km), souvent sur des axes routiers dégradés ou là où les pistes cyclables sont inexistantes. Il te faut une machine robuste, confortable et rassurante pour affronter la route avec confiance.',
-    wheels: ['Leaperkim Patton-S', 'Nosfet Xeno', 'Kingsong S19'],
+    wheels: [
+      'Leaperkim Patton-S',
+      'Nosfet Xeno',
+      'Kingsong S19',
+      'Kingsong F16',
+    ],
   },
   P2_6_commuterXXL: {
     id: 'P2_6_commuterXXL',
@@ -118,7 +123,12 @@ export const PROFILES: Record<string, ProfileData> = {
     subtitle: 'Longues randonnées',
     description:
       'Ton plaisir est de partir en randonnée en toute liberté. Tu privilégies une excellente autonomie et un confort premium pour enchaîner les kilomètres sans fatigue.',
-    wheels: ['Begode Falcon Pro', 'Nosfet Xeno', 'Leaperkim Lynx-S'],
+    wheels: [
+      'Begode Falcon Pro',
+      'Begode Falcon Plus',
+      'Nosfet Xeno',
+      'Leaperkim Lynx-S',
+    ],
   },
   P4_4_grand_voyageur: {
     id: 'P4_4_grand_voyageur',

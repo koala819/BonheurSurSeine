@@ -277,7 +277,7 @@ export const Quiz_Ecran = () => {
 
                 {/* Mention de mise à jour de la sélection */}
                 <p className="text-center text-xs text-gray-500 dark:text-gray-300 my-1">
-                  Sélection mise à jour en octobre 2026
+                  Sélection mise à jour en novembre 2026
                 </p>
               </div>
             )}
