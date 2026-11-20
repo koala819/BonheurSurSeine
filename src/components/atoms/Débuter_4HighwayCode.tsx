@@ -478,32 +478,41 @@ const HighwayCode = () => {
               <br />
               🪖+🦺 Pour t&apos;aider, consulte :
             </p>
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1 mt-1">
               {/* Bouton 1 : La liste */}
               <Link
                 href="https://www.mobilityurban.fr/casque-obligatoire-trottinette-electrique-arretes-locaux.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-fit items-center gap-2 px-3 py-2
-                             rounded-lg text-white font-medium
-                           bg-yellow-600 hover:bg-yellow-800
-                           dark:bg-yellow-700 dark:hover:bg-yellow-950
-                             transition-colors"
+                className="inline-flex w-fit items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2
+               rounded-lg text-xs sm:text-sm md:text-base text-white font-medium
+               bg-yellow-600 hover:bg-yellow-800
+               dark:bg-yellow-700 dark:hover:bg-yellow-950
+               transition-colors"
               >
-                📄 La liste de Mobility Urban ↗
+                <span aria-hidden="true">📄</span>
+                <span>La liste de Mobility Urban</span>
+                <span aria-hidden="true" className="whitespace-nowrap">
+                  ↗
+                </span>
               </Link>
+
               {/* Bouton 2 : La carte */}
               <Link
                 href="https://wheelerssarthois.github.io/Groupes-EDPM/carte-arretes.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-fit items-center gap-2 px-3 py-2
-                             rounded-lg text-white font-medium
-                           bg-yellow-600 hover:bg-yellow-800
-                           dark:bg-yellow-700 dark:hover:bg-yellow-950
-                             transition-colors"
+                className="inline-flex w-fit items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-3 sm:py-2
+               rounded-lg text-xs sm:text-sm md:text-base text-white font-medium
+               bg-yellow-600 hover:bg-yellow-800
+               dark:bg-yellow-700 dark:hover:bg-yellow-950
+               transition-colors"
               >
-                🗺️ La carte des Wheelers Sarthois ↗
+                <span aria-hidden="true">🗺️</span>
+                <span>La carte des Wheelers Sarthois</span>
+                <span aria-hidden="true" className="whitespace-nowrap">
+                  ↗
+                </span>
               </Link>
             </div>
             {/* LA VIDEO COMPLETE */}
