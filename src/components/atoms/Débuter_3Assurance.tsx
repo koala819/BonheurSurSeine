@@ -287,9 +287,26 @@ const Assurance = () => {
                 <span className="text-rose-600 dark:text-rose-500 text-sm font-semibold">
                   à partir de 5-10€/mois
                 </span>{' '}
-                (couverture RC). La majorité des compagnies proposent des
-                formules variées, avec des niveaux de couverture adaptés aux
-                besoins de chacun.
+                (Responsabilité Civile). La majorité des compagnies proposent
+                des formules variées. <br />
+                Tu trouveras notamment chez{' '}
+                <Link
+                  href="https://ulygo.fr/devis/bonheursurseine"
+                  target="_blank"
+                  className="link-style text-rose-600 dark:text-rose-500  font-semibold"
+                >
+                  ULYGO
+                </Link>{' '}
+                (
+                <Link
+                  href="https://ulygo.fr/devis/bonheursurseine"
+                  target="_blank"
+                  className="link-style-no-underline font-semibold"
+                >
+                  courtier spécialisé et partenaire de la chaîne
+                </Link>
+                ) des <strong>niveaux de couverture adaptés</strong> aux besoins
+                de chacun.
               </p>
             </div>
           </div>

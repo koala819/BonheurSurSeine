@@ -154,7 +154,11 @@ const HighwayCode = () => {
               </h4>
               <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-sm">
-                  Interdiction de circuler sur les trottoirs (
+                  Interdiction de circuler sur les{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    trottoirs
+                  </span>{' '}
+                  (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -165,8 +169,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Obligation d&apos;emprunter les pistes cyclables si elles
-                  existent (
+                  Obligation d&apos;emprunter les{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    pistes cyclables
+                  </span>{' '}
+                  si elles existent (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -178,8 +185,11 @@ const HighwayCode = () => {
                 </li>
                 <li className="text-sm">
                   Interdiction de circuler sur les routes où la vitesse est
-                  &gt;50km/h et sur les routes hors agglomération, sauf sur
-                  pistes cyclables et voies vertes (
+                  &gt;50km/h et sur les routes{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    hors agglomération
+                  </span>
+                  , sauf sur pistes cyclables et voies vertes (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035783/"
                     target="_blank"
@@ -190,7 +200,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Interdiction de tenir un téléphone en main (
+                  Interdiction de tenir un{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    téléphone en main
+                  </span>{' '}
+                  (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422/"
                     target="_blank"
@@ -209,7 +223,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Interdiction de porter des écouteurs ou des oreillettes (
+                  Interdiction de porter des{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    écouteurs ou oreillettes
+                  </span>{' '}
+                  (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041910422"
                     target="_blank"
@@ -220,7 +238,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Utilisation possible du panneau M12 (cf.{' '}
+                  Utilisation possible du{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    panneau M12
+                  </span>{' '}
+                  (cf.{' '}
                   <Link
                     href="/guide-utile-gyroroue#dico"
                     className="link-style hover:text-cyan-700 dark:hover:text-cyan-200"
@@ -238,7 +260,10 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Âge minimum de 14 ans (
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    Âge minimum : 14 ans
+                  </span>{' '}
+                  (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048035778"
                     target="_blank"
@@ -250,14 +275,18 @@ const HighwayCode = () => {
                 </li>
               </ul>
             </div>
+
             {/* Capsule ÉQUIPEMENTS */}
             <div className="bg-slate-200 dark:bg-slate-800 p-4 rounded-xl shadow flex flex-col">
-              <h4 className="font-semibold mb-3  text-gray-900 dark:text-gray-200">
+              <h4 className="font-semibold mb-3 text-gray-900 dark:text-gray-200">
                 🛠️ ÉQUIPEMENT
               </h4>
               <ul className="list-disc space-y-2 list-outside ml-4 text-sm flex-1 text-gray-800 dark:text-gray-100">
                 <li className="text-sm">
-                  Vitesse maximale de 25 km/h par construction ou par bridage (
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    Vitesse maximale de 25 km/h
+                  </span>{' '}
+                  par construction ou par bridage (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039478722/"
                     target="_blank"
@@ -284,7 +313,10 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Sonnette obligatoire, klaxon électrique non valable (
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    Sonnette obligatoire
+                  </span>
+                  , klaxon électrique non valable (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039277997"
                     target="_blank"
@@ -295,8 +327,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Feux de position non éblouissants et fixes&nbsp;: blanc à
-                  l&apos;avant, rouge à l&apos;arrière (
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    Feux de position fixes
+                  </span>{' '}
+                  et non éblouissants&nbsp;: blanc à l&apos;avant, rouge à
+                  l&apos;arrière (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266173/"
                     target="_blank"
@@ -331,7 +366,10 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Catadioptres nécessaires&nbsp;: blanc à l&apos;avant, rouge à
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    Catadioptres
+                  </span>{' '}
+                  nécessaires&nbsp;: blanc à l&apos;avant, rouge à
                   l&apos;arrière, orange sur les côtés (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042266173/"
@@ -359,7 +397,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Interdiction de pousser ou tracter une charge ou un véhicule (
+                  Interdiction de{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    pousser ou tracter
+                  </span>{' '}
+                  une charge ou un véhicule (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039276191"
                     target="_blank"
@@ -370,8 +412,11 @@ const HighwayCode = () => {
                   ).
                 </li>
                 <li className="text-sm">
-                  Porter un vêtement ou équipement rétro-réﬂéchissant lorsque la
-                  visibilité est insuffisante (
+                  Porter un{' '}
+                  <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                    équipement rétro-réfléchissant
+                  </span>{' '}
+                  lorsque la visibilité est insuffisante (
                   <Link
                     href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000050678293"
                     target="_blank"
@@ -392,6 +437,7 @@ const HighwayCode = () => {
               </ul>
             </div>
           </div>
+
           {/*-------------------------------------------*/}
 
           <div className="flex flex-col items-center my-4">
@@ -419,7 +465,10 @@ const HighwayCode = () => {
               En règle générale et selon le Code de la route, le port du casque
               (jet ou intégral) n&apos;est pas obligatoire (en agglomération,
               sur voies vertes et pistes cyclables)&nbsp;: il est cependant{' '}
-              <strong>fortement recommandé</strong>.
+              <span className="text-sm font-semibold text-sky-800 dark:text-sky-300">
+                fortement recommandé
+              </span>
+              .
               <br />
               Le casque et les équipements rétroréﬂéchissants ne sont
               obligatoires que sur les routes hors agglomération autorisées par
@@ -463,8 +512,15 @@ const HighwayCode = () => {
               ⚠️ Attention&nbsp;:
             </h4>
             <p className="text-gray-800 dark:text-gray-100">
-              Depuis 2026, les ports du casque et du gilet jaune (équipement
-              rétroréfléchissant de jour comme de nuit) sont{' '}
+              Depuis 2026, les ports du{' '}
+              <span className="font-bold text-yellow-700 dark:text-yellow-500">
+                casque
+              </span>{' '}
+              et du{' '}
+              <span className="font-bold text-yellow-700 dark:text-yellow-500">
+                gilet jaune
+              </span>{' '}
+              (équipement rétroréfléchissant de jour comme de nuit) sont{' '}
               <span className="font-bold underline text-yellow-700 dark:text-yellow-500">
                 obligatoires dans certains départements
               </span>{' '}
@@ -642,7 +698,7 @@ const HighwayCode = () => {
               Fabien.Wheel
             </Link>
             <br />
-            dernière mise à jour : juillet 2026
+            dernière mise à jour : novembre 2026
           </p>
         </AccordionItem>
       </Accordion>
